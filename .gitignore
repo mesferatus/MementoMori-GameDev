@@ -1,0 +1,30 @@
+# Arquivos gerados pelo Unity e pelo ambiente local
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Tt]estResults/
+/.unity-editors/
+/.vscode/
+/.vs/
+*.csproj
+*.sln
+*.slnx
+*.userprefs
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.log
+*.tmp
+.DS_Store
+
+# Material temporário que não faz parte do repositório
+/archive/
+/ExternalSources/
+/RestrictedAssetsArchive/
+/Assets/_Recovery/
+/Assets/Resources/GeneratedArt/

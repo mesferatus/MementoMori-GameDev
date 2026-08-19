@@ -1,0 +1,13 @@
+{
+  "name": "MementoMori.EditMode.Tests",
+  "references": [
+    "MementoMori.Runtime"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}

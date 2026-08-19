@@ -1,0 +1,11 @@
+{
+  "name": "MementoMori.PlayMode.Tests",
+  "references": [
+    "MementoMori.Runtime"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": []
+}
