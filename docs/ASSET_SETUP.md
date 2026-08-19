@@ -1,22 +1,19 @@
-+# Configuração local de assets
+# Configuracao local de assets
 
-Os packs em `Assets/LuizaAssets/` fazem parte deste repositório privado e ficam disponíveis para a equipe.
+Baixe somente pela pagina oficial e extraia na pasta indicada. Nao coloque ZIPs na raiz do projeto. Mantenha qualquer `LICENSE`, `README` ou `TOS` que vier dentro do pack.
 
-| Pack LOCAL_ONLY | Autor | Link oficial | Pasta esperada | Instalação curta | Uso |
-|---|---|---|---|---|---|
-| FreeTopdownFantasyForest | aamatniekss | https://aamatniekss.itch.io/topdown-fantasy-forest | `Assets/LuizaAssets/DominioLua/FreeTopdownFantasyForest/` | Baixar da página oficial e extrair nessa pasta. | DominioLua |
-| KnowledgeTemple | pingupollas | https://pingupollas.itch.io/knowledge-temple | `Assets/LuizaAssets/DominioLua/KnowledgeTemple/` | Baixar o ZIP oficial e extrair nessa pasta. | DominioLua |
-| MysticBlueVillage | pingupollas | https://pingupollas.itch.io/mbv | `Assets/LuizaAssets/DominioLua/MysticBlueVillage/` | Baixar o ZIP oficial e extrair nessa pasta. | DominioLua |
-| CrawlingDepths | pingupollas | https://pingupollas.itch.io/crawling-depths | `Assets/LuizaAssets/Labirinto/CrawlingDepths/` | Baixar o ZIP oficial e extrair nessa pasta. | Labirinto |
-| DarkDungeonTileset | DistiIsCoding | https://distiiscoding.itch.io/dark-dungeon-tileset | `Assets/LuizaAssets/Labirinto/DarkDungeonTileset/` | Baixar o ZIP oficial e extrair nessa pasta. | Labirinto |
-| GothicPixelUI | AbyssOwl | https://abyssowl.itch.io/gothic-pixel-ui | `Assets/LuizaAssets/UI/GothicPixelUI/` | Baixar a versão permitida pela página oficial e extrair nessa pasta. | UI |
-| GothicCastleTileset | Kenney | Fonte do ZIP local | `Assets/LuizaAssets/Quarto/GothicCastleTileset/` | Extraído de `Free_Version_V1003.zip`. | Quarto |
-| Pixel Witch Animation Pack | Não confirmado | Fonte oficial não confirmada | `Assets/LuizaAssets/CharactersTemp/Pixel Witch Animation Pack/` | Reinstalar somente após confirmar autoria e licença. | Temp |
-| PixelWitchAnimationPack duplicate source | Não confirmado | Fonte oficial não confirmada | `Assets/LuizaAssets/CharactersTemp/PixelWitchAnimationPack-duplicate-source/` | Não reinstalar antes de confirmar se a duplicata é necessária. | Temp |
-| Gothic RPG Furniture | Não confirmado | Fonte oficial não confirmada | `Assets/LuizaAssets/Quarto/Gothic RPG Furniture/` | Reinstalar somente após confirmar autoria e licença. | Quarto |
-| GothicCastleTileset duplicate source | Não confirmado | Fonte oficial não confirmada | `Assets/LuizaAssets/Quarto/GothicCastleTileset-duplicate-source/` | Não reinstalar; registro histórico removido. | Quarto |
-| GothicRPGFurniture duplicate source | Não confirmado | Fonte oficial não confirmada | `Assets/LuizaAssets/Quarto/GothicRPGFurniture-duplicate-source/` | Não reinstalar antes de confirmar a procedência. | Quarto |
+| Pack | Link oficial | Pasta local esperada | Download automatico/manual | Git status |
+|---|---|---|---|---|
+| Gothic RPG Furniture | https://xenophero.itch.io/gothic-rpg-furniture | `Assets/LuizaAssets/Quarto/GothicFurniture/` | Ja presente localmente. Se reinstalar: na pagina oficial escolha **No thanks, just take me to the downloads** e baixe `GothicFurnitureSprites48x48.png`. | LOCAL_ONLY (ignorado) |
+| Pixel Witch Animation Pack | https://mellynade.itch.io/witch-animation-pack | `Assets/LuizaAssets/Quarto/PixelWitch_TEMP/` | Importado de `witchpack.rar` para `_Source/`; reinstalacao: pagina oficial > Download Now > No thanks. | LOCAL_ONLY (ignorado) |
+| Dark Dungeon Tileset | https://distiiscoding.itch.io/dark-dungeon-tileset | `Assets/LuizaAssets/Labirinto/DarkDungeon/` | Importado de `CompleteTileset.zip` para `_Source/`; reinstalacao: pagina oficial > Download Now > No thanks. | LOCAL_ONLY (ignorado) |
+| Crawling Depths | https://pingupollas.itch.io/crawling-depths | `Assets/LuizaAssets/Labirinto/CrawlingDepths/` | Ja presente localmente. | LOCAL_ONLY (ignorado) |
+| Free Topdown Fantasy - Forest | https://aamatniekss.itch.io/topdown-fantasy-forest | `Assets/LuizaAssets/DominioLua/FantasyForest/` | Ja presente localmente. | LOCAL_ONLY (ignorado) |
+| Mystic Blue Village | https://pingupollas.itch.io/mbv | `Assets/LuizaAssets/DominioLua/MysticBlueVillage/` | Ja presente localmente. | LOCAL_ONLY (ignorado) |
+| Knowledge Temple | https://pingupollas.itch.io/knowledge-temple | `Assets/LuizaAssets/DominioLua/KnowledgeTemple/` | Ja presente localmente. | LOCAL_ONLY (ignorado) |
+| Pixel Moon Phases | https://grinnch.itch.io/pixel-moon-phases | `Assets/LuizaAssets/DominioLua/PixelMoonPhases/` | Ja presente localmente. | REDISTRIBUTABLE (CC BY 4.0, atribuicao obrigatoria) |
+| Gothic Pixel UI (free) | https://abyssowl.itch.io/gothic-pixel-ui | `Assets/LuizaAssets/UI/GothicPixelUI/` | Ja presente localmente: versao gratuita. | LOCAL_ONLY (ignorado) |
 
-`PixelMoonPhases` fica em `Assets/LuizaAssets/DominioLua/PixelMoonPhases/` sob CC BY 4.0 e exige atribuição.
+`Gothic Castle / yanin` foi removido do planejamento: nao baixe, nao reinstale e nao use em novos trabalhos. Uma copia legada preexistente nao faz parte deste setup e permanece ignorada; nao foi apagada por esta tarefa.
 
-Os packs marcados como `LOCAL_ONLY` não podem ser copiados para um repositório público.
+O `spritesheet.png` separado foi analisado e nao pertence comprovadamente ao Dark Dungeon; por isso permanece fora de `Assets/`.

@@ -1,42 +1,33 @@
-+# Assets e licenças
+# Assets e licencas
 
-Inventário atualizado em 2026-08-19. Há **13 diretórios de packs ativos** em `Assets/LuizaAssets/`: oito com fonte e termos verificados e cinco sem procedência/licença comprovável.
+Inventario revisado em 2026-08-19. `LOCAL_ONLY=YES` significa que os arquivos-fonte ficam apenas na instalacao local e sao excluidos do Git publico. Essa e a politica conservadora quando a redistribuicao nao esta expressamente autorizada.
 
-`LOCAL_ONLY=YES` significa que o pack é mantido neste repositório privado para acesso da equipe e não pode ser copiado para um GitHub público. Isso não substitui a verificação do uso efetivo no build.
+| NAME | AUTHOR | OFFICIAL_URL | LICENSE/TERMS | CREDIT_REQUIRED | SOURCE_REDISTRIBUTION_ALLOWED | LOCAL_ONLY | DESTINATION | USED_IN |
+|---|---|---|---|---|---|---|---|---|
+| Gothic RPG Furniture | Xenophero | https://xenophero.itch.io/gothic-rpg-furniture | Uso comercial/pessoal e modificacao permitidos; proibido redistribuir ou revender assets e derivados. | YES - link ou @Xenophero | NO | YES | `Assets/LuizaAssets/Quarto/GothicFurniture/` | Quarto: moveis/props |
+| Pixel Witch Animation Pack | mellynade | https://mellynade.itch.io/witch-animation-pack | Uso comercial/pessoal permitido; credito apreciado. A pagina nao autoriza explicitamente redistribuir os fontes. | NO (apreciado) | NO | YES | `Assets/LuizaAssets/Quarto/PixelWitch_TEMP/` | Referencia/personagem temporario; nao e visual final da Melantha |
+| Dark Dungeon Tileset | DistiIsCoding | https://distiiscoding.itch.io/dark-dungeon-tileset | Uso comercial/pessoal e modificacao permitidos; proibida revenda. Redistribuicao dos fontes nao esta explicitamente autorizada. | NO (apreciado) | NO | YES | `Assets/LuizaAssets/Labirinto/DarkDungeon/` | Labirinto: arquitetura/base |
+| Crawling Depths | pingupollas | https://pingupollas.itch.io/crawling-depths | Uso para qualquer projeto e modificacao permitidos; credito com nome e link obrigatorio; proibido revender/redistribuir como resource pack. | YES | NO | YES | `Assets/LuizaAssets/Labirinto/CrawlingDepths/` | Labirinto: detalhes eldritch/corrupcao/props |
+| Free Topdown Fantasy - Forest | aamatniekss | https://aamatniekss.itch.io/topdown-fantasy-forest | Uso comercial/pessoal e modificacao permitidos; proibido redistribuir ou revender assets isolados/compilacoes. | NO (apreciado) | NO | YES | `Assets/LuizaAssets/DominioLua/FantasyForest/` | Dominio da Lua: natureza, vegetacao, cliffs e agua |
+| Mystic Blue Village | pingupollas | https://pingupollas.itch.io/mbv | Uso para qualquer projeto e modificacao permitidos; credito com nome e link obrigatorio; proibido revender/redistribuir como resource pack. | YES | NO | YES | `Assets/LuizaAssets/DominioLua/MysticBlueVillage/` | Dominio da Lua: exterior e arquitetura mistica azul |
+| Knowledge Temple | pingupollas | https://pingupollas.itch.io/knowledge-temple | Uso para qualquer projeto e modificacao permitidos; credito com nome e link obrigatorio; proibido revender/redistribuir como resource pack. | YES | NO | YES | `Assets/LuizaAssets/DominioLua/KnowledgeTemple/` | Dominio da Lua: templo, biblioteca, colunas, altares e interiores |
+| Pixel Moon Phases | grinnch | https://grinnch.itch.io/pixel-moon-phases | CC BY 4.0; permite compartilhar e adaptar com atribuicao. | YES | YES | NO | `Assets/LuizaAssets/DominioLua/PixelMoonPhases/` | Dominio da Lua: fases/simbologia lunar |
+| Gothic Pixel UI (free) | AbyssOwl | https://abyssowl.itch.io/gothic-pixel-ui | Uso comercial/pessoal e modificacao permitidos; proibida revenda; credito a AbyssOwl obrigatorio em uso comercial. | YES (comercial) | NO | YES | `Assets/LuizaAssets/UI/GothicPixelUI/` | UI visual |
 
-| NAME | AUTHOR | OFFICIAL_URL | LICENSE / TERMS | CREDIT_REQUIRED | COMMERCIAL_USE | MODIFY_ALLOWED | REDISTRIBUTE_SOURCE_FILES_ON_PUBLIC_GITHUB | USED_IN | LOCAL_ONLY |
-|---|---|---|---|---|---|---|---|---|---|
-| Pixel Witch Animation Pack | Não confirmado | — | Licença não comprovada. | UNCLEAR | UNCLEAR | UNCLEAR | UNCLEAR | Temp | YES |
-| PixelWitchAnimationPack duplicate source | Não confirmado | — | Cópia local duplicada do registro anterior; licença não comprovada. | UNCLEAR | UNCLEAR | UNCLEAR | UNCLEAR | Temp | YES |
-| FreeTopdownFantasyForest | aamatniekss | https://aamatniekss.itch.io/topdown-fantasy-forest | Uso comercial e não comercial; modificações permitidas; proíbe redistribuição ou revenda isolada. | NO (crédito apreciado) | YES | YES | NO | DominioLua | YES |
-| KnowledgeTemple | pingupollas | https://pingupollas.itch.io/knowledge-temple | Uso inclusive comercial; modificações permitidas; crédito com nome e link obrigatório; proíbe redistribuir como resource pack. | YES | YES | YES | NO | DominioLua | YES |
-| MysticBlueVillage | pingupollas | https://pingupollas.itch.io/mbv | Uso inclusive comercial; modificações permitidas; crédito com nome e link obrigatório; proíbe redistribuir como resource pack. | YES | YES | YES | NO | DominioLua | YES |
-| PixelMoonPhases | grinnch | https://grinnch.itch.io/pixel-moon-phases | CC BY 4.0. Exige atribuição e permite compartilhar/adaptar sob os termos da licença. | YES | YES | YES | YES | DominioLua | NO |
-| CrawlingDepths | pingupollas | https://pingupollas.itch.io/crawling-depths | Uso inclusive comercial; modificações permitidas; crédito com nome e link obrigatório; proíbe redistribuir como resource pack. | YES | YES | YES | NO | Labirinto | YES |
-| DarkDungeonTileset | DistiIsCoding | https://distiiscoding.itch.io/dark-dungeon-tileset | Uso comercial e não comercial; modificações permitidas; proíbe revenda. A página não define claramente redistribuição de arquivos-fonte. | NO (crédito apreciado) | YES | YES | UNCLEAR | Labirinto | YES |
-| Gothic RPG Furniture | Não confirmado | — | Licença não comprovada. | UNCLEAR | UNCLEAR | UNCLEAR | UNCLEAR | Quarto | YES |
-| GothicCastleTileset duplicate source | Não confirmado | — | Cópia local duplicada; licença não comprovada. | UNCLEAR | UNCLEAR | UNCLEAR | UNCLEAR | Quarto | YES |
-| GothicRPGFurniture duplicate source | Não confirmado | — | Cópia local duplicada; licença não comprovada. | UNCLEAR | UNCLEAR | UNCLEAR | UNCLEAR | Quarto | YES |
-| GothicPixelUI | AbyssOwl | https://abyssowl.itch.io/gothic-pixel-ui | Uso comercial e não comercial; modificações permitidas; proíbe revenda; atribuição obrigatória em uso comercial. | YES (uso comercial) | YES | YES | NO | UI | YES |
-| GothicCastleTileset | Kenney | Fonte do ZIP local | CC0 conforme `docs/third-party/Kenney-CC0-LICENSE.txt`. | NO | YES | YES | YES | Quarto | YES |
+## Decisao sobre os downloads manuais de 2026-08-19
 
-## Crédito sugerido para a versão do jogo
+`witchpack.rar` foi extraido em `Assets/LuizaAssets/Quarto/PixelWitch_TEMP/_Source/` e contem sete PNGs de animacao, sem arquivo de licenca separado.
 
-- Forest tileset por aamatniekss — https://aamatniekss.itch.io/topdown-fantasy-forest
-- Knowledge Temple, Mystic Blue Village e Crawling Depths por pingupollas — https://pingupollas.itch.io/
-- Pixel Moon Phases por grinnch — https://grinnch.itch.io/pixel-moon-phases (CC BY 4.0)
-- Dark Dungeon Tileset por DistiIsCoding — https://distiiscoding.itch.io/dark-dungeon-tileset
-- Gothic Pixel UI por AbyssOwl — https://abyssowl.itch.io/gothic-pixel-ui
+`CompleteTileset.zip` foi extraido em `Assets/LuizaAssets/Labirinto/DarkDungeon/_Source/` e contem `CompleteTileset.png` e `CompleteTileset.aseprite`.
 
-## Status
+`spritesheet.png` (160x128, SHA-256 `99C30126...9D36C127`) nao e duplicata do `CompleteTileset.png` (320x128, SHA-256 `EC0FE01A...09332BA1`) e a inspecao visual mostrou conteudo diferente, sem pertencimento comprovado ao Dark Dungeon. Foi mantido fora do projeto e nao importado.
 
-`ASSET_PACKS_ACTIVE=13`  
-`ASSET_RECORDS_TOTAL=13`  
-`OFFICIAL_LINKS_FOUND=7`  
-`LICENSE_VERIFIED=7`  
-`LICENSE_UNCLEAR=5`  
-`LOCAL_ONLY_PACKS=12`  
-`LOCAL_ONLY_PRIVATE_REPOSITORY=12/12`  
-`ASSET_CREDITS_STATUS=PARTIAL`
+## Creditos de uso
 
-Os créditos de uso estão documentados. Os 12 packs `LOCAL_ONLY`, incluindo seus arquivos `.meta`, fazem parte deste repositório privado e não devem ser republicados em um repositório público.
+- Gothic RPG Furniture por Xenophero - https://xenophero.itch.io/gothic-rpg-furniture
+- Pixel Witch Animation Pack por mellynade - https://mellynade.itch.io/witch-animation-pack
+- Dark Dungeon Tileset por DistiIsCoding - https://distiiscoding.itch.io/dark-dungeon-tileset
+- Crawling Depths, Mystic Blue Village e Knowledge Temple por pingupollas - https://pingupollas.itch.io/
+- Free Topdown Fantasy - Forest por aamatniekss - https://aamatniekss.itch.io/topdown-fantasy-forest
+- Pixel Moon Phases por grinnch - https://grinnch.itch.io/pixel-moon-phases (CC BY 4.0)
+- Gothic Pixel UI por AbyssOwl - https://abyssowl.itch.io/gothic-pixel-ui
