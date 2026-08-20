@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MementoMori.Core
 {
     public enum CheckpointId { Sleep, AndrealphusI, Echoes, Garden, Mirrors, BeforeSigil, MoonDomain, LabyrinthStart, MoonDomainEntry, FinalPortal }
 
-    /// <summary>Small, explicit session service used by graybox scenes and tests.</summary>
+    /// <summary>Compatibility facade over GameState's single progression store.</summary>
     public sealed class StoryProgression : MonoBehaviour
     {
         public static StoryProgression Instance { get; private set; }
-        readonly Dictionary<string, int> puzzleProgress = new();
-        readonly Dictionary<string, int> checkpointCounters = new();
-        public CheckpointId LastCheckpoint { get; private set; }
-        public event Action<CheckpointId> CheckpointChanged;
+        public CheckpointId LastCheckpoint => GameState.Instance == null ? CheckpointId.Sleep : GameState.Instance.LastCheckpoint;
 
         void Awake()
         {
@@ -24,27 +19,23 @@ namespace MementoMori.Core
         public int GetPuzzleProgress(string id)
         {
             if (string.IsNullOrEmpty(id)) return 0;
-            return puzzleProgress.TryGetValue(id, out var value) ? value : GameState.Instance?.GetCounter("puzzle." + id) ?? 0;
+            return GameState.Instance?.GetPuzzleProgress(id) ?? 0;
         }
         public int SetPuzzleProgress(string id, int value)
         {
             if (string.IsNullOrEmpty(id)) return 0;
-            puzzleProgress[id] = Mathf.Max(0, value);
-            GameState.Instance?.SetCounter("puzzle." + id, puzzleProgress[id]);
-            return puzzleProgress[id];
+            return GameState.Instance?.SetPuzzleProgress(id, value) ?? 0;
         }
         public int IncrementPuzzleProgress(string id) => SetPuzzleProgress(id, GetPuzzleProgress(id) + 1);
-        public int GetCheckpointCount(string id) => id != null && checkpointCounters.TryGetValue(id, out var value) ? value : 0;
+        public int GetCheckpointCount(string id)
+        {
+            if (string.IsNullOrEmpty(id) || GameState.Instance == null || !System.Enum.TryParse(id, out CheckpointId checkpoint)) return 0;
+            return GameState.Instance.GetCheckpointCount(checkpoint);
+        }
+
         public void SaveCheckpoint(CheckpointId id)
         {
-            LastCheckpoint = id;
-            checkpointCounters[id.ToString()] = GetCheckpointCount(id.ToString()) + 1;
-            GameState.Instance?.SaveCheckpoint();
-            CheckpointChanged?.Invoke(id);
-        }
-        public void ResetSession()
-        {
-            puzzleProgress.Clear(); checkpointCounters.Clear(); LastCheckpoint = CheckpointId.Sleep;
+            GameState.Instance?.SaveStoryCheckpoint(id);
         }
     }
 }

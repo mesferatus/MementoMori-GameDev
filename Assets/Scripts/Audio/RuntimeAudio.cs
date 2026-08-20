@@ -9,6 +9,7 @@ namespace MementoMori.Audio
 {
     public sealed class RuntimeAudio : MonoBehaviour
     {
+        private const string AudioResourceFolder = "Audio/";
         static RuntimeAudio active;
         AudioSource source;
         TMP_Text caption;
@@ -17,7 +18,7 @@ namespace MementoMori.Audio
         public static void PlayLoop(string resourceName)
         {
             if (!Application.isPlaying) return;
-            var clip = Resources.Load<AudioClip>($"Audio/{resourceName}");
+            var clip = Resources.Load<AudioClip>(AudioResourceFolder + resourceName);
             if (clip == null) return;
             if (active == null)
             {
@@ -30,11 +31,15 @@ namespace MementoMori.Audio
         public static void PlayOneShot(string resourceName, float volume = .65f)
         {
             if (!Application.isPlaying) return;
-            var clip = Resources.Load<AudioClip>($"Audio/{resourceName}");
+            var clip = Resources.Load<AudioClip>(AudioResourceFolder + resourceName);
             if (clip == null) return;
+            var runtimeAudio = EnsureActive();
             var go = new GameObject("RuntimeOneShot");
-            var source = go.AddComponent<AudioSource>(); source.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume); source.outputAudioMixerGroup = EnsureActive().FindGroup("SFX"); source.PlayOneShot(clip);
-            EnsureActive().ShowCaption(CaptionFor(resourceName));
+            var source = go.AddComponent<AudioSource>();
+            source.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
+            source.outputAudioMixerGroup = runtimeAudio.FindGroup("SFX");
+            source.PlayOneShot(clip);
+            runtimeAudio.ShowCaption(CaptionFor(resourceName));
             Object.Destroy(go, clip.length + .1f);
         }
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using MementoMori.Core;
 using MementoMori.Puzzles;
 using NUnit.Framework;
@@ -10,11 +9,23 @@ namespace MementoMori.Tests.PlayMode
 {
     public sealed class PuzzlePlayModeTests
     {
+        private GameObject sessionHost;
+
         [SetUp]
-        public void SetUpMirrorPuzzleSession()
+        public void SetUpPuzzleSession()
         {
+            if (GameState.Instance == null)
+                sessionHost = new GameObject("PuzzleTestState");
+            if (GameState.Instance == null)
+                sessionHost.AddComponent<GameState>();
             GameState.Instance?.StartNewGame();
             GameState.Instance?.SetFlag(StoryFlag.GardenComplete);
+        }
+
+        [TearDown]
+        public void TearDownPuzzleSession()
+        {
+            if (sessionHost != null) Object.Destroy(sessionHost);
         }
 
         [UnityTest]
@@ -22,13 +33,13 @@ namespace MementoMori.Tests.PlayMode
         {
             var root = new GameObject("MirrorPuzzlePlayModeTest");
             var puzzle = root.AddComponent<PuzzleMirror>();
-            var symbols = new List<MirrorSymbol>();
-            foreach (var id in new[] { "Present", "Delayed", "Ahead", "Absent", "Double", "Room", "Black" })
+            var names = new[] { "Present", "Delayed", "Ahead", "Absent", "Double", "Room", "Black" };
+            var symbols = new MirrorSymbol[names.Length];
+            for (var i = 0; i < names.Length; i++)
             {
-                var symbolObject = new GameObject(id);
-                var symbol = symbolObject.AddComponent<MirrorSymbol>();
-                symbol.Configure(id, puzzle, symbolObject.AddComponent<SpriteRenderer>());
-                symbols.Add(symbol);
+                var symbolObject = new GameObject(names[i]);
+                symbols[i] = symbolObject.AddComponent<MirrorSymbol>();
+                symbols[i].Configure(names[i], puzzle, symbolObject.AddComponent<SpriteRenderer>());
             }
             puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Absent" }, null, null);
             yield return null;
@@ -42,28 +53,18 @@ namespace MementoMori.Tests.PlayMode
         }
 
         [UnityTest]
-        public IEnumerator SigilPuzzleResetsSequenceAfterAnIncorrectStep()
+        public IEnumerator SigilRingPuzzleKeepsSolvedRingsAfterAnIncorrectInput()
         {
-            var root = new GameObject("SigilPuzzlePlayModeTest");
-            var puzzle = root.AddComponent<PuzzleSigilSequence>();
-            var parts = new List<SigilPart>();
-            foreach (var id in new[] { "Moon", "Eye", "Spiral" })
-            {
-                var partObject = new GameObject(id);
-                var part = partObject.AddComponent<SigilPart>();
-                part.Configure(id, puzzle, partObject.AddComponent<SpriteRenderer>());
-                parts.Add(part);
-            }
-            puzzle.Configure(parts, new[] { "Moon", "Eye", "Spiral" }, null, null);
+            var root = new GameObject("SigilRingPuzzlePlayModeTest");
+            GameState.Instance?.SetFlag(StoryFlag.MirrorPuzzleComplete);
+            var puzzle = root.AddComponent<SigilRingPuzzle>();
             yield return null;
-            puzzle.Activate(parts[1]);
-            Assert.That(puzzle.ErrorCount, Is.EqualTo(1));
-            yield return new WaitForSeconds(.7f);
-            Assert.That(parts[0].IsActive, Is.False);
-            Assert.That(parts[1].IsActive, Is.False);
-            Assert.That(puzzle.CanAcceptInput, Is.True);
+            Assert.That(puzzle.SetRing(SigilRing.Phase, "Nova"), Is.False);
+            Assert.That(puzzle.SetRing(SigilRing.Phase, "Minguante"), Is.True);
+            Assert.That(puzzle.GetProgress(), Is.EqualTo(1));
+            Assert.That(puzzle.SetRing(SigilRing.Memory, "Grimório"), Is.True);
+            Assert.That(puzzle.GetProgress(), Is.EqualTo(2));
             Object.Destroy(root);
-            foreach (var part in parts) Object.Destroy(part.gameObject);
         }
     }
 }

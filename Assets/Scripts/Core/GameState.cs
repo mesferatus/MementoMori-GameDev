@@ -29,9 +29,13 @@ namespace MementoMori.Core
         public bool FragmentCollected { get; private set; }
         private readonly System.Collections.Generic.HashSet<StoryFlag> flags = new();
         private readonly System.Collections.Generic.Dictionary<string, int> counters = new();
+        private readonly System.Collections.Generic.Dictionary<string, int> puzzleProgress = new();
+        private readonly System.Collections.Generic.Dictionary<string, int> checkpointCounters = new();
         public string CheckpointScene { get; private set; }
         public Vector2 CheckpointPosition { get; private set; }
+        public CheckpointId LastCheckpoint { get; private set; }
         public event Action<StoryFlag, bool> OnFlagChanged;
+        public event Action<CheckpointId> CheckpointChanged;
 
         private void Awake()
         {
@@ -56,6 +60,9 @@ namespace MementoMori.Core
         {
             flags.Clear();
             counters.Clear();
+            puzzleProgress.Clear();
+            checkpointCounters.Clear();
+            LastCheckpoint = CheckpointId.Sleep;
             CheckpointScene = null;
             RitualCompleted = false;
             PoeRevealed = false;
@@ -84,6 +91,32 @@ namespace MementoMori.Core
         {
             if (string.IsNullOrEmpty(id)) return;
             counters[id] = Mathf.Max(0, value);
+        }
+
+        public int GetPuzzleProgress(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return 0;
+            return puzzleProgress.TryGetValue(id, out var value) ? value : GetCounter("puzzle." + id);
+        }
+
+        public int SetPuzzleProgress(string id, int value)
+        {
+            if (string.IsNullOrEmpty(id)) return 0;
+            puzzleProgress[id] = Mathf.Max(0, value);
+            SetCounter("puzzle." + id, puzzleProgress[id]);
+            return puzzleProgress[id];
+        }
+
+        public int IncrementPuzzleProgress(string id) => SetPuzzleProgress(id, GetPuzzleProgress(id) + 1);
+
+        public int GetCheckpointCount(CheckpointId id) => checkpointCounters.TryGetValue(id.ToString(), out var value) ? value : 0;
+
+        public void SaveStoryCheckpoint(CheckpointId id)
+        {
+            LastCheckpoint = id;
+            checkpointCounters[id.ToString()] = GetCheckpointCount(id) + 1;
+            SaveCheckpoint();
+            CheckpointChanged?.Invoke(id);
         }
         public void SaveCheckpoint() => SaveCheckpoint(SceneManager.GetActiveScene().name, Vector2.zero);
         public void SaveCheckpoint(string sceneName) => SaveCheckpoint(sceneName, Vector2.zero);
