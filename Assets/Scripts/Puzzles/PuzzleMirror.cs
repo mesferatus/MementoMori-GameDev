@@ -11,6 +11,8 @@ namespace MementoMori.Puzzles
 {
     public sealed class PuzzleMirror : MonoBehaviour
     {
+        public enum PuzzleState { NotStarted, Active, Solved, Disabled }
+
         [SerializeField] private List<MirrorSymbol> symbols = new();
         [SerializeField] private List<string> correctSymbolIds = new();
         [SerializeField] private DoorController targetDoor;

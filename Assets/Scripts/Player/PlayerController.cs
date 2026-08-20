@@ -42,16 +42,16 @@ namespace MementoMori.Player
                 nextFootstepAt = Time.time + .42f;
             }
 
-            if (animator == null)
-                return;
-
-            animator.SetFloat("Speed", moveInput.sqrMagnitude);
-            animator.SetFloat("MoveX", moveInput.x);
-            animator.SetFloat("MoveY", moveInput.y);
-            if (moveInput.sqrMagnitude > 0f)
+            if (animator != null)
             {
-                animator.SetFloat("LastMoveX", moveInput.x);
-                animator.SetFloat("LastMoveY", moveInput.y);
+                animator.SetFloat("Speed", moveInput.sqrMagnitude);
+                animator.SetFloat("MoveX", moveInput.x);
+                animator.SetFloat("MoveY", moveInput.y);
+                if (moveInput.sqrMagnitude > 0f)
+                {
+                    animator.SetFloat("LastMoveX", moveInput.x);
+                    animator.SetFloat("LastMoveY", moveInput.y);
+                }
             }
         }
 

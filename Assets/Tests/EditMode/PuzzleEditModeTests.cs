@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Reflection;
+using MementoMori.Core;
 using MementoMori.Puzzles;
 using NUnit.Framework;
 using UnityEngine;
@@ -29,41 +30,44 @@ namespace MementoMori.Tests.EditMode
             puzzle.Activate(symbols[1]);
             puzzle.Activate(symbols[2]);
             puzzle.Activate(symbols[3]);
-            Assert.That(puzzle.State, Is.EqualTo(PuzzleState.Solved));
+            Assert.That(puzzle.State, Is.EqualTo(PuzzleMirror.PuzzleState.Solved));
 
             Object.DestroyImmediate(root);
             foreach (var symbol in symbols) Object.DestroyImmediate(symbol.gameObject);
         }
 
         [Test]
-        public void SigilPuzzleAcceptsMoonEyeSpiralAndRejectsWrongFirstStep()
+        public void SigilRingPuzzleAcceptsTheThreeNarrativeValuesAfterAnError()
         {
-            var root = new GameObject("SigilPuzzleTest");
-            var puzzle = root.AddComponent<PuzzleSigilSequence>();
-            var parts = new List<SigilPart>();
-            foreach (var id in new[] { "Moon", "Eye", "Spiral" })
-            {
-                var partObject = new GameObject(id);
-                var part = partObject.AddComponent<SigilPart>();
-                part.Configure(id, puzzle, partObject.AddComponent<SpriteRenderer>());
-                parts.Add(part);
-            }
-            puzzle.Configure(parts, new[] { "Moon", "Eye", "Spiral" }, null, null);
+            var root = new GameObject("SigilRingPuzzleTest");
+            var state = GameState.Instance;
+            if (state == null) state = root.AddComponent<GameState>();
+            SetGameStateInstance(state);
+            state.StartNewGame();
+            state.SetFlag(StoryFlag.MirrorPuzzleComplete);
+            var puzzle = root.AddComponent<SigilRingPuzzle>();
             InvokeStart(puzzle);
-            puzzle.Activate(parts[1]);
-            Assert.That(puzzle.ErrorCount, Is.EqualTo(1));
-            puzzle.Activate(parts[0]);
-            puzzle.Activate(parts[1]);
-            puzzle.Activate(parts[2]);
-            Assert.That(puzzle.State, Is.EqualTo(PuzzleState.Solved));
+
+            Assert.That(puzzle.SetRing(SigilRing.Phase, "Nova"), Is.False);
+            Assert.That(puzzle.SetRing(SigilRing.Phase, "Minguante"), Is.True);
+            Assert.That(puzzle.GetProgress(), Is.EqualTo(1));
+            Assert.That(puzzle.SetRing(SigilRing.Memory, "Grimório"), Is.True);
+            Assert.That(puzzle.GetProgress(), Is.EqualTo(2));
+            Assert.That(puzzle.SetRing(SigilRing.Intention, "SUSTENTAR"), Is.True);
+            Assert.That(puzzle.Solved, Is.True);
+            Assert.That(state.HasFlag(StoryFlag.SigilPuzzleComplete), Is.True);
 
             Object.DestroyImmediate(root);
-            foreach (var part in parts) Object.DestroyImmediate(part.gameObject);
         }
 
         private static void InvokeStart(MonoBehaviour component)
         {
             component.GetType().GetMethod("Start", BindingFlags.Instance | BindingFlags.NonPublic)?.Invoke(component, null);
+        }
+
+        private static void SetGameStateInstance(GameState state)
+        {
+            typeof(GameState).GetField("<Instance>k__BackingField", BindingFlags.Static | BindingFlags.NonPublic)?.SetValue(null, state);
         }
     }
 }

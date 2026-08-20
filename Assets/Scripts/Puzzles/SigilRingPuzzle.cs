@@ -38,7 +38,7 @@ namespace MementoMori.Puzzles
             if (ok)
             {
                 RuntimeAudio.PlayOneShot("09_sigil_success", .5f);
-                if (StoryProgression.Instance != null) StoryProgression.Instance.SetPuzzleProgress("sigil." + ring, 1);
+                GameState.Instance?.SetPuzzleProgress("sigil." + ring, 1);
                 RingEvaluated?.Invoke(ring, true);
                 if (GetProgress() == 3) Solve();
             }
@@ -54,16 +54,16 @@ namespace MementoMori.Puzzles
         }
         public int GetProgress()
         {
-            if (StoryProgression.Instance == null) return 0;
-            return StoryProgression.Instance.GetPuzzleProgress("sigil." + SigilRing.Phase)
-                 + StoryProgression.Instance.GetPuzzleProgress("sigil." + SigilRing.Memory)
-                 + StoryProgression.Instance.GetPuzzleProgress("sigil." + SigilRing.Intention);
+            if (GameState.Instance == null) return 0;
+            return GameState.Instance.GetPuzzleProgress("sigil." + SigilRing.Phase)
+                 + GameState.Instance.GetPuzzleProgress("sigil." + SigilRing.Memory)
+                 + GameState.Instance.GetPuzzleProgress("sigil." + SigilRing.Intention);
         }
         void Solve()
         {
             if (Solved) return; Solved = true; targetDoor?.Open();
             GameState.Instance?.SetSigilPuzzleSolved(); GameState.Instance?.SetFlag(StoryFlag.SigilPuzzleComplete);
-            GameState.Instance?.SetFlag(StoryFlag.MoonDomainUnlocked); StoryProgression.Instance?.SaveCheckpoint(CheckpointId.MoonDomain);
+            GameState.Instance?.SetFlag(StoryFlag.MoonDomainUnlocked); GameState.Instance?.SaveStoryCheckpoint(CheckpointId.MoonDomain);
         }
     }
 }
