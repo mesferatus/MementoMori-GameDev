@@ -13,13 +13,17 @@ namespace MementoMori.Tests.PlayMode
         [UnityTest]
         public IEnumerator ObjectiveAutomaticallyHidesAfterShortDuration()
         {
-            root = new GameObject("ObjectiveToastPlayModeRoot");
-            var objectives = root.AddComponent<ObjectiveToastController>();
+            var objectives = ObjectiveToastController.Instance;
+            if (objectives == null)
+            {
+                root = new GameObject("ObjectiveToastPlayModeRoot");
+                objectives = root.AddComponent<ObjectiveToastController>();
+            }
             objectives.ShowObjective("Explore o quarto.");
             Assert.That(objectives.IsVisible, Is.True);
             yield return new WaitForSecondsRealtime(3.2f);
             Assert.That(objectives.IsVisible, Is.False);
-            Object.Destroy(root);
+            if (root != null) Object.Destroy(root);
         }
     }
 }

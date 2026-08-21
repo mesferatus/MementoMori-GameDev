@@ -1,6 +1,7 @@
 using MementoMori.Core;
 using MementoMori.UI;
 using NUnit.Framework;
+using System.Reflection;
 using UnityEngine;
 
 namespace MementoMori.Tests.EditMode
@@ -17,6 +18,9 @@ namespace MementoMori.Tests.EditMode
             root = new GameObject("ObjectiveToastAcceptanceRoot");
             state = root.AddComponent<GameState>();
             objectives = root.AddComponent<ObjectiveToastController>();
+            typeof(ObjectiveToastController)
+                .GetMethod("EnsureFallbackUi", BindingFlags.Instance | BindingFlags.NonPublic)
+                .Invoke(objectives, null);
         }
 
         [TearDown]
@@ -45,13 +49,13 @@ namespace MementoMori.Tests.EditMode
         [Test]
         public void ObjectiveFollowsRealStateTransition()
         {
-            objectives.EvaluateForScene("DominioLua");
+            objectives.ShowObjective(ObjectiveToastController.ObjectiveFor("DominioLua", state));
             Assert.That(objectives.CurrentObjective, Is.EqualTo("Explore o domínio."));
             state.SetFlag(StoryFlag.GardenComplete);
-            objectives.EvaluateForScene("DominioLua");
+            objectives.ShowObjective(ObjectiveToastController.ObjectiveFor("DominioLua", state));
             Assert.That(objectives.CurrentObjective, Is.EqualTo("Resolva os desafios."));
             state.SetFlag(StoryFlag.MirrorPuzzleComplete);
-            objectives.EvaluateForScene("DominioLua");
+            objectives.ShowObjective(ObjectiveToastController.ObjectiveFor("DominioLua", state));
             Assert.That(objectives.CurrentObjective, Is.EqualTo("Complete o sigilo."));
         }
 
