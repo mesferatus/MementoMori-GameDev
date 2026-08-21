@@ -19,7 +19,7 @@ namespace MementoMori.Tests.PlayMode
                 root = new GameObject("ObjectiveToastPlayModeRoot");
                 objectives = root.AddComponent<ObjectiveToastController>();
             }
-            objectives.ShowObjective("Explore o quarto.");
+            objectives.ShowObjective("Objetivo de teste C5A.");
             Assert.That(objectives.IsVisible, Is.True);
             yield return new WaitForSecondsRealtime(3.2f);
             Assert.That(objectives.IsVisible, Is.False);
