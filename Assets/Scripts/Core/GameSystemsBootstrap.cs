@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using MementoMori.Audio;
+using MementoMori.UI;
 
 namespace MementoMori.Core
 {
@@ -29,6 +30,8 @@ namespace MementoMori.Core
                 persistentSystems.AddComponent<SceneLoader>();
             if (GameManager.Instance == null)
                 persistentSystems.AddComponent<GameManager>();
+            if (ObjectiveToastController.Instance == null)
+                persistentSystems.AddComponent<ObjectiveToastController>();
         }
 
         private void Start()

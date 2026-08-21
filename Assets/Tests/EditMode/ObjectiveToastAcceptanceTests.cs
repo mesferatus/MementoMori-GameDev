@@ -1,0 +1,68 @@
+using MementoMori.Core;
+using MementoMori.UI;
+using NUnit.Framework;
+using UnityEngine;
+
+namespace MementoMori.Tests.EditMode
+{
+    public sealed class ObjectiveToastAcceptanceTests
+    {
+        private GameObject root;
+        private GameState state;
+        private ObjectiveToastController objectives;
+
+        [SetUp]
+        public void SetUp()
+        {
+            root = new GameObject("ObjectiveToastAcceptanceRoot");
+            state = root.AddComponent<GameState>();
+            objectives = root.AddComponent<ObjectiveToastController>();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            if (root != null) Object.DestroyImmediate(root);
+        }
+
+        [Test]
+        public void ObjectiveShowAndHideAreTransient()
+        {
+            objectives.ShowObjective("Explore o quarto.");
+            Assert.That(objectives.IsVisible, Is.True);
+            objectives.Hide();
+            Assert.That(objectives.IsVisible, Is.False);
+        }
+
+        [Test]
+        public void ObjectiveDoesNotDuplicateSameVisibleMessage()
+        {
+            objectives.ShowObjective("Siga Poe.");
+            objectives.ShowObjective("Siga Poe.");
+            Assert.That(objectives.ShowCount, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void ObjectiveFollowsRealStateTransition()
+        {
+            objectives.EvaluateForScene("DominioLua");
+            Assert.That(objectives.CurrentObjective, Is.EqualTo("Explore o domínio."));
+            state.SetFlag(StoryFlag.GardenComplete);
+            objectives.EvaluateForScene("DominioLua");
+            Assert.That(objectives.CurrentObjective, Is.EqualTo("Resolva os desafios."));
+            state.SetFlag(StoryFlag.MirrorPuzzleComplete);
+            objectives.EvaluateForScene("DominioLua");
+            Assert.That(objectives.CurrentObjective, Is.EqualTo("Complete o sigilo."));
+        }
+
+        [Test]
+        public void ObjectiveDoesNotBlockGameplay()
+        {
+            var canvas = root.GetComponentInChildren<CanvasGroup>();
+            Assert.That(canvas, Is.Not.Null);
+            Assert.That(canvas.interactable, Is.False);
+            Assert.That(canvas.blocksRaycasts, Is.False);
+            Assert.That(InputGate.Instance == null || !InputGate.Instance.IsBlocked, Is.True);
+        }
+    }
+}
