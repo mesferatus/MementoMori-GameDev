@@ -1577,6 +1577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380190718}
   - component: {fileID: 1380190719}
+  - component: {fileID: 1380190720}
   m_Layer: 0
   m_Name: GameSystems
   m_TagString: Untagged
@@ -1611,6 +1612,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f2f4d9852be2542a6e77a806d0680e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MementoMori.Core.GameSystemsBootstrap
+--- !u!114 &1380190720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380190717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5a4cf285ed4f24ab1f8a5d0f0c4a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.UI.FinalBetaController
+  narrativeEntries:
+  - {fileID: 11400000, guid: 8f2a1111c56d4a7d9b8d1c2e3f4a5001, type: 2}
+  - {fileID: 11400000, guid: 8f2a1111c56d4a7d9b8d1c2e3f4a5002, type: 2}
+  - {fileID: 11400000, guid: 8f2a1111c56d4a7d9b8d1c2e3f4a5003, type: 2}
+  - {fileID: 11400000, guid: 8f2a1111c56d4a7d9b8d1c2e3f4a5004, type: 2}
+  - {fileID: 11400000, guid: 8f2a1111c56d4a7d9b8d1c2e3f4a5005, type: 2}
+  - {fileID: 11400000, guid: 8f2a1111c56d4a7d9b8d1c2e3f4a5006, type: 2}
+  finalText: {fileID: 1165150555}
+  returnButton: {fileID: 1810561271}
+  credits: {fileID: 1255944747}
 --- !u!1 &1391799526
 GameObject:
   m_ObjectHideFlags: 0
