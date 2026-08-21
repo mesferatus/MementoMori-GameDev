@@ -43,7 +43,6 @@ namespace MementoMori.Tests.PlayMode
             }
             puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Absent" }, null, null);
             yield return null;
-            yield return new WaitForEndOfFrame();
             Assert.That(puzzle.State, Is.EqualTo(PuzzleMirror.PuzzleState.Active));
             puzzle.Activate(symbols[1]);
             Assert.That(symbols[1].IsActive, Is.True);
