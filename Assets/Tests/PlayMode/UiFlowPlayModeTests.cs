@@ -50,6 +50,10 @@ namespace MementoMori.Tests.PlayMode
             pause.Toggle();
             Assert.That(Time.timeScale, Is.EqualTo(1f));
             Assert.That(InputGate.Instance.IsBlocked, Is.False);
+
+            pause.ReturnToMenu();
+            yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "MainMenu");
+            Assert.That(Time.timeScale, Is.EqualTo(1f));
         }
 
         [UnityTest]
