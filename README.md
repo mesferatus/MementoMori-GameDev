@@ -33,7 +33,7 @@ Dentro de `Assets/`, arquivos `.cs` são códigos C#; `.unity` são cenas; `.pre
 
 ## Estado técnico
 
-Na validação mais recente, o projeto compilou e as suítes EditMode, PlayMode e smoke passaram. Esses resultados cobrem os contratos técnicos; a aprovação visual e o playthrough humano continuam sendo etapas próprias.
+Na validação final, o projeto compilou, a build Windows foi gerada e as suítes automatizadas passaram: EditMode 24/24, PlayMode 11/11 e smoke CT-001 a CT-011. O playthrough humano foi confirmado pelo usuário. A análise estatística está em [docs/STATISTICAL_QA_ANALYSIS.md](docs/STATISTICAL_QA_ANALYSIS.md).
 
 ## Equipe
 
@@ -43,9 +43,9 @@ Na validação mais recente, o projeto compilou e as suítes EditMode, PlayMode 
 
 ## Próximos passos
 
-- Reconstruir a camada visual das cenas.
-- Integrar sprites, tilemaps, colliders, sorting e UI.
-- Fazer playthrough humano, QA visual, build e entrega acadêmica.
+- Executar o playthrough visual/manual com a Luiza.
+- Integrar ou revisar sprites, tilemaps, colliders, sorting e UI visuais.
+- Revalidar a build após as alterações visuais e preparar a entrega acadêmica.
 
 ## Git
 
