@@ -6681,7 +6681,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 169730626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1211771195}
+        m_TargetAssemblyTypeName: MementoMori.UI.PauseMenuController, MementoMori.Runtime
+        m_MethodName: RestartScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!225 &169730625
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -12589,7 +12601,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 346705878}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1211771195}
+        m_TargetAssemblyTypeName: MementoMori.UI.PauseMenuController, MementoMori.Runtime
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!225 &346705877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -39257,7 +39281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 766642187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1211771195}
+        m_TargetAssemblyTypeName: MementoMori.UI.PauseMenuController, MementoMori.Runtime
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!225 &766642186
 CanvasGroup:
   m_ObjectHideFlags: 0
