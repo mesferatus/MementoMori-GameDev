@@ -31,9 +31,13 @@ Dentro de `Assets/`, arquivos `.cs` são códigos C#; `.unity` são cenas; `.pre
 3. Aguarde a importação dos assets.
 4. Abra `Assets/Scenes/MainMenu.unity` e use Play.
 
-## Estado técnico
+## CURRENT TECHNICAL BASELINE
 
-Na validação final, o projeto compilou, a build Windows foi gerada e as suítes automatizadas passaram: EditMode 24/24, PlayMode 11/11 e smoke CT-001 a CT-011. O playthrough humano foi confirmado pelo usuário. A análise estatística está em [docs/STATISTICAL_QA_ANALYSIS.md](docs/STATISTICAL_QA_ANALYSIS.md).
+Baseline pré-integração visual: Unity `6000.4.12f1`, build Windows x86_64, cinco cenas habilitadas na ordem do fluxo principal, Input System ativo, URP 17.4.0 e projeto identificado como `Memento Mori` / `Monespira`.
+
+Na validação mais recente, o projeto compilou, a build Windows foi gerada e as suítes automatizadas passaram: EditMode 24/24, PlayMode 11/11 e smoke CT-001 a CT-011. Missing References permaneceu em 0 nos scans disponíveis. O playthrough humano, vitória e New Game/reset foram confirmados anteriormente pelo usuário. Esses resultados cobrem a base técnica; não aprovam a integração visual final da Luiza.
+
+Detalhes de release e QA estão em [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) e [docs/QA_PLAYTEST_TEMPLATE.md](docs/QA_PLAYTEST_TEMPLATE.md). A análise estatística está em [docs/STATISTICAL_QA_ANALYSIS.md](docs/STATISTICAL_QA_ANALYSIS.md).
 
 ## Equipe
 
