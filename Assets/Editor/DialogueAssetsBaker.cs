@@ -65,6 +65,21 @@ namespace MementoMori.EditorTools
             Ensure("DLG_GARDEN_FULL", L("Melantha", "O reflexo não está copiando o jardim."), L("Melantha", "O jardim está copiando o reflexo."), L("Narração", "A Lua não abre. Ela permite ser lembrada."), L("Melantha", "Isso pareceu uma distinção importante."));
             Ensure("DLG_GARDEN_WANING", L("Narração", "Nem toda perda é falha."), L("Melantha", "Subtrair também pode completar."));
             Ensure("DLG_FALSE_FULL_MOON_DOOR", L("Melantha", "Claro. Fácil demais."), L("Andrealphus", "A certeza é muito eficiente em criar círculos."), L("Narração", "Antes da primeira fase, a Lua já estava."));
+            Ensure("DLG_C4C_D01_MOON_ARRIVAL", L("Melantha", "A Lua não parece acima de mim."), L("Melantha", "Parece uma coisa que o Labirinto deixou para trás."), L("Poe", "Não desapareça."));
+            Ensure("DLG_C4C_D04_CRESCENT_PROGRESS", L("Melantha", "Ele não abriu a flor. Abriu espaço para ela."));
+            Ensure("DLG_C4C_D06_FULL_HINT", L("Melantha", "A pétala não procura o jardim. Procura o lugar que o jardim repete."));
+            Ensure("DLG_C4C_D07_FULL_PROGRESS", L("Melantha", "O reflexo aceitou a posição antes de mim."));
+            Ensure("DLG_C4C_D08_WANING_HINT", L("Melantha", "O que a Lua retira também obedece a uma ordem."));
+            Ensure("DLG_C4C_D10_GARDEN_COMPLETE", L("Poe", "Agora."), L("Melantha", "O jardim ficou quieto. Não vazio."));
+            Ensure("DLG_C4C_D11_MIRROR_INTRO", L("Melantha", "Cada espelho mostra uma versão da mesma pergunta."));
+            Ensure("DLG_C4C_D12_MIRROR_ERROR", L("Melantha", "Esse reflexo não me reconhece."));
+            Ensure("DLG_C4C_D13_MIRROR_PROGRESS", L("Melantha", "Um deles parou de mentir."), L("Poe", "Ainda não."));
+            Ensure("DLG_C4C_D15_CORRIDOR_REPEAT", L("Melantha", "O marco voltou antes de eu voltar."));
+            Ensure("DLG_C4C_D17_CORRIDOR_HINT", L("Melantha", "Não é a distância que muda. É aquilo que a memória aceita."));
+            Ensure("DLG_C4C_D18_CORRIDOR_SUCCESS", L("Melantha", "Desta vez, o retorno não me trouxe de volta."), L("Poe", "Siga."));
+            Ensure("DLG_C4C_D20_SIGIL_ERROR", L("Melantha", "O anel recusou a intenção, não o movimento."));
+            Ensure("DLG_C4C_D21_SIGIL_PROGRESS", L("Melantha", "Uma parte respondeu. As outras ainda estão ouvindo."));
+            Ensure("DLG_C4C_D22_SIGIL_SUCCESS", L("Poe", "Ali."), L("Melantha", "O fragmento estava esperando a conclusão."));
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }

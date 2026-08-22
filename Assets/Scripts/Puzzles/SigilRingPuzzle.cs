@@ -27,6 +27,8 @@ namespace MementoMori.Puzzles
         {
             if (Solved || string.IsNullOrEmpty(value)) return false;
             if (GameState.Instance != null && !GameState.Instance.HasFlag(StoryFlag.MirrorPuzzleComplete)) return false;
+            var progressKey = "sigil." + ring;
+            if (GameState.Instance != null && GameState.Instance.GetPuzzleProgress(progressKey) > 0) return false;
             Attempts++;
             bool ok = ring switch
             {
@@ -38,7 +40,7 @@ namespace MementoMori.Puzzles
             if (ok)
             {
                 RuntimeAudio.PlayOneShot("09_sigil_success", .5f);
-                GameState.Instance?.SetPuzzleProgress("sigil." + ring, 1);
+                GameState.Instance?.SetPuzzleProgress(progressKey, 1);
                 RingEvaluated?.Invoke(ring, true);
                 if (GetProgress() == 3) Solve();
             }

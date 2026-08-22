@@ -48,6 +48,7 @@ namespace MementoMori.Puzzles
             if (!correctSymbolIds.Contains(symbol.SymbolId))
             {
                 ErrorCount++;
+                GameState.Instance?.IncrementCounter("mirror.errors");
                 Object.FindAnyObjectByType<PoeFollower>()?.ReactToError(false);
                 hintController?.RegisterError(ErrorCount);
                 return;

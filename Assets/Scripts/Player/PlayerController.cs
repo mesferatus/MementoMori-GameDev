@@ -14,11 +14,9 @@ namespace MementoMori.Player
         private Vector2 moveInput;
         private float nextFootstepAt;
 
-#if UNITY_EDITOR
         private bool automationInputActive;
         public void SetAutomationMoveInput(Vector2 direction) { automationInputActive = true; moveInput = direction.normalized; }
         public void ClearAutomationMoveInput() { automationInputActive = false; moveInput = Vector2.zero; }
-#endif
 
         private void Awake()
         {
@@ -28,9 +26,7 @@ namespace MementoMori.Player
 
         private void Update()
         {
-#if UNITY_EDITOR
             if (automationInputActive) return;
-#endif
             if (InputGate.Instance != null && InputGate.Instance.IsBlocked)
                 moveInput = Vector2.zero;
             else
