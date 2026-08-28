@@ -29,10 +29,4 @@
 /Assets/_Recovery/
 /Assets/Resources/GeneratedArt/
 
-# Packs de terceiros: mantidos localmente, nunca publicar fontes restritas.
-/Assets/LuizaAssets/*
-!/Assets/LuizaAssets/DominioLua/
-!/Assets/LuizaAssets/DominioLua.meta
-/Assets/LuizaAssets/DominioLua/*
-!/Assets/LuizaAssets/DominioLua/PixelMoonPhases/
-!/Assets/LuizaAssets/DominioLua/PixelMoonPhases.meta
+# Assets da Luiza: versionados para compartilhamento no repositório.
