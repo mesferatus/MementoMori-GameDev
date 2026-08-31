@@ -33,7 +33,7 @@ Dentro de `Assets/`, arquivos `.cs` são códigos C#; `.unity` são cenas; `.pre
 
 ## CURRENT TECHNICAL BASELINE
 
-Baseline pré-integração visual: Unity `6000.4.12f1`, build Windows x86_64, cinco cenas habilitadas na ordem do fluxo principal, Input System ativo, URP 17.4.0 e projeto identificado como `Memento Mori` / `Monespira`.
+Baseline pré-integração visual: Unity `6000.4.12f1`, build Windows x86_64, cinco cenas habilitadas na ordem do fluxo principal, Input System ativo, URP 17.4.0 e projeto identificado como `Memento Mori`.
 
 Na validação mais recente, o projeto compilou, a build Windows foi gerada e as suítes automatizadas passaram: EditMode 24/24, PlayMode 11/11 e smoke CT-001 a CT-011. Missing References permaneceu em 0 nos scans disponíveis. O playthrough humano, vitória e New Game/reset foram confirmados anteriormente pelo usuário. Esses resultados cobrem a base técnica; não aprovam a integração visual final da Luiza.
 
