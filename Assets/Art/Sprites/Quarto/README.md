@@ -58,8 +58,8 @@ Pacote curado de 25 sprites PNG para a cena `Quarto` do Memento Mori.
 2. Defina `Texture Type` como `Sprite (2D and UI)`.
 3. Use `Sprite Mode: Single` para props, móveis, arquitetura e ritual.
 4. Para os arquivos de `01_Tiles`, mantenha um `Pixels Per Unit` consistente com o Tilemap do projeto; altere para `Multiple` e faça o slice somente se um arquivo for usado como tileset.
-5. Use `Filter Mode: Point (no filter)` e `Compression: None` para preservar pixel art.
-6. Mantenha o mesmo `Pixels Per Unit` nos sprites do quarto para conservar a escala relativa.
+5. Use `Pixels Per Unit: 32`, `Filter Mode: Point (no filter)` e `Compression: None` para preservar pixel art.
+6. Mantenha `Generate Mip Maps: Off` e o mesmo PPU nos sprites do quarto para conservar a escala relativa.
 
 ## Curadoria
 
