@@ -144,7 +144,7 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "Poe est\xE1 morto."
+  - Text: E Poe?
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "Essa \xE9 a frase mais verdadeira que voc\xEA disse."
+  - Text: "Essa \xE9 a pergunta mais verdadeira que voc\xEA trouxe."
     Speaker: Andrealphus
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "N\xE3o \xE9 a \xFAnica verdade dispon\xEDvel."
+  - Text: "N\xE3o \xE9 a \xFAnica resposta dispon\xEDvel."
     Speaker: Andrealphus
     CharactersPerSecond: 38
     PauseBefore: 0

@@ -135,17 +135,32 @@ namespace MementoMori.Verification
 
             var bed = FindFirstObjectByType<BedController>();
             var locked = bed != null && !BedController.HasRoomRequirements(GameState.Instance);
-            foreach (var objectName in new[] { "PoeBowl", "PoeToy", "Photo", "Window", "Candles", "RitualItem", "Grimoire" })
+            // Follow the V3 investigation order so gated interactions are exercised exactly as a player sees them.
+            foreach (var objectName in new[] { "Photo", "Grimoire", "RitualItem", "Window", "Candles", "PoeBowl", "PoeToy" })
             {
-                var trigger = GameObject.Find(objectName)?.GetComponent<DialogueTrigger>();
+                var trigger = FindNamedComponent<DialogueTrigger>(objectName);
                 if (trigger != null && trigger.CanInteract(default)) trigger.Interact(default);
+                yield return CompleteOpenDialogue();
+            }
+            var optionalRoomContentDoesNotUnlockBed = !BedController.HasRoomRequirements(GameState.Instance);
+            var ritual = FindFirstObjectByType<RitualController>();
+            ritual?.Interact(default);
+            var ritualDeadline = Time.realtimeSinceStartup + 10f;
+            while (!GameState.Instance.RitualCompleted && Time.realtimeSinceStartup < ritualDeadline)
+            {
+                AdvanceDialogueIfOpen();
                 yield return null;
             }
-            Check("CT-003", locked && BedController.HasRoomRequirements(GameState.Instance), "Bloqueio da cama e as sete interaÃ§Ãµes do quarto foram verificados.");
+            yield return CompleteOpenDialogue();
+            var roomState = GameState.Instance;
+            Check("CT-003", locked && optionalRoomContentDoesNotUnlockBed && BedController.HasRoomRequirements(roomState),
+                $"bed={bed != null}; ritual={ritual != null}; photo={roomState.HasFlag(StoryFlag.RoomPhotoExamined)}; grimoire={roomState.HasFlag(StoryFlag.RoomGrimoireRead)}; item={roomState.HasFlag(StoryFlag.RoomRitualItemStored)}; window={roomState.HasFlag(StoryFlag.RoomWindowSecured)}; candles={roomState.HasFlag(StoryFlag.RoomCandlesDone)}; ritualComplete={roomState.RitualCompleted}.");
 
             // The normal UI invokes this same state change before the 30â€“50 second transition.
             bed?.Interact(new MementoMori.Interaction.InteractionContext(GameObject.FindGameObjectWithTag("Player")));
+            yield return CompleteOpenDialogue();
             bed?.ConfirmSleep();
+            yield return CompleteOpenDialogue();
             // Preserve the actual dream transition: this CT must wait for BedController's
             // coroutine instead of forcing a scene load before DreamTransitionComplete exists.
             yield return WaitForScene("Labirinto", 45f);
@@ -153,6 +168,7 @@ namespace MementoMori.Verification
 
             var falseDoor = FindFirstObjectByType<FalseDoorController>();
             falseDoor?.Interact(default);
+            yield return CompleteOpenDialogue();
             var player = GameObject.FindGameObjectWithTag("Player")?.transform;
             var revealTrigger = GameObject.Find("PoeReveal")?.transform;
             if (player != null && revealTrigger != null)
@@ -161,10 +177,18 @@ namespace MementoMori.Verification
                 Physics2D.SyncTransforms();
                 yield return new WaitForFixedUpdate();
             }
+            yield return CompleteOpenDialogue();
             Check("CT-005", GameState.Instance.PoeRevealed && GameObject.Find("PoeRouteTrigger_01") != null && GameObject.Find("PoeRouteTrigger_02") != null, "RevelaÃ§Ã£o e dois pontos de Poe disponÃ­veis.");
 
             var echoes = FindFirstObjectByType<EchoCorridorPuzzle>();
-            var preserved = echoes != null && !echoes.Select(0, player) && echoes.Select(2, player) && echoes.Select(1, player) && echoes.Select(3, player);
+            var preserved = echoes != null && !echoes.Select(0, player);
+            yield return CompleteOpenDialogue();
+            preserved &= echoes != null && echoes.Select(2, player);
+            yield return CompleteOpenDialogue();
+            preserved &= echoes != null && echoes.Select(1, player);
+            yield return CompleteOpenDialogue();
+            preserved &= echoes != null && echoes.Select(3, player);
+            yield return CompleteOpenDialogue();
             Check("CT-006", GameState.Instance.HasFlag(StoryFlag.FalseDoorTriggered) && preserved && GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete), "Porta falsa e trÃªs rodadas recuperÃ¡veis dos Ecos concluÃ­das.");
 
             var domainPortal = GameObject.Find("MoonPortal")?.GetComponent<Portal>();
@@ -188,7 +212,7 @@ namespace MementoMori.Verification
                     foreach (var index in new[] { 2, 1, 0 })
                     {
                         InvokeInteraction(GameObject.Find("FlorMinguante_" + (index + 1)), interactor);
-                        yield return null;
+                        yield return CompleteOpenDialogue();
                     }
                 }
                 else if (petal.Petal == MoonPetal.Crescente)
@@ -204,7 +228,7 @@ namespace MementoMori.Verification
                     }
                     crescentTrace += $" | crescentOpen={petal.CanCollect(interactor?.transform)}; finalPlayer={interactor?.transform.position}; finalPoe={(FindFirstObjectByType<MementoMori.Poe.PoeFollower>() == null ? "missing" : FindFirstObjectByType<MementoMori.Poe.PoeFollower>().transform.position.ToString())}";
                     InvokeInteraction(petal.gameObject, interactor);
-                    yield return null;
+                    yield return CompleteOpenDialogue();
                 }
                 else
                 {
@@ -212,7 +236,7 @@ namespace MementoMori.Verification
                     if (interactor != null && reflected != null) interactor.transform.position = reflected.transform.position;
                     // The real interaction lives at the reflection, not on the source petal.
                     InvokeInteraction(reflected, interactor);
-                    yield return null;
+                    yield return CompleteOpenDialogue();
                 }
             }
             var gardenDeadline = Time.realtimeSinceStartup + 5f;
@@ -220,8 +244,16 @@ namespace MementoMori.Verification
                 yield return null;
             var mirrors = FindFirstObjectByType<PuzzleMirror>();
             var mirrorSymbols = FindObjectsByType<MirrorSymbol>(FindObjectsSortMode.None);
-            if (mirrors != null) foreach (var symbol in mirrorSymbols) if (symbol.SymbolId == "Present") InvokeInteraction(symbol.gameObject, interactor);
-            if (mirrors != null) foreach (var id in new[] { "Delayed", "Ahead", "Absent" }) foreach (var symbol in mirrorSymbols) if (symbol.SymbolId == id) InvokeInteraction(symbol.gameObject, interactor);
+            if (mirrors != null) foreach (var symbol in mirrorSymbols) if (symbol.SymbolId == "Present")
+            {
+                InvokeInteraction(symbol.gameObject, interactor);
+                yield return CompleteOpenDialogue();
+            }
+            if (mirrors != null) foreach (var id in new[] { "Delayed", "Ahead", "Room" }) foreach (var symbol in mirrorSymbols) if (symbol.SymbolId == id)
+            {
+                InvokeInteraction(symbol.gameObject, interactor);
+                yield return CompleteOpenDialogue();
+            }
             var gardenComplete = GameState.Instance.HasFlag(StoryFlag.GardenComplete);
             var mirrorSolved = GameState.Instance.MirrorPuzzleSolved;
             var crescent = Array.Find(petals, current => current.Petal == MoonPetal.Crescente);
@@ -238,15 +270,15 @@ namespace MementoMori.Verification
             var phaseRing = GameObject.Find("SigilRing_Fases");
             var memoryRing = GameObject.Find("SigilRing_MemÃ³rias");
             var intentionRing = GameObject.Find("SigilRing_IntenÃ§Ã£o");
-            if (phaseRing != null) for (var i = 0; i < 3; i++) InvokeInteraction(phaseRing, interactor);
-            if (memoryRing != null) for (var i = 0; i < 4; i++) InvokeInteraction(memoryRing, interactor);
-            if (intentionRing != null) InvokeInteraction(intentionRing, interactor);
+            if (phaseRing != null) for (var i = 0; i < 3; i++) { InvokeInteraction(phaseRing, interactor); yield return CompleteOpenDialogue(); }
+            if (memoryRing != null) for (var i = 0; i < 4; i++) { InvokeInteraction(memoryRing, interactor); yield return CompleteOpenDialogue(); }
+            if (intentionRing != null) { InvokeInteraction(intentionRing, interactor); yield return CompleteOpenDialogue(); }
             // Names with accented characters are locale-sensitive in generated scenes. Fall back
             // to the real ring components so the interaction sequence remains gameplay-driven.
             foreach (var ring in FindObjectsByType<SigilRingInteractable>(FindObjectsSortMode.None))
             {
                 var rotations = ring.Ring == SigilRing.Phase ? 3 : ring.Ring == SigilRing.Memory ? 3 : 1;
-                for (var i = 0; i < rotations; i++) InvokeInteraction(ring.gameObject, interactor);
+                for (var i = 0; i < rotations; i++) { InvokeInteraction(ring.gameObject, interactor); yield return CompleteOpenDialogue(); }
             }
             var retained = sigil != null && sigil.GetProgress() == 3;
             Check("CT-009", retained && sigil.Solved, $"AnÃ©is={(sigil == null ? "ausente" : sigil.GetProgress().ToString())}; resolvido={(sigil != null && sigil.Solved)}.");
@@ -262,12 +294,31 @@ namespace MementoMori.Verification
                 Check("CT-011", false, "FragmentCollectible not found in DominioLua.");
                 yield break;
             }
-            fragment.Interact(default);
+            for (var stage = 0; stage < 4; stage++)
+            {
+                fragment.Interact(new InteractionContext(interactor));
+                yield return CompleteOpenDialogue();
+                yield return null;
+            }
+            var finalDeadline = Time.realtimeSinceStartup + 20f;
+            while (SceneManager.GetActiveScene().name != "FinalBeta" && Time.realtimeSinceStartup < finalDeadline)
+            {
+                AdvanceDialogueIfOpen();
+                yield return null;
+            }
             yield return WaitForScene("FinalBeta");
             var fragmentCollected = GameState.Instance.FragmentCollected;
+            var ending = FindFirstObjectByType<FinalBetaController>();
+            var endingDeadline = Time.realtimeSinceStartup + 30f;
+            while (ending != null && !ending.SequenceComplete && Time.realtimeSinceStartup < endingDeadline)
+            {
+                AdvanceDialogueIfOpen();
+                yield return null;
+            }
+            var endingComplete = ending != null && ending.SequenceComplete;
             GameManager.Instance.ReturnToMenu();
             yield return WaitForScene("MainMenu");
-            Check("CT-011", fragmentCollected && paused && SceneManager.GetActiveScene().name == "MainMenu", "Fragmento, FinalBeta, pausa e retorno ao menu concluÃ­dos.");
+            Check("CT-011", fragmentCollected && paused && endingComplete && SceneManager.GetActiveScene().name == "MainMenu", "Fragmento, sequência completa do FinalBeta, pausa e retorno ao menu; encerramento=" + endingComplete);
 
             }
             finally
@@ -308,6 +359,30 @@ namespace MementoMori.Verification
             if (!interactable.CanInteract(context)) return false;
             interactable.Interact(context);
             return true;
+        }
+
+        private static T FindNamedComponent<T>(string objectName) where T : Component
+        {
+            foreach (var component in FindObjectsByType<T>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+                if (component != null && component.gameObject.name == objectName)
+                    return component;
+            return null;
+        }
+
+        private static void AdvanceDialogueIfOpen()
+        {
+            if (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen)
+                DialogueManager.Instance.Advance();
+        }
+
+        private static IEnumerator CompleteOpenDialogue(float timeout = 10f)
+        {
+            var deadline = Time.realtimeSinceStartup + timeout;
+            while (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen && Time.realtimeSinceStartup < deadline)
+            {
+                DialogueManager.Instance.Advance();
+                yield return null;
+            }
         }
 
         private IEnumerator MoveInteractorOutsideCrescent(GameObject interactor, Transform crescent, float minimumDistance)
@@ -355,6 +430,7 @@ namespace MementoMori.Verification
                 var blocked = false;
                 while (Vector2.Distance(interactor.transform.position, waypoint) > .08f && Time.realtimeSinceStartup < deadline)
                 {
+                    AdvanceDialogueIfOpen();
                     controller.SetAutomationMoveInput((waypoint - (Vector2)interactor.transform.position).normalized);
                     yield return new WaitForFixedUpdate();
                 }
@@ -370,7 +446,8 @@ namespace MementoMori.Verification
         private static List<Vector2> FindNavigableCrescentRoute(GameObject interactor, Vector2 start, Vector2 crescent, float minimumDistance, float radius)
         {
             const float cellSize = .5f;
-            const int searchRadius = 32;
+            // Cover the authored room distance after spatial revisions; keep the same collision checks.
+            var searchRadius = Mathf.Clamp(Mathf.CeilToInt(Vector2.Distance(start, crescent) / cellSize) + 16, 32, 160);
             var queue = new Queue<Vector2Int>();
             var cameFrom = new Dictionary<Vector2Int, Vector2Int>();
             var visited = new HashSet<Vector2Int>();

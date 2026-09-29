@@ -23,12 +23,7 @@ namespace MementoMori.World
         public int InteractionPriority => 20;
         public bool CanInteract(InteractionContext context) => true;
         public static bool HasRoomRequirements(GameState state) => state != null
-            && state.HasFlag(StoryFlag.RoomBowlExamined)
-            && state.HasFlag(StoryFlag.RoomToyExamined)
-            && state.HasFlag(StoryFlag.RoomPhotoExamined)
-            && state.HasFlag(StoryFlag.RoomGrimoireRead)
-            && state.HasFlag(StoryFlag.RoomWindowSecured)
-            && state.HasFlag(StoryFlag.RoomRitualItemStored);
+            && state.RitualCompleted;
         public void Interact(InteractionContext context)
         {
             if (context.Interactor != null) checkpointPosition = context.Interactor.transform.position;
@@ -37,7 +32,7 @@ namespace MementoMori.World
             if (!ready)
             {
                 attempts++;
-                lockedDialogue = Resources.Load<DialogueData>(attempts == 1 ? "Dialogue/DLG_ROOM_BED_LOCKED_01" : "Dialogue/DLG_ROOM_BED_LOCKED_02");
+                lockedDialogue = Resources.Load<DialogueData>(attempts == 1 ? "Dialogue/DLG_Q_BED_EARLY_01" : "Dialogue/DLG_Q_BED_EARLY_02");
                 DialogueManager.Instance?.StartDialogue(lockedDialogue);
                 return;
             }
@@ -55,7 +50,7 @@ namespace MementoMori.World
         private void ShowSleepChoice()
         {
             choicePending = true;
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_ROOM_SLEEP_CONFIRM"));
+            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_Q_SLEEP_CONFIRM"));
             if (choicePanel == null) CreateChoicePanel();
             if (choicePanel != null) choicePanel.SetActive(true);
         }
@@ -66,8 +61,7 @@ namespace MementoMori.World
             if (choicePanel != null) choicePanel.SetActive(false);
             transitioning = true;
             GameState.Instance?.SetFlag(StoryFlag.RoomSleepUnlocked);
-            GameState.Instance?.SetRitualCompleted();
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_DREAM_TRANSITION"));
+            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_Q_DREAM_TRANSITION"));
             StartCoroutine(SleepRoutine());
         }
 

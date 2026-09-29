@@ -1,0 +1,420 @@
+@A01|Sobre Melantha
+>TEXT
+Melantha.
+Filha da noite, aprendiz do esquecimento.
+Desde que me conheço, os sonhos sempre pareceram mais reais do que os dias.
+Talvez por isso eu tenha começado a escrever.
+Não para lembrar de tudo.
+Para perceber quando alguma coisa desaparece.
+Este grimório guarda aquilo que ainda consigo nomear:
+o que fui,
+o que sou
+e, talvez, o que ainda possa ser.
+Que eu não me esqueça.
+>NOTE
+Sonhos também deixam rastros.
+@A02|O Quarto
+>TEXT
+Conheço cada tábua deste chão.
+Ainda assim, às vezes acordo aqui como se tivesse sido colocada no quarto de outra pessoa.
+A cama.
+A escrivaninha.
+A janela.
+O círculo.
+Tudo está onde deveria estar.
+Esse é o problema.
+Quando alguma coisa está errada, o quarto não muda de forma.
+Ele muda de significado.
+>NOTE
+Uma casa também pode esquecer quem mora nela.
+@A03|Poe
+>TEXT
+Poe aparece antes que eu termine de decidir se quero companhia.
+Ele não pergunta.
+Só fica.
+Às vezes me observa como se soubesse o que estou procurando antes de mim.
+É irritante.
+Também é reconfortante.
+Não lembro quando comecei a confiar tanto nele.
+Talvez eu devesse ter anotado.
+>NOTE
+Ele odeia quando eu finjo que não ouvi.
+@A04|O Círculo
+>TEXT
+Eu conheço estes símbolos.
+Não todos pelo nome, mas pelo gesto.
+As mãos lembram coisas que a cabeça perde.
+O círculo não parece destruído.
+Parece interrompido.
+As quatro velas foram deixadas como pontos de sustentação.
+Se eu conseguir reconstruir a ordem, talvez descubra o que estava tentando manter aqui.
+@A05|O Labirinto
+>TEXT
+Não parece construído.
+Parece lembrado.
+Os corredores se encaixam como pensamentos tentando formar uma história depois que partes importantes foram arrancadas.
+Há portas que devolvem ao mesmo lugar.
+Vozes que sabem coisas que eu não disse.
+Caminhos que parecem mudar quando percebem que estou prestando atenção.
+Se este lugar quer alguma coisa de mim, ainda não decidiu como pedir.
+>NOTE
+Não seguir uma parede.
+Seguir aquilo que muda.
+@A06|Andrealphus
+>TEXT
+O nome estava no grimório antes que eu lembrasse do rosto.
+Isso não me tranquiliza.
+Andrealphus fala como alguém que já conhece o final de uma conversa.
+Responde perguntas com outras perguntas.
+Quando parece estar mentindo, nunca consigo descobrir qual parte da frase é a mentira.
+Talvez esse seja o ponto.
+>NOTE
+Conhecimento também pode ser uma forma de ameaça.
+@A07|Os Sete Domínios
+>TEXT
+Sete caminhos.
+Sete Arcanos.
+A Lua.
+A Torre.
+O Enforcado.
+O Eremita.
+O Diabo.
+A Morte.
+O Julgamento.
+Não parecem portas no sentido comum.
+Parecem maneiras diferentes de atravessar a mesma coisa.
+Seis permanecem fechadas.
+A Lua respondeu.
+Por enquanto, isso basta.
+>NOTE
+Toda porta escolhe também aquilo que deixa do lado de fora.
+@A08|A Lua
+>TEXT
+A Lua nunca mostra tudo.
+Talvez seja por isso que este lugar pareça tão familiar.
+Reflexos.
+Fases.
+Ciclos.
+Coisas que desaparecem sem deixar de existir.
+Aqui, olhar diretamente para alguma coisa parece ser a maneira mais fácil de não enxergá-la.
+Preciso prestar atenção ao que muda entre uma imagem e outra.
+>NOTE
+Ausência não é o mesmo que vazio.
+@A09|Jardim Lunar
+>TEXT
+As flores daqui não crescem em direção ao sol.
+Elas obedecem à Lua.
+Crescente.
+Cheia.
+Minguante.
+Nova.
+Algumas respondem à presença.
+Outras ao reflexo.
+Outras apenas à passagem de um ciclo completo.
+Não devo tratá-las como flores comuns.
+>NOTE
+Flores também sabem esperar.
+@A10|Reflexos
+>TEXT
+Um espelho comum repete.
+Estes interpretam.
+Um mostra o instante.
+Outro chega tarde.
+Outro parece já saber o que farei.
+Alguns retiram coisas da imagem.
+Outros acrescentam.
+O mais inquietante não é quando o reflexo está errado.
+É quando parece mais convencido de si do que eu.
+>NOTE
+Nem todo reflexo pertence ao presente.
+@A11|Fragmento
+>TEXT
+Não parece quebrado.
+Parece incompleto.
+Há diferença.
+Quando o toquei, não senti que estava encontrando alguma coisa nova.
+Senti que alguma coisa me reconheceu.
+Não sei o que ele é.
+Também não sei por que a ideia de deixá-lo aqui me parece impossível.
+Vou carregá-lo comigo.
+Até entender.
+>NOTE
+Algumas coisas pesam mais quando não sabemos a quem pertencem.
+@A12|Retorno
+>TEXT
+Estou de volta.
+A frase deveria ser suficiente.
+Não é.
+O quarto está no mesmo lugar.
+A cama também.
+O círculo apagou.
+Eu voltei.
+Mas alguma parte da pergunta voltou comigo.
+Talvez seja isso que o Fragmento seja.
+Não uma resposta.
+Uma direção.
+>NOTE
+Primeiro Domínio: A Lua.
+@R01|Princípios de um Círculo
+>TEXT
+Um círculo não serve apenas para conter.
+Serve para determinar onde uma coisa começa e onde outra deixa de ter autoridade.
+Antes de qualquer operação:
+observar o limite;
+reconhecer os pontos;
+determinar a intenção;
+não interromper a ordem.
+Uma operação incompleta não desaparece.
+Permanece aberta.
+>NOTE
+Nunca dormir dentro de um círculo ativo.
+@R02|As Quatro Chamas
+>TEXT
+Quatro chamas sustentam esta operação.
+Não devem ser acesas de acordo com sua posição.
+Cada uma corresponde a um significado.
+A ordem pertence ao símbolo, não ao lugar.
+Começa onde a luz diminui.
+Continua naquilo que registra.
+Passa por aquilo que preserva um rosto.
+Termina onde o corpo repousa.
+Só então o centro deve ser tocado.
+>NOTE
+Lua.
+Palavra.
+Memória.
+Repouso.
+@R03|Sobre Limiares
+>TEXT
+Portas são limiares óbvios.
+Janelas são mais perigosas.
+Uma porta pergunta se você quer passar.
+Uma janela permite que duas coisas se observem sem que nenhuma atravesse.
+Durante uma operação, o limite precisa permanecer estável.
+Vento, reflexo e luz externa podem alterar uma chama.
+>NOTE
+Fechar não significa sempre impedir.
+Às vezes significa sustentar.
+@R04|Nomes
+>TEXT
+Dar nome a alguma coisa não significa compreendê-la.
+Mas torna possível chamá-la novamente.
+Nomes criam direção.
+Por isso devem ser usados com cuidado.
+Aquilo que responde pode não ser aquilo que foi chamado.
+>NOTE
+Escrever primeiro.
+Pronunciar depois.
+@R05|Ecos
+>TEXT
+Um eco comum repete a forma de uma voz.
+Um eco ritual repete a intenção.
+Se a resposta muda, não significa necessariamente que a pergunta mudou.
+Talvez quem esteja escutando tenha mudado.
+Não responder à palavra.
+Responder ao significado.
+@R06|Espelhos Rituais
+>TEXT
+Reflexos podem registrar:
+presente;
+atraso;
+antecipação;
+ausência;
+duplicação;
+espaço.
+Nenhum deles é verdadeiro sozinho.
+Em uma operação de memória, procurar relações.
+Não procurar a imagem mais perfeita.
+Procurar as imagens que revelam tempo e lugar.
+@R07|Sigilo Fragmentado
+>TEXT
+Um sigilo quebrado não deve ser reconstruído pela aparência.
+Primeiro:
+reconhecer a fase.
+Depois:
+reconhecer o registro.
+Por fim:
+determinar a intenção.
+Fase.
+Memória.
+Intenção.
+Quando os três concordam, a forma deixa de resistir.
+>NOTE
+O símbolo não obedece à mão.
+Obedece ao significado.
+@P01|Ritual do Quarto
+>HINT1
+O círculo está esperando quatro significados.
+Talvez os objetos do quarto expliquem o que as chamas representam.
+>HINT2
+Observe:
+a Lua na janela;
+o grimório;
+o retrato;
+a cama.
+A ordem está escrita em outra página.
+>HINT3
+Lua → Livro → Memória → Repouso.
+Depois, toque o centro.
+@P02|Porta Falsa
+>HINT1
+Se uma porta insiste em devolver você ao mesmo lugar, talvez atravessá-la não seja o objetivo.
+>HINT2
+Observe o que muda depois de cada retorno.
+A saída não precisa parecer diferente antes de você errar.
+>HINT3
+Pare de observar a porta.
+Observe a sala.
+@P03|Poço de Vozes
+>HINT1
+O poço não quer uma resposta rápida.
+Escute até que a voz termine de mudar.
+>HINT2
+Interaja novamente.
+Cada contato revela uma camada diferente.
+>HINT3
+Há quatro etapas.
+Complete as quatro antes de abandonar o poço.
+>RECORD
+O Labirinto não repete.
+Ele corrige.
+@P04|Eco I
+>HINT1
+Não responda pensando no objeto.
+Pense no que ele preserva.
+>HINT2
+Uma imagem não preserva uma pessoa.
+Preserva sua forma.
+>HINT3
+Uma imagem preserva forma.
+@P05|Eco II
+>HINT1
+A pergunta não é sobre quem respondeu.
+É sobre quem continuou tentando alcançar o outro lado.
+>HINT2
+Mesmo sem resposta, alguém continuou chamando.
+>HINT3
+Eu continuei chamando.
+@P06|Eco III
+>HINT1
+Não confunda retorno com morte.
+>HINT2
+Você não voltou porque morreu.
+Você voltou porque alguma coisa foi aberta.
+>HINT3
+Você voltou porque abriu.
+@P07|Sete Domínios
+>HINT1
+Seis portas permanecem mudas.
+Uma responde.
+>HINT2
+Procure o Arcano que domina reflexos, ciclos e aquilo que não pode ser visto inteiro.
+>HINT3
+A Lua.
+@P08|Jardim Lunar: Crescente
+>HINT1
+Nem toda flor responde a Melantha primeiro.
+>HINT2
+Observe quem está acompanhando você.
+>HINT3
+Deixe Poe se aproximar antes da ação de Melantha.
+@P09|Jardim Lunar: Cheia
+>HINT1
+A Lua Cheia revela quando imagem e origem coincidem.
+>HINT2
+Procure alinhar reflexo e forma.
+>HINT3
+Ajuste até que o reflexo fique alinhado.
+Se estiver quase correto:
+Quase.
+@P10|Jardim Lunar: Minguante
+>HINT1
+Para desaparecer, uma Lua precisa primeiro ter sido inteira.
+>HINT2
+O ciclo deve caminhar para a ausência.
+>HINT3
+Cheia → Minguante → Nova.
+Erros reiniciam apenas este subpuzzle.
+@P11|Sala dos Espelhos
+>HINT1
+Não procure três imagens iguais.
+Procure três relações diferentes com o tempo e o lugar.
+>HINT2
+Uma chega tarde.
+Uma chega cedo.
+Uma lembra o quarto.
+>HINT3
+Delayed + Ahead + Room.
+@P12|Espelho Negro
+>HINT1
+Alguns espelhos não respondem à imagem.
+Respondem àquilo que prende uma pessoa a outra coisa.
+>HINT2
+Escute.
+Não tente completar as frases antes do espelho.
+>RECORD
+Um nome abre.
+Um vínculo sustenta.
+Um preço fecha.
+“Se eu não voltar inteira—”
+@P13|Sigilo Fragmentado
+>HINT1
+O sigilo pergunta três coisas:
+Quando?
+Onde está registrado?
+O que deve continuar?
+>HINT2
+Fase lunar.
+Registro.
+Intenção.
+>HINT3
+Minguante + Grimório + SUSTENTAR.
+@M01|Rastro I
+>TEXT
+Eu desenhei o círculo porque tinha medo de esquecer alguma coisa.
+Não lembro o quê.
+Isso deveria me assustar mais.
+@M02|Rastro II
+>TEXT
+Uma voz pode permanecer em um lugar muito depois que a conversa terminou.
+Ou talvez seja o lugar que permaneça dentro da voz.
+@M03|Rastro III
+>TEXT
+Eu continuei chamando.
+Não porque tivesse certeza de que alguém responderia.
+Porque parar parecia pior.
+@M04|Rastro IV
+>TEXT
+O quarto.
+A cama vazia.
+O círculo ainda ativo.
+Nenhum sinal de mim.
+Se aquilo era uma lembrança, não sei de quem.
+@M05|Rastro V
+>TEXT
+Um nome abre.
+Um vínculo sustenta.
+Um preço fecha.
+A última frase não chegou inteira.
+“Se eu não voltar inteira—”
+Depois, nada.
+@M06|Rastro VI
+>TEXT
+“Se eu me perder, o caminho fica.”
+“Se eu esquecer, a marca fica.”
+“Encontre o caminho de volta.”
+Não reconheço a voz.
+Mas reconheço a sensação de ter ouvido isso antes.
+@M07|Rastro VII
+>TEXT
+Poe sumiu.
+Por um instante, meu primeiro impulso foi voltar.
+Desta vez eu não voltei.
+Talvez encontrar alguém não seja a mesma coisa que persegui-lo.
+Talvez alguns caminhos só apareçam quando paramos de olhar para trás.
+@M08|Rastro VIII
+>TEXT
+Ele estava adiante.
+Como se sempre tivesse sabido para onde eu precisava ir.
+Não perguntei onde esteve.
+Ele também não explicou.

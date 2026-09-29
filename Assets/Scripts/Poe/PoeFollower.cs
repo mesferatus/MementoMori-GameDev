@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using MementoMori.Audio;
 
 namespace MementoMori.Poe
@@ -14,6 +16,47 @@ namespace MementoMori.Poe
         [SerializeField, Min(0.1f)] private float eventTimeout = 5f;
         public PoeState State { get; private set; } = PoeState.Hidden;
         private Coroutine eventRoutine;
+        private Animator animator;
+        private SpriteRenderer visual;
+        private Vector3 lastVisualPosition;
+        private string visualDirection = "front";
+        private string animationState;
+        private Tilemap navigationFloor;
+        private readonly Queue<Vector2> navigationRoute = new();
+        private Vector2 routeDestination;
+        private float nextRouteSearch;
+
+        private void OnEnable()
+        {
+            animator = GetComponentInChildren<Animator>();
+            visual = animator == null ? null : animator.GetComponent<SpriteRenderer>();
+            lastVisualPosition = transform.position;
+            animationState = null;
+        }
+
+        private void LateUpdate()
+        {
+            var delta = transform.position - lastVisualPosition;
+            lastVisualPosition = transform.position;
+            if (animator == null || animator.runtimeAnimatorController == null) return;
+            var moving = delta.sqrMagnitude > .000001f;
+            if (moving)
+            {
+                visualDirection = Mathf.Abs(delta.x) > Mathf.Abs(delta.y) ? "side" : delta.y > 0 ? "back" : "front";
+                if (visual != null && visualDirection == "side") visual.flipX = delta.x < 0;
+            }
+            var next = State switch
+            {
+                PoeState.Dissolving => "poe_dissolve",
+                PoeState.Frightened => "poe_scared_arch",
+                PoeState.Inspecting => "poe_clue_look",
+                PoeState.Refusing => "poe_alert",
+                _ => "poe_" + (moving ? "walk_" : "idle_") + visualDirection
+            };
+            if (next == animationState) return;
+            animator.Play(next, 0, 0);
+            animationState = next;
+        }
 
         public void Configure(Transform followTarget, float followSpeed, float stopDistance)
         {
@@ -27,7 +70,7 @@ namespace MementoMori.Poe
             if (State != PoeState.Following || player == null) return;
             var delta = player.position - transform.position;
             if (delta.sqrMagnitude > minimumDistance * minimumDistance)
-                transform.position += delta.normalized * speed * Time.deltaTime;
+                MoveOnFloor(player.position);
         }
         public void Reveal() { gameObject.SetActive(true); RuntimeAudio.PlayOneShot("15_poe_soft_call", .45f); State = PoeState.Reveal; }
         public void BeginFollowing() { State = PoeState.Following; }
@@ -75,7 +118,7 @@ namespace MementoMori.Poe
             var elapsed = 0f;
             while (Vector2.Distance(transform.position, point.transform.position) > 0.05f && elapsed < eventTimeout)
             {
-                transform.position = Vector2.MoveTowards(transform.position, point.transform.position, speed * Time.deltaTime);
+                MoveOnFloor(point.transform.position);
                 elapsed += Time.deltaTime;
                 yield return null;
             }
@@ -105,12 +148,79 @@ namespace MementoMori.Poe
             var elapsed = 0f;
             while (Vector2.Distance(transform.position, point) > .05f && elapsed < timeout)
             {
-                transform.position = Vector2.MoveTowards(transform.position, point, speed * Time.deltaTime);
+                MoveOnFloor(point);
                 elapsed += Time.deltaTime;
                 yield return null;
             }
             if (elapsed >= timeout && IsOutsideCamera(point)) transform.position = point;
         }
+        // Keep the companion on the authored floor and route around solid scenery.
+        // Trigger volumes and the followed player do not obstruct the cat.
+        private bool ClearStep(Vector2 from, Vector2 to)
+        {
+            var delta = to - from;
+            var steps = Mathf.Max(1, Mathf.CeilToInt(delta.magnitude / .25f));
+            for (var i = 0; i <= steps; i++)
+                if (navigationFloor != null && !navigationFloor.HasTile(navigationFloor.WorldToCell(Vector2.Lerp(from, to, i / (float)steps)))) return false;
+            foreach (var hit in Physics2D.CircleCastAll(from, .18f, delta.normalized, delta.magnitude))
+                if (hit.collider != null && !hit.collider.isTrigger && !hit.transform.IsChildOf(transform)
+                    && (player == null || !hit.transform.IsChildOf(player))) return false;
+            return true;
+        }
+
+        private void MoveOnFloor(Vector2 destination)
+        {
+            if (navigationFloor == null)
+            {
+                var map = GameObject.Find("V3MapArt/Floor");
+                if (map != null) navigationFloor = map.GetComponent<Tilemap>();
+            }
+            var current = (Vector2)transform.position;
+            if (ClearStep(current, destination))
+            {
+                navigationRoute.Clear();
+                transform.position = Vector2.MoveTowards(current, destination, speed * Time.deltaTime);
+                return;
+            }
+            if (Time.time >= nextRouteSearch && (navigationRoute.Count == 0 || Vector2.Distance(destination, routeDestination) > 1f))
+            {
+                nextRouteSearch = Time.time + .5f;
+                routeDestination = destination;
+                navigationRoute.Clear();
+                var start = Vector2Int.FloorToInt(current);
+                var frontier = new Queue<Vector2Int>();
+                var previous = new Dictionary<Vector2Int, Vector2Int>();
+                frontier.Enqueue(start); previous[start] = start;
+                Vector2Int? goal = null;
+                var directions = new[] { Vector2Int.up, Vector2Int.right, Vector2Int.down, Vector2Int.left };
+                while (frontier.Count > 0 && previous.Count < 16000)
+                {
+                    var cell = frontier.Dequeue();
+                    var point = (Vector2)cell + Vector2.one * .5f;
+                    if (Vector2.Distance(point, destination) < 1.5f && ClearStep(point, destination)) { goal = cell; break; }
+                    foreach (var direction in directions)
+                    {
+                        var next = cell + direction;
+                        var nextPoint = (Vector2)next + Vector2.one * .5f;
+                        if (previous.ContainsKey(next) || !ClearStep(cell == start ? current : point, nextPoint)) continue;
+                        previous[next] = cell; frontier.Enqueue(next);
+                    }
+                }
+                if (goal.HasValue)
+                {
+                    var reverse = new List<Vector2> { destination };
+                    for (var cell = goal.Value; cell != start; cell = previous[cell]) reverse.Add((Vector2)cell + Vector2.one * .5f);
+                    reverse.Reverse();
+                    foreach (var point in reverse) navigationRoute.Enqueue(point);
+                }
+            }
+            while (navigationRoute.Count > 0 && Vector2.Distance(current, navigationRoute.Peek()) < .06f) navigationRoute.Dequeue();
+            if (navigationRoute.Count == 0) return;
+            var waypoint = navigationRoute.Peek();
+            if (!ClearStep(current, waypoint)) { navigationRoute.Clear(); return; }
+            transform.position = Vector2.MoveTowards(current, waypoint, speed * Time.deltaTime);
+        }
+
         private void Face(Vector2 direction)
         {
             if (direction.sqrMagnitude < .01f) return;
@@ -124,5 +234,24 @@ namespace MementoMori.Poe
             return viewport.x < 0f || viewport.x > 1f || viewport.y < 0f || viewport.y > 1f || viewport.z <= 0f;
         }
         public void DisablePoe() { if (eventRoutine != null) StopCoroutine(eventRoutine); State = PoeState.Disabled; }
+
+        public IEnumerator NarrativeVanishAndReappear(Transform reappearPoint, float vanishDuration = .8f)
+        {
+            var renderers = GetComponentsInChildren<Renderer>(true);
+            var colliders = GetComponentsInChildren<Collider2D>(true);
+            var previousState = State;
+            State = PoeState.Dissolving;
+            RuntimeAudio.PlayOneShot("13_fragment_collect", .45f);
+            // Let the six official dissolve frames finish before hiding the renderer.
+            if (animator != null && animator.runtimeAnimatorController != null)
+                yield return new WaitForSeconds(1f);
+            foreach (var renderer in renderers) renderer.enabled = false;
+            foreach (var collider in colliders) collider.enabled = false;
+            yield return new WaitForSeconds(vanishDuration);
+            if (reappearPoint != null) transform.position = reappearPoint.position;
+            foreach (var renderer in renderers) renderer.enabled = true;
+            foreach (var collider in colliders) collider.enabled = true;
+            State = previousState == PoeState.Disabled ? PoeState.Waiting : previousState;
+        }
     }
 }

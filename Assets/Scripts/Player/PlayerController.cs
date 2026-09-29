@@ -22,14 +22,14 @@ namespace MementoMori.Player
         {
             body = GetComponent<Rigidbody2D>();
             body.freezeRotation = true;
+            if (animator == null) animator = GetComponentInChildren<Animator>();
         }
 
         private void Update()
         {
-            if (automationInputActive) return;
             if (InputGate.Instance != null && InputGate.Instance.IsBlocked)
                 moveInput = Vector2.zero;
-            else
+            else if (!automationInputActive)
                 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
             if (moveInput.sqrMagnitude > 0f && Time.time >= nextFootstepAt)
@@ -47,6 +47,9 @@ namespace MementoMori.Player
                 {
                     animator.SetFloat("LastMoveX", moveInput.x);
                     animator.SetFloat("LastMoveY", moveInput.y);
+                    var visual = animator.GetComponent<SpriteRenderer>();
+                    if (visual != null)
+                        visual.flipX = Mathf.Abs(moveInput.x) > .01f && moveInput.x < 0f;
                 }
             }
         }
