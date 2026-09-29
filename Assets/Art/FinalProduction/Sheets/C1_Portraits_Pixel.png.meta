@@ -1,0 +1,426 @@
+fileFormatVersion: 2
+guid: 8354f9377897a2840bff9cd638de20e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1119356451720648717
+    second: C1_Portraits_Pixel_0
+  - first:
+      213: 5540430155452874666
+    second: C1_Portraits_Pixel_1
+  - first:
+      213: -5612492187354456080
+    second: C1_Portraits_Pixel_2
+  - first:
+      213: 1235022173539750361
+    second: C1_Portraits_Pixel_3
+  - first:
+      213: 3963382287737579107
+    second: C1_Portraits_Pixel_4
+  - first:
+      213: -7039097935289997770
+    second: C1_Portraits_Pixel_5
+  - first:
+      213: 7590792136410619831
+    second: C1_Portraits_Pixel_6
+  - first:
+      213: 8465024159670715779
+    second: C1_Portraits_Pixel_7
+  - first:
+      213: -4755177361151680017
+    second: C1_Portraits_Pixel_8
+  - first:
+      213: -890886136105519767
+    second: C1_Portraits_Pixel_9
+  - first:
+      213: 1541718591602600979
+    second: C1_Portraits_Pixel_10
+  - first:
+      213: -858150103455187935
+    second: C1_Portraits_Pixel_11
+  - first:
+      213: 4640064251972298304
+    second: C1_Portraits_Pixel_12
+  - first:
+      213: -7952494263158955335
+    second: C1_Portraits_Pixel_13
+  - first:
+      213: 3956645445414291144
+    second: C1_Portraits_Pixel_14
+  - first:
+      213: 8055254276210039752
+    second: C1_Portraits_Pixel_15
+  - first:
+      213: -5551718778110563833
+    second: C1_Portraits_Pixel_16
+  - first:
+      213: -6852093182695981571
+    second: C1_Portraits_Pixel_17
+  - first:
+      213: -7343773728894751884
+    second: C1_Portraits_Pixel_18
+  - first:
+      213: 2760737697408752789
+    second: C1_Portraits_Pixel_19
+  - first:
+      213: -1217416959695000515
+    second: C1_Portraits_Pixel_20
+  - first:
+      213: -4165020523344195034
+    second: C1_Portraits_Pixel_21
+  - first:
+      213: -3841072807457440890
+    second: C1_Portraits_Pixel_22
+  - first:
+      213: -4630148049654188490
+    second: C1_Portraits_Pixel_23
+  - first:
+      213: -2199417788551061177
+    second: C1_Portraits_Pixel_24
+  - first:
+      213: 3142436636173109201
+    second: C1_Portraits_Pixel_25
+  - first:
+      213: -2283121465197933439
+    second: C1_Portraits_Pixel_26
+  - first:
+      213: -8447453892566534902
+    second: C1_Portraits_Pixel_27
+  - first:
+      213: 4715721007092826491
+    second: C1_Portraits_Pixel_28
+  - first:
+      213: 2556378648609445293
+    second: C1_Portraits_Pixel_29
+  - first:
+      213: -3543762443723253034
+    second: C1_Portraits_Pixel_30
+  - first:
+      213: 7943250665492912306
+    second: C1_Portraits_Pixel_31
+  - first:
+      213: -3085895458417268112
+    second: C1_Portraits_Pixel_32
+  - first:
+      213: -8805887795187525537
+    second: C1_Portraits_Pixel_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MelanthaPortrait0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb51d394ea38674fb19d33ad56fdcc1
+      internalID: -1913417205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MelanthaPortrait1
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 836
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decc635cbf0710d4fa528c7450bd13e0
+      internalID: -445430364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MelanthaPortrait2
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 836
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04e2062c7c819449a5aa8c87fe09462
+      internalID: 1816662424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PoePortrait0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bd1b6da0288f349acfd50124533974
+      internalID: -468272513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PoePortrait1
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 418
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77fbebc699d7c3439212d235f9bbed2
+      internalID: -1337037697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PoePortrait2
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 418
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131b3378287f4cb4c85863971f0edbca
+      internalID: 982314498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AndrealphusPortrait0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3691f0da1d243e4e9eac4e6b06af95a
+      internalID: -268020139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AndrealphusPortrait1
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff8380aa4dfe6f4c925d2049ae32aa5
+      internalID: -1495595497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AndrealphusPortrait2
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 0
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a5ef946a2d11649b55cb97d3e78b93
+      internalID: 1827744407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 25ce1bf09e669db40a12b35ce3ce8bb1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AndrealphusPortrait0: -268020139
+      AndrealphusPortrait1: -1495595497
+      AndrealphusPortrait2: 1827744407
+      MelanthaPortrait0: -1913417205
+      MelanthaPortrait1: -445430364
+      MelanthaPortrait2: 1816662424
+      PoePortrait0: -468272513
+      PoePortrait1: -1337037697
+      PoePortrait2: 982314498
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

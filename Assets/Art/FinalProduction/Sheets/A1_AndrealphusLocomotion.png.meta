@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: e094d0ec86d7ba143946db54705ccf27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1303259124072767875
+    second: A1_AndrealphusLocomotion_0
+  - first:
+      213: 6343975060342406003
+    second: A1_AndrealphusLocomotion_1
+  - first:
+      213: 7387080527996607375
+    second: A1_AndrealphusLocomotion_2
+  - first:
+      213: 5274595189711636454
+    second: A1_AndrealphusLocomotion_3
+  - first:
+      213: -2211572580870118922
+    second: A1_AndrealphusLocomotion_4
+  - first:
+      213: -7652446077001327117
+    second: A1_AndrealphusLocomotion_5
+  - first:
+      213: -8326930271763717161
+    second: A1_AndrealphusLocomotion_6
+  - first:
+      213: -6216854089127505541
+    second: A1_AndrealphusLocomotion_7
+  - first:
+      213: -4293590045588590945
+    second: A1_AndrealphusLocomotion_8
+  - first:
+      213: 1331592278751058862
+    second: A1_AndrealphusLocomotion_9
+  - first:
+      213: 2124840214271036099
+    second: A1_AndrealphusLocomotion_10
+  - first:
+      213: -9194851700349516556
+    second: A1_AndrealphusLocomotion_11
+  - first:
+      213: 6392119026766363912
+    second: A1_AndrealphusLocomotion_12
+  - first:
+      213: 9065532378352642382
+    second: A1_AndrealphusLocomotion_13
+  - first:
+      213: -5508310501696522556
+    second: A1_AndrealphusLocomotion_14
+  - first:
+      213: 6018562000560955511
+    second: A1_AndrealphusLocomotion_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1165
+        width: 241
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381e4a4b44b161210800000000000000
+      internalID: 1303259124072767875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1165
+        width: 235
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b75af94b35a0850800000000000000
+      internalID: 6343975060342406003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1159
+        width: 265
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b517e0a9e248660800000000000000
+      internalID: 7387080527996607375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1159
+        width: 216
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e70fb80160233940800000000000000
+      internalID: 5274595189711636454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 781
+        width: 224
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f12e32847aee41e0800000000000000
+      internalID: -2211572580870118922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_5
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 782
+        width: 222
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd118d56dc0dc590800000000000000
+      internalID: -7652446077001327117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_6
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 775
+        width: 225
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3a31a290dc07c80800000000000000
+      internalID: -8326930271763717161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_7
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 782
+        width: 195
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71de1de42c49b9a0800000000000000
+      internalID: -6216854089127505541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 371
+        width: 230
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ee9891a9a1a64c0800000000000000
+      internalID: -4293590045588590945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 387
+        width: 233
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab1c985f14ca7210800000000000000
+      internalID: 1331592278751058862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 15
+        width: 259
+        height: 754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca0710cae2fc7d10800000000000000
+      internalID: 2124840214271036099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_11
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 395
+        width: 227
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4454e4813556080800000000000000
+      internalID: -9194851700349516556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_12
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 19
+        width: 225
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80dbc60536e55b850800000000000000
+      internalID: 6392119026766363912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_13
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 16
+        width: 226
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49e287baad3fcd70800000000000000
+      internalID: 9065532378352642382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_14
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 196
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c633d178cc8e83b0800000000000000
+      internalID: -5508310501696522556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1_AndrealphusLocomotion_15
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 15
+        width: 203
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770a916704a368350800000000000000
+      internalID: 6018562000560955511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      A1_AndrealphusLocomotion_0: 1303259124072767875
+      A1_AndrealphusLocomotion_1: 6343975060342406003
+      A1_AndrealphusLocomotion_10: 2124840214271036099
+      A1_AndrealphusLocomotion_11: -9194851700349516556
+      A1_AndrealphusLocomotion_12: 6392119026766363912
+      A1_AndrealphusLocomotion_13: 9065532378352642382
+      A1_AndrealphusLocomotion_14: -5508310501696522556
+      A1_AndrealphusLocomotion_15: 6018562000560955511
+      A1_AndrealphusLocomotion_2: 7387080527996607375
+      A1_AndrealphusLocomotion_3: 5274595189711636454
+      A1_AndrealphusLocomotion_4: -2211572580870118922
+      A1_AndrealphusLocomotion_5: -7652446077001327117
+      A1_AndrealphusLocomotion_6: -8326930271763717161
+      A1_AndrealphusLocomotion_7: -6216854089127505541
+      A1_AndrealphusLocomotion_8: -4293590045588590945
+      A1_AndrealphusLocomotion_9: 1331592278751058862
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

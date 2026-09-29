@@ -1,0 +1,1261 @@
+fileFormatVersion: 2
+guid: a4a43c55acb1a434094c1449588b91aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2986039027617593313
+    second: D2_LunarGarden_0
+  - first:
+      213: -6839119197700478945
+    second: D2_LunarGarden_1
+  - first:
+      213: -6454311857340799559
+    second: D2_LunarGarden_2
+  - first:
+      213: 3361978578544253722
+    second: D2_LunarGarden_3
+  - first:
+      213: -6984655305773736691
+    second: D2_LunarGarden_4
+  - first:
+      213: 2016384853135645709
+    second: D2_LunarGarden_5
+  - first:
+      213: -2583158433902617084
+    second: D2_LunarGarden_6
+  - first:
+      213: 3107634481905283172
+    second: D2_LunarGarden_7
+  - first:
+      213: -7110252641731730452
+    second: D2_LunarGarden_8
+  - first:
+      213: 6549964482758024014
+    second: D2_LunarGarden_9
+  - first:
+      213: 8933662333738479250
+    second: D2_LunarGarden_10
+  - first:
+      213: -1333064447775548139
+    second: D2_LunarGarden_11
+  - first:
+      213: -1142067296293326841
+    second: D2_LunarGarden_12
+  - first:
+      213: -917990555186783680
+    second: D2_LunarGarden_13
+  - first:
+      213: 4967057290314636816
+    second: D2_LunarGarden_14
+  - first:
+      213: 7300340005734180965
+    second: D2_LunarGarden_15
+  - first:
+      213: -916581241383896435
+    second: D2_LunarGarden_16
+  - first:
+      213: 5274679715523051970
+    second: D2_LunarGarden_17
+  - first:
+      213: -3987468731965241731
+    second: D2_LunarGarden_18
+  - first:
+      213: -4762072092174152426
+    second: D2_LunarGarden_19
+  - first:
+      213: -7420741309896551961
+    second: D2_LunarGarden_20
+  - first:
+      213: -7516056176070339135
+    second: D2_LunarGarden_21
+  - first:
+      213: 8821270074664296878
+    second: D2_LunarGarden_22
+  - first:
+      213: 2865147105513391777
+    second: D2_LunarGarden_23
+  - first:
+      213: -4417025867672678290
+    second: D2_LunarGarden_24
+  - first:
+      213: -1940408016588848264
+    second: D2_LunarGarden_25
+  - first:
+      213: -8689776835584434265
+    second: D2_LunarGarden_26
+  - first:
+      213: -5103327256976181117
+    second: D2_LunarGarden_27
+  - first:
+      213: 2807144287376663404
+    second: D2_LunarGarden_28
+  - first:
+      213: -3195152102740073254
+    second: D2_LunarGarden_29
+  - first:
+      213: -6536447290068830051
+    second: D2_LunarGarden_30
+  - first:
+      213: -2077248848432819062
+    second: D2_LunarGarden_31
+  - first:
+      213: -5714463831893449956
+    second: D2_LunarGarden_32
+  - first:
+      213: -4159485192728894142
+    second: D2_LunarGarden_33
+  - first:
+      213: 7064008680213047979
+    second: D2_LunarGarden_34
+  - first:
+      213: 2128687401475087550
+    second: D2_LunarGarden_35
+  - first:
+      213: 4224612640827690255
+    second: D2_LunarGarden_36
+  - first:
+      213: 2331497623720254674
+    second: D2_LunarGarden_37
+  - first:
+      213: 1016113463447224800
+    second: D2_LunarGarden_38
+  - first:
+      213: 2158709361966183284
+    second: D2_LunarGarden_39
+  - first:
+      213: -2270365455447890818
+    second: D2_LunarGarden_40
+  - first:
+      213: 886467005767733458
+    second: D2_LunarGarden_41
+  - first:
+      213: -3739863423027786984
+    second: D2_LunarGarden_42
+  - first:
+      213: -775309490024649570
+    second: D2_LunarGarden_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: D2_LunarGarden_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 907
+        width: 313
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e77996ccaa807920800000000000000
+      internalID: 2986039027617593313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 931
+        width: 311
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18228c23519611a0800000000000000
+      internalID: -6839119197700478945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_2
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 919
+        width: 319
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b52c99ef8dad66a0800000000000000
+      internalID: -6454311857340799559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_3
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1132
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b5a9464b528ae20800000000000000
+      internalID: 3361978578544253722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_4
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1134
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d1fc47105811f90800000000000000
+      internalID: -6984655305773736691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_5
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 919
+        width: 270
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cd0a53753abfb10800000000000000
+      internalID: 2016384853135645709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_6
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1098
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e1eac2717c62cd0800000000000000
+      internalID: -2583158433902617084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_7
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 988
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46038b9a819802b20800000000000000
+      internalID: 3107634481905283172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_8
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 944
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce32c42e4ee435d90800000000000000
+      internalID: -7110252641731730452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 917
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b973e6ef526ea50800000000000000
+      internalID: 6549964482758024014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_10
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 903
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ee4c95f8ebafb70800000000000000
+      internalID: 8933662333738479250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 923
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dd2a792f0008de0800000000000000
+      internalID: -1333064447775548139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_12
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 639
+        width: 299
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70078de48df8620f0800000000000000
+      internalID: -1142067296293326841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_13
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 909
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a9dea2474a243f0800000000000000
+      internalID: -917990555186783680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_14
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 921
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ed738f9488ee440800000000000000
+      internalID: 4967057290314636816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_15
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 923
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568eb5d6e84005560800000000000000
+      internalID: 7300340005734180965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_16
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 921
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ab68b9736a743f0800000000000000
+      internalID: -916581241383896435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 618
+        width: 315
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1c5bb314d633940800000000000000
+      internalID: 5274679715523051970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_18
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 714
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d760c36905aa9a8c0800000000000000
+      internalID: -3987468731965241731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_19
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 728
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d8827a9a8b9edb0800000000000000
+      internalID: -4762072092174152426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_20
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 578
+        width: 315
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e19c8d681b340990800000000000000
+      internalID: -7420741309896551961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_21
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 632
+        width: 295
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c55279caba91b790800000000000000
+      internalID: -7516056176070339135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_22
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 608
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1262455627b6a70800000000000000
+      internalID: 8821270074664296878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_23
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 347
+        width: 305
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a64d5dbc1c03c720800000000000000
+      internalID: 2865147105513391777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_24
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 25
+        width: 323
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6098a1306293b2c0800000000000000
+      internalID: -4417025867672678290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_25
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 626
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873c6eb80394215e0800000000000000
+      internalID: -1940408016588848264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_26
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 618
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af52992206b76780800000000000000
+      internalID: -8689776835584434265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 339
+        width: 244
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388bd5bf5e65d29b0800000000000000
+      internalID: -5103327256976181117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_28
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 570
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c636a524bdaf4f620800000000000000
+      internalID: 2807144287376663404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_29
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 565
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4e5d8571a88a3d0800000000000000
+      internalID: -3195152102740073254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_30
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 558
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98f16e32dfd945a0800000000000000
+      internalID: -6536447290068830051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_31
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 298
+        width: 276
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8492179d212c23e0800000000000000
+      internalID: -2077248848432819062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_32
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 548
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c136c22eb6522b0b0800000000000000
+      internalID: -5714463831893449956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_33
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 523
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245a5ee414a8646c0800000000000000
+      internalID: -4159485192728894142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 292
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baaef5ac776680260800000000000000
+      internalID: 7064008680213047979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_35
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 0
+        width: 299
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc95c2d9ed9a8d10800000000000000
+      internalID: 2128687401475087550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_36
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 328
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dc82a50d6d0aa30800000000000000
+      internalID: 4224612640827690255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_37
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 304
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc53886cb42b5020800000000000000
+      internalID: 2331497623720254674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_38
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 296
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e18348bfc5f91e00800000000000000
+      internalID: 1016113463447224800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_39
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 196
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473fd453ab645fd10800000000000000
+      internalID: 2158709361966183284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_40
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 198
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74e5bda5aa0e70e0800000000000000
+      internalID: -2270365455447890818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_41
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 0
+        width: 303
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0d3e78b0d5d4c00800000000000000
+      internalID: 886467005767733458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_42
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 132
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bc3f90806591cc0800000000000000
+      internalID: -3739863423027786984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_LunarGarden_43
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 87
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c6718602c8d35f0800000000000000
+      internalID: -775309490024649570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      D2_LunarGarden_0: 2986039027617593313
+      D2_LunarGarden_1: -6839119197700478945
+      D2_LunarGarden_10: 8933662333738479250
+      D2_LunarGarden_11: -1333064447775548139
+      D2_LunarGarden_12: -1142067296293326841
+      D2_LunarGarden_13: -917990555186783680
+      D2_LunarGarden_14: 4967057290314636816
+      D2_LunarGarden_15: 7300340005734180965
+      D2_LunarGarden_16: -916581241383896435
+      D2_LunarGarden_17: 5274679715523051970
+      D2_LunarGarden_18: -3987468731965241731
+      D2_LunarGarden_19: -4762072092174152426
+      D2_LunarGarden_2: -6454311857340799559
+      D2_LunarGarden_20: -7420741309896551961
+      D2_LunarGarden_21: -7516056176070339135
+      D2_LunarGarden_22: 8821270074664296878
+      D2_LunarGarden_23: 2865147105513391777
+      D2_LunarGarden_24: -4417025867672678290
+      D2_LunarGarden_25: -1940408016588848264
+      D2_LunarGarden_26: -8689776835584434265
+      D2_LunarGarden_27: -5103327256976181117
+      D2_LunarGarden_28: 2807144287376663404
+      D2_LunarGarden_29: -3195152102740073254
+      D2_LunarGarden_3: 3361978578544253722
+      D2_LunarGarden_30: -6536447290068830051
+      D2_LunarGarden_31: -2077248848432819062
+      D2_LunarGarden_32: -5714463831893449956
+      D2_LunarGarden_33: -4159485192728894142
+      D2_LunarGarden_34: 7064008680213047979
+      D2_LunarGarden_35: 2128687401475087550
+      D2_LunarGarden_36: 4224612640827690255
+      D2_LunarGarden_37: 2331497623720254674
+      D2_LunarGarden_38: 1016113463447224800
+      D2_LunarGarden_39: 2158709361966183284
+      D2_LunarGarden_4: -6984655305773736691
+      D2_LunarGarden_40: -2270365455447890818
+      D2_LunarGarden_41: 886467005767733458
+      D2_LunarGarden_42: -3739863423027786984
+      D2_LunarGarden_43: -775309490024649570
+      D2_LunarGarden_5: 2016384853135645709
+      D2_LunarGarden_6: -2583158433902617084
+      D2_LunarGarden_7: 3107634481905283172
+      D2_LunarGarden_8: -7110252641731730452
+      D2_LunarGarden_9: 6549964482758024014
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

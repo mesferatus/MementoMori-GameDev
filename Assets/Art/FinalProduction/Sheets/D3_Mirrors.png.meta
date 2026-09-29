@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: e32ce4fc2d2cbae4ab6932b8da321ae5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2244729202034916725
+    second: D3_Mirrors_0
+  - first:
+      213: -2415989766390760963
+    second: D3_Mirrors_1
+  - first:
+      213: 4153221300746077910
+    second: D3_Mirrors_2
+  - first:
+      213: 2712052335052466202
+    second: D3_Mirrors_3
+  - first:
+      213: 848503875312486947
+    second: D3_Mirrors_4
+  - first:
+      213: -7540418546757777821
+    second: D3_Mirrors_5
+  - first:
+      213: -188989440751823074
+    second: D3_Mirrors_6
+  - first:
+      213: 5240847912973543236
+    second: D3_Mirrors_7
+  - first:
+      213: 8968028083147798456
+    second: D3_Mirrors_8
+  - first:
+      213: 9160079417294993583
+    second: D3_Mirrors_9
+  - first:
+      213: 4028516440968145122
+    second: D3_Mirrors_10
+  - first:
+      213: -6077065664313688392
+    second: D3_Mirrors_11
+  - first:
+      213: -7573128961387961967
+    second: D3_Mirrors_12
+  - first:
+      213: 5887228242343457002
+    second: D3_Mirrors_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: D3_Mirrors_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1055
+        width: 211
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8243cf0fae19d0e0800000000000000
+      internalID: -2244729202034916725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1187
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9bc41ab1ea87ed0800000000000000
+      internalID: -2415989766390760963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 991
+        width: 277
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d64e80b4c433a930800000000000000
+      internalID: 4153221300746077910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1033
+        width: 200
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18221bca3523a520800000000000000
+      internalID: 2712052335052466202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_4
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1054
+        width: 238
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a0b8e67cd76cb00800000000000000
+      internalID: 848503875312486947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 543
+        width: 204
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3664cb6584d0b5790800000000000000
+      internalID: -7540418546757777821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_6
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 311
+        width: 263
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1710bdda13906df0800000000000000
+      internalID: -188989440751823074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_7
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 510
+        width: 211
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447a2aed86b3bb840800000000000000
+      internalID: 5240847912973543236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_8
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 522
+        width: 217
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b770c7e606d47c70800000000000000
+      internalID: 8968028083147798456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_9
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 65
+        width: 172
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa83c36a2b32f1f70800000000000000
+      internalID: 9160079417294993583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_10
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 515
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e82abbeb5a28e730800000000000000
+      internalID: 4028516440968145122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_11
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 63
+        width: 227
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8befbd9d9fce9aba0800000000000000
+      internalID: -6077065664313688392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_12
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 47
+        width: 329
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1916f327557d6e690800000000000000
+      internalID: -7573128961387961967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3_Mirrors_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 83
+        width: 167
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0778005e2a3b150800000000000000
+      internalID: 5887228242343457002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      D3_Mirrors_0: -2244729202034916725
+      D3_Mirrors_1: -2415989766390760963
+      D3_Mirrors_10: 4028516440968145122
+      D3_Mirrors_11: -6077065664313688392
+      D3_Mirrors_12: -7573128961387961967
+      D3_Mirrors_13: 5887228242343457002
+      D3_Mirrors_2: 4153221300746077910
+      D3_Mirrors_3: 2712052335052466202
+      D3_Mirrors_4: 848503875312486947
+      D3_Mirrors_5: -7540418546757777821
+      D3_Mirrors_6: -188989440751823074
+      D3_Mirrors_7: 5240847912973543236
+      D3_Mirrors_8: 8968028083147798456
+      D3_Mirrors_9: 9160079417294993583
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

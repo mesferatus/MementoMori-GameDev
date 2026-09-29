@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 1b6a2ee2cce105c48aa7fc8b701f664d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3581153429938142329
+    second: M1_MelanthaLocomotion_Source_0
+  - first:
+      213: -4537717390755501837
+    second: M1_MelanthaLocomotion_Source_1
+  - first:
+      213: -5978722170829271998
+    second: M1_MelanthaLocomotion_Source_2
+  - first:
+      213: -8556829036967805465
+    second: M1_MelanthaLocomotion_Source_3
+  - first:
+      213: -8967371173970693957
+    second: M1_MelanthaLocomotion_Source_4
+  - first:
+      213: 5523262783824458253
+    second: M1_MelanthaLocomotion_Source_5
+  - first:
+      213: 5933728232612851142
+    second: M1_MelanthaLocomotion_Source_6
+  - first:
+      213: -3320853534394382266
+    second: M1_MelanthaLocomotion_Source_7
+  - first:
+      213: -4017773331625772495
+    second: M1_MelanthaLocomotion_Source_8
+  - first:
+      213: -192649378744440230
+    second: M1_MelanthaLocomotion_Source_9
+  - first:
+      213: -8547616383652077656
+    second: M1_MelanthaLocomotion_Source_10
+  - first:
+      213: -6163044412735707697
+    second: M1_MelanthaLocomotion_Source_11
+  - first:
+      213: -453930921049919316
+    second: M1_MelanthaLocomotion_Source_12
+  - first:
+      213: -3966242244353283005
+    second: M1_MelanthaLocomotion_Source_13
+  - first:
+      213: 775061980099985114
+    second: M1_MelanthaLocomotion_Source_14
+  - first:
+      213: 1465972857947116738
+    second: M1_MelanthaLocomotion_Source_15
+  - first:
+      213: -6587394177213223848
+    second: M1_MelanthaLocomotion_Source_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1139
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7838d52edef2d4ec0800000000000000
+      internalID: -3581153429938142329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1147
+        width: 231
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8e7e0331ac601c0800000000000000
+      internalID: -4537717390755501837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1129
+        width: 228
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c08fcbcdf470da0800000000000000
+      internalID: -5978722170829271998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_3
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1139
+        width: 226
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed39cfa359004980800000000000000
+      internalID: -8556829036967805465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 771
+        width: 201
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0366ead6f7d8380800000000000000
+      internalID: -8967371173970693957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_5
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 771
+        width: 194
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02fdf60d3296ac40800000000000000
+      internalID: 5523262783824458253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 759
+        width: 213
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd689aa366d85250800000000000000
+      internalID: 5933728232612851142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_7
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 774
+        width: 192
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648825b1e45f9e1d0800000000000000
+      internalID: -3320853534394382266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 401
+        width: 233
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a786421700e38c0800000000000000
+      internalID: -4017773331625772495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 657
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5aecb52962935df0800000000000000
+      internalID: -192649378744440230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_10
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 399
+        width: 243
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8afdb10bf24c06980800000000000000
+      internalID: -8547616383652077656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_11
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 400
+        width: 226
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5aee382c7787aa0800000000000000
+      internalID: -6163044412735707697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_12
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 389
+        width: 259
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0f04a7b3053b9f0800000000000000
+      internalID: -453930921049919316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 183
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cac2c51b315f8c0800000000000000
+      internalID: -3966242244353283005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 17
+        width: 199
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade35c2b3c291ca00800000000000000
+      internalID: 775061980099985114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 207
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c45d481c8e285410800000000000000
+      internalID: 1465972857947116738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1_MelanthaLocomotion_Source_16
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 32
+        width: 213
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85caab7b5efd494a0800000000000000
+      internalID: -6587394177213223848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      M1_MelanthaLocomotion_Source_0: -3581153429938142329
+      M1_MelanthaLocomotion_Source_1: -4537717390755501837
+      M1_MelanthaLocomotion_Source_10: -8547616383652077656
+      M1_MelanthaLocomotion_Source_11: -6163044412735707697
+      M1_MelanthaLocomotion_Source_12: -453930921049919316
+      M1_MelanthaLocomotion_Source_13: -3966242244353283005
+      M1_MelanthaLocomotion_Source_14: 775061980099985114
+      M1_MelanthaLocomotion_Source_15: 1465972857947116738
+      M1_MelanthaLocomotion_Source_16: -6587394177213223848
+      M1_MelanthaLocomotion_Source_2: -5978722170829271998
+      M1_MelanthaLocomotion_Source_3: -8556829036967805465
+      M1_MelanthaLocomotion_Source_4: -8967371173970693957
+      M1_MelanthaLocomotion_Source_5: 5523262783824458253
+      M1_MelanthaLocomotion_Source_6: 5933728232612851142
+      M1_MelanthaLocomotion_Source_7: -3320853534394382266
+      M1_MelanthaLocomotion_Source_8: -4017773331625772495
+      M1_MelanthaLocomotion_Source_9: -192649378744440230
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
