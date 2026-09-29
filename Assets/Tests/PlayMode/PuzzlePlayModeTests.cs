@@ -41,7 +41,7 @@ namespace MementoMori.Tests.PlayMode
                 symbols[i] = symbolObject.AddComponent<MirrorSymbol>();
                 symbols[i].Configure(names[i], puzzle, symbolObject.AddComponent<SpriteRenderer>());
             }
-            puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Absent" }, null, null);
+            puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Room" }, null, null);
             yield return null;
             Assert.That(puzzle.State, Is.EqualTo(PuzzleMirror.PuzzleState.Active));
             puzzle.Activate(symbols[1]);
@@ -51,6 +51,24 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(symbols[1].IsActive, Is.True);
             Object.Destroy(root);
             foreach (var symbol in symbols) Object.Destroy(symbol.gameObject);
+        }
+
+        [UnityTest]
+        public IEnumerator WaningErrorRestartsOnlyWaningProgress()
+        {
+            GameState.Instance.SetFlag(StoryFlag.GardenPetalCrescente);
+            var root = new GameObject("WaningRecoveryTest");
+            var puzzle = root.AddComponent<GardenPetalPuzzle>();
+            puzzle.Configure(MoonPetal.Minguante, "Minguante");
+            yield return null;
+            Assert.That(puzzle.ExtinguishWaning(2), Is.True);
+            Assert.That(puzzle.ExtinguishWaning(3), Is.False);
+            Assert.That(puzzle.ExtinguishWaning(1), Is.False, "An error must restart the waning sequence.");
+            Assert.That(GameState.Instance.HasFlag(StoryFlag.GardenPetalCrescente), Is.True);
+            Assert.That(puzzle.ExtinguishWaning(2), Is.True);
+            Assert.That(puzzle.ExtinguishWaning(1), Is.True);
+            Assert.That(puzzle.Solved, Is.True);
+            Object.Destroy(root);
         }
 
         [UnityTest]
