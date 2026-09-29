@@ -1696,7 +1696,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 756ee1d060ae49e8ba84476072bdb216, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35844,7 +35844,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: DetailTile_labirinto
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 1931906721}
+  m_Sprite: {fileID: 21300000, guid: dfaf3fbc5c2984a4b852126a1f687b5b, type: 3}
   m_Color: {r: 0.7, g: 0.62, b: 0.9, a: 0.65}
   m_Transform:
     e00: 1
@@ -35979,7 +35979,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7c43030716686874b973f6a05727b024, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -36305,8 +36305,8 @@ MonoBehaviour:
   requiredStoryFlags:
   - EchoTrial03Complete
   visual: {fileID: 0}
-  lockedVisual: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
-  activeVisual: {fileID: 21300000, guid: b4a33986880b9e242b1afa8d90c3cf7f, type: 3}
+  lockedVisual: {fileID: 21300000, guid: 19d3d02a25004f6782c89aa770a7c8ec, type: 3}
+  activeVisual: {fileID: 21300000, guid: 803b0c16c5064b1b885e1a95c620fe09, type: 3}
 --- !u!1 &217313171
 GameObject:
   m_ObjectHideFlags: 0
@@ -36388,7 +36388,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 5388d6414be780c478d8b795c8ed47fe, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -36501,7 +36501,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: GroundTile_labirinto
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 1931906721}
+  m_Sprite: {fileID: 21300000, guid: dfaf3fbc5c2984a4b852126a1f687b5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -37013,7 +37013,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: WallTile_labirinto
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 21300000, guid: 7810e73f174624b48a567ba205944992, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2bcbfb6bbc7f44343b272433c9f047be, type: 3}
   m_Color: {r: 0.3882353, g: 0.47843137, b: 0.65882355, a: 1}
   m_Transform:
     e00: 1
@@ -37551,8 +37551,8 @@ MonoBehaviour:
   requiredStoryFlag: HermitDomainUnlocked
   requiredStoryFlags: []
   visual: {fileID: 0}
-  lockedVisual: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
-  activeVisual: {fileID: 21300000, guid: b4a33986880b9e242b1afa8d90c3cf7f, type: 3}
+  lockedVisual: {fileID: 21300000, guid: 38e9a20437724b0980041e20e2d22fc1, type: 3}
+  activeVisual: {fileID: 21300000, guid: 803b0c16c5064b1b885e1a95c620fe09, type: 3}
 --- !u!1 &336796067
 GameObject:
   m_ObjectHideFlags: 0
@@ -37666,7 +37666,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7042dfd18b1347b0ba2db910ede6c436, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -46200,7 +46200,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 162297a9a92a9564fadea4ccb0280b55, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -51731,7 +51731,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a722b14ac18c4878bb07f9a5d83d8e96, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -51879,7 +51879,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 43dd2e9daa294810b6f480dd77c5cf64, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.42352942, g: 0.6784314, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -52830,7 +52830,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: eb274470961946508cebe55079853444, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.45490196, g: 0.2784314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -55407,7 +55407,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 07c4317619442ab4f9293f97f741e1b8, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -55592,7 +55592,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 051c0a2f15bfc25438b7dc142e0d3a56, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -55774,7 +55774,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 2cb017ee6ae44f4cac17e23fe1010cd4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -61527,8 +61527,8 @@ MonoBehaviour:
   requiredStoryFlag: HangedDomainUnlocked
   requiredStoryFlags: []
   visual: {fileID: 0}
-  lockedVisual: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
-  activeVisual: {fileID: 21300000, guid: b4a33986880b9e242b1afa8d90c3cf7f, type: 3}
+  lockedVisual: {fileID: 21300000, guid: 9c6d137feb8c4fe18587520f51e64f65, type: 3}
+  activeVisual: {fileID: 21300000, guid: 803b0c16c5064b1b885e1a95c620fe09, type: 3}
 --- !u!1 &905566373
 GameObject:
   m_ObjectHideFlags: 0
@@ -61903,7 +61903,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: ef233127fca343249c570f90d6cf420a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -70474,7 +70474,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a0e33c221abb4fefb6d04342577fae89, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -70565,7 +70565,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6f5043a5e24da2c4388f461d569250bd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -71309,7 +71309,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 4aca2e03e93d47bf9833781d604a580d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -71629,7 +71629,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b0deed9e26ea447e91d5aa127ca359e4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.7176471, g: 0.7176471, b: 0.78431374, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -71752,7 +71752,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: e5d65192845360645990af8a7c98b250, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -71843,7 +71843,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 395bfcc618e0424e8478911be9e748aa, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.8509804, g: 0.2901961, b: 0.2627451, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -72724,7 +72724,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 4b21d2268e7c43698e2c23a457ac5692, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -75797,7 +75797,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 78b88e03543a8e54c9e09b826c797ad6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -75888,7 +75888,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 051c0a2f15bfc25438b7dc142e0d3a56, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -76149,8 +76149,8 @@ MonoBehaviour:
   requiredStoryFlag: JudgementDomainUnlocked
   requiredStoryFlags: []
   visual: {fileID: 0}
-  lockedVisual: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
-  activeVisual: {fileID: 21300000, guid: b4a33986880b9e242b1afa8d90c3cf7f, type: 3}
+  lockedVisual: {fileID: 21300000, guid: 9de82561741d4d528d468884a9f217c0, type: 3}
+  activeVisual: {fileID: 21300000, guid: 803b0c16c5064b1b885e1a95c620fe09, type: 3}
 --- !u!1 &1399575420
 GameObject:
   m_ObjectHideFlags: 0
@@ -85384,7 +85384,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86721,7 +86721,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: d23f6ede7d5a4aea9454d87a2e380bd4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.8235294, g: 0.654902, b: 0.26666668, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86903,7 +86903,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6ccc4a6e3b8f4011976e7e07654fc806, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.5411765, g: 0.3647059, b: 0.80784315, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90876,7 +90876,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 8d23ffed790740a5b8b9222a7b15fbea, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91613,7 +91613,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 254d7ac4757106645b7af976d2f2f042, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96373,7 +96373,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0af816b9ff3cb074293ca5c944275707, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96749,7 +96749,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a396df11fe5e4cc6a5a5b93d4d10c594, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97120,7 +97120,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a8083f3db61c62c4ebae09eb49b1ad86, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97211,7 +97211,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0caa2363fbde6ea45ba4c7a501e8ed1e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97735,8 +97735,8 @@ MonoBehaviour:
   requiredStoryFlag: DevilDomainUnlocked
   requiredStoryFlags: []
   visual: {fileID: 0}
-  lockedVisual: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
-  activeVisual: {fileID: 21300000, guid: b4a33986880b9e242b1afa8d90c3cf7f, type: 3}
+  lockedVisual: {fileID: 21300000, guid: 400ed5838b4f47c8bab638da4409c061, type: 3}
+  activeVisual: {fileID: 21300000, guid: 803b0c16c5064b1b885e1a95c620fe09, type: 3}
 --- !u!1 &1839069877
 GameObject:
   m_ObjectHideFlags: 0
@@ -98981,216 +98981,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!213 &1931906721
-Sprite:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PixelLabTile_labirinto_wang
-  m_Rect:
-    serializedVersion: 2
-    x: 16
-    y: 16
-    width: 16
-    height: 16
-  m_Offset: {x: 0, y: 0}
-  m_Border: {x: 0, y: 0, z: 0, w: 0}
-  m_PixelsToUnits: 16
-  m_Pivot: {x: 0.5, y: 0.5}
-  m_Extrude: 0
-  m_IsPolygon: 0
-  m_PackingTag: 
-  m_RenderDataKey:
-    00000000000000000000000000000000: 0
-  m_AtlasTags: []
-  m_SpriteAtlas: {fileID: 0}
-  m_RD:
-    serializedVersion: 3
-    texture: {fileID: 2800000, guid: 54e9b3439c6859f41a6f6ec69ea9bd3e, type: 3}
-    alphaTexture: {fileID: 0}
-    secondaryTextures: []
-    m_SubMeshes:
-    - serializedVersion: 2
-      firstByte: 0
-      indexCount: 6
-      topology: 0
-      baseVertex: 0
-      firstVertex: 0
-      vertexCount: 4
-      localAABB:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
-    m_VertexData:
-      serializedVersion: 3
-      m_VertexCount: 4
-      m_Channels:
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 3
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 1
-        offset: 0
-        format: 0
-        dimension: 2
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
-    m_Bindpose: []
-    textureRect:
-      serializedVersion: 2
-      x: 16
-      y: 16
-      width: 16
-      height: 16
-    textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
-    uvTransform: {x: 16, y: 24, z: 16, w: 24}
-    downscaleMultiplier: 1
-  m_AtlasRD:
-    serializedVersion: 3
-    texture: {fileID: 2800000, guid: 54e9b3439c6859f41a6f6ec69ea9bd3e, type: 3}
-    alphaTexture: {fileID: 0}
-    secondaryTextures: []
-    m_SubMeshes:
-    - serializedVersion: 2
-      firstByte: 0
-      indexCount: 6
-      topology: 0
-      baseVertex: 0
-      firstVertex: 0
-      vertexCount: 4
-      localAABB:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
-    m_VertexData:
-      serializedVersion: 3
-      m_VertexCount: 4
-      m_Channels:
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 3
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 1
-        offset: 0
-        format: 0
-        dimension: 2
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
-    m_Bindpose: []
-    textureRect:
-      serializedVersion: 2
-      x: 16
-      y: 16
-      width: 16
-      height: 16
-    textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
-    uvTransform: {x: 16, y: 24, z: 16, w: 24}
-    downscaleMultiplier: 1
-  m_PhysicsShape: []
-  m_Bones: []
-  m_ScriptableObjects: []
-  m_SpriteID: 
 --- !u!1 &1939151280
 GameObject:
   m_ObjectHideFlags: 0
@@ -99399,7 +99189,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: ec57636bee89482aa007ba4c83d32e16, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100389,7 +100179,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 587b188b1e61bdf4ab10f3082dc6c032, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100480,7 +100270,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: f33b159c574a48ccad5f2ce8882f1122, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.36862746, g: 0.5529412, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101558,8 +101348,8 @@ MonoBehaviour:
   requiredStoryFlag: TowerDomainUnlocked
   requiredStoryFlags: []
   visual: {fileID: 0}
-  lockedVisual: {fileID: 21300000, guid: 09e7d93cacc2b53408666f3e9cf96079, type: 3}
-  activeVisual: {fileID: 21300000, guid: b4a33986880b9e242b1afa8d90c3cf7f, type: 3}
+  lockedVisual: {fileID: 21300000, guid: e1a15236c13b4b7581a3d09b43575459, type: 3}
+  activeVisual: {fileID: 21300000, guid: 803b0c16c5064b1b885e1a95c620fe09, type: 3}
 --- !u!1 &2048216543
 GameObject:
   m_ObjectHideFlags: 0
@@ -102340,7 +102130,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 051c0a2f15bfc25438b7dc142e0d3a56, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
