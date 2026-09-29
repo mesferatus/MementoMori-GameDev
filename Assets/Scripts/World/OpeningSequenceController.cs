@@ -52,7 +52,7 @@ namespace MementoMori.World
             }
             Destroy(canvasObject);
             InputGate.Instance?.Release("OpeningSequence");
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_ROOM_OPENING"));
+            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_Q_OPENING_01"));
         }
     }
 }

@@ -23,8 +23,17 @@ namespace MementoMori.Narrative
 
         private void Start()
         {
+            poeSignal = Load("DLG_L_POE_SIGNAL_01");
+            echoWrongRoute = Load("DLG_L_ECHO_WRONG");
+            echoProgress = Load("DLG_L_ECHO_INTRO");
+            echoConclusion = Load("DLG_L_ECHO_COMPLETE");
+            andrealphusAfter = Load("DLG_L_ANDREALPHUS_01");
+            poeAfterAndrealphus = Load("DLG_L_POE_REVEAL");
+            portalUnlocked = Load("DLG_L_MOON_GATE_OPEN");
             observedEchoErrors = GameState.Instance?.GetCounter("echo.errors") ?? 0;
         }
+
+        private static DialogueData Load(string id) => Resources.Load<DialogueData>("Dialogue/" + id);
 
         private void Update()
         {

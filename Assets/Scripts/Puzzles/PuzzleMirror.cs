@@ -45,6 +45,9 @@ namespace MementoMori.Puzzles
         {
             if (!CanAcceptInput || symbol == null || symbol.IsActive || correctSymbolIds.Count == 0)
                 return;
+            GrimoireCatalog.Discover("A10");
+            GrimoireCatalog.Discover("R06");
+            GrimoireCatalog.Discover("P11");
             if (!correctSymbolIds.Contains(symbol.SymbolId))
             {
                 ErrorCount++;
@@ -76,10 +79,13 @@ namespace MementoMori.Puzzles
             StoryProgression.Instance?.SaveCheckpoint(CheckpointId.Mirrors);
             targetDoor?.Open();
             onSolved?.Invoke();
-            if (completionDialogue != null)
+            var black = symbols.FirstOrDefault(symbol => symbol != null && symbol.SymbolId == "Black");
+            if (black != null)
             {
-                GameState.Instance?.SetFlag(StoryFlag.AndrealphusMeeting02Complete);
-                DialogueManager.Instance?.StartDialogue(completionDialogue);
+                black.SetActive(true);
+                var sequence = black.GetComponent<BlackMirrorSequenceController>();
+                if (sequence == null) sequence = black.gameObject.AddComponent<BlackMirrorSequenceController>();
+                sequence.Play();
             }
         }
 
