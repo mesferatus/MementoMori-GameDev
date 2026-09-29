@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 363d737649b93354a87fbc8f97aade34
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7641074276615617752
+    second: M2_MelanthaActions_0
+  - first:
+      213: -2591844396122554538
+    second: M2_MelanthaActions_1
+  - first:
+      213: 7059411656308761952
+    second: M2_MelanthaActions_2
+  - first:
+      213: -6551444438560595096
+    second: M2_MelanthaActions_3
+  - first:
+      213: 9014315954640677829
+    second: M2_MelanthaActions_4
+  - first:
+      213: -6823321737215914083
+    second: M2_MelanthaActions_5
+  - first:
+      213: -8357332295791271379
+    second: M2_MelanthaActions_6
+  - first:
+      213: 5882482485448047628
+    second: M2_MelanthaActions_7
+  - first:
+      213: 147255291831599997
+    second: M2_MelanthaActions_8
+  - first:
+      213: -2778286171546166912
+    second: M2_MelanthaActions_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M2_MelanthaActions_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 311
+        width: 267
+        height: 1208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc7c08029c8a0a60800000000000000
+      internalID: 7641074276615617752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_1
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 747
+        width: 219
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f3700014be70cd0800000000000000
+      internalID: -2591844396122554538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 286
+        width: 253
+        height: 1232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0652981cf7118f160800000000000000
+      internalID: 7059411656308761952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_3
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 748
+        width: 245
+        height: 771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86323e18ef79415a0800000000000000
+      internalID: -6551444438560595096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 307
+        width: 215
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb6e71d998491d70800000000000000
+      internalID: 9014315954640677829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_5
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 303
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f4b011801be41a0800000000000000
+      internalID: -6823321737215914083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_6
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 285
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2226775e8ac40c80800000000000000
+      internalID: -8357332295791271379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_7
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 31
+        width: 257
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c769e57a6c2a150800000000000000
+      internalID: 5882482485448047628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 33
+        width: 225
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d734be068e72b0200800000000000000
+      internalID: 147255291831599997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M2_MelanthaActions_9
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 19
+        width: 551
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0895c9c627b8179d0800000000000000
+      internalID: -2778286171546166912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      M2_MelanthaActions_0: 7641074276615617752
+      M2_MelanthaActions_1: -2591844396122554538
+      M2_MelanthaActions_2: 7059411656308761952
+      M2_MelanthaActions_3: -6551444438560595096
+      M2_MelanthaActions_4: 9014315954640677829
+      M2_MelanthaActions_5: -6823321737215914083
+      M2_MelanthaActions_6: -8357332295791271379
+      M2_MelanthaActions_7: 5882482485448047628
+      M2_MelanthaActions_8: 147255291831599997
+      M2_MelanthaActions_9: -2778286171546166912
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
