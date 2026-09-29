@@ -38,8 +38,21 @@ namespace MementoMori.Puzzles
             if (!CanInteract(context)) return;
             RuntimeAudio.PlayOneShot("11_mirror_shimmer", .45f);
             puzzle.Activate(this);
-            if (dialogue != null) DialogueManager.Instance?.StartDialogue(dialogue);
+            var narrativeDialogue = dialogue ?? Resources.Load<DialogueData>("Dialogue/" + NarrativeId(symbolId));
+            if (narrativeDialogue != null) DialogueManager.Instance?.StartDialogue(narrativeDialogue);
         }
+
+        private static string NarrativeId(string id) => id switch
+        {
+            "Present" => "DLG_D_MIRROR_PRESENT",
+            "Delayed" => "DLG_D_MIRROR_DELAYED",
+            "Ahead" => "DLG_D_MIRROR_AHEAD",
+            "Absent" => "DLG_D_MIRROR_NO_POE",
+            "Double" => "DLG_D_MIRROR_TWO_POES",
+            "Room" => "DLG_D_MIRROR_ROOM",
+            "Black" => "DLG_D_BLACK_MIRROR_MEMORY",
+            _ => string.Empty
+        };
         public void SetActive(bool active)
         {
             IsActive = active;

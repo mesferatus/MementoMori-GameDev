@@ -13,6 +13,11 @@ namespace MementoMori.Poe
         [SerializeField] private bool oneShot = true;
         private bool used;
 
+        private void Awake()
+        {
+            revealDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_POE_REVEAL");
+        }
+
         public void Configure(PoeFollower follower, DialogueData dialogue, bool isOneShot)
         {
             poe = follower;

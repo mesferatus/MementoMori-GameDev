@@ -27,6 +27,8 @@ namespace MementoMori.Puzzles
         {
             if (Solved || string.IsNullOrEmpty(value)) return false;
             if (GameState.Instance != null && !GameState.Instance.HasFlag(StoryFlag.MirrorPuzzleComplete)) return false;
+            GrimoireCatalog.Discover("R07");
+            GrimoireCatalog.Discover("P13");
             var progressKey = "sigil." + ring;
             if (GameState.Instance != null && GameState.Instance.GetPuzzleProgress(progressKey) > 0) return false;
             Attempts++;
