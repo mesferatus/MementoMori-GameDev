@@ -43,7 +43,16 @@ namespace MementoMori.World
         public string InteractionVerb => interactionVerb;
         public int InteractionPriority => 5;
         public bool CanInteract(InteractionContext context) => !used && (!requiresRitual || GameState.Instance != null && GameState.Instance.RitualCompleted) && (!requiresPoe || GameState.Instance != null && GameState.Instance.PoeRevealed) && (string.IsNullOrEmpty(requiredStoryFlag) || HasRequiredFlag()) && HasRequiredFlags();
-        private void Update() => RefreshVisualState(false);
+        private void Update()
+        {
+            RefreshVisualState(false);
+            if (sceneName != "DominioLua" || GameState.Instance == null
+                || !GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete)) return;
+            var player = GameObject.FindGameObjectWithTag("Player");
+            if (player == null || Vector2.Distance(player.transform.position, transform.position) > 4f) return;
+            GrimoireCatalog.Discover("A07");
+            GrimoireCatalog.Discover("P07");
+        }
         private void RefreshVisualState(bool force)
         {
             var available = CanInteract(default(InteractionContext));

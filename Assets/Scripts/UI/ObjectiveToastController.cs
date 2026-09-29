@@ -1,19 +1,22 @@
 using System.Collections;
 using MementoMori.Core;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace MementoMori.UI
 {
-    /// <summary>Shows one short, non-interactive objective message at meaningful progression changes.</summary>
+    /// <summary>Keeps the current non-interactive objective visible during exploration.</summary>
     public sealed class ObjectiveToastController : MonoBehaviour
     {
         public static ObjectiveToastController Instance { get; private set; }
 
         [SerializeField, Min(.5f)] private float visibleDuration = 3f;
+        [SerializeField] private bool persistentObjective = true;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private Text objectiveText;
+        [SerializeField] private TMP_Text objectiveTextTmp;
 
         private Coroutine hideRoutine;
         private string currentObjective = string.Empty;
@@ -28,12 +31,21 @@ namespace MementoMori.UI
         {
             if (Instance != null && Instance != this)
             {
-                Destroy(gameObject);
+                if (canvasGroup != null && (objectiveText != null || objectiveTextTmp != null))
+                {
+                    Instance.Hide();
+                    Instance.canvasGroup = canvasGroup;
+                    Instance.objectiveText = objectiveText;
+                    Instance.objectiveTextTmp = objectiveTextTmp;
+                    Instance.lastShownObjective = string.Empty;
+                    Instance.currentObjective = string.Empty;
+                }
+                Destroy(this);
                 return;
             }
 
             Instance = this;
-            if (Application.isPlaying)
+            if (Application.isPlaying && transform.parent == null)
                 DontDestroyOnLoad(gameObject);
             EnsureFallbackUi();
             Hide();
@@ -76,15 +88,15 @@ namespace MementoMori.UI
         {
             if (string.IsNullOrWhiteSpace(objective)) return;
             if (objective == lastShownObjective && IsVisible) return;
-            if (objective == lastShownObjective && !IsVisible && currentObjective == objective) return;
+            EnsureFallbackUi();
 
             currentObjective = objective;
             lastShownObjective = objective;
             showCount++;
-            if (objectiveText != null) objectiveText.text = objective;
+            SetObjective(objective);
             if (canvasGroup != null) canvasGroup.alpha = 1f;
             if (hideRoutine != null) StopCoroutine(hideRoutine);
-            if (Application.isPlaying)
+            if (Application.isPlaying && !persistentObjective)
                 hideRoutine = StartCoroutine(HideAfterDelay());
         }
 
@@ -98,13 +110,29 @@ namespace MementoMori.UI
             if (canvasGroup != null) canvasGroup.alpha = 0f;
         }
 
+        public void SetObjective(string text)
+        {
+            currentObjective = text ?? string.Empty;
+            if (objectiveText != null) objectiveText.text = currentObjective;
+            if (objectiveTextTmp != null) objectiveTextTmp.text = currentObjective;
+        }
+
         public static string ObjectiveFor(string sceneName, GameState state)
         {
             if (state == null) return null;
             switch (sceneName)
             {
                 case "Quarto":
-                    return HasRoomExploration(state) ? "Complete o ritual." : "Explore o quarto.";
+                    if (state.RitualCompleted) return "Descanse.";
+                    var sawAnyClue = state.HasFlag(StoryFlag.RoomWindowSecured)
+                        || state.HasFlag(StoryFlag.RoomPhotoExamined)
+                        || state.HasFlag(StoryFlag.RoomBowlExamined)
+                        || state.HasFlag(StoryFlag.RoomToyExamined);
+                    if (!sawAnyClue) return "Examine o quarto.";
+                    if (!state.HasFlag(StoryFlag.RoomWindowSecured) || !state.HasFlag(StoryFlag.RoomPhotoExamined))
+                        return "Reúna pistas sobre o ritual.";
+                    if (!state.HasFlag(StoryFlag.RoomGrimoireRead)) return "Consulte o grimório.";
+                    return "Recomponha o ritual.";
                 case "Labirinto":
                     return state.HasFlag(StoryFlag.PoeRevealed) ? "Encontre uma saída / portal." : "Siga Poe.";
                 case "DominioLua":
@@ -120,12 +148,11 @@ namespace MementoMori.UI
 
         private static bool HasRoomExploration(GameState state)
         {
-            return state.HasFlag(StoryFlag.RoomBowlExamined)
-                && state.HasFlag(StoryFlag.RoomToyExamined)
-                && state.HasFlag(StoryFlag.RoomPhotoExamined)
+            return state.HasFlag(StoryFlag.RoomPhotoExamined)
                 && state.HasFlag(StoryFlag.RoomGrimoireRead)
                 && state.HasFlag(StoryFlag.RoomWindowSecured)
-                && state.HasFlag(StoryFlag.RoomRitualItemStored);
+                && state.HasFlag(StoryFlag.RoomRitualItemStored)
+                && state.HasFlag(StoryFlag.RoomCandlesDone);
         }
 
         private IEnumerator HideAfterDelay()
@@ -139,11 +166,15 @@ namespace MementoMori.UI
             EvaluateForScene(SceneManager.GetActiveScene().name);
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => EvaluateForScene(scene.name);
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            EnsureFallbackUi();
+            EvaluateForScene(scene.name);
+        }
 
         private void EnsureFallbackUi()
         {
-            if (canvasGroup != null && objectiveText != null) return;
+            if (canvasGroup != null && (objectiveText != null || objectiveTextTmp != null)) return;
 
             var canvasObject = new GameObject("ObjectiveToast", typeof(Canvas), typeof(CanvasGroup), typeof(GraphicRaycaster));
             canvasObject.transform.SetParent(transform, false);
