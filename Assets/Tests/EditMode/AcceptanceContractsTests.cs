@@ -83,14 +83,14 @@ namespace MementoMori.Tests.EditMode
             configuration.Configure("DominioLua", "FinalBeta", false,
                 new[] { "Entrada", "JardimLunar", "SalaDosEspelhos", "CorredorIlusorio", "CamaraDoSigilo", "SalaDoFragmento" },
                 new[] { "Present", "Delayed", "Ahead", "Absent", "Double", "Room", "Black" },
-                new[] { "Delayed", "Ahead", "Absent" },
-                new[] { "Moon", "Eye", "Spiral" },
+                new[] { "Delayed", "Ahead", "Room" },
+                new[] { "Minguante", "Grimório", "SUSTENTAR" },
                 new[] { "Dominio_CorredorFalso" });
 
             Assert.That(configuration.DomainAreas, Has.Length.EqualTo(6));
             Assert.That(configuration.MirrorSymbols, Has.Length.EqualTo(7));
-            Assert.That(configuration.MirrorCorrectSymbols, Is.EqualTo(new[] { "Delayed", "Ahead", "Absent" }));
-            Assert.That(configuration.SigilSequence, Is.EqualTo(new[] { "Moon", "Eye", "Spiral" }));
+            Assert.That(configuration.MirrorCorrectSymbols, Is.EqualTo(new[] { "Delayed", "Ahead", "Room" }));
+            Assert.That(configuration.SigilSequence, Is.EqualTo(new[] { "Minguante", "Grimório", "SUSTENTAR" }));
             Object.DestroyImmediate(root);
         }
 
@@ -108,12 +108,14 @@ namespace MementoMori.Tests.EditMode
         }
 
         [Test]
-        public void BedUnlockRequiresEveryRoomInteraction()
+        public void BedUnlockRequiresCompletedRitual()
         {
             var root = new GameObject("RoomStateTest");
             var state = root.AddComponent<GameState>();
             Assert.That(BedController.HasRoomRequirements(state), Is.False);
             foreach (var flag in new[] { StoryFlag.RoomBowlExamined, StoryFlag.RoomToyExamined, StoryFlag.RoomPhotoExamined, StoryFlag.RoomGrimoireRead, StoryFlag.RoomWindowSecured, StoryFlag.RoomRitualItemStored }) state.SetFlag(flag);
+            Assert.That(BedController.HasRoomRequirements(state), Is.False);
+            state.SetRitualCompleted();
             Assert.That(BedController.HasRoomRequirements(state), Is.True);
             Object.DestroyImmediate(root);
         }
