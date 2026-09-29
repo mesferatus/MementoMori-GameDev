@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: a192bf968c693cd458e2a161bb241db0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2835235156409474148
+    second: P1_PoeLocomotion_0
+  - first:
+      213: 2282284230150134557
+    second: P1_PoeLocomotion_1
+  - first:
+      213: 5471732162249839048
+    second: P1_PoeLocomotion_2
+  - first:
+      213: -9182932508219962356
+    second: P1_PoeLocomotion_3
+  - first:
+      213: 1963488661087163666
+    second: P1_PoeLocomotion_4
+  - first:
+      213: 8018845537918302530
+    second: P1_PoeLocomotion_5
+  - first:
+      213: -8598582364922417794
+    second: P1_PoeLocomotion_6
+  - first:
+      213: -8891283891136994604
+    second: P1_PoeLocomotion_7
+  - first:
+      213: 6030278988945286914
+    second: P1_PoeLocomotion_8
+  - first:
+      213: 3680936899717382004
+    second: P1_PoeLocomotion_9
+  - first:
+      213: 5757588118281160999
+    second: P1_PoeLocomotion_10
+  - first:
+      213: -6979953002258683273
+    second: P1_PoeLocomotion_11
+  - first:
+      213: 3256741711150110415
+    second: P1_PoeLocomotion_12
+  - first:
+      213: 1463913175095673294
+    second: P1_PoeLocomotion_13
+  - first:
+      213: 2934646510900357787
+    second: P1_PoeLocomotion_14
+  - first:
+      213: 1107843747802210213
+    second: P1_PoeLocomotion_15
+  - first:
+      213: 5538536965574949081
+    second: P1_PoeLocomotion_16
+  - first:
+      213: 4320198691824150788
+    second: P1_PoeLocomotion_17
+  - first:
+      213: 2237570354497554984
+    second: P1_PoeLocomotion_18
+  - first:
+      213: 4614094910751046512
+    second: P1_PoeLocomotion_19
+  - first:
+      213: -8954082617097557052
+    second: P1_PoeLocomotion_20
+  - first:
+      213: 2816436822054309426
+    second: P1_PoeLocomotion_21
+  - first:
+      213: -8579658038373484731
+    second: P1_PoeLocomotion_22
+  - first:
+      213: 2572950151326530306
+    second: P1_PoeLocomotion_23
+  - first:
+      213: 502157157653220729
+    second: P1_PoeLocomotion_24
+  - first:
+      213: 2180254613380181796
+    second: P1_PoeLocomotion_25
+  - first:
+      213: -5855585869981101445
+    second: P1_PoeLocomotion_26
+  - first:
+      213: 2589287815612021776
+    second: P1_PoeLocomotion_27
+  - first:
+      213: 5755960120778533949
+    second: P1_PoeLocomotion_28
+  - first:
+      213: -2552936358991128815
+    second: P1_PoeLocomotion_29
+  - first:
+      213: 97850041419010009
+    second: P1_PoeLocomotion_30
+  - first:
+      213: 3650682188482533247
+    second: P1_PoeLocomotion_31
+  - first:
+      213: -1232425159301701444
+    second: P1_PoeLocomotion_32
+  - first:
+      213: 793485371089518033
+    second: P1_PoeLocomotion_33
+  - first:
+      213: 782152154456003624
+    second: P1_PoeLocomotion_34
+  - first:
+      213: 2819799970507768283
+    second: P1_PoeLocomotion_35
+  - first:
+      213: 5882912002228714413
+    second: P1_PoeLocomotion_36
+  - first:
+      213: -2069612572075917720
+    second: P1_PoeLocomotion_37
+  - first:
+      213: -5296936998834494277
+    second: P1_PoeLocomotion_38
+  - first:
+      213: -1738606090626206163
+    second: P1_PoeLocomotion_39
+  - first:
+      213: 5344584032984983948
+    second: P1_PoeLocomotion_40
+  - first:
+      213: -6609399262644113846
+    second: P1_PoeLocomotion_41
+  - first:
+      213: -5269545987337582327
+    second: P1_PoeLocomotion_42
+  - first:
+      213: 4891803618911054631
+    second: P1_PoeLocomotion_43
+  - first:
+      213: -3996817321725673059
+    second: P1_PoeLocomotion_44
+  - first:
+      213: -2406659207279133581
+    second: P1_PoeLocomotion_45
+  - first:
+      213: 1238636233831885552
+    second: P1_PoeLocomotion_46
+  - first:
+      213: 8820005539708251278
+    second: P1_PoeLocomotion_47
+  - first:
+      213: 5596442211137883673
+    second: P1_PoeLocomotion_48
+  - first:
+      213: -3880802602648785803
+    second: P1_PoeLocomotion_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 911
+        width: 240
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93a38f95a837a8d0800000000000000
+      internalID: -2835235156409474148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1150
+        width: 38
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b139e4a6d4caf10800000000000000
+      internalID: 2282284230150134557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1237
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c15bfc396f7feb40800000000000000
+      internalID: 5471732162249839048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_3
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1175
+        width: 37
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c892b798baf8080800000000000000
+      internalID: -9182932508219962356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1162
+        width: 96
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2159b94c886bf3b10800000000000000
+      internalID: 1963488661087163666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_5
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1241
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249b854f789a84f60800000000000000
+      internalID: 8018845537918302530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_6
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 916
+        width: 259
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d6cd675e2bba880800000000000000
+      internalID: -8598582364922417794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_7
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 903
+        width: 352
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d260a7b860db9480800000000000000
+      internalID: -8891283891136994604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_8
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1089
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207e5986acadfa350800000000000000
+      internalID: 6030278988945286914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_9
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 929
+        width: 268
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f384c9b90551330800000000000000
+      internalID: 3680936899717382004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1028
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729882973ef07ef40800000000000000
+      internalID: 5757588118281160999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_11
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1028
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a237fc9b9322f90800000000000000
+      internalID: -6979953002258683273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_12
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1000
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6dc42d455423d20800000000000000
+      internalID: 3256741711150110415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_13
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1003
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1879fc64dd05410800000000000000
+      internalID: 1463913175095673294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_14
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 986
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a2e870475f9b820800000000000000
+      internalID: 2934646510900357787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_15
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 988
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af536ed40adf5f00800000000000000
+      internalID: 1107843747802210213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_16
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 948
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8f6789606dcdc40800000000000000
+      internalID: 5538536965574949081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_17
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 642
+        width: 306
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409294122dd64fb30800000000000000
+      internalID: 4320198691824150788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_18
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 899
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a85cbd1627d0f10800000000000000
+      internalID: 2237570354497554984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_19
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 632
+        width: 276
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bf043ffde880040800000000000000
+      internalID: 4614094910751046512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_20
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 610
+        width: 305
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb666eec45bcb380800000000000000
+      internalID: -8954082617097557052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_21
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 322
+        width: 269
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e80e61e5ef51720800000000000000
+      internalID: 2816436822054309426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_22
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 610
+        width: 49
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5477c68987eeee880800000000000000
+      internalID: -8579658038373484731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_23
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 329
+        width: 351
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20bfa92d784f4b320800000000000000
+      internalID: 2572950151326530306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_24
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 312
+        width: 258
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d075b364508f600800000000000000
+      internalID: 502157157653220729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_25
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 306
+        width: 245
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42fae66f402d14e10800000000000000
+      internalID: 2180254613380181796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_26
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 525
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72dafbeca7ccbea0800000000000000
+      internalID: -5855585869981101445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_27
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 306
+        width: 214
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c3dc6bc8ffee320800000000000000
+      internalID: 2589287815612021776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_28
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 535
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ca154cb3741ef40800000000000000
+      internalID: 5755960120778533949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_29
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 537
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117972458e5229cd0800000000000000
+      internalID: -2552936358991128815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_30
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 471
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df89002812ab5100800000000000000
+      internalID: 97850041419010009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_31
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 387
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f77d858bb14d9a230800000000000000
+      internalID: 3650682188482533247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_32
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 355
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb06197e8db85eee0800000000000000
+      internalID: -1232425159301701444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_33
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 353
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd724eadb6030b00800000000000000
+      internalID: 793485371089518033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_34
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 356
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82418ae8d33cada00800000000000000
+      internalID: 782152154456003624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_35
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 353
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1c5cb1221f12720800000000000000
+      internalID: 2819799970507768283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_36
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 306
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab79b90c4d44a150800000000000000
+      internalID: 5882912002228714413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_37
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 291
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e7bbab4524743e0800000000000000
+      internalID: -2069612572075917720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_38
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 309
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4a8da2ddf7d76b0800000000000000
+      internalID: -5296936998834494277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_39
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 306
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26f4ebd8fa3fd7e0800000000000000
+      internalID: -1738606090626206163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 329
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c896b467cd6cb2a40800000000000000
+      internalID: 5344584032984983948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_41
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 301
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e6e538362b644a0800000000000000
+      internalID: -6609399262644113846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_42
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 0
+        width: 310
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909882108dfced6b0800000000000000
+      internalID: -5269545987337582327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_43
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 253
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72be928397d23e340800000000000000
+      internalID: 4891803618911054631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_44
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 0
+        width: 285
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91c96a62d37888c0800000000000000
+      internalID: -3996817321725673059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_45
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 103
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c34b6b334d99ed0800000000000000
+      internalID: -2406659207279133581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_46
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 70
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa2a739715803110800000000000000
+      internalID: 1238636233831885552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_47
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 86
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ca947de44f66a70800000000000000
+      internalID: 8820005539708251278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_48
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 49
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e00e03a8e8aad40800000000000000
+      internalID: 5596442211137883673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_PoeLocomotion_49
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 14
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c25b1289e942ac0800000000000000
+      internalID: -3880802602648785803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      P1_PoeLocomotion_0: -2835235156409474148
+      P1_PoeLocomotion_1: 2282284230150134557
+      P1_PoeLocomotion_10: 5757588118281160999
+      P1_PoeLocomotion_11: -6979953002258683273
+      P1_PoeLocomotion_12: 3256741711150110415
+      P1_PoeLocomotion_13: 1463913175095673294
+      P1_PoeLocomotion_14: 2934646510900357787
+      P1_PoeLocomotion_15: 1107843747802210213
+      P1_PoeLocomotion_16: 5538536965574949081
+      P1_PoeLocomotion_17: 4320198691824150788
+      P1_PoeLocomotion_18: 2237570354497554984
+      P1_PoeLocomotion_19: 4614094910751046512
+      P1_PoeLocomotion_2: 5471732162249839048
+      P1_PoeLocomotion_20: -8954082617097557052
+      P1_PoeLocomotion_21: 2816436822054309426
+      P1_PoeLocomotion_22: -8579658038373484731
+      P1_PoeLocomotion_23: 2572950151326530306
+      P1_PoeLocomotion_24: 502157157653220729
+      P1_PoeLocomotion_25: 2180254613380181796
+      P1_PoeLocomotion_26: -5855585869981101445
+      P1_PoeLocomotion_27: 2589287815612021776
+      P1_PoeLocomotion_28: 5755960120778533949
+      P1_PoeLocomotion_29: -2552936358991128815
+      P1_PoeLocomotion_3: -9182932508219962356
+      P1_PoeLocomotion_30: 97850041419010009
+      P1_PoeLocomotion_31: 3650682188482533247
+      P1_PoeLocomotion_32: -1232425159301701444
+      P1_PoeLocomotion_33: 793485371089518033
+      P1_PoeLocomotion_34: 782152154456003624
+      P1_PoeLocomotion_35: 2819799970507768283
+      P1_PoeLocomotion_36: 5882912002228714413
+      P1_PoeLocomotion_37: -2069612572075917720
+      P1_PoeLocomotion_38: -5296936998834494277
+      P1_PoeLocomotion_39: -1738606090626206163
+      P1_PoeLocomotion_4: 1963488661087163666
+      P1_PoeLocomotion_40: 5344584032984983948
+      P1_PoeLocomotion_41: -6609399262644113846
+      P1_PoeLocomotion_42: -5269545987337582327
+      P1_PoeLocomotion_43: 4891803618911054631
+      P1_PoeLocomotion_44: -3996817321725673059
+      P1_PoeLocomotion_45: -2406659207279133581
+      P1_PoeLocomotion_46: 1238636233831885552
+      P1_PoeLocomotion_47: 8820005539708251278
+      P1_PoeLocomotion_48: 5596442211137883673
+      P1_PoeLocomotion_49: -3880802602648785803
+      P1_PoeLocomotion_5: 8018845537918302530
+      P1_PoeLocomotion_6: -8598582364922417794
+      P1_PoeLocomotion_7: -8891283891136994604
+      P1_PoeLocomotion_8: 6030278988945286914
+      P1_PoeLocomotion_9: 3680936899717382004
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
