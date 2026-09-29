@@ -52,7 +52,7 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(InputGate.Instance.IsBlocked, Is.False);
 
             pause.ReturnToMenu();
-            yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "MainMenu");
+            yield return WaitForScene("MainMenu");
             Assert.That(Time.timeScale, Is.EqualTo(1f));
         }
 
@@ -68,7 +68,7 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(objective.IsVisible, Is.True);
 
             GameManager.Instance.ReturnToMenu();
-            yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "MainMenu");
+            yield return WaitForScene("MainMenu");
             yield return null;
 
             Assert.That(objective.IsVisible, Is.False);
@@ -85,7 +85,7 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(CountSceneObjects<InteractionPromptUI>(), Is.EqualTo(1));
 
             GameManager.Instance.ReturnToMenu();
-            yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "MainMenu");
+            yield return WaitForScene("MainMenu");
             yield return null;
 
             Assert.That(CountSceneObjects<DialogueManager>(), Is.EqualTo(0));
@@ -99,6 +99,14 @@ namespace MementoMori.Tests.PlayMode
                 if (candidate.name == objectName && candidate.scene.IsValid())
                     return candidate;
             return null;
+        }
+
+        private static IEnumerator WaitForScene(string sceneName)
+        {
+            var deadline = Time.realtimeSinceStartup + 10f;
+            while (Time.realtimeSinceStartup < deadline && SceneManager.GetActiveScene().name != sceneName)
+                yield return null;
+            Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo(sceneName));
         }
 
         private static int CountSceneObjects(string objectName)
