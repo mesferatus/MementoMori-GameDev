@@ -44,7 +44,7 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(GameState.Instance, Is.Not.Null);
 
             GameManager.Instance.StartNewGame();
-            yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "Quarto");
+            yield return WaitForScene("Quarto");
             yield return WaitForTrack("01_room_ambience");
 
             Assert.That(CountRuntimeAudioObjects(), Is.EqualTo(1));
@@ -67,12 +67,25 @@ namespace MementoMori.Tests.PlayMode
 
         private static IEnumerator WaitForTrack(string clipName)
         {
-            yield return new WaitUntil(() =>
-            {
-                var runtimeAudio = GameObject.Find("RuntimeAudio");
-                var source = runtimeAudio == null ? null : runtimeAudio.GetComponent<AudioSource>();
-                return source != null && source.clip != null && source.clip.name == clipName && source.isPlaying;
-            });
+            var deadline = Time.realtimeSinceStartup + 10f;
+            while (Time.realtimeSinceStartup < deadline && !HasTrack(clipName))
+                yield return null;
+            Assert.That(HasTrack(clipName), Is.True, $"Audio track did not start: {clipName}");
+        }
+
+        private static IEnumerator WaitForScene(string sceneName)
+        {
+            var deadline = Time.realtimeSinceStartup + 10f;
+            while (Time.realtimeSinceStartup < deadline && SceneManager.GetActiveScene().name != sceneName)
+                yield return null;
+            Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo(sceneName));
+        }
+
+        private static bool HasTrack(string clipName)
+        {
+            var runtimeAudio = GameObject.Find("RuntimeAudio");
+            var source = runtimeAudio == null ? null : runtimeAudio.GetComponent<AudioSource>();
+            return source != null && source.clip != null && source.clip.name == clipName && source.isPlaying;
         }
 
         private static int CountRuntimeAudioObjects()
