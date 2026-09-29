@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using MementoMori.Core;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using MementoMori.Audio;
 
 namespace MementoMori.Dialogue
@@ -16,6 +17,13 @@ namespace MementoMori.Dialogue
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private Text speakerLabel;
         [SerializeField] private Text bodyLabel;
+        [SerializeField] private TMP_Text speakerLabelTmp;
+        [SerializeField] private TMP_Text bodyLabelTmp;
+        [SerializeField] private Image portraitImage;
+        [SerializeField] private Sprite melanthaPortrait;
+        [SerializeField] private Sprite poePortrait;
+        [SerializeField] private Sprite andrealphusPortrait;
+        [SerializeField] private GameObject continueCursor;
 
         private DialogueData activeDialogue;
         private int lineIndex;
@@ -27,6 +35,8 @@ namespace MementoMori.Dialogue
         [SerializeField, Range(10f, 120f)] private float defaultCharactersPerSecond = 38f;
         [SerializeField] private bool instantAdvance;
         public bool IsOpen => activeDialogue != null;
+        public string CurrentSpeaker => IsOpen && lineIndex < activeDialogue.Lines.Length
+            ? activeDialogue.Lines[lineIndex].Speaker : string.Empty;
         public IReadOnlyList<DialogueLine> History => history;
         public event Action OnDialogueCompleted;
 
@@ -35,6 +45,17 @@ namespace MementoMori.Dialogue
             canvasGroup = group;
             speakerLabel = speaker;
             bodyLabel = body;
+            SetVisible(false);
+            CreateHistoryPanel();
+        }
+
+        public void Configure(CanvasGroup group, TMP_Text speaker, TMP_Text body, Image portrait, GameObject cursor)
+        {
+            canvasGroup = group;
+            speakerLabelTmp = speaker;
+            bodyLabelTmp = body;
+            portraitImage = portrait;
+            continueCursor = cursor;
             SetVisible(false);
             CreateHistoryPanel();
         }
@@ -104,10 +125,21 @@ namespace MementoMori.Dialogue
         private void RenderCurrentLine()
         {
             var line = activeDialogue.Lines[lineIndex];
-            if (speakerLabel != null) speakerLabel.text = line.Speaker;
+            SetSpeakerText(line.Speaker);
             var scale = AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.FontScale;
             if (speakerLabel != null) speakerLabel.fontSize = Mathf.RoundToInt(22f * scale);
             if (bodyLabel != null) bodyLabel.fontSize = Mathf.RoundToInt(18f * scale);
+            if (speakerLabelTmp != null) speakerLabelTmp.fontSize = Mathf.RoundToInt(34f * scale);
+            if (bodyLabelTmp != null) bodyLabelTmp.fontSize = Mathf.RoundToInt(32f * scale);
+            if (portraitImage != null)
+            {
+                portraitImage.sprite = line.Speaker == "Poe" ? poePortrait : line.Speaker == "Andrealphus" ? andrealphusPortrait : line.Speaker == "Melantha" ? melanthaPortrait : null;
+                portraitImage.color = Color.white;
+                portraitImage.preserveAspect = true;
+                portraitImage.enabled = portraitImage.sprite != null;
+            }
+            if (continueCursor != null)
+                continueCursor.SetActive(false);
             RuntimeAudio.PlayOneShot(line.Speaker == "Andrealphus" ? "16_daimon_appear" : "07_dialogue_blip", line.Speaker == "Andrealphus" ? .3f : .18f);
             if (revealRoutine != null) StopCoroutine(revealRoutine);
             revealRoutine = StartCoroutine(RevealLine(line));
@@ -118,24 +150,26 @@ namespace MementoMori.Dialogue
         private IEnumerator RevealLine(DialogueLine line)
         {
             lineFullyVisible = false;
-            if (bodyLabel != null) bodyLabel.text = string.Empty;
+            SetBodyText(string.Empty);
             if (line.PauseBefore > 0f) yield return new WaitForSecondsRealtime(line.PauseBefore);
             var content = line.Text ?? string.Empty;
             var speed = (line.CharactersPerSecond > 0f ? line.CharactersPerSecond : defaultCharactersPerSecond) * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.TextSpeed);
             if (instantAdvance || content.Length == 0)
             {
-                if (bodyLabel != null) bodyLabel.text = content;
+                SetBodyText(content);
             }
             else
             {
                 for (var i = 1; i <= content.Length; i++)
                 {
-                    if (bodyLabel != null) bodyLabel.text = content.Substring(0, i);
+                    SetBodyText(content.Substring(0, i));
                     yield return new WaitForSecondsRealtime(1f / speed);
                 }
             }
             if (line.PauseAfter > 0f) yield return new WaitForSecondsRealtime(line.PauseAfter);
             lineFullyVisible = true;
+            if (continueCursor != null)
+                continueCursor.SetActive(true);
             revealRoutine = null;
         }
 
@@ -144,8 +178,10 @@ namespace MementoMori.Dialogue
             if (!IsOpen) return;
             if (revealRoutine != null) StopCoroutine(revealRoutine);
             var line = activeDialogue.Lines[lineIndex];
-            if (bodyLabel != null) bodyLabel.text = line.Text ?? string.Empty;
+            SetBodyText(line.Text ?? string.Empty);
             lineFullyVisible = true;
+            if (continueCursor != null)
+                continueCursor.SetActive(true);
             revealRoutine = null;
         }
 
@@ -156,6 +192,20 @@ namespace MementoMori.Dialogue
             canvasGroup.alpha = visible ? 1f : 0f;
             canvasGroup.blocksRaycasts = visible;
             canvasGroup.interactable = visible;
+            if (!visible && continueCursor != null)
+                continueCursor.SetActive(false);
+        }
+
+        private void SetSpeakerText(string value)
+        {
+            if (speakerLabel != null) speakerLabel.text = value;
+            if (speakerLabelTmp != null) speakerLabelTmp.text = value;
+        }
+
+        private void SetBodyText(string value)
+        {
+            if (bodyLabel != null) bodyLabel.text = value;
+            if (bodyLabelTmp != null) bodyLabelTmp.text = value;
         }
 
         private void CreateHistoryPanel()

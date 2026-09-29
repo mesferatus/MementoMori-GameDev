@@ -8,7 +8,7 @@ namespace MementoMori.World
         [SerializeField] private EchoCorridorPuzzle puzzle;
         [SerializeField] private int passage;
 
-        public string InteractionVerb => "Seguir voz";
+        public string InteractionVerb => puzzle != null ? puzzle.ChoiceLabel(passage) : "Seguir voz";
         public int InteractionPriority => 6;
 
         public void Configure(EchoCorridorPuzzle owner, int index)

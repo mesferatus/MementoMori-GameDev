@@ -11,8 +11,13 @@ namespace MementoMori.UI
     {
         [SerializeField] private DialogueData[] narrativeEntries;
         [SerializeField] private Text finalText;
+        [SerializeField] private TMPro.TMP_Text finalTextTmp;
         [SerializeField] private Button returnButton;
         [SerializeField] private GameObject credits;
+        [SerializeField] private GameObject circleActive;
+        [SerializeField] private GameObject circleOff;
+        [SerializeField] private GameObject[] wakeEvidence;
+        [SerializeField] private GameObject endCardRoot;
 
         private int entryIndex;
         private bool sequenceComplete;
@@ -24,6 +29,8 @@ namespace MementoMori.UI
 
         private void Start()
         {
+            if (endCardRoot != null) endCardRoot.SetActive(false);
+            EnsureV3NarrativeEntries();
             if (returnButton != null)
             {
                 returnButton.interactable = false;
@@ -38,8 +45,26 @@ namespace MementoMori.UI
             }
 
             if (finalText != null) finalText.gameObject.SetActive(false);
+            if (circleActive != null) circleActive.SetActive(false);
+            if (circleOff != null) circleOff.SetActive(true);
+            if (wakeEvidence != null)
+                foreach (var evidence in wakeEvidence)
+                    if (evidence != null) evidence.SetActive(true);
             EnsureDialogueManager();
             StartNextEntry();
+        }
+
+        private void EnsureV3NarrativeEntries()
+        {
+            var ids = new[] { "DLG_F_WAKE", "DLG_F_ROOM_AFTER", "DLG_F_FRAGMENT_CHECK", "DLG_F_POE_SOUND", "DLG_F_END_CARD" };
+            if (narrativeEntries != null && narrativeEntries.Length == ids.Length)
+            {
+                var complete = true;
+                for (var i = 0; i < ids.Length; i++) complete &= narrativeEntries[i] != null;
+                if (complete) return;
+            }
+            narrativeEntries = new DialogueData[ids.Length];
+            for (var i = 0; i < ids.Length; i++) narrativeEntries[i] = Resources.Load<DialogueData>("Dialogue/" + ids[i]);
         }
 
         private void EnsureDialogueManager()
@@ -93,6 +118,7 @@ namespace MementoMori.UI
             }
 
             var dialogue = narrativeEntries[entryIndex++];
+            if (entryIndex == 4) MementoMori.Audio.RuntimeAudio.PlayOneShot("15_poe_soft_call", .4f);
             if (dialogue == null)
             {
                 StartNextEntry();
@@ -112,10 +138,24 @@ namespace MementoMori.UI
         private void CompleteSequence()
         {
             sequenceComplete = true;
-            if (finalText != null) finalText.gameObject.SetActive(true);
-            if (credits != null) credits.SetActive(true);
+            if (endCardRoot != null) endCardRoot.SetActive(true);
+            if (finalText == null && finalTextTmp == null)
+            {
+                var canvas = FindAnyObjectByType<Canvas>();
+                if (canvas != null) finalText = CreateLabel(canvas.transform, "EndCard", 28, new Vector2(.15f, .62f), new Vector2(.85f, .82f));
+            }
+            if (finalText != null)
+            {
+                finalText.text = "Algumas coisas não terminam.\nElas apenas mudam de lugar.\n\nObrigado por carregar esta memória até aqui.";
+                finalText.gameObject.SetActive(true);
+            }
+            if (finalTextTmp != null) finalTextTmp.text = "Algumas coisas não terminam.\nElas apenas mudam de lugar.\n\nObrigado por carregar esta memória até aqui.";
             if (returnButton != null) returnButton.interactable = true;
         }
+
+        public void ShowCredits() { if (sequenceComplete && credits != null) credits.SetActive(true); }
+        public void HideCredits() { if (credits != null) credits.SetActive(false); }
+        public void Quit() { if (sequenceComplete) Application.Quit(); }
 
         public void ReturnToMenu()
         {

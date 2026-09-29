@@ -3,6 +3,7 @@ using MementoMori.Core;
 using MementoMori.Poe;
 using MementoMori.Audio;
 using MementoMori.Dialogue;
+using MementoMori.World;
 
 namespace MementoMori.Puzzles
 {
@@ -23,6 +24,7 @@ namespace MementoMori.Puzzles
         bool crescentHintRequested;
         int nextWaningFlower = 2;
         public MoonPetal Petal => petal;
+        public int NextWaningFlower => nextWaningFlower;
         public int Attempts { get; private set; }
         public int Errors { get; private set; }
         public bool Solved => GameState.Instance != null && GameState.Instance.HasFlag(FlagFor(petal));
@@ -42,8 +44,13 @@ namespace MementoMori.Puzzles
 
         void Update()
         {
-            if (petal != MoonPetal.Crescente || Solved || crescentOpened) return;
             player ??= GameObject.FindGameObjectWithTag("Player")?.transform;
+            if (player != null && Vector2.Distance(player.position, transform.position) < 3.5f)
+            {
+                GrimoireCatalog.Discover("A09");
+                GrimoireCatalog.Discover(petal switch { MoonPetal.Crescente => "P08", MoonPetal.Cheia => "P09", _ => "P10" });
+            }
+            if (petal != MoonPetal.Crescente || Solved || crescentOpened) return;
             if (poe == null)
             {
                 var followers = Object.FindObjectsByType<PoeFollower>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -98,6 +105,7 @@ namespace MementoMori.Puzzles
             Attempts++;
             if (flowerIndex != nextWaningFlower)
             {
+                nextWaningFlower = 2;
                 Errors++;
                 GameState.Instance?.IncrementCounter("garden." + petal + ".errors");
                 RuntimeAudio.PlayOneShot("10_sigil_error", .35f);
@@ -112,9 +120,9 @@ namespace MementoMori.Puzzles
         {
             var key = petal switch
             {
-                MoonPetal.Crescente => "DLG_GARDEN_CRESCENT",
-                MoonPetal.Cheia => "DLG_GARDEN_FULL",
-                _ => "DLG_GARDEN_WANING"
+                MoonPetal.Crescente => "DLG_D_GARDEN_CRESCENT_SUCCESS",
+                MoonPetal.Cheia => "DLG_D_GARDEN_FULL_SUCCESS",
+                _ => "DLG_D_GARDEN_WANING_SUCCESS"
             };
             DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/" + key));
         }
