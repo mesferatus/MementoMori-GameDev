@@ -3263,7 +3263,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 73062036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1511534236}
+  m_Script: {fileID: 11500000, guid: ad912787cf95231418f2662c31a9eeb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.RoomCandleInteractable
   orderIndex: 3
@@ -16642,7 +16642,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 382721819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1511534236}
+  m_Script: {fileID: 11500000, guid: ad912787cf95231418f2662c31a9eeb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.RoomCandleInteractable
   orderIndex: 0
@@ -57777,7 +57777,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1148407671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1511534236}
+  m_Script: {fileID: 11500000, guid: ad912787cf95231418f2662c31a9eeb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.RoomCandleInteractable
   orderIndex: 1
@@ -58315,7 +58315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1162884469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1511534236}
+  m_Script: {fileID: 11500000, guid: ad912787cf95231418f2662c31a9eeb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.RoomCandleInteractable
   orderIndex: 2
@@ -76898,21 +76898,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!115 &1511534236
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: RoomCandleInteractable
-  m_Namespace: MementoMori.World
-  m_AssemblyName: MementoMori.Runtime
 --- !u!1 &1520971007
 GameObject:
   m_ObjectHideFlags: 0
