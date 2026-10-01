@@ -95043,7 +95043,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.75
+  orthographic size: 7.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -95074,8 +95074,8 @@ MonoBehaviour:
   target: {fileID: 1776154001}
   damping: 8
   useBounds: 1
-  minBounds: {x: 0, y: -3.25}
-  maxBounds: {x: 1, y: 2.25}
+  minBounds: {x: 0.5, y: -0.5}
+  maxBounds: {x: 0.5, y: -0.5}
 --- !u!81 &1892067499
 AudioListener:
   m_ObjectHideFlags: 0
@@ -95098,8 +95098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.PixelPerfectCamera
   m_ComponentVersion: 1
   m_AssetsPPU: 36
-  m_RefResolutionX: 432
-  m_RefResolutionY: 270
+  m_RefResolutionX: 854
+  m_RefResolutionY: 480
   m_CropFrame: 0
   m_GridSnapping: 1
   m_FilterMode: 0
