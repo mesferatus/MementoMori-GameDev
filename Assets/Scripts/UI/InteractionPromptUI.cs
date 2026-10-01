@@ -51,15 +51,8 @@ namespace MementoMori.UI
             var image = background.GetComponent<Image>();
             if (image != null && image.sprite != null)
             {
-                if (scalableBackground == null)
-                {
-                    var source = image.sprite;
-                    var pivot = new Vector2(source.pivot.x / source.rect.width, source.pivot.y / source.rect.height);
-                    scalableBackground = Sprite.Create(source.texture, source.rect, pivot,
-                        source.pixelsPerUnit, 0, SpriteMeshType.FullRect, new Vector4(180, 180, 180, 180));
-                }
-                image.sprite = scalableBackground;
-                image.type = Image.Type.Sliced;
+                if (scalableBackground == null) scalableBackground = image.sprite;
+                image.type = Image.Type.Simple;
                 image.preserveAspect = false;
             }
 
@@ -67,18 +60,18 @@ namespace MementoMori.UI
             labelTmp.enableAutoSizing = false;
             labelTmp.textWrappingMode = TextWrappingModes.NoWrap;
             labelTmp.ForceMeshUpdate();
-            var width = Mathf.Clamp(labelTmp.preferredWidth + 260f, 430f, 930f);
-            background.sizeDelta = new Vector2(width, 170f);
+            var width = Mathf.Clamp(labelTmp.preferredWidth + 210f, 500f, 1050f);
+            background.sizeDelta = new Vector2(width, 185f);
             labelTmp.rectTransform.anchorMin = new Vector2(0f, .5f);
             labelTmp.rectTransform.anchorMax = new Vector2(1f, .5f);
-            labelTmp.rectTransform.offsetMin = new Vector2(170f, -55f);
-            labelTmp.rectTransform.offsetMax = new Vector2(-35f, 55f);
+            labelTmp.rectTransform.offsetMin = new Vector2(125f, -58f);
+            labelTmp.rectTransform.offsetMax = new Vector2(-35f, 58f);
             var keycap = background.Find("Keycap_E") as RectTransform;
             if (keycap != null)
             {
                 keycap.anchorMin = keycap.anchorMax = new Vector2(0f, .5f);
-                keycap.sizeDelta = new Vector2(145f, 155f);
-                keycap.anchoredPosition = new Vector2(65f, 0f);
+                keycap.sizeDelta = new Vector2(155f, 165f);
+                keycap.anchoredPosition = new Vector2(72f, 0f);
             }
             var icon = background.Find("InteractionIcon");
             if (icon != null) icon.gameObject.SetActive(false);
