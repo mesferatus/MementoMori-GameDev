@@ -90,11 +90,34 @@ namespace MementoMori.Dialogue
             if (dialogue == null || dialogue.Lines == null || dialogue.Lines.Length == 0 || IsOpen || !dialogue.IsAvailable(GameState.Instance))
                 return;
 
+            ApplyDialogueLayout();
             activeDialogue = dialogue;
             lineIndex = 0;
             InputGate.Instance?.Block(DialogueGate);
             SetVisible(true);
             RenderCurrentLine();
+        }
+
+        private void ApplyDialogueLayout()
+        {
+            if (speakerLabelTmp != null)
+            {
+                var nameRect = speakerLabelTmp.rectTransform;
+                nameRect.anchorMin = nameRect.anchorMax = new Vector2(0f, 1f);
+                nameRect.anchoredPosition = new Vector2(235f, -91f);
+                nameRect.sizeDelta = new Vector2(270f, 48f);
+                speakerLabelTmp.alignment = TextAlignmentOptions.Center;
+            }
+
+            if (portraitImage == null) return;
+            var frame = portraitImage.transform.parent as RectTransform;
+            if (frame != null && frame.name == "PortraitFrame")
+                frame.sizeDelta = new Vector2(350f, 350f);
+            var portraitRect = portraitImage.rectTransform;
+            portraitRect.anchorMin = portraitRect.anchorMax = new Vector2(.5f, .5f);
+            portraitRect.anchoredPosition = Vector2.zero;
+            portraitRect.sizeDelta = new Vector2(250f, 250f);
+            portraitImage.preserveAspect = true;
         }
 
         public void Advance()
@@ -115,6 +138,7 @@ namespace MementoMori.Dialogue
             }
 
             activeDialogue = null;
+            RuntimeAudio.StopChatter();
             if (revealRoutine != null) StopCoroutine(revealRoutine);
             revealRoutine = null;
             SetVisible(false);
@@ -140,7 +164,7 @@ namespace MementoMori.Dialogue
             }
             if (continueCursor != null)
                 continueCursor.SetActive(false);
-            RuntimeAudio.PlayOneShot(line.Speaker == "Andrealphus" ? "16_daimon_appear" : "07_dialogue_blip", line.Speaker == "Andrealphus" ? .3f : .18f);
+            RuntimeAudio.StopChatter();
             if (revealRoutine != null) StopCoroutine(revealRoutine);
             revealRoutine = StartCoroutine(RevealLine(line));
         }
@@ -160,12 +184,18 @@ namespace MementoMori.Dialogue
             }
             else
             {
+                var spokenCharacters = 0;
+                var syllable = 0;
+                var cadence = line.Speaker == "Andrealphus" ? 4 : line.Speaker == "Poe" ? 3 : 2;
                 for (var i = 1; i <= content.Length; i++)
                 {
                     SetBodyText(content.Substring(0, i));
+                    if (char.IsLetterOrDigit(content[i - 1]) && ++spokenCharacters % cadence == 0)
+                        RuntimeAudio.PlayChatter(line.Speaker, syllable++);
                     yield return new WaitForSecondsRealtime(1f / speed);
                 }
             }
+            RuntimeAudio.StopChatter();
             if (line.PauseAfter > 0f) yield return new WaitForSecondsRealtime(line.PauseAfter);
             lineFullyVisible = true;
             if (continueCursor != null)
@@ -177,6 +207,7 @@ namespace MementoMori.Dialogue
         {
             if (!IsOpen) return;
             if (revealRoutine != null) StopCoroutine(revealRoutine);
+            RuntimeAudio.StopChatter();
             var line = activeDialogue.Lines[lineIndex];
             SetBodyText(line.Text ?? string.Empty);
             lineFullyVisible = true;

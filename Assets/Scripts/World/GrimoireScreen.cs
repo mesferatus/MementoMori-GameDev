@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using MementoMori.Audio;
 
 namespace MementoMori.World
 {
@@ -120,6 +121,7 @@ namespace MementoMori.World
             SelectTab(activeTab);
             IsOpen = true;
             AnyOpen = true;
+            RuntimeAudio.PlayOneShot("Grimoire/grimoire_open", .28f);
             InputGate.Instance?.Block(Gate);
             HideOtherCanvases();
         }
@@ -187,6 +189,7 @@ namespace MementoMori.World
             if (!IsOpen) return;
             IsOpen = false;
             AnyOpen = false;
+            RuntimeAudio.PlayOneShot("Grimoire/grimoire_close", .25f);
             EscapeConsumedFrame = Time.frameCount;
             if (canvas != null) canvas.gameObject.SetActive(false);
             RestoreOtherCanvases();
@@ -203,6 +206,7 @@ namespace MementoMori.World
 
         private void ShowNotice()
         {
+            RuntimeAudio.PlayOneShot("Grimoire/grimoire_new_entry", .22f);
             if (noticeText == null)
             {
                 var root = new GameObject("GrimoireNotice", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler));
@@ -224,6 +228,7 @@ namespace MementoMori.World
         public void ShowPage(int requested)
         {
             if (pageTitle == null) return;
+            var oldPage = page;
             if (selectedEntry == null)
             {
                 pageTitle.text = pageBody.text = pageNumber.text = string.Empty;
@@ -265,10 +270,13 @@ namespace MementoMori.World
             pageNumber.text = $"{page + 1} / {pageCount}";
             previousPage.interactable = page > 0;
             nextPage.interactable = page + 1 < pageCount;
+            if (IsOpen && page != oldPage)
+                RuntimeAudio.PlayOneShot("Grimoire/grimoire_page_turn_" + (page % 4 + 1).ToString("00"), .28f);
         }
 
         private void SelectTab(int tab)
         {
+            if (IsOpen && tab != activeTab) RuntimeAudio.PlayOneShot("Grimoire/grimoire_tab", .25f);
             activeTab = Mathf.Clamp(tab, 0, 3);
             visibleEntries.Clear();
             foreach (var entry in GrimoireCatalog.Entries)
@@ -311,7 +319,9 @@ namespace MementoMori.World
         private void ChangeListPage(int requested)
         {
             var count = Mathf.Max(1, Mathf.CeilToInt(visibleEntries.Count / (float)RowsPerListPage));
+            var oldPage = listPage;
             listPage = Mathf.Clamp(requested, 0, count - 1);
+            if (listPage != oldPage) RuntimeAudio.PlayOneShot("Grimoire/grimoire_page_turn_01", .25f);
             RenderList();
         }
 
@@ -319,6 +329,7 @@ namespace MementoMori.World
         {
             var index = listPage * RowsPerListPage + row;
             if (index < 0 || index >= visibleEntries.Count) return;
+            if (IsOpen && selectedEntry != visibleEntries[index]) RuntimeAudio.PlayOneShot("Grimoire/grimoire_page_turn_02", .22f);
             selectedEntry = visibleEntries[index];
             GrimoireCatalog.MarkRead(selectedEntry.Id);
             RenderList();

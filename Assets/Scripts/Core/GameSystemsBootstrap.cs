@@ -60,8 +60,8 @@ namespace MementoMori.Core
 
             var loop = SceneManager.GetActiveScene().name switch
             {
-                "Quarto" => "01_room_ambience",
-                "Labirinto" => "02_labyrinth_drone",
+                "Quarto" => "Music/music_quarto_new_melancholic_postpunk",
+                "Labirinto" => "Music/music_labirinto_new_angular_postpunk",
                 "DominioLua" => "03_moon_domain_loop",
                 "MainMenu" => "20_menu_theme",
                 "FinalBeta" => "19_beta_ending_stinger",
