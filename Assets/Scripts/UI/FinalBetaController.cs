@@ -3,6 +3,7 @@ using MementoMori.Core;
 using MementoMori.Dialogue;
 using UnityEngine;
 using UnityEngine.UI;
+using MementoMori.World;
 
 namespace MementoMori.UI
 {
@@ -29,6 +30,8 @@ namespace MementoMori.UI
 
         private void Start()
         {
+            var roomVisual = FindAnyObjectByType<RoomRitualVisual>();
+            if (roomVisual != null) roomVisual.SetReturnedRoom(true);
             if (endCardRoot != null) endCardRoot.SetActive(false);
             EnsureV3NarrativeEntries();
             if (returnButton != null)
