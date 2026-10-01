@@ -239,7 +239,7 @@ namespace MementoMori.World
             pageSymbols.gameObject.SetActive(false);
             noteImage.gameObject.SetActive(!string.IsNullOrEmpty(selectedEntry.Note));
             noteText.text = selectedEntry.Note ?? string.Empty;
-            pageBody.rectTransform.anchorMax = selectedEntry.Id == "A01" ? new Vector2(.77f, .54f) : new Vector2(.77f, .75f);
+            pageBody.rectTransform.anchorMax = selectedEntry.Id == "A01" ? new Vector2(.80f, .54f) : new Vector2(.80f, .75f);
             pageBody.rectTransform.offsetMax = Vector2.zero;
             if (hint)
             {
@@ -339,7 +339,7 @@ namespace MementoMori.World
             var dim = Image("Dim", root.transform, null, new Color(.015f, .008f, .025f, .87f), new Vector2(0, 0), new Vector2(1, 1));
             dim.rectTransform.offsetMin = dim.rectTransform.offsetMax = Vector2.zero;
 
-            var book = Image("OpenBook", root.transform, bookSprite, Color.white, new Vector2(.08f, .12f), new Vector2(.92f, .86f));
+            var book = Image("OpenBook", root.transform, bookSprite, Color.white, new Vector2(.04f, .10f), new Vector2(.96f, .89f));
             book.preserveAspect = true;
             book.rectTransform.offsetMin = book.rectTransform.offsetMax = Vector2.zero;
             book.raycastTarget = false;
@@ -372,18 +372,18 @@ namespace MementoMori.World
                 caption.color = new Color(.91f, .79f, .91f);
             }
 
-            indexTitle = Text("IndexTitle", book.transform, "ANOTAÇÕES", titleFont, 27, new Vector2(.20f, .76f), new Vector2(.43f, .86f), TextAlignmentOptions.Center);
+            indexTitle = Text("IndexTitle", book.transform, "ANOTAÇÕES", titleFont, 30, new Vector2(.20f, .76f), new Vector2(.43f, .86f), TextAlignmentOptions.Center);
             entryButtons = new Button[RowsPerListPage];
             for (int i = 0; i < entryButtons.Length; i++)
             {
                 int selected = i;
-                var top = .735f - i * .064f;
-                var row = Image("Entry_" + i, book.transform, entryNormal, Color.white, new Vector2(.22f, top - .052f), new Vector2(.44f, top));
+                var top = .755f - i * .075f;
+                var row = Image("Entry_" + i, book.transform, entryNormal, Color.white, new Vector2(.21f, top - .067f), new Vector2(.45f, top));
                 row.rectTransform.offsetMin = row.rectTransform.offsetMax = Vector2.zero;
                 entryButtons[i] = row.gameObject.AddComponent<Button>();
                 entryButtons[i].onClick.AddListener(() => SelectEntry(selected));
-                var label = Text("Label", row.transform, "", bodyFont, 21, new Vector2(.14f, 0f), new Vector2(.89f, 1f), TextAlignmentOptions.MidlineLeft);
-                label.enableAutoSizing = true; label.fontSizeMin = 16; label.fontSizeMax = 21;
+                var label = Text("Label", row.transform, "", bodyFont, 27, new Vector2(.12f, .08f), new Vector2(.92f, .92f), TextAlignmentOptions.MidlineLeft);
+                label.enableAutoSizing = true; label.fontSizeMin = 22; label.fontSizeMax = 27;
             }
             emptyLabel = Text("Empty", book.transform, "Nenhuma entrada descoberta.", bodyFont, 19,
                 new Vector2(.22f, .47f), new Vector2(.44f, .56f), TextAlignmentOptions.Center);
@@ -393,10 +393,10 @@ namespace MementoMori.World
                 new Vector2(.30f, .18f), new Vector2(.36f, .23f), TextAlignmentOptions.Center);
             nextList = ArrowButton("NextList", book.transform, new Vector2(.38f, .18f), new Vector2(.42f, .23f), rightArrow);
             nextList.onClick.AddListener(() => ChangeListPage(listPage + 1));
-            pageTitle = Text("PageTitle", book.transform, "", titleFont, 23, new Vector2(.55f, .75f), new Vector2(.78f, .86f), TextAlignmentOptions.Center);
+            pageTitle = Text("PageTitle", book.transform, "", titleFont, 28, new Vector2(.54f, .75f), new Vector2(.80f, .86f), TextAlignmentOptions.Center);
             pageTitle.enableAutoSizing = true;
-            pageTitle.fontSizeMin = 19;
-            pageTitle.fontSizeMax = 23;
+            pageTitle.fontSizeMin = 24;
+            pageTitle.fontSizeMax = 28;
             pageIllustration = Image("PageIllustration", book.transform, illustrationSprite, Color.white, new Vector2(.60f, .54f), new Vector2(.74f, .74f));
             pageIllustration.preserveAspect = true;
             pageIllustration.raycastTarget = false;
@@ -405,11 +405,11 @@ namespace MementoMori.World
             pageSymbols.preserveAspect = true;
             pageSymbols.raycastTarget = false;
             pageSymbols.rectTransform.offsetMin = pageSymbols.rectTransform.offsetMax = Vector2.zero;
-            pageBody = Text("PageBody", book.transform, "", bodyFont, 21, new Vector2(.56f, .27f), new Vector2(.77f, .75f), TextAlignmentOptions.TopLeft);
+            pageBody = Text("PageBody", book.transform, "", bodyFont, 29, new Vector2(.54f, .27f), new Vector2(.80f, .75f), TextAlignmentOptions.TopLeft);
             pageBody.enableAutoSizing = false;
             pageBody.textWrappingMode = TextWrappingModes.Normal;
             pageBody.overflowMode = TextOverflowModes.Page;
-            pageBody.lineSpacing = 0;
+            pageBody.lineSpacing = 3;
             pageNumber = Text("PageNumber", book.transform, "1 / 1", bodyFont, 20, new Vector2(.63f, .20f), new Vector2(.72f, .25f), TextAlignmentOptions.Center);
             noteImage = Image("SideNote", root.transform, noteSprite, Color.white, new Vector2(.82f, .20f), new Vector2(.96f, .67f));
             noteImage.preserveAspect = true; noteImage.raycastTarget = false;
@@ -423,7 +423,7 @@ namespace MementoMori.World
             previousPage.onClick.AddListener(() => ShowPage(page - 1));
             nextPage = ArrowButton("Next", book.transform, new Vector2(.72f, .19f), new Vector2(.77f, .25f), rightArrow);
             nextPage.onClick.AddListener(() => ShowPage(page + 1));
-            var close = TextButton("Close", root.transform, "ESC    Fechar", new Vector2(.40f, .025f), new Vector2(.60f, .105f));
+            var close = TextButton("Close", root.transform, "ESC   Fechar", new Vector2(.41f, .015f), new Vector2(.59f, .095f));
             close.onClick.AddListener(Close);
             canvas.gameObject.SetActive(false);
         }
@@ -442,7 +442,7 @@ namespace MementoMori.World
             image.rectTransform.offsetMin = image.rectTransform.offsetMax = Vector2.zero;
             image.preserveAspect = closeFrameSprite != null;
             var button = image.gameObject.AddComponent<Button>();
-            var caption = Text("Label", image.transform, label, bodyFont, 21, Vector2.zero, Vector2.one, TextAlignmentOptions.Center);
+            var caption = Text("Label", image.transform, label, bodyFont, 26, new Vector2(.08f, .08f), new Vector2(.92f, .92f), TextAlignmentOptions.Center);
             caption.color = new Color(.9f, .78f, .91f);
             return button;
         }
