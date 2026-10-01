@@ -61,7 +61,6 @@ namespace MementoMori.Interaction
                     continue;
                 if (IsObstructed(component))
                     continue;
-
                 var distance = ((Vector2)component.transform.position - (Vector2)transform.position).sqrMagnitude;
                 if (candidate.InteractionPriority > bestPriority || candidate.InteractionPriority == bestPriority && distance < bestDistance)
                 {

@@ -114,7 +114,31 @@ namespace MementoMori.UI
         {
             currentObjective = text ?? string.Empty;
             if (objectiveText != null) objectiveText.text = currentObjective;
-            if (objectiveTextTmp != null) objectiveTextTmp.text = currentObjective;
+            if (objectiveTextTmp != null)
+            {
+                objectiveTextTmp.text = currentObjective;
+                objectiveTextTmp.alignment = TextAlignmentOptions.Center;
+                var panel = objectiveTextTmp.transform.parent as RectTransform;
+                if (panel != null && panel.name == "ObjectivePanel")
+                {
+                    panel.anchoredPosition = new Vector2(-38f, -38f);
+                    panel.sizeDelta = new Vector2(650f, 260f);
+                    var title = panel.Find("Title_TMP") as RectTransform;
+                    if (title != null)
+                    {
+                        title.anchorMin = new Vector2(.16f, .47f);
+                        title.anchorMax = new Vector2(.84f, .67f);
+                        title.anchoredPosition = Vector2.zero;
+                        title.sizeDelta = Vector2.zero;
+                        var titleText = title.GetComponent<TMP_Text>();
+                        if (titleText != null) titleText.alignment = TextAlignmentOptions.Center;
+                    }
+                }
+                var rect = objectiveTextTmp.rectTransform;
+                rect.anchorMin = new Vector2(.12f, .25f);
+                rect.anchorMax = new Vector2(.88f, .55f);
+                rect.offsetMin = rect.offsetMax = Vector2.zero;
+            }
         }
 
         public static string ObjectiveFor(string sceneName, GameState state)
