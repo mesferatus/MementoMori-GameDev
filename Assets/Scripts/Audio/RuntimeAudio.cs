@@ -12,6 +12,7 @@ namespace MementoMori.Audio
         private const string AudioResourceFolder = "Audio/";
         static RuntimeAudio active;
         AudioSource source;
+        AudioSource chatterSource;
         TMP_Text caption;
         AudioMixer mixer;
         Coroutine captionRoutine;
@@ -43,6 +44,33 @@ namespace MementoMori.Audio
             Object.Destroy(go, clip.length + .1f);
         }
 
+        public static void PlayChatter(string speaker, int syllable)
+        {
+            if (!Application.isPlaying) return;
+            string folder;
+            int count;
+            float volume;
+            switch (speaker)
+            {
+                case "Melantha": folder = "Dialogue/Melantha/melantha_dialogue_"; count = 4; volume = .16f; break;
+                case "Andrealphus": folder = "Dialogue/Andrealphus/andrealphus_dialogue_"; count = 3; volume = .19f; break;
+                case "Poe": folder = "Dialogue/Poe/poe_dialogue_"; count = 4; volume = .16f; break;
+                default: return;
+            }
+            var clip = Resources.Load<AudioClip>(AudioResourceFolder + folder + (syllable % count + 1).ToString("00"));
+            if (clip == null) return;
+            var runtimeAudio = EnsureActive();
+            runtimeAudio.chatterSource.Stop();
+            runtimeAudio.chatterSource.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
+            runtimeAudio.chatterSource.clip = clip;
+            runtimeAudio.chatterSource.Play();
+        }
+
+        public static void StopChatter()
+        {
+            if (active != null && active.chatterSource != null) active.chatterSource.Stop();
+        }
+
         static RuntimeAudio EnsureActive()
         {
             if (active != null) return active;
@@ -54,7 +82,9 @@ namespace MementoMori.Audio
         void Initialize()
         {
             source = gameObject.AddComponent<AudioSource>();
+            chatterSource = gameObject.AddComponent<AudioSource>();
             mixer = Resources.Load<AudioMixer>("MementoMoriMixer");
+            chatterSource.outputAudioMixerGroup = FindGroup("SFX");
             CreateCaptionOverlay();
         }
 

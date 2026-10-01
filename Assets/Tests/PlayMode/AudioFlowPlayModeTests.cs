@@ -16,8 +16,9 @@ namespace MementoMori.Tests.PlayMode
             var scenes = new[]
             {
                 ("MainMenu", "20_menu_theme"),
-                ("Quarto", "01_room_ambience"),
-                ("Labirinto", "02_labyrinth_drone"),
+                ("Quarto", "music_quarto_new_melancholic_postpunk"),
+                ("Labirinto", "music_labirinto_new_angular_postpunk"),
+                ("DominioLua", "03_moon_domain_loop"),
                 ("FinalBeta", "19_beta_ending_stinger")
             };
 
@@ -45,7 +46,7 @@ namespace MementoMori.Tests.PlayMode
 
             GameManager.Instance.StartNewGame();
             yield return WaitForScene("Quarto");
-            yield return WaitForTrack("01_room_ambience");
+            yield return WaitForTrack("music_quarto_new_melancholic_postpunk");
 
             Assert.That(CountRuntimeAudioObjects(), Is.EqualTo(1));
             Assert.That(GameState.Instance.HasFlag(StoryFlag.GardenComplete), Is.False);
@@ -55,7 +56,7 @@ namespace MementoMori.Tests.PlayMode
         public IEnumerator InteractionSfxResourceIsAvailableAndOneShotIsCreatedOnce()
         {
             yield return SceneManager.LoadSceneAsync("Quarto");
-            yield return WaitForTrack("01_room_ambience");
+            yield return WaitForTrack("music_quarto_new_melancholic_postpunk");
 
             var clip = Resources.Load<AudioClip>("Audio/06_interaction_click");
             Assert.That(clip, Is.Not.Null);
