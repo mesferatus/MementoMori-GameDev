@@ -59,6 +59,8 @@ namespace MementoMori.Interaction
                 }
                 if (!candidate.CanInteract(context))
                     continue;
+                if (IsObstructed(component))
+                    continue;
 
                 var distance = ((Vector2)component.transform.position - (Vector2)transform.position).sqrMagnitude;
                 if (candidate.InteractionPriority > bestPriority || candidate.InteractionPriority == bestPriority && distance < bestDistance)
@@ -68,6 +70,22 @@ namespace MementoMori.Interaction
                     bestDistance = distance;
                 }
             }
+        }
+
+        private bool IsObstructed(Component target)
+        {
+            var origin = (Vector2)transform.position;
+            var destination = (Vector2)target.transform.position;
+            var player = GetComponentInParent<MementoMori.Player.PlayerController>();
+            foreach (var hit in Physics2D.LinecastAll(origin, destination))
+            {
+                var obstacle = hit.collider;
+                if (obstacle == null || obstacle.isTrigger) continue;
+                if (player != null && obstacle.transform.IsChildOf(player.transform)) continue;
+                if (obstacle.transform.IsChildOf(target.transform) || target.transform.IsChildOf(obstacle.transform)) continue;
+                return true;
+            }
+            return false;
         }
 
         private static IInteractable FindInteractable(Collider2D collider)

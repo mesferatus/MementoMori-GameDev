@@ -14,7 +14,7 @@ namespace MementoMori.World
             orderIndex = index;
         }
 
-        public string InteractionVerb => "Acender: " + RoomCandlePuzzle.NameFor(orderIndex);
+        public string InteractionVerb => "Acender vela";
         public int InteractionPriority => 25;
         public bool CanInteract(InteractionContext context) => puzzle != null && !puzzle.Completed;
         public void Interact(InteractionContext context) => puzzle?.Activate(orderIndex);

@@ -29605,7 +29605,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.53, y: 0.46}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1 &642342913
 GameObject:
@@ -30568,7 +30568,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.55, y: 1.9}
+  m_Size: {x: 1.75, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &670453432
 GameObject:
@@ -34971,7 +34971,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.7, y: 0.43}
+  m_Size: {x: 1, y: 0.65}
   m_EdgeRadius: 0
 --- !u!1 &695860961
 GameObject:
@@ -48003,7 +48003,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 1.5}
+  m_Size: {x: 3.1, y: 1.6}
   m_EdgeRadius: 0
 --- !u!1 &906942583
 GameObject:
@@ -65178,7 +65178,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.74404764, y: 0.74404764}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!1 &1316300128
 GameObject:
@@ -66440,7 +66440,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.53, y: 0.46}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1 &1334095810
 GameObject:
@@ -72079,7 +72079,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.53, y: 0.46}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1 &1387453237
 GameObject:
@@ -82201,7 +82201,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.85, y: 0.78}
+  m_Size: {x: 1.25, y: 1.35}
   m_EdgeRadius: 0
 --- !u!1 &1631503961
 GameObject:
@@ -89240,7 +89240,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.7307693}
+  m_Size: {x: 1.15, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &1754899155
 MonoBehaviour:
@@ -95043,7 +95043,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 3.75
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -95074,8 +95074,8 @@ MonoBehaviour:
   target: {fileID: 1776154001}
   damping: 8
   useBounds: 1
-  minBounds: {x: -0.6, y: -3.95}
-  maxBounds: {x: 1.6, y: 2.95}
+  minBounds: {x: 0, y: -3.25}
+  maxBounds: {x: 1, y: 2.25}
 --- !u!81 &1892067499
 AudioListener:
   m_ObjectHideFlags: 0
@@ -95098,14 +95098,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.PixelPerfectCamera
   m_ComponentVersion: 1
   m_AssetsPPU: 36
-  m_RefResolutionX: 384
-  m_RefResolutionY: 216
+  m_RefResolutionX: 432
+  m_RefResolutionY: 270
   m_CropFrame: 0
   m_GridSnapping: 1
   m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
-  m_CropFrameX: 0
+  m_CropFrameX: 1
   m_CropFrameY: 0
   m_StretchFill: 0
 --- !u!213 &1894394037
@@ -103733,7 +103733,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.53, y: 0.46}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1 &2110090646
 GameObject:

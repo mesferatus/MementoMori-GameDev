@@ -57,13 +57,19 @@ namespace MementoMori.World
                     candle.sprite = sprite;
                     var scale = 1.25f / sprite.bounds.size.y;
                     candle.transform.localScale = new Vector3(scale, scale, 1);
+                    var solid = candle.GetComponent<BoxCollider2D>();
+                    if (solid != null)
+                    {
+                        solid.size = new Vector2(.72f / scale, .65f / scale);
+                        solid.offset = new Vector2(0f, -.2f / scale);
+                    }
                 }
                 initialized = true; lastProgress = progress;
             }
             if (ritualGlow != null) ritualGlow.SetActive(active);
             if (flames == null) return;
-            foreach (var flame in flames)
-                if (flame != null) flame.SetActive(progress == 4);
+            for (var index = 0; index < flames.Length; index++)
+                if (flames[index] != null) flames[index].SetActive(progress > index);
         }
     }
 }
