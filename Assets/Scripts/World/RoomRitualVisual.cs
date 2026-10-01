@@ -22,6 +22,8 @@ namespace MementoMori.World
             inactiveRug = inactive; activeRug = active;
         }
 
+        public void SetReturnedRoom(bool returned) => returnedRoom = returned;
+
         public void Configure(SpriteRenderer ritualRug, SpriteRenderer[] candleRenderers, Sprite off, Sprite on, bool returned)
         {
             rug = ritualRug; candles = candleRenderers; unlitCandle = off; litCandle = on; returnedRoom = returned;
@@ -31,14 +33,15 @@ namespace MementoMori.World
         {
             var state = GameState.Instance;
             var active = !returnedRoom && state != null && state.RitualCompleted;
+            var ritualMark = returnedRoom || active;
             var progress = !returnedRoom && state != null ? state.GetPuzzleProgress(RoomCandlePuzzle.ProgressId) : 0;
             if (rug != null)
             {
-                var next = active ? activeRug : inactiveRug;
+                var next = ritualMark ? activeRug : inactiveRug;
                 if (next != null) rug.sprite = next;
                 rug.color = next != null || active ? Color.white : new Color(.53f, .49f, .57f, 1f);
             }
-            if (candles != null && (!initialized || progress != lastProgress))
+            if (candles != null)
             {
                 foreach (var candle in candles)
                 {
@@ -65,6 +68,12 @@ namespace MementoMori.World
                     }
                 }
                 initialized = true; lastProgress = progress;
+            }
+            foreach (var interactable in FindObjectsByType<RoomCandleInteractable>(FindObjectsSortMode.None))
+            {
+                var renderer = interactable.GetComponentInChildren<SpriteRenderer>();
+                if (renderer == null || litCandle == null || unlitCandle == null) continue;
+                renderer.sprite = progress > interactable.OrderIndex ? litCandle : unlitCandle;
             }
             if (ritualGlow != null) ritualGlow.SetActive(active);
             if (flames == null) return;
