@@ -393,8 +393,8 @@ namespace MementoMori.World
                 row.rectTransform.offsetMin = row.rectTransform.offsetMax = Vector2.zero;
                 entryButtons[i] = row.gameObject.AddComponent<Button>();
                 entryButtons[i].onClick.AddListener(() => SelectEntry(selected));
-                var label = Text("Label", row.transform, "", bodyFont, 27, new Vector2(.12f, .08f), new Vector2(.92f, .92f), TextAlignmentOptions.MidlineLeft);
-                label.enableAutoSizing = true; label.fontSizeMin = 22; label.fontSizeMax = 27;
+                var label = Text("Label", row.transform, "", bodyFont, 31, new Vector2(.10f, .06f), new Vector2(.94f, .94f), TextAlignmentOptions.MidlineLeft);
+                label.enableAutoSizing = true; label.fontSizeMin = 26; label.fontSizeMax = 31;
             }
             emptyLabel = Text("Empty", book.transform, "Nenhuma entrada descoberta.", bodyFont, 19,
                 new Vector2(.22f, .47f), new Vector2(.44f, .56f), TextAlignmentOptions.Center);
@@ -416,11 +416,11 @@ namespace MementoMori.World
             pageSymbols.preserveAspect = true;
             pageSymbols.raycastTarget = false;
             pageSymbols.rectTransform.offsetMin = pageSymbols.rectTransform.offsetMax = Vector2.zero;
-            pageBody = Text("PageBody", book.transform, "", bodyFont, 29, new Vector2(.54f, .27f), new Vector2(.80f, .75f), TextAlignmentOptions.TopLeft);
+            pageBody = Text("PageBody", book.transform, "", bodyFont, 34, new Vector2(.53f, .27f), new Vector2(.81f, .75f), TextAlignmentOptions.TopLeft);
             pageBody.enableAutoSizing = false;
             pageBody.textWrappingMode = TextWrappingModes.Normal;
             pageBody.overflowMode = TextOverflowModes.Page;
-            pageBody.lineSpacing = 3;
+            pageBody.lineSpacing = 5;
             pageNumber = Text("PageNumber", book.transform, "1 / 1", bodyFont, 20, new Vector2(.63f, .20f), new Vector2(.72f, .25f), TextAlignmentOptions.Center);
             noteImage = Image("SideNote", root.transform, noteSprite, Color.white, new Vector2(.82f, .20f), new Vector2(.96f, .67f));
             noteImage.preserveAspect = true; noteImage.raycastTarget = false;
