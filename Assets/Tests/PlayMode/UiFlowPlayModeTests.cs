@@ -1,11 +1,14 @@
 using System.Collections;
 using MementoMori.Core;
 using MementoMori.Dialogue;
+using MementoMori.Interaction;
 using MementoMori.UI;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+using System.Reflection;
+using System.Linq;
 
 namespace MementoMori.Tests.PlayMode
 {
@@ -91,6 +94,38 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(CountSceneObjects<DialogueManager>(), Is.EqualTo(0));
             Assert.That(CountSceneObjects<InteractionPromptUI>(), Is.EqualTo(0));
             Assert.That(Time.timeScale, Is.EqualTo(1f));
+        }
+
+        [UnityTest]
+        public IEnumerator QuartoInteractionSeesItsOwnPropButNotThroughAnObstacle()
+        {
+            yield return SceneManager.LoadSceneAsync("Quarto");
+            yield return null;
+
+            var detector = Object.FindFirstObjectByType<InteractionDetector>();
+            var grimoire = Object.FindObjectsByType<MementoMori.World.GrimoireScreen>(
+                FindObjectsInactive.Exclude, FindObjectsSortMode.None)
+                .FirstOrDefault(candidate => candidate.gameObject.name == "Grimoire");
+            var check = typeof(InteractionDetector).GetMethod("IsObstructed", BindingFlags.Instance | BindingFlags.NonPublic);
+            Assert.That(detector, Is.Not.Null);
+            Assert.That(grimoire, Is.Not.Null);
+            Assert.That(check, Is.Not.Null);
+
+            var oldPosition = detector.transform.position;
+            detector.transform.position = grimoire.transform.position + Vector3.down * .9f;
+            Physics2D.SyncTransforms();
+            Assert.That((bool)check.Invoke(detector, new object[] { grimoire }), Is.False,
+                "The physical Grimoire collider must not hide its own interaction.");
+
+            var wall = new GameObject("TemporaryInteractionWall");
+            wall.transform.position = grimoire.transform.position + Vector3.down * .45f;
+            wall.AddComponent<BoxCollider2D>().size = new Vector2(.5f, .12f);
+            Physics2D.SyncTransforms();
+            Assert.That((bool)check.Invoke(detector, new object[] { grimoire }), Is.True,
+                "A separate solid obstacle must still block interaction.");
+
+            detector.transform.position = oldPosition;
+            Object.Destroy(wall);
         }
 
         private static GameObject FindSceneObject(string objectName)

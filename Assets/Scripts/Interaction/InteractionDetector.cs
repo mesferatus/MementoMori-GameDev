@@ -82,6 +82,9 @@ namespace MementoMori.Interaction
                 if (obstacle == null || obstacle.isTrigger) continue;
                 if (player != null && obstacle.transform.IsChildOf(player.transform)) continue;
                 if (obstacle.transform.IsChildOf(target.transform) || target.transform.IsChildOf(obstacle.transform)) continue;
+                // Some room props keep their solid collider on the visual sibling of the interaction trigger.
+                // A collider enclosing the target point is the target's surface, not a barrier in front of it.
+                if (obstacle.OverlapPoint(destination)) continue;
                 return true;
             }
             return false;
