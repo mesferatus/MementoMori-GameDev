@@ -42,4 +42,13 @@
 /ArtStaging/ObsoleteGrimoireUI/
 /Evidencias/Screenshots/UnityCaptures/
 
+# Material local preservado fora do GitHub
+/Evidencias/
+/ArtStaging/
+/devlog/
+/docs/
+/Tools/
+/AGENTS.md
+/skills-lock.json
+
 # Assets da Luiza: versionados para compartilhamento no repositório.
