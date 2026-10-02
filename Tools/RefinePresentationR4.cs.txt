@@ -1,0 +1,89 @@
+// Presentation-only recipe. Execute through the connected Unity MCP in Edit Mode.
+if (UnityEditor.EditorApplication.isPlaying || UnityEditor.EditorApplication.isCompiling)
+    throw new System.InvalidOperationException("Idle Editor required");
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+var transforms = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<UnityEngine.Transform>(true)).ToArray();
+var buttonSprite = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Sprite>("Assets/Art/UI/MainMenu/02_button_frame_normal.png");
+var titleFont = UnityEditor.AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>("Assets/Art/FinalProduction/Fonts/UnifrakturMaguntia SDF.asset");
+foreach (var t in transforms)
+{
+    var rect = t as UnityEngine.RectTransform;
+    if (!rect) continue;
+    UnityEditor.Undo.RecordObject(rect, "R4 UI presentation");
+    if (t.name == "ObjectivePanel")
+    {
+        rect.sizeDelta = new UnityEngine.Vector2(420, 220);
+        rect.anchoredPosition = new UnityEngine.Vector2(-36, -32);
+        var i = t.GetComponent<UnityEngine.UI.Image>();
+        if (i) { i.preserveAspect = false; i.type = UnityEngine.UI.Image.Type.Simple; }
+    }
+    if (t.name == "Title_TMP" && t.parent.name == "ObjectivePanel")
+    {
+        rect.anchorMin = rect.anchorMax = new UnityEngine.Vector2(.5f, 1);
+        rect.pivot = new UnityEngine.Vector2(.5f, 1);
+        rect.anchoredPosition = new UnityEngine.Vector2(0, -36);
+        rect.sizeDelta = new UnityEngine.Vector2(300, 30);
+    }
+    if (t.name == "ObjectiveText_TMP")
+    {
+        rect.anchorMin = rect.anchorMax = new UnityEngine.Vector2(.5f, .5f);
+        rect.pivot = new UnityEngine.Vector2(.5f, .5f);
+        rect.anchoredPosition = new UnityEngine.Vector2(0, -16);
+        rect.sizeDelta = new UnityEngine.Vector2(292, 90);
+        var text = t.GetComponent<TMPro.TMP_Text>();
+        text.enableAutoSizing = true; text.fontSizeMin = 22; text.fontSizeMax = 25;
+        text.textWrappingMode = TMPro.TextWrappingModes.Normal;
+        text.alignment = TMPro.TextAlignmentOptions.Center;
+    }
+    if (t.name == "CharacterName_TMP" && titleFont)
+    {
+        var text = t.GetComponent<TMPro.TMP_Text>(); text.font = titleFont;
+        text.fontSharedMaterial = titleFont.material; text.fontSize = 38;
+        rect.anchoredPosition = new UnityEngine.Vector2(245, -38);
+    }
+    if (t.name == "DialogueText_TMP")
+    {
+        rect.anchoredPosition = new UnityEngine.Vector2(245, -104);
+        rect.sizeDelta = new UnityEngine.Vector2(1150, 120);
+        var text = t.GetComponent<TMPro.TMP_Text>(); text.fontSize = 28;
+    }
+    if (t.name == "PortraitFrame")
+    {
+        rect.anchoredPosition = new UnityEngine.Vector2(90, 0);
+        rect.sizeDelta = new UnityEngine.Vector2(225, 245);
+    }
+    if (t.name == "PortraitImage")
+    {
+        rect.anchorMin = rect.anchorMax = new UnityEngine.Vector2(.5f, .5f);
+        rect.pivot = new UnityEngine.Vector2(.5f, .5f);
+        rect.anchoredPosition = UnityEngine.Vector2.zero;
+        rect.sizeDelta = new UnityEngine.Vector2(165, 190);
+        var i = t.GetComponent<UnityEngine.UI.Image>(); if (i) i.preserveAspect = true;
+    }
+    if (t.name == "Dimmer")
+        t.GetComponent<UnityEngine.UI.Image>().color = new UnityEngine.Color(.024f, .019f, .043f, 1f);
+    if (t.name == "BackgroundOrnament" && t.parent.name == "PauseContainer")
+    {
+        rect.sizeDelta = new UnityEngine.Vector2(830, 830);
+        t.GetComponent<UnityEngine.UI.Image>().color = new UnityEngine.Color(.40f, .31f, .49f, .18f);
+    }
+    if (t.name == "Title" && t.parent.name == "PauseContainer")
+    {
+        var text = t.GetComponent<TMPro.TMP_Text>(); text.font = titleFont;
+        text.fontSharedMaterial = titleFont.material; text.fontSize = 68;
+    }
+    if (t.GetComponent<UnityEngine.UI.Button>() && t.GetComponentInParent<MementoMori.UI.PauseMenuController>(true))
+    {
+        var b = t.GetComponent<UnityEngine.UI.Button>(); b.image.sprite = buttonSprite;
+        b.transition = UnityEngine.UI.Selectable.Transition.ColorTint;
+        b.image.preserveAspect = false; b.image.type = UnityEngine.UI.Image.Type.Simple;
+        rect.sizeDelta = new UnityEngine.Vector2(620, 100);
+        var le = t.GetComponent<UnityEngine.UI.LayoutElement>(); if (le) { le.minHeight = 100; le.preferredHeight = 100; le.preferredWidth = 620; }
+        var text = t.GetComponentInChildren<TMPro.TMP_Text>(); if (text) { text.enableAutoSizing = true; text.fontSizeMin = 23; text.fontSizeMax = 30; }
+    }
+}
+foreach (var component in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<UnityEngine.Component>(true)))
+    if (component) { UnityEditor.EditorUtility.SetDirty(component); if (UnityEditor.PrefabUtility.IsPartOfPrefabInstance(component)) UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(component); }
+UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+return scene.name + ": objective, portrait, dialogue spacing and pause refined.";

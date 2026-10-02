@@ -1,0 +1,78 @@
+// Run through Unity MCP unity_execute_code only. Replace __SOURCE__ before execution.
+// Technical slicing and nearest-neighbor sizing of imagegen sources; originals remain intact.
+if (UnityEditor.EditorApplication.isPlaying || UnityEditor.EditorApplication.isCompiling)
+    throw new System.InvalidOperationException("Editor must be idle.");
+var selectedSource = "__SOURCE__";
+var lines = System.IO.File.ReadAllLines("ArtStaging/VisualRefinementR3/slices.tsv");
+var entries = new System.Collections.Generic.List<(string[] fields, UnityEngine.RectInt bounds, int width, int height, float scale, string family)>();
+var source = new UnityEngine.Texture2D(2,2,UnityEngine.TextureFormat.RGBA32,false);
+UnityEngine.ImageConversion.LoadImage(source,System.IO.File.ReadAllBytes("ArtStaging/VisualRefinementR3/"+selectedSource));
+var pixels=source.GetPixels32();
+var scales=new System.Collections.Generic.Dictionary<string,float>();
+foreach(var line in lines) {
+    var f=line.Split('\t'); if(f[0]!=selectedSource)continue;
+    int w=int.Parse(f[3]),h=int.Parse(f[4]),a=int.Parse(f[5]),b=int.Parse(f[6]),c=int.Parse(f[7]),d=int.Parse(f[8]);
+    int x,y,rw,rh;
+    if(f[9]=="grid"){x=a*source.width/c;int x2=(a+1)*source.width/c;int top=b*source.height/d;int bottom=(b+1)*source.height/d;rw=x2-x;rh=bottom-top;y=source.height-bottom;}
+    else{x=a;y=source.height-b-d;rw=c;rh=d;}
+    int minX=x+rw,minY=y+rh,maxX=-1,maxY=-1;
+    for(int yy=y;yy<y+rh;yy++)for(int xx=x;xx<x+rw;xx++)
+        if(pixels[yy*source.width+xx].a>=128){minX=System.Math.Min(minX,xx);maxX=System.Math.Max(maxX,xx);minY=System.Math.Min(minY,yy);maxY=System.Math.Max(maxY,yy);}
+    if(maxX<minX)throw new System.Exception("Empty slice "+f[2]);
+    var bounds=new UnityEngine.RectInt(minX,minY,maxX-minX+1,maxY-minY+1);
+    var name=f[2];string family=name;
+    foreach(var prefix in new[]{"window_","portrait","bowl_","chest_","candle_","rug_","ritual_bowl_","false_door_","well_","chain_","crescent_","full_","waning_","black_mirror_","cycle_","fragment_pedestal_","walk_"})
+        if(name.StartsWith(prefix)){family=prefix;break;}
+    if(name.StartsWith("mirror_")&&name!="mirror_pedestal")family="mirror_";
+    if(selectedSource.StartsWith("Melantha"))family="melantha"; var usableHeight=selectedSource.StartsWith("Melantha")?56:h-4;
+    var scale=System.Math.Min((w-4f)/bounds.width,usableHeight/(float)bounds.height);
+    if(!scales.ContainsKey(family)||scale<scales[family])scales[family]=scale;
+    entries.Add((f,bounds,w,h,scale,family));
+}
+var output=new System.Text.StringBuilder();
+foreach(var entry in entries){
+    var f=entry.fields;var b=entry.bounds;var scale=scales[entry.family];
+    int dw=System.Math.Max(1,UnityEngine.Mathf.RoundToInt(b.width*scale)),dh=System.Math.Max(1,UnityEngine.Mathf.RoundToInt(b.height*scale));
+    var outPixels=new UnityEngine.Color32[entry.width*entry.height];
+    int ox=(entry.width-dw)/2,oy=2;
+    for(int yy=0;yy<dh;yy++)for(int xx=0;xx<dw;xx++){
+        int sx=b.x+System.Math.Min(b.width-1,(int)((xx+.5f)/scale));
+        int sy=b.y+System.Math.Min(b.height-1,(int)((yy+.5f)/scale));
+        outPixels[(oy+yy)*entry.width+ox+xx]=pixels[sy*source.width+sx];
+    }
+    var texture=new UnityEngine.Texture2D(entry.width,entry.height,UnityEngine.TextureFormat.RGBA32,false);
+    texture.SetPixels32(outPixels);texture.Apply();
+    var folder="Assets/Art/FinalProduction/R3/"+f[1];System.IO.Directory.CreateDirectory(folder);
+    var path=folder+"/"+f[2]+".png";
+    System.IO.File.WriteAllBytes(path,UnityEngine.ImageConversion.EncodeToPNG(texture));
+    UnityEngine.Object.DestroyImmediate(texture);
+    UnityEditor.AssetDatabase.ImportAsset(path,UnityEditor.ImportAssetOptions.ForceSynchronousImport);
+    var importer=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(path);
+    importer.textureType=UnityEditor.TextureImporterType.Sprite;
+    importer.spriteImportMode=UnityEditor.SpriteImportMode.Single;
+    importer.spritePixelsPerUnit=32;
+    importer.filterMode=UnityEngine.FilterMode.Point;
+    importer.mipmapEnabled=false;
+    importer.textureCompression=UnityEditor.TextureImporterCompression.Uncompressed;
+    importer.alphaIsTransparency=true;
+    importer.npotScale=UnityEditor.TextureImporterNPOTScale.None;
+    importer.SaveAndReimport();
+    var factories=new UnityEditor.U2D.Sprites.SpriteDataProviderFactories();factories.Init();
+    var provider=factories.GetSpriteEditorDataProviderFromObject(importer);provider.InitSpriteEditorDataProvider();
+    var capability=provider.GetDataProvider<UnityEditor.U2D.Sprites.ISpriteFrameEditCapability>();
+    if(capability==null||!capability.GetEditCapability().HasCapability(UnityEditor.U2D.Sprites.EEditCapability.EditPivot))
+        throw new System.Exception("Pivot editing unsupported: "+path);
+    var rects=provider.GetSpriteRects();
+    if(rects.Length!=1)throw new System.Exception("Expected one sprite: "+path);
+    rects[0].alignment=UnityEngine.SpriteAlignment.Custom;
+    rects[0].pivot=new UnityEngine.Vector2(.5f,2f/entry.height);
+    provider.SetSpriteRects(rects);provider.Apply();importer.SaveAndReimport();
+    var sprite=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Sprite>(path);
+    if(!sprite||sprite.pixelsPerUnit!=32)throw new System.Exception("Import verification failed "+path);
+    output.AppendLine(path+"\t"+entry.width+"x"+entry.height+"\tPPU32\tpivot="+sprite.pivot);
+}
+UnityEngine.Object.DestroyImmediate(source);
+System.IO.Directory.CreateDirectory("TestResults/VisualRebuild");
+System.IO.File.AppendAllText("TestResults/VisualRebuild/r3-imports.tsv",output.ToString());
+return output.ToString();
+
