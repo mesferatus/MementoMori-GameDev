@@ -29,6 +29,17 @@
 /ExternalSources/
 /RestrictedAssetsArchive/
 /Assets/_Recovery/
+/Assets/_Recovery.meta
 /Assets/Resources/GeneratedArt/
+
+# Ferramentas instaladas localmente e preferências pessoais do Editor
+/.agents/skills/
+/ProjectSettings/Packages/com.unity.ai.assistant/Settings.json
+
+# Fontes de trabalho preservadas localmente, sem entrar no jogo distribuído
+/ArtStaging/**/SceneBackups/
+/ArtStaging/VisualR5/Scenes/
+/ArtStaging/ObsoleteGrimoireUI/
+/Evidencias/Screenshots/UnityCaptures/
 
 # Assets da Luiza: versionados para compartilhamento no repositório.
