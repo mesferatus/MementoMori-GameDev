@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Collections;
 using MementoMori.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 namespace MementoMori.World
 {
@@ -42,7 +43,10 @@ namespace MementoMori.World
 
         private void Update()
         {
-            if (!choicePending || DialogueManager.Instance != null && DialogueManager.Instance.IsOpen) return;
+            if (!choicePending) return;
+            var dialogueOpen = DialogueManager.Instance != null && DialogueManager.Instance.IsOpen;
+            if (choicePanel != null) choicePanel.SetActive(!dialogueOpen);
+            if (dialogueOpen) return;
             if (Input.GetKeyDown(KeyCode.Y)) StartSleep();
             if (Input.GetKeyDown(KeyCode.N)) CancelSleepChoice();
         }
@@ -52,7 +56,7 @@ namespace MementoMori.World
             choicePending = true;
             DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_Q_SLEEP_CONFIRM"));
             if (choicePanel == null) CreateChoicePanel();
-            if (choicePanel != null) choicePanel.SetActive(true);
+            if (choicePanel != null) choicePanel.SetActive(DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
         }
 
         private void StartSleep()
@@ -79,37 +83,70 @@ namespace MementoMori.World
 
         private void CreateChoicePanel()
         {
-            var canvas = FindAnyObjectByType<Canvas>();
-            if (canvas == null) return;
-            choicePanel = new GameObject("SleepChoice", typeof(RectTransform), typeof(Image));
-            choicePanel.transform.SetParent(canvas.transform, false);
-            var image = choicePanel.GetComponent<Image>(); image.color = new Color(.06f, .04f, .1f, .96f);
-            var rect = choicePanel.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(.28f, .38f); rect.anchorMax = new Vector2(.72f, .55f);
-            rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
-            var label = new GameObject("Text", typeof(RectTransform), typeof(Text)).GetComponent<Text>();
-            label.transform.SetParent(choicePanel.transform, false);
-            label.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"); label.fontSize = 18; label.color = Color.white;
-            label.alignment = TextAnchor.MiddleCenter; label.text = "Escolha antes de dormir";
-            var labelRect = label.rectTransform;
-            labelRect.anchorMin = new Vector2(.05f, .67f); labelRect.anchorMax = new Vector2(.95f, .96f); labelRect.offsetMin = Vector2.zero; labelRect.offsetMax = Vector2.zero;
-            CreateChoiceButton("Deitar [Y]", new Vector2(.08f, .36f), new Vector2(.92f, .61f), StartSleep);
-            CreateChoiceButton("Verificar o quarto mais uma vez [N]", new Vector2(.08f, .08f), new Vector2(.92f, .32f), CancelSleepChoice);
+            var sprites = Resources.LoadAll<Sprite>("UI/Grimoire/GRIMOIRE_UI_SHEET_V2");
+            Sprite FindSprite(string name) => System.Array.Find(sprites, sprite => sprite.name == name);
+            choicePanel = new GameObject("SleepChoice", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            var canvas = choicePanel.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 120;
+            var scaler = choicePanel.GetComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920, 1080);
+            scaler.matchWidthOrHeight = .5f;
+
+            var panel = new GameObject("OrnatePanel", typeof(RectTransform), typeof(Image));
+            panel.transform.SetParent(choicePanel.transform, false);
+            var panelRect = panel.GetComponent<RectTransform>();
+            panelRect.anchorMin = panelRect.anchorMax = new Vector2(.5f, .5f);
+            panelRect.sizeDelta = new Vector2(790f, 420f);
+            panelRect.anchoredPosition = new Vector2(0f, 70f);
+            var panelImage = panel.GetComponent<Image>();
+            panelImage.sprite = FindSprite("TAB_NORMAL");
+            panelImage.raycastTarget = false;
+
+            var font = FindAnyObjectByType<TextMeshProUGUI>()?.font ?? TMP_Settings.defaultFontAsset;
+            ChoiceText("Title", panel.transform, "Escolha antes de dormir", font, 32, new Color(.95f, .84f, .93f),
+                new Vector2(.10f, .72f), new Vector2(.90f, .87f));
+            CreateChoiceButton(panel.transform, "Deitar [Y]", font, FindSprite("ENTRY_NORMAL"), FindSprite("ENTRY_SELECTED"),
+                new Vector2(.22f, .43f), new Vector2(.78f, .68f), StartSleep);
+            CreateChoiceButton(panel.transform, "Verificar o quarto mais uma vez [N]", font, FindSprite("ENTRY_NORMAL"), FindSprite("ENTRY_SELECTED"),
+                new Vector2(.22f, .17f), new Vector2(.78f, .42f), CancelSleepChoice);
         }
 
-        private void CreateChoiceButton(string caption, Vector2 min, Vector2 max, UnityEngine.Events.UnityAction action)
+        private static void CreateChoiceButton(Transform parent, string caption, TMP_FontAsset font,
+            Sprite normal, Sprite selected, Vector2 min, Vector2 max, UnityEngine.Events.UnityAction action)
         {
             var buttonObject = new GameObject(caption, typeof(RectTransform), typeof(Image), typeof(Button));
-            buttonObject.transform.SetParent(choicePanel.transform, false);
+            buttonObject.transform.SetParent(parent, false);
             var image = buttonObject.GetComponent<Image>();
-            image.color = new Color(.26f, .20f, .38f, 1f);
+            image.sprite = normal;
             var rect = buttonObject.GetComponent<RectTransform>();
             rect.anchorMin = min; rect.anchorMax = max; rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
-            var text = new GameObject("Text", typeof(RectTransform), typeof(Text)).GetComponent<Text>();
-            text.transform.SetParent(buttonObject.transform, false);
-            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"); text.fontSize = 14; text.color = Color.white; text.alignment = TextAnchor.MiddleCenter; text.text = caption;
-            text.rectTransform.anchorMin = Vector2.zero; text.rectTransform.anchorMax = Vector2.one; text.rectTransform.offsetMin = Vector2.zero; text.rectTransform.offsetMax = Vector2.zero;
-            buttonObject.GetComponent<Button>().onClick.AddListener(action);
+            ChoiceText("Label", buttonObject.transform, caption, font, 24, new Color(.23f, .13f, .24f),
+                new Vector2(.12f, .10f), new Vector2(.88f, .90f));
+            var button = buttonObject.GetComponent<Button>();
+            button.transition = Selectable.Transition.SpriteSwap;
+            button.spriteState = new SpriteState { highlightedSprite = selected, pressedSprite = selected, selectedSprite = selected };
+            button.onClick.AddListener(action);
+        }
+
+        private static void ChoiceText(string name, Transform parent, string caption, TMP_FontAsset font,
+            float size, Color color, Vector2 min, Vector2 max)
+        {
+            var label = new GameObject(name, typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
+            label.transform.SetParent(parent, false);
+            label.font = font;
+            label.text = caption;
+            label.fontSize = size;
+            label.color = color;
+            label.alignment = TextAlignmentOptions.Center;
+            label.enableAutoSizing = true;
+            label.fontSizeMin = size - 4f;
+            label.fontSizeMax = size;
+            label.raycastTarget = false;
+            label.rectTransform.anchorMin = min;
+            label.rectTransform.anchorMax = max;
+            label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
         }
 
         private IEnumerator SleepRoutine()
