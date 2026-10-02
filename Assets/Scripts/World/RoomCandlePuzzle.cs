@@ -9,7 +9,7 @@ namespace MementoMori.World
     public sealed class RoomCandlePuzzle : MonoBehaviour
     {
         public const string ProgressId = "Q_CANDLE_ORDER";
-        private static readonly string[] Names = { "lua", "grimório", "retrato", "cama" };
+        private static readonly string[] Names = { "Lua", "Livro", "Memória", "Repouso" };
         public int Progress => GameState.Instance?.GetPuzzleProgress(ProgressId) ?? 0;
         public bool Completed => GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.RoomCandlesDone);
 
