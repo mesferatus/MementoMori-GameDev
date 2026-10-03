@@ -20,7 +20,7 @@ namespace MementoMori.EditorTools
                 var scene = EditorSceneManager.OpenScene($"Assets/Scenes/{sceneName}.unity", OpenSceneMode.Single);
                 var root = GameObject.Find("SceneRoot") ?? new GameObject("SceneRoot");
                 var configuration = root.GetComponent<SceneConfiguration>() ?? root.AddComponent<SceneConfiguration>();
-                configuration.Configure(sceneName, NextScene(sceneName), sceneName == "Quarto", Areas(sceneName), Mirrors(sceneName), new[] { "Delayed", "Ahead", "Room" }, new[] { "Minguante", "Grimório", "SUSTENTAR" }, Dialogues(sceneName));
+                configuration.Configure(sceneName, NextScene(sceneName), sceneName == "Quarto", Areas(sceneName), Mirrors(sceneName), new[] { "Delayed", "Ahead", "Absent" }, new[] { "Minguante", "Grimório", "SUSTENTAR" }, Dialogues(sceneName));
                 EditorSceneManager.MarkSceneDirty(scene);
                 EditorSceneManager.SaveScene(scene);
             }

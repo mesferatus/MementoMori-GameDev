@@ -37,8 +37,8 @@ namespace MementoMori.Tests.EditMode
         {
             var scene = File.ReadAllText("Assets/Scenes/DominioLua.unity");
             Assert.That(scene, Does.Contain("MementoMori.Narrative.MoonDomainNarrativeController"));
-            Assert.That(scene, Does.Contain("correctSymbolIds:\n  - Delayed\n  - Ahead\n  - Room"));
-            Assert.That(scene, Does.Contain("mirrorCorrectSymbols:\n  - Delayed\n  - Ahead\n  - Room"));
+            Assert.That(scene, Does.Contain("correctSymbolIds:\n  - Delayed\n  - Ahead\n  - Absent"));
+            Assert.That(scene, Does.Contain("mirrorCorrectSymbols:\n  - Delayed\n  - Ahead\n  - Absent"));
         }
 
         [Test]

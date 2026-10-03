@@ -22,14 +22,14 @@ namespace MementoMori.Tests.EditMode
                 symbol.Configure(id, puzzle, symbolObject.AddComponent<SpriteRenderer>());
                 symbols.Add(symbol);
             }
-            puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Room" }, null, null);
+            puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Absent" }, null, null);
             InvokeStart(puzzle);
 
             puzzle.Activate(symbols[0]);
             Assert.That(puzzle.ErrorCount, Is.EqualTo(1));
             puzzle.Activate(symbols[1]);
             puzzle.Activate(symbols[2]);
-            puzzle.Activate(symbols[5]);
+            puzzle.Activate(symbols[3]);
             Assert.That(puzzle.State, Is.EqualTo(PuzzleMirror.PuzzleState.Solved));
 
             Object.DestroyImmediate(root);

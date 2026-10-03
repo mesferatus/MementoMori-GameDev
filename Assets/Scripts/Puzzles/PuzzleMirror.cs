@@ -48,24 +48,29 @@ namespace MementoMori.Puzzles
             GrimoireCatalog.Discover("A10");
             GrimoireCatalog.Discover("R06");
             GrimoireCatalog.Discover("P11");
-            if (!correctSymbolIds.Contains(symbol.SymbolId))
+            var expectedIndex = symbols.Count(item => item != null && item.IsActive && correctSymbolIds.Contains(item.SymbolId));
+            if (expectedIndex >= correctSymbolIds.Count || symbol.SymbolId != correctSymbolIds[expectedIndex])
             {
                 ErrorCount++;
                 GameState.Instance?.IncrementCounter("mirror.errors");
                 Object.FindAnyObjectByType<PoeFollower>()?.ReactToError(false);
                 hintController?.RegisterError(ErrorCount);
+                ClearActiveSymbols();
                 return;
             }
 
             symbol.SetActive(true);
             SetMirrorFlag(symbol.SymbolId);
-            if (correctSymbolIds.All(id => symbols.Exists(item => item != null && item.SymbolId == id && item.IsActive)))
+            if (expectedIndex == correctSymbolIds.Count - 1)
                 Solve();
         }
 
         private void ClearActiveSymbols()
         {
             foreach (var symbol in symbols) symbol?.SetActive(false);
+            GameState.Instance?.SetFlag(StoryFlag.MirrorDelayedSolved, false);
+            GameState.Instance?.SetFlag(StoryFlag.MirrorAheadSolved, false);
+            GameState.Instance?.SetFlag(StoryFlag.MirrorAbsentSolved, false);
         }
 
         private void Solve()

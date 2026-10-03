@@ -29,7 +29,7 @@ namespace MementoMori.Tests.PlayMode
         }
 
         [UnityTest]
-        public IEnumerator MirrorPuzzleKeepsCorrectPlacementsAfterAnIncorrectMirror()
+        public IEnumerator MirrorPuzzleResetsLocalPlacementsAfterAnIncorrectMirror()
         {
             var root = new GameObject("MirrorPuzzlePlayModeTest");
             var puzzle = root.AddComponent<PuzzleMirror>();
@@ -41,14 +41,14 @@ namespace MementoMori.Tests.PlayMode
                 symbols[i] = symbolObject.AddComponent<MirrorSymbol>();
                 symbols[i].Configure(names[i], puzzle, symbolObject.AddComponent<SpriteRenderer>());
             }
-            puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Room" }, null, null);
+            puzzle.Configure(symbols, new[] { "Delayed", "Ahead", "Absent" }, null, null);
             yield return null;
             Assert.That(puzzle.State, Is.EqualTo(PuzzleMirror.PuzzleState.Active));
             puzzle.Activate(symbols[1]);
             Assert.That(symbols[1].IsActive, Is.True);
             puzzle.Activate(symbols[0]);
             Assert.That(puzzle.ErrorCount, Is.EqualTo(1));
-            Assert.That(symbols[1].IsActive, Is.True);
+            Assert.That(symbols[1].IsActive, Is.False);
             Object.Destroy(root);
             foreach (var symbol in symbols) Object.Destroy(symbol.gameObject);
         }

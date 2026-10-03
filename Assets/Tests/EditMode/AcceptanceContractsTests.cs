@@ -83,13 +83,13 @@ namespace MementoMori.Tests.EditMode
             configuration.Configure("DominioLua", "FinalBeta", false,
                 new[] { "Entrada", "JardimLunar", "SalaDosEspelhos", "CorredorIlusorio", "CamaraDoSigilo", "SalaDoFragmento" },
                 new[] { "Present", "Delayed", "Ahead", "Absent", "Double", "Room", "Black" },
-                new[] { "Delayed", "Ahead", "Room" },
+                new[] { "Delayed", "Ahead", "Absent" },
                 new[] { "Minguante", "Grimório", "SUSTENTAR" },
                 new[] { "Dominio_CorredorFalso" });
 
             Assert.That(configuration.DomainAreas, Has.Length.EqualTo(6));
             Assert.That(configuration.MirrorSymbols, Has.Length.EqualTo(7));
-            Assert.That(configuration.MirrorCorrectSymbols, Is.EqualTo(new[] { "Delayed", "Ahead", "Room" }));
+            Assert.That(configuration.MirrorCorrectSymbols, Is.EqualTo(new[] { "Delayed", "Ahead", "Absent" }));
             Assert.That(configuration.SigilSequence, Is.EqualTo(new[] { "Minguante", "Grimório", "SUSTENTAR" }));
             Object.DestroyImmediate(root);
         }
