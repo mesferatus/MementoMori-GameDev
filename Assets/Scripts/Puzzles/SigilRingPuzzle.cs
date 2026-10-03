@@ -27,6 +27,7 @@ namespace MementoMori.Puzzles
         {
             if (Solved || string.IsNullOrEmpty(value)) return false;
             if (GameState.Instance != null && !GameState.Instance.HasFlag(StoryFlag.MirrorPuzzleComplete)) return false;
+            if (gameObject.scene.name == "DominioLua" && (GameState.Instance == null || GameState.Instance.GetPuzzleProgress("moon.gallery.cycle") < 3)) return false;
             GrimoireCatalog.Discover("R07");
             GrimoireCatalog.Discover("P13");
             var progressKey = "sigil." + ring;

@@ -21,7 +21,8 @@ namespace MementoMori.World
         static readonly string[] RepeatedChoices = { "Uma imagem preserva presença.", "Eu parei de chamar.", WrongFinalChoiceMeaning };
         public string ChoiceLabel(int passage)
         {
-            var current = Mathf.Clamp(round, 0, CorrectPassages.Length - 1);
+            var progress = IsMoonDomain ? GameState.Instance?.GetPuzzleProgress(MoonProgress) ?? round : round;
+            var current = Mathf.Clamp(progress, 0, CorrectPassages.Length - 1);
             return passage == CorrectPassages[current] ? CorrectChoiceMeanings[current] : RepeatedChoices[current];
         }
         [SerializeField] private DialogueData completionDialogue;
@@ -29,11 +30,15 @@ namespace MementoMori.World
         [SerializeField] private Transform[] passages;
         int round;
         int errors;
+        private const string MoonProgress = "moon.illusory_corridor";
+        private bool IsMoonDomain => gameObject.scene.name == "DominioLua";
         private void Awake()
         {
             completionDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_ECHO_COMPLETE");
         }
-        public bool Solved => GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete);
+        public bool Solved => GameState.Instance != null && (IsMoonDomain
+            ? GameState.Instance.GetPuzzleProgress(MoonProgress) >= CorrectPassages.Length
+            : GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete));
         public void Configure(DialogueData dialogue, Transform[] corridorPassages)
         {
             completionDialogue = dialogue;
@@ -41,12 +46,13 @@ namespace MementoMori.World
         }
         public bool Select(int passage, Transform player)
         {
+            if (IsMoonDomain) round = GameState.Instance?.GetPuzzleProgress(MoonProgress) ?? 0;
             if (Solved || round >= CorrectPassages.Length) return false;
-            GrimoireCatalog.Discover("P0" + (round + 4));
+            GrimoireCatalog.Discover(IsMoonDomain ? "A10" : "P0" + (round + 4));
             if (passage != CorrectPassages[round])
             {
                 errors++;
-                GameState.Instance?.IncrementCounter("echo.errors");
+                GameState.Instance?.IncrementCounter(IsMoonDomain ? "moon.illusory.errors" : "echo.errors");
                 if (player != null) player.position = returnPosition;
                 if (errors >= 3 && passages != null && CorrectPassages[round] < passages.Length)
                     Object.FindAnyObjectByType<PoeFollower>()?.HintAt(passages[CorrectPassages[round]].position);
@@ -55,13 +61,14 @@ namespace MementoMori.World
             errors = 0;
             round++;
             var state = GameState.Instance;
-            if (round == 1) state?.SetFlag(StoryFlag.EchoTrial01Complete);
-            if (round == 2) state?.SetFlag(StoryFlag.EchoTrial02Complete);
+            if (IsMoonDomain) state?.SetPuzzleProgress(MoonProgress, round);
+            else if (round == 1) state?.SetFlag(StoryFlag.EchoTrial01Complete);
+            else if (round == 2) state?.SetFlag(StoryFlag.EchoTrial02Complete);
             if (round == 3)
             {
-                state?.SetFlag(StoryFlag.EchoTrial03Complete);
+                if (!IsMoonDomain) state?.SetFlag(StoryFlag.EchoTrial03Complete);
                 state?.SaveCheckpoint();
-                StoryProgression.Instance?.SaveCheckpoint(CheckpointId.Echoes);
+                if (!IsMoonDomain) StoryProgression.Instance?.SaveCheckpoint(CheckpointId.Echoes);
                 DialogueManager.Instance?.StartDialogue(completionDialogue);
             }
             return true;

@@ -18,7 +18,8 @@ namespace MementoMori.World
         };
         public int InteractionPriority => 8;
         public bool CanInteract(InteractionContext context) =>
-            GameState.Instance == null || GameState.Instance.GetPuzzleProgress(ProgressKey) < 3;
+            GameState.Instance != null && GameState.Instance.GetPuzzleProgress("moon.illusory_corridor") >= 3
+            && GameState.Instance.GetPuzzleProgress(ProgressKey) < 3;
 
         public void Configure(int index, GameObject wall)
         {
@@ -35,7 +36,7 @@ namespace MementoMori.World
         public void Interact(InteractionContext context)
         {
             var state = GameState.Instance;
-            if (state == null) return;
+            if (state == null || !CanInteract(context)) return;
             int progress = state.GetPuzzleProgress(ProgressKey);
             if (progress >= 3) return;
             if (phaseIndex != progress)

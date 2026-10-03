@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -136,13 +136,26 @@ namespace MementoMori.Verification
             var bed = FindFirstObjectByType<BedController>();
             var locked = bed != null && !BedController.HasRoomRequirements(GameState.Instance);
             // Follow the V3 investigation order so gated interactions are exercised exactly as a player sees them.
-            foreach (var objectName in new[] { "Photo", "Grimoire", "RitualItem", "Window", "Candles", "PoeBowl", "PoeToy" })
+            foreach (var objectName in new[] { "Photo", "RitualItem", "Window", "PoeBowl", "PoeToy" })
             {
                 var trigger = FindNamedComponent<DialogueTrigger>(objectName);
                 if (trigger != null && trigger.CanInteract(default)) trigger.Interact(default);
                 yield return CompleteOpenDialogue();
             }
             var optionalRoomContentDoesNotUnlockBed = !BedController.HasRoomRequirements(GameState.Instance);
+            var grimoire = FindNamedComponent<GrimoireScreen>("Grimoire");
+            grimoire?.Interact(default);
+            yield return CompleteOpenDialogue();
+            yield return null;
+            foreach (var screen in FindObjectsByType<GrimoireScreen>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+                if (screen.IsOpen) screen.Close();
+            var candleNodes = FindObjectsByType<RoomCandleInteractable>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            Array.Sort(candleNodes, (left, right) => left.OrderIndex.CompareTo(right.OrderIndex));
+            foreach (var node in candleNodes)
+            {
+                node.Interact(default);
+                yield return CompleteOpenDialogue();
+            }
             var ritual = FindFirstObjectByType<RitualController>();
             ritual?.Interact(default);
             var ritualDeadline = Time.realtimeSinceStartup + 10f;
@@ -249,7 +262,7 @@ namespace MementoMori.Verification
                 InvokeInteraction(symbol.gameObject, interactor);
                 yield return CompleteOpenDialogue();
             }
-            if (mirrors != null) foreach (var id in new[] { "Delayed", "Ahead", "Room" }) foreach (var symbol in mirrorSymbols) if (symbol.SymbolId == id)
+            if (mirrors != null) foreach (var id in new[] { "Delayed", "Ahead", "Absent" }) foreach (var symbol in mirrorSymbols) if (symbol.SymbolId == id)
             {
                 InvokeInteraction(symbol.gameObject, interactor);
                 yield return CompleteOpenDialogue();
@@ -262,9 +275,29 @@ namespace MementoMori.Verification
             var poeDistance = crescent == null || poes.Length == 0 ? -1f : Vector2.Distance(poes[0].transform.position, crescent.transform.position);
             Check("CT-007", gardenComplete && mirrors != null && mirrors.ErrorCount == 1 && mirrorSolved, $"Jardim={gardenComplete}; espelhos={(mirrors == null ? "ausentes" : mirrors.State.ToString())}; erros={(mirrors == null ? -1 : mirrors.ErrorCount)}; concluÃ­do={mirrorSolved}; pÃ©talas={petals.Length}; jogador={playerDistance};poe={poeDistance};poeAtivo={(poes.Length > 0 && poes[0].gameObject.activeInHierarchy)}; rota={crescentTrace}.");
 
+            var illusion = FindFirstObjectByType<EchoCorridorPuzzle>();
+            var wrongIllusionChoice = illusion != null && !illusion.Select(0, interactor?.transform);
+            var resetWithinDomain = SceneManager.GetActiveScene().name == "DominioLua"
+                && GameState.Instance.GetPuzzleProgress("moon.illusory_corridor") == 0;
+            foreach (var choice in new[] { 2, 1, 3 })
+            {
+                illusion?.Select(choice, interactor?.transform);
+                yield return CompleteOpenDialogue();
+            }
+            Check("CT-007B", wrongIllusionChoice && resetWithinDomain && illusion != null && illusion.Solved
+                && GameState.Instance.GetPuzzleProgress("moon.illusory_corridor") == 3,
+                "Corredor Ilusório da Lua: erro local e três escolhas corretas.");
+
             var gallery = GameObject.Find("GalleryDoor_Cheia") != null && GameObject.Find("GalleryHiddenWall") != null;
+            foreach (var doorName in new[] { "GalleryDoor_Crescente", "GalleryDoor_Cheia", "GalleryDoor_Minguante" })
+            {
+                var choice = GameObject.Find(doorName)?.GetComponentInChildren<GalleryCycleChoice>();
+                choice?.Interact(new InteractionContext(interactor));
+            }
             GameObject.Find("GalleryHiddenWall")?.GetComponent<DialogueTrigger>()?.Interact(default);
-            Check("CT-008", gallery && GameState.Instance.HasFlag(StoryFlag.HiddenDoorRevealed), "Galeria, porta Cheia falsa e parede sem sÃ­mbolo verificados.");
+            yield return CompleteOpenDialogue();
+            var cycleComplete = GameState.Instance.GetPuzzleProgress("moon.gallery.cycle") == 3;
+            Check("CT-008", gallery && cycleComplete && GameState.Instance.HasFlag(StoryFlag.HiddenDoorRevealed), "Galeria: Crescente, Cheia, Minguante e passagem liberada.");
 
             var sigil = FindFirstObjectByType<SigilRingPuzzle>();
             var phaseRing = GameObject.Find("SigilRing_Fases");
@@ -323,8 +356,8 @@ namespace MementoMori.Verification
             }
             finally
             {
-                if (entries.Count != 11 && string.IsNullOrEmpty(error))
-                    error = $"CT trace interrupted after {entries.Count} of 11 checks; inspect Editor.log for the exception.";
+                if (entries.Count != 12 && string.IsNullOrEmpty(error))
+                    error = $"CT trace interrupted after {entries.Count} of 12 checks; inspect Editor.log for the exception.";
                 WriteReport();
 #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
