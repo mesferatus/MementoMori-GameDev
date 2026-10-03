@@ -1,0 +1,1593 @@
+fileFormatVersion: 2
+guid: b4605f030275f0f41a0a0458baf5e07d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5441691670332565410
+    second: D2_LuizaGardenReplacement_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 156.75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: D2_GardenReplacement_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dce63a60713c8047a54fa48eba4468f
+      internalID: -992709571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_01
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e8006ca9007d64ebe5c499627716b6
+      internalID: -1827664555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_02
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f659e0e271c25cc47af7c1525eee2edd
+      internalID: -631062462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_03
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdf1626e33e74547b2a8f1559ea5a81
+      internalID: 930894290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_04
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eb5a45bb48c854c9af6614e7f2f624
+      internalID: -62796250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_05
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa52d394884c6fe4a84aae4b8945372c
+      internalID: 569072912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_06
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4923a3066ecad47add99751dc1aff9
+      internalID: 1559053866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_07
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 1097.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18447b8484a7f843b89b33b1705e77d
+      internalID: -1172475698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_08
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1ff56b52d004c43abe04989290d1fa
+      internalID: 1222367192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_09
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3e1793c6e131b44b4d2abb6505d4b0
+      internalID: 1374206995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_10
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50541fe997593042a260d1f8c774044
+      internalID: -726562380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_11
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7753b1608727b47b6c3a4263bb7b29
+      internalID: 1615730887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aecd38558a182642bd13d6790108871
+      internalID: -1779971737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_13
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713680a36a6689a4b8eb9d50403fc3bf
+      internalID: -1601928642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_14
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659010863171b5d42b45956e5048028a
+      internalID: 194679706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_15
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 940.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6053414a6248e8d40a91dbc7c457fa84
+      internalID: 895637636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b383ec702882c504d95ef93dac4e96fb
+      internalID: -1248056002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_17
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457c05eae24201b4d8219730114e1713
+      internalID: -2104248910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_18
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2d9aceb8eb09c418a899656756ae55
+      internalID: -1337980218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_19
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bb7059546cfb14a93c925363f32187
+      internalID: 1589432666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_20
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a186ecb88d867ca44b91ff5895b3cef1
+      internalID: -1598685593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_21
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cad60e94d358d94ab836bc9c8002c9e
+      internalID: -1552093326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_22
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e2990657d6e744b909eebd885a4d42
+      internalID: -783589287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_23
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 783.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e221e621cc5d747adfdbf35252a068
+      internalID: 622637257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c575813af10ae334e90bdafe098eab25
+      internalID: -1297954971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_25
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189418094122fdd4bb4a675ab895872c
+      internalID: 1094231533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_26
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e45b3d3f1de52349a5c73419ff30a0d
+      internalID: 1066455840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_27
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b4d2502598d534f96b2ee0db89b6b0
+      internalID: 436022585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_28
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbc9006b5771d84d9500acfc2c39cae
+      internalID: -325842900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_29
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1ad880cb397fe489b0d9221229bd8d
+      internalID: -1524918843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_30
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7623e92657f391148b470ba9869eed7a
+      internalID: 1871854878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_31
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 627
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd51946d487df28489b3d8189f6bda9d
+      internalID: -1646771084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe9dd17076600743827f0b8326b3145
+      internalID: -951930248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_33
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5d0ad133f68e242bf50e865440fbc9
+      internalID: -1639405839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_34
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213593d318bb8724bbcc7353565c931a
+      internalID: 1223689505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_35
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5962a9104634f0439d61675ec36b4d1
+      internalID: -27985906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_36
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d9f0859152bb440b686b16ca8511b7
+      internalID: 1673823572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_37
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0eb2f500e96a3d46bd39f6dfdb61f5d
+      internalID: 2057752696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_38
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc09f91ae8ed81547850f59c9f7ccbd7
+      internalID: -1495739403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_39
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 470.25
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd448076c715bbb48a14cfc1bfb35d43
+      internalID: 393582388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789b64f6b39781149a85d6239da907bb
+      internalID: -1868239124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_41
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b30d206cfc813c439639ec413974bb9
+      internalID: -490050702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_42
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c16e3e2d7113d48a8eefd02a212f98
+      internalID: 642652658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_43
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d0e5fc39f48544bbdf337c9fda6dda
+      internalID: -1296817331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_44
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e500ca24c7c6d3044bf26f9c479ed7fa
+      internalID: 1981511802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_45
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb44b3b30fc074e44be2efd983f46d5b
+      internalID: 305454298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_46
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5454ff3bc66309e4898d40e33fc8f99b
+      internalID: 431057710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_47
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 313.5
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e115d640ac0f14847a98c650d5827db3
+      internalID: 339984354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27ce6fa184b3b548805a31eebf2172b
+      internalID: 556801016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_49
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d911449cd3f7e642bbd6cf8c1af64b4
+      internalID: 417632192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_50
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9644d4fde31ab60478056b8d0a2e7484
+      internalID: 256884840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_51
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40b2b55a7f8eb746b7e83b51ddeda38
+      internalID: 658927401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_52
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d40f6ff8552ba5418fa55790338ded4
+      internalID: 1802924979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_53
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd74e3fabbffe7b4bb7b0ee1ee2eede5
+      internalID: 202584377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_54
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243753d13a750f84fb58f0bac847b3b2
+      internalID: 778219358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_55
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 156.75
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209d07205a45f654bbf6d1070873a84c
+      internalID: 1157260904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4573bf83a594c44a0b7476eda66cbc
+      internalID: 1218728178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_57
+      rect:
+        serializedVersion: 2
+        x: 156.75
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b470e13936b21148b41e2826d025165
+      internalID: 337793307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_58
+      rect:
+        serializedVersion: 2
+        x: 313.5
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fddb0cc349753a4e98eaab5d3305934
+      internalID: -158317358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_59
+      rect:
+        serializedVersion: 2
+        x: 470.25
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b90b93fc1574d4d87efb37baf57667
+      internalID: 749340695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_60
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f372666ccc431344b9f28a9006a8fb10
+      internalID: -1654660568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_61
+      rect:
+        serializedVersion: 2
+        x: 783.75
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59ca69051a060f4998d33210e326d81
+      internalID: 970207489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_62
+      rect:
+        serializedVersion: 2
+        x: 940.5
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a162262a522424d8216a7e48b3ec36
+      internalID: 2119630900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2_GardenReplacement_63
+      rect:
+        serializedVersion: 2
+        x: 1097.25
+        y: 0
+        width: 156.75
+        height: 156.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e7999e72a4a8d42886350d9b14acf1
+      internalID: 1402533623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 00a35afd535f6e34dade310cef2218b9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      D2_GardenReplacement_00: -992709571
+      D2_GardenReplacement_01: -1827664555
+      D2_GardenReplacement_02: -631062462
+      D2_GardenReplacement_03: 930894290
+      D2_GardenReplacement_04: -62796250
+      D2_GardenReplacement_05: 569072912
+      D2_GardenReplacement_06: 1559053866
+      D2_GardenReplacement_07: -1172475698
+      D2_GardenReplacement_08: 1222367192
+      D2_GardenReplacement_09: 1374206995
+      D2_GardenReplacement_10: -726562380
+      D2_GardenReplacement_11: 1615730887
+      D2_GardenReplacement_12: -1779971737
+      D2_GardenReplacement_13: -1601928642
+      D2_GardenReplacement_14: 194679706
+      D2_GardenReplacement_15: 895637636
+      D2_GardenReplacement_16: -1248056002
+      D2_GardenReplacement_17: -2104248910
+      D2_GardenReplacement_18: -1337980218
+      D2_GardenReplacement_19: 1589432666
+      D2_GardenReplacement_20: -1598685593
+      D2_GardenReplacement_21: -1552093326
+      D2_GardenReplacement_22: -783589287
+      D2_GardenReplacement_23: 622637257
+      D2_GardenReplacement_24: -1297954971
+      D2_GardenReplacement_25: 1094231533
+      D2_GardenReplacement_26: 1066455840
+      D2_GardenReplacement_27: 436022585
+      D2_GardenReplacement_28: -325842900
+      D2_GardenReplacement_29: -1524918843
+      D2_GardenReplacement_30: 1871854878
+      D2_GardenReplacement_31: -1646771084
+      D2_GardenReplacement_32: -951930248
+      D2_GardenReplacement_33: -1639405839
+      D2_GardenReplacement_34: 1223689505
+      D2_GardenReplacement_35: -27985906
+      D2_GardenReplacement_36: 1673823572
+      D2_GardenReplacement_37: 2057752696
+      D2_GardenReplacement_38: -1495739403
+      D2_GardenReplacement_39: 393582388
+      D2_GardenReplacement_40: -1868239124
+      D2_GardenReplacement_41: -490050702
+      D2_GardenReplacement_42: 642652658
+      D2_GardenReplacement_43: -1296817331
+      D2_GardenReplacement_44: 1981511802
+      D2_GardenReplacement_45: 305454298
+      D2_GardenReplacement_46: 431057710
+      D2_GardenReplacement_47: 339984354
+      D2_GardenReplacement_48: 556801016
+      D2_GardenReplacement_49: 417632192
+      D2_GardenReplacement_50: 256884840
+      D2_GardenReplacement_51: 658927401
+      D2_GardenReplacement_52: 1802924979
+      D2_GardenReplacement_53: 202584377
+      D2_GardenReplacement_54: 778219358
+      D2_GardenReplacement_55: 1157260904
+      D2_GardenReplacement_56: 1218728178
+      D2_GardenReplacement_57: 337793307
+      D2_GardenReplacement_58: -158317358
+      D2_GardenReplacement_59: 749340695
+      D2_GardenReplacement_60: -1654660568
+      D2_GardenReplacement_61: 970207489
+      D2_GardenReplacement_62: 2119630900
+      D2_GardenReplacement_63: 1402533623
+      D2_LuizaGardenReplacement_0: 5441691670332565410
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
