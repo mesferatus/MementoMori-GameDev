@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Quarto.unity
     guid: bfb8534bb42b52641b8350ca47e71d4f
   - enabled: 1
-    path: Assets/V65Environments/Scenes/Labirinto.unity
+    path: Assets/Scenes/Labirinto.unity
     guid: 6c3d9c2d86e901f41acf9f30dc2cbd62
   - enabled: 1
-    path: Assets/V65Environments/Scenes/DominioLua.unity
+    path: Assets/Scenes/DominioLua.unity
     guid: 5bb906c598494d2408c8ea1af32c3079
   - enabled: 1
     path: Assets/Scenes/FinalBeta.unity

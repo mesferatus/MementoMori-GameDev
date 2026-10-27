@@ -1,1 +1,0 @@
-# Declaração de assistência`r`n`r`nFerramentas de assistência foram usadas para apoio à organização, revisão e documentação do projeto. A equipe permanece responsável por compreender, testar e apresentar o código e o funcionamento do jogo.
