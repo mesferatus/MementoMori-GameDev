@@ -17,10 +17,10 @@ namespace MementoMori.EditorTools
         }
 
         [MenuItem("Memento Mori/Tools/Open Labirinto")]
-        private static void OpenLabirinto() => OpenOfficial("Assets/Scenes/Labirinto.unity");
+        private static void OpenLabirinto() => OpenOfficial("Assets/V65Environments/Scenes/Labirinto.unity");
 
         [MenuItem("Memento Mori/Tools/Open DominioLua")]
-        private static void OpenDominioLua() => OpenOfficial("Assets/Scenes/DominioLua.unity");
+        private static void OpenDominioLua() => OpenOfficial("Assets/V65Environments/Scenes/DominioLua.unity");
 
         [MenuItem("Memento Mori/Tools/Open FinalBeta")]
         private static void OpenFinalBeta() => OpenOfficial("Assets/Scenes/FinalBeta.unity");
@@ -41,10 +41,10 @@ namespace MementoMori.EditorTools
         private static void ValidateQuarto() => ValidateOfficial("Assets/Scenes/Quarto.unity");
 
         [MenuItem("Memento Mori/Tools/Validate Labirinto")]
-        private static void ValidateLabirinto() => ValidateOfficial("Assets/Scenes/Labirinto.unity");
+        private static void ValidateLabirinto() => ValidateOfficial("Assets/V65Environments/Scenes/Labirinto.unity");
 
         [MenuItem("Memento Mori/Tools/Validate DominioLua")]
-        private static void ValidateDominioLua() => ValidateOfficial("Assets/Scenes/DominioLua.unity");
+        private static void ValidateDominioLua() => ValidateOfficial("Assets/V65Environments/Scenes/DominioLua.unity");
 
         [MenuItem("Memento Mori/Tools/Validate FinalBeta")]
         private static void ValidateFinalBeta() => ValidateOfficial("Assets/Scenes/FinalBeta.unity");
@@ -64,7 +64,7 @@ namespace MementoMori.EditorTools
         [MenuItem("Memento Mori/Tools/Validate All Scenes")]
         private static void ValidateAllScenes()
         {
-            foreach (var path in new[] { "Assets/Scenes/MainMenu.unity", "Assets/Scenes/Quarto.unity", "Assets/Scenes/Labirinto.unity", "Assets/Scenes/DominioLua.unity", "Assets/Scenes/FinalBeta.unity" })
+            foreach (var path in EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path))
                 ValidateOfficial(path);
         }
 

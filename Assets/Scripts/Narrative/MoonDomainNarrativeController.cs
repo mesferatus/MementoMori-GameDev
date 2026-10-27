@@ -81,7 +81,7 @@ namespace MementoMori.Narrative
             observedSigilErrors = sigilErrors;
             QueueWhen(state.HasFlag(StoryFlag.SigilPuzzleComplete), "DLG_D_SIGIL_COMPLETE");
 
-            if (pending.Count > 0 && DialogueManager.Instance != null && !DialogueManager.Instance.IsOpen)
+            if (!MementoMori.Regions.V6Challenge.AnyOpen && pending.Count > 0 && DialogueManager.Instance != null && !DialogueManager.Instance.IsOpen)
                 DialogueManager.Instance.StartDialogue(pending.Dequeue());
         }
 
@@ -115,3 +115,4 @@ namespace MementoMori.Narrative
         }
     }
 }
+

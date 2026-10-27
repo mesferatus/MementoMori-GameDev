@@ -47,6 +47,12 @@ namespace MementoMori.World
         }
         private static DialogueData Load(string id) => Resources.Load<DialogueData>("Dialogue/" + id);
         private static void StartDialogue(DialogueData dialogue) => DialogueManager.Instance?.StartDialogue(dialogue);
+        private void OnDisable()
+        {
+            StopAllCoroutines();
+            InputGate.Instance?.Release("Fragment");
+            InputGate.Instance?.Release("FragmentMemory");
+        }
         private IEnumerator MemoryRoutine()
         {
             InputGate.Instance?.Block("FragmentMemory");
@@ -68,9 +74,10 @@ namespace MementoMori.World
                 GrimoireCatalog.Discover("M08");
             }
             StartDialogue(Load("DLG_D_POE_VANISH"));
-            yield return new WaitForSeconds(delayBeforeFinal);
-            if (linkedFinalPortal != null) linkedFinalPortal.ActivateFromLinkedInteraction();
-            else Debug.LogError($"Fragment '{name}' has no linked final portal for scene '{finalScene}'.", this);
+            yield return new WaitUntil(() => DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
+            InputGate.Instance?.Release("Fragment");
+            // The final portal remains an explicit player action after the memory.
         }
     }
 }
+

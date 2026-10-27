@@ -17,9 +17,10 @@ namespace MementoMori.Poe
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (used && oneShot || !other.CompareTag("Player")) return;
+            if (used && oneShot || !other.CompareTag("Player") || poe == null || !poe.isActiveAndEnabled || point == null) return;
             used = true;
             poe?.MoveTo(point);
         }
     }
 }
+

@@ -57,6 +57,7 @@ namespace MementoMori.Interaction
                     candidates.RemoveAt(index);
                     continue;
                 }
+                if (component is Behaviour behaviour && !behaviour.isActiveAndEnabled) continue;
                 if (!candidate.CanInteract(context))
                     continue;
                 if (IsObstructed(component))
@@ -99,3 +100,4 @@ namespace MementoMori.Interaction
         }
     }
 }
+

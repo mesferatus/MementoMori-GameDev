@@ -1,0 +1,9 @@
+{"challenges":[
+{"id":"lab.false_door","title":"O limiar que devolve","clue":"A porta promete uma saída, mas devolve seus passos ao pátio. Na moldura: «Nem toda passagem se vence atravessando».","choices":["Forçar a fechadura","Reconhecer o retorno","Apagar o caminho"],"sequence":[1],"prerequisiteFlag":"FalseDoorTriggered","x":-24,"y":22},
+{"id":"lab.voice_well","title":"O que permanece no poço","clue":"Escute as quatro vozes. A forma pode repetir-se; a presença não obedece a uma ordem. O que você pode guardar sem aprisionar?","choices":["A voz como posse","A lembrança como testemunho","A promessa de voltar igual"],"sequence":[1],"prerequisiteFlag":"VoiceWellComplete","x":-22,"y":4.4},
+{"id":"lab.skyless_courtyard","title":"As direções sem céu","clue":"Na base das colunas: «Onde a luz nasce, eu começo. Onde ela repousa, eu recordo. Entre ambos, permaneço». Oriente os três passos.","choices":["Nascente","Poente","Centro"],"sequence":[0,1,2],"x":19.5,"y":-2.5},
+{"id":"lab.core","title":"A memória do núcleo","clue":"Três anéis: «Primeiro escuto. Depois reconheço o que mudou. Só então sustento o que resta».","choices":["Sustentar","Escutar","Reconhecer"],"sequence":[1,2,0],"x":0,"y":-12},
+{"id":"lab.moon_activation","title":"Despertar o Portal da Lua","clue":"A Lua não pede que todos os santuários sejam vencidos. Pede que os caminhos do Labirinto tenham sido compreendidos. «Não possuir. Não apagar. Atravessar».","choices":["Possuir","Apagar","Atravessar"],"sequence":[2],"requiresOtherLabyrinthPuzzles":true,"x":-18,"y":-27}
+]}
+
+

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_Q_WINDOW_01
   lines:
-  - Text: "A lua est\xE1 minguante."
+  - Text: Daqui eu devia ver a rua.
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -22,7 +22,15 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "Quase apagada\u2026 mas ainda me observando."
+  - Text: "N\xE3o h\xE1 nem uma luz."
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: O vento ainda sabe entrar.
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0

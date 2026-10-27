@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_Q_RITUAL_COMPLETE
   lines:
-  - Text: Pronto.
+  - Text: "Estas velas n\xE3o est\xE3o abrindo o caminho pela primeira vez."
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: Agora o quarto respira de novo.
+  - Text: "Eu estou tentando faz\xEA-lo lembrar por mim."
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0

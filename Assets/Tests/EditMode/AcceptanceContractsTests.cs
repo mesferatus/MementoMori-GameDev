@@ -13,12 +13,12 @@ namespace MementoMori.Tests.EditMode
         public void BuildSettingsContainTheFiveBetaScenesInOrder()
         {
             var scenes = EditorBuildSettings.scenes;
-            var expected = new[] { "MainMenu", "Quarto", "Labirinto", "DominioLua", "FinalBeta" };
+            var expected = new[] { "Assets/Scenes/MainMenu.unity", "Assets/Scenes/Quarto.unity", "Assets/V65Environments/Scenes/Labirinto.unity", "Assets/V65Environments/Scenes/DominioLua.unity", "Assets/Scenes/FinalBeta.unity" };
             Assert.That(scenes.Length, Is.GreaterThanOrEqualTo(expected.Length));
             for (var i = 0; i < expected.Length; i++)
             {
                 Assert.That(scenes[i].enabled, Is.True);
-                Assert.That(scenes[i].path, Is.EqualTo($"Assets/Scenes/{expected[i]}.unity"));
+                Assert.That(scenes[i].path, Is.EqualTo(expected[i]));
             }
         }
 
@@ -121,3 +121,4 @@ namespace MementoMori.Tests.EditMode
         }
     }
 }
+

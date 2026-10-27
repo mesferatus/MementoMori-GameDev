@@ -1,0 +1,1705 @@
+{
+  "id": "M04",
+  "name": "Corredor Ilusório",
+  "size": [
+    1536,
+    1536
+  ],
+  "objects": [
+    {
+      "id": "M04_fachada_ala_esquerda",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\fachada_ala_esquerda.png",
+      "rect": [
+        54,
+        2,
+        257,
+        382
+      ],
+      "anchor": [
+        54,
+        2
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M04_fachada_pilar_esquerdo",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\fachada_pilar_esquerdo.png",
+      "rect": [
+        311,
+        2,
+        214,
+        382
+      ],
+      "anchor": [
+        54,
+        2
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M04_fachada_portal_central",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\fachada_portal_central.png",
+      "rect": [
+        525,
+        2,
+        486,
+        382
+      ],
+      "anchor": [
+        54,
+        2
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M04_fachada_pilar_direito",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\fachada_pilar_direito.png",
+      "rect": [
+        1011,
+        2,
+        214,
+        382
+      ],
+      "anchor": [
+        54,
+        2
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M04_fachada_ala_direita",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\fachada_ala_direita.png",
+      "rect": [
+        1225,
+        2,
+        257,
+        382
+      ],
+      "anchor": [
+        54,
+        2
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M04_001",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\passadeira.png",
+      "rect": [
+        680,
+        361,
+        177,
+        1137
+      ],
+      "anchor": [
+        768,
+        1498
+      ],
+      "layer": "tapete",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_002",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+      "rect": [
+        272,
+        459,
+        331,
+        324
+      ],
+      "anchor": [
+        438,
+        783
+      ],
+      "layer": "puzzles",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated",
+      "states": {
+        "normal": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+        "interacao": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_interacao.png",
+        "erro": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_erro.png",
+        "concluido": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_concluido.png"
+      },
+      "puzzle_group": "moon.illusion.exit.0"
+    },
+    {
+      "id": "M04_003",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+      "rect": [
+        933,
+        459,
+        331,
+        324
+      ],
+      "anchor": [
+        1098,
+        783
+      ],
+      "layer": "puzzles",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated",
+      "states": {
+        "normal": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+        "interacao": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_interacao.png",
+        "erro": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_erro.png",
+        "concluido": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_concluido.png"
+      },
+      "puzzle_group": "moon.illusion.exit.1"
+    },
+    {
+      "id": "M04_004",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+      "rect": [
+        272,
+        912,
+        331,
+        324
+      ],
+      "anchor": [
+        438,
+        1236
+      ],
+      "layer": "puzzles",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated",
+      "states": {
+        "normal": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+        "interacao": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_interacao.png",
+        "erro": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_erro.png",
+        "concluido": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_concluido.png"
+      },
+      "puzzle_group": "moon.illusion.exit.2"
+    },
+    {
+      "id": "M04_005",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+      "rect": [
+        933,
+        912,
+        331,
+        324
+      ],
+      "anchor": [
+        1098,
+        1236
+      ],
+      "layer": "puzzles",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated",
+      "states": {
+        "normal": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+        "interacao": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_interacao.png",
+        "erro": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_erro.png",
+        "concluido": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_concluido.png"
+      },
+      "puzzle_group": "moon.illusion.exit.3"
+    },
+    {
+      "id": "M04_006",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+      "rect": [
+        602,
+        1120,
+        331,
+        324
+      ],
+      "anchor": [
+        768,
+        1444
+      ],
+      "layer": "puzzles",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated",
+      "states": {
+        "normal": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_normal.png",
+        "interacao": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_interacao.png",
+        "erro": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_erro.png",
+        "concluido": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\illusion_concluido.png"
+      },
+      "puzzle_group": "moon.illusion.exit.4"
+    },
+    {
+      "id": "M04_007",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\gargula.png",
+      "rect": [
+        548,
+        399,
+        99,
+        146
+      ],
+      "anchor": [
+        597,
+        545
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_008",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        542,
+        485,
+        85,
+        99
+      ],
+      "anchor": [
+        585,
+        584
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_009",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\gargula.png",
+      "rect": [
+        890,
+        399,
+        99,
+        146
+      ],
+      "anchor": [
+        939,
+        545
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_010",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        908,
+        485,
+        85,
+        99
+      ],
+      "anchor": [
+        951,
+        584
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_011",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\gargula.png",
+      "rect": [
+        512,
+        782,
+        99,
+        146
+      ],
+      "anchor": [
+        561,
+        928
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_012",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        542,
+        892,
+        85,
+        99
+      ],
+      "anchor": [
+        585,
+        991
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_013",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\gargula.png",
+      "rect": [
+        926,
+        782,
+        99,
+        146
+      ],
+      "anchor": [
+        975,
+        928
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_014",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        908,
+        892,
+        85,
+        99
+      ],
+      "anchor": [
+        951,
+        991
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_015",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\gargula.png",
+      "rect": [
+        412,
+        1060,
+        99,
+        146
+      ],
+      "anchor": [
+        461,
+        1206
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_016",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        418,
+        1145,
+        85,
+        99
+      ],
+      "anchor": [
+        461,
+        1244
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_017",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\gargula.png",
+      "rect": [
+        1026,
+        1060,
+        99,
+        146
+      ],
+      "anchor": [
+        1075,
+        1206
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_018",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        1032,
+        1145,
+        85,
+        99
+      ],
+      "anchor": [
+        1075,
+        1244
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_019",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\banner_lua.png",
+      "rect": [
+        139,
+        622,
+        84,
+        133
+      ],
+      "anchor": [
+        181,
+        755
+      ],
+      "layer": "pendentes",
+      "motion": "cloth",
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_020",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\banner_lua.png",
+      "rect": [
+        354,
+        1252,
+        84,
+        133
+      ],
+      "anchor": [
+        396,
+        1385
+      ],
+      "layer": "pendentes",
+      "motion": "cloth",
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_021",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\banner_lua.png",
+      "rect": [
+        1313,
+        622,
+        84,
+        133
+      ],
+      "anchor": [
+        1355,
+        755
+      ],
+      "layer": "pendentes",
+      "motion": "cloth",
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_022",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\banner_lua.png",
+      "rect": [
+        1098,
+        1252,
+        84,
+        133
+      ],
+      "anchor": [
+        1140,
+        1385
+      ],
+      "layer": "pendentes",
+      "motion": "cloth",
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_023",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        278,
+        441,
+        54,
+        89
+      ],
+      "anchor": [
+        305,
+        530
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_024",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        550,
+        441,
+        54,
+        89
+      ],
+      "anchor": [
+        577,
+        530
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_025",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        932,
+        441,
+        54,
+        89
+      ],
+      "anchor": [
+        959,
+        530
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_026",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        1204,
+        441,
+        54,
+        89
+      ],
+      "anchor": [
+        1231,
+        530
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_027",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        278,
+        932,
+        54,
+        89
+      ],
+      "anchor": [
+        305,
+        1021
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_028",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        550,
+        932,
+        54,
+        89
+      ],
+      "anchor": [
+        577,
+        1021
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_029",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        932,
+        932,
+        54,
+        89
+      ],
+      "anchor": [
+        959,
+        1021
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_030",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\pilar.png",
+      "rect": [
+        1204,
+        932,
+        54,
+        89
+      ],
+      "anchor": [
+        1231,
+        1021
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_031",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\urnas.png",
+      "rect": [
+        112,
+        431,
+        100,
+        91
+      ],
+      "anchor": [
+        162,
+        522
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_032",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\moita_antiga.png",
+      "rect": [
+        112,
+        467,
+        74,
+        71
+      ],
+      "anchor": [
+        149,
+        538
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_033",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\velas.png",
+      "rect": [
+        170,
+        439,
+        60,
+        83
+      ],
+      "anchor": [
+        200,
+        522
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_034",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\urnas.png",
+      "rect": [
+        1348,
+        431,
+        100,
+        91
+      ],
+      "anchor": [
+        1398,
+        522
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_035",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\moita_antiga.png",
+      "rect": [
+        1374,
+        467,
+        74,
+        71
+      ],
+      "anchor": [
+        1411,
+        538
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_036",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\velas.png",
+      "rect": [
+        1306,
+        439,
+        60,
+        83
+      ],
+      "anchor": [
+        1336,
+        522
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_037",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\urnas.png",
+      "rect": [
+        104,
+        1046,
+        100,
+        91
+      ],
+      "anchor": [
+        154,
+        1137
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_038",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\moita_antiga.png",
+      "rect": [
+        103,
+        1081,
+        74,
+        71
+      ],
+      "anchor": [
+        140,
+        1152
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_039",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\velas.png",
+      "rect": [
+        185,
+        1054,
+        60,
+        83
+      ],
+      "anchor": [
+        215,
+        1137
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_040",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\urnas.png",
+      "rect": [
+        1332,
+        1046,
+        100,
+        91
+      ],
+      "anchor": [
+        1382,
+        1137
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "existing_generated"
+    },
+    {
+      "id": "M04_041",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\moita_antiga.png",
+      "rect": [
+        1371,
+        1081,
+        74,
+        71
+      ],
+      "anchor": [
+        1408,
+        1152
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_042",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\velas.png",
+      "rect": [
+        1291,
+        1054,
+        60,
+        83
+      ],
+      "anchor": [
+        1321,
+        1137
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_043",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        644,
+        1383,
+        85,
+        99
+      ],
+      "anchor": [
+        687,
+        1482
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M04_044",
+      "asset": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Assets\\braseiro.png",
+      "rect": [
+        818,
+        1383,
+        85,
+        99
+      ],
+      "anchor": [
+        861,
+        1482
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    }
+  ],
+  "effects": [
+    {
+      "owner": "M04_008",
+      "type": "flame",
+      "color": "azul",
+      "x": 584.5,
+      "y": 500.84,
+      "size": 68.0,
+      "phase": 0.0
+    },
+    {
+      "owner": "M04_010",
+      "type": "flame",
+      "color": "azul",
+      "x": 950.5,
+      "y": 500.84,
+      "size": 68.0,
+      "phase": 0.47
+    },
+    {
+      "owner": "M04_012",
+      "type": "flame",
+      "color": "azul",
+      "x": 584.5,
+      "y": 907.84,
+      "size": 68.0,
+      "phase": 0.94
+    },
+    {
+      "owner": "M04_014",
+      "type": "flame",
+      "color": "azul",
+      "x": 950.5,
+      "y": 907.84,
+      "size": 68.0,
+      "phase": 1.41
+    },
+    {
+      "owner": "M04_016",
+      "type": "flame",
+      "color": "azul",
+      "x": 460.5,
+      "y": 1160.84,
+      "size": 68.0,
+      "phase": 1.88
+    },
+    {
+      "owner": "M04_018",
+      "type": "flame",
+      "color": "azul",
+      "x": 1074.5,
+      "y": 1160.84,
+      "size": 68.0,
+      "phase": 2.3499999999999996
+    },
+    {
+      "owner": "M04_033",
+      "type": "flame",
+      "color": "ambar",
+      "x": 200.0,
+      "y": 452.28,
+      "size": 21.0,
+      "phase": 2.82
+    },
+    {
+      "owner": "M04_036",
+      "type": "flame",
+      "color": "ambar",
+      "x": 1336.0,
+      "y": 452.28,
+      "size": 21.0,
+      "phase": 3.29
+    },
+    {
+      "owner": "M04_039",
+      "type": "flame",
+      "color": "ambar",
+      "x": 215.0,
+      "y": 1067.28,
+      "size": 21.0,
+      "phase": 3.76
+    },
+    {
+      "owner": "M04_042",
+      "type": "flame",
+      "color": "ambar",
+      "x": 1321.0,
+      "y": 1067.28,
+      "size": 21.0,
+      "phase": 4.2299999999999995
+    },
+    {
+      "owner": "M04_043",
+      "type": "flame",
+      "color": "azul",
+      "x": 686.5,
+      "y": 1398.84,
+      "size": 68.0,
+      "phase": 4.699999999999999
+    },
+    {
+      "owner": "M04_044",
+      "type": "flame",
+      "color": "azul",
+      "x": 860.5,
+      "y": 1398.84,
+      "size": 68.0,
+      "phase": 5.17
+    }
+  ],
+  "lake_contours": [
+    [
+      [
+        330,
+        445
+      ],
+      [
+        545,
+        445
+      ],
+      [
+        545,
+        645
+      ],
+      [
+        330,
+        645
+      ]
+    ],
+    [
+      [
+        330,
+        929
+      ],
+      [
+        545,
+        929
+      ],
+      [
+        545,
+        1129
+      ],
+      [
+        330,
+        1129
+      ]
+    ],
+    [
+      [
+        991,
+        445
+      ],
+      [
+        1206,
+        445
+      ],
+      [
+        1206,
+        645
+      ],
+      [
+        991,
+        645
+      ]
+    ],
+    [
+      [
+        991,
+        929
+      ],
+      [
+        1206,
+        929
+      ],
+      [
+        1206,
+        1129
+      ],
+      [
+        991,
+        1129
+      ]
+    ]
+  ],
+  "moon_reflections": [],
+  "voids": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "custom_shape": true,
+  "layout_spec": {
+    "height": 1536,
+    "spawn": [
+      768,
+      1467
+    ],
+    "coordinate_basis": "reference_width_1000",
+    "reference_size": [
+      1254,
+      1254
+    ],
+    "stairs": {
+      "x": 657,
+      "y": 1444,
+      "w": 223,
+      "h": 89,
+      "steps": 6
+    },
+    "floor_outline_reference": [
+      [
+        50,
+        250
+      ],
+      [
+        950,
+        250
+      ],
+      [
+        950,
+        405
+      ],
+      [
+        900,
+        405
+      ],
+      [
+        900,
+        610
+      ],
+      [
+        950,
+        610
+      ],
+      [
+        950,
+        815
+      ],
+      [
+        760,
+        815
+      ],
+      [
+        760,
+        900
+      ],
+      [
+        600,
+        900
+      ],
+      [
+        600,
+        980
+      ],
+      [
+        400,
+        980
+      ],
+      [
+        400,
+        900
+      ],
+      [
+        240,
+        900
+      ],
+      [
+        240,
+        815
+      ],
+      [
+        50,
+        815
+      ],
+      [
+        50,
+        610
+      ],
+      [
+        100,
+        610
+      ],
+      [
+        100,
+        405
+      ],
+      [
+        50,
+        405
+      ]
+    ],
+    "no_entrance_stairs": true,
+    "landmarks": [
+      {
+        "kind": "facade_base",
+        "reference": [
+          500,
+          250
+        ],
+        "actual": [
+          768,
+          384
+        ]
+      },
+      {
+        "kind": "floor_medallion",
+        "reference": [
+          500,
+          490,
+          130
+        ],
+        "actual": [
+          768,
+          753,
+          200
+        ]
+      },
+      {
+        "kind": "runner_route",
+        "reference": [
+          [
+            150,
+            510
+          ],
+          [
+            850,
+            510
+          ]
+        ],
+        "width": 55
+      },
+      {
+        "kind": "runner_route",
+        "reference": [
+          [
+            225,
+            250
+          ],
+          [
+            225,
+            285
+          ],
+          [
+            500,
+            285
+          ]
+        ],
+        "width": 55
+      },
+      {
+        "kind": "runner_route",
+        "reference": [
+          [
+            775,
+            250
+          ],
+          [
+            775,
+            285
+          ],
+          [
+            500,
+            285
+          ]
+        ],
+        "width": 55
+      },
+      {
+        "kind": "runner_route",
+        "reference": [
+          [
+            190,
+            805
+          ],
+          [
+            190,
+            785
+          ],
+          [
+            500,
+            785
+          ]
+        ],
+        "width": 55
+      },
+      {
+        "kind": "runner_route",
+        "reference": [
+          [
+            810,
+            805
+          ],
+          [
+            810,
+            785
+          ],
+          [
+            500,
+            785
+          ]
+        ],
+        "width": 55
+      },
+      {
+        "kind": "floor_medallion",
+        "reference": [
+          500,
+          490,
+          130
+        ],
+        "actual": [
+          768,
+          753,
+          200
+        ]
+      },
+      {
+        "kind": "puzzle_illusion",
+        "id": "moon.illusion.exit.0",
+        "reference": [
+          150,
+          520
+        ],
+        "actual": [
+          230,
+          799
+        ]
+      },
+      {
+        "kind": "puzzle_illusion",
+        "id": "moon.illusion.exit.1",
+        "reference": [
+          850,
+          520
+        ],
+        "actual": [
+          1306,
+          799
+        ]
+      },
+      {
+        "kind": "puzzle_illusion",
+        "id": "moon.illusion.exit.2",
+        "reference": [
+          190,
+          820
+        ],
+        "actual": [
+          292,
+          1260
+        ]
+      },
+      {
+        "kind": "puzzle_illusion",
+        "id": "moon.illusion.exit.3",
+        "reference": [
+          810,
+          820
+        ],
+        "actual": [
+          1244,
+          1260
+        ]
+      },
+      {
+        "kind": "puzzle_illusion",
+        "id": "moon.illusion.exit.4",
+        "reference": [
+          500,
+          935
+        ],
+        "actual": [
+          768,
+          1436
+        ]
+      }
+    ]
+  },
+  "layers": {
+    "piso": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Camadas\\01_piso.png",
+    "agua": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Camadas\\02_agua.png",
+    "margem": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Camadas\\03_margem.png",
+    "nenufares": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Camadas\\04_nenufares.png",
+    "sigilos": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Camadas\\04_sigilos.png",
+    "paredes": "Camadas/05_paredes.png",
+    "escadas": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Areas\\M04\\Camadas\\07_escadas.png"
+  },
+  "reference": "../../../../00_REFERENCIAS_V5_APROVADAS/02_DOMINIO_LUA/M4CorredorIlusorio.png",
+  "required_puzzle": "moon.illusory_corridor",
+  "status": "montagem_externa_por_referencia",
+  "notes": [
+    "Montagem externa modular por referencia.",
+    "Escadas desenhadas e colisoes exportadas em pixels; Unity nao executada.",
+    "Estados visuais demonstrativos; logica de gameplay preservada."
+  ],
+  "position_corrections": [],
+  "revision": "2026-10-21-directed",
+  "navigation": {
+    "cell_size": 8,
+    "grid": [
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111110000000000000000000000000000111111111111111111111111111111111111111111111111111111100000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111110000000000000000000000000000011111111111111111111111111111111111111111111111111111100000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011000000000000011111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111110000000000000000000000000000",
+      "000000000000011000000000000011111110000000000000000000000000000000000000000000001111111111111111111111111111111100000000000000000000000000000000000000000000011111110000000000000000000000000000",
+      "000000000000011000000000000011111110000000000000000000000000000000000000000000001111111111111111111111111111111100000000000000000000000000000000000000000000011111110000000000000000000000000000",
+      "000000000000011000000000000011111110000000000000000000000000000000000000000000001111111111111111111111111111111100000000000000000000000000000000000000000000011111110000000000000000000000000000",
+      "000000000000011111111111111111111110000000000000000000000000000000000000000000001111111111111111111111111111111100000000000000000000000000000000000000000000011111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000000001111111111111111111111111111111100000000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000000001111111111111111111111111111111100000000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000111111111111111111111111111111111111111111111111111111000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111110000000000000000000000000000000000111111111111111111111111111111111111111111000000000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000000111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000000000000011111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111110000000000000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000001111111111111111111111111111111111111100000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111110000000000000000000000000000000000000000111111111111111111111111111111111111111111000000000000000000000000000000000000000011111111111111111111110000000000000",
+      "000000000000011111111111111111111110000000000000000000000000000000000000000111111111111111111111111111111111111111111000000000000000000000000000000000000000011111111111111111111110000000000000",
+      "000000000000011111111111111111111110000000000000000000000000000000000000000111111111111111111111111111111111111111111000000000000000000000000000000000000000011111111111111111111110000000000000",
+      "000000000000011111111111111111111110000000000000000000000000000000000000000111111111111111111111111111111111111111111000000000000000000000000000000000000000011111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000010000000000000000111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111000000000000000010000000000000",
+      "000000000000010000000000000000111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111000000000000000010000000000000",
+      "000000000000010000000000000000111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111110000000000000000000000000000001111111111000000000000000010000000000000",
+      "000000000000010000000000000000111111111110000000000000000000000000000111111111111111111111111111111111111111111111111111111000000000000000000000000000011111111111000000000000000010000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111110000000000111000000011111111111111111111111111111111111111111111110000000111000000000011111111100000000111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111110000000000111000000011111111111111111111111111111111111111111111110000000111000000000011111111100000000111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111110000000000111000000011111111111111111111111111111111111111111111110000000111000000000011111111100000000111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111110000000000111000000011111111111111111111111111111111111111111111110000000111000000000011111111100000000111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111110000000000111000000011111111111111111111111111111111111111111111110000000111000000000011111111100000000111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111111111111111111000000011111111111111111111111111111111111111111111110000000111111111111111111111100000000111111111111111111111110000000000000",
+      "000000000000011111111111111111111111000000001111111110000000001111000000011111111111111111111111111111111111111111111110000000111100000000011111111100000000111111111111111111111110000000000000",
+      "000000000000000000000000000000000000000000000000000110000000001111000000011111111111111111111111111111111111111111111110000000111100000000011110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000110000000001111000000011111111111111111111111111111111111111111111110000000111100000000011110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000110000000001111111111111111111111111111111111111111111111111111111111111111111100000000011110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "spawn": [
+      772,
+      1468
+    ],
+    "interaction_triggers": [
+      {
+        "id": "moon.illusion.exit.0",
+        "object_id": "M04_002",
+        "x": 438,
+        "y": 783,
+        "radius": 140,
+        "approach": [
+          436,
+          780
+        ],
+        "approach_distance": 3.6
+      },
+      {
+        "id": "moon.illusion.exit.1",
+        "object_id": "M04_003",
+        "x": 1098,
+        "y": 783,
+        "radius": 140,
+        "approach": [
+          1100,
+          780
+        ],
+        "approach_distance": 3.6
+      },
+      {
+        "id": "moon.illusion.exit.2",
+        "object_id": "M04_004",
+        "x": 438,
+        "y": 1236,
+        "radius": 140,
+        "approach": [
+          436,
+          1252
+        ],
+        "approach_distance": 16.1
+      },
+      {
+        "id": "moon.illusion.exit.3",
+        "object_id": "M04_005",
+        "x": 1098,
+        "y": 1236,
+        "radius": 140,
+        "approach": [
+          1100,
+          1252
+        ],
+        "approach_distance": 16.1
+      },
+      {
+        "id": "moon.illusion.exit.4",
+        "object_id": "M04_006",
+        "x": 768,
+        "y": 1444,
+        "radius": 140,
+        "approach": [
+          764,
+          1444
+        ],
+        "approach_distance": 4.0
+      }
+    ]
+  },
+  "colliders_file": "colliders.json",
+  "review_changes": [
+    "Side/front walls share capped corners and return walls.",
+    "Requested Jardim sidewall reused in modules only; front masonry and all objects preserved."
+  ],
+  "ground_clip": "Camadas/08_limite_props.png",
+  "animation_profile": "living_water_void_foliage_emissive",
+  "module_sidewall": {
+    "source": "C:\\Projetos\\MementoMori-V6-Alternativa\\V62_Producao_Externa\\R5_Montagem_Modular\\Jardim_Revisao\\Camadas\\05_paredes_conectadas.png",
+    "crop": [
+      78,
+      490,
+      113,
+      530
+    ],
+    "tile_size": [
+      35,
+      40
+    ],
+    "right_flip_x": true,
+    "corridor_style_unchanged": true
+  }
+}

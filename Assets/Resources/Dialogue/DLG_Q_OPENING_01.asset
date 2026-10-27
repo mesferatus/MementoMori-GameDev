@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_Q_OPENING_01
   lines:
-  - Text: ...De novo este quarto.
+  - Text: "...N\xE3o. N\xE3o era para terminar assim."
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: Como se ele lembrasse de mim melhor do que eu mesma.
+  - Text: Eu fiz o ritual. Tenho certeza de que fiz.
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -30,7 +30,31 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "H\xE1 alguma coisa que precisa ser refeita."
+  - Text: O que aconteceu depois?
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: "Minha cama. Meu grim\xF3rio. Mas essa janela..."
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: "Esse n\xE3o \xE9 o meu quarto."
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: O que eu esqueci?
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0

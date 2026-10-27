@@ -1,0 +1,1240 @@
+fileFormatVersion: 2
+guid: 92a0cec226d68dc4c81cc675cacc2fda
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 545879008584353763
+    second: MOON_10_SIGIL_0
+  - first:
+      213: 1380757346216895516
+    second: MOON_10_SIGIL_1
+  - first:
+      213: -7667370447137242364
+    second: MOON_10_SIGIL_2
+  - first:
+      213: 6224562761395864457
+    second: MOON_10_SIGIL_3
+  - first:
+      213: -6767478061723230665
+    second: MOON_10_SIGIL_4
+  - first:
+      213: 490303043063816410
+    second: MOON_10_SIGIL_5
+  - first:
+      213: -1114988723005023064
+    second: MOON_10_SIGIL_6
+  - first:
+      213: -1077972476812878372
+    second: MOON_10_SIGIL_7
+  - first:
+      213: -3477471372179407675
+    second: MOON_10_SIGIL_8
+  - first:
+      213: 4728053848727517167
+    second: MOON_10_SIGIL_9
+  - first:
+      213: 9070537382518411168
+    second: MOON_10_SIGIL_10
+  - first:
+      213: -1003064651364446633
+    second: MOON_10_SIGIL_11
+  - first:
+      213: -988985351673870401
+    second: MOON_10_SIGIL_12
+  - first:
+      213: 3040526015356276884
+    second: MOON_10_SIGIL_13
+  - first:
+      213: 494625054508046385
+    second: MOON_10_SIGIL_14
+  - first:
+      213: 8823750832348631293
+    second: MOON_10_SIGIL_15
+  - first:
+      213: 2336732714400525496
+    second: MOON_10_SIGIL_16
+  - first:
+      213: 8355512503373825452
+    second: MOON_10_SIGIL_17
+  - first:
+      213: -3397245258100478276
+    second: MOON_10_SIGIL_18
+  - first:
+      213: 6906887796630855730
+    second: MOON_10_SIGIL_19
+  - first:
+      213: 4128355424487889463
+    second: MOON_10_SIGIL_20
+  - first:
+      213: 1569778068701500232
+    second: MOON_10_SIGIL_21
+  - first:
+      213: 3842888277181138139
+    second: MOON_10_SIGIL_22
+  - first:
+      213: -3158651210674355981
+    second: MOON_10_SIGIL_23
+  - first:
+      213: -4222438222951057093
+    second: MOON_10_SIGIL_24
+  - first:
+      213: 1030043868637785042
+    second: MOON_10_SIGIL_25
+  - first:
+      213: 792790042731277153
+    second: MOON_10_SIGIL_26
+  - first:
+      213: 5374782588606875683
+    second: MOON_10_SIGIL_27
+  - first:
+      213: -7370763895009753932
+    second: MOON_10_SIGIL_28
+  - first:
+      213: 4943390772588721874
+    second: MOON_10_SIGIL_29
+  - first:
+      213: 2695737046398803627
+    second: MOON_10_SIGIL_30
+  - first:
+      213: 7089734766943592904
+    second: MOON_10_SIGIL_31
+  - first:
+      213: 5537650768152943288
+    second: MOON_10_SIGIL_32
+  - first:
+      213: 7275466852968199678
+    second: MOON_10_SIGIL_33
+  - first:
+      213: -155146252130328452
+    second: MOON_10_SIGIL_34
+  - first:
+      213: 7795961248947947409
+    second: MOON_10_SIGIL_35
+  - first:
+      213: -4175023262428405066
+    second: MOON_10_SIGIL_36
+  - first:
+      213: -4138354682009151060
+    second: MOON_10_SIGIL_37
+  - first:
+      213: -7419371775643992047
+    second: MOON_10_SIGIL_38
+  - first:
+      213: -1558886570901348222
+    second: MOON_10_SIGIL_39
+  - first:
+      213: -2901881437003640859
+    second: MOON_10_SIGIL_40
+  - first:
+      213: -8622627885947255597
+    second: MOON_10_SIGIL_41
+  - first:
+      213: -5340901231947821190
+    second: MOON_10_SIGIL_42
+  - first:
+      213: 4544663829244810551
+    second: MOON_10_SIGIL_43
+  - first:
+      213: 6946190797903578381
+    second: MOON_10_SIGIL_44
+  - first:
+      213: -4355905364689045748
+    second: MOON_10_SIGIL_45
+  - first:
+      213: -97678039718178689
+    second: MOON_10_SIGIL_46
+  - first:
+      213: -7194893781039875577
+    second: MOON_10_SIGIL_47
+  - first:
+      213: -1686259811942242168
+    second: MOON_10_SIGIL_48
+  - first:
+      213: 6442913689005257177
+    second: MOON_10_SIGIL_49
+  - first:
+      213: 1613995906879265594
+    second: MOON_10_SIGIL_50
+  - first:
+      213: 8755551762422554997
+    second: MOON_10_SIGIL_51
+  - first:
+      213: 7480116639299974794
+    second: MOON_10_SIGIL_52
+  - first:
+      213: -2392866990093598003
+    second: MOON_10_SIGIL_53
+  - first:
+      213: 4849857613485073801
+    second: MOON_10_SIGIL_54
+  - first:
+      213: -2163966613215223758
+    second: MOON_10_SIGIL_55
+  - first:
+      213: 5235457932047066728
+    second: MOON_10_SIGIL_56
+  - first:
+      213: 7689644300744624338
+    second: MOON_10_SIGIL_57
+  - first:
+      213: -8834074877114556471
+    second: MOON_10_SIGIL_58
+  - first:
+      213: 8232593414341846446
+    second: MOON_10_SIGIL_59
+  - first:
+      213: -5375958917827957133
+    second: MOON_10_SIGIL_60
+  - first:
+      213: 5354045607857364931
+    second: MOON_10_SIGIL_61
+  - first:
+      213: -4060530580121477904
+    second: MOON_10_SIGIL_62
+  - first:
+      213: -4057623101416876647
+    second: MOON_10_SIGIL_63
+  - first:
+      213: -2297195094182429324
+    second: MOON_10_SIGIL_64
+  - first:
+      213: -8773449295267587594
+    second: MOON_10_SIGIL_65
+  - first:
+      213: -7536738411864240011
+    second: MOON_10_SIGIL_66
+  - first:
+      213: 3378852038975398933
+    second: MOON_10_SIGIL_67
+  - first:
+      213: 4037284793301708748
+    second: MOON_10_SIGIL_68
+  - first:
+      213: 5314950703181850888
+    second: MOON_10_SIGIL_69
+  - first:
+      213: -7559200254365846465
+    second: MOON_10_SIGIL_70
+  - first:
+      213: 8242551524655461628
+    second: MOON_10_SIGIL_71
+  - first:
+      213: -5116770008668620583
+    second: MOON_10_SIGIL_72
+  - first:
+      213: -2626428981513061417
+    second: MOON_10_SIGIL_73
+  - first:
+      213: -4401114459839593959
+    second: MOON_10_SIGIL_74
+  - first:
+      213: -3599884797574663027
+    second: MOON_10_SIGIL_75
+  - first:
+      213: -1262387821056161887
+    second: MOON_10_SIGIL_76
+  - first:
+      213: 8440965014091359150
+    second: MOON_10_SIGIL_77
+  - first:
+      213: -2634778044674143123
+    second: MOON_10_SIGIL_78
+  - first:
+      213: -3916979996685475131
+    second: MOON_10_SIGIL_79
+  - first:
+      213: 3949880094950311408
+    second: MOON_10_SIGIL_80
+  - first:
+      213: -6927636071520582453
+    second: MOON_10_SIGIL_81
+  - first:
+      213: -8504777353906088994
+    second: MOON_10_SIGIL_82
+  - first:
+      213: -6829554651757921094
+    second: MOON_10_SIGIL_83
+  - first:
+      213: -8314848634655096815
+    second: MOON_10_SIGIL_84
+  - first:
+      213: -4424622215143724809
+    second: MOON_10_SIGIL_85
+  - first:
+      213: -1533776264362494002
+    second: MOON_10_SIGIL_86
+  - first:
+      213: -5264259600844465083
+    second: MOON_10_SIGIL_87
+  - first:
+      213: -5116931383661317752
+    second: MOON_10_SIGIL_88
+  - first:
+      213: -8362837506779706929
+    second: MOON_10_SIGIL_89
+  - first:
+      213: 115385285073113856
+    second: MOON_10_SIGIL_90
+  - first:
+      213: 8060835050550927588
+    second: MOON_10_SIGIL_91
+  - first:
+      213: 2926273935570329819
+    second: MOON_10_SIGIL_92
+  - first:
+      213: -986694914604469058
+    second: MOON_10_SIGIL_93
+  - first:
+      213: -6002612860453453412
+    second: MOON_10_SIGIL_94
+  - first:
+      213: -6559348148080407219
+    second: MOON_10_SIGIL_95
+  - first:
+      213: 9179154231553077816
+    second: MOON_10_SIGIL_96
+  - first:
+      213: 3339506669713849142
+    second: MOON_10_SIGIL_97
+  - first:
+      213: -4040198576525659536
+    second: MOON_10_SIGIL_98
+  - first:
+      213: 1263318011496166228
+    second: MOON_10_SIGIL_99
+  - first:
+      213: 4628158934197806718
+    second: MOON_10_SIGIL_100
+  - first:
+      213: -1690824900378209828
+    second: MOON_10_SIGIL_101
+  - first:
+      213: -9124296139825751044
+    second: MOON_10_SIGIL_102
+  - first:
+      213: 2428778911796110945
+    second: MOON_10_SIGIL_103
+  - first:
+      213: 4637734583210115972
+    second: MOON_10_SIGIL_104
+  - first:
+      213: 2830434231763501697
+    second: MOON_10_SIGIL_105
+  - first:
+      213: 3282270451358882041
+    second: MOON_10_SIGIL_106
+  - first:
+      213: 644933017089058516
+    second: MOON_10_SIGIL_107
+  - first:
+      213: 5063955783729707760
+    second: MOON_10_SIGIL_108
+  - first:
+      213: -3896153297878288586
+    second: MOON_10_SIGIL_109
+  - first:
+      213: -5382085505332197869
+    second: MOON_10_SIGIL_110
+  - first:
+      213: 889796776568850491
+    second: MOON_10_SIGIL_111
+  - first:
+      213: 7327363859381175337
+    second: MOON_10_SIGIL_112
+  - first:
+      213: 1603070918341555683
+    second: MOON_10_SIGIL_113
+  - first:
+      213: -5906674604974448278
+    second: MOON_10_SIGIL_114
+  - first:
+      213: -7598607931653776875
+    second: MOON_10_SIGIL_115
+  - first:
+      213: -3317419907968540943
+    second: MOON_10_SIGIL_116
+  - first:
+      213: 5040101602169447939
+    second: MOON_10_SIGIL_117
+  - first:
+      213: -3864536750000815519
+    second: MOON_10_SIGIL_118
+  - first:
+      213: -2453412575784185590
+    second: MOON_10_SIGIL_119
+  - first:
+      213: 6809702335553947268
+    second: MOON_10_SIGIL_120
+  - first:
+      213: 4159350899064214822
+    second: MOON_10_SIGIL_121
+  - first:
+      213: -45461677357994133
+    second: MOON_10_SIGIL_122
+  - first:
+      213: 2988288217851541863
+    second: MOON_10_SIGIL_123
+  - first:
+      213: 8562313427604027189
+    second: MOON_10_SIGIL_124
+  - first:
+      213: -9128666989990212255
+    second: MOON_10_SIGIL_125
+  - first:
+      213: 9138874849040227085
+    second: MOON_10_SIGIL_126
+  - first:
+      213: -6024851183666027192
+    second: MOON_10_SIGIL_127
+  - first:
+      213: 8845903445701356278
+    second: MOON_10_SIGIL_128
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OUTER_RING_INACTIVE
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ead16abff13e114daa5b949b00240c3
+      internalID: -693161456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OUTER_RING_SELECTED
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc9a28f6a424d64488bbb62da20c325
+      internalID: 1681788618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OUTER_RING_PARTIAL
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889e16f106f0d934e8b0c544f9fc0de0
+      internalID: -1524599631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OUTER_RING_CORRECT
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48029a2267e1d0c4f930970eb2b62b7d
+      internalID: -464767190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OUTER_RING_ERROR
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1fa4ea7f3341347be8a0c4ad0f58a4
+      internalID: 2034300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OUTER_RING_SOLVED
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcdb7926af56464cb1c4762a1ce33df
+      internalID: -1054466855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIDDLE_RING_INACTIVE
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8a778e3a4536b49acda7f15a6d3ec0
+      internalID: 2002850313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIDDLE_RING_SELECTED
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a44e19a765c964409d3ebd47ab2ade6
+      internalID: -1850628432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIDDLE_RING_PARTIAL
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a217c6a63686642b0c486aab249608
+      internalID: 1396249411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIDDLE_RING_CORRECT
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c6691a4dc8418438627148a0b55557
+      internalID: 763850595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIDDLE_RING_ERROR
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a6d49971fec2440abfc1c4ff1ed0ed
+      internalID: 682529942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIDDLE_RING_SOLVED
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684c2132ee7e16e4d833ee333fa08d1c
+      internalID: -1614739142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INNER_RING_INACTIVE
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab681488a6e95884991a8275536d3769
+      internalID: 770575256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INNER_RING_SELECTED
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0a8664762c29247b25841bc134b3c0
+      internalID: -49690958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INNER_RING_PARTIAL
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a376b3fa356e3ae45ac5cfab1f13adeb
+      internalID: 1175596697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INNER_RING_CORRECT
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0882ce2a778edf48953405c56605a2a
+      internalID: 1279889212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INNER_RING_ERROR
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c831490de830a349a36b8db1b0f2c45
+      internalID: 702487386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INNER_RING_SOLVED
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acffe9df7cd256f498bf22fd52683a3f
+      internalID: 1716277261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CENTER_INACTIVE
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0645d3defc9dc9d4ab62e5d830763193
+      internalID: -1904212474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CENTER_SELECTED
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bda2e4882000d14d9cee2dfd5ec6fa1
+      internalID: -48151899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CENTER_PARTIAL
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333359f42b458054da2cf94019248f84
+      internalID: -963541427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CENTER_CORRECT
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed21c0c6276f0d14e9808b59af0ec21b
+      internalID: 724059400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CENTER_ERROR
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f835624cd3bb8714181f25267235d5c6
+      internalID: -827176036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CENTER_SOLVED
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508453256ee07654db780b0abc066b13
+      internalID: 466201029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLYPH_MOON
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174843105894fca40993b63087ff0c45
+      internalID: -1259242672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLYPH_GRIMOIRE
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c64aba0e793574d93777ae9f003617
+      internalID: 2016795922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLYPH_HAND
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc837412da9a28a4eb9397dc0b2963ed
+      internalID: 374038212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DECORATION
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a4fdd2ce36cf24782f541f6400fa30
+      internalID: 438770909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASE
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684f33a75eead4f44a6fdc014cf29007
+      internalID: -1198565941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PEDESTAL
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5b1459affb23c479a2fad1f2e986c2
+      internalID: 1947276097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLOW
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078c8f00bae93fd47b14ad004ff8b52c
+      internalID: -1902147140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b657174779743488a2872ca91443a6
+      internalID: -1782345021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d035fa5b268dfa1458d0ec614f40c234
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BASE: -1198565941
+      CENTER_CORRECT: 724059400
+      CENTER_ERROR: -827176036
+      CENTER_INACTIVE: -1904212474
+      CENTER_PARTIAL: -963541427
+      CENTER_SELECTED: -48151899
+      CENTER_SOLVED: 466201029
+      DECORATION: 438770909
+      FX: -1782345021
+      GLOW: -1902147140
+      GLYPH_GRIMOIRE: 2016795922
+      GLYPH_HAND: 374038212
+      GLYPH_MOON: -1259242672
+      INNER_RING_CORRECT: 1279889212
+      INNER_RING_ERROR: 702487386
+      INNER_RING_INACTIVE: 770575256
+      INNER_RING_PARTIAL: 1175596697
+      INNER_RING_SELECTED: -49690958
+      INNER_RING_SOLVED: 1716277261
+      MIDDLE_RING_CORRECT: 763850595
+      MIDDLE_RING_ERROR: 682529942
+      MIDDLE_RING_INACTIVE: 2002850313
+      MIDDLE_RING_PARTIAL: 1396249411
+      MIDDLE_RING_SELECTED: -1850628432
+      MIDDLE_RING_SOLVED: -1614739142
+      OUTER_RING_CORRECT: -464767190
+      OUTER_RING_ERROR: 2034300134
+      OUTER_RING_INACTIVE: -693161456
+      OUTER_RING_PARTIAL: -1524599631
+      OUTER_RING_SELECTED: 1681788618
+      OUTER_RING_SOLVED: -1054466855
+      PEDESTAL: 1947276097
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

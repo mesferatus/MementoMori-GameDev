@@ -1,3 +1,4 @@
+using System.Linq;
 using System.IO;
 using System.Reflection;
 using MementoMori.Core;
@@ -35,7 +36,7 @@ namespace MementoMori.Tests.EditMode
         [Test]
         public void MoonSceneBindsNarrativeControllerWithoutChangingPuzzleContracts()
         {
-            var scene = File.ReadAllText("Assets/Scenes/DominioLua.unity");
+            var scene = File.ReadAllText(UnityEditor.EditorBuildSettings.scenes.Single(scene => scene.enabled && Path.GetFileNameWithoutExtension(scene.path) == "DominioLua").path);
             Assert.That(scene, Does.Contain("MementoMori.Narrative.MoonDomainNarrativeController"));
             Assert.That(scene, Does.Contain("correctSymbolIds:\n  - Delayed\n  - Ahead\n  - Room"));
             Assert.That(scene, Does.Contain("mirrorCorrectSymbols:\n  - Delayed\n  - Ahead\n  - Room"));

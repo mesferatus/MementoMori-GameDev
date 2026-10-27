@@ -16,6 +16,8 @@ namespace MementoMori.UI
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape)
+                && !MementoMori.Regions.V6Challenge.AnyOpen
+                && MementoMori.Regions.V6Challenge.EscapeConsumedFrame != Time.frameCount
                 && !MementoMori.World.GrimoireScreen.AnyOpen
                 && MementoMori.World.GrimoireScreen.EscapeConsumedFrame != Time.frameCount)
                 Toggle();
@@ -68,3 +70,4 @@ namespace MementoMori.UI
         public void ReturnToMenu() { Time.timeScale = 1f; InputGate.Instance?.ClearAll(); GameManager.Instance?.ReturnToMenu(); }
     }
 }
+

@@ -22,6 +22,8 @@ namespace MementoMori.Core
     {
         public static GameState Instance { get; private set; }
 
+        private PuzzleRegistry puzzles;
+        public PuzzleRegistry Puzzles => puzzles ??= new PuzzleRegistry();
         public bool RitualCompleted { get; private set; }
         public bool PoeRevealed { get; private set; }
         public bool MirrorPuzzleSolved { get; private set; }
@@ -58,6 +60,7 @@ namespace MementoMori.Core
 
         public void ResetSession()
         {
+            Puzzles.Reset();
             flags.Clear();
             counters.Clear();
             puzzleProgress.Clear();
@@ -127,6 +130,7 @@ namespace MementoMori.Core
             var snapshot = new CheckpointSnapshot
             {
                 scene = sceneName,
+                solvedPuzzleIds = Puzzles.Snapshot(),
                 position = safePosition,
                 ritualCompleted = RitualCompleted,
                 poeRevealed = PoeRevealed,
@@ -147,7 +151,8 @@ namespace MementoMori.Core
             if (string.IsNullOrEmpty(json)) return false;
             var snapshot = JsonUtility.FromJson<CheckpointSnapshot>(json);
             if (snapshot == null || string.IsNullOrEmpty(snapshot.scene)) return false;
-            flags.Clear(); counters.Clear();
+            flags.Clear(); counters.Clear(); puzzleProgress.Clear(); checkpointCounters.Clear();
+            Puzzles.Restore(snapshot.solvedPuzzleIds);
             if (snapshot.flags != null) foreach (var value in snapshot.flags) flags.Add((StoryFlag)value);
             if (snapshot.counterIds != null && snapshot.counterValues != null)
                 for (var i = 0; i < Mathf.Min(snapshot.counterIds.Length, snapshot.counterValues.Length); i++) counters[snapshot.counterIds[i]] = snapshot.counterValues[i];
@@ -158,7 +163,7 @@ namespace MementoMori.Core
         }
 
         public void SetRitualCompleted() => RitualCompleted = true;
-        public void SetPoeRevealed() => PoeRevealed = true;
+        public void SetPoeRevealed() { PoeRevealed = true; SetFlag(StoryFlag.PoeRevealed); }
         public void SetMirrorPuzzleSolved() => MirrorPuzzleSolved = true;
         public void SetSigilPuzzleSolved() => SigilPuzzleSolved = true;
         public void SetFragmentCollected() { FragmentCollected = true; SetFlag(StoryFlag.FragmentCollected); }
@@ -166,6 +171,7 @@ namespace MementoMori.Core
         [Serializable]
         private sealed class CheckpointSnapshot
         {
+            public string[] solvedPuzzleIds;
             public string scene;
             public Vector2 position;
             public bool ritualCompleted, poeRevealed, mirrorPuzzleSolved, sigilPuzzleSolved, fragmentCollected;
@@ -175,3 +181,7 @@ namespace MementoMori.Core
         }
     }
 }
+
+
+
+

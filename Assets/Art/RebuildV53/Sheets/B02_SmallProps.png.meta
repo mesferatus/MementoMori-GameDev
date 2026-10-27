@@ -1,0 +1,750 @@
+fileFormatVersion: 2
+guid: 73ec2568bf69eb742a44b27cb0cdafbf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4914643913964270061
+    second: B02_SmallProps_0
+  - first:
+      213: 1754600836058640264
+    second: B02_SmallProps_1
+  - first:
+      213: 6975520481072329064
+    second: B02_SmallProps_2
+  - first:
+      213: -3586767247720350551
+    second: B02_SmallProps_3
+  - first:
+      213: 6177272452320557567
+    second: B02_SmallProps_4
+  - first:
+      213: -4360420944188582766
+    second: B02_SmallProps_5
+  - first:
+      213: 3607310181414266935
+    second: B02_SmallProps_6
+  - first:
+      213: -8154657179474174933
+    second: B02_SmallProps_7
+  - first:
+      213: 5893010329004988189
+    second: B02_SmallProps_8
+  - first:
+      213: -3726289926573028110
+    second: B02_SmallProps_9
+  - first:
+      213: 2741212210562956907
+    second: B02_SmallProps_10
+  - first:
+      213: 192151816162509062
+    second: B02_SmallProps_11
+  - first:
+      213: 9202261439893938061
+    second: B02_SmallProps_12
+  - first:
+      213: 379580686438768602
+    second: B02_SmallProps_13
+  - first:
+      213: -8356241879839622037
+    second: B02_SmallProps_14
+  - first:
+      213: -6707517375846475193
+    second: B02_SmallProps_15
+  - first:
+      213: -921110768334031991
+    second: B02_SmallProps_16
+  - first:
+      213: 1780650505995538949
+    second: B02_SmallProps_17
+  - first:
+      213: 8154947971529144837
+    second: B02_SmallProps_18
+  - first:
+      213: 2793500576267677252
+    second: B02_SmallProps_19
+  - first:
+      213: -2066016839057923463
+    second: B02_SmallProps_20
+  - first:
+      213: 1044459274605432208
+    second: B02_SmallProps_21
+  - first:
+      213: -8928813123155697079
+    second: B02_SmallProps_22
+  - first:
+      213: -1197296039058129465
+    second: B02_SmallProps_23
+  - first:
+      213: 8205063302133616087
+    second: B02_SmallProps_24
+  - first:
+      213: -6540013432082297856
+    second: B02_SmallProps_25
+  - first:
+      213: -3180285592075724572
+    second: B02_SmallProps_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: B02_SmallProps_candle
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1208
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25581ada19943c544b1b26d6d06543a6
+      internalID: 1837873474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_candles
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1200
+        width: 32
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76aa598d6e5752f4ba187674cfc1832e
+      internalID: 1412665238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_candelabrum
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1176
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473c4e6f7f1415742a9d9c2d32350625
+      internalID: -152422286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_brazier
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1200
+        width: 48
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77abf22c72f159489225bbf15e4341c
+      internalID: 813300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_lamp
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 968
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7621e7555f3b4045965a02bce5c17d1
+      internalID: -1989360266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_sconce
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 984
+        width: 24
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4e4f8e74683a6439506a2a46680e04
+      internalID: -1735631776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_book
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1000
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae3e62f002565443bf1276d8c74fdf2
+      internalID: 2033615366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_books
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1000
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a43b8ccf10b98429f4ecfa7b5a55fc
+      internalID: 1224408846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_book_open
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 792
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8728d1b679d8440b6ad65bb0bbbffa
+      internalID: -93608922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_scroll
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 792
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6f21053a716be409a6cba173d894c4
+      internalID: 1770162992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_ink
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 792
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d458f3238f22eba45b661c33d55e3161
+      internalID: -1211924459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_skull
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 792
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961cb16e51c73ab4385c2e021ebe9a23
+      internalID: 70411014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_urn
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 568
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23abd28d15d4fec4099e2d52f62658b4
+      internalID: -1758291668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_jar
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 584
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5ea5f6a964fd541bbc783366fa0564
+      internalID: -807355880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_vase
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 568
+        width: 24
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c275915fc135940915b9e17fac0516
+      internalID: 454573232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_chest
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 584
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2c7ef4436ff0e40a2e2b38a72ffa2e
+      internalID: -778777594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_crate
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 376
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36d901b25734bf4cb8191f3e5ea8228
+      internalID: -1609760846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_stool
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 376
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f4cd1c2063ed04ab4afc4855dcd334
+      internalID: 1897662172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_chain_straight
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 392
+        width: 64
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055becc556156cc4181cf3659e653c47
+      internalID: -1490853159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_chain_sag
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 376
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c52e5989f70f645b24de5f883a0c9d
+      internalID: 873360002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_chain_vertical
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 136
+        width: 16
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711cf0ee4ac2b3d4f861db96ba628c09
+      internalID: -921850889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_rubble
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 168
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa50a59023bc8b4fa54369f53429e16
+      internalID: -1707256647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_crystals
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 160
+        width: 32
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e291f60a24b3846a9c442edcbc0a20
+      internalID: -865058515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B02_SmallProps_dish
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 176
+        width: 32
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7aeb2dba51f1c540903a7e5104d087b
+      internalID: -1906782400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b274502b5a588144b91b79769ad1dbb8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      B02_SmallProps_book: 2033615366
+      B02_SmallProps_book_open: -93608922
+      B02_SmallProps_books: 1224408846
+      B02_SmallProps_brazier: 813300
+      B02_SmallProps_candelabrum: -152422286
+      B02_SmallProps_candle: 1837873474
+      B02_SmallProps_candles: 1412665238
+      B02_SmallProps_chain_sag: 873360002
+      B02_SmallProps_chain_straight: -1490853159
+      B02_SmallProps_chain_vertical: -921850889
+      B02_SmallProps_chest: -778777594
+      B02_SmallProps_crate: -1609760846
+      B02_SmallProps_crystals: -865058515
+      B02_SmallProps_dish: -1906782400
+      B02_SmallProps_ink: -1211924459
+      B02_SmallProps_jar: -807355880
+      B02_SmallProps_lamp: -1989360266
+      B02_SmallProps_rubble: -1707256647
+      B02_SmallProps_sconce: -1735631776
+      B02_SmallProps_scroll: 1770162992
+      B02_SmallProps_skull: 70411014
+      B02_SmallProps_stool: 1897662172
+      B02_SmallProps_urn: -1758291668
+      B02_SmallProps_vase: 454573232
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -43,3 +43,19 @@
 /Evidencias/Screenshots/UnityCaptures/
 
 # Assets da Luiza: versionados para compartilhamento no repositório.
+
+# Local tools, recovery files and academic evidence
+/.codex/
+/.agents/
+/ArtStaging/
+/Evidencias/
+/00_REFERENCIAS_V5_APROVADAS/
+/V6*_Finalizacao/
+/V62_Producao_Externa/
+/My project/
+*.bak
+*.orig
+*.rej
+
+# Unity Test Runner temporary scene
+/Assets/InitTestScene*.unity*

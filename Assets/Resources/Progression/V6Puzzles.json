@@ -1,0 +1,11 @@
+{
+  "labyrinthRequired": [
+    "lab.echoes", "lab.false_door", "lab.voice_well",
+    "lab.skyless_courtyard", "lab.core", "lab.moon_activation"
+  ],
+  "moonRequired": [
+    "moon.garden", "moon.mirrors", "moon.illusory_corridor",
+    "moon.cycles", "moon.sigil"
+  ],
+  "optional": []
+}

@@ -49,13 +49,13 @@ namespace MementoMori.Narrative
 
             QueueWhen(state.HasFlag(StoryFlag.EchoTrial01Complete), echoProgress);
             QueueWhen(state.HasFlag(StoryFlag.EchoTrial03Complete), echoConclusion);
-            QueueWhen(state.HasFlag(StoryFlag.AndrealphusMeeting01Complete), andrealphusAfter);
+            // V6AndrealphusAppearance owns the first meeting, once.
             QueueWhen(state.HasFlag(StoryFlag.AndrealphusMeeting01Complete), poeAfterAndrealphus);
 
-            var portal = FindFirstObjectByType<Portal>();
-            QueueWhen(state.HasFlag(StoryFlag.EchoTrial03Complete) && portal != null && portal.CanInteract(default), portalUnlocked);
+            
+            QueueWhen(state.Puzzles.LabyrinthGateOpen, portalUnlocked);
 
-            if (pending.Count == 0 || DialogueManager.Instance == null || DialogueManager.Instance.IsOpen)
+            if (MementoMori.Regions.V6Challenge.AnyOpen || pending.Count == 0 || DialogueManager.Instance == null || DialogueManager.Instance.IsOpen)
                 return;
 
             DialogueManager.Instance.StartDialogue(pending.Dequeue());
@@ -74,3 +74,4 @@ namespace MementoMori.Narrative
         }
     }
 }
+

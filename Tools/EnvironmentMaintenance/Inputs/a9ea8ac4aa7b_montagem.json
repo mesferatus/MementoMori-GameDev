@@ -1,0 +1,4599 @@
+{
+  "id": "M02",
+  "name": "Jardim Lunar — revisão por referência",
+  "size": [
+    1536,
+    1728
+  ],
+  "objects": [
+    {
+      "id": "M02_000",
+      "asset": "Assets/tapete_lua.png",
+      "rect": [
+        663,
+        1104,
+        210,
+        496
+      ],
+      "anchor": [
+        768,
+        1600
+      ],
+      "layer": "tapete",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_fachada_ala_esquerda",
+      "asset": "Assets/ala_esquerda.png",
+      "rect": [
+        72,
+        46,
+        250,
+        500
+      ],
+      "anchor": [
+        72,
+        46
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_fachada_pilar_esquerdo",
+      "asset": "Assets/pilar_esquerdo.png",
+      "rect": [
+        322,
+        46,
+        209,
+        500
+      ],
+      "anchor": [
+        72,
+        46
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_fachada_portal_central",
+      "asset": "Assets/portal_central.png",
+      "rect": [
+        531,
+        46,
+        474,
+        500
+      ],
+      "anchor": [
+        72,
+        46
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_fachada_pilar_direito",
+      "asset": "Assets/pilar_direito.png",
+      "rect": [
+        1005,
+        46,
+        209,
+        500
+      ],
+      "anchor": [
+        72,
+        46
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_fachada_ala_direita",
+      "asset": "Assets/ala_direita.png",
+      "rect": [
+        1214,
+        46,
+        250,
+        500
+      ],
+      "anchor": [
+        72,
+        46
+      ],
+      "layer": "fachada",
+      "motion": null,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_006",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        164,
+        520,
+        91,
+        100
+      ],
+      "anchor": [
+        209.10135195273418,
+        620.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_007",
+      "asset": "Assets/arbusto_brilho.png",
+      "rect": [
+        160,
+        568,
+        94,
+        100
+      ],
+      "anchor": [
+        207.03640332030858,
+        667.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_008",
+      "asset": "Assets/arbusto_azul.png",
+      "rect": [
+        151,
+        615,
+        104,
+        100
+      ],
+      "anchor": [
+        203.06792889912538,
+        715.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_009",
+      "asset": "Assets/arbusto_estrela.png",
+      "rect": [
+        177,
+        662,
+        90,
+        100
+      ],
+      "anchor": [
+        222.4766304865769,
+        762.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_010",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        188,
+        710,
+        91,
+        100
+      ],
+      "anchor": [
+        233.16607294134008,
+        810.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_011",
+      "asset": "Assets/arbusto_brilho.png",
+      "rect": [
+        177,
+        758,
+        94,
+        100
+      ],
+      "anchor": [
+        223.64167536851986,
+        857.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_012",
+      "asset": "Assets/arbusto_azul.png",
+      "rect": [
+        181,
+        816,
+        93,
+        89
+      ],
+      "anchor": [
+        227.43453782814075,
+        905.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_013",
+      "asset": "Assets/arbusto_estrela.png",
+      "rect": [
+        161,
+        852,
+        90,
+        100
+      ],
+      "anchor": [
+        205.8814242583045,
+        952.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_014",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        170,
+        900,
+        91,
+        100
+      ],
+      "anchor": [
+        215.86992876520875,
+        1000.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_015",
+      "asset": "Assets/arbusto_brilho.png",
+      "rect": [
+        157,
+        948,
+        94,
+        100
+      ],
+      "anchor": [
+        204.49601830451658,
+        1047.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_016",
+      "asset": "Assets/arbusto_azul.png",
+      "rect": [
+        168,
+        1005,
+        94,
+        90
+      ],
+      "anchor": [
+        215.24577020550197,
+        1095.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_017",
+      "asset": "Assets/arbusto_estrela.png",
+      "rect": [
+        192,
+        1042,
+        90,
+        100
+      ],
+      "anchor": [
+        237.4469403930097,
+        1142.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_018",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        167,
+        1090,
+        91,
+        100
+      ],
+      "anchor": [
+        212.01197798661957,
+        1190.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_019",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        296,
+        570,
+        84,
+        80
+      ],
+      "anchor": [
+        338.0,
+        650.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_020",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        303,
+        614,
+        86,
+        64
+      ],
+      "anchor": [
+        346.2687283017457,
+        678.2352941176471
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_021",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        316,
+        667,
+        77,
+        39
+      ],
+      "anchor": [
+        354.2558749784219,
+        706.4705882352941
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_022",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        322,
+        689,
+        79,
+        46
+      ],
+      "anchor": [
+        361.689447329481,
+        734.7058823529412
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_023",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        326,
+        683,
+        84,
+        80
+      ],
+      "anchor": [
+        368.3163039640951,
+        762.9411764705883
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_024",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        329,
+        724,
+        89,
+        67
+      ],
+      "anchor": [
+        373.91077522761077,
+        791.1764705882354
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_025",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        334,
+        775,
+        88,
+        44
+      ],
+      "anchor": [
+        378.2823481109778,
+        819.4117647058824
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_026",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        334,
+        793,
+        95,
+        55
+      ],
+      "anchor": [
+        381.28215394277686,
+        847.6470588235294
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_027",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        345,
+        804,
+        76,
+        72
+      ],
+      "anchor": [
+        382.8080379332765,
+        875.8823529411765
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_028",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        344,
+        845,
+        78,
+        59
+      ],
+      "anchor": [
+        382.8080379332766,
+        904.1176470588235
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_029",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        333,
+        884,
+        96,
+        48
+      ],
+      "anchor": [
+        381.28215394277686,
+        932.3529411764706
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_030",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        343,
+        920,
+        71,
+        41
+      ],
+      "anchor": [
+        378.2823481109778,
+        960.5882352941177
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_031",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        339,
+        922,
+        70,
+        67
+      ],
+      "anchor": [
+        373.91077522761077,
+        988.8235294117648
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_032",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        322,
+        948,
+        92,
+        69
+      ],
+      "anchor": [
+        368.3163039640951,
+        1017.0588235294117
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_033",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        327,
+        1010,
+        70,
+        35
+      ],
+      "anchor": [
+        361.689447329481,
+        1045.2941176470588
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_034",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        310,
+        1023,
+        88,
+        51
+      ],
+      "anchor": [
+        354.2558749784219,
+        1073.5294117647059
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_035",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        307,
+        1028,
+        78,
+        74
+      ],
+      "anchor": [
+        346.2687283017457,
+        1101.764705882353
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_036",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        290,
+        1057,
+        97,
+        73
+      ],
+      "anchor": [
+        338.0,
+        1130.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_037",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        552,
+        1070,
+        82,
+        90
+      ],
+      "anchor": [
+        593,
+        1160.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_038",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        510,
+        1080,
+        92,
+        88
+      ],
+      "anchor": [
+        556,
+        1167.6708086176673
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_039",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        473,
+        1104,
+        92,
+        69
+      ],
+      "anchor": [
+        519,
+        1173.4635357569264
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_040",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        441,
+        1086,
+        82,
+        90
+      ],
+      "anchor": [
+        482,
+        1175.9599197856649
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_041",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        399,
+        1087,
+        92,
+        88
+      ],
+      "anchor": [
+        445,
+        1174.548758829211
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_042",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        362,
+        1101,
+        92,
+        69
+      ],
+      "anchor": [
+        408,
+        1169.5755543056632
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_043",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        330,
+        1072,
+        82,
+        90
+      ],
+      "anchor": [
+        371,
+        1162.257920128958
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_044",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        1284,
+        520,
+        91,
+        100
+      ],
+      "anchor": [
+        1329.7703883008508,
+        620.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_045",
+      "asset": "Assets/arbusto_brilho.png",
+      "rect": [
+        1285,
+        568,
+        94,
+        100
+      ],
+      "anchor": [
+        1332.4053207263496,
+        667.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_046",
+      "asset": "Assets/arbusto_azul.png",
+      "rect": [
+        1286,
+        617,
+        102,
+        98
+      ],
+      "anchor": [
+        1336.5909682648696,
+        715.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_047",
+      "asset": "Assets/arbusto_estrela.png",
+      "rect": [
+        1272,
+        662,
+        90,
+        100
+      ],
+      "anchor": [
+        1316.9774212314626,
+        762.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_048",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        1271,
+        710,
+        91,
+        100
+      ],
+      "anchor": [
+        1316.8974809701876,
+        810.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_049",
+      "asset": "Assets/arbusto_brilho.png",
+      "rect": [
+        1257,
+        760,
+        93,
+        98
+      ],
+      "anchor": [
+        1303.9451032551933,
+        857.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_050",
+      "asset": "Assets/arbusto_azul.png",
+      "rect": [
+        1264,
+        812,
+        97,
+        93
+      ],
+      "anchor": [
+        1312.9884270400125,
+        905.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_051",
+      "asset": "Assets/arbusto_estrela.png",
+      "rect": [
+        1271,
+        852,
+        90,
+        100
+      ],
+      "anchor": [
+        1316.0172576373166,
+        952.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_052",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        1291,
+        900,
+        91,
+        100
+      ],
+      "anchor": [
+        1336.1845462267286,
+        1000.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_053",
+      "asset": "Assets/arbusto_brilho.png",
+      "rect": [
+        1278,
+        948,
+        94,
+        100
+      ],
+      "anchor": [
+        1325.0899247624116,
+        1047.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_054",
+      "asset": "Assets/arbusto_azul.png",
+      "rect": [
+        1257,
+        995,
+        104,
+        100
+      ],
+      "anchor": [
+        1308.7818222644291,
+        1095.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_055",
+      "asset": "Assets/arbusto_estrela.png",
+      "rect": [
+        1269,
+        1042,
+        90,
+        100
+      ],
+      "anchor": [
+        1313.7707772728565,
+        1142.5
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_056",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        1273,
+        1090,
+        91,
+        100
+      ],
+      "anchor": [
+        1318.184962854586,
+        1190.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": true,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_057",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        1156,
+        570,
+        84,
+        80
+      ],
+      "anchor": [
+        1198.0,
+        650.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_058",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        1152,
+        621,
+        75,
+        57
+      ],
+      "anchor": [
+        1189.7312716982542,
+        678.2352941176471
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_059",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        1147,
+        670,
+        70,
+        36
+      ],
+      "anchor": [
+        1181.7441250215782,
+        706.4705882352941
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_060",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        1136,
+        691,
+        77,
+        44
+      ],
+      "anchor": [
+        1174.310552670519,
+        734.7058823529412
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_061",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        1129,
+        690,
+        77,
+        73
+      ],
+      "anchor": [
+        1167.6836960359049,
+        762.9411764705883
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_062",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        1126,
+        736,
+        73,
+        55
+      ],
+      "anchor": [
+        1162.0892247723891,
+        791.1764705882354
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_063",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        1122,
+        783,
+        72,
+        36
+      ],
+      "anchor": [
+        1157.7176518890221,
+        819.4117647058824
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_064",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        1111,
+        797,
+        88,
+        51
+      ],
+      "anchor": [
+        1154.7178460572231,
+        847.6470588235294
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_065",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        1113,
+        800,
+        80,
+        76
+      ],
+      "anchor": [
+        1153.1919620667236,
+        875.8823529411765
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_066",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        1113,
+        844,
+        80,
+        60
+      ],
+      "anchor": [
+        1153.1919620667234,
+        904.1176470588235
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_067",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        1113,
+        890,
+        83,
+        42
+      ],
+      "anchor": [
+        1154.7178460572231,
+        932.3529411764706
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_068",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        1119,
+        916,
+        77,
+        45
+      ],
+      "anchor": [
+        1157.7176518890221,
+        960.5882352941177
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_069",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        1124,
+        916,
+        77,
+        73
+      ],
+      "anchor": [
+        1162.0892247723891,
+        988.8235294117648
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_070",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        1128,
+        958,
+        79,
+        59
+      ],
+      "anchor": [
+        1167.6836960359049,
+        1017.0588235294117
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_071",
+      "asset": "Assets/canteiro_antigo.png",
+      "rect": [
+        1130,
+        1000,
+        89,
+        45
+      ],
+      "anchor": [
+        1174.310552670519,
+        1045.2941176470588
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_072",
+      "asset": "Assets/flores_azuis.png",
+      "rect": [
+        1136,
+        1021,
+        91,
+        53
+      ],
+      "anchor": [
+        1181.7441250215782,
+        1073.5294117647059
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_073",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        1148,
+        1022,
+        84,
+        80
+      ],
+      "anchor": [
+        1189.7312716982542,
+        1101.764705882353
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_074",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        1158,
+        1069,
+        81,
+        61
+      ],
+      "anchor": [
+        1198.0,
+        1130.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_075",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        902,
+        1070,
+        82,
+        90
+      ],
+      "anchor": [
+        943,
+        1160.0
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_076",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        934,
+        1080,
+        92,
+        88
+      ],
+      "anchor": [
+        980,
+        1167.6708086176673
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_077",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        971,
+        1104,
+        92,
+        69
+      ],
+      "anchor": [
+        1017,
+        1173.4635357569264
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_078",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        1013,
+        1086,
+        82,
+        90
+      ],
+      "anchor": [
+        1054,
+        1175.9599197856649
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_079",
+      "asset": "Assets/moita_antiga.png",
+      "rect": [
+        1045,
+        1087,
+        92,
+        88
+      ],
+      "anchor": [
+        1091,
+        1174.548758829211
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_080",
+      "asset": "Assets/flores_brancas.png",
+      "rect": [
+        1082,
+        1101,
+        92,
+        69
+      ],
+      "anchor": [
+        1128,
+        1169.5755543056632
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_081",
+      "asset": "Assets/arbusto_lavanda.png",
+      "rect": [
+        1124,
+        1072,
+        82,
+        90
+      ],
+      "anchor": [
+        1165,
+        1162.257920128958
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_082",
+      "asset": "Assets/arvore_salgueiro.png",
+      "rect": [
+        126,
+        457,
+        245,
+        270
+      ],
+      "anchor": [
+        249,
+        727
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_083",
+      "asset": "Assets/arvore_torcida.png",
+      "rect": [
+        1175,
+        464,
+        235,
+        282
+      ],
+      "anchor": [
+        1293,
+        746
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_084",
+      "asset": "Assets/salgueiro_antigo_2.png",
+      "rect": [
+        126,
+        768,
+        240,
+        252
+      ],
+      "anchor": [
+        246,
+        1020
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_085",
+      "asset": "Assets/salgueiro_antigo_1.png",
+      "rect": [
+        1165,
+        786,
+        245,
+        234
+      ],
+      "anchor": [
+        1287,
+        1020
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_086",
+      "asset": "Assets/arvore_rosa.png",
+      "rect": [
+        465,
+        1104,
+        225,
+        226
+      ],
+      "anchor": [
+        577,
+        1330
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_087",
+      "asset": "Assets/arvore_azul.png",
+      "rect": [
+        846,
+        1091,
+        225,
+        239
+      ],
+      "anchor": [
+        958,
+        1330
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_088",
+      "asset": "Assets/salgueiro_antigo_3.png",
+      "rect": [
+        126,
+        645,
+        173,
+        225
+      ],
+      "anchor": [
+        212,
+        870
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_089",
+      "asset": "Assets/salgueiro_antigo_4.png",
+      "rect": [
+        1233,
+        651,
+        177,
+        210
+      ],
+      "anchor": [
+        1322,
+        861
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_090",
+      "asset": "Assets/arvore_rosa.png",
+      "rect": [
+        465,
+        1203,
+        156,
+        157
+      ],
+      "anchor": [
+        543,
+        1360
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_091",
+      "asset": "Assets/arvore_azul.png",
+      "rect": [
+        915,
+        1194,
+        156,
+        166
+      ],
+      "anchor": [
+        993,
+        1360
+      ],
+      "layer": "vegetacao",
+      "motion": "canopy",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_092",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        297,
+        547,
+        68,
+        190
+      ],
+      "anchor": [
+        331,
+        737
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_093",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        1171,
+        547,
+        68,
+        190
+      ],
+      "anchor": [
+        1205,
+        737
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_094",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        296,
+        855,
+        68,
+        190
+      ],
+      "anchor": [
+        330,
+        1045
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_095",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        1172,
+        855,
+        68,
+        190
+      ],
+      "anchor": [
+        1206,
+        1045
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_096",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        491,
+        1170,
+        68,
+        190
+      ],
+      "anchor": [
+        525,
+        1360
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_097",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        976,
+        1170,
+        68,
+        190
+      ],
+      "anchor": [
+        1010,
+        1360
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_098",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        614,
+        1370,
+        68,
+        190
+      ],
+      "anchor": [
+        648,
+        1560
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_099",
+      "asset": "Assets/cipreste.png",
+      "rect": [
+        854,
+        1370,
+        68,
+        190
+      ],
+      "anchor": [
+        888,
+        1560
+      ],
+      "layer": "vegetacao",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_100",
+      "asset": "Assets/vaso_lunar.png",
+      "rect": [
+        126,
+        427,
+        100,
+        123
+      ],
+      "anchor": [
+        176,
+        550
+      ],
+      "layer": "vegetacao",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_101",
+      "asset": "Assets/vaso_lunar.png",
+      "rect": [
+        1310,
+        427,
+        100,
+        123
+      ],
+      "anchor": [
+        1360,
+        550
+      ],
+      "layer": "vegetacao",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_102",
+      "asset": "Assets/vaso_lunar.png",
+      "rect": [
+        465,
+        1144,
+        100,
+        123
+      ],
+      "anchor": [
+        515,
+        1267
+      ],
+      "layer": "vegetacao",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_103",
+      "asset": "Assets/vaso_lunar.png",
+      "rect": [
+        971,
+        1144,
+        100,
+        123
+      ],
+      "anchor": [
+        1021,
+        1267
+      ],
+      "layer": "vegetacao",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_104",
+      "asset": "Assets/vaso_lunar.png",
+      "rect": [
+        480,
+        1237,
+        100,
+        123
+      ],
+      "anchor": [
+        530,
+        1360
+      ],
+      "layer": "vegetacao",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_105",
+      "asset": "Assets/vaso_lunar.png",
+      "rect": [
+        956,
+        1237,
+        100,
+        123
+      ],
+      "anchor": [
+        1006,
+        1360
+      ],
+      "layer": "vegetacao",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_106",
+      "asset": "Assets/hera_pendente.png",
+      "rect": [
+        82,
+        642,
+        85,
+        77
+      ],
+      "anchor": [
+        124,
+        680
+      ],
+      "layer": "pendentes",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_107",
+      "asset": "Assets/hera_pendente.png",
+      "rect": [
+        1368,
+        642,
+        85,
+        77
+      ],
+      "anchor": [
+        1410,
+        680
+      ],
+      "layer": "pendentes",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_108",
+      "asset": "Assets/hera_pendente.png",
+      "rect": [
+        88,
+        926,
+        85,
+        77
+      ],
+      "anchor": [
+        130,
+        965
+      ],
+      "layer": "pendentes",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_109",
+      "asset": "Assets/hera_pendente.png",
+      "rect": [
+        1362,
+        926,
+        85,
+        77
+      ],
+      "anchor": [
+        1404,
+        965
+      ],
+      "layer": "pendentes",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_110",
+      "asset": "Assets/hera_pendente.png",
+      "rect": [
+        450,
+        1382,
+        85,
+        77
+      ],
+      "anchor": [
+        493,
+        1420
+      ],
+      "layer": "pendentes",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_111",
+      "asset": "Assets/hera_pendente.png",
+      "rect": [
+        1002,
+        1382,
+        85,
+        77
+      ],
+      "anchor": [
+        1045,
+        1420
+      ],
+      "layer": "pendentes",
+      "motion": "leaves",
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_112",
+      "asset": "Assets/gargula.png",
+      "rect": [
+        564,
+        1022,
+        104,
+        154
+      ],
+      "anchor": [
+        616,
+        1176
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_113",
+      "asset": "Assets/gargula.png",
+      "rect": [
+        868,
+        1022,
+        104,
+        154
+      ],
+      "anchor": [
+        920,
+        1176
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_114",
+      "asset": "Assets/braseiro.png",
+      "rect": [
+        314,
+        708,
+        82,
+        95
+      ],
+      "anchor": [
+        355,
+        803
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_115",
+      "asset": "Assets/braseiro.png",
+      "rect": [
+        1140,
+        708,
+        82,
+        95
+      ],
+      "anchor": [
+        1181,
+        803
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_116",
+      "asset": "Assets/braseiro.png",
+      "rect": [
+        619,
+        1437,
+        82,
+        95
+      ],
+      "anchor": [
+        660,
+        1532
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_117",
+      "asset": "Assets/braseiro.png",
+      "rect": [
+        835,
+        1437,
+        82,
+        95
+      ],
+      "anchor": [
+        876,
+        1532
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_118",
+      "asset": "Assets/velas.png",
+      "rect": [
+        274,
+        1113,
+        62,
+        86
+      ],
+      "anchor": [
+        305,
+        1199
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_119",
+      "asset": "Assets/velas.png",
+      "rect": [
+        1200,
+        1113,
+        62,
+        86
+      ],
+      "anchor": [
+        1231,
+        1199
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_120",
+      "asset": "Assets/velas.png",
+      "rect": [
+        581,
+        1134,
+        62,
+        86
+      ],
+      "anchor": [
+        612,
+        1220
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_121",
+      "asset": "Assets/velas.png",
+      "rect": [
+        893,
+        1134,
+        62,
+        86
+      ],
+      "anchor": [
+        924,
+        1220
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_122",
+      "asset": "Assets/velas.png",
+      "rect": [
+        523,
+        1274,
+        62,
+        86
+      ],
+      "anchor": [
+        554,
+        1360
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_123",
+      "asset": "Assets/velas.png",
+      "rect": [
+        951,
+        1274,
+        62,
+        86
+      ],
+      "anchor": [
+        982,
+        1360
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "approved_generated"
+    },
+    {
+      "id": "M02_124",
+      "asset": "Assets/banco_antigo.png",
+      "rect": [
+        132,
+        1111,
+        127,
+        56
+      ],
+      "anchor": [
+        195,
+        1167
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_125",
+      "asset": "Assets/banco_antigo.png",
+      "rect": [
+        1274,
+        1111,
+        127,
+        56
+      ],
+      "anchor": [
+        1338,
+        1167
+      ],
+      "layer": "objetos",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_126",
+      "asset": "Assets/petala_crescent_aberta.png",
+      "rect": [
+        386,
+        662,
+        138,
+        138
+      ],
+      "anchor": [
+        455,
+        800
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_crescent_fechada.png",
+        "abrindo": "Assets/petala_crescent_abrindo.png",
+        "aberta": "Assets/petala_crescent_aberta.png",
+        "coletada": "Assets/petala_crescent_coletada.png"
+      },
+      "puzzle_group": "moon.garden.crescent",
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_127",
+      "asset": "Assets/petala_full_aberta.png",
+      "rect": [
+        1016,
+        662,
+        138,
+        138
+      ],
+      "anchor": [
+        1085,
+        800
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_full_fechada.png",
+        "abrindo": "Assets/petala_full_abrindo.png",
+        "aberta": "Assets/petala_full_aberta.png",
+        "coletada": "Assets/petala_full_coletada.png"
+      },
+      "puzzle_group": "moon.garden.full",
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_128",
+      "asset": "Assets/petala_waning_aberta.png",
+      "rect": [
+        699,
+        902,
+        138,
+        138
+      ],
+      "anchor": [
+        768,
+        1040
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_waning_fechada.png",
+        "abrindo": "Assets/petala_waning_abrindo.png",
+        "aberta": "Assets/petala_waning_aberta.png",
+        "coletada": "Assets/petala_waning_coletada.png"
+      },
+      "puzzle_group": "moon.garden.waning",
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_129",
+      "asset": "Assets/petala_crescent_aberta.png",
+      "rect": [
+        434,
+        672,
+        83,
+        83
+      ],
+      "anchor": [
+        475,
+        755
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_crescent_fechada.png",
+        "abrindo": "Assets/petala_crescent_abrindo.png",
+        "aberta": "Assets/petala_crescent_aberta.png",
+        "coletada": "Assets/petala_crescent_coletada.png"
+      },
+      "puzzle_group": "moon.garden.crescent",
+      "decorative_cluster_member": true,
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_130",
+      "asset": "Assets/petala_crescent_aberta.png",
+      "rect": [
+        423,
+        782,
+        83,
+        83
+      ],
+      "anchor": [
+        465,
+        865
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_crescent_fechada.png",
+        "abrindo": "Assets/petala_crescent_abrindo.png",
+        "aberta": "Assets/petala_crescent_aberta.png",
+        "coletada": "Assets/petala_crescent_coletada.png"
+      },
+      "puzzle_group": "moon.garden.crescent",
+      "decorative_cluster_member": true,
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_131",
+      "asset": "Assets/petala_full_aberta.png",
+      "rect": [
+        1028,
+        667,
+        83,
+        83
+      ],
+      "anchor": [
+        1070,
+        750
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_full_fechada.png",
+        "abrindo": "Assets/petala_full_abrindo.png",
+        "aberta": "Assets/petala_full_aberta.png",
+        "coletada": "Assets/petala_full_coletada.png"
+      },
+      "puzzle_group": "moon.garden.full",
+      "decorative_cluster_member": true,
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_132",
+      "asset": "Assets/petala_full_aberta.png",
+      "rect": [
+        1039,
+        792,
+        83,
+        83
+      ],
+      "anchor": [
+        1080,
+        875
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_full_fechada.png",
+        "abrindo": "Assets/petala_full_abrindo.png",
+        "aberta": "Assets/petala_full_aberta.png",
+        "coletada": "Assets/petala_full_coletada.png"
+      },
+      "puzzle_group": "moon.garden.full",
+      "decorative_cluster_member": true,
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_133",
+      "asset": "Assets/petala_waning_aberta.png",
+      "rect": [
+        674,
+        942,
+        83,
+        83
+      ],
+      "anchor": [
+        715,
+        1025
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_waning_fechada.png",
+        "abrindo": "Assets/petala_waning_abrindo.png",
+        "aberta": "Assets/petala_waning_aberta.png",
+        "coletada": "Assets/petala_waning_coletada.png"
+      },
+      "puzzle_group": "moon.garden.waning",
+      "decorative_cluster_member": true,
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_134",
+      "asset": "Assets/petala_waning_aberta.png",
+      "rect": [
+        784,
+        937,
+        83,
+        83
+      ],
+      "anchor": [
+        825,
+        1020
+      ],
+      "layer": "puzzles",
+      "motion": "water_flower",
+      "flip": false,
+      "source_type": "approved_generated",
+      "states": {
+        "fechada": "Assets/petala_waning_fechada.png",
+        "abrindo": "Assets/petala_waning_abrindo.png",
+        "aberta": "Assets/petala_waning_aberta.png",
+        "coletada": "Assets/petala_waning_coletada.png"
+      },
+      "puzzle_group": "moon.garden.waning",
+      "decorative_cluster_member": true,
+      "interaction_radius": 180
+    },
+    {
+      "id": "M02_136",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1239,
+        1159,
+        39,
+        29
+      ],
+      "anchor": [
+        1258.5900318657036,
+        1188.4182069400665
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_137",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        238,
+        1117,
+        39,
+        18
+      ],
+      "anchor": [
+        257.25303271565633,
+        1134.9155958278325
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_138",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1288,
+        875,
+        45,
+        21
+      ],
+      "anchor": [
+        1310.4427420133752,
+        895.7118124464307
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_139",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        176,
+        948,
+        65,
+        30
+      ],
+      "anchor": [
+        208.52910093209368,
+        977.5242408041946
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_140",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1264,
+        1108,
+        45,
+        33
+      ],
+      "anchor": [
+        1286.6038948294904,
+        1140.913137549376
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_141",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        166,
+        1135,
+        38,
+        18
+      ],
+      "anchor": [
+        185.08076398886135,
+        1152.907696328747
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_142",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1261,
+        959,
+        50,
+        23
+      ],
+      "anchor": [
+        1286.2314065400224,
+        981.5299974881175
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_143",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        230,
+        833,
+        52,
+        24
+      ],
+      "anchor": [
+        256.00697897331895,
+        856.6304473516501
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_144",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1251,
+        793,
+        62,
+        46
+      ],
+      "anchor": [
+        1282.2082816428378,
+        839.1048164056394
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_145",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        221,
+        1172,
+        37,
+        18
+      ],
+      "anchor": [
+        239.80618424529803,
+        1190.1773465384777
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_146",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1224,
+        1105,
+        63,
+        30
+      ],
+      "anchor": [
+        1255.5680629762337,
+        1134.522015867816
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_147",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        185,
+        975,
+        42,
+        20
+      ],
+      "anchor": [
+        206.44370119363793,
+        995.276426143789
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_148",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1274,
+        996,
+        61,
+        45
+      ],
+      "anchor": [
+        1304.5423540562947,
+        1041.4975057332776
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_149",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        195,
+        786,
+        48,
+        23
+      ],
+      "anchor": [
+        219.28630183871587,
+        808.906025397905
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_150",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1277,
+        947,
+        37,
+        17
+      ],
+      "anchor": [
+        1295.351524655778,
+        964.3804861896215
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_151",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        212,
+        994,
+        37,
+        18
+      ],
+      "anchor": [
+        230.26107402865853,
+        1011.8703757185009
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_152",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1299,
+        740,
+        63,
+        47
+      ],
+      "anchor": [
+        1330.4802115150385,
+        786.7375956167962
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_153",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        227,
+        1151,
+        43,
+        20
+      ],
+      "anchor": [
+        248.6046049398036,
+        1170.8257397429354
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_154",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1315,
+        932,
+        57,
+        27
+      ],
+      "anchor": [
+        1343.4506094093078,
+        958.8928064863206
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_155",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        223,
+        1120,
+        52,
+        25
+      ],
+      "anchor": [
+        249.4282514857257,
+        1144.551418105549
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_156",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1257,
+        1182,
+        48,
+        35
+      ],
+      "anchor": [
+        1281.437864483811,
+        1216.9788565139716
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_157",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        201,
+        1083,
+        61,
+        29
+      ],
+      "anchor": [
+        231.4354879644353,
+        1112.482319809916
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_158",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1315,
+        1074,
+        60,
+        28
+      ],
+      "anchor": [
+        1344.6963793679129,
+        1101.9847054204683
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_159",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        248,
+        1187,
+        42,
+        20
+      ],
+      "anchor": [
+        269.33552659565703,
+        1207.0273608252205
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_160",
+      "asset": "Assets/pedra_musgo.png",
+      "rect": [
+        1331,
+        1021,
+        45,
+        33
+      ],
+      "anchor": [
+        1353.6769540879588,
+        1054.2596542871265
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_161",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        250,
+        755,
+        44,
+        21
+      ],
+      "anchor": [
+        271.9167930950401,
+        776.4438551165972
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_162",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        1252,
+        1088,
+        44,
+        21
+      ],
+      "anchor": [
+        1273.6284608489548,
+        1109.0285947179818
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    },
+    {
+      "id": "M02_163",
+      "asset": "Assets/ramo_heras.png",
+      "rect": [
+        224,
+        828,
+        44,
+        21
+      ],
+      "anchor": [
+        245.65385241964793,
+        848.6815101366643
+      ],
+      "layer": "solo",
+      "motion": null,
+      "flip": false,
+      "source_type": "reused"
+    }
+  ],
+  "effects": [
+    {
+      "owner": "M02_114",
+      "type": "flame",
+      "color": "azul",
+      "x": 355.0,
+      "y": 723.2,
+      "size": 65.60000000000001,
+      "phase": 0.0
+    },
+    {
+      "owner": "M02_115",
+      "type": "flame",
+      "color": "azul",
+      "x": 1181.0,
+      "y": 723.2,
+      "size": 65.60000000000001,
+      "phase": 0.37
+    },
+    {
+      "owner": "M02_116",
+      "type": "flame",
+      "color": "azul",
+      "x": 660.0,
+      "y": 1452.2,
+      "size": 65.60000000000001,
+      "phase": 0.74
+    },
+    {
+      "owner": "M02_117",
+      "type": "flame",
+      "color": "azul",
+      "x": 876.0,
+      "y": 1452.2,
+      "size": 65.60000000000001,
+      "phase": 1.1099999999999999
+    },
+    {
+      "owner": "M02_118",
+      "type": "flame",
+      "color": "ambar",
+      "x": 305.0,
+      "y": 1126.76,
+      "size": 21.7,
+      "phase": 1.48
+    },
+    {
+      "owner": "M02_119",
+      "type": "flame",
+      "color": "ambar",
+      "x": 1231.0,
+      "y": 1126.76,
+      "size": 21.7,
+      "phase": 1.85
+    },
+    {
+      "owner": "M02_120",
+      "type": "flame",
+      "color": "ambar",
+      "x": 612.0,
+      "y": 1147.76,
+      "size": 21.7,
+      "phase": 2.2199999999999998
+    },
+    {
+      "owner": "M02_121",
+      "type": "flame",
+      "color": "ambar",
+      "x": 924.0,
+      "y": 1147.76,
+      "size": 21.7,
+      "phase": 2.59
+    },
+    {
+      "owner": "M02_122",
+      "type": "flame",
+      "color": "ambar",
+      "x": 554.0,
+      "y": 1287.76,
+      "size": 21.7,
+      "phase": 2.96
+    },
+    {
+      "owner": "M02_123",
+      "type": "flame",
+      "color": "ambar",
+      "x": 982.0,
+      "y": 1287.76,
+      "size": 21.7,
+      "phase": 3.33
+    },
+    {
+      "type": "waterfall",
+      "x": 768,
+      "y": 446.0,
+      "width": 62,
+      "height": 150.0
+    }
+  ],
+  "lake_contour": [
+    [
+      714.0,
+      520.0
+    ],
+    [
+      721.092,
+      516.265
+    ],
+    [
+      730.656,
+      513.36
+    ],
+    [
+      742.0740000000001,
+      511.285
+    ],
+    [
+      754.7280000000001,
+      510.03999999999996
+    ],
+    [
+      768.0,
+      509.625
+    ],
+    [
+      781.2719999999999,
+      510.04
+    ],
+    [
+      793.9259999999999,
+      511.28499999999997
+    ],
+    [
+      805.344,
+      513.36
+    ],
+    [
+      814.908,
+      516.265
+    ],
+    [
+      822.0,
+      520.0
+    ],
+    [
+      826.352,
+      525.303
+    ],
+    [
+      828.456,
+      532.5840000000001
+    ],
+    [
+      828.8340000000001,
+      541.351
+    ],
+    [
+      828.008,
+      551.112
+    ],
+    [
+      826.5,
+      561.375
+    ],
+    [
+      824.832,
+      571.648
+    ],
+    [
+      823.526,
+      581.439
+    ],
+    [
+      823.104,
+      590.256
+    ],
+    [
+      824.088,
+      597.607
+    ],
+    [
+      827.0,
+      603.0
+    ],
+    [
+      831.7829999999999,
+      606.6245
+    ],
+    [
+      837.864,
+      609.096
+    ],
+    [
+      844.991,
+      610.5615
+    ],
+    [
+      852.912,
+      611.168
+    ],
+    [
+      861.375,
+      611.0625
+    ],
+    [
+      870.1279999999999,
+      610.392
+    ],
+    [
+      878.9190000000001,
+      609.3035
+    ],
+    [
+      887.496,
+      607.944
+    ],
+    [
+      895.607,
+      606.4605
+    ],
+    [
+      903.0,
+      605.0
+    ],
+    [
+      909.7725,
+      603.0260000000001
+    ],
+    [
+      916.24,
+      600.0880000000001
+    ],
+    [
+      922.4775,
+      596.4619999999999
+    ],
+    [
+      928.56,
+      592.424
+    ],
+    [
+      934.5625,
+      588.25
+    ],
+    [
+      940.5600000000001,
+      584.216
+    ],
+    [
+      946.6275,
+      580.5980000000001
+    ],
+    [
+      952.84,
+      577.6719999999999
+    ],
+    [
+      959.2724999999999,
+      575.7139999999999
+    ],
+    [
+      966.0,
+      575.0
+    ],
+    [
+      973.0319999999999,
+      575.399
+    ],
+    [
+      980.2959999999999,
+      576.552
+    ],
+    [
+      987.744,
+      578.393
+    ],
+    [
+      995.3280000000001,
+      580.856
+    ],
+    [
+      1003.0,
+      583.875
+    ],
+    [
+      1010.712,
+      587.384
+    ],
+    [
+      1018.4159999999999,
+      591.317
+    ],
+    [
+      1026.064,
+      595.6080000000001
+    ],
+    [
+      1033.6079999999997,
+      600.191
+    ],
+    [
+      1041.0,
+      605.0
+    ],
+    [
+      1048.4105,
+      610.1305
+    ],
+    [
+      1055.984,
+      615.7040000000001
+    ],
+    [
+      1063.6335000000001,
+      621.6935000000001
+    ],
+    [
+      1071.272,
+      628.072
+    ],
+    [
+      1078.8125,
+      634.8125
+    ],
+    [
+      1086.168,
+      641.888
+    ],
+    [
+      1093.2514999999999,
+      649.2715
+    ],
+    [
+      1099.976,
+      656.936
+    ],
+    [
+      1106.2545,
+      664.8545
+    ],
+    [
+      1112.0,
+      673.0
+    ],
+    [
+      1117.33,
+      681.4805
+    ],
+    [
+      1122.4,
+      690.384
+    ],
+    [
+      1127.1799999999998,
+      699.6535
+    ],
+    [
+      1131.64,
+      709.2320000000001
+    ],
+    [
+      1135.75,
+      719.0625
+    ],
+    [
+      1139.48,
+      729.088
+    ],
+    [
+      1142.8000000000002,
+      739.2515
+    ],
+    [
+      1145.68,
+      749.496
+    ],
+    [
+      1148.09,
+      759.7645
+    ],
+    [
+      1150.0,
+      770.0
+    ],
+    [
+      1151.4215000000002,
+      780.3445
+    ],
+    [
+      1152.3919999999998,
+      790.936
+    ],
+    [
+      1152.9205000000002,
+      801.7115
+    ],
+    [
+      1153.0159999999998,
+      812.608
+    ],
+    [
+      1152.6875,
+      823.5625
+    ],
+    [
+      1151.9440000000002,
+      834.5120000000001
+    ],
+    [
+      1150.7945,
+      845.3935
+    ],
+    [
+      1149.248,
+      856.144
+    ],
+    [
+      1147.3134999999997,
+      866.7004999999999
+    ],
+    [
+      1145.0,
+      877.0
+    ],
+    [
+      1142.318,
+      887.1895
+    ],
+    [
+      1139.264,
+      897.416
+    ],
+    [
+      1135.826,
+      907.6165000000001
+    ],
+    [
+      1131.992,
+      917.728
+    ],
+    [
+      1127.75,
+      927.6875
+    ],
+    [
+      1123.088,
+      937.4319999999999
+    ],
+    [
+      1117.9940000000001,
+      946.8985
+    ],
+    [
+      1112.4560000000001,
+      956.0240000000001
+    ],
+    [
+      1106.462,
+      964.7455
+    ],
+    [
+      1100.0,
+      973.0
+    ],
+    [
+      1092.981,
+      980.867
+    ],
+    [
+      1085.368,
+      988.456
+    ],
+    [
+      1077.227,
+      995.749
+    ],
+    [
+      1068.624,
+      1002.728
+    ],
+    [
+      1059.625,
+      1009.375
+    ],
+    [
+      1050.2959999999998,
+      1015.672
+    ],
+    [
+      1040.7029999999997,
+      1021.601
+    ],
+    [
+      1030.9120000000003,
+      1027.144
+    ],
+    [
+      1020.989,
+      1032.2830000000001
+    ],
+    [
+      1011.0,
+      1037.0
+    ],
+    [
+      1000.467,
+      1041.0895
+    ],
+    [
+      989.0559999999999,
+      1044.456
+    ],
+    [
+      977.049,
+      1047.2465
+    ],
+    [
+      964.7280000000001,
+      1049.608
+    ],
+    [
+      952.375,
+      1051.6875
+    ],
+    [
+      940.272,
+      1053.6319999999998
+    ],
+    [
+      928.701,
+      1055.5884999999998
+    ],
+    [
+      917.944,
+      1057.7040000000002
+    ],
+    [
+      908.283,
+      1060.1255
+    ],
+    [
+      900.0,
+      1063.0
+    ],
+    [
+      893.8455,
+      1066.4210000000003
+    ],
+    [
+      889.9440000000001,
+      1070.288
+    ],
+    [
+      887.6385,
+      1074.457
+    ],
+    [
+      886.2719999999999,
+      1078.7839999999999
+    ],
+    [
+      885.1875,
+      1083.125
+    ],
+    [
+      883.728,
+      1087.336
+    ],
+    [
+      881.2365,
+      1091.273
+    ],
+    [
+      877.056,
+      1094.7920000000001
+    ],
+    [
+      870.5295,
+      1097.7489999999998
+    ],
+    [
+      861.0,
+      1100.0
+    ],
+    [
+      847.692,
+      1101.665
+    ],
+    [
+      830.856,
+      1102.96
+    ],
+    [
+      811.374,
+      1103.885
+    ],
+    [
+      790.128,
+      1104.44
+    ],
+    [
+      768.0,
+      1104.625
+    ],
+    [
+      745.872,
+      1104.4399999999998
+    ],
+    [
+      724.626,
+      1103.885
+    ],
+    [
+      705.144,
+      1102.96
+    ],
+    [
+      688.308,
+      1101.6650000000002
+    ],
+    [
+      675.0,
+      1100.0
+    ],
+    [
+      665.4705,
+      1097.749
+    ],
+    [
+      658.9440000000001,
+      1094.792
+    ],
+    [
+      654.7635,
+      1091.273
+    ],
+    [
+      652.2719999999999,
+      1087.336
+    ],
+    [
+      650.8125,
+      1083.125
+    ],
+    [
+      649.728,
+      1078.784
+    ],
+    [
+      648.3615,
+      1074.4569999999999
+    ],
+    [
+      646.056,
+      1070.288
+    ],
+    [
+      642.1545,
+      1066.421
+    ],
+    [
+      636.0,
+      1063.0
+    ],
+    [
+      627.717,
+      1060.1254999999999
+    ],
+    [
+      618.0559999999999,
+      1057.7040000000002
+    ],
+    [
+      607.299,
+      1055.5885
+    ],
+    [
+      595.7280000000001,
+      1053.632
+    ],
+    [
+      583.625,
+      1051.6875
+    ],
+    [
+      571.272,
+      1049.608
+    ],
+    [
+      558.951,
+      1047.2465000000002
+    ],
+    [
+      546.944,
+      1044.456
+    ],
+    [
+      535.533,
+      1041.0895
+    ],
+    [
+      525.0,
+      1037.0
+    ],
+    [
+      515.011,
+      1032.283
+    ],
+    [
+      505.088,
+      1027.1439999999998
+    ],
+    [
+      495.297,
+      1021.601
+    ],
+    [
+      485.704,
+      1015.672
+    ],
+    [
+      476.375,
+      1009.375
+    ],
+    [
+      467.376,
+      1002.7280000000001
+    ],
+    [
+      458.773,
+      995.749
+    ],
+    [
+      450.632,
+      988.4559999999999
+    ],
+    [
+      443.019,
+      980.867
+    ],
+    [
+      436.0,
+      973.0
+    ],
+    [
+      429.538,
+      964.7455
+    ],
+    [
+      423.544,
+      956.024
+    ],
+    [
+      418.00600000000003,
+      946.8985
+    ],
+    [
+      412.912,
+      937.432
+    ],
+    [
+      408.25,
+      927.6875
+    ],
+    [
+      404.008,
+      917.7280000000001
+    ],
+    [
+      400.17400000000004,
+      907.6165
+    ],
+    [
+      396.736,
+      897.4159999999999
+    ],
+    [
+      393.68199999999996,
+      887.1895
+    ],
+    [
+      391.0,
+      877.0
+    ],
+    [
+      388.6865,
+      866.7005
+    ],
+    [
+      386.752,
+      856.144
+    ],
+    [
+      385.20550000000003,
+      845.3934999999999
+    ],
+    [
+      384.056,
+      834.5120000000001
+    ],
+    [
+      383.3125,
+      823.5625
+    ],
+    [
+      382.98400000000004,
+      812.6080000000001
+    ],
+    [
+      383.0795,
+      801.7115
+    ],
+    [
+      383.60799999999995,
+      790.9359999999999
+    ],
+    [
+      384.5785,
+      780.3444999999999
+    ],
+    [
+      386.0,
+      770.0
+    ],
+    [
+      387.90999999999997,
+      759.7645
+    ],
+    [
+      390.32,
+      749.4960000000001
+    ],
+    [
+      393.2,
+      739.2515
+    ],
+    [
+      396.52000000000004,
+      729.088
+    ],
+    [
+      400.25,
+      719.0625
+    ],
+    [
+      404.36,
+      709.232
+    ],
+    [
+      408.82000000000005,
+      699.6535
+    ],
+    [
+      413.59999999999997,
+      690.384
+    ],
+    [
+      418.6700000000001,
+      681.4805000000001
+    ],
+    [
+      424.0,
+      673.0
+    ],
+    [
+      429.7455,
+      664.8545
+    ],
+    [
+      436.024,
+      656.9359999999999
+    ],
+    [
+      442.74850000000004,
+      649.2715
+    ],
+    [
+      449.832,
+      641.888
+    ],
+    [
+      457.1875,
+      634.8125
+    ],
+    [
+      464.728,
+      628.072
+    ],
+    [
+      472.3665,
+      621.6935
+    ],
+    [
+      480.0160000000001,
+      615.704
+    ],
+    [
+      487.58950000000004,
+      610.1305
+    ],
+    [
+      495.0,
+      605.0
+    ],
+    [
+      502.39200000000005,
+      600.191
+    ],
+    [
+      509.936,
+      595.6080000000001
+    ],
+    [
+      517.584,
+      591.317
+    ],
+    [
+      525.2880000000001,
+      587.3839999999999
+    ],
+    [
+      533.0,
+      583.875
+    ],
+    [
+      540.672,
+      580.856
+    ],
+    [
+      548.256,
+      578.393
+    ],
+    [
+      555.704,
+      576.5519999999999
+    ],
+    [
+      562.9680000000001,
+      575.399
+    ],
+    [
+      570.0,
+      575.0
+    ],
+    [
+      576.7275000000001,
+      575.7139999999999
+    ],
+    [
+      583.16,
+      577.6719999999999
+    ],
+    [
+      589.3725000000001,
+      580.5980000000001
+    ],
+    [
+      595.4399999999999,
+      584.216
+    ],
+    [
+      601.4375,
+      588.25
+    ],
+    [
+      607.44,
+      592.424
+    ],
+    [
+      613.5224999999999,
+      596.462
+    ],
+    [
+      619.76,
+      600.088
+    ],
+    [
+      626.2275,
+      603.0260000000001
+    ],
+    [
+      633.0,
+      605.0
+    ],
+    [
+      640.393,
+      606.4605
+    ],
+    [
+      648.504,
+      607.944
+    ],
+    [
+      657.081,
+      609.3035
+    ],
+    [
+      665.872,
+      610.392
+    ],
+    [
+      674.625,
+      611.0625
+    ],
+    [
+      683.0880000000001,
+      611.1679999999999
+    ],
+    [
+      691.009,
+      610.5614999999999
+    ],
+    [
+      698.136,
+      609.0960000000001
+    ],
+    [
+      704.2169999999999,
+      606.6245
+    ],
+    [
+      709.0,
+      603.0
+    ],
+    [
+      711.9119999999999,
+      597.607
+    ],
+    [
+      712.8960000000001,
+      590.256
+    ],
+    [
+      712.474,
+      581.4390000000001
+    ],
+    [
+      711.168,
+      571.648
+    ],
+    [
+      709.5,
+      561.375
+    ],
+    [
+      707.992,
+      551.112
+    ],
+    [
+      707.166,
+      541.351
+    ],
+    [
+      707.544,
+      532.5840000000001
+    ],
+    [
+      709.648,
+      525.303
+    ]
+  ],
+  "layers": {
+    "piso": "Camadas/01_piso.png",
+    "agua": "Camadas/02_agua_desenhada.png",
+    "margem": "Camadas/03_margem_baixa.png",
+    "nenufares": "Camadas/04_nenufares.png",
+    "paredes": "Camadas/05_paredes_conectadas.png",
+    "escadas": "Camadas/07_escadas.png"
+  },
+  "water_mask": "Camadas/mascara_lago.png",
+  "floor_grade": {
+    "saturation": 0.66,
+    "rgb_offset": [
+      4,
+      1,
+      -2
+    ]
+  },
+  "status": "base_aprovada_ajustes_solicitados",
+  "notes": [
+    "Montagem externa modular por referencia.",
+    "Escadas desenhadas e colisoes exportadas em pixels; Unity nao executada.",
+    "Estados visuais demonstrativos; logica de gameplay preservada."
+  ],
+  "position_corrections": [
+    {
+      "id": "M02_082",
+      "offset": [
+        64,
+        0
+      ]
+    },
+    {
+      "id": "M02_083",
+      "offset": [
+        -57,
+        0
+      ]
+    },
+    {
+      "id": "M02_084",
+      "offset": [
+        71,
+        0
+      ]
+    },
+    {
+      "id": "M02_085",
+      "offset": [
+        -63,
+        0
+      ]
+    },
+    {
+      "id": "M02_086",
+      "offset": [
+        161,
+        0
+      ]
+    },
+    {
+      "id": "M02_087",
+      "offset": [
+        -162,
+        0
+      ]
+    },
+    {
+      "id": "M02_088",
+      "offset": [
+        56,
+        0
+      ]
+    },
+    {
+      "id": "M02_089",
+      "offset": [
+        -59,
+        0
+      ]
+    },
+    {
+      "id": "M02_090",
+      "offset": [
+        75,
+        -80
+      ]
+    },
+    {
+      "id": "M02_091",
+      "offset": [
+        -75,
+        -80
+      ]
+    },
+    {
+      "id": "M02_096",
+      "offset": [
+        0,
+        -25
+      ]
+    },
+    {
+      "id": "M02_097",
+      "offset": [
+        0,
+        -25
+      ]
+    },
+    {
+      "id": "M02_098",
+      "offset": [
+        6,
+        0
+      ]
+    },
+    {
+      "id": "M02_099",
+      "offset": [
+        -6,
+        0
+      ]
+    },
+    {
+      "id": "M02_100",
+      "offset": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "M02_101",
+      "offset": [
+        -47,
+        0
+      ]
+    },
+    {
+      "id": "M02_102",
+      "offset": [
+        82,
+        0
+      ]
+    },
+    {
+      "id": "M02_103",
+      "offset": [
+        -82,
+        0
+      ]
+    },
+    {
+      "id": "M02_104",
+      "offset": [
+        0,
+        -140
+      ]
+    },
+    {
+      "id": "M02_105",
+      "offset": [
+        0,
+        -140
+      ]
+    },
+    {
+      "id": "M02_122",
+      "offset": [
+        0,
+        -70
+      ]
+    },
+    {
+      "id": "M02_123",
+      "offset": [
+        0,
+        -70
+      ]
+    }
+  ],
+  "revision": "2026-10-21-directed",
+  "navigation": {
+    "cell_size": 8,
+    "grid": [
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000011110000000000111111111111111111111111111111111111111111111111111111111111000000000000000000111111111111111111111111111111111111111111111111111111111111000000000011110000000000000",
+      "000000000000011110000000000111111111111111111111111111111111111111111111111111111111111000000000000000000111111111111111111111111111111111111111111111111111111111111000000000011110000000000000",
+      "000000000000011110000000000111111111111111111111111111111111111111111111111111111111111000000000000000000111111111111111111111111111111111111111111111111111111111111000000000011110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111000011111111111111000000000000000000111111111111110000111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111000000000111111111111000000000000000000111111111111000000000111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111100000000000011111111111000000000000000000111111111100000000000001111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111110000000000000000111111111000000000000000000111111111000000000000000011111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111100000000000000000000011111000000000000000000111110000000000000000000001111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111110000000000000",
+      "000000000000011111100000000000000000000000011111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000",
+      "000000000000011111100000000000000000000000011111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111110000000000000",
+      "000000000000011111100000000000000000000000011111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000000000000000000000000001111110000000000000",
+      "000000000000011111111111111111111111110000000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000000000000000000000000001111110000000000000",
+      "000000000000011111111111111111111111110000000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000000000000000000000000001111110000000000000",
+      "000000000000011111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000000000000000000000001111110000000000000",
+      "000000000000011111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111100000000000000000111110000000000000",
+      "000000000000011111000000000000000001111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111110000000000000",
+      "000000000000011111100000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000011111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000011111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000011111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111110000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000011111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111110000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111111111111000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111000000000000000000000000001111110000000000000",
+      "000000000000011111100000000000000000000000000111111111111110000000000000000000000000000000000000000000000000000000000000000000000000011111111111111000000000000000000000000001111110000000000000",
+      "000000000000011111111111111111111111110000000111111111111111000000000000000000000000000000000000000000000000000000000000000000000000111111111111111000000011111111111111111111111110000000000000",
+      "000000000000011111111111111111111111110000000111111111111111110000000000000000000000000000000000000000000000000000000000000000000011111111111111111000000011111111111111111111111110000000000000",
+      "000000000000011111111111111111111111110000000111111111111111111100000000000000000000000000000000000000000000000000000000000000001111111111111111111000000011111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111000000111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111000000000011111111111111111111111111110000000000111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111000000000011111111111111111111111111110000000000111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111000000000000011111111111111111111111111111111111111111000000000011111111111111111111111111110000000000111111111111111111111111111111111111111110000000000000111110000000000000",
+      "000000000000011111000000000000011111111111111111111111111111111111111111000000000011111111111111111111111111110000000000111111111111111111111111111111111111111110000000000000111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111000000000011111111111111111111111111110000000000111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111110000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000011111111111111111111110000000000000",
+      "000000000000011111111111111111111110000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000011111111111111111111110000000000000",
+      "000000000000011111111111111111111110000001111111111111111111111111111111100000001111111111111111111111111111111100000001111111111111111111111111111111100000011111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111100000001111111111111111111111111111111100000001111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111100000001111111111111111111111111111111100000001111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111100000001111111111111111111111111111111100000001111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111111110000000000000",
+      "000000000000011111111111111111111111111111111111111111111110000000000111111111111111111111111111111111111111111111111111111000000000011111111111111111111111111111111111111111111110000000000000",
+      "000000000000000000000000000000000000000000000000000000001110000000000111111111111111111111111111111111111111111111111111111000000000011100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001110000000000000000000000001111111111111111111111111100000000000000000000000011100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111100000000000000000000001111111111111111111111111100000000000000000000001111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111100000000000000000000001111111111111111111111111100000000000000000000001111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111100000000000000000000001111111111111111111111111100000000000000000000001111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111100000000000000000000001111111111111111111111111100000000000000000000001111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111100000000000000000000001111111111111111111111111100000000000000000000001111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111000000000000000000000001111111111111111111111111100000000000000000000000111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111000000000000000000000001111111111111111111111111100000000000000000000000111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111000000000000000000000001111111111111111111111111100000000000000000000000111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111000000000000000011111111111111111111111111111111111111110000000000000000111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111000000000000000011111111111111111111111111111111111111110000000000000000111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111000000000000000011111111111111111111111111111111111111110000000000000000111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000000111111111111111111000000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000000111111111111111111000000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000000111111111111111111000000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000000111111111111111111000000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000111111111111111111111111000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000111111111111111111111111000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011000000111111111111111111111111000000110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "spawn": [
+      772,
+      1620
+    ],
+    "interaction_triggers": [
+      {
+        "id": "moon.garden.crescent",
+        "object_id": "M02_126",
+        "x": 455,
+        "y": 800,
+        "radius": 180,
+        "approach": [
+          372,
+          764
+        ],
+        "approach_distance": 90.5
+      },
+      {
+        "id": "moon.garden.full",
+        "object_id": "M02_127",
+        "x": 1085,
+        "y": 800,
+        "radius": 180,
+        "approach": [
+          1164,
+          772
+        ],
+        "approach_distance": 83.8
+      },
+      {
+        "id": "moon.garden.waning",
+        "object_id": "M02_128",
+        "x": 768,
+        "y": 1040,
+        "radius": 180,
+        "approach": [
+          740,
+          1116
+        ],
+        "approach_distance": 81.0
+      },
+      {
+        "id": "moon.garden.crescent",
+        "object_id": "M02_129",
+        "x": 475,
+        "y": 755,
+        "radius": 180,
+        "approach": [
+          380,
+          732
+        ],
+        "approach_distance": 97.7
+      },
+      {
+        "id": "moon.garden.crescent",
+        "object_id": "M02_130",
+        "x": 465,
+        "y": 865,
+        "radius": 180,
+        "approach": [
+          380,
+          892
+        ],
+        "approach_distance": 89.2
+      },
+      {
+        "id": "moon.garden.full",
+        "object_id": "M02_131",
+        "x": 1070,
+        "y": 750,
+        "radius": 180,
+        "approach": [
+          1148,
+          716
+        ],
+        "approach_distance": 85.1
+      },
+      {
+        "id": "moon.garden.full",
+        "object_id": "M02_132",
+        "x": 1080,
+        "y": 875,
+        "radius": 180,
+        "approach": [
+          1156,
+          892
+        ],
+        "approach_distance": 77.9
+      },
+      {
+        "id": "moon.garden.waning",
+        "object_id": "M02_133",
+        "x": 715,
+        "y": 1025,
+        "radius": 180,
+        "approach": [
+          716,
+          1116
+        ],
+        "approach_distance": 91.0
+      },
+      {
+        "id": "moon.garden.waning",
+        "object_id": "M02_134",
+        "x": 825,
+        "y": 1020,
+        "radius": 180,
+        "approach": [
+          828,
+          1116
+        ],
+        "approach_distance": 96.0
+      }
+    ]
+  },
+  "colliders_file": "colliders.json",
+  "review_changes": [
+    "Only puzzle flowers moved inside lake near reachable banks; garden architecture preserved."
+  ],
+  "reference": "C:\\Projetos\\MementoMori-V6-Alternativa\\00_REFERENCIAS_V5_APROVADAS\\02_DOMINIO_LUA\\M2JardimLunar.png",
+  "animation_profile": "living_water_void_foliage_emissive"
+}

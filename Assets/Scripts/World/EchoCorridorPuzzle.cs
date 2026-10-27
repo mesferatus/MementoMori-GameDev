@@ -33,6 +33,11 @@ namespace MementoMori.World
         {
             completionDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_ECHO_COMPLETE");
         }
+        private void Start()
+        {
+            var state=GameState.Instance;
+            if(state!=null) round=state.HasFlag(StoryFlag.EchoTrial03Complete)?3:state.HasFlag(StoryFlag.EchoTrial02Complete)?2:state.HasFlag(StoryFlag.EchoTrial01Complete)?1:0;
+        }
         public bool Solved => GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete);
         public void Configure(DialogueData dialogue, Transform[] corridorPassages)
         {
@@ -68,3 +73,4 @@ namespace MementoMori.World
         }
     }
 }
+

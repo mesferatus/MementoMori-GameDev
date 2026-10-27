@@ -20,6 +20,9 @@ namespace MementoMori.World
         private bool lastVisualAvailability;
         private bool visualStateInitialized;
         private bool used;
+        [SerializeField] private bool requiresConfiguredPuzzles;
+        public void RequireConfiguredPuzzles() => requiresConfiguredPuzzles = true;
+        private bool ConfiguredPuzzlesReady => !requiresConfiguredPuzzles || GameState.Instance != null && (sceneName == "DominioLua" ? GameState.Instance.Puzzles.LabyrinthGateOpen : GameState.Instance.Puzzles.MoonGateOpen);
         public void Configure(string targetScene, string verb, bool ritualRequired)
         {
             sceneName = targetScene;
@@ -42,7 +45,7 @@ namespace MementoMori.World
         }
         public string InteractionVerb => interactionVerb;
         public int InteractionPriority => 5;
-        public bool CanInteract(InteractionContext context) => !used && (!requiresRitual || GameState.Instance != null && GameState.Instance.RitualCompleted) && (!requiresPoe || GameState.Instance != null && GameState.Instance.PoeRevealed) && (string.IsNullOrEmpty(requiredStoryFlag) || HasRequiredFlag()) && HasRequiredFlags();
+        public bool CanInteract(InteractionContext context) => !used && ConfiguredPuzzlesReady && (!requiresRitual || GameState.Instance != null && GameState.Instance.RitualCompleted) && (!requiresPoe || GameState.Instance != null && GameState.Instance.PoeRevealed) && (string.IsNullOrEmpty(requiredStoryFlag) || HasRequiredFlag()) && HasRequiredFlags();
         private void Update()
         {
             RefreshVisualState(false);
@@ -78,10 +81,11 @@ namespace MementoMori.World
 
         public void ActivateFromLinkedInteraction()
         {
-            if (used) return;
+            if (!CanInteract(default) || SceneLoader.Instance == null) return;
             used = true;
             RuntimeAudio.PlayOneShot("12_portal_open", .8f);
             SceneLoader.Instance?.LoadScene(sceneName);
         }
     }
 }
+

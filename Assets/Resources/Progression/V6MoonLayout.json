@@ -1,0 +1,5 @@
+{"challenges":[
+{"id":"moon.illusory_corridor","title":"O corredor que se repete","clue":"A inscrição reaparece invertida: «Não siga a imagem perfeita. Siga a falha; depois o silêncio; depois a passagem».","choices":["Imagem perfeita","Falha","Silêncio","Passagem"],"sequence":[1,2,3],"x":28.5,"y":-24.5},
+{"id":"moon.cycles","title":"O ciclo incompleto","clue":"«A luz cresce, torna-se inteira, aprende a diminuir e retorna ao escuro». Comece onde a luz nasce de novo.","choices":["Nova","Crescente","Cheia","Minguante"],"sequence":[1,2,3,0],"x":-4.5,"y":-75}
+]}
+

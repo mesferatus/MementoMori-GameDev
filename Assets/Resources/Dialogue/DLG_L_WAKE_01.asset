@@ -2,13 +2,56 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d1474fa99a3daa499fa16618548882f, type: 3}
   m_Name: DLG_L_WAKE_01
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_L_WAKE_01
   lines:
-  - {Text: "Estou acordada.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
-  - {Text: "Essa não foi uma pergunta.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
-  - {Text: "Meu corpo parece lembrar de mim.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
-  - {Text: "O resto ainda está decidindo.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - Text: Estou acordada. De novo.
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: "Esse s\xEDmbolo... estava no ch\xE3o do quarto."
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: "Ent\xE3o foi o ritual."
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: O ritual me fez parar neste Labirinto.
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
+  - Text: "Mas por que eu n\xE3o lembro de querer vir?"
+    Speaker: Melantha
+    CharactersPerSecond: 38
+    PauseBefore: 0
+    PauseAfter: 0
+    Thought: 0
+    Narration: 0
+    LockMovement: 1
   conditions: []

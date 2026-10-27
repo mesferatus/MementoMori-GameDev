@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: d14ea24753ea64f48846029666b287e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7647969134803044676
+    second: MOON_05_DECORATION_LibraryV2_0
+  - first:
+      213: -4877424284354275788
+    second: MOON_05_DECORATION_LibraryV2_1
+  - first:
+      213: 3367830786202953328
+    second: MOON_05_DECORATION_LibraryV2_2
+  - first:
+      213: -7886028812657438536
+    second: MOON_05_DECORATION_LibraryV2_3
+  - first:
+      213: 2477918361857698160
+    second: MOON_05_DECORATION_LibraryV2_4
+  - first:
+      213: 389716720069153163
+    second: MOON_05_DECORATION_LibraryV2_5
+  - first:
+      213: 4485523649577518554
+    second: MOON_05_DECORATION_LibraryV2_6
+  - first:
+      213: -3037142323667775986
+    second: MOON_05_DECORATION_LibraryV2_7
+  - first:
+      213: -4694295397167314248
+    second: MOON_05_DECORATION_LibraryV2_8
+  - first:
+      213: 5131333726093978420
+    second: MOON_05_DECORATION_LibraryV2_9
+  - first:
+      213: 6751790069177416672
+    second: MOON_05_DECORATION_LibraryV2_10
+  - first:
+      213: 6883418980889341255
+    second: MOON_05_DECORATION_LibraryV2_11
+  - first:
+      213: 4729257168649940923
+    second: MOON_05_DECORATION_LibraryV2_12
+  - first:
+      213: -3316687005287544585
+    second: MOON_05_DECORATION_LibraryV2_13
+  - first:
+      213: 3615168066425974849
+    second: MOON_05_DECORATION_LibraryV2_14
+  - first:
+      213: 8631966856856746913
+    second: MOON_05_DECORATION_LibraryV2_15
+  - first:
+      213: 4065957029608961476
+    second: MOON_05_DECORATION_LibraryV2_16
+  - first:
+      213: -3632875826822995738
+    second: MOON_05_DECORATION_LibraryV2_17
+  - first:
+      213: -6317086451101875887
+    second: MOON_05_DECORATION_LibraryV2_18
+  - first:
+      213: -7026458710137067271
+    second: MOON_05_DECORATION_LibraryV2_19
+  - first:
+      213: -1955425272171007186
+    second: MOON_05_DECORATION_LibraryV2_20
+  - first:
+      213: 2070798101357936055
+    second: MOON_05_DECORATION_LibraryV2_21
+  - first:
+      213: 7371212108648480235
+    second: MOON_05_DECORATION_LibraryV2_22
+  - first:
+      213: -8526734695836770876
+    second: MOON_05_DECORATION_LibraryV2_23
+  - first:
+      213: -6423551726396704976
+    second: MOON_05_DECORATION_LibraryV2_24
+  - first:
+      213: -6354728243398765895
+    second: MOON_05_DECORATION_LibraryV2_25
+  - first:
+      213: -3643547681425539455
+    second: MOON_05_DECORATION_LibraryV2_26
+  - first:
+      213: -602443263041728475
+    second: MOON_05_DECORATION_LibraryV2_27
+  - first:
+      213: -3254634000459326794
+    second: MOON_05_DECORATION_LibraryV2_28
+  - first:
+      213: 1724222554764853816
+    second: MOON_05_DECORATION_LibraryV2_29
+  - first:
+      213: 4644952421765529148
+    second: MOON_05_DECORATION_LibraryV2_30
+  - first:
+      213: 1299870546356236525
+    second: MOON_05_DECORATION_LibraryV2_31
+  - first:
+      213: 1164688662676743972
+    second: MOON_05_DECORATION_LibraryV2_32
+  - first:
+      213: 7210900015658365011
+    second: MOON_05_DECORATION_LibraryV2_33
+  - first:
+      213: 879680844693756525
+    second: MOON_05_DECORATION_LibraryV2_34
+  - first:
+      213: -8409304555260821597
+    second: MOON_05_DECORATION_LibraryV2_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc7797929ebc1149b40c6db7b020a18
+      internalID: 606946641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_002
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f4a4a9d3a21284bb95bf4a1f0e2288
+      internalID: 734311875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_003
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea24de37b297c5e49b871ce6c71e9b48
+      internalID: -1237796836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_004
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6010b042efcb8e24395800a7f29b7941
+      internalID: -189145688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_005
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06116630d6be516418fd6d16a129b53d
+      internalID: -1513715950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_006
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8138aa093500225419691decb8d06f2d
+      internalID: -2049285139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_007
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbb7f253afded34b8beb0f2a5b3c289
+      internalID: -1356441582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_008
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3a2fdf74d47c04594e0562849714c0
+      internalID: -983536312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_009
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f342727f3f50e4baa8a6f5a2cf2a8b
+      internalID: 1927784425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_010
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2109299221c397d40bc2d66f2e91c75d
+      internalID: 1157841130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_011
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a69b949c5b9b57488571ec9436d2be2
+      internalID: 1029241065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_012
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774952b4c5afba648936281773622f34
+      internalID: -124750112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_013
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d349cd18b532add43a594e7890f902e6
+      internalID: 564209836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_014
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632c1503a900e0140865018ab5cb9247
+      internalID: -1265738721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_015
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3198defa711a8241b5e336f454789df
+      internalID: 1927904173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_016
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f7b2a35844e58479a0afd91c2d4d8b
+      internalID: -1293855890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_017
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1168e00b20f774797df3954d7af274
+      internalID: -1685150575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_018
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d941fe0bf1cbe5e4e96ccacb67597750
+      internalID: -1545065850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_019
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5404c6a3d8f6dd40bad821e33d513ae
+      internalID: -1509274557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_020
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b046e415a3b60439fad86f62a4f4b8
+      internalID: 437576922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_021
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55566d7a5d14e7f408eccaa65d387bfa
+      internalID: 1742172145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_022
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33289613050fb5642b14d7e5ee679f32
+      internalID: 2080089851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_023
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86359713267fae41a68daad041d2865
+      internalID: -1941794134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_024
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215155b006f60c74487ccab6e97e134e
+      internalID: 1563780688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_025
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e8c51e286696f42966574cab1635d0
+      internalID: -813076806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_026
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b1bdeb838343b4986cb00e825e7cad
+      internalID: -747721543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_027
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4022d01446c0094c9d9443e468cc2fa
+      internalID: -1900368961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_028
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4298e967e7e2e41a27a7d6ef415ea4
+      internalID: 1586901970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_029
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730dc3251cfa14d45b2634a2228f8971
+      internalID: -1863502359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_030
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7e03a3b11b36a428d579dd0f9c66ba
+      internalID: -869965851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_031
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e747a889e3b8b44cb39f68aee410284
+      internalID: -336899749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_032
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabd021e1c3c5d7488ea7f816973e4d8
+      internalID: 1155957148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_033
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b31b62b27ec184fb1e40f3b8c37a34
+      internalID: -684849171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_034
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6919b09b58321644aa8c9c0c1971ca0
+      internalID: 410238506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_035
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfb7e7045b53a24c999598b39a1f3f8
+      internalID: 432033917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_05_DECORATION_V2_036
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dbfc16bfd25c94a9fe06e8ee203bba
+      internalID: -1032670212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ed8112eda0fcb654a9464015f6eb08ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MOON_05_DECORATION_V2_001: 606946641
+      MOON_05_DECORATION_V2_002: 734311875
+      MOON_05_DECORATION_V2_003: -1237796836
+      MOON_05_DECORATION_V2_004: -189145688
+      MOON_05_DECORATION_V2_005: -1513715950
+      MOON_05_DECORATION_V2_006: -2049285139
+      MOON_05_DECORATION_V2_007: -1356441582
+      MOON_05_DECORATION_V2_008: -983536312
+      MOON_05_DECORATION_V2_009: 1927784425
+      MOON_05_DECORATION_V2_010: 1157841130
+      MOON_05_DECORATION_V2_011: 1029241065
+      MOON_05_DECORATION_V2_012: -124750112
+      MOON_05_DECORATION_V2_013: 564209836
+      MOON_05_DECORATION_V2_014: -1265738721
+      MOON_05_DECORATION_V2_015: 1927904173
+      MOON_05_DECORATION_V2_016: -1293855890
+      MOON_05_DECORATION_V2_017: -1685150575
+      MOON_05_DECORATION_V2_018: -1545065850
+      MOON_05_DECORATION_V2_019: -1509274557
+      MOON_05_DECORATION_V2_020: 437576922
+      MOON_05_DECORATION_V2_021: 1742172145
+      MOON_05_DECORATION_V2_022: 2080089851
+      MOON_05_DECORATION_V2_023: -1941794134
+      MOON_05_DECORATION_V2_024: 1563780688
+      MOON_05_DECORATION_V2_025: -813076806
+      MOON_05_DECORATION_V2_026: -747721543
+      MOON_05_DECORATION_V2_027: -1900368961
+      MOON_05_DECORATION_V2_028: 1586901970
+      MOON_05_DECORATION_V2_029: -1863502359
+      MOON_05_DECORATION_V2_030: -869965851
+      MOON_05_DECORATION_V2_031: -336899749
+      MOON_05_DECORATION_V2_032: 1155957148
+      MOON_05_DECORATION_V2_033: -684849171
+      MOON_05_DECORATION_V2_034: 410238506
+      MOON_05_DECORATION_V2_035: 432033917
+      MOON_05_DECORATION_V2_036: -1032670212
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

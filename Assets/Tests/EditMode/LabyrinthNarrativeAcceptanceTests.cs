@@ -1,3 +1,4 @@
+using System.Linq;
 using System.IO;
 using MementoMori.Dialogue;
 using NUnit.Framework;
@@ -35,7 +36,7 @@ namespace MementoMori.Tests.EditMode
         [Test]
         public void MoonPortalRequiresEchoCompletionBeforeDominioLua()
         {
-            var scene = File.ReadAllText("Assets/Scenes/Labirinto.unity");
+            var scene = File.ReadAllText(UnityEditor.EditorBuildSettings.scenes.Single(scene => scene.enabled && Path.GetFileNameWithoutExtension(scene.path) == "Labirinto").path);
             Assert.That(scene, Does.Contain("requiredStoryFlags:\n  - EchoTrial03Complete"));
             Assert.That(scene, Does.Contain("MementoMori.Narrative.LabyrinthNarrativeController"));
         }

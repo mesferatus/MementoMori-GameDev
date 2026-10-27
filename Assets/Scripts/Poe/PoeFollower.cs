@@ -21,7 +21,7 @@ namespace MementoMori.Poe
         private Vector3 lastVisualPosition;
         private string visualDirection = "front";
         private string animationState;
-        private Tilemap navigationFloor;
+        [SerializeField] private Tilemap navigationFloor;
         private readonly Queue<Vector2> navigationRoute = new();
         private Vector2 routeDestination;
         private float nextRouteSearch;
@@ -43,7 +43,7 @@ namespace MementoMori.Poe
             if (moving)
             {
                 visualDirection = Mathf.Abs(delta.x) > Mathf.Abs(delta.y) ? "side" : delta.y > 0 ? "back" : "front";
-                if (visual != null && visualDirection == "side") visual.flipX = delta.x < 0;
+                if (visual != null) visual.flipX = visualDirection == "side" && delta.x < 0;
             }
             var next = State switch
             {
@@ -63,6 +63,13 @@ namespace MementoMori.Poe
             player = followTarget;
             speed = Mathf.Max(0.1f, followSpeed);
             minimumDistance = Mathf.Max(0f, stopDistance);
+        }
+
+        public void ConfigureNavigationFloor(Tilemap floor)
+        {
+            navigationFloor = floor;
+            navigationRoute.Clear();
+            nextRouteSearch = 0f;
         }
 
         private void Update()
@@ -159,15 +166,23 @@ namespace MementoMori.Poe
         private bool ClearStep(Vector2 from, Vector2 to)
         {
             var delta = to - from;
-            var steps = Mathf.Max(1, Mathf.CeilToInt(delta.magnitude / .25f));
+            var steps = Mathf.Max(1, Mathf.CeilToInt(delta.magnitude / .1f));
             for (var i = 0; i <= steps; i++)
-                if (navigationFloor != null && !navigationFloor.HasTile(navigationFloor.WorldToCell(Vector2.Lerp(from, to, i / (float)steps)))) return false;
+                if (!HasFloorClearance(Vector2.Lerp(from, to, i / (float)steps))) return false;
             foreach (var hit in Physics2D.CircleCastAll(from, .18f, delta.normalized, delta.magnitude))
                 if (hit.collider != null && !hit.collider.isTrigger && !hit.transform.IsChildOf(transform)
                     && (player == null || !hit.transform.IsChildOf(player))) return false;
             return true;
         }
 
+        private bool HasFloorClearance(Vector2 point)
+        {
+            if(navigationFloor==null)return true;
+            // The companion occupies an area, not a point. Avoid clipping diagonal corners.
+            foreach(var offset in new[]{Vector2.zero,Vector2.left*.12f,Vector2.right*.12f,Vector2.up*.12f,Vector2.down*.12f})
+                if(!navigationFloor.HasTile(navigationFloor.WorldToCell(point+offset)))return false;
+            return true;
+        }
         private void MoveOnFloor(Vector2 destination)
         {
             if (navigationFloor == null)
@@ -179,7 +194,8 @@ namespace MementoMori.Poe
             if (ClearStep(current, destination))
             {
                 navigationRoute.Clear();
-                transform.position = Vector2.MoveTowards(current, destination, speed * Time.deltaTime);
+                var next=Vector2.MoveTowards(current,destination,speed*Time.deltaTime);
+                if(HasFloorClearance(next))transform.position=next;
                 return;
             }
             if (Time.time >= nextRouteSearch && (navigationRoute.Count == 0 || Vector2.Distance(destination, routeDestination) > 1f))
@@ -218,14 +234,15 @@ namespace MementoMori.Poe
             if (navigationRoute.Count == 0) return;
             var waypoint = navigationRoute.Peek();
             if (!ClearStep(current, waypoint)) { navigationRoute.Clear(); return; }
-            transform.position = Vector2.MoveTowards(current, waypoint, speed * Time.deltaTime);
+            var nextWaypoint=Vector2.MoveTowards(current,waypoint,speed*Time.deltaTime);
+            if(HasFloorClearance(nextWaypoint))transform.position=nextWaypoint;
         }
 
         private void Face(Vector2 direction)
         {
             if (direction.sqrMagnitude < .01f) return;
-            var renderer = GetComponent<SpriteRenderer>();
-            if (renderer != null && Mathf.Abs(direction.x) > .01f) renderer.flipX = direction.x < 0f;
+            visualDirection = Mathf.Abs(direction.x) > Mathf.Abs(direction.y) ? "side" : direction.y > 0 ? "back" : "front";
+            if (visual != null) visual.flipX = visualDirection == "side" && direction.x < 0f;
         }
         private static bool IsOutsideCamera(Vector3 position)
         {
@@ -255,3 +272,4 @@ namespace MementoMori.Poe
         }
     }
 }
+

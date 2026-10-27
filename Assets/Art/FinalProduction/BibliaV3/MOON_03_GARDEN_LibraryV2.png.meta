@@ -1,0 +1,2989 @@
+fileFormatVersion: 2
+guid: 7c5e084171787cf4ba0887024a554fd7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3257480765465463763
+    second: MOON_03_GARDEN_LibraryV2_0
+  - first:
+      213: 6867159255720046125
+    second: MOON_03_GARDEN_LibraryV2_1
+  - first:
+      213: -5331409530835109718
+    second: MOON_03_GARDEN_LibraryV2_2
+  - first:
+      213: 4347098120196703942
+    second: MOON_03_GARDEN_LibraryV2_3
+  - first:
+      213: -5509787437990783344
+    second: MOON_03_GARDEN_LibraryV2_4
+  - first:
+      213: 2135514421930687190
+    second: MOON_03_GARDEN_LibraryV2_5
+  - first:
+      213: 138269097532944979
+    second: MOON_03_GARDEN_LibraryV2_6
+  - first:
+      213: -7971321945319999717
+    second: MOON_03_GARDEN_LibraryV2_7
+  - first:
+      213: 3363713623437611754
+    second: MOON_03_GARDEN_LibraryV2_8
+  - first:
+      213: -8704371532802369595
+    second: MOON_03_GARDEN_LibraryV2_9
+  - first:
+      213: -6241786888212986600
+    second: MOON_03_GARDEN_LibraryV2_10
+  - first:
+      213: 1700452053171589923
+    second: MOON_03_GARDEN_LibraryV2_11
+  - first:
+      213: -6160548908860676396
+    second: MOON_03_GARDEN_LibraryV2_12
+  - first:
+      213: -8003767728345217303
+    second: MOON_03_GARDEN_LibraryV2_13
+  - first:
+      213: 3238398629412881507
+    second: MOON_03_GARDEN_LibraryV2_14
+  - first:
+      213: 5228965053768072456
+    second: MOON_03_GARDEN_LibraryV2_15
+  - first:
+      213: -4947804663660199958
+    second: MOON_03_GARDEN_LibraryV2_16
+  - first:
+      213: 8322255487016882220
+    second: MOON_03_GARDEN_LibraryV2_17
+  - first:
+      213: -776602970446940533
+    second: MOON_03_GARDEN_LibraryV2_18
+  - first:
+      213: -284872258742551657
+    second: MOON_03_GARDEN_LibraryV2_19
+  - first:
+      213: 277963639577638515
+    second: MOON_03_GARDEN_LibraryV2_20
+  - first:
+      213: 3610526489586317309
+    second: MOON_03_GARDEN_LibraryV2_21
+  - first:
+      213: -1417204690967615079
+    second: MOON_03_GARDEN_LibraryV2_22
+  - first:
+      213: 6603088721441976887
+    second: MOON_03_GARDEN_LibraryV2_23
+  - first:
+      213: -6409480801987274093
+    second: MOON_03_GARDEN_LibraryV2_24
+  - first:
+      213: 7269669327859245613
+    second: MOON_03_GARDEN_LibraryV2_25
+  - first:
+      213: 2609981684164565805
+    second: MOON_03_GARDEN_LibraryV2_26
+  - first:
+      213: 5624549731303877662
+    second: MOON_03_GARDEN_LibraryV2_27
+  - first:
+      213: -5509936612094755633
+    second: MOON_03_GARDEN_LibraryV2_28
+  - first:
+      213: -4354219582332488302
+    second: MOON_03_GARDEN_LibraryV2_29
+  - first:
+      213: -1587063036712073895
+    second: MOON_03_GARDEN_LibraryV2_30
+  - first:
+      213: -4306092762687074807
+    second: MOON_03_GARDEN_LibraryV2_31
+  - first:
+      213: -1647855100164034037
+    second: MOON_03_GARDEN_LibraryV2_32
+  - first:
+      213: -509624746042625353
+    second: MOON_03_GARDEN_LibraryV2_33
+  - first:
+      213: 4633429557756339463
+    second: MOON_03_GARDEN_LibraryV2_34
+  - first:
+      213: 4935417046154509223
+    second: MOON_03_GARDEN_LibraryV2_35
+  - first:
+      213: 4043925433112888056
+    second: MOON_03_GARDEN_LibraryV2_36
+  - first:
+      213: 5785809783578665968
+    second: MOON_03_GARDEN_LibraryV2_37
+  - first:
+      213: -6918050612804171505
+    second: MOON_03_GARDEN_LibraryV2_38
+  - first:
+      213: -213957811306533
+    second: MOON_03_GARDEN_LibraryV2_39
+  - first:
+      213: -6153977503215969269
+    second: MOON_03_GARDEN_LibraryV2_40
+  - first:
+      213: -3487759186607754792
+    second: MOON_03_GARDEN_LibraryV2_41
+  - first:
+      213: 7328499103474216544
+    second: MOON_03_GARDEN_LibraryV2_42
+  - first:
+      213: -8836836386582317588
+    second: MOON_03_GARDEN_LibraryV2_43
+  - first:
+      213: 2934748303690765995
+    second: MOON_03_GARDEN_LibraryV2_44
+  - first:
+      213: -9118948484587281040
+    second: MOON_03_GARDEN_LibraryV2_45
+  - first:
+      213: -5259918905114086929
+    second: MOON_03_GARDEN_LibraryV2_46
+  - first:
+      213: 5667816251137591206
+    second: MOON_03_GARDEN_LibraryV2_47
+  - first:
+      213: 7628052680838546620
+    second: MOON_03_GARDEN_LibraryV2_48
+  - first:
+      213: 5270124548128456263
+    second: MOON_03_GARDEN_LibraryV2_49
+  - first:
+      213: -5382872339976266133
+    second: MOON_03_GARDEN_LibraryV2_50
+  - first:
+      213: -7004164582266119417
+    second: MOON_03_GARDEN_LibraryV2_51
+  - first:
+      213: -2694241322747154876
+    second: MOON_03_GARDEN_LibraryV2_52
+  - first:
+      213: -7300251368599603278
+    second: MOON_03_GARDEN_LibraryV2_53
+  - first:
+      213: -4552244642175921377
+    second: MOON_03_GARDEN_LibraryV2_54
+  - first:
+      213: -8891447035450456279
+    second: MOON_03_GARDEN_LibraryV2_55
+  - first:
+      213: -4719157638660135639
+    second: MOON_03_GARDEN_LibraryV2_56
+  - first:
+      213: 4054184464717359679
+    second: MOON_03_GARDEN_LibraryV2_57
+  - first:
+      213: -2328629317974176282
+    second: MOON_03_GARDEN_LibraryV2_58
+  - first:
+      213: 1440209929607200703
+    second: MOON_03_GARDEN_LibraryV2_59
+  - first:
+      213: 8475876065434871795
+    second: MOON_03_GARDEN_LibraryV2_60
+  - first:
+      213: 8040801200825880360
+    second: MOON_03_GARDEN_LibraryV2_61
+  - first:
+      213: 7776594438470989162
+    second: MOON_03_GARDEN_LibraryV2_62
+  - first:
+      213: 3930788783707419908
+    second: MOON_03_GARDEN_LibraryV2_63
+  - first:
+      213: -3565897364795442703
+    second: MOON_03_GARDEN_LibraryV2_64
+  - first:
+      213: -5785770137529911208
+    second: MOON_03_GARDEN_LibraryV2_65
+  - first:
+      213: -2777941251496759845
+    second: MOON_03_GARDEN_LibraryV2_66
+  - first:
+      213: -7781892825638361252
+    second: MOON_03_GARDEN_LibraryV2_67
+  - first:
+      213: 7517504327343353270
+    second: MOON_03_GARDEN_LibraryV2_68
+  - first:
+      213: 6570591177876605404
+    second: MOON_03_GARDEN_LibraryV2_69
+  - first:
+      213: -5117029792686735733
+    second: MOON_03_GARDEN_LibraryV2_70
+  - first:
+      213: 7230558393877109141
+    second: MOON_03_GARDEN_LibraryV2_71
+  - first:
+      213: 7315905538758740288
+    second: MOON_03_GARDEN_LibraryV2_72
+  - first:
+      213: -345542669941696760
+    second: MOON_03_GARDEN_LibraryV2_73
+  - first:
+      213: -6030287737041348872
+    second: MOON_03_GARDEN_LibraryV2_74
+  - first:
+      213: -1587656950377012190
+    second: MOON_03_GARDEN_LibraryV2_75
+  - first:
+      213: -2495340419975181167
+    second: MOON_03_GARDEN_LibraryV2_76
+  - first:
+      213: 4205210218468673437
+    second: MOON_03_GARDEN_LibraryV2_77
+  - first:
+      213: 575542572565873042
+    second: MOON_03_GARDEN_LibraryV2_78
+  - first:
+      213: -4184271218775518969
+    second: MOON_03_GARDEN_LibraryV2_79
+  - first:
+      213: -451983211620745183
+    second: MOON_03_GARDEN_LibraryV2_80
+  - first:
+      213: -4792853586529370452
+    second: MOON_03_GARDEN_LibraryV2_81
+  - first:
+      213: 8715411377006087174
+    second: MOON_03_GARDEN_LibraryV2_82
+  - first:
+      213: -8635952671616668921
+    second: MOON_03_GARDEN_LibraryV2_83
+  - first:
+      213: -4158304458456368123
+    second: MOON_03_GARDEN_LibraryV2_84
+  - first:
+      213: -7010796401643194723
+    second: MOON_03_GARDEN_LibraryV2_85
+  - first:
+      213: -6143247787883930026
+    second: MOON_03_GARDEN_LibraryV2_86
+  - first:
+      213: -5775027234708611393
+    second: MOON_03_GARDEN_LibraryV2_87
+  - first:
+      213: -156630241617391477
+    second: MOON_03_GARDEN_LibraryV2_88
+  - first:
+      213: -9088925832629269437
+    second: MOON_03_GARDEN_LibraryV2_89
+  - first:
+      213: 5179926474181141755
+    second: MOON_03_GARDEN_LibraryV2_90
+  - first:
+      213: -4987704238953182127
+    second: MOON_03_GARDEN_LibraryV2_91
+  - first:
+      213: 5866658209147901907
+    second: MOON_03_GARDEN_LibraryV2_92
+  - first:
+      213: 640136698257181408
+    second: MOON_03_GARDEN_LibraryV2_93
+  - first:
+      213: -3700634713306608167
+    second: MOON_03_GARDEN_LibraryV2_94
+  - first:
+      213: -2071705590491622802
+    second: MOON_03_GARDEN_LibraryV2_95
+  - first:
+      213: 57185940055853055
+    second: MOON_03_GARDEN_LibraryV2_96
+  - first:
+      213: -4490559603523762633
+    second: MOON_03_GARDEN_LibraryV2_97
+  - first:
+      213: 6293269473261376885
+    second: MOON_03_GARDEN_LibraryV2_98
+  - first:
+      213: -2128201034680391172
+    second: MOON_03_GARDEN_LibraryV2_99
+  - first:
+      213: -7591917140822780950
+    second: MOON_03_GARDEN_LibraryV2_100
+  - first:
+      213: 1458493559922983565
+    second: MOON_03_GARDEN_LibraryV2_101
+  - first:
+      213: 4135426729111936639
+    second: MOON_03_GARDEN_LibraryV2_102
+  - first:
+      213: -1298240891545274059
+    second: MOON_03_GARDEN_LibraryV2_103
+  - first:
+      213: -6839877684568524130
+    second: MOON_03_GARDEN_LibraryV2_104
+  - first:
+      213: -4461575464479922412
+    second: MOON_03_GARDEN_LibraryV2_105
+  - first:
+      213: -830694954344985471
+    second: MOON_03_GARDEN_LibraryV2_106
+  - first:
+      213: -2361987797140878979
+    second: MOON_03_GARDEN_LibraryV2_107
+  - first:
+      213: -4215707632751606530
+    second: MOON_03_GARDEN_LibraryV2_108
+  - first:
+      213: -535011405167054448
+    second: MOON_03_GARDEN_LibraryV2_109
+  - first:
+      213: 2316986353585896693
+    second: MOON_03_GARDEN_LibraryV2_110
+  - first:
+      213: -4559498843039823731
+    second: MOON_03_GARDEN_LibraryV2_111
+  - first:
+      213: -1418158297870521679
+    second: MOON_03_GARDEN_LibraryV2_112
+  - first:
+      213: -7156140525609008278
+    second: MOON_03_GARDEN_LibraryV2_113
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc2ffbd598be6a4c9d87177247d05dd
+      internalID: -34656337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_002
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3cb4e566a75af4b934269f5f766eed
+      internalID: 482039348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_003
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358c627884692df468191bd6aecd874e
+      internalID: 112314139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_004
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be74254e3dd15d4096ebfc2f2eabac4
+      internalID: -1441491346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_005
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005a6155ba805094083b0c1739b3e4a4
+      internalID: -987454480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_006
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7199b2ce266c346be4611de9a8b2c7
+      internalID: 1936409099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_007
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a91e3356a664b74b8ca60c6e6388cdb
+      internalID: 2103191511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_008
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2149f9511396488499129d0f4a1da91f
+      internalID: -856561430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_009
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc7bcedba790c84580783df9fc4f93a
+      internalID: 688425883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_010
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e548ee4505d0d964b8890f75558a3aa4
+      internalID: 1767448772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_011
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f54d98ceda74c45a03c18ddd904d2d
+      internalID: -1021139848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_012
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20cb0d8a60877b44aa60eb9d5b430b2
+      internalID: -322771499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_013
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71d77282114bcb4c9ea0b5e9f810c30
+      internalID: -131736981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_014
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caa69bfe598c2e44bf7e1088e5027d7
+      internalID: 395395471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_015
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b18cc863ebb004f9344b50f39fc5ac
+      internalID: 20653922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_016
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285e60d54e6d4f84598ecd55153268e4
+      internalID: -497954682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_017
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb15a1b6fabb1f4c814f7b54be3fd7f
+      internalID: 323373264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_018
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fbe03dc92fcb8448643c329fdabfb9
+      internalID: 1080069087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_019
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98af2b94f1f683147a6a1dd97d9e8d0f
+      internalID: 1917480278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_020
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f090f19da83b2be4e91d5a08abfd9101
+      internalID: 863673877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_021
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f66ec7e3a50b141bdfeba13849dab1
+      internalID: 1059677751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_022
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5712cadd9a19cb4698e628ebb22fd36
+      internalID: 752609742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_023
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6500166ae20d6e74b920bf547e54aa9a
+      internalID: -1289565368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_024
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045fd23541a109a42b88bbb680a60cee
+      internalID: -1619867786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_025
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7154088cfe97c844282914cc787d7b2e
+      internalID: -1485161735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_026
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c547bcbb67d77044ba506171c5e13a0
+      internalID: 1853071440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_027
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413010c3aa690224f9df498ac0aa7b52
+      internalID: 1632009017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_028
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfff1d4210b57246a47308c2ffd029b
+      internalID: -2101678133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_029
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18675435ffd5fcc40a5f67c867cd9841
+      internalID: 1647340948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_030
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09df286ae900aff4aa63cd2701d1ad10
+      internalID: 203136828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_031
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd750373fba20a40ba8391ed0450046
+      internalID: 252064667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_032
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e7f2280597e554b9a1dc22ddeeca83
+      internalID: 128226366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_033
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc65dd5e8de5c094d810137ec372f7e5
+      internalID: 10269068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_034
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616026108b7df2244a369a6cbc61523e
+      internalID: 347134601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_035
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c381b8d1bab8aa4f8ed0ce19baedba5
+      internalID: 1376073674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_036
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86df801c87058af4283e06612ed75f5e
+      internalID: 702465960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_037
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0778e381fec7fd943a0e6954ff51e6af
+      internalID: -927036721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_038
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98139681247b1bb409d2da008d2497f2
+      internalID: 1687120711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_039
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e3176db56c49349a52e7dc48000001
+      internalID: 771123564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_040
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe27bae1437afd548bb429444360be92
+      internalID: 548404163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_041
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72254dffc1c63b943b1301aae584f05c
+      internalID: -1171811274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_042
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcb14d6a5986604f95cdfebc8fb9f3f
+      internalID: -1170304477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_043
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8126b6669f4bc45ab9df4c85b849fe
+      internalID: -227202156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_044
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8654b86f77fe8a342962f4df2df272f3
+      internalID: 1839399167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_045
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5855cc9d0a7be7409c2a88563fb9099
+      internalID: -1938472856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_046
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa03651693075940984671e2d0f0f15
+      internalID: 358193799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_047
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1a7ca98a89cb6429b276166656e368
+      internalID: -1986122071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_048
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bc91a49fc547f48b5ba22e58f0ad7a
+      internalID: -498675083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_049
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22370a5a672d2f49a4a5736199296ce
+      internalID: -329847875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_050
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0990c96726e77ef409c6d30ea9f832ca
+      internalID: -1723350840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_051
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1863421b3d289b948b5f2e83e3428d2a
+      internalID: 752028376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_052
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f17f8c11d9bf24eb63abd221769a9f
+      internalID: -1081715740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_053
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8963bf597ff7de84dacf369a6353cde8
+      internalID: -2100842912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_054
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abc8b7a32e0d994abb73db7edd74e42
+      internalID: -637401366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_055
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 960
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca3483d840896b45b07c31a043e621c
+      internalID: -1907270114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_056
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88859002cde0c7845943aaea5c544ae1
+      internalID: 1252867640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_057
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c9e3d86dc38854daf112cdff33f381
+      internalID: 1894179091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_058
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ec18fb7b5fdea478c718d5d08b4c49
+      internalID: 1488147675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_059
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829297ab74b4ccf448dfa91142c70b7a
+      internalID: -412651009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_060
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c56d80695cd1c46b5642b59a85f968
+      internalID: 806357950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_061
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1b8c0b53e908547bc41c296abe300c
+      internalID: -1295239938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_062
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70386b1e225e7a4da8376ab94d6920f
+      internalID: 1475900420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_063
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210b4ce5b8296f34d8ff0d53fd362222
+      internalID: -2061546305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_064
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dea52d7831fe94a9716030f12c87aa
+      internalID: -647410561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_065
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54551d293442fa94f9147cd78520e2e8
+      internalID: 2078869209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_066
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad05f6740e98e74c86dbbb478c698ca
+      internalID: -1237756123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_067
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd5609756d8681458c416fa6ba8d02d
+      internalID: -1392352307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_068
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f9901674dd2f94984fd1c363fdfd6b
+      internalID: -474525527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_069
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79783c51f74616d4e95cadc8ceb01131
+      internalID: -604782594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_070
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0c75808ef181344840a49efdcb5465
+      internalID: 1791108304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_071
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a66f8bd9e8d1c74aad9b2e99d5e7c32
+      internalID: 456326222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_072
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878423bf5b451a746b373806c96b90f3
+      internalID: -1101412625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_073
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21a8fcbf659e924fa4a3d74a123f1ed
+      internalID: 386307160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_074
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02515496df1fd54ea04a6156c8766fc
+      internalID: -1592417756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_075
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecb8cacddf37194cbfd4bec0256f578
+      internalID: 1312878395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_076
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9609c2268502f2545875b2a1ae8892bc
+      internalID: -1161956394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_077
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4442ef01507d04181be2053d17e682
+      internalID: 518575964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_078
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc49b0433a70ebc448c0e3961aa2d9ed
+      internalID: 668765098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_079
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5cc0af34f93d8498abb61936dcd1ff
+      internalID: -502862911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_080
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f94df7d07748e49a632c2c4304169d
+      internalID: 1116076414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_081
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dedb374504f3149a958c94b4f58daf
+      internalID: -2104814514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_082
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cebfa9ae30ceed4e9650621fcaf83f5
+      internalID: 1710420557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_083
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833c3f1609c44de4d9155508999aa839
+      internalID: -698711384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_084
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d7ee1cad5854545b56efcfbca9c97f
+      internalID: -618060950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_085
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efbde6574bb5ed48b9f21018401eee2
+      internalID: -852687733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_086
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc771ef73546e014299e11c059b1849b
+      internalID: -1007135245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_087
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425592382c9a199419455342e2a88d2e
+      internalID: -1871857939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_088
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d660caf737f107a4c96f91069b28ea17
+      internalID: 807265903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_089
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1a2b9e0152ce2409728357a2a72321
+      internalID: -1383216846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_090
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1584bdd3b5c4f24ea0294265addac50
+      internalID: 1143454223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_091
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a817f4c9bcc644bb2cfc82ce5d849d
+      internalID: -955481683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_092
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98b45a9d71f86e4a9fef29e6126b890
+      internalID: 538925760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_093
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bbe507595de3e47912e2a542f21b13
+      internalID: 1408146080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_094
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fce954152998c46bed2b35bda83258
+      internalID: 500003187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_095
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1b05f8af38af848996b03ab3871578
+      internalID: 1933439656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_096
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bd2df8025f90244bb92d9916f169f0
+      internalID: -1896768135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_097
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a165411cc9778459f4ddf444493b43
+      internalID: 832634982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_098
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52654ccdf0cee84e9f5558e32857572
+      internalID: 583298692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_099
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fb6558eb488ba4bbb64bfddfd61fb0
+      internalID: 2028386813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa89971fd22fe8d4faf24d0302cec999
+      internalID: 1053930533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_101
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e52f9ca0937be45845d31dfa378bbd
+      internalID: -513233715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_102
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b0d757587c1f74ea9ee5bace1e48d9
+      internalID: -296854041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_103
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26090fa06257ad4e8264d305d833c6b
+      internalID: -1237301137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_104
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d37aa6f2e82f6e42a5ae23bd9919095
+      internalID: -74347455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_105
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1894595abbfd7e94a8347783e379c313
+      internalID: -425405158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_106
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d851eb88af048f45a48db8a0dbacb33
+      internalID: -1218692342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_107
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b8416321f0c8a4a898569c96b9d0b6
+      internalID: -61934986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_108
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7859aa03bf60d4292da3cd8891579b
+      internalID: 1259364179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_109
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efec53f69f675d64e93073eb8449000c
+      internalID: -1911169823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_03_GARDEN_V2_110
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaff618345343e40b774bdd90375123
+      internalID: 1144634565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 76cfe235c5bc9154a8becf64aff0d2bb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MOON_03_GARDEN_V2_001: -34656337
+      MOON_03_GARDEN_V2_002: 482039348
+      MOON_03_GARDEN_V2_003: 112314139
+      MOON_03_GARDEN_V2_004: -1441491346
+      MOON_03_GARDEN_V2_005: -987454480
+      MOON_03_GARDEN_V2_006: 1936409099
+      MOON_03_GARDEN_V2_007: 2103191511
+      MOON_03_GARDEN_V2_008: -856561430
+      MOON_03_GARDEN_V2_009: 688425883
+      MOON_03_GARDEN_V2_010: 1767448772
+      MOON_03_GARDEN_V2_011: -1021139848
+      MOON_03_GARDEN_V2_012: -322771499
+      MOON_03_GARDEN_V2_013: -131736981
+      MOON_03_GARDEN_V2_014: 395395471
+      MOON_03_GARDEN_V2_015: 20653922
+      MOON_03_GARDEN_V2_016: -497954682
+      MOON_03_GARDEN_V2_017: 323373264
+      MOON_03_GARDEN_V2_018: 1080069087
+      MOON_03_GARDEN_V2_019: 1917480278
+      MOON_03_GARDEN_V2_020: 863673877
+      MOON_03_GARDEN_V2_021: 1059677751
+      MOON_03_GARDEN_V2_022: 752609742
+      MOON_03_GARDEN_V2_023: -1289565368
+      MOON_03_GARDEN_V2_024: -1619867786
+      MOON_03_GARDEN_V2_025: -1485161735
+      MOON_03_GARDEN_V2_026: 1853071440
+      MOON_03_GARDEN_V2_027: 1632009017
+      MOON_03_GARDEN_V2_028: -2101678133
+      MOON_03_GARDEN_V2_029: 1647340948
+      MOON_03_GARDEN_V2_030: 203136828
+      MOON_03_GARDEN_V2_031: 252064667
+      MOON_03_GARDEN_V2_032: 128226366
+      MOON_03_GARDEN_V2_033: 10269068
+      MOON_03_GARDEN_V2_034: 347134601
+      MOON_03_GARDEN_V2_035: 1376073674
+      MOON_03_GARDEN_V2_036: 702465960
+      MOON_03_GARDEN_V2_037: -927036721
+      MOON_03_GARDEN_V2_038: 1687120711
+      MOON_03_GARDEN_V2_039: 771123564
+      MOON_03_GARDEN_V2_040: 548404163
+      MOON_03_GARDEN_V2_041: -1171811274
+      MOON_03_GARDEN_V2_042: -1170304477
+      MOON_03_GARDEN_V2_043: -227202156
+      MOON_03_GARDEN_V2_044: 1839399167
+      MOON_03_GARDEN_V2_045: -1938472856
+      MOON_03_GARDEN_V2_046: 358193799
+      MOON_03_GARDEN_V2_047: -1986122071
+      MOON_03_GARDEN_V2_048: -498675083
+      MOON_03_GARDEN_V2_049: -329847875
+      MOON_03_GARDEN_V2_050: -1723350840
+      MOON_03_GARDEN_V2_051: 752028376
+      MOON_03_GARDEN_V2_052: -1081715740
+      MOON_03_GARDEN_V2_053: -2100842912
+      MOON_03_GARDEN_V2_054: -637401366
+      MOON_03_GARDEN_V2_055: -1907270114
+      MOON_03_GARDEN_V2_056: 1252867640
+      MOON_03_GARDEN_V2_057: 1894179091
+      MOON_03_GARDEN_V2_058: 1488147675
+      MOON_03_GARDEN_V2_059: -412651009
+      MOON_03_GARDEN_V2_060: 806357950
+      MOON_03_GARDEN_V2_061: -1295239938
+      MOON_03_GARDEN_V2_062: 1475900420
+      MOON_03_GARDEN_V2_063: -2061546305
+      MOON_03_GARDEN_V2_064: -647410561
+      MOON_03_GARDEN_V2_065: 2078869209
+      MOON_03_GARDEN_V2_066: -1237756123
+      MOON_03_GARDEN_V2_067: -1392352307
+      MOON_03_GARDEN_V2_068: -474525527
+      MOON_03_GARDEN_V2_069: -604782594
+      MOON_03_GARDEN_V2_070: 1791108304
+      MOON_03_GARDEN_V2_071: 456326222
+      MOON_03_GARDEN_V2_072: -1101412625
+      MOON_03_GARDEN_V2_073: 386307160
+      MOON_03_GARDEN_V2_074: -1592417756
+      MOON_03_GARDEN_V2_075: 1312878395
+      MOON_03_GARDEN_V2_076: -1161956394
+      MOON_03_GARDEN_V2_077: 518575964
+      MOON_03_GARDEN_V2_078: 668765098
+      MOON_03_GARDEN_V2_079: -502862911
+      MOON_03_GARDEN_V2_080: 1116076414
+      MOON_03_GARDEN_V2_081: -2104814514
+      MOON_03_GARDEN_V2_082: 1710420557
+      MOON_03_GARDEN_V2_083: -698711384
+      MOON_03_GARDEN_V2_084: -618060950
+      MOON_03_GARDEN_V2_085: -852687733
+      MOON_03_GARDEN_V2_086: -1007135245
+      MOON_03_GARDEN_V2_087: -1871857939
+      MOON_03_GARDEN_V2_088: 807265903
+      MOON_03_GARDEN_V2_089: -1383216846
+      MOON_03_GARDEN_V2_090: 1143454223
+      MOON_03_GARDEN_V2_091: -955481683
+      MOON_03_GARDEN_V2_092: 538925760
+      MOON_03_GARDEN_V2_093: 1408146080
+      MOON_03_GARDEN_V2_094: 500003187
+      MOON_03_GARDEN_V2_095: 1933439656
+      MOON_03_GARDEN_V2_096: -1896768135
+      MOON_03_GARDEN_V2_097: 832634982
+      MOON_03_GARDEN_V2_098: 583298692
+      MOON_03_GARDEN_V2_099: 2028386813
+      MOON_03_GARDEN_V2_100: 1053930533
+      MOON_03_GARDEN_V2_101: -513233715
+      MOON_03_GARDEN_V2_102: -296854041
+      MOON_03_GARDEN_V2_103: -1237301137
+      MOON_03_GARDEN_V2_104: -74347455
+      MOON_03_GARDEN_V2_105: -425405158
+      MOON_03_GARDEN_V2_106: -1218692342
+      MOON_03_GARDEN_V2_107: -61934986
+      MOON_03_GARDEN_V2_108: 1259364179
+      MOON_03_GARDEN_V2_109: -1911169823
+      MOON_03_GARDEN_V2_110: 1144634565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
