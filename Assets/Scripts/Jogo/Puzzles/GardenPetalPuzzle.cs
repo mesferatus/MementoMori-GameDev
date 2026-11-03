@@ -94,7 +94,6 @@ namespace MementoMori.Puzzles
                 return false;
             }
             GameState.Instance?.SetFlag(FlagFor(petal));
-            PlayPetalDialogue();
             if (GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.GardenPetalCrescente) && GameState.Instance.HasFlag(StoryFlag.GardenPetalCheia) && GameState.Instance.HasFlag(StoryFlag.GardenPetalMinguante))
             { GameState.Instance.SetFlag(StoryFlag.GardenComplete); StoryProgression.Instance?.SaveCheckpoint(CheckpointId.Garden); }
             return true;
@@ -115,16 +114,6 @@ namespace MementoMori.Puzzles
             nextWaningFlower--;
             if (nextWaningFlower >= 1) return true;
             return Place(requiredTarget);
-        }
-        private void PlayPetalDialogue()
-        {
-            var key = petal switch
-            {
-                MoonPetal.Crescente => "DLG_D_GARDEN_CRESCENT_SUCCESS",
-                MoonPetal.Cheia => "DLG_D_GARDEN_FULL_SUCCESS",
-                _ => "DLG_D_GARDEN_WANING_SUCCESS"
-            };
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/" + key));
         }
         static StoryFlag FlagFor(MoonPetal p) => p switch { MoonPetal.Crescente => StoryFlag.GardenPetalCrescente, MoonPetal.Cheia => StoryFlag.GardenPetalCheia, _ => StoryFlag.GardenPetalMinguante };
     }

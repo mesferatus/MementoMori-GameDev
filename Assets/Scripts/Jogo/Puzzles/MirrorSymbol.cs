@@ -2,6 +2,7 @@ using MementoMori.Interaction;
 using UnityEngine;
 using MementoMori.Audio;
 using MementoMori.Dialogue;
+using MementoMori.Core;
 
 namespace MementoMori.Puzzles
 {
@@ -32,15 +33,47 @@ namespace MementoMori.Puzzles
             activeSprite = active;
             if (visual != null) visual.sprite = inactiveSprite;
         }
-        public bool CanInteract(InteractionContext context) => puzzle != null && puzzle.CanAcceptInput;
+        public bool CanInteract(InteractionContext context) => puzzle != null
+            && (puzzle.CanAcceptInput || puzzle.State == PuzzleMirror.PuzzleState.Solved && ExtraSegmentStart(symbolId) >= 0);
         public void Interact(InteractionContext context)
         {
             if (!CanInteract(context)) return;
             RuntimeAudio.PlayOneShot("11_mirror_shimmer", .45f);
-            puzzle.Activate(this);
+            if (ExtraSegmentStart(symbolId) >= 0
+                && GameState.Instance != null && GameState.Instance.GetCounter("event.M03_EXTRA." + symbolId) == 0)
+            {
+                var extra = V61EventCatalog.CreateDialogueSegment("M03_EXTRA", "M03_EXTRA." + symbolId,
+                    ExtraSegmentStart(symbolId), 2);
+                var manager = DialogueManager.Instance;
+                if (extra != null && manager != null && manager.TryStartDialogue(extra))
+                {
+                    void Complete()
+                    {
+                        manager.OnDialogueCompleted -= Complete;
+                        var state = GameState.Instance;
+                        state?.SetCounter("event.M03_EXTRA." + symbolId, 1);
+                        if (state != null && state.GetCounter("event.M03_EXTRA.Present") > 0
+                            && state.GetCounter("event.M03_EXTRA.Absent") > 0
+                            && state.GetCounter("event.M03_EXTRA.Double") > 0
+                            && state.GetCounter("event.M03_EXTRA.Black") > 0)
+                            state.SetCounter("event.M03_EXTRA", 1);
+                        Destroy(extra);
+                    }
+                    manager.OnDialogueCompleted += Complete;
+                    return;
+                }
+                if (extra != null) Destroy(extra);
+                return;
+            }
+            if (puzzle.State != PuzzleMirror.PuzzleState.Solved) puzzle.Activate(this);
             var narrativeDialogue = dialogue ?? Resources.Load<DialogueData>("Dialogue/" + NarrativeId(symbolId));
             if (narrativeDialogue != null) DialogueManager.Instance?.StartDialogue(narrativeDialogue);
         }
+
+        private static int ExtraSegmentStart(string id) => id switch
+        {
+            "Present" => 0, "Absent" => 2, "Double" => 4, "Black" => 6, _ => -1
+        };
 
         private static string NarrativeId(string id) => id switch
         {

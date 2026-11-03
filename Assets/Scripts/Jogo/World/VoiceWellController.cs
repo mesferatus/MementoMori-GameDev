@@ -20,6 +20,13 @@ namespace MementoMori.World
             for (var i = 0; i < voices.Length; i++)
                 voices[i] ??= Resources.Load<DialogueData>("Dialogue/DLG_L_VOICE_WELL_0" + (i + 1));
         }
+        private void Start()
+        {
+            var state = GameState.Instance;
+            heard = state != null && state.HasFlag(StoryFlag.VoiceWellComplete)
+                ? voices.Length : Mathf.Clamp(state?.GetCounter("voiceWell.heard") ?? 0, 0, voices.Length);
+            if (heard > 0) ApplyVisualStage(heard - 1);
+        }
         public string InteractionVerb => "Escutar o poço";
         public int InteractionPriority => 4;
         public void Configure(params DialogueData[] lines) => voices = lines;
@@ -32,6 +39,7 @@ namespace MementoMori.World
             GrimoireCatalog.Discover("R05");
             var index = Mathf.Min(heard, voices.Length - 1);
             heard++;
+            GameState.Instance?.SetCounter("voiceWell.heard", heard);
             ApplyVisualStage(index);
             DialogueManager.Instance?.StartDialogue(voices[index]);
             if (heard >= voices.Length)

@@ -20,7 +20,7 @@ namespace MementoMori.Puzzles
 
         public void Play()
         {
-            if (played) return;
+            if (played || GameState.Instance != null && GameState.Instance.GetCounter("event.A2") > 0) return;
             played = true;
             GrimoireCatalog.Discover("P12");
             GameState.Instance?.SetFlag(StoryFlag.MirrorBlackSolved);
@@ -32,10 +32,18 @@ namespace MementoMori.Puzzles
             // The selected mirror owns the current dialogue; do not overwrite it.
             yield return null;
             yield return new WaitUntil(() => DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_D_MIRROR_SOLVED"));
+            if (GameState.Instance == null || GameState.Instance.GetCounter("event.C_BLACK") == 0)
+                DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_D_MIRROR_SOLVED"));
             yield return new WaitUntil(() => DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
-            var dialogue = Resources.Load<DialogueData>("Dialogue/DLG_D_BLACK_MIRROR_MEMORY");
-            DialogueManager.Instance?.StartDialogue(dialogue);
+            var dialogue = GameState.Instance != null && GameState.Instance.GetCounter("event.C_BLACK") > 0
+                ? null : V61EventCatalog.CreateDialogue("C_BLACK");
+            if (dialogue != null && (DialogueManager.Instance == null
+                || !DialogueManager.Instance.TryStartDialogue(dialogue)))
+            {
+                Destroy(dialogue);
+                played = false;
+                yield break;
+            }
             if (crackStates != null && crackStates.Length > 0 && mirrorRenderer != null)
             {
                 foreach (var crack in crackStates)
@@ -45,9 +53,37 @@ namespace MementoMori.Puzzles
                 }
             }
             yield return new WaitUntil(() => DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_D_ANDREALPHUS_02"));
+            if (dialogue != null) GameState.Instance?.SetCounter("event.C_BLACK", 1);
+            if (dialogue != null) Destroy(dialogue);
+            var andrealphus = V61EventCatalog.CreateDialogue("A2");
+            if (andrealphus == null || DialogueManager.Instance == null
+                || !DialogueManager.Instance.TryStartDialogue(andrealphus))
+            {
+                if (andrealphus != null) Destroy(andrealphus);
+                played = false;
+                yield break;
+            }
             yield return new WaitUntil(() => DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
+            if (GameState.Instance != null && GameState.Instance.GetCounter("choice.CH_A2") == 0)
+            {
+                if (!V61ChoicePresenter.Show("CH_A2"))
+                {
+                    Destroy(andrealphus);
+                    played = false;
+                    yield break;
+                }
+                yield return new WaitUntil(() => !V61ChoicePresenter.IsOpen
+                    && (DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen));
+                if (GameState.Instance != null && GameState.Instance.GetCounter("choice.CH_A2") == 0)
+                {
+                    Destroy(andrealphus);
+                    played = false;
+                    yield break;
+                }
+            }
             GameState.Instance?.SetFlag(StoryFlag.AndrealphusMeeting02Complete);
+            GameState.Instance?.SetCounter("event.A2", 1);
+            if (andrealphus != null) Destroy(andrealphus);
         }
     }
 }

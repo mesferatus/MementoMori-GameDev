@@ -37,7 +37,19 @@ namespace MementoMori.Puzzles
             foreach (var symbol in symbols) symbol?.SetActive(false);
             State = GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.MirrorPuzzleComplete)
                 ? PuzzleState.Solved : PuzzleState.Active;
-            if (State == PuzzleState.Solved) targetDoor?.Open();
+            if (State == PuzzleState.Solved)
+            {
+                targetDoor?.Open();
+                var black = symbols.FirstOrDefault(symbol => symbol != null && symbol.SymbolId == "Black");
+                black?.SetActive(true);
+                if (black != null && GameState.Instance != null
+                    && GameState.Instance.GetCounter("event.A2") == 0)
+                {
+                    var sequence = black.GetComponent<BlackMirrorSequenceController>();
+                    if (sequence == null) sequence = black.gameObject.AddComponent<BlackMirrorSequenceController>();
+                    sequence.Play();
+                }
+            }
             hintController?.Begin();
         }
 
@@ -48,8 +60,11 @@ namespace MementoMori.Puzzles
             GrimoireCatalog.Discover("A10");
             GrimoireCatalog.Discover("R06");
             GrimoireCatalog.Discover("P11");
-            if (!correctSymbolIds.Contains(symbol.SymbolId))
+            var nextSymbolId = correctSymbolIds.FirstOrDefault(id =>
+                !symbols.Exists(item => item != null && item.SymbolId == id && item.IsActive));
+            if (symbol.SymbolId != nextSymbolId)
             {
+                ClearActiveSymbols();
                 ErrorCount++;
                 GameState.Instance?.IncrementCounter("mirror.errors");
                 Object.FindAnyObjectByType<PoeFollower>()?.ReactToError(false);

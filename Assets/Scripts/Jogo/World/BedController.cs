@@ -14,6 +14,7 @@ namespace MementoMori.World
         private string nextScene = "Labirinto";
         private int attempts;
         private DialogueData lockedDialogue;
+        private DialogueData transitionDialogue;
         private bool transitioning;
         private bool choicePending;
         private Vector2 checkpointPosition;
@@ -33,6 +34,23 @@ namespace MementoMori.World
             if (!ready)
             {
                 attempts++;
+                if (state != null && state.GetCounter("event.Q01.Bed") == 0)
+                {
+                    var intro = V61EventCatalog.CreateDialogueSegment("Q01", "Q01.Bed", 0, 2);
+                    var manager = DialogueManager.Instance;
+                    if (intro != null && manager != null && manager.TryStartDialogue(intro))
+                    {
+                        void Complete()
+                        {
+                            manager.OnDialogueCompleted -= Complete;
+                            state.SetCounter("event.Q01.Bed", 1);
+                            Destroy(intro);
+                        }
+                        manager.OnDialogueCompleted += Complete;
+                        return;
+                    }
+                    if (intro != null) Destroy(intro);
+                }
                 lockedDialogue = Resources.Load<DialogueData>(attempts == 1 ? "Dialogue/DLG_Q_BED_EARLY_01" : "Dialogue/DLG_Q_BED_EARLY_02");
                 DialogueManager.Instance?.StartDialogue(lockedDialogue);
                 return;
@@ -68,7 +86,8 @@ namespace MementoMori.World
             if (choicePanel != null) choicePanel.SetActive(false);
             transitioning = true;
             GameState.Instance?.SetFlag(StoryFlag.RoomSleepUnlocked);
-            DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_Q_DREAM_TRANSITION"));
+            transitionDialogue = V61EventCatalog.CreateDialogue("C03");
+            DialogueManager.Instance?.StartDialogue(transitionDialogue);
             StartCoroutine(SleepRoutine());
         }
 
@@ -179,6 +198,7 @@ namespace MementoMori.World
             choicePending = false;
             transitioning = false;
             if (choicePanel != null) Destroy(choicePanel);
+            if (transitionDialogue != null) Destroy(transitionDialogue);
         }
 
         private IEnumerator SleepRoutine()
@@ -187,6 +207,8 @@ namespace MementoMori.World
             try
             {
                 while (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen) yield return null;
+                GameState.Instance?.SetCounter("event.C03", 1);
+                if (transitionDialogue != null) { Destroy(transitionDialogue); transitionDialogue = null; }
                 var transition = gameObject.GetComponent<DreamTransitionController>() ?? gameObject.AddComponent<DreamTransitionController>();
                 yield return transition.Play(dreamDuration);
                 GameState.Instance?.SetFlag(StoryFlag.DreamTransitionComplete);

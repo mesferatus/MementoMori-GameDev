@@ -2,7 +2,9 @@ using MementoMori.Core;
 using MementoMori.Interaction;
 using UnityEngine;
 using System;
+using System.Collections;
 using MementoMori.Audio;
+using MementoMori.Dialogue;
 
 namespace MementoMori.World
 {
@@ -76,8 +78,61 @@ namespace MementoMori.World
         public void Interact(InteractionContext context)
         {
             if (!CanInteract(context)) return;
+            if (sceneName == "FinalBeta" && GameState.Instance != null
+                && GameState.Instance.HasFlag(StoryFlag.FragmentCollected))
+            {
+                StartCoroutine(FinalTraversal());
+                return;
+            }
             ActivateFromLinkedInteraction();
         }
+
+        private IEnumerator FinalTraversal()
+        {
+            used = true;
+            InputGate.Instance?.Block("FinalTraversal");
+            var state = GameState.Instance;
+            var manager = DialogueManager.Instance;
+            if (state != null && state.GetCounter("event.M08") == 0)
+            {
+                var dialogue = V61EventCatalog.CreateDialogue("M08");
+                if (manager == null || manager.IsOpen || dialogue == null || !manager.TryStartDialogue(dialogue))
+                {
+                    if (dialogue != null) Destroy(dialogue);
+                    CancelFinalTraversal();
+                    yield break;
+                }
+                yield return new WaitUntil(() => manager == null || !manager.IsOpen);
+                state.SetCounter("event.M08", 1);
+                Destroy(dialogue);
+            }
+            if (state != null && state.GetCounter("choice.CH_FINAL") == 0)
+            {
+                if (!V61ChoicePresenter.Show("CH_FINAL"))
+                {
+                    CancelFinalTraversal();
+                    yield break;
+                }
+                yield return new WaitUntil(() => !V61ChoicePresenter.IsOpen
+                    && (DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen));
+                if (state.GetCounter("choice.CH_FINAL") == 0)
+                {
+                    CancelFinalTraversal();
+                    yield break;
+                }
+            }
+            InputGate.Instance?.Release("FinalTraversal");
+            RuntimeAudio.PlayOneShot("12_portal_open", .8f);
+            SceneLoader.Instance?.LoadScene(sceneName);
+        }
+
+        private void CancelFinalTraversal()
+        {
+            used = false;
+            InputGate.Instance?.Release("FinalTraversal");
+        }
+
+        private void OnDisable() => InputGate.Instance?.Release("FinalTraversal");
 
         public void ActivateFromLinkedInteraction()
         {

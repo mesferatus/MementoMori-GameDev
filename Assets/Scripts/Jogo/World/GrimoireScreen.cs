@@ -17,6 +17,37 @@ namespace MementoMori.World
         private const string Gate = "Grimoire";
         private const int RowsPerListPage = 7;
         private static GrimoireScreen runtime;
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        private static void RegisterSavedGameBootstrap()
+        {
+            SceneManager.sceneLoaded -= RestoreRuntimeForLoadedScene;
+            SceneManager.sceneLoaded += RestoreRuntimeForLoadedScene;
+        }
+
+        private static void RestoreRuntimeForLoadedScene(Scene scene, LoadSceneMode mode)
+            => EnsureRuntimeForScene(scene);
+
+        public static void EnsureRuntimeForScene(Scene scene)
+        {
+            if (runtime != null || GameState.Instance == null
+                || !GameState.Instance.HasFlag(StoryFlag.RoomGrimoireRead)) return;
+            var template = Resources.Load<GameObject>("GrimoireRuntimeHost");
+            var host = template == null ? new GameObject("PersistentGrimoireUI") : Instantiate(template);
+            host.name = "PersistentGrimoireUI";
+            DontDestroyOnLoad(host);
+            runtime = host.GetComponent<GrimoireScreen>() ?? host.AddComponent<GrimoireScreen>();
+            runtime.runtimeHost = true;
+            runtime.bookSprite ??= Resources.Load<Sprite>("UI/Grimoire/book_open");
+            runtime.illustrationSprite ??= Resources.Load<Sprite>("UI/Grimoire/page_illustration");
+            runtime.noteSprite ??= Resources.Load<Sprite>("UI/Grimoire/side_note");
+            runtime.symbolsSprite ??= Resources.Load<Sprite>("UI/Grimoire/sigil_symbols");
+            runtime.titleFont ??= TMP_Settings.defaultFontAsset;
+            runtime.bodyFont ??= TMP_Settings.defaultFontAsset;
+            SceneManager.sceneLoaded += runtime.OnSceneLoaded;
+            GrimoireCatalog.OnSceneEntered(scene.name);
+            foreach (var entry in GrimoireCatalog.Entries)
+                if (GrimoireCatalog.IsUnlocked(entry.Id)) runtime.lastUnlockedCount++;
+        }
         private static readonly string[] TabTitles = { "ANOTAÇÕES", "RITUAIS", "PISTAS", "MEMÓRIAS" };
 
         [SerializeField] private Sprite bookSprite;
@@ -26,6 +57,8 @@ namespace MementoMori.World
         [SerializeField] private Sprite closeFrameSprite;
         [SerializeField] private TMP_FontAsset titleFont;
         [SerializeField] private TMP_FontAsset bodyFont;
+        public TMP_FontAsset HeadingFont => titleFont;
+        public TMP_FontAsset BodyFont => bodyFont;
         private Canvas canvas;
         private TMP_Text pageTitle;
         private TMP_Text pageBody;
@@ -102,13 +135,15 @@ namespace MementoMori.World
                 noticeText.gameObject.SetActive(false);
             if (!IsOpen)
             {
-                if (Input.GetKeyDown(KeyCode.G) && GameState.Instance != null
+                if (InputBindings.Down(GameAction.Grimoire) && GameState.Instance != null
                     && GameState.Instance.HasFlag(StoryFlag.RoomGrimoireRead)) Open();
                 return;
             }
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)) { Close(); return; }
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) ShowPage(page + 1);
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) ShowPage(page - 1);
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)
+                || InputBindings.Down(GameAction.Grimoire) || InputBindings.Down(GameAction.Pause))
+            { Close(); return; }
+            if (Input.GetKeyDown(KeyCode.RightArrow) || InputBindings.Down(GameAction.MoveRight)) ShowPage(page + 1);
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || InputBindings.Down(GameAction.MoveLeft)) ShowPage(page - 1);
         }
 
         public void Open()
@@ -261,6 +296,8 @@ namespace MementoMori.World
             else
             {
                 pageBody.text = selectedEntry.Body ?? string.Empty;
+                var choiceRecord = MementoMori.Dialogue.V61ChoiceReactivity.GrimoireRecord(selectedEntry.Id, GameState.Instance);
+                if (!string.IsNullOrEmpty(choiceRecord)) pageBody.text += "\n\n" + choiceRecord;
                 pageBody.pageToDisplay = 1;
                 pageBody.ForceMeshUpdate();
                 pageCount = Mathf.Max(1, pageBody.textInfo.pageCount);

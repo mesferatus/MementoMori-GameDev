@@ -32,6 +32,7 @@ namespace MementoMori.Dialogue
     [Serializable]
     public struct DialogueLine
     {
+        public string Id;
         [TextArea(1, 4)] public string Text;
         public string Speaker;
         [Min(0.01f)] public float CharactersPerSecond;

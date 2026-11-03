@@ -17,6 +17,7 @@ namespace MementoMori.World
             firstDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_FALSE_DOOR_01");
             repeatDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_FALSE_DOOR_02");
         }
+        private void Start() => attempts = GameState.Instance?.GetCounter("falseDoor.attempts") ?? 0;
         public string InteractionVerb => "Abrir porta ornamentada";
         public int InteractionPriority => 7;
         public bool CanInteract(InteractionContext context) => true;

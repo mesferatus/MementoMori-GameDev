@@ -64,7 +64,7 @@ namespace MementoMori.Regions
                 return game.Puzzles.MarkSolved(id);
             }
             if(operation!=RegionOperation.Sequence)return false;
-            if(token!=target[Progress])return Fail(true);
+            if(token!=target[Progress])return Fail(id != "moon.illusory_corridor");
             game.SetPuzzleProgress(Key("step"),Progress+1);
             if(Progress==target.Length)game.Puzzles.MarkSolved(id);
             return true;

@@ -3,6 +3,7 @@ using MementoMori.Core;
 using MementoMori.Dialogue;
 using MementoMori.Poe;
 using MementoMori.Puzzles;
+using MementoMori.Player;
 using UnityEngine;
 
 namespace MementoMori.Narrative
@@ -16,9 +17,13 @@ namespace MementoMori.Narrative
         private int observedMirrorErrors;
         private int observedEchoErrors;
         private int observedSigilErrors;
-        private int lastGardenProgress;
+        private bool observedCrescent;
+        private bool observedFull;
+        private bool observedWaning;
         private int lastMirrorProgress;
         private int lastSigilProgress;
+        private PlayerController swimmer;
+        private Transform galleryDoor;
 
         private void Start()
         {
@@ -27,10 +32,14 @@ namespace MementoMori.Narrative
             observedMirrorErrors = state?.GetCounter("mirror.errors") ?? 0;
             observedEchoErrors = state?.GetCounter("echo.errors") ?? 0;
             observedSigilErrors = state?.GetCounter("sigil.errors") ?? 0;
-            lastGardenProgress = CountGardenProgress(state);
+            observedCrescent = state != null && state.HasFlag(StoryFlag.GardenPetalCrescente);
+            observedFull = state != null && state.HasFlag(StoryFlag.GardenPetalCheia);
+            observedWaning = state != null && state.HasFlag(StoryFlag.GardenPetalMinguante);
             lastMirrorProgress = CountMirrorProgress(state);
             lastSigilProgress = FindAnyObjectByType<SigilRingPuzzle>()?.GetProgress() ?? 0;
-            Queue("DLG_D_ENTRY_01");
+            swimmer = FindAnyObjectByType<PlayerController>();
+            galleryDoor = GameObject.Find("GalleryDoor_Cheia")?.transform;
+            Queue("M01");
         }
 
         private void Update()
@@ -38,13 +47,24 @@ namespace MementoMori.Narrative
             var state = GameState.Instance;
             if (state == null) return;
 
+            if (swimmer == null) swimmer = FindAnyObjectByType<PlayerController>();
+            if (swimmer != null && swimmer.IsSwimming) Queue("M02_WATER");
+            if (galleryDoor != null && swimmer != null
+                && Vector2.Distance(swimmer.transform.position, galleryDoor.position) < 5f)
+                Queue("M05_OPEN");
+            QueueWhen(state.HasFlag(StoryFlag.GardenComplete), "P01");
+            QueueWhen(state.GetCounter("event.A2") > 0, "P02");
+            QueueWhen(state.Puzzles.GetSolved("moon.illusory_corridor"), "P03");
+            QueueWhen(state.Puzzles.GetSolved("moon.cycles"), "P04");
+            QueueWhen(state.HasFlag(StoryFlag.SigilPuzzleComplete), "P05");
+
             var gardenProgress = CountGardenProgress(state);
-            if (gardenProgress > lastGardenProgress)
-            {
-                if (state.HasFlag(StoryFlag.GardenPetalCheia)) Queue("DLG_D_GARDEN_FULL_SUCCESS");
-                else Queue("DLG_D_GARDEN_CRESCENT_SUCCESS");
-            }
-            lastGardenProgress = gardenProgress;
+            if (!observedCrescent && state.HasFlag(StoryFlag.GardenPetalCrescente)) Queue("DLG_D_GARDEN_CRESCENT_SUCCESS");
+            if (!observedFull && state.HasFlag(StoryFlag.GardenPetalCheia)) Queue("DLG_D_GARDEN_FULL_SUCCESS");
+            if (!observedWaning && state.HasFlag(StoryFlag.GardenPetalMinguante)) Queue("DLG_D_GARDEN_WANING_SUCCESS");
+            observedCrescent = state.HasFlag(StoryFlag.GardenPetalCrescente);
+            observedFull = state.HasFlag(StoryFlag.GardenPetalCheia);
+            observedWaning = state.HasFlag(StoryFlag.GardenPetalMinguante);
 
             var gardenErrors = state.GetCounter("garden.Crescente.errors") + state.GetCounter("garden.Cheia.errors") + state.GetCounter("garden.Minguante.errors");
             if (gardenErrors > observedGardenErrors)
@@ -53,7 +73,6 @@ namespace MementoMori.Narrative
                 if (!state.HasFlag(StoryFlag.GardenPetalMinguante)) Queue("DLG_D_GARDEN_WANING_INTRO");
             }
             observedGardenErrors = gardenErrors;
-            QueueWhen(state.HasFlag(StoryFlag.GardenComplete), "DLG_D_GARDEN_COMPLETE");
             QueueWhen(state.HasFlag(StoryFlag.GardenComplete), "DLG_D_MIRROR_PRESENT");
             if (gardenProgress > 0) Queue("DLG_D_GARDEN_FULL_NEAR");
 
@@ -79,10 +98,34 @@ namespace MementoMori.Narrative
             var sigilErrors = state.GetCounter("sigil.errors");
             if (sigilErrors > observedSigilErrors) Queue("DLG_D_SIGIL_PHASE_WRONG");
             observedSigilErrors = sigilErrors;
-            QueueWhen(state.HasFlag(StoryFlag.SigilPuzzleComplete), "DLG_D_SIGIL_COMPLETE");
 
-            if (!MementoMori.Regions.V6Challenge.AnyOpen && pending.Count > 0 && DialogueManager.Instance != null && !DialogueManager.Instance.IsOpen)
-                DialogueManager.Instance.StartDialogue(pending.Dequeue());
+            if (swimmer != null && swimmer.IsSwimming && state.GetCounter("event.M02_WATER") > 0
+                && state.GetCounter("choice.CH_WATER") == 0 && !V61ChoicePresenter.IsOpen
+                && DialogueManager.Instance != null && !DialogueManager.Instance.IsOpen)
+            { V61ChoicePresenter.Show("CH_WATER"); return; }
+            if (state.GetCounter("event.M05_OPEN") > 0 && state.GetCounter("choice.CH_GALLERY") == 0
+                && !V61ChoicePresenter.IsOpen && DialogueManager.Instance != null && !DialogueManager.Instance.IsOpen)
+            { V61ChoicePresenter.Show("CH_GALLERY"); return; }
+
+            if (!MementoMori.Regions.V6Challenge.AnyOpen && !V61ChoicePresenter.IsOpen
+                && pending.Count > 0 && DialogueManager.Instance != null && !DialogueManager.Instance.IsOpen)
+            {
+                var next = pending.Peek();
+                if (DialogueManager.Instance.TryStartDialogue(next))
+                {
+                    pending.Dequeue();
+                    void Complete()
+                    {
+                        DialogueManager.Instance.OnDialogueCompleted -= Complete;
+                        GameState.Instance?.SetCounter("dialogue." + next.SequenceId, 1);
+                        if (V61EventCatalog.TryGet(next.SequenceId, out _))
+                            GameState.Instance?.SetCounter("event." + next.SequenceId, 1);
+                        if (next.SequenceId == "M02_WATER") V61ChoicePresenter.Show("CH_WATER");
+                        if (next.SequenceId == "M05_OPEN") V61ChoicePresenter.Show("CH_GALLERY");
+                    }
+                    DialogueManager.Instance.OnDialogueCompleted += Complete;
+                }
+            }
         }
 
         private static int CountGardenProgress(GameState state)
@@ -109,8 +152,10 @@ namespace MementoMori.Narrative
 
         private void Queue(string id)
         {
+            if (GameState.Instance != null && GameState.Instance.GetCounter("dialogue." + id) > 0) return;
             if (!queuedIds.Add(id)) return;
-            var dialogue = Resources.Load<DialogueData>("Dialogue/" + id);
+            var dialogue = V61EventCatalog.TryGet(id, out _) ? V61EventCatalog.CreateDialogue(id)
+                : Resources.Load<DialogueData>("Dialogue/" + id);
             if (dialogue != null) pending.Enqueue(dialogue);
         }
     }

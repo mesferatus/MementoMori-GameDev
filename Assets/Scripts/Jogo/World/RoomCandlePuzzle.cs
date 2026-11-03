@@ -22,12 +22,12 @@ namespace MementoMori.World
             GrimoireCatalog.Discover("P01");
             if (!state.HasFlag(StoryFlag.RoomWindowSecured))
             {
-                Say("DLG_Q_CANDLE_FAIL_WIND");
+                SayV61(0, 2);
                 return;
             }
             if (!state.HasFlag(StoryFlag.RoomRitualItemStored))
             {
-                Say("DLG_Q_CANDLE_BEFORE_ANCHOR");
+                SayV61(2, 2);
                 return;
             }
             if (!state.HasFlag(StoryFlag.RoomGrimoireRead))
@@ -38,13 +38,33 @@ namespace MementoMori.World
             if (index != Progress)
             {
                 state.SetPuzzleProgress(ProgressId, 0);
-                Say("DLG_Q_CANDLE_ORDER_ERROR");
+                SayV61(8, 1);
                 return;
             }
             var next = state.IncrementPuzzleProgress(ProgressId);
             RuntimeAudio.PlayOneShot("18_candle_extinguish", .45f);
             if (next == 4) state.SetFlag(StoryFlag.RoomCandlesDone);
-            Say("DLG_Q_CANDLE_ORDER_SUCCESS");
+            if (next == 1) SayV61(4, 4);
+            else if (next == 4) SayV61(9, 2, true);
+            else Say("DLG_Q_CANDLE_ORDER_SUCCESS");
+        }
+
+        private static void SayV61(int first, int count, bool completesEvent = false)
+        {
+            var dialogue = V61EventCatalog.CreateDialogueSegment("Q03", "Q03." + first, first, count);
+            var manager = DialogueManager.Instance;
+            if (dialogue == null || manager == null || !manager.TryStartDialogue(dialogue))
+            {
+                if (dialogue != null) Destroy(dialogue);
+                return;
+            }
+            void Complete()
+            {
+                manager.OnDialogueCompleted -= Complete;
+                if (completesEvent) GameState.Instance?.SetCounter("event.Q03", 1);
+                Destroy(dialogue);
+            }
+            manager.OnDialogueCompleted += Complete;
         }
 
         private static void Say(string id)

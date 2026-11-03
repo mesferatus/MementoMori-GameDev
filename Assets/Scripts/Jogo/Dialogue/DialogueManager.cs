@@ -34,6 +34,9 @@ namespace MementoMori.Dialogue
         private Text historyLabel;
         [SerializeField, Range(10f, 120f)] private float defaultCharactersPerSecond = 38f;
         [SerializeField] private bool instantAdvance;
+        private IllustratedCutsceneView cinematic;
+        public bool IsCinematic => cinematic != null;
+        public static int EscapeConsumedFrame { get; private set; } = -1;
         public bool IsOpen => activeDialogue != null;
         public string CurrentSpeaker => IsOpen && lineIndex < activeDialogue.Lines.Length
             ? activeDialogue.Lines[lineIndex].Speaker : string.Empty;
@@ -73,6 +76,12 @@ namespace MementoMori.Dialogue
         private void Update()
         {
             if (!IsOpen) return;
+            if (cinematic != null && cinematic.CanSkip && Input.GetKeyDown(KeyCode.Escape))
+            {
+                EscapeConsumedFrame = Time.frameCount;
+                SkipCinematic();
+                return;
+            }
             if (AccessibilitySettings.Instance != null)
                 defaultCharactersPerSecond = Mathf.Clamp(38f * AccessibilitySettings.Instance.TextSpeed, 10f, 120f);
             if (Input.GetKeyDown(KeyCode.H)) { ToggleHistory(); return; }
@@ -82,20 +91,24 @@ namespace MementoMori.Dialogue
                 if (instantAdvance) RevealImmediately();
                 return;
             }
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) Advance();
+            if (InputBindings.Down(GameAction.Interact) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) Advance();
         }
 
-        public void StartDialogue(DialogueData dialogue)
+        public void StartDialogue(DialogueData dialogue) => TryStartDialogue(dialogue);
+
+        public bool TryStartDialogue(DialogueData dialogue)
         {
             if (dialogue == null || dialogue.Lines == null || dialogue.Lines.Length == 0 || IsOpen || !dialogue.IsAvailable(GameState.Instance))
-                return;
+                return false;
 
             ApplyDialogueLayout();
             activeDialogue = dialogue;
             lineIndex = 0;
+            cinematic = IllustratedCutsceneView.Create(dialogue.SequenceId);
             InputGate.Instance?.Block(DialogueGate);
             SetVisible(true);
             RenderCurrentLine();
+            return true;
         }
 
         private void ApplyDialogueLayout()
@@ -124,12 +137,14 @@ namespace MementoMori.Dialogue
         {
             if (!IsOpen)
                 return;
+            if (cinematic != null && cinematic.Acting) return;
             if (!lineFullyVisible)
             {
                 RevealImmediately();
                 return;
             }
-            history.Add(activeDialogue.Lines[lineIndex]);
+            history.Add(CurrentResolvedLine());
+            RecordLine(activeDialogue.Lines[lineIndex], false);
             lineIndex++;
             if (lineIndex < activeDialogue.Lines.Length)
             {
@@ -137,10 +152,37 @@ namespace MementoMori.Dialogue
                 return;
             }
 
+            CompleteDialogue();
+        }
+
+        public void SkipCinematic()
+        {
+            if (!IsOpen || cinematic == null || !cinematic.CanSkip) return;
+            for (; lineIndex < activeDialogue.Lines.Length; lineIndex++)
+            {
+                history.Add(CurrentResolvedLine());
+                RecordLine(activeDialogue.Lines[lineIndex], true);
+            }
+            CompleteDialogue();
+        }
+
+        private static void RecordLine(DialogueLine line, bool skipped)
+        {
+            if (!string.IsNullOrEmpty(line.Id))
+                GameState.Instance?.SetCounter((skipped ? "line.skipped." : "line.seen.") + line.Id, 1);
+        }
+
+        private DialogueLine CurrentResolvedLine() =>
+            V61ChoiceReactivity.Resolve(activeDialogue.Lines[lineIndex], GameState.Instance);
+
+        private void CompleteDialogue()
+        {
             activeDialogue = null;
             RuntimeAudio.StopChatter();
             if (revealRoutine != null) StopCoroutine(revealRoutine);
             revealRoutine = null;
+            if (cinematic != null) Destroy(cinematic.gameObject);
+            cinematic = null;
             SetVisible(false);
             InputGate.Instance?.Release(DialogueGate);
             OnDialogueCompleted?.Invoke();
@@ -148,7 +190,7 @@ namespace MementoMori.Dialogue
 
         private void RenderCurrentLine()
         {
-            var line = activeDialogue.Lines[lineIndex];
+            var line = CurrentResolvedLine();
             SetSpeakerText(line.Speaker);
             var scale = AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.FontScale;
             if (speakerLabel != null) speakerLabel.fontSize = Mathf.RoundToInt(22f * scale);
@@ -175,6 +217,7 @@ namespace MementoMori.Dialogue
         {
             lineFullyVisible = false;
             SetBodyText(string.Empty);
+            if (cinematic != null) yield return cinematic.PerformBeforeLine(lineIndex);
             if (line.PauseBefore > 0f) yield return new WaitForSecondsRealtime(line.PauseBefore);
             var content = line.Text ?? string.Empty;
             var speed = (line.CharactersPerSecond > 0f ? line.CharactersPerSecond : defaultCharactersPerSecond) * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.TextSpeed);
@@ -206,9 +249,11 @@ namespace MementoMori.Dialogue
         private void RevealImmediately()
         {
             if (!IsOpen) return;
+            // Instant text must not cancel the actor coroutine and leave Acting latched.
+            if (cinematic != null && cinematic.Acting) return;
             if (revealRoutine != null) StopCoroutine(revealRoutine);
             RuntimeAudio.StopChatter();
-            var line = activeDialogue.Lines[lineIndex];
+            var line = CurrentResolvedLine();
             SetBodyText(line.Text ?? string.Empty);
             lineFullyVisible = true;
             if (continueCursor != null)
@@ -220,7 +265,7 @@ namespace MementoMori.Dialogue
         {
             if (canvasGroup == null)
                 return;
-            canvasGroup.alpha = visible ? 1f : 0f;
+            canvasGroup.alpha = visible && cinematic == null ? 1f : 0f;
             canvasGroup.blocksRaycasts = visible;
             canvasGroup.interactable = visible;
             if (!visible && continueCursor != null)
@@ -229,12 +274,14 @@ namespace MementoMori.Dialogue
 
         private void SetSpeakerText(string value)
         {
+            if (cinematic != null) cinematic.SetSpeaker(value);
             if (speakerLabel != null) speakerLabel.text = value;
             if (speakerLabelTmp != null) speakerLabelTmp.text = value;
         }
 
         private void SetBodyText(string value)
         {
+            if (cinematic != null) cinematic.SetBody(value);
             if (bodyLabel != null) bodyLabel.text = value;
             if (bodyLabelTmp != null) bodyLabelTmp.text = value;
         }
@@ -257,6 +304,16 @@ namespace MementoMori.Dialogue
             labelRect.anchorMin = new Vector2(.04f, .06f); labelRect.anchorMax = new Vector2(.96f, .94f);
             labelRect.offsetMin = Vector2.zero; labelRect.offsetMax = Vector2.zero;
             historyPanel.SetActive(false);
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
+            RuntimeAudio.StopChatter();
+            activeDialogue = null;
+            if (cinematic != null) Destroy(cinematic.gameObject);
+            cinematic = null;
+            InputGate.Instance?.Release(DialogueGate);
         }
 
         private void ToggleHistory()
