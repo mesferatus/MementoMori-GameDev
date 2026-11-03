@@ -28,6 +28,44 @@ namespace MementoMori.Tests.EditMode
         }
 
         [Test]
+        public void IllusoryCorridorKeepsCompletedRoundsAfterWrongAnswer()
+        {
+            var state = root.AddComponent<GameState>();
+            var puzzle = new MementoMori.Regions.RegionPuzzleState(state, "moon.illusory_corridor",
+                MementoMori.Regions.RegionOperation.Sequence, new[] { 1, 2, 3 }, 4);
+            Assert.That(puzzle.Choose(1), Is.True);
+            Assert.That(puzzle.Choose(0), Is.False);
+            Assert.That(puzzle.Progress, Is.EqualTo(1));
+            Assert.That(puzzle.Choose(2), Is.True);
+            Assert.That(puzzle.Choose(3), Is.True);
+            Assert.That(puzzle.Solved, Is.True);
+        }
+
+        [Test]
+        public void PoeRevealRequiresCompletedEchoesWithoutConsumingEarlyVisit()
+        {
+            var state = root.AddComponent<GameState>();
+            typeof(GameState).GetField("<Instance>k__BackingField",
+                System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic).SetValue(null, state);
+            root.AddComponent<BoxCollider2D>();
+            var trigger = root.AddComponent<MementoMori.Poe.PoeRevealTrigger>();
+            var actor = new GameObject("Player");
+            try
+            {
+                actor.tag = "Player";
+                var collider = actor.AddComponent<BoxCollider2D>();
+                var enter = typeof(MementoMori.Poe.PoeRevealTrigger).GetMethod("OnTriggerEnter2D",
+                    System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+                enter.Invoke(trigger, new object[] { collider });
+                Assert.That(state.PoeRevealed, Is.False);
+                state.SetFlag(StoryFlag.EchoTrial03Complete);
+                enter.Invoke(trigger, new object[] { collider });
+                Assert.That(state.PoeRevealed, Is.True);
+            }
+            finally { Object.DestroyImmediate(actor); }
+        }
+
+        [Test]
         public void RestoreCheckpointDiscardsProgressMadeAfterSnapshot()
         {
             var state = root.AddComponent<GameState>();

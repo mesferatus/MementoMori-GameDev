@@ -15,6 +15,73 @@ namespace MementoMori.Tests.PlayMode
     public sealed class UiFlowPlayModeTests
     {
         [UnityTest]
+        public IEnumerator ApprovedChoiceReactionAppearsInDialogueAndHistory()
+        {
+            yield return SceneManager.LoadSceneAsync("MainMenu");
+            yield return null;
+            GameState.Instance.StartNewGame();
+            var source = V61EventCatalog.CreateDialogue("FINAL");
+            var original = source.Lines.Single(line => line.Id == "FINAL_D004");
+            var probe = ScriptableObject.CreateInstance<DialogueData>();
+            probe.Configure("ChoiceReactionProbe", new[] { original });
+            var host = new GameObject("ChoiceReactionDialogue");
+            var manager = host.AddComponent<DialogueManager>();
+            try
+            {
+                Assert.That(V61EventCatalog.TryApplyChoice(GameState.Instance, "CH_Q_PHOTO", "keep", out _), Is.True);
+                Assert.That(manager.TryStartDialogue(probe), Is.True);
+                manager.Advance(); // reveal the current line immediately
+                manager.Advance(); // complete and record exactly what was displayed
+                Assert.That(manager.IsOpen, Is.False);
+                Assert.That(manager.History.Last().Text, Is.EqualTo("A foto também. Ainda não sei o que falta nela."));
+                Assert.That(manager.History.Last().Id, Is.EqualTo("FINAL_D004"));
+                Assert.That(GameState.Instance.GetCounter("line.seen.FINAL_D004"), Is.EqualTo(1));
+                Assert.That(probe.Lines[0].Text, Is.EqualTo(original.Text));
+                Assert.That(InputGate.Instance.IsBlocked, Is.False);
+            }
+            finally { Object.Destroy(host); Object.Destroy(probe); Object.Destroy(source); }
+            yield return null;
+        }
+
+        [UnityTest]
+        public IEnumerator IllustratedOpeningSkipPreservesBothEventsAndReleasesInput()
+        {
+            yield return SceneManager.LoadSceneAsync("MainMenu");
+            yield return null;
+            GameManager.Instance.StartNewGame();
+            yield return WaitForScene("Quarto");
+            var deadline = Time.realtimeSinceStartup + 20f;
+            var sawIllustration = false;
+            while (Time.realtimeSinceStartup < deadline && GameState.Instance.GetCounter("event.C02") == 0)
+            {
+                var manager = DialogueManager.Instance;
+                if (manager != null && manager.IsCinematic)
+                {
+                    if (!sawIllustration)
+                    {
+                        yield return null;
+                        Canvas.ForceUpdateCanvases();
+                        var drawing = Object.FindFirstObjectByType<AsciiIllustration>();
+                        Assert.That(drawing, Is.Not.Null, "The opening must render authored ASCII.");
+                        var renderer = drawing.GetComponent<CanvasRenderer>();
+                        Assert.That(renderer, Is.Not.Null);
+                        var mesh = renderer.GetMesh();
+                        Assert.That(mesh, Is.Not.Null);
+                        Assert.That(mesh.vertexCount, Is.GreaterThan(0), "The ASCII stage must produce visible character geometry.");
+                    }
+                    sawIllustration = true;
+                    manager.SkipCinematic();
+                }
+                yield return null;
+            }
+            Assert.That(sawIllustration, Is.True, "Opening must use the illustrated presentation.");
+            Assert.That(GameState.Instance.GetCounter("event.C01"), Is.EqualTo(1));
+            Assert.That(GameState.Instance.GetCounter("event.C02"), Is.EqualTo(1));
+            Assert.That(GameState.Instance.RitualCompleted, Is.False, "Skipping must not solve the ritual.");
+            Assert.That(InputGate.Instance.IsBlocked, Is.False);
+        }
+
+        [UnityTest]
         public IEnumerator MainMenuCreditsOpenCloseWithoutDuplicatingPanel()
         {
             yield return SceneManager.LoadSceneAsync("MainMenu");

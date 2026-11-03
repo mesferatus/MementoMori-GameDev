@@ -8,6 +8,28 @@ using UnityEngine.Tilemaps;
 public sealed class PoeNavigationPlayModeTests
 {
     [UnityTest]
+    public IEnumerator HiddenPoeDoesNotRenderUntilRevealed()
+    {
+        var cat = new GameObject("HiddenPoeVisualTest");
+        try
+        {
+            var renderer = cat.AddComponent<SpriteRenderer>();
+            var follower = cat.AddComponent<PoeFollower>();
+            yield return null;
+            Assert.That(renderer.enabled, Is.False);
+            follower.Reveal();
+            yield return null;
+            yield return null;
+            Assert.That(renderer.enabled, Is.True);
+            follower.SetStoryState(PoeState.Hidden);
+            yield return null;
+            yield return null;
+            Assert.That(renderer.enabled, Is.False);
+        }
+        finally { Object.Destroy(cat); }
+    }
+
+    [UnityTest]
     public IEnumerator FollowingTurnsAlongFloorInsteadOfCrossingVoid()
     {
         return FollowCorner(false);

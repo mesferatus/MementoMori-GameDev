@@ -1,7 +1,8 @@
 {
   "name": "MementoMori.PlayMode.Tests",
   "references": [
-    "MementoMori.Runtime"
+    "MementoMori.Runtime",
+    "Unity.TextMeshPro"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"

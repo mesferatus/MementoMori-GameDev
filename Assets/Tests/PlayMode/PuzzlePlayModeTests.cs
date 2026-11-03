@@ -29,7 +29,50 @@ namespace MementoMori.Tests.PlayMode
         }
 
         [UnityTest]
-        public IEnumerator MirrorPuzzleKeepsCorrectPlacementsAfterAnIncorrectMirror()
+        public IEnumerator ConditionalPuzzleFailuresShowApprovedLinesWithoutClosingThePuzzle()
+        {
+            foreach (var id in new[] { "lab.skyless_courtyard", "moon.illusory_corridor" })
+            {
+                var root = new GameObject("ConditionalFailure_" + id);
+                var puzzle = root.AddComponent<MementoMori.Regions.V6Challenge>();
+                puzzle.Configure(new MementoMori.Regions.V6ChallengeDefinition { id = id });
+                puzzle.Interact(default);
+                var courtyard = id == "lab.skyless_courtyard";
+                if (courtyard)
+                    typeof(MementoMori.Regions.V6Challenge).GetMethod("ConfirmDials",
+                        System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(puzzle, null);
+                else
+                {
+                    puzzle.Choose(1);
+                    puzzle.Choose(0);
+                    Assert.That(GameState.Instance.GetPuzzleProgress(id + ".step"), Is.EqualTo(1));
+                }
+                yield return null;
+                var lineId = courtyard ? "E04_D006" : "P03_D006";
+                Assert.That(GameState.Instance.GetCounter("line.seen." + lineId), Is.EqualTo(1));
+                Assert.That(GameState.Instance.Puzzles.GetSolved(id), Is.False);
+                Assert.That(MementoMori.Regions.V6Challenge.AnyOpen, Is.True);
+                var feedback = (TMPro.TMP_Text)typeof(MementoMori.Regions.V6Challenge).GetField("feedback",
+                    System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).GetValue(puzzle);
+                Assert.That(feedback.text, Does.Contain(courtyard ? "Não, não é esse lado." : "Droga. Voltei pro começo."));
+                if (!courtyard)
+                {
+                    puzzle.Choose(2);
+                    puzzle.Choose(3);
+                    var successText = feedback.text;
+                    var errors = GameState.Instance.GetCounter(id + ".errors");
+                    puzzle.Choose(0);
+                    Assert.That(feedback.text, Is.EqualTo(successText), "A completed puzzle must not show a new failure.");
+                    Assert.That(GameState.Instance.GetCounter(id + ".errors"), Is.EqualTo(errors));
+                }
+                puzzle.Close();
+                Object.Destroy(root);
+                yield return null;
+            }
+        }
+
+        [UnityTest]
+        public IEnumerator MirrorErrorClearsSelectionButPreservesSeenDialogueAndAllowsRetry()
         {
             var root = new GameObject("MirrorPuzzlePlayModeTest");
             var puzzle = root.AddComponent<PuzzleMirror>();
@@ -46,9 +89,16 @@ namespace MementoMori.Tests.PlayMode
             Assert.That(puzzle.State, Is.EqualTo(PuzzleMirror.PuzzleState.Active));
             puzzle.Activate(symbols[1]);
             Assert.That(symbols[1].IsActive, Is.True);
+            GameState.Instance.SetCounter("event.M03_EXTRA.Present", 1);
             puzzle.Activate(symbols[0]);
             Assert.That(puzzle.ErrorCount, Is.EqualTo(1));
-            Assert.That(symbols[1].IsActive, Is.True);
+            Assert.That(symbols[1].IsActive, Is.False);
+            Assert.That(GameState.Instance.GetCounter("event.M03_EXTRA.Present"), Is.EqualTo(1));
+            puzzle.Activate(symbols[2]);
+            Assert.That(symbols[2].IsActive, Is.False, "A retry must begin with Delayed.");
+            puzzle.Activate(symbols[1]);
+            puzzle.Activate(symbols[2]);
+            Assert.That(symbols[1].IsActive && symbols[2].IsActive, Is.True);
             Object.Destroy(root);
             foreach (var symbol in symbols) Object.Destroy(symbol.gameObject);
         }
