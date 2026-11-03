@@ -1,0 +1,765 @@
+fileFormatVersion: 2
+guid: e7d454300b8be7d49ab2e3caab5445aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2395992200449955503
+    second: Poe_Lunar_Reactions_0
+  - first:
+      213: 19446807193794551
+    second: Poe_Lunar_Reactions_1
+  - first:
+      213: 7792907551846674929
+    second: Poe_Lunar_Reactions_2
+  - first:
+      213: 3912130001659600339
+    second: Poe_Lunar_Reactions_3
+  - first:
+      213: 3575418503915030145
+    second: Poe_Lunar_Reactions_4
+  - first:
+      213: 7055466710291426514
+    second: Poe_Lunar_Reactions_5
+  - first:
+      213: 4133011265871882337
+    second: Poe_Lunar_Reactions_6
+  - first:
+      213: -1682074922630181512
+    second: Poe_Lunar_Reactions_7
+  - first:
+      213: 464036499360171733
+    second: Poe_Lunar_Reactions_8
+  - first:
+      213: 2341631794097127016
+    second: Poe_Lunar_Reactions_9
+  - first:
+      213: 1363426705571356679
+    second: Poe_Lunar_Reactions_10
+  - first:
+      213: 4712049037568030332
+    second: Poe_Lunar_Reactions_11
+  - first:
+      213: 5086950219740901728
+    second: Poe_Lunar_Reactions_12
+  - first:
+      213: 1588859305313423463
+    second: Poe_Lunar_Reactions_13
+  - first:
+      213: -1892541733512142511
+    second: Poe_Lunar_Reactions_14
+  - first:
+      213: -2366731634557421383
+    second: Poe_Lunar_Reactions_15
+  - first:
+      213: -7958009630550046340
+    second: Poe_Lunar_Reactions_16
+  - first:
+      213: 3654173921489750689
+    second: Poe_Lunar_Reactions_17
+  - first:
+      213: 2203753981928474136
+    second: Poe_Lunar_Reactions_18
+  - first:
+      213: -2398274718520600051
+    second: Poe_Lunar_Reactions_19
+  - first:
+      213: 1130525647596036080
+    second: Poe_Lunar_Reactions_20
+  - first:
+      213: 5740819822050482450
+    second: Poe_Lunar_Reactions_21
+  - first:
+      213: 9117576743746833358
+    second: Poe_Lunar_Reactions_22
+  - first:
+      213: -7117435721506704582
+    second: Poe_Lunar_Reactions_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r0_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47309dab3793754e8abe931af7126eb
+      internalID: -1470761042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r0_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9d52758e2e44446b78c40124bde299
+      internalID: 2036359708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r0_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377b6c102b4a0434896b853eddd74717
+      internalID: -394946248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r0_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb01e5487c86bff4483fb6e04ccf741e
+      internalID: -1620362076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r0_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbd1489c86d284458f89fd0c42b72a4
+      internalID: -794775195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r0_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1836bdc129e6c314ab5f4520cc7b387b
+      internalID: -1350915495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r1_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313c004cc24f2304ba307b1c574682c8
+      internalID: -192784047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r1_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790aecd5563687f4ea77f72436b61d5a
+      internalID: -913960677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r1_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a0ac7a01f8e3543bc548d2f36b8263
+      internalID: 492826549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r1_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e0f7447fbe5d94682670b17a6bf366
+      internalID: -2013026786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r1_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b737d679051a194185ae6dfc8532eb0
+      internalID: -1217465246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r1_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e69180e9c886144bffc4d8ae8d08f4
+      internalID: -342971275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r2_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309da6c8a83d31a4fa1cf1ddbf929ffb
+      internalID: 1063556565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r2_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b349a458c451c7d4cac6da180eaeecb9
+      internalID: -717975521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r2_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f535b32fb248ae64bbe8412f3d1e3a85
+      internalID: 575030036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r2_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620e1c5327003fc418d54a06bd376840
+      internalID: -1827545902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r2_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c881298c1a9c054c909a36b004bdfde
+      internalID: -1078506425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r2_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867e382e38b3f9246961fdfd178ebaed
+      internalID: -864290444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r3_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee571850575c0fa429d0303937c28fae
+      internalID: 48876002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r3_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cc4a3a3a1dbfa46997fe27f4781290
+      internalID: -1187265464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r3_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa73655bda2d0b4e9eadc55f2e0bbcc
+      internalID: -2111178376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r3_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e308bc4223b5d4142b0b16b9a8b99bb5
+      internalID: 594832308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r3_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ca7a120d4a1f745a0942a5e0f5d09e
+      internalID: 1752818237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Reactions_r3_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf297f715fff9eb4d8654fef089ef334
+      internalID: 874413443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 423bdf7e68c1ec24dbea9d193ce10671
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Poe_Lunar_Reactions_0: -2395992200449955503
+      Poe_Lunar_Reactions_1: 19446807193794551
+      Poe_Lunar_Reactions_10: 1363426705571356679
+      Poe_Lunar_Reactions_11: 4712049037568030332
+      Poe_Lunar_Reactions_12: 5086950219740901728
+      Poe_Lunar_Reactions_13: 1588859305313423463
+      Poe_Lunar_Reactions_14: -1892541733512142511
+      Poe_Lunar_Reactions_15: -2366731634557421383
+      Poe_Lunar_Reactions_16: -7958009630550046340
+      Poe_Lunar_Reactions_17: 3654173921489750689
+      Poe_Lunar_Reactions_18: 2203753981928474136
+      Poe_Lunar_Reactions_19: -2398274718520600051
+      Poe_Lunar_Reactions_2: 7792907551846674929
+      Poe_Lunar_Reactions_20: 1130525647596036080
+      Poe_Lunar_Reactions_21: 5740819822050482450
+      Poe_Lunar_Reactions_22: 9117576743746833358
+      Poe_Lunar_Reactions_23: -7117435721506704582
+      Poe_Lunar_Reactions_3: 3912130001659600339
+      Poe_Lunar_Reactions_4: 3575418503915030145
+      Poe_Lunar_Reactions_5: 7055466710291426514
+      Poe_Lunar_Reactions_6: 4133011265871882337
+      Poe_Lunar_Reactions_7: -1682074922630181512
+      Poe_Lunar_Reactions_8: 464036499360171733
+      Poe_Lunar_Reactions_9: 2341631794097127016
+      Poe_Lunar_Reactions_r0_c0: -1470761042
+      Poe_Lunar_Reactions_r0_c1: 2036359708
+      Poe_Lunar_Reactions_r0_c2: -394946248
+      Poe_Lunar_Reactions_r0_c3: -1620362076
+      Poe_Lunar_Reactions_r0_c4: -794775195
+      Poe_Lunar_Reactions_r0_c5: -1350915495
+      Poe_Lunar_Reactions_r1_c0: -192784047
+      Poe_Lunar_Reactions_r1_c1: -913960677
+      Poe_Lunar_Reactions_r1_c2: 492826549
+      Poe_Lunar_Reactions_r1_c3: -2013026786
+      Poe_Lunar_Reactions_r1_c4: -1217465246
+      Poe_Lunar_Reactions_r1_c5: -342971275
+      Poe_Lunar_Reactions_r2_c0: 1063556565
+      Poe_Lunar_Reactions_r2_c1: -717975521
+      Poe_Lunar_Reactions_r2_c2: 575030036
+      Poe_Lunar_Reactions_r2_c3: -1827545902
+      Poe_Lunar_Reactions_r2_c4: -1078506425
+      Poe_Lunar_Reactions_r2_c5: -864290444
+      Poe_Lunar_Reactions_r3_c0: 48876002
+      Poe_Lunar_Reactions_r3_c1: -1187265464
+      Poe_Lunar_Reactions_r3_c2: -2111178376
+      Poe_Lunar_Reactions_r3_c3: 594832308
+      Poe_Lunar_Reactions_r3_c4: 1752818237
+      Poe_Lunar_Reactions_r3_c5: 874413443
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
