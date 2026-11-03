@@ -22,14 +22,16 @@ Shader "MementoMori/LunarWaterV3"
    {
     float2 p=floor(i.world*32)/32;
     float2 d=p-float2(57.5,-51.5);
-    float t=_Time.y*.3;
+    float t=_Time.y*.75;
     float depth=saturate(1-length(d/float2(9,6)));
     float w=sin(p.y*13+sin(p.x*2.8+t)*2.4-t)*.5+.5;
     float w2=sin(p.y*23+p.x*3.1+t)*.5+.5;
     float3 c=lerp(float3(.006,.035,.063),float3(.003,.009,.025),depth);
-    c+=float3(.006,.018,.035)*w*w2;
+    c+=float3(.012,.035,.065)*w*w2;
     float trail=exp(-pow((d.x+sin(d.y*3+t)*.6)/2.4,2))*exp(-abs(d.y)/4);
-    c+=float3(.07,.14,.23)*trail*step(.94,w)*step(.45,w2);
+    c+=float3(.10,.19,.29)*trail*step(.84,w)*step(.4,w2);
+    float movingRipple=pow(max(0.,sin(p.x*9+p.y*7-t*2.4+sin(p.y*2+t)*2.)),10.);
+    c+=movingRipple*float3(.012,.035,.055);
     float foam=step(.97,w)*step(.8,hash(floor(p*4)))*(1-depth);
     c+=float3(.04,.09,.12)*foam;
     return half4(c,1);

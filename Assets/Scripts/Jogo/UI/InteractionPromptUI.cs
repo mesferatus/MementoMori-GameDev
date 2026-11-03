@@ -1,4 +1,5 @@
 using MementoMori.Interaction;
+using MementoMori.Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace MementoMori.UI
         [SerializeField] private Text label;
         [SerializeField] private TMP_Text labelTmp;
         private Sprite scalableBackground;
+        private string lastKey;
 
         public void Configure(CanvasGroup group, Text promptLabel)
         {
@@ -40,9 +42,11 @@ namespace MementoMori.UI
 
         private void SetPromptText(string action)
         {
-            var value = string.IsNullOrWhiteSpace(action) ? "[E]" : action;
-            if (label != null) label.text = $"E - {value}";
-            if (labelTmp != null && labelTmp.text == value && scalableBackground != null) return;
+            var key = InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
+            var value = string.IsNullOrWhiteSpace(action) ? "INTERAGIR" : action;
+            if (label != null) label.text = $"{key} - {value}";
+            if (labelTmp != null && labelTmp.text == value && scalableBackground != null && lastKey == key) return;
+            lastKey = key;
             if (labelTmp != null) labelTmp.text = value;
             if (labelTmp == null) return;
 
@@ -72,6 +76,8 @@ namespace MementoMori.UI
                 keycap.anchorMin = keycap.anchorMax = new Vector2(0f, .5f);
                 keycap.sizeDelta = new Vector2(155f, 165f);
                 keycap.anchoredPosition = new Vector2(72f, 0f);
+                var keyLabel = keycap.GetComponentInChildren<TMP_Text>();
+                if (keyLabel != null) keyLabel.text = key;
             }
             var icon = background.Find("InteractionIcon");
             if (icon != null) icon.gameObject.SetActive(false);

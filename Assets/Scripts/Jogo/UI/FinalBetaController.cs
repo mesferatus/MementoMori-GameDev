@@ -33,7 +33,7 @@ namespace MementoMori.UI
             var roomVisual = FindAnyObjectByType<RoomRitualVisual>();
             if (roomVisual != null) roomVisual.SetReturnedRoom(true);
             if (endCardRoot != null) endCardRoot.SetActive(false);
-            EnsureV3NarrativeEntries();
+            EnsureCanonicalNarrativeEntry();
             if (returnButton != null)
             {
                 returnButton.interactable = false;
@@ -57,17 +57,10 @@ namespace MementoMori.UI
             StartNextEntry();
         }
 
-        private void EnsureV3NarrativeEntries()
+        private void EnsureCanonicalNarrativeEntry()
         {
-            var ids = new[] { "DLG_F_WAKE", "DLG_F_ROOM_AFTER", "DLG_F_FRAGMENT_CHECK", "DLG_F_POE_SOUND", "DLG_F_END_CARD" };
-            if (narrativeEntries != null && narrativeEntries.Length == ids.Length)
-            {
-                var complete = true;
-                for (var i = 0; i < ids.Length; i++) complete &= narrativeEntries[i] != null;
-                if (complete) return;
-            }
-            narrativeEntries = new DialogueData[ids.Length];
-            for (var i = 0; i < ids.Length; i++) narrativeEntries[i] = Resources.Load<DialogueData>("Dialogue/" + ids[i]);
+            // The scene still serializes the earlier draft. Runtime uses the V6.1 script.
+            narrativeEntries = new[] { V61EventCatalog.CreateDialogue("FINAL") };
         }
 
         private void EnsureDialogueManager()
@@ -132,6 +125,11 @@ namespace MementoMori.UI
             completed = () =>
             {
                 DialogueManager.Instance.OnDialogueCompleted -= completed;
+                if (dialogue.SequenceId == "FINAL")
+                {
+                    GameState.Instance?.SetCounter("event.FINAL", 1);
+                    Destroy(dialogue);
+                }
                 StartNextEntry();
             };
             DialogueManager.Instance.OnDialogueCompleted += completed;

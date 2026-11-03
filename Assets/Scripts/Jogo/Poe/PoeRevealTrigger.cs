@@ -18,6 +18,15 @@ namespace MementoMori.Poe
             revealDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_POE_REVEAL");
         }
 
+        private void Start()
+        {
+            if (GameState.Instance == null || !GameState.Instance.HasFlag(StoryFlag.PoeRevealed)) return;
+            used = true;
+            if (poe == null) return;
+            poe.gameObject.SetActive(true);
+            poe.BeginFollowing();
+        }
+
         public void Configure(PoeFollower follower, DialogueData dialogue, bool isOneShot)
         {
             poe = follower;
@@ -29,6 +38,8 @@ namespace MementoMori.Poe
         {
             if (!other.CompareTag("Player") || used && oneShot)
                 return;
+            if (GameState.Instance == null || !GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete))
+                return;
 
             used = true;
             if (poe != null)
@@ -38,8 +49,7 @@ namespace MementoMori.Poe
                 poe.BeginFollowing();
             }
             GameState.Instance?.SetPoeRevealed();
-            if (revealDialogue != null)
-                DialogueManager.Instance?.StartDialogue(revealDialogue);
+            // LabyrinthNarrativeController queues the V6.1 C_POE scene after the reveal.
         }
     }
 }

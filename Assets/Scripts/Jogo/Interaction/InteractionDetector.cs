@@ -17,11 +17,12 @@ namespace MementoMori.Interaction
 
         private void Update()
         {
+            if (prompt == null) prompt = FindAnyObjectByType<InteractionPromptUI>();
             SelectCandidate();
             var blocked = InputGate.Instance != null && InputGate.Instance.IsBlocked;
             prompt?.SetTarget(blocked ? null : current);
 
-            var interactPressed = Input.GetKeyDown(KeyCode.E) || AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.RemapInteractToSpace && Input.GetKeyDown(KeyCode.Space);
+            var interactPressed = InputBindings.Down(GameAction.Interact) || AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.RemapInteractToSpace && Input.GetKeyDown(KeyCode.Space);
             if (!blocked && current != null && interactPressed)
             {
                 RuntimeAudio.PlayOneShot("06_interaction_click", .35f);

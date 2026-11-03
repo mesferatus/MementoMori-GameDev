@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using MementoMori.Audio;
+using MementoMori.Player;
+using MementoMori.Core;
 
 namespace MementoMori.Poe
 {
@@ -18,6 +20,8 @@ namespace MementoMori.Poe
         private Coroutine eventRoutine;
         private Animator animator;
         private SpriteRenderer visual;
+        private Vector3 baseVisualScale;
+        private bool visualScaleCaptured;
         private Vector3 lastVisualPosition;
         private string visualDirection = "front";
         private string animationState;
@@ -29,13 +33,35 @@ namespace MementoMori.Poe
         private void OnEnable()
         {
             animator = GetComponentInChildren<Animator>();
-            visual = animator == null ? null : animator.GetComponent<SpriteRenderer>();
+            if (animator != null && gameObject.scene.name != "DominioLua")
+            {
+                var original = Resources.Load<RuntimeAnimatorController>("Costumes/PoeOriginal");
+                if (original != null) animator.runtimeAnimatorController = original;
+            }
+            visual = animator == null ? GetComponentInChildren<SpriteRenderer>() : animator.GetComponent<SpriteRenderer>();
+            if (visual != null) visual.enabled = State != PoeState.Hidden && State != PoeState.Disabled;
+            if (visual != null && !visualScaleCaptured)
+            {
+                baseVisualScale = visual.transform.localScale;
+                visualScaleCaptured = true;
+            }
             lastVisualPosition = transform.position;
             animationState = null;
+        }
+        private void Start()
+        {
+            if (player == null) player = Object.FindAnyObjectByType<PlayerController>()?.transform;
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "DominioLua"
+                && GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.PoeRevealed))
+            {
+                State = PoeState.Following;
+                navigationRoute.Clear();
+            }
         }
 
         private void LateUpdate()
         {
+            if (visual != null) visual.enabled = State != PoeState.Hidden && State != PoeState.Disabled;
             var delta = transform.position - lastVisualPosition;
             lastVisualPosition = transform.position;
             if (animator == null || animator.runtimeAnimatorController == null) return;
@@ -51,8 +77,13 @@ namespace MementoMori.Poe
                 PoeState.Frightened => "poe_scared_arch",
                 PoeState.Inspecting => "poe_clue_look",
                 PoeState.Refusing => "poe_alert",
-                _ => "poe_" + (moving ? "walk_" : "idle_") + visualDirection
+                PoeState.Mirrored => "poe_clue_look",
+                PoeState.Reveal => "poe_meow",
+                PoeState.Leading when !moving => "poe_meow",
+                PoeState.Waiting => "poe_sit_" + visualDirection,
+                _ => "poe_" + (moving ? "walk_" : "sit_") + visualDirection
             };
+            if (visual != null) visual.transform.localScale = baseVisualScale * .72f;
             if (next == animationState) return;
             animator.Play(next, 0, 0);
             animationState = next;
@@ -74,10 +105,15 @@ namespace MementoMori.Poe
 
         private void Update()
         {
-            if (State != PoeState.Following || player == null) return;
-            var delta = player.position - transform.position;
+            if (State != PoeState.Following) return;
+            if (player == null) player = Object.FindAnyObjectByType<PlayerController>()?.transform;
+            if (player == null) return;
+            var controller = player.GetComponent<PlayerController>();
+            var destination = controller != null && controller.IsSwimming
+                ? controller.SafeSavePosition : (Vector2)player.position;
+            var delta = destination - (Vector2)transform.position;
             if (delta.sqrMagnitude > minimumDistance * minimumDistance)
-                MoveOnFloor(player.position);
+                MoveOnFloor(destination);
         }
         public void Reveal() { gameObject.SetActive(true); RuntimeAudio.PlayOneShot("15_poe_soft_call", .45f); State = PoeState.Reveal; }
         public void BeginFollowing() { State = PoeState.Following; }
@@ -102,6 +138,8 @@ namespace MementoMori.Poe
                 case "ToyEcho": Dissolve(); break;
                 default: Inspect(); break;
             }
+            if (State != PoeState.Dissolving)
+                StartCoroutine(ResumeFollowingAfter(1.5f));
         }
         public void ReactToError(bool sigilError)
         {
@@ -177,6 +215,7 @@ namespace MementoMori.Poe
 
         private bool HasFloorClearance(Vector2 point)
         {
+            if (GardenWaterZone.Contains(point)) return false;
             if(navigationFloor==null)return true;
             // The companion occupies an area, not a point. Avoid clipping diagonal corners.
             foreach(var offset in new[]{Vector2.zero,Vector2.left*.12f,Vector2.right*.12f,Vector2.up*.12f,Vector2.down*.12f})

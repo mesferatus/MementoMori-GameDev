@@ -16,6 +16,14 @@ namespace MementoMori.Audio
         TMP_Text caption;
         AudioMixer mixer;
         Coroutine captionRoutine;
+        float baseChatterVolume;
+        public static void ApplyVolumeSettings()
+        {
+            if (active == null || AccessibilitySettings.Instance == null) return;
+            if (active.source != null) active.source.volume = AccessibilitySettings.Instance.MusicVolume;
+            if (active.chatterSource != null) active.chatterSource.volume = active.baseChatterVolume
+                * AccessibilitySettings.Instance.VoiceVolume;
+        }
         public static void PlayLoop(string resourceName)
         {
             if (!Application.isPlaying) return;
@@ -61,7 +69,8 @@ namespace MementoMori.Audio
             if (clip == null) return;
             var runtimeAudio = EnsureActive();
             runtimeAudio.chatterSource.Stop();
-            runtimeAudio.chatterSource.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
+            runtimeAudio.baseChatterVolume = volume;
+            runtimeAudio.chatterSource.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.VoiceVolume);
             runtimeAudio.chatterSource.clip = clip;
             runtimeAudio.chatterSource.Play();
         }

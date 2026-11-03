@@ -46,7 +46,7 @@ Shader "Memento/V65/Environment"
      float flow=sin(p.x*.041+sin(p.y*.025-t*.65)*4.+t*.9)*cos(p.y*.038+sin(p.x*.03+t*.6)*3.);
      float mist=pow(max(0.,flow),3.);float stars=pow(max(0.,sin(p.x*.91+sin(p.y*.47)*9.)*cos(p.y*.82)),48.);
      float3 abyss=float3(.035,.014,.09)+mist*float3(.20,.045,.36)+stars*(.5+.5*sin(t*2.+p.x))*float3(.42,.23,.72);
-     if(_Mode>3.5)c.rgb=ToLinear(abyss);else{float2 waterUV=i.uv;if(_BackgroundSurface>.5){float2 q=abs(frac(float2(i.world.x,-i.world.y)*64/float2(1536,1280))*2-1);waterUV=q*float2(768,640)*_MainTex_TexelSize.xy;c.a=1;}float2 drift=float2(sin(t*.45+waterUV.y*19),cos(t*.38+waterUV.x*17))*_MainTex_TexelSize.xy*1.5;c.rgb=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,waterUV+drift).rgb*(1+wave*.015+caustic*.025);}
+     if(_Mode>3.5)c.rgb=ToLinear(abyss);else{float2 waterUV=i.uv;if(_BackgroundSurface>.5){float2 q=abs(frac(float2(i.world.x,-i.world.y)*64/float2(1536,1280))*2-1);waterUV=q*float2(768,640)*_MainTex_TexelSize.xy;c.a=1;}float2 drift=float2(sin(t*.85+waterUV.y*19),cos(t*.72+waterUV.x*17))*_MainTex_TexelSize.xy*2.5;float ripple=pow(max(0.,sin(p.x*.11+p.y*.07-t*2.2+sin(p.y*.045+t*.9)*2.)),8.);c.rgb=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,waterUV+drift).rgb*(1+wave*.055+caustic*.12)+ripple*float3(.025,.045,.075)*c.a;}
     }
     if(_Mode>4.5&&_Mode<5.5){float pulse=.5+.5*sin(t*1.4+_Seed);float bands=pow(max(0.,sin(i.uv.y*38-t*1.1)),10.);c.rgb+=c.rgb*(.06*pulse+.09*bands)+float3(.12,.04,.2)*_State*pulse*c.a;}
     if(_Mode>5.5){float2 leaf=(floor(i.uv*8)/8-.5)*2;float shape=leaf.x*leaf.x+leaf.y*leaf.y*.55;c.a*=step(shape,.6);}

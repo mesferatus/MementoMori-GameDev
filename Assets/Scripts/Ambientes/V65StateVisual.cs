@@ -23,6 +23,8 @@ namespace MementoMori.V65
   void OnDisable(){if(sigil)sigil.RingEvaluated-=Ring;}
   void Ring(SigilRing ring,bool accepted){if(!accepted)errorUntil=Time.time+1.2f;if(response)response.Play();}
   void Update(){
+   if(block==null)block=new MaterialPropertyBlock();
+   if(!visual)visual=GetComponent<SpriteRenderer>();
    if(!visual)return;var state=GameState.Instance;bool done=false,active=false;
    if(state!=null){if(!string.IsNullOrEmpty(puzzleId)&&state.Puzzles.IsKnown(puzzleId)){done=state.Puzzles.GetSolved(puzzleId);active=state.GetPuzzleProgress(puzzleId+".step")>0;int count=state.GetCounter(puzzleId+".errors");if(count>registryErrors){registryErrors=count;errorUntil=Time.time+1.2f;}}
     if(Enum.TryParse(storyFlag,out StoryFlag flag))done|=state.HasFlag(flag);}

@@ -19,6 +19,14 @@ namespace MementoMori.UI
 
         private void Start()
         {
+            var saved = GameState.Instance;
+            if (saved != null)
+            {
+                moved = saved.GetCounter("tutorial.moved") > 0;
+                inspected = saved.GetCounter("tutorial.inspected") > 0;
+                readBook = saved.GetCounter("tutorial.grimoire") > 0;
+                paused = saved.GetCounter("tutorial.paused") > 0;
+            }
             var controller = FindAnyObjectByType<MementoMori.Player.PlayerController>();
             if (controller != null) { player = controller.transform; origin = player.position; }
             var root = new GameObject("V6TutorialOverlay", typeof(Canvas), typeof(UnityEngine.UI.CanvasScaler), typeof(CanvasGroup));
@@ -40,6 +48,19 @@ namespace MementoMori.UI
             rect.anchorMax = new Vector2(.78f,.105f);
             rect.offsetMin = rect.offsetMax = Vector2.zero;
             panel.GetComponent<UnityEngine.UI.Image>().color = new Color(.055f,.035f,.085f,.94f);
+            var frameSprite = Resources.Load<Sprite>("TutorialFrameV1");
+            if (frameSprite != null)
+            {
+                var frame = new GameObject("TutorialFrame", typeof(RectTransform), typeof(UnityEngine.UI.Image));
+                frame.transform.SetParent(panel.transform, false);
+                var frameRect = (RectTransform)frame.transform;
+                frameRect.anchorMin = Vector2.zero; frameRect.anchorMax = Vector2.one;
+                frameRect.offsetMin = new Vector2(-8f, -4f); frameRect.offsetMax = new Vector2(8f, 4f);
+                var frameImage = frame.GetComponent<UnityEngine.UI.Image>();
+                frameImage.sprite = frameSprite;
+                frameImage.type = UnityEngine.UI.Image.Type.Sliced;
+                frameImage.raycastTarget = false;
+            }
             label = new GameObject("HintText", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
             label.transform.SetParent(panel.transform, false);
             label.rectTransform.anchorMin = Vector2.zero;
@@ -62,21 +83,25 @@ namespace MementoMori.UI
             var dialogue = DialogueManager.Instance != null && DialogueManager.Instance.IsOpen;
             var blocked = InputGate.Instance != null && InputGate.Instance.IsBlocked;
             var state = GameState.Instance;
-            if (player != null && !blocked && Vector3.Distance(origin,player.position) > .7f) moved = true;
-            if (moved && dialogue) inspected = true;
-            if (GrimoireScreen.AnyOpen) readBook = true;
-            if (Time.timeScale == 0f) paused = true;
+            if (!moved && player != null && !blocked && Vector3.Distance(origin,player.position) > .7f)
+            { moved = true; state?.SetCounter("tutorial.moved", 1); }
+            if (!inspected && moved && dialogue)
+            { inspected = true; state?.SetCounter("tutorial.inspected", 1); }
+            if (!readBook && GrimoireScreen.AnyOpen)
+            { readBook = true; state?.SetCounter("tutorial.grimoire", 1); }
+            if (!paused && Time.timeScale == 0f)
+            { paused = true; state?.SetCounter("tutorial.paused", 1); }
             if (dialogue)
-                CurrentHint = "E / Enter / Espaço — revelar o texto e avançar";
+                CurrentHint = $"{InputBindings.Get(GameAction.Interact)} / Enter / Espaço — revelar o texto e avançar";
             else if (!moved)
-                CurrentHint = "WASD ou setas — explore o quarto";
+                CurrentHint = "Use as teclas de movimento ou as setas — explore o quarto";
             else if (!inspected)
-                CurrentHint = "Aproxime-se de um objeto e pressione E para examinar";
+                CurrentHint = $"Aproxime-se de um objeto e pressione {InputBindings.Get(GameAction.Interact)} para examinar";
             else if (!readBook && (state == null || !state.HasFlag(StoryFlag.RoomGrimoireRead)))
-                CurrentHint = "O grimório guarda pistas. Aproxime-se e pressione E para ler";
+                CurrentHint = $"O grimório guarda pistas. Aproxime-se e pressione {InputBindings.Get(GameAction.Interact)} para ler";
             else if (!paused && pauseHintTime < 7f)
             {
-                CurrentHint = "Esc — pausar e consultar as opções";
+                CurrentHint = $"{InputBindings.Get(GameAction.Pause)} — pausar e consultar as opções";
                 if (!blocked) pauseHintTime += Time.unscaledDeltaTime;
             }
             else CurrentHint = string.Empty;

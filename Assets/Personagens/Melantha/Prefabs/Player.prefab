@@ -286,3 +286,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MementoMori.Player.PlayerController
   moveSpeed: 3.5
   animator: {fileID: 0}
+  preferredController: {fileID: 9100000, guid: 38530334731585a45b1ed786bcd52964, type: 2}
+  swimController: {fileID: 22100000, guid: 0d060ace93544d14cbbb1f00691b94c6, type: 2}

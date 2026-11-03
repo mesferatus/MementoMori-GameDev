@@ -16,6 +16,7 @@ namespace MementoMori.Core
 
         private CanvasGroup fadeCanvas;
         private bool isLoading;
+        public bool IsLoading => isLoading;
 
         private void Awake()
         {
