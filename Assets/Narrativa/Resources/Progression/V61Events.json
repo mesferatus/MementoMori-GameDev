@@ -1,0 +1,2856 @@
+{
+  "project": "Memento Mori",
+  "version": "V6.1 — Roteiro jogável, falas naturais revisadas",
+  "date": "2026-10-26",
+  "source_files": [
+    "Memento_Mori_Biblia_Lore_Roteiro_Puzzles_V5_Expandida.docx",
+    "Memento_Mori_Biblia_Narrativa_Roteiro_Jogavel_V4.docx",
+    "Memento_Mori_Biblia_Narrativa_Roteiro_Jogavel_V3.docx",
+    "MEMENTO_MORI_LORE_FLUXO_PUZZLES_V4.md",
+    "GRIMORIO_MEMENTO_MORI_40_ENTRADAS_CANONICAS.md"
+  ],
+  "status": "Falas dos personagens e escolhas reescritas para português brasileiro natural; inscrições/Grimório canônicos preservados; material proposto para aprovação antes da implementação.",
+  "playable_levels": [
+    "Quarto",
+    "Labirinto",
+    "DominioLua"
+  ],
+  "epilogue": "FinalBeta",
+  "canonical_puzzle_ids": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05"
+  ],
+  "events": [
+    {
+      "id": "C01",
+      "name": "O ritual anterior — fragmentos",
+      "location": "Prólogo, antes do despertar",
+      "trigger": "Novo Jogo; uma única execução por partida",
+      "purpose": "Mostrar que houve um ritual sem revelar alvo, resultado nem passado de Poe",
+      "direction": "Cortes curtos: tinta em dedos; sigilo incompleto; quatro chamas; sino distante; mão treme; imagem falha. Sem mostrar destinatário.",
+      "lines": [
+        {
+          "id": "C01_D001",
+          "speaker": "SFX",
+          "text": "Sino abafado. A quarta nota não soa.",
+          "condition": "always"
+        },
+        {
+          "id": "C01_D002",
+          "speaker": "MELANTHA",
+          "text": "Um nome abre.",
+          "condition": "always"
+        },
+        {
+          "id": "C01_D003",
+          "speaker": "MELANTHA",
+          "text": "Um vínculo sustenta.",
+          "condition": "always"
+        },
+        {
+          "id": "C01_D004",
+          "speaker": "MELANTHA",
+          "text": "Um preço fecha.",
+          "condition": "always"
+        },
+        {
+          "id": "C01_D005",
+          "speaker": "MELANTHA",
+          "text": "Não... espera. Ainda não.",
+          "condition": "always"
+        },
+        {
+          "id": "C01_D006",
+          "speaker": "AÇÃO",
+          "text": "O círculo responde com uma luz incompleta; corte abrupto antes do resultado.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "prologue_seen=true",
+      "technical_notes": "Pular reaplica apenas flags e estado de abertura do Quarto; não repete operação.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "C02",
+      "name": "Acordar no quarto que não é o seu",
+      "location": "Quarto",
+      "trigger": "Após C01; personagem na cama",
+      "purpose": "Introduzir amnésia, estranhamento e tutorial sem afirmar morte",
+      "direction": "Câmera acompanha respiração, desliza até janela deslocada, retorna à protagonista; devolver controle após a última observação.",
+      "lines": [
+        {
+          "id": "C02_D001",
+          "speaker": "MELANTHA",
+          "text": "Hã...? O que foi isso?",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D002",
+          "speaker": "MELANTHA",
+          "text": "Eu tava fazendo alguma coisa. Tava, né?",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D003",
+          "speaker": "MELANTHA",
+          "text": "Minha cama... minha escrivaninha...",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D004",
+          "speaker": "MELANTHA",
+          "text": "Pera. A janela não era desse lado.",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D005",
+          "speaker": "MELANTHA",
+          "text": "Tem alguém em casa?",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D006",
+          "speaker": "MELANTHA",
+          "text": "Por que eu tô esperando alguém responder?",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D007",
+          "speaker": "MELANTHA",
+          "text": "Não. Tem alguma coisa muito errada aqui.",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D008",
+          "speaker": "SFX",
+          "text": "Uma tábua range ao longe. Nenhuma resposta.",
+          "condition": "always"
+        },
+        {
+          "id": "C02_D009",
+          "speaker": "MELANTHA",
+          "text": "Tá. Descobre onde você tá primeiro. Surta depois.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "bedroom_awakened=true",
+      "technical_notes": "Tutorial de movimento depois que o input é liberado; hints usam binding efetivo.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "Q01",
+      "name": "A cama, a janela e o silêncio",
+      "location": "Quarto",
+      "trigger": "Primeiras interações; ordem livre",
+      "purpose": "Reconhecer objetos e abrir investigação",
+      "direction": "Quatro interações locais distintas, sem depender da ordem de inspeção.",
+      "lines": [
+        {
+          "id": "Q01_D001",
+          "speaker": "OBJETO",
+          "text": "Cama — O travesseiro está frio de um lado e amassado do outro.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D002",
+          "speaker": "MELANTHA",
+          "text": "É, dormir de novo não vai ajudar.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D003",
+          "speaker": "OBJETO",
+          "text": "Janela — Há luz do lado de fora, mas não há paisagem reconhecível.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D004",
+          "speaker": "MELANTHA",
+          "text": "Conheço essa vista... não. Conheço, sim. Que estranho.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D005",
+          "speaker": "OBJETO",
+          "text": "Fotografia — A forma das figuras está preservada; um detalhe não se fixa na memória.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D006",
+          "speaker": "MELANTHA",
+          "text": "Ué. Essa foto não tava assim.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D007",
+          "speaker": "OBJETO",
+          "text": "Objeto familiar de Poe — Pequeno, gasto nos pontos onde dedos o tocariam.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D008",
+          "speaker": "MELANTHA",
+          "text": "O Poe ia derrubar isso no chão em dois segundos.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D009",
+          "speaker": "MELANTHA",
+          "text": "Ia...? Por que eu falei assim?",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D010",
+          "speaker": "MELANTHA",
+          "text": "Calma. Eu nem sei o que aconteceu.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D011",
+          "speaker": "OBJETO",
+          "text": "Escrivaninha — Páginas riscadas com a mesma letra da protagonista.",
+          "condition": "always"
+        },
+        {
+          "id": "Q01_D012",
+          "speaker": "MELANTHA",
+          "text": "É a minha letra. Só não lembro de escrever nada disso.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "bedroom_inspection_count; unlocked_grimoire=true when condition met",
+      "technical_notes": "Não fazer Poe aparecer no Quarto falso. Evitar explicação sobre morte.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "Q02",
+      "name": "O Grimório corrige a memória",
+      "location": "Quarto",
+      "trigger": "Abrir o Grimório e retornar à foto/janela",
+      "purpose": "Apresentar registro instável e quatro abas",
+      "direction": "Página vira com discreto efeito; após fechar, a fotografia mudou um único detalhe.",
+      "lines": [
+        {
+          "id": "Q02_D001",
+          "speaker": "MELANTHA",
+          "text": "Esse livro é meu. Então quem escreveu metade dessas coisas?",
+          "condition": "always"
+        },
+        {
+          "id": "Q02_D002",
+          "speaker": "GRIMÓRIO",
+          "text": "Não confunda lembrança com prova.",
+          "condition": "always"
+        },
+        {
+          "id": "Q02_D003",
+          "speaker": "MELANTHA",
+          "text": "Eu escrevi isso?",
+          "condition": "always"
+        },
+        {
+          "id": "Q02_D004",
+          "speaker": "MELANTHA",
+          "text": "Espera. A foto mudou.",
+          "condition": "always"
+        },
+        {
+          "id": "Q02_D005",
+          "speaker": "MELANTHA",
+          "text": "Eu vi. Eu tenho certeza.",
+          "condition": "always"
+        },
+        {
+          "id": "Q02_D006",
+          "speaker": "MELANTHA",
+          "text": "...Ou achava que tinha.",
+          "condition": "always"
+        },
+        {
+          "id": "Q02_D007",
+          "speaker": "MELANTHA",
+          "text": "Vou anotar antes que mude de novo. Inclusive o que eu lembro.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "photo_changed=true; entry_memory_unlocked=true",
+      "technical_notes": "Quatro abas canônicas: Anotações, Rituais, Pistas, Memórias. Não criar aba Mapa.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "Q03",
+      "name": "A janela, a âncora e as quatro velas",
+      "location": "Quarto",
+      "trigger": "Inspecionar círculo e preparar ambiente",
+      "purpose": "Preservar puzzle existente de ritual já ocorrido",
+      "direction": "O vento agita velas até fechar janela; âncora posicionada; ordem Lua → Livro → Memória → Repouso.",
+      "lines": [
+        {
+          "id": "Q03_D001",
+          "speaker": "MELANTHA",
+          "text": "O círculo tá inteiro... mas não tá funcionando.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D002",
+          "speaker": "MELANTHA",
+          "text": "A janela aberta. Ótimo. O vento não vai deixar nenhuma vela acesa.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D003",
+          "speaker": "MELANTHA",
+          "text": "Pronto. Janela fechada.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D004",
+          "speaker": "MELANTHA",
+          "text": "E a âncora tá fora do lugar. Preciso colocar no centro.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D005",
+          "speaker": "GRIMÓRIO",
+          "text": "Lua: reconhecer a fase. Livro: fixar o registro. Memória: não confundir com imagem. Repouso: manter o limiar.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D006",
+          "speaker": "MELANTHA",
+          "text": "Lua, Livro, Memória, Repouso. Tá. Vamos lá.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D007",
+          "speaker": "SFX",
+          "text": "Chama correta acende e sustenta um brilho discreto.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D008",
+          "speaker": "MELANTHA",
+          "text": "Uma acendeu! Certo, acho que é isso.",
+          "condition": "on_correct_candle_step"
+        },
+        {
+          "id": "Q03_D009",
+          "speaker": "MELANTHA",
+          "text": "Ah, não. Ordem errada. Pelo menos só as velas apagaram.",
+          "condition": "on_wrong_candle_order"
+        },
+        {
+          "id": "Q03_D010",
+          "speaker": "MELANTHA",
+          "text": "Pronto. Mas... espera. Isso não parece o começo de um ritual.",
+          "condition": "always"
+        },
+        {
+          "id": "Q03_D011",
+          "speaker": "MELANTHA",
+          "text": "Parece que tô tentando terminar alguma coisa que eu já fiz.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "window_closed; anchor_placed; candles_4_correct; ritual_completed",
+      "technical_notes": "Linha de falha condicional somente em erro; não repetir demais. Cama desbloqueada apenas no estado válido.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "C03",
+      "name": "Deitar é atravessar",
+      "location": "Quarto → Labirinto",
+      "trigger": "Escolha de dormir após puzzle; diálogo fechado",
+      "purpose": "Passagem ao Labirinto como segunda travessia",
+      "direction": "Câmera baixa; luz da vela se dobra sobre si mesma; memória do prólogo em ordem invertida; fade sem teleporte duplicado.",
+      "lines": [
+        {
+          "id": "C03_D001",
+          "speaker": "UI",
+          "text": "Deitar e tentar atravessar? [Deitar] [Ainda não]",
+          "condition": "always"
+        },
+        {
+          "id": "C03_D002",
+          "speaker": "MELANTHA",
+          "text": "Se esse ritual me trouxe até aqui, talvez também me tire.",
+          "condition": "always"
+        },
+        {
+          "id": "C03_D003",
+          "speaker": "MELANTHA",
+          "text": "É. Só espero não acordar num quarto ainda pior.",
+          "condition": "always"
+        },
+        {
+          "id": "C03_D004",
+          "speaker": "SFX",
+          "text": "O sino finalmente ressoa, mas parece vir de baixo do chão.",
+          "condition": "always"
+        },
+        {
+          "id": "C03_D005",
+          "speaker": "AÇÃO",
+          "text": "A chama se recolhe para o sigilo. Corte para pedra fria.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "quarto_complete=true; scene=Labirinto; spawn=L01",
+      "technical_notes": "Dormir somente após confirmação; pular cutscene aplica estado atômico.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L01",
+      "name": "A inscrição repetida",
+      "location": "L01 Entrada do Labirinto",
+      "trigger": "Primeira chegada; sigilo no chão",
+      "purpose": "Dedução de origem do ritual sem motivo explícito",
+      "direction": "Melantha ajoelha; câmera revela escadaria e monumento; sombra felina distante opcional.",
+      "lines": [
+        {
+          "id": "L01_D001",
+          "speaker": "MELANTHA",
+          "text": "Tá. Definitivamente não tô mais no quarto.",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D002",
+          "speaker": "MELANTHA",
+          "text": "Essa marca... é igual à do círculo.",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D003",
+          "speaker": "MELANTHA",
+          "text": "Então foi o ritual. Eu vim parar aqui por causa dele.",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D004",
+          "speaker": "MELANTHA",
+          "text": "Tá, mas... por que eu fiz isso?",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D005",
+          "speaker": "INSCRIÇÃO",
+          "text": "O caminho recorda a mão que o abriu.",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D006",
+          "speaker": "MELANTHA",
+          "text": "Que ótimo. Até a parede sabe mais do que eu.",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D007",
+          "speaker": "SFX",
+          "text": "Um toque leve, como unhas numa superfície que não está à vista.",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D008",
+          "speaker": "MELANTHA",
+          "text": "Alô? Tem alguém aí?",
+          "condition": "always"
+        },
+        {
+          "id": "L01_D009",
+          "speaker": "AÇÃO",
+          "text": "Nada responde; resta o caminho transitável.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "labyrinth_entered=true; entry_A05_unlocked=true",
+      "technical_notes": "Sem puzzle obrigatório L01. Checar topologia preservada e câmera.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L02",
+      "name": "O lugar onde falta alguma coisa",
+      "location": "L02 Câmara Vazia",
+      "trigger": "Primeira visita; observação opcional",
+      "purpose": "Vazio como ausência e pista; não aumentar contador de puzzles",
+      "direction": "Vento cessa ao entrar; marca central sugere remoção.",
+      "lines": [
+        {
+          "id": "L02_D001",
+          "speaker": "MELANTHA",
+          "text": "Uma sala desse tamanho e... nada?",
+          "condition": "always"
+        },
+        {
+          "id": "L02_D002",
+          "speaker": "OBJETO",
+          "text": "Há um contorno protegido da poeira. Aquilo que o ocupava foi retirado.",
+          "condition": "always"
+        },
+        {
+          "id": "L02_D003",
+          "speaker": "MELANTHA",
+          "text": "Espera. Tinha alguma coisa aqui. Levaram.",
+          "condition": "always"
+        },
+        {
+          "id": "L02_D004",
+          "speaker": "MELANTHA",
+          "text": "Pelo tamanho da marca, não era nada pequeno.",
+          "condition": "always"
+        },
+        {
+          "id": "L02_D005",
+          "speaker": "MELANTHA",
+          "text": "Quem se dá a esse trabalho todo pra deixar uma sala vazia?",
+          "condition": "always"
+        },
+        {
+          "id": "L02_D006",
+          "speaker": "OBJETO",
+          "text": "No rodapé, uma marca delicada repete um sinal visto no Quarto.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "l02_observed=true optional",
+      "technical_notes": "Interação narrativa opcional, não puzzle.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "E01",
+      "name": "O Labirinto corrige a voz",
+      "location": "L03 Corredores dos Ecos",
+      "trigger": "Entrar na área e acionar inscrição; puzzle em três rodadas",
+      "purpose": "Ensinar a distinguir memória de imagem e apresentar Poe",
+      "direction": "A cada rodada, parede devolve frase diferente, inscrição reage a resposta; não reorganizar topologia.",
+      "lines": [
+        {
+          "id": "E01_D001",
+          "speaker": "ECO",
+          "text": "O que resta de uma imagem quando ela não mostra quem deveria estar nela?",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D002",
+          "speaker": "ESCOLHA",
+          "text": "[A presença] [A forma] [A certeza]",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D003",
+          "speaker": "MELANTHA",
+          "text": "A forma. A imagem ainda existe, mesmo faltando alguém.",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D004",
+          "speaker": "ECO",
+          "text": "E o que você fez quando o chamado não trouxe resposta?",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D005",
+          "speaker": "ESCOLHA",
+          "text": "[Eu me calei] [Eu continuei chamando] [Eu esqueci o nome]",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D006",
+          "speaker": "MELANTHA",
+          "text": "Eu continuei chamando. Lembro disso.",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D007",
+          "speaker": "ECO",
+          "text": "Por que voltou a este lugar?",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D008",
+          "speaker": "ESCOLHA",
+          "text": "[Porque abri o caminho] [Porque já não existo] [Porque fui trazida]",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D009",
+          "speaker": "MELANTHA",
+          "text": "Eu abri o caminho. Pelo menos essa parte eu sei.",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D010",
+          "speaker": "SFX",
+          "text": "As três vozes se calam em ordem inversa.",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D011",
+          "speaker": "MELANTHA",
+          "text": "Não é só um eco... tá tentando me corrigir.",
+          "condition": "always"
+        },
+        {
+          "id": "E01_D012",
+          "speaker": "AÇÃO",
+          "text": "Uma silhueta felina passa entre duas colunas e para à distância.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_E01_complete=true; poe_intro_ready=true",
+      "technical_notes": "Solução das rodadas conforme V5, textos finais devem casar com a UI real.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "C_POE",
+      "name": "Reconhecimento sem resposta",
+      "location": "L03 saída de Ecos",
+      "trigger": "Depois de E01; follower ainda desativado",
+      "purpose": "Apresentar afeto e dúvida; não explicar Poe",
+      "direction": "Poe se aproxima, para, senta, olha para ela. Close rápido nas mãos de Melantha, não no corpo do gato.",
+      "lines": [
+        {
+          "id": "C_POE_D001",
+          "speaker": "MELANTHA",
+          "text": "...Poe?",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D002",
+          "speaker": "SFX",
+          "text": "Um miado curto.",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D003",
+          "speaker": "MELANTHA",
+          "text": "Não... Pera. Poe? É você mesmo?",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D004",
+          "speaker": "AÇÃO",
+          "text": "Poe cheira a mão estendida, vira a cabeça e se senta.",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D005",
+          "speaker": "MELANTHA",
+          "text": "Você escolheu a pior hora possível pra aparecer, sabia?",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D006",
+          "speaker": "MELANTHA",
+          "text": "...Nossa. Que bom te ver.",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D007",
+          "speaker": "MELANTHA",
+          "text": "Tá. Perguntas depois. Vem cá.",
+          "condition": "always"
+        },
+        {
+          "id": "C_POE_D008",
+          "speaker": "AÇÃO",
+          "text": "Poe levanta e começa a acompanhá-la sem bloquear a passagem.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "poe_met=true; follower_enabled=true",
+      "technical_notes": "Poe não fala verbalmente; corrigir idle/walk mesma escala e direção.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "E02",
+      "name": "A porta que devolve",
+      "location": "L04 Porta Falsa",
+      "trigger": "Entrar pela primeira vez e interagir com inscrições",
+      "purpose": "Ensinar que notar diferença é mais importante que repetir",
+      "direction": "Primeira travessia leva a ponto seguro da sala, com marca alterada.",
+      "lines": [
+        {
+          "id": "E02_D001",
+          "speaker": "MELANTHA",
+          "text": "É essa porta. Tenho certeza.",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D002",
+          "speaker": "SFX",
+          "text": "A porta abre sem mostrar o outro lado.",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D003",
+          "speaker": "MELANTHA",
+          "text": "Ué? Eu voltei pro mesmo lugar?",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D004",
+          "speaker": "MELANTHA",
+          "text": "Não, calma. A marca tava do outro lado.",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D005",
+          "speaker": "INSCRIÇÃO",
+          "text": "Aquilo que retorna nem sempre regressa igual.",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D006",
+          "speaker": "MELANTHA",
+          "text": "Tem duas marcas que não batem. É por aí.",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D007",
+          "speaker": "MELANTHA",
+          "text": "Ah! Não é pra confiar na porta. É pra reparar no que mudou.",
+          "condition": "always"
+        },
+        {
+          "id": "E02_D008",
+          "speaker": "SFX",
+          "text": "A pedra recua, revelando o percurso real.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "false_door_seen=true; puzzle_E02_complete=true",
+      "technical_notes": "Falha retorna ao checkpoint local e não ativa loops infinitos.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "E03",
+      "name": "Quatro vozes, uma contradição",
+      "location": "L05 Poço de Vozes",
+      "trigger": "Ouvir quatro estágios e selecionar interpretação",
+      "purpose": "Reconhecer fala própria esquecida; legendas obrigatórias",
+      "direction": "Som espacial, vibração da água/poço, 4ª voz contradiz registro anterior.",
+      "lines": [
+        {
+          "id": "E03_D001",
+          "speaker": "VOZ_1",
+          "text": "O nome foi escrito quando a chama estava baixa.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D002",
+          "speaker": "VOZ_2",
+          "text": "Alguém atravessou antes de a porta existir.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D003",
+          "speaker": "VOZ_3",
+          "text": "Você chamou e não ouviu resposta.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D004",
+          "speaker": "VOZ_4",
+          "text": "Eu disse que não chamaria de novo.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D005",
+          "speaker": "MELANTHA",
+          "text": "Essa última voz...",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D006",
+          "speaker": "MELANTHA",
+          "text": "Sou eu. Essa voz é minha.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D007",
+          "speaker": "MELANTHA",
+          "text": "Mas eu não falei que ia parar. Eu lembro de continuar.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D008",
+          "speaker": "UI",
+          "text": "Qual voz contradiz sua memória? [Uma voz estranha] [Uma voz minha que não lembro de ter dito] [A voz de Poe]",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D009",
+          "speaker": "MELANTHA",
+          "text": "A voz que parece minha... mas que eu não lembro de ter dito.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D010",
+          "speaker": "SFX",
+          "text": "As ondas no poço se afastam do centro.",
+          "condition": "always"
+        },
+        {
+          "id": "E03_D011",
+          "speaker": "MELANTHA",
+          "text": "Se era eu falando, por que eu não lembro de nada disso?",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "voice_stage=4; puzzle_E03_complete=true",
+      "technical_notes": "Não transformar resposta em revelação de Poe.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "E04",
+      "name": "Sombras sem estrela",
+      "location": "L06 Pátio sem Céu",
+      "trigger": "Aproximar de obeliscos",
+      "purpose": "Lógica de ausência, alinhamento e arquitetura sem céu",
+      "direction": "Três obeliscos rotacionáveis; marcas de ranhura; sombra converge para estrela ausente.",
+      "lines": [
+        {
+          "id": "E04_D001",
+          "speaker": "MELANTHA",
+          "text": "Sem céu... e mesmo assim tudo faz sombra. Tá bom.",
+          "condition": "always"
+        },
+        {
+          "id": "E04_D002",
+          "speaker": "OBJETO",
+          "text": "Três bases giram. Cada ranhura aponta para um fragmento do mesmo desenho.",
+          "condition": "always"
+        },
+        {
+          "id": "E04_D003",
+          "speaker": "MELANTHA",
+          "text": "Não adianta procurar de onde vem a luz.",
+          "condition": "always"
+        },
+        {
+          "id": "E04_D004",
+          "speaker": "MELANTHA",
+          "text": "Se eu alinhar as sombras, talvez apareça alguma coisa.",
+          "condition": "always"
+        },
+        {
+          "id": "E04_D005",
+          "speaker": "SFX",
+          "text": "Primeiro obelisco faz um som áspero; a sombra se move.",
+          "condition": "always"
+        },
+        {
+          "id": "E04_D006",
+          "speaker": "MELANTHA",
+          "text": "Não, não é esse lado.",
+          "condition": "on_wrong_obelisk_angle"
+        },
+        {
+          "id": "E04_D007",
+          "speaker": "MELANTHA",
+          "text": "Ah, olha! As três formam uma estrela!",
+          "condition": "always"
+        },
+        {
+          "id": "E04_D008",
+          "speaker": "AÇÃO",
+          "text": "Uma linha de luz percorre o piso em direção ao Núcleo.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_E04_complete=true",
+      "technical_notes": "Obeliscos reversíveis; pista visual não depende só de cor.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "E05",
+      "name": "Um nome, um vínculo, um preço",
+      "location": "L07 Núcleo Central",
+      "trigger": "Inscrições anteriores observadas e desafio acessível",
+      "purpose": "Convergência dos desafios e primeira manifestação de Andrealphus",
+      "direction": "Três anéis; alcovas respondem em sequência; câmera mantém livre o corredor.",
+      "lines": [
+        {
+          "id": "E05_D001",
+          "speaker": "INSCRIÇÃO",
+          "text": "O que abre não sustenta. O que sustenta não encerra.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D002",
+          "speaker": "MELANTHA",
+          "text": "Três partes diferentes. Se eu trocar a ordem, dá ruim.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D003",
+          "speaker": "MELANTHA",
+          "text": "Nome abre.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D004",
+          "speaker": "MELANTHA",
+          "text": "Vínculo sustenta.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D005",
+          "speaker": "MELANTHA",
+          "text": "Preço fecha.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D006",
+          "speaker": "SFX",
+          "text": "A última marca encaixa; sete alcovas acendem sem destrancar todas as portas.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D007",
+          "speaker": "MELANTHA",
+          "text": "Sete caminhos... Eu conheço esses símbolos? Acho que sim.",
+          "condition": "always"
+        },
+        {
+          "id": "E05_D008",
+          "speaker": "MELANTHA",
+          "text": "É impressão minha ou esse lugar tá me testando?",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_E05_complete=true; core_aligned=true; a1_queued=true",
+      "technical_notes": "Não travar L07 até seis santuários; exigir apenas progressão estrutural aplicável.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "A1",
+      "name": "Andrealphus — uma chave incompleta",
+      "location": "L07 Núcleo Central",
+      "trigger": "Após E05; disparar uma única vez",
+      "purpose": "Interrogar sem explicar o segredo",
+      "direction": "Manifestação com partículas contidas; Poe observa; 10–20 s de atuação antes/despois do diálogo.",
+      "lines": [
+        {
+          "id": "A1_D001",
+          "speaker": "SFX",
+          "text": "Um compasso de luz gira contra a direção dos anéis.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D002",
+          "speaker": "ANDREALPHUS",
+          "text": "Você abriu o Núcleo. Mas ainda tá faltando uma coisa.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D003",
+          "speaker": "MELANTHA",
+          "text": "Ah, ótimo. Mais alguém aparecendo do nada.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D004",
+          "speaker": "ANDREALPHUS",
+          "text": "Pelo menos dessa vez você tem perguntas.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D005",
+          "speaker": "MELANTHA",
+          "text": "Quem é você? E o que é esse lugar?",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D006",
+          "speaker": "ANDREALPHUS",
+          "text": "Você quer mesmo começar por aí?",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D007",
+          "speaker": "MELANTHA",
+          "text": "Quero começar com uma resposta. Qualquer uma serve.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D008",
+          "speaker": "ANDREALPHUS",
+          "text": "Então vamos pela mais útil: você abriu o caminho até aqui.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D009",
+          "speaker": "MELANTHA",
+          "text": "E a Lua? O que acontece se eu entrar?",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D010",
+          "speaker": "ANDREALPHUS",
+          "text": "Você vai encontrar coisas que esqueceu. Só não suponha que todas sejam suas.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D011",
+          "speaker": "AÇÃO",
+          "text": "Poe dá um passo à frente; Andrealphus inclina a cabeça para ele, sem explicação.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D012",
+          "speaker": "ANDREALPHUS",
+          "text": "E tome cuidado com o que decidir guardar.",
+          "condition": "always"
+        },
+        {
+          "id": "A1_D013",
+          "speaker": "SFX",
+          "text": "A silhueta se desfaz; movimento volta à protagonista.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "a1_seen=true; andrealphus_visible=false",
+      "technical_notes": "Sem presença permanente; pular aplica flag sem duplicar manifestação.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L08",
+      "name": "A última marca antes da Lua",
+      "location": "L08 Santuário da Lua",
+      "trigger": "Cinco desafios L estruturais resolvidos",
+      "purpose": "Portal só abre com IDs obrigatórios, não 14 selos",
+      "direction": "Inscrições mostram lacunas; portal energiza por etapas.",
+      "lines": [
+        {
+          "id": "L08_D001",
+          "speaker": "MELANTHA",
+          "text": "Eu passei por essa porta antes. Ela tava fechada.",
+          "condition": "always"
+        },
+        {
+          "id": "L08_D002",
+          "speaker": "INSCRIÇÃO",
+          "text": "Não faltam portas. Falta terminar aquilo que foi aberto.",
+          "condition": "always"
+        },
+        {
+          "id": "L08_D003",
+          "speaker": "MELANTHA",
+          "text": "Ainda faltam marcas. Melhor voltar.",
+          "condition": "on_gate_locked"
+        },
+        {
+          "id": "L08_D004",
+          "speaker": "MELANTHA",
+          "text": "Ecos, a porta, as vozes, as sombras... o Núcleo. Pronto.",
+          "condition": "on_gate_unlocked"
+        },
+        {
+          "id": "L08_D005",
+          "speaker": "MELANTHA",
+          "text": "A Lua abriu. Acho que é por ali que eu vou.",
+          "condition": "always"
+        },
+        {
+          "id": "L08_D006",
+          "speaker": "UI",
+          "text": "Entrar no Domínio da Lua? [Entrar] [Voltar]",
+          "condition": "always"
+        },
+        {
+          "id": "L08_D007",
+          "speaker": "SFX",
+          "text": "Uma ondulação luminosa percorre o arco; Poe hesita e acompanha.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_E06_complete=true; moon_gate_open=true; moon_entered=true",
+      "technical_notes": "Fala de bloqueio e de abertura são condicionais, não sequenciais.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "M01",
+      "name": "A luz chega fora de hora",
+      "location": "M01 Entrada Lunar",
+      "trigger": "Entrar na Lua",
+      "purpose": "Mudar linguagem visual e equipar roupas lunares após cutscene curta",
+      "direction": "Câmera mostra reflexo antes do brilho; melancolia e curiosidade.",
+      "lines": [
+        {
+          "id": "M01_D001",
+          "speaker": "MELANTHA",
+          "text": "Uau... Isso aqui é bem diferente do Labirinto.",
+          "condition": "always"
+        },
+        {
+          "id": "M01_D002",
+          "speaker": "INSCRIÇÃO",
+          "text": "Aquilo que mostra não promete guardar.",
+          "condition": "always"
+        },
+        {
+          "id": "M01_D003",
+          "speaker": "MELANTHA",
+          "text": "Então nem tudo que eu vejo aqui é confiável. Surpresa nenhuma.",
+          "condition": "always"
+        },
+        {
+          "id": "M01_D004",
+          "speaker": "AÇÃO",
+          "text": "Poe observa a nova roupa antes de olhar o caminho.",
+          "condition": "always"
+        },
+        {
+          "id": "M01_D005",
+          "speaker": "MELANTHA",
+          "text": "Que foi, Poe? Eu também tô estranhando essa roupa.",
+          "condition": "always"
+        },
+        {
+          "id": "M01_D006",
+          "speaker": "MELANTHA",
+          "text": "Vem. Vamos com calma, tá?",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "moon_costume_melantha=true; moon_costume_poe=true; moon_first_entry=true",
+      "technical_notes": "Roupas Lua únicas do beta; usar imagens aprovadas quando fornecidas.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "M02_WATER",
+      "name": "A primeira travessia pela água",
+      "location": "M02 Jardim/Lago Lunar",
+      "trigger": "Chegar às flores sobre água",
+      "purpose": "Nado necessário para alcançar pétalas sem softlock",
+      "direction": "Passo toca água; animação walk→enter_swim→swim; Poe aguarda margem e reage; splash discreto.",
+      "lines": [
+        {
+          "id": "M02_WATER_D001",
+          "speaker": "MELANTHA",
+          "text": "Ah, claro. As flores ficam bem no meio do lago.",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D002",
+          "speaker": "MELANTHA",
+          "text": "E não tem nenhum caminho seco. Perfeito.",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D003",
+          "speaker": "AÇÃO",
+          "text": "A protagonista testa a profundidade; a água reflete a lua antes de tocar seu pé.",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D004",
+          "speaker": "MELANTHA",
+          "text": "Brr... gelada. Mas não parece fundo.",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D005",
+          "speaker": "SFX",
+          "text": "Ondulação; água se fecha atrás dela.",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D006",
+          "speaker": "MELANTHA",
+          "text": "Poe, fica aqui. Já volto, tá?",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D007",
+          "speaker": "AÇÃO",
+          "text": "Poe se senta, acompanha o deslocamento com o olhar e mia quando Melantha se aproxima de uma pétala.",
+          "condition": "always"
+        },
+        {
+          "id": "M02_WATER_D008",
+          "speaker": "MELANTHA",
+          "text": "Pode parar de me vigiar. Eu não vou sumir... eu acho.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "water_access_unlocked=true; melanta_swim_state",
+      "technical_notes": "Restaurar walk ao sair; checkpoint seguro na margem; física e colisão dedicadas.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "P01",
+      "name": "Três pétalas: distância, alinhamento, menos",
+      "location": "M02 Jardim Lunar",
+      "trigger": "Interagir com cada pétala; concluir três submecânicas",
+      "purpose": "Relacionamento de Melantha e Poe vira linguagem do cenário",
+      "direction": "3 estados independentes, pétalas animadas e fase lunar distinta.",
+      "lines": [
+        {
+          "id": "P01_D001",
+          "speaker": "FLOR_CRESCENTE",
+          "text": "A distância guarda o que a mão apressada perde.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D002",
+          "speaker": "MELANTHA",
+          "text": "Crescente... Será que eu preciso parar de chegar tão perto?",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D003",
+          "speaker": "MELANTHA",
+          "text": "Poe, espera aí. Vou tentar daqui.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D004",
+          "speaker": "AÇÃO",
+          "text": "Melantha afasta-se; a pétala reage ao posicionamento relativo.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D005",
+          "speaker": "MELANTHA",
+          "text": "Deu certo! Era só manter distância.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D006",
+          "speaker": "FLOR_CHEIA",
+          "text": "Duas imagens só se tocam quando olham para o mesmo lugar.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D007",
+          "speaker": "MELANTHA",
+          "text": "Na Lua cheia, o reflexo tem que ficar alinhado.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D008",
+          "speaker": "SFX",
+          "text": "Reflexo e pétala entram em fase.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D009",
+          "speaker": "FLOR_MINGUANTE",
+          "text": "Retira o que sobra. Não acrescenta o que falta.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D010",
+          "speaker": "MELANTHA",
+          "text": "Minguante... tenho que tirar o excesso.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D011",
+          "speaker": "MELANTHA",
+          "text": "Foi! As três funcionaram. Agora abre, por favor.",
+          "condition": "always"
+        },
+        {
+          "id": "P01_D012",
+          "speaker": "AÇÃO",
+          "text": "As três marcas brilham em sequência; acesso seguinte reage.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "crescent_done; full_done; waning_done; puzzle_P01_complete",
+      "technical_notes": "Confirmar regra Crescente com implementação existente; não mudar silenciosamente a posição de Poe.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "P02",
+      "name": "Sete espelhos e um quarto vazio",
+      "location": "M03 Salão dos Sete Espelhos",
+      "trigger": "Examinar sete descrições e selecionar combinação",
+      "purpose": "Tempo e lugar em vez de identidade",
+      "direction": "Sete molduras narrativas; reflexos 1 atrasado, 2 adiantado, 3 quarto sem protagonista.",
+      "lines": [
+        {
+          "id": "P02_D001",
+          "speaker": "MELANTHA",
+          "text": "Sete espelhos? Sério? Um já era suficiente.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D002",
+          "speaker": "ESPELHO_1",
+          "text": "Um gesto termina um instante depois de começar.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D003",
+          "speaker": "MELANTHA",
+          "text": "Esse tá um pouquinho atrasado.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D004",
+          "speaker": "ESPELHO_2",
+          "text": "Um gesto começa antes de ser pensado.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D005",
+          "speaker": "MELANTHA",
+          "text": "E esse se mexe antes de mim.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D006",
+          "speaker": "ESPELHO_3",
+          "text": "Há um quarto; não há ninguém dentro dele.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D007",
+          "speaker": "MELANTHA",
+          "text": "Espera... ali tem o quarto. Mas tá vazio.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D008",
+          "speaker": "MELANTHA",
+          "text": "Então é uma sequência. Atrasado, adiantado... quarto.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D009",
+          "speaker": "UI",
+          "text": "Selecionar: ATRASADO → ADIANTADO → QUARTO.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D010",
+          "speaker": "SFX",
+          "text": "A superfície do Espelho Negro vibra sem refletir a protagonista.",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D011",
+          "speaker": "MELANTHA",
+          "text": "Por que o reflexo tá fazendo isso?",
+          "condition": "always"
+        },
+        {
+          "id": "P02_D012",
+          "speaker": "MELANTHA",
+          "text": "Melhor não chegar tão perto.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_P02_complete=true; black_mirror_queued=true",
+      "technical_notes": "Descrições completas dos outros quatro espelhos em interações opcionais separadas.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "M03_EXTRA",
+      "name": "Os outros quatro espelhos",
+      "location": "M03 Salão dos Sete Espelhos",
+      "trigger": "Inspeção opcional das molduras 4–7 antes ou depois do puzzle",
+      "purpose": "Dar individualidade aos sete espelhos sem alterar a resposta canônica",
+      "direction": "Microinterações; cada reflexo reage apenas ao olhar de Melantha.",
+      "lines": [
+        {
+          "id": "M03_EXTRA_D001",
+          "speaker": "ESPELHO_4",
+          "text": "Uma versão de Melantha não se move, mesmo quando ela muda de lugar.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D002",
+          "speaker": "MELANTHA",
+          "text": "Esse não se mexe. Nem quando eu mudo de lugar.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D003",
+          "speaker": "ESPELHO_5",
+          "text": "O reflexo só mostra as coisas depois que Melantha desvia os olhos.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D004",
+          "speaker": "MELANTHA",
+          "text": "Esse só mostra o que eu fiz depois que eu saio de perto.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D005",
+          "speaker": "ESPELHO_6",
+          "text": "A mão refletida troca de lado, mas conserva a mesma cicatriz.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D006",
+          "speaker": "MELANTHA",
+          "text": "Minha mão tá invertida... mas a cicatriz continua lá.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D007",
+          "speaker": "ESPELHO_7",
+          "text": "O vidro mostra a sombra de alguém que não entrou na sala.",
+          "condition": "always"
+        },
+        {
+          "id": "M03_EXTRA_D008",
+          "speaker": "MELANTHA",
+          "text": "Tem uma sombra aí. De quem, se não entrou ninguém?",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "mirror_4_7_inspected bits optional",
+      "technical_notes": "Estas quatro descrições são propostas novas; os três espelhos corretos continuam ATRASADO/ADIANTADO/QUARTO.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "C_BLACK",
+      "name": "Memória do Espelho Negro",
+      "location": "M03 Espelho Negro",
+      "trigger": "Após P02; única vez",
+      "purpose": "Mostrar fragmento anterior sem nomear destinatário",
+      "direction": "A imagem retorna ao Quarto por segundos: mão, linha do sigilo, sombra de objeto, ausência de rosto; racha.",
+      "lines": [
+        {
+          "id": "C_BLACK_D001",
+          "speaker": "MELANTHA_MEMORIA",
+          "text": "Não. Não posso esquecer isso também.",
+          "condition": "always"
+        },
+        {
+          "id": "C_BLACK_D002",
+          "speaker": "MELANTHA_MEMORIA",
+          "text": "Se eu conseguir lembrar o nome... só mais um pouco...",
+          "condition": "always"
+        },
+        {
+          "id": "C_BLACK_D003",
+          "speaker": "SFX",
+          "text": "O som de uma vela apagada corta a frase.",
+          "condition": "always"
+        },
+        {
+          "id": "C_BLACK_D004",
+          "speaker": "MELANTHA",
+          "text": "Eu tava segurando alguma coisa.",
+          "condition": "always"
+        },
+        {
+          "id": "C_BLACK_D005",
+          "speaker": "MELANTHA",
+          "text": "Ou alguém... Não, não consigo ver.",
+          "condition": "always"
+        },
+        {
+          "id": "C_BLACK_D006",
+          "speaker": "MELANTHA",
+          "text": "Essa lembrança é minha? Eu nem sei mais.",
+          "condition": "always"
+        },
+        {
+          "id": "C_BLACK_D007",
+          "speaker": "AÇÃO",
+          "text": "O espelho mostra uma moldura vazia onde deveria haver um reflexo.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "black_mirror_seen=true; a2_queued=true",
+      "technical_notes": "Nunca confirmar proprietário do Fragmento.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "A2",
+      "name": "Andrealphus — quem nomeou a parte?",
+      "location": "M03 após Espelho Negro",
+      "trigger": "Após C_BLACK, uma única vez",
+      "purpose": "Reinterpretar “parte de mim” sem revelar resposta",
+      "direction": "Distorção do espelho vira silhueta; poe hesita; aparição curta, desaparecimento inevitável.",
+      "lines": [
+        {
+          "id": "A2_D001",
+          "speaker": "ANDREALPHUS",
+          "text": "Você viu alguma coisa no espelho. O que acha que era?",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D002",
+          "speaker": "MELANTHA",
+          "text": "Eu vi um pedaço do ritual. Pelo menos eu acho.",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D003",
+          "speaker": "ANDREALPHUS",
+          "text": "E já decidiu que a lembrança é sua?",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D004",
+          "speaker": "MELANTHA",
+          "text": "Eu tava lá. Vi as minhas mãos.",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D005",
+          "speaker": "ANDREALPHUS",
+          "text": "Eu não perguntei se você estava lá.",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D006",
+          "speaker": "MELANTHA",
+          "text": "Então o que você quer dizer com isso?",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D007",
+          "speaker": "ANDREALPHUS",
+          "text": "Que talvez você esteja fazendo a pergunta errada.",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D008",
+          "speaker": "MELANTHA",
+          "text": "Você podia, sei lá, falar uma coisa sem me deixar mais confusa?",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D009",
+          "speaker": "ANDREALPHUS",
+          "text": "Podia. Mas você acreditaria só porque eu disse?",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D010",
+          "speaker": "AÇÃO",
+          "text": "Poe se aproxima de Melantha; Andrealphus se desfaz em partículas apagadas.",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D011",
+          "speaker": "MELANTHA",
+          "text": "Ele foi embora de novo. Claro.",
+          "condition": "always"
+        },
+        {
+          "id": "A2_D012",
+          "speaker": "MELANTHA",
+          "text": "...E agora eu tenho mais perguntas que antes.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "a2_seen=true; andrealphus_visible=false",
+      "technical_notes": "Segundo e último encontro do beta; não deixar NPC na cena.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "P03",
+      "name": "O caminho que discorda",
+      "location": "M04 Corredor Ilusório",
+      "trigger": "Três rodadas de saída; checkpoints locais",
+      "purpose": "Ensinar leitura de marcas contra afirmações cômodas",
+      "direction": "Portas falsas distorcem batentes, devolvem à entrada local; só uma pista física muda.",
+      "lines": [
+        {
+          "id": "P03_D001",
+          "speaker": "INSCRIÇÃO",
+          "text": "A passagem mais clara sempre é a verdadeira.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D002",
+          "speaker": "MELANTHA",
+          "text": "Sempre? Ah, tá. Esse lugar tá de brincadeira.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D003",
+          "speaker": "MELANTHA",
+          "text": "A placa aponta pra esquerda... mas o chão tá diferente.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D004",
+          "speaker": "MELANTHA",
+          "text": "Vou seguir a marca no chão. A placa pode esperar.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D005",
+          "speaker": "SFX",
+          "text": "Um batente desloca sombra; caminho errado recoloca jogador no marco.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D006",
+          "speaker": "MELANTHA",
+          "text": "Droga. Voltei pro começo.",
+          "condition": "on_wrong_exit"
+        },
+        {
+          "id": "P03_D007",
+          "speaker": "MELANTHA",
+          "text": "Tá, olha a marca primeiro. Depois escolhe.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D008",
+          "speaker": "MELANTHA",
+          "text": "Foi! Agora o corredor parou de mudar.",
+          "condition": "always"
+        },
+        {
+          "id": "P03_D009",
+          "speaker": "AÇÃO",
+          "text": "A rota estabiliza sem teleporte adicional.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "illusion_round=3; puzzle_P03_complete=true",
+      "technical_notes": "As opções concretas por rodada devem ser vinculadas às inscrições reais e layouts; não inventar esquerda/direita fixa sem verificar geometria.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "M05_OPEN",
+      "name": "O arquivo dos oito ciclos",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Chegada; antes de resolver mecanismo",
+      "purpose": "Separar oito portas narrativas do Jardim Lunar",
+      "direction": "Fachada inteira sem recortes; câmera sugere oito portas e mecanismo circular abaixo.",
+      "lines": [
+        {
+          "id": "M05_OPEN_D001",
+          "speaker": "MELANTHA",
+          "text": "Oito portas... e nenhuma parece uma saída.",
+          "condition": "always"
+        },
+        {
+          "id": "M05_OPEN_D002",
+          "speaker": "INSCRIÇÃO",
+          "text": "Uma marca pode durar mais que sua explicação.",
+          "condition": "always"
+        },
+        {
+          "id": "M05_OPEN_D003",
+          "speaker": "MELANTHA",
+          "text": "Certo. Vamos ver o que elas têm pra contar.",
+          "condition": "always"
+        },
+        {
+          "id": "M05_OPEN_D004",
+          "speaker": "AÇÃO",
+          "text": "Poe observa a fachada; cada porta acende brevemente ao ser lida.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_entered=true",
+      "technical_notes": "As oito portas têm identificadores próprios e textos individuais.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "P04",
+      "name": "Marca, Reflexo, Memória",
+      "location": "M05 mecanismo da Galeria",
+      "trigger": "Acesso ao arquivo após leituras; não exigir tudo se design não exigir",
+      "purpose": "Resolver os três encaixes com base nas oito narrativas",
+      "direction": "Mecanismo circular recuado, fachada integral preservada, encaixe sem cortar sprite.",
+      "lines": [
+        {
+          "id": "P04_D001",
+          "speaker": "INSCRIÇÃO",
+          "text": "O que permanece quando a imagem troca de lugar?",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D002",
+          "speaker": "MELANTHA",
+          "text": "Marca.",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D003",
+          "speaker": "INSCRIÇÃO",
+          "text": "O que mostra sem prometer guardar?",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D004",
+          "speaker": "MELANTHA",
+          "text": "Reflexo.",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D005",
+          "speaker": "INSCRIÇÃO",
+          "text": "O que decide o que foi deixado para trás?",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D006",
+          "speaker": "MELANTHA",
+          "text": "Memória.",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D007",
+          "speaker": "UI",
+          "text": "MARCA → REFLEXO → MEMÓRIA.",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D008",
+          "speaker": "SFX",
+          "text": "A engrenagem central responde e libera o caminho.",
+          "condition": "always"
+        },
+        {
+          "id": "P04_D009",
+          "speaker": "MELANTHA",
+          "text": "Abriu! Ótimo. Mas ainda não sei o que isso tem a ver comigo.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_P04_complete=true; gallery_order",
+      "technical_notes": "Não relockar portas em falha; 8 narrativas registradas separadamente.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "P05",
+      "name": "Fase, Memória, Intenção",
+      "location": "M06 Câmara do Sigilo Fragmentado",
+      "trigger": "Acesso após Galeria, Jardim e Espelhos se previsto",
+      "purpose": "Resolver três anéis independentes",
+      "direction": "Cada anel reage separadamente. Erro não apaga acertos anteriores.",
+      "lines": [
+        {
+          "id": "P05_D001",
+          "speaker": "MELANTHA",
+          "text": "Três anéis... Tenho a sensação de já ter mexido neles.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D002",
+          "speaker": "INSCRIÇÃO",
+          "text": "A fase não pede tudo.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D003",
+          "speaker": "MELANTHA",
+          "text": "Minguante.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D004",
+          "speaker": "INSCRIÇÃO",
+          "text": "O registro não é uma pessoa.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D005",
+          "speaker": "MELANTHA",
+          "text": "Grimório.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D006",
+          "speaker": "INSCRIÇÃO",
+          "text": "A intenção não é possuir.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D007",
+          "speaker": "MELANTHA",
+          "text": "Sustentar.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D008",
+          "speaker": "SFX",
+          "text": "Primeiro pulso. Segundo. Terceiro. O sigilo forma um desenho completo.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D009",
+          "speaker": "MELANTHA",
+          "text": "Minguante, Grimório, Sustentar. Pronto.",
+          "condition": "always"
+        },
+        {
+          "id": "P05_D010",
+          "speaker": "MELANTHA",
+          "text": "Tomara que seja o certo. Pelo menos eu sei como cheguei aqui.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "puzzle_P05_complete=true; sigil_complete=true",
+      "technical_notes": "MINGUANTE → GRIMÓRIO → SUSTENTAR. Anéis independentes.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "M07",
+      "name": "O que o Fragmento não responde",
+      "location": "M07 Câmara do Fragmento",
+      "trigger": "Após P05, três vestígios opcionais e coleta única",
+      "purpose": "Clímax e dúvida sobre proprietário do Fragmento",
+      "direction": "Marca, sino e sombra; Poe olha para protagonista e se mantém presente; leve tremor, não revelação.",
+      "lines": [
+        {
+          "id": "M07_D001",
+          "speaker": "MELANTHA",
+          "text": "A marca... o sino... a sombra. Tudo de novo.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D002",
+          "speaker": "OBJETO",
+          "text": "Vestígio da marca — o traço permanece mesmo quando a mão desapareceu.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D003",
+          "speaker": "MELANTHA",
+          "text": "Já vi esse risco antes. No começo.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D004",
+          "speaker": "OBJETO",
+          "text": "Vestígio do sino — falta a última nota.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D005",
+          "speaker": "MELANTHA",
+          "text": "A quarta nota. De novo.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D006",
+          "speaker": "OBJETO",
+          "text": "Vestígio da sombra — o contorno não acompanha nenhuma luz.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D007",
+          "speaker": "MELANTHA",
+          "text": "Tá, isso aqui tá ficando esquisito até pra mim.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D008",
+          "speaker": "AÇÃO",
+          "text": "O Fragmento reage à aproximação de Melantha; Poe olha para ela, não para o objeto.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D009",
+          "speaker": "MELANTHA",
+          "text": "Poe... você quer que eu pegue isso?",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D010",
+          "speaker": "MELANTHA",
+          "text": "Eu nem sei de quem é.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D011",
+          "speaker": "SFX",
+          "text": "Memória sensorial: calor, tecido, um peso pequeno na mão; corte antes de qualquer nome.",
+          "condition": "always"
+        },
+        {
+          "id": "M07_D012",
+          "speaker": "MELANTHA",
+          "text": "Eu senti alguma coisa. Mas não consegui ver o quê.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "fragment_obtained=true; memory_fragment_seen=true",
+      "technical_notes": "Coleta idempotente; M07 e M08 contínuos; não criar puzzle extra.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "M08",
+      "name": "O retorno não termina a pergunta",
+      "location": "M08 Portal Final",
+      "trigger": "Após fragment_obtained; escolha de travessia",
+      "purpose": "Saída segura para FinalBeta",
+      "direction": "Portal responde à marca coletada; luz recua para contorno do arco.",
+      "lines": [
+        {
+          "id": "M08_D001",
+          "speaker": "MELANTHA",
+          "text": "Acho que essa é a saída. \"Acho\" é a palavra importante.",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D002",
+          "speaker": "MELANTHA",
+          "text": "Ainda tô sem entender metade do que aconteceu.",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D003",
+          "speaker": "MELANTHA",
+          "text": "Mas trouxe o Fragmento... e algumas lembranças.",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D004",
+          "speaker": "MELANTHA",
+          "text": "E você, né? Meu companheiro que não explica nada.",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D005",
+          "speaker": "AÇÃO",
+          "text": "Poe se senta perto do limite da luz.",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D006",
+          "speaker": "UI",
+          "text": "Retornar? [Sim] [Ainda não]",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D007",
+          "speaker": "MELANTHA",
+          "text": "Tá bom. Vamos pra casa.",
+          "condition": "always"
+        },
+        {
+          "id": "M08_D008",
+          "speaker": "SFX",
+          "text": "O portal faz um som de respiração contida; a tela dissolve.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "portal_final_used=true; beta_completion_queued=true",
+      "technical_notes": "Sem puzzle obrigatório adicional M08; salvar checkpoint seguro.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "FINAL",
+      "name": "O quarto aparente",
+      "location": "FinalBeta",
+      "trigger": "Ao atravessar M08",
+      "purpose": "Epílogo com objeto impossível e chamado sem confirmação",
+      "direction": "Câmera reproduz abertura com janela na posição esperada; detalhe do Fragmento permanece; som de Poe fora de quadro.",
+      "lines": [
+        {
+          "id": "FINAL_D001",
+          "speaker": "SFX",
+          "text": "Sinos distantes. Um pássaro, pela primeira vez.",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D002",
+          "speaker": "MELANTHA",
+          "text": "A janela...",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D003",
+          "speaker": "MELANTHA",
+          "text": "Tá no lugar certo.",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D004",
+          "speaker": "MELANTHA",
+          "text": "A foto também. Pera aí...",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D005",
+          "speaker": "MELANTHA",
+          "text": "Foi tudo um sonho?",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D006",
+          "speaker": "AÇÃO",
+          "text": "Melantha nota uma marca do Fragmento em objeto físico.",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D007",
+          "speaker": "MELANTHA",
+          "text": "Não. Isso veio de lá.",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D008",
+          "speaker": "MELANTHA",
+          "text": "Então eu realmente estive naquele lugar.",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D009",
+          "speaker": "SFX",
+          "text": "Pequeno som familiar atrás da porta; a câmera não mostra sua origem.",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D010",
+          "speaker": "MELANTHA",
+          "text": "...Poe?",
+          "condition": "always"
+        },
+        {
+          "id": "FINAL_D011",
+          "speaker": "AÇÃO",
+          "text": "Silêncio. Escurecimento lento. Créditos do beta. Volta ao menu.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "beta_complete=true; ending_seen=true",
+      "technical_notes": "Não confirmar Poe nem Melantha em vida/morte; não mostrar três finais futuros.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L09",
+      "name": "Santuário do Diabo",
+      "location": "L09",
+      "trigger": "Visita opcional; sem condição de portal",
+      "purpose": "Antecipar tema futuro sem entregar puzzles nem spoilers",
+      "direction": "Uma reação ambiental sutil e uma anotação opcional; portal do domínio futuro selado.",
+      "lines": [
+        {
+          "id": "L09_D001",
+          "speaker": "OBJETO",
+          "text": "A corrente gravada não aprisiona nenhuma porta. Só mostra que dois elos podem escolher ficar juntos.",
+          "condition": "always"
+        },
+        {
+          "id": "L09_D002",
+          "speaker": "MELANTHA",
+          "text": "Isso é uma corrente? Nem parece prender nada.",
+          "condition": "always"
+        },
+        {
+          "id": "L09_D003",
+          "speaker": "MELANTHA",
+          "text": "Não consigo entrar por aqui. Ainda.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "visited_l09=true optional",
+      "technical_notes": "Sem desafios internos obrigatórios; sem abrir outros Domínios.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L10",
+      "name": "Santuário da Torre",
+      "location": "L10",
+      "trigger": "Visita opcional; sem condição de portal",
+      "purpose": "Antecipar tema futuro sem entregar puzzles nem spoilers",
+      "direction": "Uma reação ambiental sutil e uma anotação opcional; portal do domínio futuro selado.",
+      "lines": [
+        {
+          "id": "L10_D001",
+          "speaker": "OBJETO",
+          "text": "Uma fissura sobe pela parede como se tivesse decidido cair para cima.",
+          "condition": "always"
+        },
+        {
+          "id": "L10_D002",
+          "speaker": "MELANTHA",
+          "text": "Essa parede tá rachada de cima a baixo.",
+          "condition": "always"
+        },
+        {
+          "id": "L10_D003",
+          "speaker": "MELANTHA",
+          "text": "Esse caminho também tá fechado.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "visited_l10=true optional",
+      "technical_notes": "Sem desafios internos obrigatórios; sem abrir outros Domínios.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L11",
+      "name": "Santuário do Enforcado",
+      "location": "L11",
+      "trigger": "Visita opcional; sem condição de portal",
+      "purpose": "Antecipar tema futuro sem entregar puzzles nem spoilers",
+      "direction": "Uma reação ambiental sutil e uma anotação opcional; portal do domínio futuro selado.",
+      "lines": [
+        {
+          "id": "L11_D001",
+          "speaker": "OBJETO",
+          "text": "A pedra foi talhada para ser lida pelo lado oposto.",
+          "condition": "always"
+        },
+        {
+          "id": "L11_D002",
+          "speaker": "MELANTHA",
+          "text": "Pera... o símbolo só faz sentido visto do outro lado.",
+          "condition": "always"
+        },
+        {
+          "id": "L11_D003",
+          "speaker": "MELANTHA",
+          "text": "Não dá pra passar por aqui agora.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "visited_l11=true optional",
+      "technical_notes": "Sem desafios internos obrigatórios; sem abrir outros Domínios.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L12",
+      "name": "Santuário do Eremita",
+      "location": "L12",
+      "trigger": "Visita opcional; sem condição de portal",
+      "purpose": "Antecipar tema futuro sem entregar puzzles nem spoilers",
+      "direction": "Uma reação ambiental sutil e uma anotação opcional; portal do domínio futuro selado.",
+      "lines": [
+        {
+          "id": "L12_D001",
+          "speaker": "OBJETO",
+          "text": "Uma lanterna apagada descansa onde a parede mais precisa de luz.",
+          "condition": "always"
+        },
+        {
+          "id": "L12_D002",
+          "speaker": "MELANTHA",
+          "text": "Uma lanterna apagada. Que útil.",
+          "condition": "always"
+        },
+        {
+          "id": "L12_D003",
+          "speaker": "MELANTHA",
+          "text": "Por aqui também não dá pra seguir.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "visited_l12=true optional",
+      "technical_notes": "Sem desafios internos obrigatórios; sem abrir outros Domínios.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L13",
+      "name": "Santuário da Morte",
+      "location": "L13",
+      "trigger": "Visita opcional; sem condição de portal",
+      "purpose": "Antecipar tema futuro sem entregar puzzles nem spoilers",
+      "direction": "Uma reação ambiental sutil e uma anotação opcional; portal do domínio futuro selado.",
+      "lines": [
+        {
+          "id": "L13_D001",
+          "speaker": "OBJETO",
+          "text": "Sob a poeira há a marca de algo que cresceu onde nada parecia caber.",
+          "condition": "always"
+        },
+        {
+          "id": "L13_D002",
+          "speaker": "MELANTHA",
+          "text": "Até a pedra rachou e nasceu alguma coisa aqui.",
+          "condition": "always"
+        },
+        {
+          "id": "L13_D003",
+          "speaker": "MELANTHA",
+          "text": "Essa passagem tá fechada.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "visited_l13=true optional",
+      "technical_notes": "Sem desafios internos obrigatórios; sem abrir outros Domínios.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "L14",
+      "name": "Santuário do Julgamento",
+      "location": "L14",
+      "trigger": "Visita opcional; sem condição de portal",
+      "purpose": "Antecipar tema futuro sem entregar puzzles nem spoilers",
+      "direction": "Uma reação ambiental sutil e uma anotação opcional; portal do domínio futuro selado.",
+      "lines": [
+        {
+          "id": "L14_D001",
+          "speaker": "OBJETO",
+          "text": "Três marcas de sino, mas só uma parece ter sido tocada.",
+          "condition": "always"
+        },
+        {
+          "id": "L14_D002",
+          "speaker": "MELANTHA",
+          "text": "Três sinos... mas parece que só um tocou.",
+          "condition": "always"
+        },
+        {
+          "id": "L14_D003",
+          "speaker": "MELANTHA",
+          "text": "Não. Acho melhor deixar essa porta pra depois.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "visited_l14=true optional",
+      "technical_notes": "Sem desafios internos obrigatórios; sem abrir outros Domínios.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_01",
+      "name": "Porta 01 — A PRIMEIRA MARCA",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_01; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_01_D001",
+          "speaker": "PORTA_01",
+          "text": "A primeira pessoa que passou não deixou rosto: deixou um risco tão pequeno que quase se tornou pedra.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_01_D002",
+          "speaker": "MELANTHA",
+          "text": "Uma marca tão pequena... e mesmo assim alguém quis guardar.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_01_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_02",
+      "name": "Porta 02 — O REFLEXO TORTO",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_02; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_02_D001",
+          "speaker": "PORTA_02",
+          "text": "No segundo arco, uma imagem repetiu o gesto certo com a mão errada. O observador sorriu, aliviado, e não percebeu a diferença.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_02_D002",
+          "speaker": "MELANTHA",
+          "text": "Ele nem percebeu que a imagem tava errada.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_02_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_03",
+      "name": "Porta 03 — A VOZ DISTANTE",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_03; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_03_D001",
+          "speaker": "PORTA_03",
+          "text": "Uma voz chegou antes da pessoa que deveria pronunciá-la. Quando a pessoa apareceu, não reconheceu as próprias palavras.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_03_D002",
+          "speaker": "MELANTHA",
+          "text": "Isso... por que me parece tão familiar?",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_03_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_04",
+      "name": "Porta 04 — A JANELA",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_04; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_04_D001",
+          "speaker": "PORTA_04",
+          "text": "O quarto tinha quatro paredes e uma janela a mais. Ninguém perguntou para onde ela dava.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_04_D002",
+          "speaker": "MELANTHA",
+          "text": "Uma janela a mais? Igual ao quarto...",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_04_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_05",
+      "name": "Porta 05 — A CHAMA",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_05; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_05_D001",
+          "speaker": "PORTA_05",
+          "text": "Uma vela permaneceu acesa depois que todos concordaram que havia sido apagada. O registro mudou, a chama não.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_05_D002",
+          "speaker": "MELANTHA",
+          "text": "A vela ainda acesa... Isso me lembra alguma coisa.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_05_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_06",
+      "name": "Porta 06 — O SINO",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_06; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_06_D001",
+          "speaker": "PORTA_06",
+          "text": "A terceira badalada foi ouvida por todos; a quarta, apenas por quem esperava alguém.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_06_D002",
+          "speaker": "MELANTHA",
+          "text": "A quarta badalada de novo. É claro.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_06_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_07",
+      "name": "Porta 07 — A PORTA",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_07; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_07_D001",
+          "speaker": "PORTA_07",
+          "text": "Uma porta permaneceu fechada por anos. Quando finalmente se abriu, não havia sinal de que alguém a tivesse trancado.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_07_D002",
+          "speaker": "MELANTHA",
+          "text": "Ela tava fechada... mas talvez ninguém tenha trancado.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_07_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    },
+    {
+      "id": "GALLERY_08",
+      "name": "Porta 08 — O NOME",
+      "location": "M05 Galeria dos Ciclos",
+      "trigger": "Interação com GalleryDoor_08; apenas uma visita registra como lida",
+      "purpose": "Uma micro-história proposta e compatível com o cânone conhecido",
+      "direction": "Luz da porta ascende; movimento de câmera curto; voz opcional legendada; retorna ao controle.",
+      "lines": [
+        {
+          "id": "GALLERY_08_D001",
+          "speaker": "PORTA_08",
+          "text": "O último nome foi escrito com cuidado. Depois os registros discordaram sobre a pessoa que o havia pronunciado.",
+          "condition": "always"
+        },
+        {
+          "id": "GALLERY_08_D002",
+          "speaker": "MELANTHA",
+          "text": "O nome ficou escrito. Só não dá pra saber quem falou.",
+          "condition": "always"
+        }
+      ],
+      "state_effects": "gallery_door_08_read=true",
+      "technical_notes": "Narrativas são propostas originais, não transcrições aprovadas anteriormente. Leia mesmo fora de ordem.",
+      "status": "CÂNONE E FALAS NOVAS PROPOSTAS"
+    }
+  ],
+  "ambient_dialogue": {
+    "QUARTO": [
+      "Não sei o que me incomoda mais: a janela ou o fato de eu reconhecer tudo.",
+      "Tá quieto demais aqui. Onde foi parar o barulho da casa?",
+      "Minha letra, com certeza. Quando foi que escrevi isso?"
+    ],
+    "L01": [
+      "Cheiro de pedra molhada. Pelo menos isso parece real.",
+      "Olha o tamanho dessa escada. E eu ainda nem sei aonde ela vai."
+    ],
+    "L03": [
+      "Toda vez que eu falo, a parede devolve diferente.",
+      "Poe, você tá ouvindo isso também?"
+    ],
+    "L04": [
+      "A porta é igual... mas essa marca mudou.",
+      "Se eu passar de novo, ela vai me jogar no começo?"
+    ],
+    "L05": [
+      "Não sei se quero ouvir o que tá lá embaixo.",
+      "Tá. O poço faz eco até quando ninguém fala. Normal."
+    ],
+    "L06": [
+      "Como é que tem sombra se não tem céu?",
+      "Poe, você tá olhando pra sombra ou praquela pedra?"
+    ],
+    "L08": [
+      "A porta da Lua sempre esteve aqui. Só precisava abrir."
+    ],
+    "L07": [
+      "Sete símbolos... mas só uma porta abriu.",
+      "Eu sabia fazer isso tudo antes? Não faz sentido."
+    ],
+    "M02": [
+      "Essa água muda de cor toda hora. É bonita, até.",
+      "Poe, nem pensa em pular atrás de mim.",
+      "As flores tão bem ali. Vou ter que entrar na água."
+    ],
+    "M01": [
+      "É impressão minha ou a luz daqui tá um pouco adiantada?"
+    ],
+    "M04": [
+      "Tô começando a achar que esse corredor faz de propósito."
+    ],
+    "M06": [
+      "Forçar não vai adiantar. Preciso descobrir a ordem."
+    ],
+    "M08": [
+      "Uma porta aberta não garante que eu vou chegar em casa."
+    ],
+    "M03": [
+      "Esse espelho tá me dando arrepios.",
+      "Tá, um reflexo atrasado é estranho. Um adiantado é pior."
+    ],
+    "M05": [
+      "Oito portas, oito histórias. Claro que não ia ser simples.",
+      "Quem escreveu tudo isso?"
+    ],
+    "M07": [
+      "É só um pedacinho... por que parece tão importante?",
+      "Tô lembrando de alguma coisa. Só não sei do quê."
+    ]
+  },
+  "choices": [
+    {
+      "id": "CH_Q_PHOTO",
+      "event": "Q01",
+      "prompt": "O que fazer com a fotografia?",
+      "options": [
+        {
+          "id": "observe",
+          "text": "Olhar a foto com atenção.",
+          "reply": "Espera. Antes de inventar uma história, deixa eu olhar direito.",
+          "effects": {
+            "discernimento": 1,
+            "respeito_memoria": 1
+          }
+        },
+        {
+          "id": "keep",
+          "text": "Guardar a foto.",
+          "reply": "Não sei o que tá faltando, mas vou guardar.",
+          "effects": {
+            "apego": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_POE",
+      "event": "C_POE",
+      "prompt": "Como reagir à aparição de Poe?",
+      "options": [
+        {
+          "id": "approach",
+          "text": "Chamar Poe pra perto.",
+          "reply": "Vem cá, Poe. Eu tô tão perdida quanto você.",
+          "effects": {
+            "apego": 1
+          }
+        },
+        {
+          "id": "observe",
+          "text": "Esperar Poe chegar.",
+          "reply": "Vem você. Quero ver se ainda lembra de mim.",
+          "effects": {
+            "discernimento": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_A1",
+      "event": "A1",
+      "prompt": "O que perguntar a Andrealphus?",
+      "options": [
+        {
+          "id": "trust",
+          "text": "Perguntar como atravessar.",
+          "reply": "Tá. Me explica como passar. Depois eu decido se confio em você.",
+          "effects": {
+            "confianca_andrealphus": 1
+          }
+        },
+        {
+          "id": "challenge",
+          "text": "Cobrar uma resposta de verdade.",
+          "reply": "Você faz isso de propósito, né? Nunca responde o que eu pergunto.",
+          "effects": {
+            "confianca_andrealphus": -1,
+            "discernimento": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_SANCT",
+      "event": "L11",
+      "prompt": "O que registrar diante da pedra invertida?",
+      "options": [
+        {
+          "id": "copy",
+          "text": "Copiar o símbolo.",
+          "reply": "Melhor desenhar isso. Vai que eu preciso depois.",
+          "effects": {
+            "respeito_memoria": 1
+          }
+        },
+        {
+          "id": "leave",
+          "text": "Deixar a pedra como está.",
+          "reply": "Não vou ficar anotando tudo. Preciso seguir.",
+          "effects": {
+            "discernimento": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_WATER",
+      "event": "M02_WATER",
+      "prompt": "Ao ver as flores na água...",
+      "options": [
+        {
+          "id": "enter",
+          "text": "Entrar na água.",
+          "reply": "Tá gelada, mas eu consigo. Vamos lá.",
+          "effects": {
+            "discernimento": 1
+          }
+        },
+        {
+          "id": "observe",
+          "text": "Observar o reflexo.",
+          "reply": "Espera. A água se mexeu antes da flor.",
+          "effects": {
+            "respeito_memoria": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_A2",
+      "event": "A2",
+      "prompt": "Como interpretar as palavras dele?",
+      "options": [
+        {
+          "id": "question",
+          "text": "Perguntar se a memória é sua.",
+          "reply": "Pera. Você tá dizendo que essa lembrança pode nem ser minha?",
+          "effects": {
+            "discernimento": 1
+          }
+        },
+        {
+          "id": "insist",
+          "text": "Insistir no que sentiu.",
+          "reply": "Eu tava lá. O que eu senti não foi inventado.",
+          "effects": {
+            "apego": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_GALLERY",
+      "event": "M05_OPEN",
+      "prompt": "Como ler as portas?",
+      "options": [
+        {
+          "id": "all",
+          "text": "Ler as oito portas.",
+          "reply": "Já que cheguei até aqui, vou ler tudo.",
+          "effects": {
+            "respeito_memoria": 1
+          }
+        },
+        {
+          "id": "select",
+          "text": "Procurar as marcas necessárias.",
+          "reply": "Vou começar pelas marcas. Depois vejo o resto.",
+          "effects": {
+            "discernimento": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_FRAGMENT",
+      "event": "M07",
+      "prompt": "O que fazer depois de tocar o Fragmento?",
+      "options": [
+        {
+          "id": "hold",
+          "text": "Guardar o Fragmento.",
+          "reply": "Tá. Eu não vou deixar isso aqui.",
+          "effects": {
+            "apego": 1
+          }
+        },
+        {
+          "id": "record",
+          "text": "Anotar o que aconteceu.",
+          "reply": "Preciso escrever agora, antes que eu esqueça.",
+          "effects": {
+            "respeito_memoria": 1,
+            "discernimento": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "CH_FINAL",
+      "event": "M08",
+      "prompt": "O que Melantha leva consigo?",
+      "options": [
+        {
+          "id": "question",
+          "text": "Levar a dúvida adiante.",
+          "reply": "Voltei. Mas ainda não entendi o que aconteceu.",
+          "effects": {
+            "discernimento": 1
+          }
+        },
+        {
+          "id": "promise",
+          "text": "Prometer que vai descobrir.",
+          "reply": "Isso não acabou. Eu vou descobrir o resto.",
+          "effects": {
+            "apego": 1
+          }
+        }
+      ]
+    }
+  ],
+  "puzzles": [
+    {
+      "id": "Q-RIT",
+      "location": "Quarto — quatro velas",
+      "rule": "Preparar janela e âncora; acender Lua → Livro → Memória → Repouso; ativar círculo; escolher deitar.",
+      "on_fail": "Um vento anula chamas enquanto janela aberta. Erro reinicia apenas sequência. A cama exige ritual_completed.",
+      "hint": "GRIMÓRIO: ordem semântica das âncoras.",
+      "state": "quarto_complete; ritual_completed"
+    },
+    {
+      "id": "E01",
+      "location": "L03 — Corredores dos Ecos",
+      "rule": "Três rounds: FORMA → CONTINUEI CHAMANDO → ABRI O CAMINHO.",
+      "on_fail": "Erro retorna rodada atual, não as anteriores. Poe aparece quando E01 conclui.",
+      "hint": "O Labirinto corrige, não repete.",
+      "state": "puzzle_E01_complete"
+    },
+    {
+      "id": "E02",
+      "location": "L04 — Porta Falsa",
+      "rule": "Primeira travessia retorna; localizar diferenças; alinhar duas marcas da moldura.",
+      "on_fail": "Erro retorna seguro à origem local, sem loop automático.",
+      "hint": "Compare a inscrição antes e depois.",
+      "state": "puzzle_E02_complete"
+    },
+    {
+      "id": "E03",
+      "location": "L05 — Poço de Vozes",
+      "rule": "Quatro escutas progressivas; identificar a voz própria contraditória.",
+      "on_fail": "Permite reouvir e legendas; não exige audição perfeita.",
+      "hint": "Eu disse e não disse.",
+      "state": "puzzle_E03_complete"
+    },
+    {
+      "id": "E04",
+      "location": "L06 — Pátio sem Céu",
+      "rule": "Rotacionar três obeliscos para alinhar sombras à estrela ausente.",
+      "on_fail": "Orientações reversíveis; sem reset global.",
+      "hint": "Onde a sombra deveria apontar se não há céu?",
+      "state": "puzzle_E04_complete"
+    },
+    {
+      "id": "E05",
+      "location": "L07 — Núcleo Central",
+      "rule": "NOME ABRE → VÍNCULO SUSTENTA → PREÇO FECHA.",
+      "on_fail": "Aciona primeira aparição de Andrealphus uma vez.",
+      "hint": "O nome não conclui o gesto.",
+      "state": "puzzle_E05_complete; a1_seen"
+    },
+    {
+      "id": "E06",
+      "location": "L08 — Portal da Lua",
+      "rule": "Exigir conclusão de E01–E05 por IDs estáveis antes de atravessar.",
+      "on_fail": "Indicar requisitos faltantes, não exigir santuários.",
+      "hint": "Não faltam outras portas.",
+      "state": "moon_gate_open"
+    },
+    {
+      "id": "P01",
+      "location": "M02 — Jardim Lunar",
+      "rule": "Crescente: distância Melantha/Poe; Cheia: alinhamento de reflexo; Minguante: subtração. Melantha entra e nada até flores.",
+      "on_fail": "Cada pétala preserva flag; nado possui saída segura; Poe espera sem travar passagem.",
+      "hint": "Crescente pede espaço. Cheia, alinhamento. Minguante, menos.",
+      "state": "crescent_done; full_done; waning_done"
+    },
+    {
+      "id": "P02",
+      "location": "M03 — Sete Espelhos",
+      "rule": "ATRASADO → ADIANTADO → QUARTO; Espelho Negro após conclusão.",
+      "on_fail": "Erros limpam seleção, não falas vistas. Gatilho A2 apenas uma vez.",
+      "hint": "Tempo e lugar, não identidade.",
+      "state": "puzzle_P02_complete; black_mirror_seen; a2_seen"
+    },
+    {
+      "id": "P03",
+      "location": "M04 — Corredor Ilusório",
+      "rule": "Três rounds de contradições; escolher transformação apoiada por pista física.",
+      "on_fail": "Retorno ao marco local sem apagar rounds anteriores.",
+      "hint": "Nem toda frase confortável descreve a realidade.",
+      "state": "puzzle_P03_complete"
+    },
+    {
+      "id": "P04",
+      "location": "M05 — Galeria dos Ciclos",
+      "rule": "Oito portas narrativas distintas; arquivo MARCA → REFLEXO → MEMÓRIA.",
+      "on_fail": "Falha limpa somente mecanismo central. Portas permanecem legíveis.",
+      "hint": "Marca permanece, reflexo muda, memória escolhe.",
+      "state": "puzzle_P04_complete; gallery_door_01…08"
+    },
+    {
+      "id": "P05",
+      "location": "M06 — Sigilo Fragmentado",
+      "rule": "MINGUANTE → GRIMÓRIO → SUSTENTAR nos anéis fase/memória/intenção.",
+      "on_fail": "Acertos persistem por anel. Ativar M07 ao concluir.",
+      "hint": "Diminuir. Registrar. Sustentar.",
+      "state": "puzzle_P05_complete"
+    }
+  ],
+  "gallery_doors": [
+    {
+      "id": "01",
+      "title": "A PRIMEIRA MARCA",
+      "text": "A primeira pessoa que passou não deixou rosto: deixou um risco tão pequeno que quase se tornou pedra.",
+      "melantha": "Uma marca tão pequena... e mesmo assim alguém quis guardar."
+    },
+    {
+      "id": "02",
+      "title": "O REFLEXO TORTO",
+      "text": "No segundo arco, uma imagem repetiu o gesto certo com a mão errada. O observador sorriu, aliviado, e não percebeu a diferença.",
+      "melantha": "Ele nem percebeu que a imagem tava errada."
+    },
+    {
+      "id": "03",
+      "title": "A VOZ DISTANTE",
+      "text": "Uma voz chegou antes da pessoa que deveria pronunciá-la. Quando a pessoa apareceu, não reconheceu as próprias palavras.",
+      "melantha": "Isso... por que me parece tão familiar?"
+    },
+    {
+      "id": "04",
+      "title": "A JANELA",
+      "text": "O quarto tinha quatro paredes e uma janela a mais. Ninguém perguntou para onde ela dava.",
+      "melantha": "Uma janela a mais? Igual ao quarto..."
+    },
+    {
+      "id": "05",
+      "title": "A CHAMA",
+      "text": "Uma vela permaneceu acesa depois que todos concordaram que havia sido apagada. O registro mudou, a chama não.",
+      "melantha": "A vela ainda acesa... Isso me lembra alguma coisa."
+    },
+    {
+      "id": "06",
+      "title": "O SINO",
+      "text": "A terceira badalada foi ouvida por todos; a quarta, apenas por quem esperava alguém.",
+      "melantha": "A quarta badalada de novo. É claro."
+    },
+    {
+      "id": "07",
+      "title": "A PORTA",
+      "text": "Uma porta permaneceu fechada por anos. Quando finalmente se abriu, não havia sinal de que alguém a tivesse trancado.",
+      "melantha": "Ela tava fechada... mas talvez ninguém tenha trancado."
+    },
+    {
+      "id": "08",
+      "title": "O NOME",
+      "text": "O último nome foi escrito com cuidado. Depois os registros discordaram sobre a pessoa que o havia pronunciado.",
+      "melantha": "O nome ficou escrito. Só não dá pra saber quem falou."
+    }
+  ],
+  "canon_grimoire_reference": "GRIMORIO_MEMENTO_MORI_40_ENTRADAS_CANONICAS.md; 40 entries, four tabs",
+  "known_ambiguities": [
+    "Passado do Entreposto não confirmado nas fontes.",
+    "Mecânica exata da Crescente deve ser cotejada com o código atual.",
+    "Roupas lunar Melantha e Poe exigem imagens aprovadas.",
+    "Opções de escolha e falas novas são propostas não homologadas."
+  ],
+  "dialogue_direction": {
+    "melantha": "Conversas naturais em português do Brasil; fala como alguém reagindo ao que vê, com humor seco pontual, frases curtas nas ações e vulnerabilidade sem discurso explicativo.",
+    "andrealphus": "Enigmático sem falar apenas por aforismos; responde, desvia e provoca em diálogo recíproco, com no máximo duas aparições no beta.",
+    "poe": "Não fala frases humanas. Reage com miados, poses e movimento.",
+    "inscricoes_e_grimorio": "Manter linguagem ritualística, arcaica ou poética quando fizer sentido; preservar integralmente as 40 entradas canônicas.",
+    "dublagem_e_timing": "Frases devem caber em balões de UI; intercalar gestos e silêncios; evitar monólogos de lore sucessivos.",
+    "controle_de_canon": "Não revelar o segredo sobre Poe e não inventar origem do Entreposto."
+  }
+}
