@@ -92,6 +92,10 @@ namespace MementoMori.Dialogue
                 return;
             var unlocked = RequirementsMet();
             var wasUsed = used;
+            // V6.1 Q03_D003: the window is shut at the end of its examination, with Melantha's own line,
+            // so the visual change (StoryFlagSpriteVisual) and the flag happen together.
+            var closesWindow = unlocked && gameObject.name == "Window"
+                && GameState.Instance != null && !GameState.Instance.HasFlag(StoryFlag.RoomWindowSecured);
             var altered = unlocked ? AlteredDialogue() : null;
             var selected = !unlocked ? lockedDialogue ?? dialogue
                 : altered ?? (wasUsed && repeatDialogue != null ? repeatDialogue : dialogue);
@@ -133,6 +137,11 @@ namespace MementoMori.Dialogue
                 }
                 if (gameObject.name == "Photo" && !wasUsed)
                     V61ChoicePresenter.Show("CH_Q_PHOTO");
+                if (closesWindow)
+                {
+                    GameState.Instance?.SetFlag(StoryFlag.RoomWindowSecured);
+                    DialogueManager.Instance.TryStartDialogue(V61EventCatalog.CreateDialogueSegment("Q03", "Q03.WindowClosed", 2, 1));
+                }
                 onCompleted?.Invoke();
             }
             DialogueManager.Instance.OnDialogueCompleted += Complete;
@@ -173,7 +182,7 @@ namespace MementoMori.Dialogue
                 case "PoeBowl": state.SetFlag(StoryFlag.RoomBowlExamined); break;
                 case "PoeToy": state.SetFlag(StoryFlag.RoomToyExamined); break;
                 case "Photo": state.SetFlag(StoryFlag.RoomPhotoExamined); break;
-                case "Window": state.SetFlag(StoryFlag.RoomWindowSecured); break;
+                case "Window": break; // closed when its dialogue ends (see closesWindow)
                 case "Candles": state.SetFlag(StoryFlag.RoomCandlesDone); RuntimeAudio.PlayOneShot("18_candle_extinguish", .55f); break;
                 case "RitualItem": state.SetFlag(StoryFlag.RoomRitualItemStored); break;
                 case "Grimoire": state.SetFlag(StoryFlag.RoomGrimoireRead); break;
