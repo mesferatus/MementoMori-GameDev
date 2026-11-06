@@ -225,7 +225,11 @@ namespace MementoMori.EditorTools
                 var w = 3.2f + (float)rng.NextDouble() * 2.8f;
                 var pool = Quad(parent, "MoonPool_" + i, Load("MoonPool"), picked[i], new Vector2(w, w * .46f), 31980);
                 pool.color = new Color(1f, 1f, 1f, .75f + (float)rng.NextDouble() * .25f);
-                if (i < shafts)
+                // A shaft only where the whole column above the pool is floor: never painted over a facade.
+                bool openAbove = true;
+                for (float dy = .5f; dy <= 5.5f && openAbove; dy += .5f)
+                    openAbove = cells.Any(c => Mathf.Abs(c.x - picked[i].x) < .55f && Mathf.Abs(c.y - (picked[i].y + dy)) < .55f);
+                if (i < shafts && openAbove)
                 {
                     const float height = 5.5f; var width = w * .9f;
                     var skew = Load("MoonShaft").GetFloat("_Skew");
