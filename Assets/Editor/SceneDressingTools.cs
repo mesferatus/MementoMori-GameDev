@@ -121,6 +121,43 @@ namespace MementoMori.EditorTools
             return $"{scene.name}: see-through on {added} foliage sprites";
         }
 
+        /// <summary>
+        /// Second pass: every wind-animated plant (trees included, whatever their size or trunk collider) fades
+        /// while Melantha walks behind it, and every flame turns half transparent in front of her instead of
+        /// disappearing behind her body.
+        /// </summary>
+        [MenuItem("Memento Mori/Ambiente/Transparencia de arvores e chamas (cena aberta)")]
+        public static string AttachSeeThroughTreesAndFlames()
+        {
+            var scene = EditorSceneManager.GetActiveScene();
+            int plants = 0, flames = 0;
+            foreach (var sr in AllSprites(scene))
+            {
+                if (sr.GetComponent<SeeThroughFoliage>() != null || sr.sortingOrder < 0) continue;
+                var isFlame = sr.name.StartsWith("Flame_") || (sr.sprite != null && sr.sprite.name.StartsWith("flames_"));
+                var m = sr.sharedMaterial;
+                var isPlant = m != null && m.HasProperty("_Mode") && Mathf.Approximately(m.GetFloat("_Mode"), 1f);
+                if (!isFlame && !isPlant) continue;
+                var see = Undo.AddComponent<SeeThroughFoliage>(sr.gameObject);
+                var so = new SerializedObject(see);
+                if (isFlame)
+                {
+                    so.FindProperty("flame").boolValue = true;
+                    so.FindProperty("coveredAlpha").floatValue = .6f;
+                    flames++;
+                }
+                else
+                {
+                    // Large canopies stay a little more present than small bushes.
+                    so.FindProperty("coveredAlpha").floatValue = sr.bounds.size.y > 4f ? .45f : .38f;
+                    plants++;
+                }
+                so.ApplyModifiedPropertiesWithoutUndo();
+            }
+            EditorSceneManager.MarkSceneDirty(scene);
+            return $"{scene.name}: see-through on {plants} more plants, {flames} flames";
+        }
+
         private static IEnumerable<SpriteRenderer> AllSprites(UnityEngine.SceneManagement.Scene scene) =>
             scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>(true)).ToList();
 

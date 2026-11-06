@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -84,16 +85,43 @@ namespace MementoMori.EditorTools
                     report += MoonWindow(root, new Vector2(.53f, 4.74f), 3.4f, 6.0f);
                     break;
                 case "DominioLua":
-                    report += Fireflies(root, "M02", 1.6f, new Color(.62f, .95f, 1f), new Color(.82f, .78f, 1f));
-                    report += Fireflies(root, "M01", .55f, new Color(.62f, .95f, 1f), new Color(.86f, .8f, 1f));
-                    report += Fireflies(root, "M08", .5f, new Color(.7f, .85f, 1f), new Color(.86f, .8f, 1f));
+                {
+                    var cool = new Color(.62f, .95f, 1f); var lilac = new Color(.84f, .78f, 1f);
+                    report += Fireflies(root, "M02", 1.6f, cool, lilac);
+                    report += Fireflies(root, "M01", .75f, cool, lilac);
+                    report += Fireflies(root, "M08", .55f, new Color(.7f, .85f, 1f), lilac);
+                    report += Fireflies(root, "M05", .45f, cool, lilac);
+                    report += Fireflies(root, "M03", .22f, cool, lilac);
+                    report += Fireflies(root, "M04", .22f, cool, lilac);
+                    report += Fireflies(root, "M06", .25f, cool, lilac);
+                    report += Fireflies(root, "M07", .3f, cool, lilac);
+                    // Moonlight on the open areas: entrance courtyard, lunar garden, gallery and the final portal.
+                    report += MoonGlades(root, "M01", 5, 2, 11);
+                    report += MoonGlades(root, "M02", 9, 3, 23);
+                    report += MoonGlades(root, "M05", 3, 1, 37);
+                    report += MoonGlades(root, "M08", 3, 1, 41);
+                    report += Butterflies(root, "M02", 14, new Color(.72f, .82f, 1f), new Color(.9f, .7f, 1f));
+                    report += Butterflies(root, "M01", 6, new Color(.72f, .82f, 1f), new Color(.9f, .7f, 1f));
+                    report += Butterflies(root, "M05", 4, new Color(.72f, .82f, 1f), new Color(.9f, .7f, 1f));
                     report += FlameHalos(root);
                     break;
+                }
                 case "Labirinto":
-                    report += Fireflies(root, "L06", .7f, new Color(.86f, 1f, .62f), new Color(1f, .9f, .6f));
-                    report += Fireflies(root, "L12", .8f, new Color(.86f, 1f, .62f), new Color(.78f, .7f, 1f));
+                {
+                    var green = new Color(.86f, 1f, .62f); var amber = new Color(1f, .9f, .6f); var violet = new Color(.78f, .7f, 1f);
+                    report += Fireflies(root, "L06", .7f, green, amber);
+                    report += Fireflies(root, "L12", .8f, green, violet);
+                    report += Fireflies(root, "L01", .3f, green, amber);
+                    report += Fireflies(root, "L03", .35f, green, violet);
+                    report += Fireflies(root, "L08", .6f, new Color(.7f, .9f, 1f), violet);
+                    report += Fireflies(root, "L14", .4f, green, amber);
+                    report += MoonGlades(root, "L08", 3, 1, 53);
+                    // Pale moths rather than bright butterflies inside the labyrinth.
+                    report += Butterflies(root, "L06", 6, new Color(.86f, .82f, .95f), new Color(.75f, .68f, .9f));
+                    report += Butterflies(root, "L08", 5, new Color(.78f, .86f, 1f), new Color(.86f, .78f, 1f));
                     report += FlameHalos(root);
                     break;
+                }
             }
             EditorSceneManager.MarkSceneDirty(scene);
             return report;
@@ -163,6 +191,116 @@ namespace MementoMori.EditorTools
             color.color = g;
             var r = ps.GetComponent<ParticleSystemRenderer>(); r.sharedMaterial = Load("FireflyGlow"); r.sortingOrder = 30000;
             return $"fireflies {sector} max {main.maxParticles}; ";
+        }
+
+        /// <summary>Floor cells of a sector, read from its painted floor tilemaps.</summary>
+        private static List<Vector3> SectorFloorCells(string prefix)
+        {
+            var cells = new List<Vector3>();
+            foreach (var tm in Object.FindObjectsByType<Tilemap>(FindObjectsSortMode.None))
+            {
+                if (!tm.name.StartsWith(prefix + "_layer_piso")) continue;
+                tm.CompressBounds();
+                foreach (var c in tm.cellBounds.allPositionsWithin)
+                    if (tm.HasTile(c)) cells.Add(tm.GetCellCenterWorld(c));
+            }
+            return cells;
+        }
+
+        /// <summary>Soft pools of moonlight (and a few shafts from above) spread over a sector's real floor.</summary>
+        private static string MoonGlades(Transform root, string sector, int pools, int shafts, int seed)
+        {
+            var cells = SectorFloorCells(sector);
+            if (cells.Count == 0) return sector + " glades: no floor; ";
+            var rng = new System.Random(seed);
+            var picked = new List<Vector3>();
+            for (int tries = 0; tries < 600 && picked.Count < pools; tries++)
+            {
+                var p = cells[rng.Next(cells.Count)];
+                if (picked.All(q => (q - p).sqrMagnitude > 36f)) picked.Add(p);
+            }
+            var parent = new GameObject("MoonGlades_" + sector).transform; parent.SetParent(root, false);
+            for (int i = 0; i < picked.Count; i++)
+            {
+                var w = 3.2f + (float)rng.NextDouble() * 2.8f;
+                var pool = Quad(parent, "MoonPool_" + i, Load("MoonPool"), picked[i], new Vector2(w, w * .46f), 31980);
+                pool.color = new Color(1f, 1f, 1f, .75f + (float)rng.NextDouble() * .25f);
+                if (i < shafts)
+                {
+                    const float height = 5.5f; var width = w * .9f;
+                    var skew = Load("MoonShaft").GetFloat("_Skew");
+                    var shaft = Quad(parent, "MoonShaft_" + i, Load("MoonShaft"), picked[i] + new Vector3(-skew * .5f * width, height * .5f - .2f, 0f), new Vector2(width, height), 32000);
+                    shaft.color = new Color(1f, 1f, 1f, .7f);
+                }
+            }
+            return $"{sector} {picked.Count} moon pools; ";
+        }
+
+        private static Material ButterflyMaterial()
+        {
+            var texPath = FxDir + "/FX_Butterfly.png";
+            if (!File.Exists(texPath))
+            {
+                // Two 9x7 frames (wings open / folded), white so particles tint them; 1px gap between frames.
+                string[] open = { "XX.....XX", "XXX...XXX", "XXXX.XXXX", ".XXXXXXX.", ".XX.X.XX.", "XX..X..XX", "X...X...X" };
+                string[] shut = { ".........", "...X.X...", "...XXX...", "...XXX...", "....X....", "...X.X...", "........." };
+                var t = new Texture2D(20, 7, TextureFormat.RGBA32, false);
+                t.SetPixels32(Enumerable.Repeat(new Color32(0, 0, 0, 0), 140).ToArray());
+                for (int y = 0; y < 7; y++) for (int x = 0; x < 9; x++)
+                {
+                    var c = new Color32(255, 255, 255, 255);
+                    if (open[y][x] == 'X') t.SetPixel(x, 6 - y, x == 4 ? new Color32(70, 50, 90, 255) : c);
+                    if (shut[y][x] == 'X') t.SetPixel(11 + x, 6 - y, x == 4 ? new Color32(70, 50, 90, 255) : c);
+                }
+                t.Apply();
+                File.WriteAllBytes(texPath, t.EncodeToPNG());
+                AssetDatabase.ImportAsset(texPath);
+                var ti = (TextureImporter)AssetImporter.GetAtPath(texPath);
+                ti.textureType = TextureImporterType.Default; ti.filterMode = FilterMode.Point; ti.alphaIsTransparency = true;
+                ti.textureCompression = TextureImporterCompression.Uncompressed; ti.mipmapEnabled = false; ti.wrapMode = TextureWrapMode.Clamp; ti.SaveAndReimport();
+            }
+            var matPath = FxDir + "/Materiais/Butterfly.mat";
+            var m = AssetDatabase.LoadAssetAtPath<Material>(matPath);
+            if (m == null)
+            {
+                m = new Material(Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default"));
+                AssetDatabase.CreateAsset(m, matPath);
+            }
+            m.mainTexture = AssetDatabase.LoadAssetAtPath<Texture2D>(texPath);
+            EditorUtility.SetDirty(m);
+            return m;
+        }
+
+        private static string Butterflies(Transform root, string sector, int count, Color a, Color b)
+        {
+            var bounds = SectorBounds(sector);
+            if (bounds == null) return sector + " butterflies: not found; ";
+            var area = bounds.Value;
+            var ps = new GameObject("Butterflies_" + sector, typeof(ParticleSystem)).GetComponent<ParticleSystem>();
+            ps.transform.SetParent(root, false);
+            ps.transform.position = new Vector3(area.center.x, area.center.y, 0f);
+            var main = ps.main;
+            main.loop = true; main.prewarm = true;
+            main.startLifetime = new ParticleSystem.MinMaxCurve(14f, 22f);
+            main.startSpeed = new ParticleSystem.MinMaxCurve(.25f, .55f);
+            main.startSize = new ParticleSystem.MinMaxCurve(.28f, .38f);
+            main.startColor = new ParticleSystem.MinMaxGradient(a, b);
+            main.simulationSpace = ParticleSystemSimulationSpace.World;
+            main.maxParticles = count;
+            var emission = ps.emission; emission.rateOverTime = count / 18f;
+            var shape = ps.shape; shape.shapeType = ParticleSystemShapeType.Box; shape.scale = new Vector3(area.size.x * .85f, area.size.y * .8f, 0f);
+            // Wandering, fluttering flight.
+            var noise = ps.noise; noise.enabled = true; noise.strength = 1.1f; noise.frequency = .35f; noise.scrollSpeed = .4f; noise.octaveCount = 2; noise.damping = true;
+            var sheet = ps.textureSheetAnimation; sheet.enabled = true; sheet.mode = ParticleSystemAnimationMode.Grid;
+            sheet.numTilesX = 2; sheet.numTilesY = 1; sheet.animation = ParticleSystemAnimationType.WholeSheet;
+            sheet.timeMode = ParticleSystemAnimationTimeMode.FPS; sheet.fps = 7f; sheet.cycleCount = 1;
+            var color = ps.colorOverLifetime; color.enabled = true;
+            var g = new Gradient();
+            g.SetKeys(new[] { new GradientColorKey(Color.white, 0), new GradientColorKey(Color.white, 1) },
+                new[] { new GradientAlphaKey(0, 0), new GradientAlphaKey(.95f, .06f), new GradientAlphaKey(.95f, .92f), new GradientAlphaKey(0, 1) });
+            color.color = g;
+            var r = ps.GetComponent<ParticleSystemRenderer>(); r.sharedMaterial = ButterflyMaterial(); r.sortingOrder = 30010;
+            return $"butterflies {sector} {count}; ";
         }
 
         private static string FlameHalos(Transform root)

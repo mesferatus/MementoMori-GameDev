@@ -341,7 +341,7 @@ namespace MementoMori.World
                 button.gameObject.SetActive(index < visibleEntries.Count);
                 if (index >= visibleEntries.Count) continue;
                 var entry = visibleEntries[index];
-                button.GetComponentInChildren<TMP_Text>().text = entry.Title + (GrimoireCatalog.IsNew(entry.Id) ? "  NOVO" : "");
+                button.GetComponentInChildren<TMP_Text>().text = entry.Title + (GrimoireCatalog.IsNew(entry.Id) ? "  <size=62%><color=#7b3e8f>NOVO</color></size>" : "");
                 var rowImage = button.GetComponent<Image>();
                 rowImage.sprite = entry == selectedEntry ? entrySelected : entryNormal;
                 rowImage.color = rowImage.sprite != null ? Color.white : entry == selectedEntry ? new Color(.72f, .55f, .73f, .48f) : Color.clear;
@@ -430,8 +430,9 @@ namespace MementoMori.World
                 row.rectTransform.offsetMin = row.rectTransform.offsetMax = Vector2.zero;
                 entryButtons[i] = row.gameObject.AddComponent<Button>();
                 entryButtons[i].onClick.AddListener(() => SelectEntry(selected));
-                var label = Text("Label", row.transform, "", bodyFont, 31, new Vector2(.10f, .06f), new Vector2(.94f, .94f), TextAlignmentOptions.MidlineLeft);
-                label.enableAutoSizing = true; label.fontSizeMin = 26; label.fontSizeMax = 31;
+                // Clear of the diamond ornaments at both ends of the row art.
+                var label = Text("Label", row.transform, "", bodyFont, 31, new Vector2(.15f, .06f), new Vector2(.86f, .94f), TextAlignmentOptions.MidlineLeft);
+                label.enableAutoSizing = true; label.fontSizeMin = 21; label.fontSizeMax = 30;
             }
             emptyLabel = Text("Empty", book.transform, "Nenhuma entrada descoberta.", bodyFont, 19,
                 new Vector2(.22f, .47f), new Vector2(.44f, .56f), TextAlignmentOptions.Center);
@@ -453,7 +454,7 @@ namespace MementoMori.World
             pageSymbols.preserveAspect = true;
             pageSymbols.raycastTarget = false;
             pageSymbols.rectTransform.offsetMin = pageSymbols.rectTransform.offsetMax = Vector2.zero;
-            pageBody = Text("PageBody", book.transform, "", bodyFont, 34, new Vector2(.53f, .27f), new Vector2(.81f, .75f), TextAlignmentOptions.TopLeft);
+            pageBody = Text("PageBody", book.transform, "", bodyFont, 34, new Vector2(.545f, .27f), new Vector2(.80f, .75f), TextAlignmentOptions.TopLeft);
             pageBody.enableAutoSizing = false;
             pageBody.textWrappingMode = TextWrappingModes.Normal;
             pageBody.overflowMode = TextOverflowModes.Page;
@@ -462,9 +463,11 @@ namespace MementoMori.World
             noteImage = Image("SideNote", root.transform, noteSprite, Color.white, new Vector2(.82f, .20f), new Vector2(.96f, .67f));
             noteImage.preserveAspect = true; noteImage.raycastTarget = false;
             noteImage.rectTransform.offsetMin = noteImage.rectTransform.offsetMax = Vector2.zero;
-            noteText = Text("SideNoteText", noteImage.transform, "", bodyFont, 16,
-                new Vector2(.31f, .22f), new Vector2(.74f, .78f), TextAlignmentOptions.Center);
-            noteText.enableAutoSizing = true; noteText.fontSizeMin = 12; noteText.fontSizeMax = 16;
+            // Larger, readable margin note inside the parchment's ruled area.
+            noteText = Text("SideNoteText", noteImage.transform, "", bodyFont, 24,
+                new Vector2(.24f, .24f), new Vector2(.80f, .76f), TextAlignmentOptions.Center);
+            noteText.enableAutoSizing = true; noteText.fontSizeMin = 18; noteText.fontSizeMax = 24;
+            noteText.color = new Color(.25f, .15f, .3f, 1f);
             noteText.textWrappingMode = TextWrappingModes.Normal;
             noteText.overflowMode = TextOverflowModes.Truncate;
             previousPage = ArrowButton("Previous", book.transform, new Vector2(.59f, .19f), new Vector2(.64f, .25f), leftArrow);

@@ -344,7 +344,7 @@ Uma chega tarde.
 Uma chega cedo.
 Uma lembra o quarto.
 >HINT3
-Delayed + Ahead + Room.
+Atraso + Antecipação + Quarto.
 @P12|Espelho Negro
 >HINT1
 Alguns espelhos não respondem à imagem.

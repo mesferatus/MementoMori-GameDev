@@ -140,6 +140,7 @@ namespace MementoMori.UI
         {
             sequenceComplete = true;
             if (endCardRoot != null) endCardRoot.SetActive(true);
+            ShowFinalIllustration();
             if (finalText == null && finalTextTmp == null)
             {
                 var canvas = FindAnyObjectByType<Canvas>();
@@ -152,6 +153,56 @@ namespace MementoMori.UI
             }
             if (finalTextTmp != null) finalTextTmp.text = "Algumas coisas não terminam.\nElas apenas mudam de lugar.\n\nObrigado por carregar esta memória até aqui.";
             if (returnButton != null) returnButton.interactable = true;
+        }
+
+        /// <summary>
+        /// Closing card: Camila's original illustration behind the real closing message, credits and the
+        /// return button. It only appears after the FINAL sequence; the playable FinalBeta room stays as is.
+        /// </summary>
+        private void ShowFinalIllustration()
+        {
+            var art = Resources.Load<Sprite>("MainMenu/CamilaIlustracao");
+            if (art == null || GameObject.Find("FinalIllustration") != null) return;
+
+            // Draw just under whichever overlay holds the end text / button, above the world and HUD frame.
+            var hostCanvas = returnButton != null ? returnButton.GetComponentInParent<Canvas>()
+                : finalText != null ? finalText.GetComponentInParent<Canvas>()
+                : finalTextTmp != null ? finalTextTmp.GetComponentInParent<Canvas>() : null;
+            var order = hostCanvas != null ? hostCanvas.rootCanvas.sortingOrder - 1 : 60;
+
+            var root = new GameObject("FinalIllustration", typeof(Canvas), typeof(UnityEngine.UI.CanvasScaler));
+            var canvas = root.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = order;
+            var scaler = root.GetComponent<UnityEngine.UI.CanvasScaler>();
+            scaler.uiScaleMode = UnityEngine.UI.CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920f, 1080f);
+            scaler.matchWidthOrHeight = .5f;
+
+            var backdrop = NewLayer(root.transform, "Backdrop", null, new Color(.02f, .008f, .04f, 1f));
+            backdrop.anchorMin = Vector2.zero; backdrop.anchorMax = Vector2.one;
+            backdrop.offsetMin = backdrop.offsetMax = Vector2.zero;
+
+            var image = NewLayer(root.transform, "CamilaIlustracao", art, new Color(1f, 1f, 1f, .78f));
+            image.anchorMin = Vector2.zero; image.anchorMax = Vector2.one;
+            image.offsetMin = image.offsetMax = Vector2.zero;
+            image.GetComponent<Image>().preserveAspect = true;
+
+            // Darker band where the closing message sits, so it stays legible over the art.
+            var band = NewLayer(root.transform, "TextShade", null, new Color(.02f, .008f, .04f, .55f));
+            band.anchorMin = new Vector2(.12f, .58f); band.anchorMax = new Vector2(.88f, .86f);
+            band.offsetMin = band.offsetMax = Vector2.zero;
+        }
+
+        private static RectTransform NewLayer(Transform parent, string name, Sprite sprite, Color color)
+        {
+            var go = new GameObject(name, typeof(RectTransform), typeof(Image));
+            go.transform.SetParent(parent, false);
+            var image = go.GetComponent<Image>();
+            image.sprite = sprite;
+            image.color = color;
+            image.raycastTarget = false;
+            return (RectTransform)go.transform;
         }
 
         public void ShowCredits() { if (sequenceComplete && credits != null) credits.SetActive(true); }

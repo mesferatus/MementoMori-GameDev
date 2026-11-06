@@ -15,7 +15,8 @@ namespace MementoMori.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync("MainMenu");
             yield return null;
             var menu = GameObject.Find("MainMenuButtons");
-            var button = GameObject.Find("Button_Configuracoes")?.GetComponent<Button>();
+            // CONFIGURAÇÕES is a regular menu entry now; the old corner cog remains the fallback.
+            var button = (GameObject.Find("Button_ConfiguracoesMenu") ?? GameObject.Find("Button_Configuracoes"))?.GetComponent<Button>();
             Assert.That(button, Is.Not.Null);
             button.onClick.Invoke();
             var settings = Object.FindFirstObjectByType<MementoMori.UI.SettingsPanelView>();

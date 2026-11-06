@@ -30,7 +30,10 @@ namespace MementoMori.UI
         // The approved lilac gothic frame of the cinematics, reused as the gameplay HUD border.
         private static void AddGothicBorder(Transform canvasRoot)
         {
-            var sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrame");
+            // V2: the lilac arabesque frame prepared in the Codex round (magenta cut-out halo removed).
+            var sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrameV2");
+            var isV2 = sprite != null;
+            if (sprite == null) sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrame");
             if (sprite == null) return;
             foreach (Transform child in canvasRoot)
                 if (child.name.StartsWith("Ornament")) child.gameObject.SetActive(false);
@@ -39,11 +42,12 @@ namespace MementoMori.UI
             rect.SetParent(canvasRoot, false);
             rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
             // Slightly taller than the screen: the rules sit closer to the edges (top ~7%, bottom ~4%).
-            rect.offsetMin = new Vector2(0f, -22f); rect.offsetMax = new Vector2(0f, 30f);
+            if (isV2) rect.offsetMin = rect.offsetMax = Vector2.zero;
+            else { rect.offsetMin = new Vector2(0f, -22f); rect.offsetMax = new Vector2(0f, 30f); }
             var image = go.GetComponent<UnityEngine.UI.Image>();
             image.sprite = sprite;
             image.type = UnityEngine.UI.Image.Type.Simple;
-            image.color = new Color(1f, 1f, 1f, .82f);
+            image.color = new Color(1f, 1f, 1f, isV2 ? .95f : .82f);
             image.raycastTarget = false;
         }
 
@@ -60,7 +64,13 @@ namespace MementoMori.UI
             var image = go.GetComponent<UnityEngine.UI.Image>();
             image.material = new Material(material);
             // Darker sectors keep more of their centre lit; the moon domain gets a bluer rim.
-            image.material.SetFloat("_Inner", scene == "Labirinto" ? .5f : scene == "Quarto" ? .58f : .56f);
+            // Darker purple rim across the whole game (Codex proposal, slightly stronger); the centre stays lit.
+            image.material.SetFloat("_Inner", scene == "Labirinto" ? .47f : scene == "Quarto" ? .55f : .53f);
+            image.material.SetFloat("_Intensity", 1f);
+            image.material.SetFloat("_Outer", 1.12f);
+            image.material.SetFloat("_Fog", .35f);
+            image.material.SetColor("_Color", new Color(.024f, .008f, .055f, 1f));
+            image.material.SetColor("_Glow", new Color(.25f, .1f, .4f, 1f));
             if (scene == "DominioLua") image.material.SetColor("_Glow", new Color(.16f, .14f, .48f, 1f));
             image.raycastTarget = false;
             return true;

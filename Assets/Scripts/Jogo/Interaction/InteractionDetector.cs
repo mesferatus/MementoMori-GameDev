@@ -49,6 +49,10 @@ namespace MementoMori.Interaction
                 candidates.Remove(interactable);
         }
 
+        // Priority only breaks near-ties: a high-priority prop across the room must not steal the prompt
+        // from the object Melantha is actually standing at.
+        private const float PriorityTieMargin = .3f;
+
         private void SelectCandidate()
         {
             current = null;
@@ -68,8 +72,14 @@ namespace MementoMori.Interaction
                     continue;
                 if (IsObstructed(component))
                     continue;
-                var distance = ((Vector2)component.transform.position - (Vector2)transform.position).sqrMagnitude;
-                if (candidate.InteractionPriority > bestPriority || candidate.InteractionPriority == bestPriority && distance < bestDistance)
+                var distance = Vector2.Distance(component.transform.position, transform.position);
+                if (candidate is IInteractionReach reach && reach.MaxReach > 0f && distance > reach.MaxReach)
+                    continue;
+                var clearlyCloser = distance < bestDistance - PriorityTieMargin;
+                var nearTie = Mathf.Abs(distance - bestDistance) <= PriorityTieMargin;
+                if (current == null || clearlyCloser
+                    || nearTie && (candidate.InteractionPriority > bestPriority
+                                   || candidate.InteractionPriority == bestPriority && distance < bestDistance))
                 {
                     current = candidate;
                     bestPriority = candidate.InteractionPriority;
@@ -92,6 +102,7 @@ namespace MementoMori.Interaction
                 // Some room props keep their solid collider on the visual sibling of the interaction trigger.
                 // A collider enclosing the target point is the target's surface, not a barrier in front of it.
                 if (obstacle.OverlapPoint(destination)) continue;
+                if (target is IInteractionSurface surface && surface.IsOwnSurface(obstacle)) continue;
                 return true;
             }
             return false;

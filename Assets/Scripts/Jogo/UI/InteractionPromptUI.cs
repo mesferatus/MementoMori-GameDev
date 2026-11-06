@@ -13,6 +13,14 @@ namespace MementoMori.UI
         [SerializeField] private TMP_Text labelTmp;
         private Sprite scalableBackground;
         private string lastKey;
+        private Component targetComponent;
+        private Transform player;
+
+        // The prompt follows the object it refers to instead of sitting under Melantha, so it no longer
+        // covers her or the props around her (candles on the ritual rug).
+        private const float PromptScale = .78f;
+        private const float PromptGap = 34f;
+        private const float ScreenMargin = 24f;
 
         public void Configure(CanvasGroup group, Text promptLabel)
         {
@@ -36,8 +44,43 @@ namespace MementoMori.UI
                 canvasGroup.alpha = visible ? 1f : 0f;
                 canvasGroup.blocksRaycasts = false;
             }
+            targetComponent = visible ? target as Component : null;
             if (visible)
+            {
                 SetPromptText(target.InteractionVerb);
+                PlaceNearTarget();
+            }
+        }
+
+        private void LateUpdate() => PlaceNearTarget();
+
+        private void PlaceNearTarget()
+        {
+            if (targetComponent == null || labelTmp == null) return;
+            var background = labelTmp.transform.parent as RectTransform;
+            var parent = background != null ? background.parent as RectTransform : null;
+            var camera = Camera.main;
+            if (parent == null || camera == null) return;
+
+            background.localScale = Vector3.one * PromptScale;
+            var world = targetComponent.transform.position;
+            if (player == null)
+            {
+                var controller = FindAnyObjectByType<MementoMori.Player.PlayerController>();
+                if (controller != null) player = controller.transform;
+            }
+            if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, camera.WorldToScreenPoint(world), null, out var local))
+                return;
+
+            var halfHeight = background.rect.height * PromptScale * .5f;
+            var halfWidth = background.rect.width * PromptScale * .5f;
+            // Above the object, unless Melantha stands above it: then below, so the box never sits on her.
+            var below = player != null && player.position.y > world.y + .1f;
+            local.y += below ? -(halfHeight + PromptGap) : halfHeight + PromptGap;
+            var bounds = parent.rect;
+            local.x = Mathf.Clamp(local.x, bounds.xMin + halfWidth + ScreenMargin, bounds.xMax - halfWidth - ScreenMargin);
+            local.y = Mathf.Clamp(local.y, bounds.yMin + halfHeight + ScreenMargin, bounds.yMax - halfHeight - ScreenMargin);
+            background.localPosition = new Vector3(local.x, local.y, 0f);
         }
 
         private void SetPromptText(string action)
@@ -64,12 +107,12 @@ namespace MementoMori.UI
             labelTmp.enableAutoSizing = false;
             labelTmp.textWrappingMode = TextWrappingModes.NoWrap;
             labelTmp.ForceMeshUpdate();
-            var width = Mathf.Clamp(labelTmp.preferredWidth + 210f, 500f, 1050f);
+            var width = Mathf.Clamp(labelTmp.preferredWidth + 250f, 500f, 1090f);
             background.sizeDelta = new Vector2(width, 185f);
             labelTmp.rectTransform.anchorMin = new Vector2(0f, .5f);
             labelTmp.rectTransform.anchorMax = new Vector2(1f, .5f);
             labelTmp.rectTransform.offsetMin = new Vector2(125f, -58f);
-            labelTmp.rectTransform.offsetMax = new Vector2(-35f, 58f);
+            labelTmp.rectTransform.offsetMax = new Vector2(-60f, 58f);
             var keycap = background.Find("Keycap_E") as RectTransform;
             if (keycap != null)
             {

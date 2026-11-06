@@ -48,7 +48,7 @@ namespace MementoMori.Dialogue
             asciiObject.transform.SetParent(inside.transform, false);
             var asciiRect = (RectTransform)asciiObject.transform;
             asciiRect.anchorMin = Vector2.zero; asciiRect.anchorMax = Vector2.one;
-            asciiRect.offsetMin = Vector2.one * 12f; asciiRect.offsetMax = Vector2.one * -12f;
+            asciiRect.offsetMin = Vector2.one * 2f; asciiRect.offsetMax = Vector2.one * -2f;
             ascii = asciiObject.GetComponent<AsciiIllustration>();
             ascii.color = Lilac;
             ascii.Configure(sequence.pixelFont != null ? sequence.pixelFont : Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"));

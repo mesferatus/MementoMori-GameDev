@@ -195,6 +195,31 @@ namespace MementoMori.Tests.PlayMode
             Object.Destroy(wall);
         }
 
+        [UnityTest]
+        public IEnumerator QuartoRitualCandleIsNotHiddenByItsOwnFootprintFromTheSouth()
+        {
+            yield return SceneManager.LoadSceneAsync("Quarto");
+            yield return null;
+
+            var detector = Object.FindFirstObjectByType<InteractionDetector>();
+            var check = typeof(InteractionDetector).GetMethod("IsObstructed", BindingFlags.Instance | BindingFlags.NonPublic);
+            Assert.That(detector, Is.Not.Null);
+            Assert.That(check, Is.Not.Null);
+            var candles = Object.FindObjectsByType<MementoMori.World.RoomCandleInteractable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            Assert.That(candles.Length, Is.EqualTo(4));
+
+            var oldPosition = detector.transform.position;
+            foreach (var candle in candles)
+            {
+                // In front of the candle, just below its solid base: the line to the trigger crosses that base.
+                detector.transform.position = candle.transform.position + Vector3.down * 1.35f;
+                Physics2D.SyncTransforms();
+                Assert.That((bool)check.Invoke(detector, new object[] { candle }), Is.False,
+                    $"{candle.name} must not be hidden by its own drawn body or footprint.");
+            }
+            detector.transform.position = oldPosition;
+        }
+
         private static GameObject FindSceneObject(string objectName)
         {
             foreach (var candidate in Resources.FindObjectsOfTypeAll<GameObject>())

@@ -96,10 +96,10 @@ namespace MementoMori.Dialogue
                 { advance = Mathf.Max(advance, metric.advance); ascent = Mathf.Max(ascent, metric.maxY); descent = Mathf.Min(descent, metric.minY); }
             var lineHeight = Mathf.Max(ascent - descent + 2, GlyphSize);
             var bounds = GetPixelAdjustedRect();
-            var scale = Mathf.Min(bounds.width / (columns * advance), bounds.height / (rows.Length * lineHeight));
-            cell = advance * scale; line = lineHeight * scale;
-            left = bounds.center.x - columns * cell * .5f;
-            top = bounds.center.y + rows.Length * line * .5f;
+            // The grid fills the lilac frame on both axes; glyphs keep one undistorted scale.
+            cell = bounds.width / columns; line = bounds.height / rows.Length;
+            left = bounds.xMin;
+            top = bounds.yMax;
             return true;
         }
         protected override void OnPopulateMesh(VertexHelper helper)
@@ -125,17 +125,20 @@ namespace MementoMori.Dialogue
                     }
             var lineHeight = Mathf.Max(ascent - descent + 2, GlyphSize);
             var bounds = GetPixelAdjustedRect();
-            var scale = Mathf.Min(bounds.width / (columns * advance), bounds.height / (rows.Length * lineHeight));
-            var cell = advance * scale;
-            var left = bounds.center.x - columns * cell * .5f;
-            var top = bounds.center.y + rows.Length * lineHeight * scale * .5f;
+            var scaleX = bounds.width / (columns * advance);
+            var scaleY = bounds.height / (rows.Length * lineHeight);
+            var scale = Mathf.Min(scaleX, scaleY);
+            var cell = advance * scaleX;
+            var line = lineHeight * scaleY;
+            var left = bounds.xMin;
+            var top = bounds.yMax;
             for (var y = 0; y < rows.Length; y++)
                 for (var x = 0; x < rows[y].Length; x++)
                 {
                     var c = rows[y][x];
                     if (c == ' ' || !font.GetCharacterInfo(c, out var glyph, 24, FontStyle.Normal)) continue;
-                    var cx = left + x * cell + (advance - glyph.advance) * scale * .5f;
-                    var baseline = top - (y * lineHeight + ascent) * scale;
+                    var cx = left + x * cell + (cell - glyph.advance * scale) * .5f;
+                    var baseline = top - y * line - (line - lineHeight * scale) * .5f - ascent * scale;
                     var tint = inks[y][x] ?? color;
                     if (inks[y][x].HasValue) tint.a = (IsSolid(tint) ? 1f : tint.a) * color.a;
                     var start = helper.currentVertCount;
