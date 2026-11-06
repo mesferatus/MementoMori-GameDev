@@ -136,12 +136,32 @@ namespace MementoMori.Verification
             var bed = FindFirstObjectByType<BedController>();
             var locked = bed != null && !BedController.HasRoomRequirements(GameState.Instance);
             // Follow the V3 investigation order so gated interactions are exercised exactly as a player sees them.
-            foreach (var objectName in new[] { "Photo", "Grimoire", "RitualItem", "Window", "Candles", "PoeBowl", "PoeToy" })
+            foreach (var objectName in new[] { "Photo", "RitualItem", "Window", "PoeBowl", "PoeToy" })
             {
+                // A player cannot interact while a scene or choice is open; finish it first.
+                yield return CompleteOpenDialogue(30f);
                 var trigger = FindNamedComponent<DialogueTrigger>(objectName);
                 if (trigger != null && trigger.CanInteract(default)) trigger.Interact(default);
                 yield return CompleteOpenDialogue();
             }
+            // Current Quarto: the grimoire is a GrimoireScreen and the candles are a four-step ordered puzzle.
+            yield return CompleteOpenDialogue(30f);
+            var grimoire = FindNamedComponent<GrimoireScreen>("Grimoire");
+            if (grimoire != null && grimoire.CanInteract(default)) grimoire.Interact(default);
+            yield return CompleteOpenDialogue(30f);
+            var grimoireDeadline = Time.realtimeSinceStartup + 5f;
+            while (!GrimoireScreen.AnyOpen && Time.realtimeSinceStartup < grimoireDeadline) yield return null;
+            foreach (var screen in FindObjectsByType<GrimoireScreen>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+                if (screen.IsOpen) screen.Close();
+            yield return null;
+            var candles = new List<RoomCandleInteractable>(FindObjectsByType<RoomCandleInteractable>(FindObjectsSortMode.None));
+            candles.Sort((a, b) => a.OrderIndex.CompareTo(b.OrderIndex));
+            foreach (var candle in candles)
+            {
+                yield return CompleteOpenDialogue(30f);
+                if (candle.CanInteract(default)) candle.Interact(default);
+            }
+            yield return CompleteOpenDialogue(30f);
             var optionalRoomContentDoesNotUnlockBed = !BedController.HasRoomRequirements(GameState.Instance);
             var ritual = FindFirstObjectByType<RitualController>();
             ritual?.Interact(default);
@@ -166,20 +186,11 @@ namespace MementoMori.Verification
             yield return WaitForScene("Labirinto", 45f);
             Check("CT-004", GameState.Instance.HasFlag(StoryFlag.DreamTransitionComplete), "TransiÃ§Ã£o onÃ­rica e destino Labirinto confirmados.");
 
+            yield return CompleteOpenDialogue(30f); // the L01 arrival scene must finish before any interaction
             var falseDoor = FindFirstObjectByType<FalseDoorController>();
             falseDoor?.Interact(default);
             yield return CompleteOpenDialogue();
             var player = GameObject.FindGameObjectWithTag("Player")?.transform;
-            var revealTrigger = GameObject.Find("PoeReveal")?.transform;
-            if (player != null && revealTrigger != null)
-            {
-                player.position = revealTrigger.position;
-                Physics2D.SyncTransforms();
-                yield return new WaitForFixedUpdate();
-            }
-            yield return CompleteOpenDialogue();
-            Check("CT-005", GameState.Instance.PoeRevealed && GameObject.Find("PoeRouteTrigger_01") != null && GameObject.Find("PoeRouteTrigger_02") != null, "RevelaÃ§Ã£o e dois pontos de Poe disponÃ­veis.");
-
             var echoes = FindFirstObjectByType<EchoCorridorPuzzle>();
             var preserved = echoes != null && !echoes.Select(0, player);
             yield return CompleteOpenDialogue();
@@ -191,10 +202,23 @@ namespace MementoMori.Verification
             yield return CompleteOpenDialogue();
             Check("CT-006", GameState.Instance.HasFlag(StoryFlag.FalseDoorTriggered) && preserved && GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete), "Porta falsa e trÃªs rodadas recuperÃ¡veis dos Ecos concluÃ­das.");
 
-            var domainPortal = GameObject.Find("MoonPortal")?.GetComponent<Portal>();
-            if (domainPortal == null)
+            // C_POE happens at the Echo exit after E01 (V6.1): reveal only after the Echoes.
+            var revealTrigger = GameObject.Find("PoeReveal")?.transform;
+            if (player != null && revealTrigger != null)
             {
-                Check("CT-007", false, "MoonPortal ausente antes dos puzzles do Dominio.");
+                player.position = revealTrigger.position;
+                Physics2D.SyncTransforms();
+                yield return new WaitForFixedUpdate();
+            }
+            yield return CompleteOpenDialogue();
+            Check("CT-005", GameState.Instance.PoeRevealed && GameObject.Find("PoeRouteTrigger_01") != null && GameObject.Find("PoeRouteTrigger_02") != null, "RevelaÃ§Ã£o e dois pontos de Poe disponÃ­veis.");
+
+
+            var domainPortal = FindNamedComponent<Portal>("MoonPortal");
+            if (domainPortal == null || !domainPortal.CanInteract(default))
+            {
+                Check("CT-007", false, domainPortal == null ? "MoonPortal ausente antes dos puzzles do Dominio."
+                    : "MoonPortal bloqueado: este roteiro ainda nao automatiza E02-E06 exigidos pelo portal.");
                 Check("CT-008", false, "Skipped because CT-007 did not reach DominioLua.");
                 Check("CT-009", false, "Skipped because CT-007 did not reach DominioLua.");
                 yield break;
@@ -371,16 +395,31 @@ namespace MementoMori.Verification
 
         private static void AdvanceDialogueIfOpen()
         {
+            if (AnswerOpenChoice()) return;
             if (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen)
                 DialogueManager.Instance.Advance();
+        }
+
+        // V6.1 narrative choices block flags until answered; the runner takes the first option,
+        // exactly as pressing 1 would.
+        private static bool AnswerOpenChoice()
+        {
+            if (!V61ChoicePresenter.IsOpen) return false;
+            const System.Reflection.BindingFlags Hidden = System.Reflection.BindingFlags.NonPublic;
+            var active = typeof(V61ChoicePresenter).GetField("active", Hidden | System.Reflection.BindingFlags.Static)?.GetValue(null);
+            typeof(V61ChoicePresenter).GetMethod("Choose", Hidden | System.Reflection.BindingFlags.Instance)?.Invoke(active, new object[] { 0 });
+            return true;
         }
 
         private static IEnumerator CompleteOpenDialogue(float timeout = 10f)
         {
             var deadline = Time.realtimeSinceStartup + timeout;
-            while (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen && Time.realtimeSinceStartup < deadline)
+            var settled = 0;
+            while (settled < 3 && Time.realtimeSinceStartup < deadline)
             {
-                DialogueManager.Instance.Advance();
+                var busy = V61ChoicePresenter.IsOpen || DialogueManager.Instance != null && DialogueManager.Instance.IsOpen;
+                settled = busy ? 0 : settled + 1;
+                if (busy) AdvanceDialogueIfOpen();
                 yield return null;
             }
         }

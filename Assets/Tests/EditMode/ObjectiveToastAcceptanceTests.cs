@@ -60,6 +60,30 @@ namespace MementoMori.Tests.EditMode
         }
 
         [Test]
+        public void LabyrinthObjectiveFollowsV61OrderAndNeverAsksToFollowHiddenPoe()
+        {
+            string Next() => ObjectiveToastController.ObjectiveFor("Labirinto", state);
+            Assert.That(Next(), Is.EqualTo("Siga as vozes nos Corredores dos Ecos."));
+            Assert.That(Next(), Does.Not.Contain("Poe"));
+            state.SetFlag(StoryFlag.EchoTrial03Complete);
+            Assert.That(Next(), Is.EqualTo("Deixe os Corredores dos Ecos."));
+            state.SetFlag(StoryFlag.PoeRevealed);
+            Assert.That(Next(), Is.EqualTo("Investigue a porta que devolve."));
+            state.SetFlag(StoryFlag.FalseDoorTriggered);
+            Assert.That(Next(), Is.EqualTo("Repare no que mudou na porta."));
+            state.Puzzles.MarkSolved("lab.false_door");
+            Assert.That(Next(), Is.EqualTo("Escute o Poço das Vozes."));
+            state.SetFlag(StoryFlag.VoiceWellComplete);
+            Assert.That(Next(), Is.EqualTo("Faça as sombras convergirem no Pátio sem Céu."));
+            state.Puzzles.MarkSolved("lab.skyless_courtyard");
+            Assert.That(Next(), Is.EqualTo("Abra o Núcleo Central."));
+            state.Puzzles.MarkSolved("lab.core");
+            Assert.That(Next(), Is.EqualTo("Leve as marcas ao Santuário da Lua."));
+            state.SetFlag(StoryFlag.MoonDomainUnlocked);
+            Assert.That(Next(), Is.EqualTo("Atravesse o portal da Lua."));
+        }
+
+        [Test]
         public void ObjectiveDoesNotBlockGameplay()
         {
             var canvas = root.GetComponentInChildren<CanvasGroup>();

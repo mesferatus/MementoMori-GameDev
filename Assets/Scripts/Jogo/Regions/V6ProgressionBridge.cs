@@ -11,7 +11,7 @@ namespace MementoMori.Regions
             if(gameObject.scene.name!="DominioLua" || state==null || !state.PoeRevealed)return;
             var player=FindAnyObjectByType<MementoMori.Player.PlayerController>();
             var poe=FindAnyObjectByType<MementoMori.Poe.PoeFollower>(FindObjectsInactive.Include);
-            var floor=GameObject.Find("LuizaOriginalGeometry/Grid/Ground_Original_3384");
+            var floor=GameObject.Find("NavigationFloor_Grid/NavigationFloor");
             if(player==null || poe==null)return;
             poe.gameObject.SetActive(true);
             poe.Configure(player.transform,3f,1.2f);

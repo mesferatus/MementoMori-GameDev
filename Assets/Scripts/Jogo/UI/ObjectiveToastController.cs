@@ -54,7 +54,10 @@ namespace MementoMori.UI
         private void Start()
         {
             if (GameState.Instance != null)
+            {
                 GameState.Instance.OnFlagChanged += OnFlagChanged;
+                GameState.Instance.Puzzles.PuzzleSolved += OnPuzzleSolved;
+            }
             SceneManager.sceneLoaded += OnSceneLoaded;
             EvaluateForScene(SceneManager.GetActiveScene().name);
         }
@@ -62,7 +65,10 @@ namespace MementoMori.UI
         private void OnDestroy()
         {
             if (GameState.Instance != null)
+            {
                 GameState.Instance.OnFlagChanged -= OnFlagChanged;
+                GameState.Instance.Puzzles.PuzzleSolved -= OnPuzzleSolved;
+            }
             SceneManager.sceneLoaded -= OnSceneLoaded;
             if (Instance == this) Instance = null;
         }
@@ -121,7 +127,8 @@ namespace MementoMori.UI
                 var panel = objectiveTextTmp.transform.parent as RectTransform;
                 if (panel != null && panel.name == "ObjectivePanel")
                 {
-                    panel.anchoredPosition = new Vector2(-38f, -38f);
+                    // Sits inside the gothic HUD frame (top rule ~100 px, side rule ~63 px at 1080p).
+                    panel.anchoredPosition = new Vector2(-84f, -70f);
                     panel.sizeDelta = new Vector2(650f, 260f);
                     var title = panel.Find("Title_TMP") as RectTransform;
                     if (title != null)
@@ -158,7 +165,7 @@ namespace MementoMori.UI
                     if (!state.HasFlag(StoryFlag.RoomGrimoireRead)) return "Consulte o grimório.";
                     return "Recomponha o ritual.";
                 case "Labirinto":
-                    return state.HasFlag(StoryFlag.PoeRevealed) ? "Encontre uma saída / portal." : "Siga Poe.";
+                    return LabyrinthObjective(state);
                 case "DominioLua":
                     if (state.HasFlag(StoryFlag.FragmentCollected)) return null;
                     if (state.HasFlag(StoryFlag.SigilPuzzleComplete)) return "Colete o fragmento.";
@@ -168,6 +175,24 @@ namespace MementoMori.UI
                 default:
                     return null;
             }
+        }
+
+        /// <summary>
+        /// V6.1 order (L08: "Ecos, a porta, as vozes, as sombras... o Núcleo"): always the first unsolved
+        /// challenge. Never mentions Poe before C_POE and never names the Moon before the Core opens.
+        /// </summary>
+        public static string LabyrinthObjective(GameState state)
+        {
+            bool Solved(string id) => state.Puzzles.GetSolved(id);
+            if (!state.HasFlag(StoryFlag.EchoTrial03Complete) && !Solved("lab.echoes")) return "Siga as vozes nos Corredores dos Ecos.";
+            if (!state.HasFlag(StoryFlag.PoeRevealed)) return "Deixe os Corredores dos Ecos.";
+            if (!Solved("lab.false_door") && !state.HasFlag(StoryFlag.FalseDoorTriggered)) return "Investigue a porta que devolve.";
+            if (!Solved("lab.false_door")) return "Repare no que mudou na porta.";
+            if (!Solved("lab.voice_well") && !state.HasFlag(StoryFlag.VoiceWellComplete)) return "Escute o Poço das Vozes.";
+            if (!Solved("lab.skyless_courtyard")) return "Faça as sombras convergirem no Pátio sem Céu.";
+            if (!Solved("lab.core")) return "Abra o Núcleo Central.";
+            if (!Solved("lab.moon_activation") && !state.HasFlag(StoryFlag.MoonDomainUnlocked)) return "Leve as marcas ao Santuário da Lua.";
+            return "Atravesse o portal da Lua.";
         }
 
         private static bool HasRoomExploration(GameState state)
@@ -189,6 +214,8 @@ namespace MementoMori.UI
         {
             EvaluateForScene(SceneManager.GetActiveScene().name);
         }
+
+        private void OnPuzzleSolved(string id) => EvaluateForScene(SceneManager.GetActiveScene().name);
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
