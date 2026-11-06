@@ -864,8 +864,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 620, y: 190}
+  m_AnchoredPosition: {x: 0, y: -22}
+  m_SizeDelta: {x: 460, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146876027
 MonoBehaviour:
@@ -887,8 +887,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Memento Mori Beta\n\nDesenvolvimento, narrativa e dire\xE7\xE3o visual\nCallisto
-    / Monespira"
+  m_text: "<size=16><color=#B9A2D5>ARTE, ORGANIZA\xC7\xC3O VISUAL E COLLIDERS</color></size>\n<size=30>Luiza
+    Canova</size>\n\n<size=16><color=#B9A2D5>PROGRAMA\xC7\xC3O, SHADERS E \xC1UDIO</color></size>\n<size=28>Callisto
+    Monteiro Mascoloti</size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e3e63e1708a2964b9ce8d30d631bca0, type: 2}
   m_sharedMaterial: {fileID: -7612916187286525318, guid: 9e3e63e1708a2964b9ce8d30d631bca0, type: 2}
@@ -915,8 +916,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -928,7 +929,7 @@ MonoBehaviour:
   m_characterSpacing: 1
   m_characterHorizontalScale: 1
   m_wordSpacing: 2
-  m_lineSpacing: 7
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2317,6 +2318,8 @@ GameObject:
   m_Component:
   - component: {fileID: 894558796}
   - component: {fileID: 894558795}
+  - component: {fileID: 894558798}
+  - component: {fileID: 894558797}
   m_Layer: 0
   m_Name: Credits
   m_TagString: Untagged
@@ -2357,6 +2360,44 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &894558797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894558794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.012, g: 0.007, b: 0.026, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &894558798
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894558794}
+  m_CullTransparentMesh: 1
 --- !u!1 &950765325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3700,8 +3741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 182}
-  m_SizeDelta: {x: 420, y: 70}
+  m_AnchoredPosition: {x: 0, y: 122}
+  m_SizeDelta: {x: 360, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565967186
 MonoBehaviour:
@@ -5111,7 +5152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -210}
   m_SizeDelta: {x: 500, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037912258

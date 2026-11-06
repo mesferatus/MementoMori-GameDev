@@ -1,0 +1,6487 @@
+fileFormatVersion: 2
+guid: 8fe7ec084365d76459f4ce25ff35c1b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6571136601725931663
+    second: L03_MacicoLabirinto_0
+  - first:
+      213: 8768976242303548594
+    second: L03_MacicoLabirinto_1
+  - first:
+      213: -1912885762364703815
+    second: L03_MacicoLabirinto_2
+  - first:
+      213: -1874658060941074557
+    second: L03_MacicoLabirinto_3
+  - first:
+      213: -4668048053042793133
+    second: L03_MacicoLabirinto_4
+  - first:
+      213: -5053304881525632240
+    second: L03_MacicoLabirinto_5
+  - first:
+      213: 7630742275690730513
+    second: L03_MacicoLabirinto_6
+  - first:
+      213: -5576326207369969328
+    second: L03_MacicoLabirinto_7
+  - first:
+      213: 744311213244939796
+    second: L03_MacicoLabirinto_8
+  - first:
+      213: -2524507400815934407
+    second: L03_MacicoLabirinto_9
+  - first:
+      213: -3936053314548428738
+    second: L03_MacicoLabirinto_10
+  - first:
+      213: 4531561738747448556
+    second: L03_MacicoLabirinto_11
+  - first:
+      213: 2247005904607257929
+    second: L03_MacicoLabirinto_12
+  - first:
+      213: 2760748191449213542
+    second: L03_MacicoLabirinto_13
+  - first:
+      213: -463288835947226791
+    second: L03_MacicoLabirinto_14
+  - first:
+      213: -2573166028390971529
+    second: L03_MacicoLabirinto_15
+  - first:
+      213: -2083778682555606017
+    second: L03_MacicoLabirinto_16
+  - first:
+      213: -1514430427503132523
+    second: L03_MacicoLabirinto_17
+  - first:
+      213: -8388543797605581616
+    second: L03_MacicoLabirinto_18
+  - first:
+      213: -1713851976628810651
+    second: L03_MacicoLabirinto_19
+  - first:
+      213: 8919308127944863597
+    second: L03_MacicoLabirinto_20
+  - first:
+      213: -1662711549057903894
+    second: L03_MacicoLabirinto_21
+  - first:
+      213: 2305641828140118737
+    second: L03_MacicoLabirinto_22
+  - first:
+      213: 7963906216673368064
+    second: L03_MacicoLabirinto_23
+  - first:
+      213: -7147582662158976690
+    second: L03_MacicoLabirinto_24
+  - first:
+      213: -4468802696886895833
+    second: L03_MacicoLabirinto_25
+  - first:
+      213: -3447757216556917956
+    second: L03_MacicoLabirinto_26
+  - first:
+      213: 4648440824861794883
+    second: L03_MacicoLabirinto_27
+  - first:
+      213: 3635166492418531220
+    second: L03_MacicoLabirinto_28
+  - first:
+      213: -6024855488284569573
+    second: L03_MacicoLabirinto_29
+  - first:
+      213: 4121765112862342641
+    second: L03_MacicoLabirinto_30
+  - first:
+      213: 9178902361077589547
+    second: L03_MacicoLabirinto_31
+  - first:
+      213: -2269914671612680382
+    second: L03_MacicoLabirinto_32
+  - first:
+      213: -6705388356231717624
+    second: L03_MacicoLabirinto_33
+  - first:
+      213: 1556411812517059085
+    second: L03_MacicoLabirinto_34
+  - first:
+      213: -1216339466400937644
+    second: L03_MacicoLabirinto_35
+  - first:
+      213: 7449112561094912373
+    second: L03_MacicoLabirinto_36
+  - first:
+      213: 8126180926199796944
+    second: L03_MacicoLabirinto_37
+  - first:
+      213: 87612717654734651
+    second: L03_MacicoLabirinto_38
+  - first:
+      213: 5602770222634561550
+    second: L03_MacicoLabirinto_39
+  - first:
+      213: -2010688134869486424
+    second: L03_MacicoLabirinto_40
+  - first:
+      213: -4104660507092730619
+    second: L03_MacicoLabirinto_41
+  - first:
+      213: -4196959873316306342
+    second: L03_MacicoLabirinto_42
+  - first:
+      213: 5138200284316152132
+    second: L03_MacicoLabirinto_43
+  - first:
+      213: -21968947193723589
+    second: L03_MacicoLabirinto_44
+  - first:
+      213: -7102575057960728920
+    second: L03_MacicoLabirinto_45
+  - first:
+      213: -6408587535137734474
+    second: L03_MacicoLabirinto_46
+  - first:
+      213: -1661068294796555161
+    second: L03_MacicoLabirinto_47
+  - first:
+      213: 8699148087974323568
+    second: L03_MacicoLabirinto_48
+  - first:
+      213: -8004568446744509565
+    second: L03_MacicoLabirinto_49
+  - first:
+      213: 1899911967421732818
+    second: L03_MacicoLabirinto_50
+  - first:
+      213: 428658650017392388
+    second: L03_MacicoLabirinto_51
+  - first:
+      213: -6937218095150069778
+    second: L03_MacicoLabirinto_52
+  - first:
+      213: 2180470529228777373
+    second: L03_MacicoLabirinto_53
+  - first:
+      213: -524454867396000466
+    second: L03_MacicoLabirinto_54
+  - first:
+      213: -6236288383879036567
+    second: L03_MacicoLabirinto_55
+  - first:
+      213: 4594327294006027681
+    second: L03_MacicoLabirinto_56
+  - first:
+      213: 2701505503800903123
+    second: L03_MacicoLabirinto_57
+  - first:
+      213: -3844975896870593564
+    second: L03_MacicoLabirinto_58
+  - first:
+      213: -5669108199411919749
+    second: L03_MacicoLabirinto_59
+  - first:
+      213: 7897166659771580728
+    second: L03_MacicoLabirinto_60
+  - first:
+      213: 4891008429674909130
+    second: L03_MacicoLabirinto_61
+  - first:
+      213: 5311412928796981941
+    second: L03_MacicoLabirinto_62
+  - first:
+      213: 1116537295945863710
+    second: L03_MacicoLabirinto_63
+  - first:
+      213: -5939583416900861150
+    second: L03_MacicoLabirinto_64
+  - first:
+      213: -4667027572066726489
+    second: L03_MacicoLabirinto_65
+  - first:
+      213: 3478075408455437831
+    second: L03_MacicoLabirinto_66
+  - first:
+      213: 749338233501625888
+    second: L03_MacicoLabirinto_67
+  - first:
+      213: -4581893665150362304
+    second: L03_MacicoLabirinto_68
+  - first:
+      213: -2740659270545325051
+    second: L03_MacicoLabirinto_69
+  - first:
+      213: 5099361568806077628
+    second: L03_MacicoLabirinto_70
+  - first:
+      213: -5151021775636594207
+    second: L03_MacicoLabirinto_71
+  - first:
+      213: -1316468999933930360
+    second: L03_MacicoLabirinto_72
+  - first:
+      213: -6174792436119886400
+    second: L03_MacicoLabirinto_73
+  - first:
+      213: 8846603256086065512
+    second: L03_MacicoLabirinto_74
+  - first:
+      213: 87188559478981439
+    second: L03_MacicoLabirinto_75
+  - first:
+      213: -6895401476388189265
+    second: L03_MacicoLabirinto_76
+  - first:
+      213: 8229653430093869837
+    second: L03_MacicoLabirinto_77
+  - first:
+      213: 8497401263345676050
+    second: L03_MacicoLabirinto_78
+  - first:
+      213: 4372502179116091939
+    second: L03_MacicoLabirinto_79
+  - first:
+      213: -9142530330484260574
+    second: L03_MacicoLabirinto_80
+  - first:
+      213: 250593094128748522
+    second: L03_MacicoLabirinto_81
+  - first:
+      213: 7359928528274668761
+    second: L03_MacicoLabirinto_82
+  - first:
+      213: 6351802102974375628
+    second: L03_MacicoLabirinto_83
+  - first:
+      213: 8969803221900338211
+    second: L03_MacicoLabirinto_84
+  - first:
+      213: 5406327748762203813
+    second: L03_MacicoLabirinto_85
+  - first:
+      213: 3030558157208045544
+    second: L03_MacicoLabirinto_86
+  - first:
+      213: 3076162601015558026
+    second: L03_MacicoLabirinto_87
+  - first:
+      213: -5997472609297248467
+    second: L03_MacicoLabirinto_88
+  - first:
+      213: 8288500844735555103
+    second: L03_MacicoLabirinto_89
+  - first:
+      213: 6096804328599108724
+    second: L03_MacicoLabirinto_90
+  - first:
+      213: 4376780470852495152
+    second: L03_MacicoLabirinto_91
+  - first:
+      213: -1969030476776750591
+    second: L03_MacicoLabirinto_92
+  - first:
+      213: 1706008288885430773
+    second: L03_MacicoLabirinto_93
+  - first:
+      213: 8509613217223076214
+    second: L03_MacicoLabirinto_94
+  - first:
+      213: -947880907064696613
+    second: L03_MacicoLabirinto_95
+  - first:
+      213: -2665496000455846799
+    second: L03_MacicoLabirinto_96
+  - first:
+      213: -4105374149112080723
+    second: L03_MacicoLabirinto_97
+  - first:
+      213: -2987917802035131968
+    second: L03_MacicoLabirinto_98
+  - first:
+      213: -7760968963812948707
+    second: L03_MacicoLabirinto_99
+  - first:
+      213: -8776947190733483536
+    second: L03_MacicoLabirinto_100
+  - first:
+      213: -2730229475393986691
+    second: L03_MacicoLabirinto_101
+  - first:
+      213: 8543818483962591429
+    second: L03_MacicoLabirinto_102
+  - first:
+      213: 4743792588870215682
+    second: L03_MacicoLabirinto_103
+  - first:
+      213: -2327178164244098558
+    second: L03_MacicoLabirinto_104
+  - first:
+      213: -3886507687691214832
+    second: L03_MacicoLabirinto_105
+  - first:
+      213: 1870877222931893339
+    second: L03_MacicoLabirinto_106
+  - first:
+      213: -1617044635637508147
+    second: L03_MacicoLabirinto_107
+  - first:
+      213: -2511996493806094517
+    second: L03_MacicoLabirinto_108
+  - first:
+      213: 4713842955779498511
+    second: L03_MacicoLabirinto_109
+  - first:
+      213: -8793104777205148591
+    second: L03_MacicoLabirinto_110
+  - first:
+      213: -7583634603288627246
+    second: L03_MacicoLabirinto_111
+  - first:
+      213: 6787881462177683972
+    second: L03_MacicoLabirinto_112
+  - first:
+      213: 3402062398198640077
+    second: L03_MacicoLabirinto_113
+  - first:
+      213: -1793826934738652934
+    second: L03_MacicoLabirinto_114
+  - first:
+      213: 4219123858936064396
+    second: L03_MacicoLabirinto_115
+  - first:
+      213: -2717351297779454961
+    second: L03_MacicoLabirinto_116
+  - first:
+      213: -8916063977200220401
+    second: L03_MacicoLabirinto_117
+  - first:
+      213: 1628887387876571434
+    second: L03_MacicoLabirinto_118
+  - first:
+      213: -5850100413973975883
+    second: L03_MacicoLabirinto_119
+  - first:
+      213: 3633293622321724191
+    second: L03_MacicoLabirinto_120
+  - first:
+      213: -2811283511937723791
+    second: L03_MacicoLabirinto_121
+  - first:
+      213: -7293649510514465552
+    second: L03_MacicoLabirinto_122
+  - first:
+      213: -5967904890649528968
+    second: L03_MacicoLabirinto_123
+  - first:
+      213: -4773992975615033888
+    second: L03_MacicoLabirinto_124
+  - first:
+      213: 1657977052404850379
+    second: L03_MacicoLabirinto_125
+  - first:
+      213: 3135877633238567736
+    second: L03_MacicoLabirinto_126
+  - first:
+      213: 7659765662980227077
+    second: L03_MacicoLabirinto_127
+  - first:
+      213: 1671649708193466692
+    second: L03_MacicoLabirinto_128
+  - first:
+      213: 7773235603031875525
+    second: L03_MacicoLabirinto_129
+  - first:
+      213: 3042670982982455640
+    second: L03_MacicoLabirinto_130
+  - first:
+      213: -4268488923547582946
+    second: L03_MacicoLabirinto_131
+  - first:
+      213: 8119845835146885970
+    second: L03_MacicoLabirinto_132
+  - first:
+      213: 416996290857563891
+    second: L03_MacicoLabirinto_133
+  - first:
+      213: -297309302822132802
+    second: L03_MacicoLabirinto_134
+  - first:
+      213: 6114342351070689515
+    second: L03_MacicoLabirinto_135
+  - first:
+      213: -4264862340345075895
+    second: L03_MacicoLabirinto_136
+  - first:
+      213: 1483675241822488282
+    second: L03_MacicoLabirinto_137
+  - first:
+      213: -7192857258170915782
+    second: L03_MacicoLabirinto_138
+  - first:
+      213: 1632169595340005576
+    second: L03_MacicoLabirinto_139
+  - first:
+      213: -250082645033620555
+    second: L03_MacicoLabirinto_140
+  - first:
+      213: -2346731281381261519
+    second: L03_MacicoLabirinto_141
+  - first:
+      213: -1933878734333396931
+    second: L03_MacicoLabirinto_142
+  - first:
+      213: -2691650448716282784
+    second: L03_MacicoLabirinto_143
+  - first:
+      213: -7091233271886564924
+    second: L03_MacicoLabirinto_144
+  - first:
+      213: -8808474881615947447
+    second: L03_MacicoLabirinto_145
+  - first:
+      213: -1982783008305067192
+    second: L03_MacicoLabirinto_146
+  - first:
+      213: 5884875679034771416
+    second: L03_MacicoLabirinto_147
+  - first:
+      213: 8014856208428508085
+    second: L03_MacicoLabirinto_148
+  - first:
+      213: 863328647987675165
+    second: L03_MacicoLabirinto_149
+  - first:
+      213: -6529129170100752261
+    second: L03_MacicoLabirinto_150
+  - first:
+      213: 1184681244201057264
+    second: L03_MacicoLabirinto_151
+  - first:
+      213: 3441991340688337993
+    second: L03_MacicoLabirinto_152
+  - first:
+      213: -8427443538508977574
+    second: L03_MacicoLabirinto_153
+  - first:
+      213: -5026914412662537118
+    second: L03_MacicoLabirinto_154
+  - first:
+      213: 3758915315080943565
+    second: L03_MacicoLabirinto_155
+  - first:
+      213: 9043146818448967215
+    second: L03_MacicoLabirinto_156
+  - first:
+      213: -8556078595734529676
+    second: L03_MacicoLabirinto_157
+  - first:
+      213: -8635106762947182062
+    second: L03_MacicoLabirinto_158
+  - first:
+      213: 4363190825418495110
+    second: L03_MacicoLabirinto_159
+  - first:
+      213: -7572916500503743249
+    second: L03_MacicoLabirinto_160
+  - first:
+      213: -3813188726111108233
+    second: L03_MacicoLabirinto_161
+  - first:
+      213: 4441053541363735493
+    second: L03_MacicoLabirinto_162
+  - first:
+      213: 5555292384246149646
+    second: L03_MacicoLabirinto_163
+  - first:
+      213: 586990745171849017
+    second: L03_MacicoLabirinto_164
+  - first:
+      213: -7931060808197840252
+    second: L03_MacicoLabirinto_165
+  - first:
+      213: -2193827953872569719
+    second: L03_MacicoLabirinto_166
+  - first:
+      213: -1768972714707102377
+    second: L03_MacicoLabirinto_167
+  - first:
+      213: 290129612793958462
+    second: L03_MacicoLabirinto_168
+  - first:
+      213: -4315500447438474816
+    second: L03_MacicoLabirinto_169
+  - first:
+      213: 6419088447589550087
+    second: L03_MacicoLabirinto_170
+  - first:
+      213: 458913446406003532
+    second: L03_MacicoLabirinto_171
+  - first:
+      213: -1591012257459215125
+    second: L03_MacicoLabirinto_172
+  - first:
+      213: -1994646211083641099
+    second: L03_MacicoLabirinto_173
+  - first:
+      213: 4281238843337631249
+    second: L03_MacicoLabirinto_174
+  - first:
+      213: 3377036277249192996
+    second: L03_MacicoLabirinto_175
+  - first:
+      213: -6968440914598387004
+    second: L03_MacicoLabirinto_176
+  - first:
+      213: -3946055441542976669
+    second: L03_MacicoLabirinto_177
+  - first:
+      213: 7486241622489868595
+    second: L03_MacicoLabirinto_178
+  - first:
+      213: 5228430380654521388
+    second: L03_MacicoLabirinto_179
+  - first:
+      213: -8242218451465182523
+    second: L03_MacicoLabirinto_180
+  - first:
+      213: -5995192588258325015
+    second: L03_MacicoLabirinto_181
+  - first:
+      213: 4289027723969370498
+    second: L03_MacicoLabirinto_182
+  - first:
+      213: 4049018425658773571
+    second: L03_MacicoLabirinto_183
+  - first:
+      213: 6576490033545792853
+    second: L03_MacicoLabirinto_184
+  - first:
+      213: 955253260747022541
+    second: L03_MacicoLabirinto_185
+  - first:
+      213: 1617135996780609015
+    second: L03_MacicoLabirinto_186
+  - first:
+      213: -4092401962954531543
+    second: L03_MacicoLabirinto_187
+  - first:
+      213: -8031238588520914403
+    second: L03_MacicoLabirinto_188
+  - first:
+      213: -7021455765271081307
+    second: L03_MacicoLabirinto_189
+  - first:
+      213: 305891740193753946
+    second: L03_MacicoLabirinto_190
+  - first:
+      213: 3324906354023851374
+    second: L03_MacicoLabirinto_191
+  - first:
+      213: 3038240851064852141
+    second: L03_MacicoLabirinto_192
+  - first:
+      213: 7741037480181790771
+    second: L03_MacicoLabirinto_193
+  - first:
+      213: 2168362083935661574
+    second: L03_MacicoLabirinto_194
+  - first:
+      213: -3328210309035218369
+    second: L03_MacicoLabirinto_195
+  - first:
+      213: 5396329470827232243
+    second: L03_MacicoLabirinto_196
+  - first:
+      213: 3216530464291392217
+    second: L03_MacicoLabirinto_197
+  - first:
+      213: -4202194159359998923
+    second: L03_MacicoLabirinto_198
+  - first:
+      213: 5756591539826425594
+    second: L03_MacicoLabirinto_199
+  - first:
+      213: 99230577584600538
+    second: L03_MacicoLabirinto_200
+  - first:
+      213: -4768594084191249830
+    second: L03_MacicoLabirinto_201
+  - first:
+      213: -7650416874620527886
+    second: L03_MacicoLabirinto_202
+  - first:
+      213: -7439976189910812344
+    second: L03_MacicoLabirinto_203
+  - first:
+      213: -2642727004318399404
+    second: L03_MacicoLabirinto_204
+  - first:
+      213: -5225846441936334940
+    second: L03_MacicoLabirinto_205
+  - first:
+      213: 4620276258070065686
+    second: L03_MacicoLabirinto_206
+  - first:
+      213: -1271302921444162630
+    second: L03_MacicoLabirinto_207
+  - first:
+      213: -5692532461135843455
+    second: L03_MacicoLabirinto_208
+  - first:
+      213: 3261519232210189679
+    second: L03_MacicoLabirinto_209
+  - first:
+      213: 2704612251225455787
+    second: L03_MacicoLabirinto_210
+  - first:
+      213: -2418230915414323172
+    second: L03_MacicoLabirinto_211
+  - first:
+      213: 8539702519562190699
+    second: L03_MacicoLabirinto_212
+  - first:
+      213: 4114592384849322034
+    second: L03_MacicoLabirinto_213
+  - first:
+      213: 45798288597758451
+    second: L03_MacicoLabirinto_214
+  - first:
+      213: 8401740475275535530
+    second: L03_MacicoLabirinto_215
+  - first:
+      213: -7120449468364291228
+    second: L03_MacicoLabirinto_216
+  - first:
+      213: -3598515851213561528
+    second: L03_MacicoLabirinto_217
+  - first:
+      213: -8916329439258677094
+    second: L03_MacicoLabirinto_218
+  - first:
+      213: 6693199806606072340
+    second: L03_MacicoLabirinto_219
+  - first:
+      213: 2869045444412294503
+    second: L03_MacicoLabirinto_220
+  - first:
+      213: -7732354104299618042
+    second: L03_MacicoLabirinto_221
+  - first:
+      213: -4088699811085936364
+    second: L03_MacicoLabirinto_222
+  - first:
+      213: -1060815084848633449
+    second: L03_MacicoLabirinto_223
+  - first:
+      213: 1681599496935833851
+    second: L03_MacicoLabirinto_224
+  - first:
+      213: -8381593304981657320
+    second: L03_MacicoLabirinto_225
+  - first:
+      213: 9012488636501426235
+    second: L03_MacicoLabirinto_226
+  - first:
+      213: 875759779928796488
+    second: L03_MacicoLabirinto_227
+  - first:
+      213: 4233317704906511981
+    second: L03_MacicoLabirinto_228
+  - first:
+      213: -5773854731676353270
+    second: L03_MacicoLabirinto_229
+  - first:
+      213: 6290638955312582069
+    second: L03_MacicoLabirinto_230
+  - first:
+      213: -7690092002292211458
+    second: L03_MacicoLabirinto_231
+  - first:
+      213: 5768716128979271114
+    second: L03_MacicoLabirinto_232
+  - first:
+      213: -3052649710598449732
+    second: L03_MacicoLabirinto_233
+  - first:
+      213: -8505644233051227662
+    second: L03_MacicoLabirinto_234
+  - first:
+      213: 4221001133723759730
+    second: L03_MacicoLabirinto_235
+  - first:
+      213: 7319463778012157195
+    second: L03_MacicoLabirinto_236
+  - first:
+      213: 530948237931510016
+    second: L03_MacicoLabirinto_237
+  - first:
+      213: -5799518529014669544
+    second: L03_MacicoLabirinto_238
+  - first:
+      213: -3567356055940950142
+    second: L03_MacicoLabirinto_239
+  - first:
+      213: 8491681775792137518
+    second: L03_MacicoLabirinto_240
+  - first:
+      213: 51278613017049533
+    second: L03_MacicoLabirinto_241
+  - first:
+      213: -5545388342795847546
+    second: L03_MacicoLabirinto_242
+  - first:
+      213: -2127718046390404016
+    second: L03_MacicoLabirinto_243
+  - first:
+      213: -8012755748789395841
+    second: L03_MacicoLabirinto_244
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 6
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 23
+        width: 696
+        height: 1062
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fee8b7312aec4a0800000000000000
+      internalID: -6571136601725931663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1063
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bcb75eae69a1b970800000000000000
+      internalID: 8768976242303548594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1036
+        width: 55
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb7956b8801475e0800000000000000
+      internalID: -1912885762364703815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_3
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1065
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38fd84a0d60ebf5e0800000000000000
+      internalID: -1874658060941074557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_4
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1053
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3553ee33703c73fb0800000000000000
+      internalID: -4668048053042793133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_5
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1066
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013daeadbfd0fd9b0800000000000000
+      internalID: -5053304881525632240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1071
+        width: 43
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1141a1b9ba7d5e960800000000000000
+      internalID: 7630742275690730513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_7
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1053
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051030aebd8ec92b0800000000000000
+      internalID: -5576326207369969328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_8
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 669
+        width: 682
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41efdcbda13545a00800000000000000
+      internalID: 744311213244939796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_9
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1025
+        width: 11
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9348585f4e527fcd0800000000000000
+      internalID: -2524507400815934407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_10
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1073
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3097515d545069c0800000000000000
+      internalID: -3936053314548428738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_11
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1054
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec0bc3646753ee30800000000000000
+      internalID: 4531561738747448556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_12
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 999
+        width: 15
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945225017f7fe2f10800000000000000
+      internalID: 2247005904607257929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_13
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1018
+        width: 14
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ae1a16ad5205620800000000000000
+      internalID: 2760748191449213542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_14
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1060
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95916f022411299f0800000000000000
+      internalID: -463288835947226791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_15
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 961
+        width: 16
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77747a161274a4cd0800000000000000
+      internalID: -2573166028390971529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_16
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1046
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbddbb145ee413e0800000000000000
+      internalID: -2083778682555606017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_17
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 1041
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59002abcc89abfae0800000000000000
+      internalID: -1514430427503132523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_18
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1000
+        width: 12
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcb9e84cd7e59b80800000000000000
+      internalID: -8388543797605581616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_19
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1057
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c407725bc2738e0800000000000000
+      internalID: -1713851976628810651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_20
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1057
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f68606c7fb7cb70800000000000000
+      internalID: 8919308127944863597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1035
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2d672d7acdce8e0800000000000000
+      internalID: -1662711549057903894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_22
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1031
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2f291e6094fff10800000000000000
+      internalID: 2305641828140118737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_23
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 999
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008575d628a758e60800000000000000
+      internalID: 7963906216673368064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_24
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 969
+        width: 20
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49f543307faecc90800000000000000
+      internalID: -7147582662158976690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_25
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 960
+        width: 26
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72bbfb8bf9f9bf1c0800000000000000
+      internalID: -4468802696886895833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_26
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 973
+        width: 16
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bd55b141b1720d0800000000000000
+      internalID: -3447757216556917956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_27
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1018
+        width: 6
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342af4d3d44928040800000000000000
+      internalID: 4648440824861794883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_28
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1026
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f52083aa4b27230800000000000000
+      internalID: 3635166492418531220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_29
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1040
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b105cbdbad9636ca0800000000000000
+      internalID: -6024855488284569573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_30
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1029
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdf1c73883733930800000000000000
+      internalID: 4121765112862342641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_31
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1044
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b262604c013026f70800000000000000
+      internalID: 9178902361077589547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_32
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 845
+        width: 19
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2472418f1a4af70e0800000000000000
+      internalID: -2269914671612680382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_33
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 847
+        width: 70
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d94c111dca1f2a0800000000000000
+      internalID: -6705388356231717624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_34
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 982
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a1d491c4c799510800000000000000
+      internalID: 1556411812517059085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_35
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 969
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45942e223b1be1fe0800000000000000
+      internalID: -1216339466400937644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_36
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 978
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57966ff3860906760800000000000000
+      internalID: 7449112561094912373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_37
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 918
+        width: 21
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d491be7f7ef5c070800000000000000
+      internalID: 8126180926199796944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_38
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 973
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37fd917d43473100800000000000000
+      internalID: 87612717654734651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_39
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 916
+        width: 87
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00f44e25d901cd40800000000000000
+      internalID: 5602770222634561550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_40
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 950
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4f20f5bc99814e0800000000000000
+      internalID: -2010688134869486424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 937
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50db92724015907c0800000000000000
+      internalID: -4104660507092730619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_42
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 933
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52c96e4b3761c5c0800000000000000
+      internalID: -4196959873316306342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_43
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 936
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441b97b6fed8e4740800000000000000
+      internalID: 5138200284316152132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_44
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 927
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35cd62eb53f1bff0800000000000000
+      internalID: -21968947193723589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_45
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 926
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a683b7ad959e6d90800000000000000
+      internalID: -7102575057960728920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_46
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 902
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b08e18479f1017a0800000000000000
+      internalID: -6408587535137734474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_47
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 902
+        width: 77
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76cccf4cf23b2f8e0800000000000000
+      internalID: -1661068294796555161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_48
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 903
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0756a30981599b870800000000000000
+      internalID: 8699148087974323568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_49
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 897
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3834e7f586f0ae090800000000000000
+      internalID: -8004568446744509565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_50
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 765
+        width: 25
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d79fa24ed7dd5a10800000000000000
+      internalID: 1899911967421732818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_51
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 832
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4076f2465c6e2f500800000000000000
+      internalID: 428658650017392388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_52
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 832
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee70b2db5ec0abf90800000000000000
+      internalID: -6937218095150069778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_53
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 820
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97a3e9c466924e10800000000000000
+      internalID: 2180470529228777373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_54
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 809
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e250328a313c8b8f0800000000000000
+      internalID: -524454867396000466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_55
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 730
+        width: 74
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961cef191c04479a0800000000000000
+      internalID: -6236288383879036567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_56
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 765
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a56c15055452cf30800000000000000
+      internalID: 4594327294006027681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_57
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 675
+        width: 45
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5c0d841fcad7520800000000000000
+      internalID: 2701505503800903123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_58
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 734
+        width: 19
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebd6191bc6e3aac0800000000000000
+      internalID: -3844975896870593564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_59
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 804
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b745cccf0284351b0800000000000000
+      internalID: -5669108199411919749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_60
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 794
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8314ebf6c3f589d60800000000000000
+      internalID: 7897166659771580728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_61
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 794
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdc63cc04a50e340800000000000000
+      internalID: 4891008429674909130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_62
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 784
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba7c5ceaede5b940800000000000000
+      internalID: 5311412928796981941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_63
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 793
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12145741ccbe7f00800000000000000
+      internalID: 1116537295945863710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_64
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 784
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223c2d10a5c529da0800000000000000
+      internalID: -5939583416900861150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_65
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 794
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad420276236b3fb0800000000000000
+      internalID: -4667027572066726489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_66
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 776
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e0207082b944030800000000000000
+      internalID: 3478075408455437831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_67
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 792
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02eab78372f266a00800000000000000
+      internalID: 749338233501625888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_68
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 775
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d991accf7d960c0800000000000000
+      internalID: -4581893665150362304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_69
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 775
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504c3c00ae837f9d0800000000000000
+      internalID: -2740659270545325051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_70
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 771
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb407f9445294c640800000000000000
+      internalID: 5099361568806077628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_71
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 778
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e101e08cf4e388b0800000000000000
+      internalID: -5151021775636594207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_72
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 778
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884df156b66fabde0800000000000000
+      internalID: -1316468999933930360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_73
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 765
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c52e4baefabe4aa0800000000000000
+      internalID: -6174792436119886400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_74
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 765
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861f2d34ac275ca70800000000000000
+      internalID: 8846603256086065512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_75
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 749
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33093c6881c53100800000000000000
+      internalID: 87188559478981439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_76
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 767
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab8d2004ec9e40a0800000000000000
+      internalID: -6895401476388189265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_77
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 758
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03f15d213a953270800000000000000
+      internalID: 8229653430093869837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_78
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 759
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21faca78d65dce570800000000000000
+      internalID: 8497401263345676050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_79
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 754
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a06ddb09f3eac30800000000000000
+      internalID: 4372502179116091939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_80
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 524
+        width: 347
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22140478a153f1180800000000000000
+      internalID: -9142530330484260574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_81
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 733
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7c5b667194a7300800000000000000
+      internalID: 250593094128748522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_82
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 557
+        width: 25
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc331c7008b32660800000000000000
+      internalID: 7359928528274668761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_83
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 555
+        width: 7
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6ed5ffb52262850800000000000000
+      internalID: 6351802102974375628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_84
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 710
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324268a91842b7c70800000000000000
+      internalID: 8969803221900338211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_85
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 700
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6fe4c8172270b40800000000000000
+      internalID: 5406327748762203813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_86
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 698
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e74c8f5694be0a20800000000000000
+      internalID: 3030558157208045544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_87
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 685
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fbfd06699b0ba20800000000000000
+      internalID: 3076162601015558026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_88
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 687
+        width: 49
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fc3b41072b4cca0800000000000000
+      internalID: -5997472609297248467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_89
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 519
+        width: 49
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16ecfa9a9ba60370800000000000000
+      internalID: 8288500844735555103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_90
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 441
+        width: 140
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cb63f0c333c9450800000000000000
+      internalID: 6096804328599108724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_91
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 634
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037a70926a27dbc30800000000000000
+      internalID: 4376780470852495152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_92
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 657
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102cdc7b6399ca4e0800000000000000
+      internalID: -1969030476776750591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_93
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 23
+        width: 123
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f953eaff75fca710800000000000000
+      internalID: 1706008288885430773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_94
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 650
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679ec8c9228381670800000000000000
+      internalID: 8509613217223076214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_95
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 601
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0a80d465378d2f0800000000000000
+      internalID: -947880907064696613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_96
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 609
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174da9e8281420bd0800000000000000
+      internalID: -2665496000455846799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_97
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 626
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da65a1c66f7c607c0800000000000000
+      internalID: -4105374149112080723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_98
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 619
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c941a7f698c886d0800000000000000
+      internalID: -2987917802035131968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_99
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 597
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d150917c8df7b4490800000000000000
+      internalID: -7760968963812948707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_100
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 564
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1d7f34805023680800000000000000
+      internalID: -8776947190733483536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_101
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 568
+        width: 81
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f17dbe1c64c1ad0800000000000000
+      internalID: -2730229475393986691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_102
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 571
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8b102e4adb19670800000000000000
+      internalID: 8543818483962591429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_103
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 575
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2086db3d93655d140800000000000000
+      internalID: 4743792588870215682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_104
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 570
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2025f2f1ac334bfd0800000000000000
+      internalID: -2327178164244098558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_105
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 562
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010275289d9501ac0800000000000000
+      internalID: -3886507687691214832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_106
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 543
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c89330ce0b6f910800000000000000
+      internalID: 1870877222931893339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_107
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 543
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc710eaa87a1f89e0800000000000000
+      internalID: -1617044635637508147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_108
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 541
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4739ad7f78932dd0800000000000000
+      internalID: -2511996493806094517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_109
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 545
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02e63a713fea6140800000000000000
+      internalID: 4713842955779498511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_110
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 541
+        width: 43
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15495e10bcd98f580800000000000000
+      internalID: -8793104777205148591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_111
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 455
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7fe94128481c690800000000000000
+      internalID: -7583634603288627246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_112
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 541
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a5f82e936633e50800000000000000
+      internalID: 6787881462177683972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_113
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 550
+        width: 39
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcde75ce9bd863f20800000000000000
+      internalID: 3402062398198640077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_114
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 549
+        width: 50
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0ff5e28eb0b17e0800000000000000
+      internalID: -1793826934738652934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_115
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 546
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89624bbbc65d8a30800000000000000
+      internalID: 4219123858936064396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_116
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 555
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ca8ed44670a4ad0800000000000000
+      internalID: -2717351297779454961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_117
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 551
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0703545d07c34480800000000000000
+      internalID: -8916063977200220401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_118
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 555
+        width: 38
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a293f75f278fa9610800000000000000
+      internalID: 1628887387876571434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_119
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 541
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc27bc2ba440dea0800000000000000
+      internalID: -5850100413973975883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_120
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 551
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bbd2bac4d0c6230800000000000000
+      internalID: 3633293622321724191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_121
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 551
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1721a0c6a805cf8d0800000000000000
+      internalID: -2811283511937723791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_122
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 543
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f46591e960c7ca90800000000000000
+      internalID: -7293649510514465552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_123
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 551
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875b48b0f1ebd2da0800000000000000
+      internalID: -5967904890649528968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_124
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 554
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed7140beae5fbdb0800000000000000
+      internalID: -4773992975615033888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_125
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 545
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce17564851520710800000000000000
+      internalID: 1657977052404850379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_126
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 520
+        width: 7
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b0744c710e48b20800000000000000
+      internalID: 3135877633238567736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_127
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 466
+        width: 9
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500cbac8944fc4a60800000000000000
+      internalID: 7659765662980227077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_128
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 515
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449c1c58d84e23710800000000000000
+      internalID: 1671649708193466692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_129
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 466
+        width: 41
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf522ab89410eb60800000000000000
+      internalID: 7773235603031875525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_130
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 420
+        width: 204
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851de05632db93a20800000000000000
+      internalID: 3042670982982455640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_131
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 468
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1eb14080f743c4c0800000000000000
+      internalID: -4268488923547582946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_132
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 436
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b7dda24cc7fa070800000000000000
+      internalID: 8119845835146885970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_133
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 444
+        width: 71
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6783dcae779c500800000000000000
+      internalID: 416996290857563891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_134
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 450
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb32ed8a3cebfdbf0800000000000000
+      internalID: -297309302822132802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_135
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 414
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8f1be19f18ad450800000000000000
+      internalID: 6114342351070689515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_136
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 256
+        width: 35
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9476ac33c4a20d4c0800000000000000
+      internalID: -4264862340345075895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_137
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 442
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad60fd685c2179410800000000000000
+      internalID: 1483675241822488282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_138
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 401
+        width: 23
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34e1aede66dd2c90800000000000000
+      internalID: -7192857258170915782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_139
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 430
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c02f6f6991a6a610800000000000000
+      internalID: 1632169595340005576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_140
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 420
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bbe74ac827878cf0800000000000000
+      internalID: -250082645033620555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_141
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 435
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ff8f5455cbe6fd0800000000000000
+      internalID: -2346731281381261519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_142
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 420
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d383069898b7925e0800000000000000
+      internalID: -1933878734333396931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_143
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 198
+        width: 27
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064ceb88d2655aad0800000000000000
+      internalID: -2691650448716282784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_144
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 284
+        width: 47
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c135c109e0e69d90800000000000000
+      internalID: -7091233271886564924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_145
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 301
+        width: 14
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9499454b3c202c580800000000000000
+      internalID: -8808474881615947447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_146
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 426
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84bcb43fb5dbb74e0800000000000000
+      internalID: -1982783008305067192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_147
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 420
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7043c20474ba150800000000000000
+      internalID: 5884875679034771416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_148
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 402
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3273dc14d7a3f60800000000000000
+      internalID: 8014856208428508085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_149
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 416
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1049bbc4d82bfb00800000000000000
+      internalID: 863328647987675165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_150
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 428
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70f083dc9fd365a0800000000000000
+      internalID: -6529129170100752261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_151
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 420
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbfbac9055d07010800000000000000
+      internalID: 1184681244201057264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_152
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 417
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ce2bd43e864cf20800000000000000
+      internalID: 3441991340688337993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_153
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 434
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ae28290c4bb0b80800000000000000
+      internalID: -8427443538508977574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_154
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 201
+        width: 48
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26445f4b9ffcc3ab0800000000000000
+      internalID: -5026914412662537118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_155
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 401
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7dc2040995a2430800000000000000
+      internalID: 3758915315080943565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_156
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 23
+        width: 347
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26ca556e16bf7d70800000000000000
+      internalID: 9043146818448967215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_157
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 401
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4799be669d3b24980800000000000000
+      internalID: -8556078595734529676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_158
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 301
+        width: 223
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212c5fc5620f92880800000000000000
+      internalID: -8635106762947182062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_159
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 401
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684105440fa2d8c30800000000000000
+      internalID: 4363190825418495110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_160
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 401
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4b7c9d09897e690800000000000000
+      internalID: -7572916500503743249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_161
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 401
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7738f968e05d41bc0800000000000000
+      internalID: -3813188726111108233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_162
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 405
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbd9798aaac1ad30800000000000000
+      internalID: 4441053541363735493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_163
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 401
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02bc628dfc581d40800000000000000
+      internalID: 5555292384246149646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_164
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 401
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93fe86409f8652800800000000000000
+      internalID: 586990745171849017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_165
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 401
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482685b27363fe190800000000000000
+      internalID: -7931060808197840252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_166
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 369
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a7a1f6915fd81e0800000000000000
+      internalID: -2193827953872569719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_167
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 316
+        width: 79
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755568a30b85377e0800000000000000
+      internalID: -1768972714707102377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_168
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 327
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30d76d785fb60400800000000000000
+      internalID: 290129612793958462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_169
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 342
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1f36225334c14c0800000000000000
+      internalID: -4315500447438474816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_170
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 340
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708836ceeee251950800000000000000
+      internalID: 6419088447589550087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_171
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 340
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b1eab19536e5600800000000000000
+      internalID: 458913446406003532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_172
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 335
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4e9d808c69be9e0800000000000000
+      internalID: -1591012257459215125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_173
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 340
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fed7cfc6d79154e0800000000000000
+      internalID: -1994646211083641099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_174
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 330
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1166eb78b040a6b30800000000000000
+      internalID: 4281238843337631249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_175
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 329
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424bb031a94adde20800000000000000
+      internalID: 3377036277249192996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_176
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 325
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2a01798ef1b4f90800000000000000
+      internalID: -6968440914598387004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_177
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 330
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b65d6ab7bcc39c0800000000000000
+      internalID: -3946055441542976669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_178
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 320
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339a043871974e760800000000000000
+      internalID: 7486241622489868595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_179
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 314
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ce5c3dabd1f8840800000000000000
+      internalID: 5228430380654521388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_180
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 320
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c26f3fccf1cd9d80800000000000000
+      internalID: -8242218451465182523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_181
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 317
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edcec8da1ccccca0800000000000000
+      internalID: -5995192588258325015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_182
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 301
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2891ffe9dffa58b30800000000000000
+      internalID: 4289027723969370498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_183
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 301
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34017663ec0013830800000000000000
+      internalID: 4049018425658773571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_184
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 52
+        width: 247
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dc46e77d2644b50800000000000000
+      internalID: 6576490033545792853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_185
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 311
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc02c5d87cdb14d00800000000000000
+      internalID: 955253260747022541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_186
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 311
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdfa910f98317610800000000000000
+      internalID: 1617135996780609015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_187
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 310
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ddbffd81ed437c0800000000000000
+      internalID: -4092401962954531543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_188
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 308
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d122dc81e0f4b8090800000000000000
+      internalID: -8031238588520914403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_189
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 301
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae06e8ce27ce8e90800000000000000
+      internalID: -7021455765271081307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_190
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b89f1caeebe3400800000000000000
+      internalID: 305891740193753946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_191
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 301
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65e70f76b0742e20800000000000000
+      internalID: 3324906354023851374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_192
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 288
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae0dcde4fff92a20800000000000000
+      internalID: 3038240851064852141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_193
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 238
+        width: 46
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338783f0390bd6b60800000000000000
+      internalID: 7741037480181790771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_194
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 248
+        width: 7
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e296da3d1971e10800000000000000
+      internalID: 2168362083935661574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_195
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 198
+        width: 6
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3aa9288b52dfc1d0800000000000000
+      internalID: -3328210309035218369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_196
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 141
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbf0af001d93ea40800000000000000
+      internalID: 5396329470827232243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_197
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 141
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da8f455a6963ac20800000000000000
+      internalID: 3216530464291392217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_198
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 198
+        width: 7
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534402e1daecea5c0800000000000000
+      internalID: -4202194159359998923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_199
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 180
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe7f58718583ef40800000000000000
+      internalID: 5756591539826425594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_200
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 25
+        width: 104
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad579cf3fa9806100800000000000000
+      internalID: 99230577584600538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_201
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 167
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a50cd02fc82ddb0800000000000000
+      internalID: -4768594084191249830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_202
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 180
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fad69cd26244d590800000000000000
+      internalID: -7650416874620527886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_203
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 189
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849700fe215efb890800000000000000
+      internalID: -7439976189910812344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_204
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 180
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45405459ac5235bd0800000000000000
+      internalID: -2642727004318399404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_205
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 180
+        width: 55
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af45a949501a77b0800000000000000
+      internalID: -5225846441936334940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_206
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 170
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612ff6607c48e1040800000000000000
+      internalID: 4620276258070065686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_207
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 170
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab387658abc6b5ee0800000000000000
+      internalID: -1271302921444162630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_208
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 169
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f2e9d03ef0001b0800000000000000
+      internalID: -5692532461135843455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_209
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 158
+        width: 51
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d3eff167e334d20800000000000000
+      internalID: 3261519232210189679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_210
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 176
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac76794386b88520800000000000000
+      internalID: 2704612251225455787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_211
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 170
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c109cd57bc7b07ed0800000000000000
+      internalID: -2418230915414323172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_212
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 170
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f330e323e138670800000000000000
+      internalID: 8539702519562190699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_213
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 160
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230a87659f7f91930800000000000000
+      internalID: 4114592384849322034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_214
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 160
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1b0330d45b2a000800000000000000
+      internalID: 45798288597758451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_215
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 158
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4e1dba27af89470800000000000000
+      internalID: 8401740475275535530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_216
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 167
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463070d2fe41f2d90800000000000000
+      internalID: -7120449468364291228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_217
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 162
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841adc926e08f0ec0800000000000000
+      internalID: -3598515851213561528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_218
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 141
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90f0a0ad95d24480800000000000000
+      internalID: -8916329439258677094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_219
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 151
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ad77313c503ec50800000000000000
+      internalID: 6693199806606072340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_220
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 143
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765c5ae71a5e0d720800000000000000
+      internalID: 2869045444412294503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_221
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 148
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60100bfe8e821b490800000000000000
+      internalID: -7732354104299618042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_222
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 155
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41914074f250247c0800000000000000
+      internalID: -4088699811085936364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_223
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 153
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799a83ffc4a3741f0800000000000000
+      internalID: -1060815084848633449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_224
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 137
+        width: 65
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0065d35dd365710800000000000000
+      internalID: 1681599496935833851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_225
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 148
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819a6c4fb499eab80800000000000000
+      internalID: -8381593304981657320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_226
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 140
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3089e82aaac21d70800000000000000
+      internalID: 9012488636501426235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_227
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 141
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84dea3f31e2572c00800000000000000
+      internalID: 875759779928796488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_228
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 141
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6613560604cfba30800000000000000
+      internalID: 4233317704906511981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_229
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 142
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0df8b576b52fdfa0800000000000000
+      internalID: -5773854731676353270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_230
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 27
+        width: 24
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd04a5fcc6dc4750800000000000000
+      internalID: 6290638955312582069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_231
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 61
+        width: 20
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0ec49511e474590800000000000000
+      internalID: -7690092002292211458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_232
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 112
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd30ed51c89e0050800000000000000
+      internalID: 5768716128979271114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_233
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 65
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb59418034fc2a5d0800000000000000
+      internalID: -3052649710598449732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_234
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 23
+        width: 73
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9b12782a1e5f980800000000000000
+      internalID: -8505644233051227662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_235
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 83
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2743024da22049a30800000000000000
+      internalID: 4221001133723759730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_236
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 54
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05d0c2a685f39560800000000000000
+      internalID: 7319463778012157195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_237
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 46
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009f60cfb9e4e5700800000000000000
+      internalID: 530948237931510016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_238
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 49
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fd8c100a8f38fa0800000000000000
+      internalID: -5799518529014669544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_239
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 41
+        width: 44
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2871d4a51943e7ec0800000000000000
+      internalID: -3567356055940950142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_240
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25afbf859388d570800000000000000
+      internalID: 8491681775792137518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_241
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 23
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9b47970ad26b000800000000000000
+      internalID: 51278613017049533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_242
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 23
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688bf06dea2da03b0800000000000000
+      internalID: -5545388342795847546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_243
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 23
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c36beb5b3d872e0800000000000000
+      internalID: -2127718046390404016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L03_MacicoLabirinto_244
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 23
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e50719919fcc090800000000000000
+      internalID: -8012755748789395841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      L03_MacicoLabirinto_0: -6571136601725931663
+      L03_MacicoLabirinto_1: 8768976242303548594
+      L03_MacicoLabirinto_10: -3936053314548428738
+      L03_MacicoLabirinto_100: -8776947190733483536
+      L03_MacicoLabirinto_101: -2730229475393986691
+      L03_MacicoLabirinto_102: 8543818483962591429
+      L03_MacicoLabirinto_103: 4743792588870215682
+      L03_MacicoLabirinto_104: -2327178164244098558
+      L03_MacicoLabirinto_105: -3886507687691214832
+      L03_MacicoLabirinto_106: 1870877222931893339
+      L03_MacicoLabirinto_107: -1617044635637508147
+      L03_MacicoLabirinto_108: -2511996493806094517
+      L03_MacicoLabirinto_109: 4713842955779498511
+      L03_MacicoLabirinto_11: 4531561738747448556
+      L03_MacicoLabirinto_110: -8793104777205148591
+      L03_MacicoLabirinto_111: -7583634603288627246
+      L03_MacicoLabirinto_112: 6787881462177683972
+      L03_MacicoLabirinto_113: 3402062398198640077
+      L03_MacicoLabirinto_114: -1793826934738652934
+      L03_MacicoLabirinto_115: 4219123858936064396
+      L03_MacicoLabirinto_116: -2717351297779454961
+      L03_MacicoLabirinto_117: -8916063977200220401
+      L03_MacicoLabirinto_118: 1628887387876571434
+      L03_MacicoLabirinto_119: -5850100413973975883
+      L03_MacicoLabirinto_12: 2247005904607257929
+      L03_MacicoLabirinto_120: 3633293622321724191
+      L03_MacicoLabirinto_121: -2811283511937723791
+      L03_MacicoLabirinto_122: -7293649510514465552
+      L03_MacicoLabirinto_123: -5967904890649528968
+      L03_MacicoLabirinto_124: -4773992975615033888
+      L03_MacicoLabirinto_125: 1657977052404850379
+      L03_MacicoLabirinto_126: 3135877633238567736
+      L03_MacicoLabirinto_127: 7659765662980227077
+      L03_MacicoLabirinto_128: 1671649708193466692
+      L03_MacicoLabirinto_129: 7773235603031875525
+      L03_MacicoLabirinto_13: 2760748191449213542
+      L03_MacicoLabirinto_130: 3042670982982455640
+      L03_MacicoLabirinto_131: -4268488923547582946
+      L03_MacicoLabirinto_132: 8119845835146885970
+      L03_MacicoLabirinto_133: 416996290857563891
+      L03_MacicoLabirinto_134: -297309302822132802
+      L03_MacicoLabirinto_135: 6114342351070689515
+      L03_MacicoLabirinto_136: -4264862340345075895
+      L03_MacicoLabirinto_137: 1483675241822488282
+      L03_MacicoLabirinto_138: -7192857258170915782
+      L03_MacicoLabirinto_139: 1632169595340005576
+      L03_MacicoLabirinto_14: -463288835947226791
+      L03_MacicoLabirinto_140: -250082645033620555
+      L03_MacicoLabirinto_141: -2346731281381261519
+      L03_MacicoLabirinto_142: -1933878734333396931
+      L03_MacicoLabirinto_143: -2691650448716282784
+      L03_MacicoLabirinto_144: -7091233271886564924
+      L03_MacicoLabirinto_145: -8808474881615947447
+      L03_MacicoLabirinto_146: -1982783008305067192
+      L03_MacicoLabirinto_147: 5884875679034771416
+      L03_MacicoLabirinto_148: 8014856208428508085
+      L03_MacicoLabirinto_149: 863328647987675165
+      L03_MacicoLabirinto_15: -2573166028390971529
+      L03_MacicoLabirinto_150: -6529129170100752261
+      L03_MacicoLabirinto_151: 1184681244201057264
+      L03_MacicoLabirinto_152: 3441991340688337993
+      L03_MacicoLabirinto_153: -8427443538508977574
+      L03_MacicoLabirinto_154: -5026914412662537118
+      L03_MacicoLabirinto_155: 3758915315080943565
+      L03_MacicoLabirinto_156: 9043146818448967215
+      L03_MacicoLabirinto_157: -8556078595734529676
+      L03_MacicoLabirinto_158: -8635106762947182062
+      L03_MacicoLabirinto_159: 4363190825418495110
+      L03_MacicoLabirinto_16: -2083778682555606017
+      L03_MacicoLabirinto_160: -7572916500503743249
+      L03_MacicoLabirinto_161: -3813188726111108233
+      L03_MacicoLabirinto_162: 4441053541363735493
+      L03_MacicoLabirinto_163: 5555292384246149646
+      L03_MacicoLabirinto_164: 586990745171849017
+      L03_MacicoLabirinto_165: -7931060808197840252
+      L03_MacicoLabirinto_166: -2193827953872569719
+      L03_MacicoLabirinto_167: -1768972714707102377
+      L03_MacicoLabirinto_168: 290129612793958462
+      L03_MacicoLabirinto_169: -4315500447438474816
+      L03_MacicoLabirinto_17: -1514430427503132523
+      L03_MacicoLabirinto_170: 6419088447589550087
+      L03_MacicoLabirinto_171: 458913446406003532
+      L03_MacicoLabirinto_172: -1591012257459215125
+      L03_MacicoLabirinto_173: -1994646211083641099
+      L03_MacicoLabirinto_174: 4281238843337631249
+      L03_MacicoLabirinto_175: 3377036277249192996
+      L03_MacicoLabirinto_176: -6968440914598387004
+      L03_MacicoLabirinto_177: -3946055441542976669
+      L03_MacicoLabirinto_178: 7486241622489868595
+      L03_MacicoLabirinto_179: 5228430380654521388
+      L03_MacicoLabirinto_18: -8388543797605581616
+      L03_MacicoLabirinto_180: -8242218451465182523
+      L03_MacicoLabirinto_181: -5995192588258325015
+      L03_MacicoLabirinto_182: 4289027723969370498
+      L03_MacicoLabirinto_183: 4049018425658773571
+      L03_MacicoLabirinto_184: 6576490033545792853
+      L03_MacicoLabirinto_185: 955253260747022541
+      L03_MacicoLabirinto_186: 1617135996780609015
+      L03_MacicoLabirinto_187: -4092401962954531543
+      L03_MacicoLabirinto_188: -8031238588520914403
+      L03_MacicoLabirinto_189: -7021455765271081307
+      L03_MacicoLabirinto_19: -1713851976628810651
+      L03_MacicoLabirinto_190: 305891740193753946
+      L03_MacicoLabirinto_191: 3324906354023851374
+      L03_MacicoLabirinto_192: 3038240851064852141
+      L03_MacicoLabirinto_193: 7741037480181790771
+      L03_MacicoLabirinto_194: 2168362083935661574
+      L03_MacicoLabirinto_195: -3328210309035218369
+      L03_MacicoLabirinto_196: 5396329470827232243
+      L03_MacicoLabirinto_197: 3216530464291392217
+      L03_MacicoLabirinto_198: -4202194159359998923
+      L03_MacicoLabirinto_199: 5756591539826425594
+      L03_MacicoLabirinto_2: -1912885762364703815
+      L03_MacicoLabirinto_20: 8919308127944863597
+      L03_MacicoLabirinto_200: 99230577584600538
+      L03_MacicoLabirinto_201: -4768594084191249830
+      L03_MacicoLabirinto_202: -7650416874620527886
+      L03_MacicoLabirinto_203: -7439976189910812344
+      L03_MacicoLabirinto_204: -2642727004318399404
+      L03_MacicoLabirinto_205: -5225846441936334940
+      L03_MacicoLabirinto_206: 4620276258070065686
+      L03_MacicoLabirinto_207: -1271302921444162630
+      L03_MacicoLabirinto_208: -5692532461135843455
+      L03_MacicoLabirinto_209: 3261519232210189679
+      L03_MacicoLabirinto_21: -1662711549057903894
+      L03_MacicoLabirinto_210: 2704612251225455787
+      L03_MacicoLabirinto_211: -2418230915414323172
+      L03_MacicoLabirinto_212: 8539702519562190699
+      L03_MacicoLabirinto_213: 4114592384849322034
+      L03_MacicoLabirinto_214: 45798288597758451
+      L03_MacicoLabirinto_215: 8401740475275535530
+      L03_MacicoLabirinto_216: -7120449468364291228
+      L03_MacicoLabirinto_217: -3598515851213561528
+      L03_MacicoLabirinto_218: -8916329439258677094
+      L03_MacicoLabirinto_219: 6693199806606072340
+      L03_MacicoLabirinto_22: 2305641828140118737
+      L03_MacicoLabirinto_220: 2869045444412294503
+      L03_MacicoLabirinto_221: -7732354104299618042
+      L03_MacicoLabirinto_222: -4088699811085936364
+      L03_MacicoLabirinto_223: -1060815084848633449
+      L03_MacicoLabirinto_224: 1681599496935833851
+      L03_MacicoLabirinto_225: -8381593304981657320
+      L03_MacicoLabirinto_226: 9012488636501426235
+      L03_MacicoLabirinto_227: 875759779928796488
+      L03_MacicoLabirinto_228: 4233317704906511981
+      L03_MacicoLabirinto_229: -5773854731676353270
+      L03_MacicoLabirinto_23: 7963906216673368064
+      L03_MacicoLabirinto_230: 6290638955312582069
+      L03_MacicoLabirinto_231: -7690092002292211458
+      L03_MacicoLabirinto_232: 5768716128979271114
+      L03_MacicoLabirinto_233: -3052649710598449732
+      L03_MacicoLabirinto_234: -8505644233051227662
+      L03_MacicoLabirinto_235: 4221001133723759730
+      L03_MacicoLabirinto_236: 7319463778012157195
+      L03_MacicoLabirinto_237: 530948237931510016
+      L03_MacicoLabirinto_238: -5799518529014669544
+      L03_MacicoLabirinto_239: -3567356055940950142
+      L03_MacicoLabirinto_24: -7147582662158976690
+      L03_MacicoLabirinto_240: 8491681775792137518
+      L03_MacicoLabirinto_241: 51278613017049533
+      L03_MacicoLabirinto_242: -5545388342795847546
+      L03_MacicoLabirinto_243: -2127718046390404016
+      L03_MacicoLabirinto_244: -8012755748789395841
+      L03_MacicoLabirinto_25: -4468802696886895833
+      L03_MacicoLabirinto_26: -3447757216556917956
+      L03_MacicoLabirinto_27: 4648440824861794883
+      L03_MacicoLabirinto_28: 3635166492418531220
+      L03_MacicoLabirinto_29: -6024855488284569573
+      L03_MacicoLabirinto_3: -1874658060941074557
+      L03_MacicoLabirinto_30: 4121765112862342641
+      L03_MacicoLabirinto_31: 9178902361077589547
+      L03_MacicoLabirinto_32: -2269914671612680382
+      L03_MacicoLabirinto_33: -6705388356231717624
+      L03_MacicoLabirinto_34: 1556411812517059085
+      L03_MacicoLabirinto_35: -1216339466400937644
+      L03_MacicoLabirinto_36: 7449112561094912373
+      L03_MacicoLabirinto_37: 8126180926199796944
+      L03_MacicoLabirinto_38: 87612717654734651
+      L03_MacicoLabirinto_39: 5602770222634561550
+      L03_MacicoLabirinto_4: -4668048053042793133
+      L03_MacicoLabirinto_40: -2010688134869486424
+      L03_MacicoLabirinto_41: -4104660507092730619
+      L03_MacicoLabirinto_42: -4196959873316306342
+      L03_MacicoLabirinto_43: 5138200284316152132
+      L03_MacicoLabirinto_44: -21968947193723589
+      L03_MacicoLabirinto_45: -7102575057960728920
+      L03_MacicoLabirinto_46: -6408587535137734474
+      L03_MacicoLabirinto_47: -1661068294796555161
+      L03_MacicoLabirinto_48: 8699148087974323568
+      L03_MacicoLabirinto_49: -8004568446744509565
+      L03_MacicoLabirinto_5: -5053304881525632240
+      L03_MacicoLabirinto_50: 1899911967421732818
+      L03_MacicoLabirinto_51: 428658650017392388
+      L03_MacicoLabirinto_52: -6937218095150069778
+      L03_MacicoLabirinto_53: 2180470529228777373
+      L03_MacicoLabirinto_54: -524454867396000466
+      L03_MacicoLabirinto_55: -6236288383879036567
+      L03_MacicoLabirinto_56: 4594327294006027681
+      L03_MacicoLabirinto_57: 2701505503800903123
+      L03_MacicoLabirinto_58: -3844975896870593564
+      L03_MacicoLabirinto_59: -5669108199411919749
+      L03_MacicoLabirinto_6: 7630742275690730513
+      L03_MacicoLabirinto_60: 7897166659771580728
+      L03_MacicoLabirinto_61: 4891008429674909130
+      L03_MacicoLabirinto_62: 5311412928796981941
+      L03_MacicoLabirinto_63: 1116537295945863710
+      L03_MacicoLabirinto_64: -5939583416900861150
+      L03_MacicoLabirinto_65: -4667027572066726489
+      L03_MacicoLabirinto_66: 3478075408455437831
+      L03_MacicoLabirinto_67: 749338233501625888
+      L03_MacicoLabirinto_68: -4581893665150362304
+      L03_MacicoLabirinto_69: -2740659270545325051
+      L03_MacicoLabirinto_7: -5576326207369969328
+      L03_MacicoLabirinto_70: 5099361568806077628
+      L03_MacicoLabirinto_71: -5151021775636594207
+      L03_MacicoLabirinto_72: -1316468999933930360
+      L03_MacicoLabirinto_73: -6174792436119886400
+      L03_MacicoLabirinto_74: 8846603256086065512
+      L03_MacicoLabirinto_75: 87188559478981439
+      L03_MacicoLabirinto_76: -6895401476388189265
+      L03_MacicoLabirinto_77: 8229653430093869837
+      L03_MacicoLabirinto_78: 8497401263345676050
+      L03_MacicoLabirinto_79: 4372502179116091939
+      L03_MacicoLabirinto_8: 744311213244939796
+      L03_MacicoLabirinto_80: -9142530330484260574
+      L03_MacicoLabirinto_81: 250593094128748522
+      L03_MacicoLabirinto_82: 7359928528274668761
+      L03_MacicoLabirinto_83: 6351802102974375628
+      L03_MacicoLabirinto_84: 8969803221900338211
+      L03_MacicoLabirinto_85: 5406327748762203813
+      L03_MacicoLabirinto_86: 3030558157208045544
+      L03_MacicoLabirinto_87: 3076162601015558026
+      L03_MacicoLabirinto_88: -5997472609297248467
+      L03_MacicoLabirinto_89: 8288500844735555103
+      L03_MacicoLabirinto_9: -2524507400815934407
+      L03_MacicoLabirinto_90: 6096804328599108724
+      L03_MacicoLabirinto_91: 4376780470852495152
+      L03_MacicoLabirinto_92: -1969030476776750591
+      L03_MacicoLabirinto_93: 1706008288885430773
+      L03_MacicoLabirinto_94: 8509613217223076214
+      L03_MacicoLabirinto_95: -947880907064696613
+      L03_MacicoLabirinto_96: -2665496000455846799
+      L03_MacicoLabirinto_97: -4105374149112080723
+      L03_MacicoLabirinto_98: -2987917802035131968
+      L03_MacicoLabirinto_99: -7760968963812948707
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
