@@ -5601,8 +5601,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.StoryFlagSpriteVisual
   target: {fileID: 1127673020}
   flag: 3
-  before: {fileID: 21300000, guid: afe61f4331d86534e85b7337f01e0e4b, type: 3}
+  before: {fileID: 21300000, guid: 18ba9e720ae39e244b365016ec1822e4, type: 3}
   after: {fileID: 21300000, guid: 2015d6fbc1b108f4c9f2b6334665c251, type: 3}
+  transitionFrames:
+  - {fileID: 21300000, guid: e2932c3fba464a34081b695abc02e792, type: 3}
+  transitionDuration: 0.24
+  beforeStateLights:
+  - {fileID: 32666927}
+  - {fileID: 1946260838}
 --- !u!212 &1127673020
 SpriteRenderer:
   serializedVersion: 2
@@ -5652,7 +5658,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: afe61f4331d86534e85b7337f01e0e4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18ba9e720ae39e244b365016ec1822e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12048,6 +12054,9 @@ MonoBehaviour:
   flag: 6
   before: {fileID: 21300000, guid: 06aad0dd9f7dda2419f1f2c6dbc10501, type: 3}
   after: {fileID: 21300000, guid: d8fa95ee0290e4547b29d180986f9d68, type: 3}
+  transitionFrames: []
+  transitionDuration: 0.24
+  beforeStateLights: []
 --- !u!212 &1871873941
 SpriteRenderer:
   serializedVersion: 2
