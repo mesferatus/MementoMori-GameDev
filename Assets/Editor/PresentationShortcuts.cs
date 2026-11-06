@@ -9,17 +9,17 @@ namespace MementoMori.EditorTools
 {
     /// <summary>
     /// Demo shortcuts: each one opens a single map (Labirinto or Dominio da Lua) and frames all of it in the
-    /// Scene View. Ctrl+Shift+1 / Ctrl+Shift+2.
+    /// Scene View. Alt+Shift+1 / Alt+Shift+2.
     /// </summary>
     public static class PresentationShortcuts
     {
         private const string Labirinto = "Assets/Scenes/Labirinto.unity";
         private const string DominioLua = "Assets/Scenes/DominioLua.unity";
 
-        [MenuItem("Memento Mori/Apresentacao/Labirinto (visao geral) %#1")]
+        [MenuItem("Memento Mori/Apresentacao/Labirinto (visao geral) &#1")]
         public static void OpenLabirinto() => Show(Labirinto);
 
-        [MenuItem("Memento Mori/Apresentacao/Dominio da Lua (visao geral) %#2")]
+        [MenuItem("Memento Mori/Apresentacao/Dominio da Lua (visao geral) &#2")]
         public static void OpenDominioLua() => Show(DominioLua);
 
         private static void Show(string path)
