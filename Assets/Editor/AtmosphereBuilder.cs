@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -39,6 +39,9 @@ namespace MementoMori.EditorTools
             Mat(ResDir + "/PortalSpark.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 2); m.SetColor("_Color", Color.white); m.SetFloat("_Intensity", 1.3f); m.SetFloat("_Flicker", .4f); m.SetVector("_Pixels", new Vector4(8, 8)); });
             Mat(FxDir + "/Materiais/MoonShaft.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 0); m.SetColor("_Color", new Color(.50f, .62f, 1f)); m.SetFloat("_Intensity", .42f); m.SetFloat("_TopWidth", .2f); m.SetFloat("_BottomWidth", .44f); m.SetFloat("_Skew", .18f); m.SetFloat("_Dust", .8f); });
             Mat(FxDir + "/Materiais/MoonPool.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 1); m.SetColor("_Color", new Color(.46f, .58f, 1f)); m.SetFloat("_Intensity", .3f); m.SetVector("_Pixels", new Vector4(80, 36)); });
+            // FinalBeta is the real room in the morning: pale daylight instead of moonlight.
+            Mat(FxDir + "/Materiais/MorningShaft.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 0); m.SetColor("_Color", new Color(1f, .9f, .74f)); m.SetFloat("_Intensity", .36f); m.SetFloat("_TopWidth", .2f); m.SetFloat("_BottomWidth", .44f); m.SetFloat("_Skew", .18f); m.SetFloat("_Dust", .9f); });
+            Mat(FxDir + "/Materiais/MorningPool.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 1); m.SetColor("_Color", new Color(1f, .88f, .7f)); m.SetFloat("_Intensity", .26f); m.SetVector("_Pixels", new Vector4(80, 36)); });
             Mat(FxDir + "/Materiais/FireflyGlow.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 2); m.SetColor("_Color", Color.white); m.SetFloat("_Intensity", 2.8f); m.SetFloat("_Flicker", .55f); m.SetVector("_Pixels", new Vector4(10, 10)); });
             Mat(FxDir + "/Materiais/FlameHalo.mat", "Memento/FX/Light", m => { m.SetFloat("_Shape", 2); m.SetColor("_Color", Color.white); m.SetFloat("_Intensity", .32f); m.SetFloat("_Flicker", .85f); m.SetVector("_Pixels", new Vector4(56, 56)); });
             AssetDatabase.SaveAssets();
@@ -74,7 +77,8 @@ namespace MementoMori.EditorTools
             switch (scene.name)
             {
                 case "FinalBeta":
-                    report += MoonWindow(root, new Vector2(.53f, 4.74f), 3.6f, 6.6f);
+                    // V6.1 FINAL: "A janela... Tá no lugar certo." -- not where the dream Quarto had it.
+                    report += MoonWindow(root, new Vector2(FinalBetaWindowX, 4.74f), 3.6f, 6.6f, "Morning");
                     break;
                 case "Quarto":
                     report += MoonWindow(root, new Vector2(.53f, 4.74f), 3.4f, 6.0f);
@@ -95,15 +99,17 @@ namespace MementoMori.EditorTools
             return report;
         }
 
-        private static string MoonWindow(Transform root, Vector2 window, float height, float width)
+        public const float FinalBetaWindowX = 2.0f;
+
+        private static string MoonWindow(Transform root, Vector2 window, float height, float width, string light = "Moon")
         {
             // shaft top sits on the window sill and its top centre is under the window (the lean only moves the foot)
-            var skew = Load("MoonShaft").GetFloat("_Skew");
-            var shaft = Quad(root, "MoonShaft", Load("MoonShaft"), new Vector3(window.x + skew * .5f * width, window.y - height * .5f, 0f), new Vector2(width, height), 32000);
+            var skew = Load(light + "Shaft").GetFloat("_Skew");
+            var shaft = Quad(root, light + "Shaft", Load(light + "Shaft"), new Vector3(window.x + skew * .5f * width, window.y - height * .5f, 0f), new Vector2(width, height), 32000);
             shaft.sharedMaterial.SetVector("_Pixels", new Vector4(width * 16f, height * 16f));
             // pool where the shaft (skew .12) meets the floor
-            var pool = Quad(root, "MoonPool", Load("MoonPool"), new Vector3(window.x + skew * width, window.y - height + .25f, 0f), new Vector2(width * .62f, 1.5f), 31990);
-            return "moon shaft + pool; ";
+            var pool = Quad(root, light + "Pool", Load(light + "Pool"), new Vector3(window.x + skew * width, window.y - height + .25f, 0f), new Vector2(width * .62f, 1.5f), 31990);
+            return light + " shaft + pool; ";
         }
 
         private static SpriteRenderer Quad(Transform root, string name, Material m, Vector3 pos, Vector2 size, int order)
