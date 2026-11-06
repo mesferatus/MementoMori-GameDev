@@ -15,7 +15,7 @@ namespace MementoMori.UI
         private TMP_Text label;
         private Canvas overlayCanvas;
         private RectTransform hintRect;
-        private UnityEngine.UI.Image hintPanel, hintFrame;
+        private UnityEngine.UI.Image hintPanel;
         private bool insideDialogue, wasDialogue;
         private int dialogueHintsShown;
         private const int DialogueHintLimit = 3;
@@ -53,32 +53,22 @@ namespace MementoMori.UI
             var panel = new GameObject("Hint", typeof(RectTransform), typeof(UnityEngine.UI.Image));
             panel.transform.SetParent(root.transform, false);
             var rect = panel.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(.22f,.07f);
-            rect.anchorMax = new Vector2(.78f,.14f);
+            rect.anchorMin = new Vector2(.25f,.075f);
+            rect.anchorMax = new Vector2(.75f,.135f);
             rect.offsetMin = rect.offsetMax = Vector2.zero;
             hintRect = rect;
             hintPanel = panel.GetComponent<UnityEngine.UI.Image>();
-            panel.GetComponent<UnityEngine.UI.Image>().color = new Color(.055f,.035f,.085f,.94f);
-            var frameSprite = Resources.Load<Sprite>("TutorialFrameV1");
-            if (frameSprite != null)
-            {
-                var frame = new GameObject("TutorialFrame", typeof(RectTransform), typeof(UnityEngine.UI.Image));
-                frame.transform.SetParent(panel.transform, false);
-                var frameRect = (RectTransform)frame.transform;
-                frameRect.anchorMin = Vector2.zero; frameRect.anchorMax = Vector2.one;
-                frameRect.offsetMin = new Vector2(-8f, -4f); frameRect.offsetMax = new Vector2(8f, 4f);
-                var frameImage = frame.GetComponent<UnityEngine.UI.Image>();
-                frameImage.sprite = frameSprite;
-                frameImage.type = UnityEngine.UI.Image.Type.Sliced;
-                frameImage.raycastTarget = false;
-                hintFrame = frameImage;
-            }
+            hintPanel.color = new Color(.075f,.045f,.115f,.94f);
+            hintPanel.raycastTarget = false;
+            var outline = panel.AddComponent<UnityEngine.UI.Outline>();
+            outline.effectColor = new Color(.64f,.47f,.76f,.9f);
+            outline.effectDistance = new Vector2(2f, -2f);
             label = new GameObject("HintText", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
             label.transform.SetParent(panel.transform, false);
             label.rectTransform.anchorMin = Vector2.zero;
             label.rectTransform.anchorMax = Vector2.one;
-            label.rectTransform.offsetMin = new Vector2(18,6);
-            label.rectTransform.offsetMax = new Vector2(-18,-6);
+            label.rectTransform.offsetMin = new Vector2(20,5);
+            label.rectTransform.offsetMax = new Vector2(-20,-5);
             label.font = TMP_Settings.defaultFontAsset;
             label.fontSize = 27;
             label.enableAutoSizing = true;
@@ -147,10 +137,9 @@ namespace MementoMori.UI
             if (hintRect == null || dialogue == insideDialogue) return;
             insideDialogue = dialogue;
             overlayCanvas.sortingOrder = dialogue ? 85 : 15;
-            hintRect.anchorMin = dialogue ? new Vector2(.3f, .112f) : new Vector2(.22f, .07f);
-            hintRect.anchorMax = dialogue ? new Vector2(.74f, .148f) : new Vector2(.78f, .14f);
+            hintRect.anchorMin = dialogue ? new Vector2(.3f, .112f) : new Vector2(.25f, .075f);
+            hintRect.anchorMax = dialogue ? new Vector2(.74f, .148f) : new Vector2(.75f, .135f);
             if (hintPanel != null) hintPanel.enabled = !dialogue;
-            if (hintFrame != null) hintFrame.enabled = !dialogue;
             if (label != null) label.alpha = dialogue ? .72f : 1f;
         }
     }
