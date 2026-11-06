@@ -12,6 +12,8 @@ namespace MementoMori.Interaction
         [SerializeField] private InteractionPromptUI prompt;
         private readonly List<IInteractable> candidates = new();
         private IInteractable current;
+        /// <summary>Interactable currently offered to the player (read-only, for presentation).</summary>
+        public static IInteractable CurrentTarget { get; private set; }
 
         public void ConfigurePrompt(InteractionPromptUI interactionPrompt) => prompt = interactionPrompt;
 
@@ -21,6 +23,7 @@ namespace MementoMori.Interaction
             SelectCandidate();
             var blocked = InputGate.Instance != null && InputGate.Instance.IsBlocked;
             prompt?.SetTarget(blocked ? null : current);
+            CurrentTarget = blocked ? null : current;
 
             var interactPressed = InputBindings.Down(GameAction.Interact) || AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.RemapInteractToSpace && Input.GetKeyDown(KeyCode.Space);
             if (!blocked && current != null && interactPressed)
@@ -29,6 +32,8 @@ namespace MementoMori.Interaction
                 current.Interact(new InteractionContext(gameObject));
             }
         }
+
+        private void OnDisable() => CurrentTarget = null;
 
         private void OnTriggerEnter2D(Collider2D other)
         {

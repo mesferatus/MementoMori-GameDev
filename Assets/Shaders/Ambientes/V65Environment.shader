@@ -29,14 +29,23 @@ Shader "Memento/V65/Environment"
    struct A { float4 positionOS:POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; };
    struct V { float4 positionCS:SV_POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; float2 world:TEXCOORD1; };
    V vert(A a){ V o; float t=_Time.y; float anchor=_Mode<1.5?a.uv.y:1-a.uv.y;
-    if(_Mode>.5&&_Mode<2.5) a.positionOS.x += sin(t*.8+a.uv.y*2.7+_Seed)*anchor*anchor*_Strength;
+    if(_Mode>.5&&_Mode<2.5) {
+     float sway=sin(t*.8+a.uv.y*2.7+_Seed);
+     if(_Mode>1.5) sway=.72*sway+.28*sin(t*1.13+a.uv.y*5.1+a.uv.x*2.4+_Seed);
+     a.positionOS.x += sway*anchor*anchor*_Strength;
+    }
     o.world=TransformObjectToWorld(a.positionOS.xyz).xy; o.positionCS=TransformObjectToHClip(a.positionOS.xyz);o.uv=a.uv;o.color=a.color*_Color;return o; }
    bool gate(float2 p,float4 g){return g.x>=0&&p.x>=g.x&&p.y>=g.y&&p.x<g.z&&p.y<g.w;}
    float3 ToLinear(float3 c){return lerp(c/12.92,pow((max(c,0)+.055)/1.055,2.4),step(.04045,c));}
    half4 frag(V i):SV_Target {
     float2 top=float2(i.uv.x,1-i.uv.y); if(gate(top,_Gate)||gate(top,_Gate2))discard;
     float t=_Time.y;float2 uv=i.uv;
-    if(_Mode>.5&&_Mode<2.5){float anchor=_Mode<1.5?uv.y:1-uv.y;uv.x+=sin(t*.8+uv.y*5+_Seed)*anchor*anchor*_Strength*.02;}
+    if(_Mode>.5&&_Mode<2.5){float anchor=_Mode<1.5?uv.y:1-uv.y;
+     float drift=sin(t*.8+uv.y*5+_Seed)*anchor*anchor*_Strength*.02;
+     if(_Mode>1.5){drift+=sin(t*1.13+uv.y*8+uv.x*2.4+_Seed)*anchor*anchor*_Strength*.006;
+      drift=round(drift/max(_MainTex_TexelSize.x,.000001))*_MainTex_TexelSize.x;}
+     uv.x+=drift;
+    }
     if(_Mode>4.5&&_Mode<5.5)uv.x+=sin(uv.y*24+t*.7+_Seed)*.0015;
     half4 c=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,uv)*i.color;
     if(_Mode>2.5&&_Mode<4.5){

@@ -38,5 +38,26 @@ namespace MementoMori.EditorTools
 
             Debug.Log($"Memento Mori Windows build created at {report.summary.outputPath} ({report.summary.totalSize} bytes).");
         }
+
+        // Clean demonstration package: release player, no development overlay or CT switch.
+        [MenuItem("Memento Mori/Build/Windows Demo (release)")]
+        public static string BuildDemo()
+        {
+            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
+            var enabledScenes = EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray();
+            const string folder = "Builds/MementoMori_Demo";
+            if (Directory.Exists(folder)) Directory.Delete(folder, true);
+            Directory.CreateDirectory(folder);
+            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
+            {
+                scenes = enabledScenes,
+                locationPathName = folder + "/MementoMori.exe",
+                target = BuildTarget.StandaloneWindows64,
+                options = BuildOptions.None
+            });
+            var burst = Directory.GetDirectories(folder, "*_BurstDebugInformation_DoNotShip");
+            foreach (var dir in burst) Directory.Delete(dir, true);
+            return $"{report.summary.result} {report.summary.totalSize} bytes, {report.summary.totalErrors} errors, {report.summary.totalWarnings} warnings, {report.summary.totalTime}";
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace MementoMori.Dialogue
             scaler.referenceResolution = new Vector2(960, 640);
             scaler.matchWidthOrHeight = .5f;
             Image("Background", transform, Vector2.zero, Vector2.one, Color.black);
-            var border = Image("LilacFrame", transform, new Vector2(.17f, .24f), new Vector2(.83f, .89f), Lilac);
+            var border = Image("LilacFrame", transform, new Vector2(.04f, .27f), new Vector2(.96f, .96f), Lilac);
             var inside = Image("Illustration", border.transform, Vector2.zero, Vector2.one, Color.black);
             inside.rectTransform.offsetMin = Vector2.one * 2f;
             inside.rectTransform.offsetMax = Vector2.one * -2f;
@@ -56,9 +56,10 @@ namespace MementoMori.Dialogue
             melantha = Actor("Melantha", inside.transform);
             poe = Actor("Poe", inside.transform);
             andrealphus = Actor("Andrealphus", inside.transform);
-            speaker = Label("Speaker", new Vector2(.08f, .185f), new Vector2(.92f, .225f), 18);
-            body = Label("Dialogue", new Vector2(.08f, .055f), new Vector2(.92f, .185f), 20);
-            controls = Label("Controls", new Vector2(.08f, .008f), new Vector2(.92f, .05f), 14);
+            // No full-screen gothic frame here: the lilac border already frames the illustration.
+            speaker = Label("Speaker", new Vector2(.08f, .215f), new Vector2(.92f, .255f), 18);
+            body = Label("Dialogue", new Vector2(.08f, .1f), new Vector2(.92f, .215f), 20);
+            controls = Label("Controls", new Vector2(.08f, .062f), new Vector2(.92f, .098f), 14);
             controls.text = InputBindings.Get(GameAction.Interact) + " / Enter — avançar" + (CanSkip ? "    Esc — pular sequência" : "");
         }
 

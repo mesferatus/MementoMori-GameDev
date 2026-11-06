@@ -17,10 +17,13 @@ namespace MementoMori.Audio
         AudioMixer mixer;
         Coroutine captionRoutine;
         float baseChatterVolume;
+        Coroutine musicTransition;
+        AudioClip requestedMusic;
+        float musicGain = 1f;
         public static void ApplyVolumeSettings()
         {
             if (active == null || AccessibilitySettings.Instance == null) return;
-            if (active.source != null) active.source.volume = AccessibilitySettings.Instance.MusicVolume;
+            if (active.source != null) active.source.volume = AccessibilitySettings.Instance.MusicVolume * active.musicGain;
             if (active.chatterSource != null) active.chatterSource.volume = active.baseChatterVolume
                 * AccessibilitySettings.Instance.VoiceVolume;
         }
@@ -34,8 +37,33 @@ namespace MementoMori.Audio
                 var go = new GameObject("RuntimeAudio");
                 DontDestroyOnLoad(go); active = go.AddComponent<RuntimeAudio>(); active.Initialize();
             }
-            if (active.source.clip == clip && active.source.isPlaying) return;
-            active.source.clip = clip; active.source.loop = true; active.source.volume = AccessibilitySettings.Instance == null ? .32f : AccessibilitySettings.Instance.MusicVolume; active.source.outputAudioMixerGroup = active.FindGroup("Music"); active.source.Play();
+            if (active.requestedMusic == clip && (active.musicTransition != null || active.source.isPlaying)) return;
+            active.requestedMusic = clip;
+            if (active.musicTransition != null) active.StopCoroutine(active.musicTransition);
+            active.musicTransition = active.StartCoroutine(active.ChangeMusic(clip));
+        }
+
+        IEnumerator ChangeMusic(AudioClip clip)
+        {
+            // A single loop source remains authoritative, including across rapid scene changes.
+            if (source.isPlaying) yield return FadeMusic(musicGain, 0f, .25f);
+            source.Stop(); source.clip = clip; source.loop = true;
+            source.outputAudioMixerGroup = FindGroup("Music");
+            musicGain = 0f; source.volume = 0f; source.Play();
+            yield return FadeMusic(0f, 1f, .6f);
+            musicTransition = null;
+        }
+
+        IEnumerator FadeMusic(float from, float to, float duration)
+        {
+            for (float elapsed = 0f; elapsed < duration; elapsed += Time.unscaledDeltaTime)
+            {
+                musicGain = Mathf.Lerp(from, to, Mathf.SmoothStep(0f, 1f, elapsed / duration));
+                source.volume = musicGain * (AccessibilitySettings.Instance == null ? .32f : AccessibilitySettings.Instance.MusicVolume);
+                yield return null;
+            }
+            musicGain = to;
+            source.volume = musicGain * (AccessibilitySettings.Instance == null ? .32f : AccessibilitySettings.Instance.MusicVolume);
         }
         public static void PlayOneShot(string resourceName, float volume = .65f)
         {
@@ -111,7 +139,7 @@ namespace MementoMori.Audio
             var canvas = canvasObject.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 80;
             caption = new GameObject("Caption", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
             caption.transform.SetParent(canvasObject.transform, false); caption.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF"); caption.fontSize = 18; caption.alignment = TextAlignmentOptions.Center; caption.color = Color.white;
-            var rect = caption.rectTransform; rect.anchorMin = new Vector2(.12f, .05f); rect.anchorMax = new Vector2(.88f, .14f); rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
+            var rect = caption.rectTransform; rect.anchorMin = new Vector2(.12f, .075f); rect.anchorMax = new Vector2(.88f, .165f); rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
             caption.gameObject.SetActive(false);
         }
 
@@ -126,7 +154,12 @@ namespace MementoMori.Audio
         static string CaptionFor(string id) => id switch
         {
             "07_dialogue_blip" => "[pena risca o papel]",
+            "06_interaction_click" => "[clique suave]",
+            "09_sigil_success" => "[runa ressoa]",
+            "10_sigil_error" => "[runa desafina]",
             "05_transition_sleep" => "[respiração curta]",
+            "13_fragment_collect" => "[fragmento cintila]",
+            "19_beta_ending_stinger" => "[acorde final]",
             "14_poe_appear" or "15_poe_soft_call" => "[Poe mia]",
             "17_footstep_stone" => "[passos na pedra]",
             "18_candle_extinguish" => "[vela se apaga]",

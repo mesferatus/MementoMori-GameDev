@@ -47,34 +47,42 @@ namespace MementoMori.Dialogue
             var scaler = root.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080);
-            var shade = Image("Shade", root.transform, null, new Color(.015f, .008f, .03f, .78f),
-                Vector2.zero, Vector2.one);
-            shade.rectTransform.offsetMin = shade.rectTransform.offsetMax = Vector2.zero;
-            var frame = Image("Frame", root.transform, Resources.Load<Sprite>("SettingsFrameV1"), Color.white,
-                new Vector2(.23f, .24f), new Vector2(.77f, .76f));
-            frame.rectTransform.offsetMin = frame.rectTransform.offsetMax = Vector2.zero;
-            var paper = Image("Paper", frame.transform, Resources.Load<Sprite>("SettingsPurplePaperV1"), Color.white,
-                new Vector2(.055f, .10f), new Vector2(.945f, .88f));
-            paper.rectTransform.offsetMin = paper.rectTransform.offsetMax = Vector2.zero;
-            Text("Heading", frame.transform, "ESCOLHA", 34, new Vector2(.14f, .78f), new Vector2(.86f, .88f));
-            Text("Prompt", paper.transform, choice.prompt, 31, new Vector2(.08f, .68f), new Vector2(.92f, .90f));
+            var panel = Image("Panel", root.transform, null, new Color(.11f, .065f, .17f, .98f),
+                new Vector2(.31f, .35f), new Vector2(.69f, .65f));
+            panel.rectTransform.offsetMin = panel.rectTransform.offsetMax = Vector2.zero;
+            Border(panel.transform, "UpperBorder", new Vector2(.03f, .965f), new Vector2(.97f, .975f));
+            Border(panel.transform, "LowerBorder", new Vector2(.03f, .025f), new Vector2(.97f, .035f));
+            Border(panel.transform, "LeftBorder", new Vector2(.02f, .04f), new Vector2(.025f, .96f));
+            Border(panel.transform, "RightBorder", new Vector2(.975f, .04f), new Vector2(.98f, .96f));
+            var prompt = Text("Prompt", panel.transform, choice.prompt, 30,
+                new Vector2(.07f, .70f), new Vector2(.93f, .94f));
+            prompt.fontStyle = FontStyles.SmallCaps;
             for (var i = 0; i < choice.options.Length; i++)
             {
                 var index = i;
-                var top = .66f - i * .27f;
-                var min = new Vector2(.10f, top - .22f);
-                var max = new Vector2(.90f, top);
-                var fill = Image("OptionFill_" + (i + 1), paper.transform, null,
-                    new Color(.09f, .045f, .16f, .86f), min, max);
-                fill.rectTransform.offsetMin = fill.rectTransform.offsetMax = Vector2.zero;
-                var row = Image("Option_" + (i + 1), paper.transform, Resources.Load<Sprite>("SettingsTabFrameV1"),
-                    Color.white, min, max);
+                var height = .56f / choice.options.Length;
+                var top = .65f - i * height;
+                var min = new Vector2(.09f, top - height + .02f);
+                var max = new Vector2(.91f, top);
+                var row = Image("Option_" + (i + 1), panel.transform, null,
+                    new Color(.20f, .12f, .29f, 1f), min, max);
                 row.rectTransform.offsetMin = row.rectTransform.offsetMax = Vector2.zero;
-                row.type = UnityEngine.UI.Image.Type.Sliced;
+                Border(row.transform, "TopLine", new Vector2(0, .97f), new Vector2(1, 1));
+                Border(row.transform, "BottomLine", new Vector2(0, 0), new Vector2(1, .03f));
                 var button = row.gameObject.AddComponent<Button>();
+                button.colors = new ColorBlock
+                {
+                    normalColor = Color.white,
+                    highlightedColor = new Color(1.25f, 1.15f, 1.35f),
+                    pressedColor = new Color(.8f, .7f, .95f),
+                    selectedColor = new Color(1.25f, 1.15f, 1.35f),
+                    disabledColor = new Color(.5f, .5f, .5f),
+                    colorMultiplier = 1f,
+                    fadeDuration = .12f
+                };
                 button.onClick.AddListener(() => Choose(index));
-                Text("Label", row.transform, (i + 1) + "  " + choice.options[i].text, 27,
-                    new Vector2(.07f, .12f), new Vector2(.93f, .88f));
+                Text("Label", row.transform, (i + 1) + "  " + choice.options[i].text, 25,
+                    new Vector2(.04f, .05f), new Vector2(.96f, .95f));
             }
         }
 
@@ -120,19 +128,26 @@ namespace MementoMori.Dialogue
             return image;
         }
 
+        private static void Border(Transform parent, string name, Vector2 min, Vector2 max)
+        {
+            var line = Image(name, parent, null, new Color(.69f, .50f, .69f, .85f), min, max);
+            line.rectTransform.offsetMin = line.rectTransform.offsetMax = Vector2.zero;
+            line.raycastTarget = false;
+        }
+
         private static TMP_Text Text(string name, Transform parent, string content, float size, Vector2 min, Vector2 max)
         {
             var label = new GameObject(name, typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
             label.transform.SetParent(parent, false);
             label.rectTransform.anchorMin = min; label.rectTransform.anchorMax = max;
             label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
+            label.text = content;
             var fontHost = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<GrimoireScreen>();
-            label.text = content; label.font = name == "Heading"
-                ? fontHost?.HeadingFont ?? TMP_Settings.defaultFontAsset
-                : fontHost?.BodyFont ?? TMP_Settings.defaultFontAsset;
-            label.fontSize = size; label.color = new Color(.95f, .88f, .98f);
+            label.font = fontHost?.BodyFont ?? TMP_Settings.defaultFontAsset;
+            label.fontSize = size; label.color = new Color(.96f, .86f, .96f);
             label.alignment = TextAlignmentOptions.Center;
-            label.enableAutoSizing = true; label.fontSizeMin = size * .70f; label.fontSizeMax = size;
+            label.textWrappingMode = TextWrappingModes.NoWrap;
+            label.enableAutoSizing = true; label.fontSizeMin = size - 3f; label.fontSizeMax = size;
             label.raycastTarget = false;
             return label;
         }

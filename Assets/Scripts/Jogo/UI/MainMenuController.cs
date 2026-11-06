@@ -9,6 +9,7 @@ namespace MementoMori.UI
     {
         [SerializeField] private GameObject creditsPanel;
         private SettingsPanelView settingsView;
+        private GameObject creditsReturn;
         private void Start()
         {
             // Reuse the approved menu button artwork and layout for Continue.
@@ -37,6 +38,11 @@ namespace MementoMori.UI
         }
         private void Update()
         {
+            if (creditsPanel != null && creditsPanel.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
+            {
+                HideCredits();
+                return;
+            }
             if (settingsView != null && settingsView.IsOpen && !settingsView.IsCapturing
                 && settingsView.CaptureConsumedFrame != Time.frameCount && Input.GetKeyDown(KeyCode.Escape))
                 settingsView.Close();
@@ -49,8 +55,24 @@ namespace MementoMori.UI
             if (manager != null && !manager.ContinueGame())
                 Debug.LogWarning(manager.LastSaveError, this);
         }
-        public void ShowCredits() { if (creditsPanel != null) creditsPanel.SetActive(true); }
-        public void HideCredits() { if (creditsPanel != null) creditsPanel.SetActive(false); }
+        public void ShowCredits()
+        {
+            if (creditsPanel == null) return;
+            var events = UnityEngine.EventSystems.EventSystem.current;
+            creditsReturn = events != null ? events.currentSelectedGameObject : null;
+            creditsPanel.SetActive(true);
+            // Keyboard focus must move into the panel; otherwise Enter re-submits the hidden menu button.
+            var back = creditsPanel.GetComponentInChildren<Button>();
+            if (events != null && back != null) events.SetSelectedGameObject(back.gameObject);
+        }
+        public void HideCredits()
+        {
+            if (creditsPanel == null) return;
+            creditsPanel.SetActive(false);
+            var events = UnityEngine.EventSystems.EventSystem.current;
+            if (events != null && creditsReturn != null && creditsReturn.activeInHierarchy)
+                events.SetSelectedGameObject(creditsReturn);
+        }
         public void Quit()
         {
 #if UNITY_EDITOR

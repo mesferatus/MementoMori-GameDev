@@ -54,6 +54,8 @@ namespace MementoMori.Core
 
         private static void EnsureSharedSceneInfrastructure()
         {
+            GameplayFrame.EnsureForScene();
+            MementoMori.Interaction.InteractionHighlighter.EnsureForScene();
             var camera = Camera.main ?? Object.FindAnyObjectByType<Camera>();
             if (camera != null && Object.FindAnyObjectByType<AudioListener>() == null)
                 camera.gameObject.AddComponent<AudioListener>();

@@ -76,9 +76,9 @@ namespace MementoMori.Tests.EditMode
                     var approach = beat.FramesFor(state);
                     state.SetCounter("choice.CH_POE", 2);
                     var observe = beat.FramesFor(state);
-                    Assert.That(approach, Has.Length.EqualTo(6));
+                    Assert.That(approach, Has.Length.EqualTo(beat.asciiFrames.Length));
                     Assert.That(observe, Is.EqualTo(beat.asciiFrames));
-                    Assert.That(approach[5], Is.Not.EqualTo(observe[5]));
+                    Assert.That(approach[approach.Length - 1], Is.Not.EqualTo(observe[observe.Length - 1]));
                     Assert.That(approach.Distinct().Count(), Is.GreaterThan(2));
                 }
             }
