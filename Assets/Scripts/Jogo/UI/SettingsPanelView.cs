@@ -23,6 +23,8 @@ namespace MementoMori.UI
         private GameAction? capturingAction;
         public int CaptureConsumedFrame { get; private set; } = -1;
         public bool IsOpen => settingsPanel != null && settingsPanel.activeSelf;
+        /// <summary>Raised with true on open and false on close, so the screen behind can hide its chrome.</summary>
+        public event System.Action<bool> VisibilityChanged;
         public bool IsCapturing => capturingAction.HasValue;
 
         private void Update()
@@ -50,8 +52,7 @@ namespace MementoMori.UI
         {
             pausePanel = pause; mainButtons = main; slotButtons = slots;
             var cog = Resources.Load<Sprite>("SettingsCogV1");
-            var frame = Resources.Load<Sprite>("SettingsFrameV1");
-            if (cog == null || frame == null || pause == null || template == null) return;
+            if (cog == null || pause == null || template == null) return;
 
             var iconObject = new GameObject("Button_Configuracoes", typeof(RectTransform), typeof(Image), typeof(Button));
             iconObject.transform.SetParent(pause.transform, false);
@@ -64,107 +65,84 @@ namespace MementoMori.UI
             iconImage.sprite = cog; iconImage.preserveAspect = true;
             iconObject.GetComponent<Button>().onClick.AddListener(Open);
 
-            settingsPanel = new GameObject("SettingsPanel", typeof(RectTransform), typeof(Image));
+            settingsPanel = new GameObject("SettingsPanel", typeof(RectTransform));
             settingsPanel.transform.SetParent(pause.transform.parent, false);
-            var rootRect = (RectTransform)settingsPanel.transform;
-            rootRect.anchorMin = Vector2.zero; rootRect.anchorMax = Vector2.one;
-            rootRect.offsetMin = rootRect.offsetMax = Vector2.zero;
-            settingsPanel.GetComponent<Image>().color = new Color(.035f, .018f, .065f, .96f);
+            MenuPanelStyle.Stretch((RectTransform)settingsPanel.transform);
+            MenuPanelStyle.Veil(settingsPanel.transform, .82f);
+            var panel = MenuPanelStyle.Panel(settingsPanel.transform, new Vector2(1240f, 780f));
 
-            var frameObject = new GameObject("SettingsFrame", typeof(RectTransform), typeof(Image));
-            frameObject.transform.SetParent(settingsPanel.transform, false);
-            var frameRect = (RectTransform)frameObject.transform;
-            frameRect.anchorMin = frameRect.anchorMax = new Vector2(.5f, .5f);
-            frameRect.sizeDelta = new Vector2(1120f, 710f);
-            var frameImage = frameObject.GetComponent<Image>();
-            frameImage.sprite = frame; frameImage.preserveAspect = false;
-            frameImage.raycastTarget = false;
-
-            heading = new GameObject("SettingsTitle", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
-            heading.transform.SetParent(settingsPanel.transform, false);
             var buttonLabel = template.GetComponentInChildren<TMP_Text>();
-            if (buttonLabel != null) heading.font = buttonLabel.font;
-            else if (titleTemplate != null) heading.font = titleTemplate.font;
-            heading.text = "CONFIGURAÇÕES";
-            heading.fontSize = 34f;
-            heading.alignment = TextAlignmentOptions.Center;
-            heading.color = new Color(.92f, .85f, 1f);
-            var titleRect = heading.rectTransform;
-            titleRect.anchorMin = titleRect.anchorMax = new Vector2(.5f, .5f);
-            titleRect.anchoredPosition = new Vector2(0f, 195f);
-            titleRect.sizeDelta = new Vector2(850f, 78f);
+            var font = buttonLabel != null ? buttonLabel.font : titleTemplate != null ? titleTemplate.font : null;
+            heading = MenuPanelStyle.Title(panel, "CONFIGURAÇÕES", font);
 
-            var content = new GameObject("PurpleContentPanel", typeof(RectTransform), typeof(Image));
-            content.transform.SetParent(settingsPanel.transform, false);
-            var contentRect = (RectTransform)content.transform;
-            contentRect.anchorMin = contentRect.anchorMax = new Vector2(.5f, .5f);
-            contentRect.anchoredPosition = new Vector2(177f, -30f);
-            contentRect.sizeDelta = new Vector2(615f, 390f);
-            var paperImage = content.GetComponent<Image>();
-            paperImage.sprite = null;
-            paperImage.color = new Color(.105f, .058f, .17f, .98f);
-
-            var navigation = new GameObject("SettingsCategories", typeof(RectTransform), typeof(VerticalLayoutGroup));
-            navigation.transform.SetParent(settingsPanel.transform, false);
+            // Categories in one row under the title, in the menu's button frame.
+            var navigation = new GameObject("SettingsCategories", typeof(RectTransform), typeof(HorizontalLayoutGroup));
+            navigation.transform.SetParent(panel, false);
             var navRect = (RectTransform)navigation.transform;
-            navRect.anchorMin = navRect.anchorMax = new Vector2(.5f, .5f);
-            navRect.anchoredPosition = new Vector2(-353f, -30f);
-            navRect.sizeDelta = new Vector2(300f, 390f);
-            var navLayout = navigation.GetComponent<VerticalLayoutGroup>();
-            navLayout.spacing = 13f; navLayout.childAlignment = TextAnchor.UpperCenter;
+            navRect.anchorMin = navRect.anchorMax = new Vector2(.5f, 1f);
+            navRect.anchoredPosition = new Vector2(0f, -205f);
+            navRect.sizeDelta = new Vector2(1040f, 70f);
+            var navLayout = navigation.GetComponent<HorizontalLayoutGroup>();
+            navLayout.spacing = 20f; navLayout.childAlignment = TextAnchor.MiddleCenter;
             navLayout.childControlHeight = navLayout.childControlWidth = true;
             navLayout.childForceExpandHeight = navLayout.childForceExpandWidth = false;
-            var tabSprite = Resources.Load<Sprite>("SettingsTabFrameV1");
             for (var i = 0; i < tabs.Length; i++)
             {
                 var page = i;
                 var tab = CloneButton(template, navigation.transform, "Tab_" + i);
-                var tabSize = tab.GetComponent<LayoutElement>();
-                if (tabSize != null) { tabSize.minWidth = 300f; tabSize.preferredWidth = 300f; tabSize.minHeight = 74f; tabSize.preferredHeight = 74f; }
-                ((RectTransform)tab.transform).sizeDelta = new Vector2(300f, 74f);
-                tab.image.sprite = tabSprite;
-                tab.image.type = tabSprite == null ? Image.Type.Simple : Image.Type.Sliced;
-                tab.image.color = Color.white;
+                var tabSize = tab.GetComponent<LayoutElement>() ?? tab.gameObject.AddComponent<LayoutElement>();
+                tabSize.minWidth = tabSize.preferredWidth = 250f; tabSize.minHeight = tabSize.preferredHeight = 70f;
+                MenuButtonStyle.Apply(tab, new Vector2(250f, 70f), .5f);
                 var tabLabel = tab.GetComponentInChildren<TMP_Text>();
-                if (tabLabel != null) { tabLabel.fontSize = 22f; tabLabel.enableAutoSizing = false; tabLabel.margin = new Vector4(16f, 4f, 16f, 4f); }
+                if (tabLabel != null) { tabLabel.enableAutoSizing = false; tabLabel.fontSize = 22f; }
                 tab.onClick.AddListener(() => { section = page; controlPage = 0; capturingAction = null; Render(); });
                 tabs[i] = tab;
             }
 
             var list = new GameObject("SettingsRows", typeof(RectTransform), typeof(VerticalLayoutGroup));
-            list.transform.SetParent(content.transform, false);
+            list.transform.SetParent(panel, false);
             var listRect = (RectTransform)list.transform;
             listRect.anchorMin = listRect.anchorMax = new Vector2(.5f, .5f);
-            listRect.anchoredPosition = new Vector2(0f, -4f);
-            listRect.sizeDelta = new Vector2(545f, 340f);
+            listRect.anchoredPosition = new Vector2(0f, -40f);
+            listRect.sizeDelta = new Vector2(900f, 330f);
             var layout = list.GetComponent<VerticalLayoutGroup>();
-            layout.spacing = 9f; layout.childAlignment = TextAnchor.UpperCenter;
+            layout.spacing = 12f; layout.childAlignment = TextAnchor.UpperCenter;
             layout.childControlHeight = layout.childControlWidth = true;
-            layout.childForceExpandHeight = layout.childForceExpandWidth = false;
+            layout.childForceExpandHeight = false; layout.childForceExpandWidth = true;
             for (var i = 0; i < rows.Length; i++)
             {
                 rows[i] = CloneButton(template, list.transform, "Setting_" + i);
+                var rowSize = rows[i].GetComponent<LayoutElement>() ?? rows[i].gameObject.AddComponent<LayoutElement>();
+                rowSize.minHeight = rowSize.preferredHeight = 70f;
+                foreach (var extra in new[] { "SelectorLeft", "SelectorRight", "GlowOverlay" })
+                    if (rows[i].transform.Find(extra) is Transform hidden) hidden.gameObject.SetActive(false);
                 rows[i].image.sprite = null;
                 rows[i].image.type = Image.Type.Simple;
-                rows[i].image.color = new Color(.11f, .065f, .19f, .96f);
-                var value = new GameObject("Value", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
-                value.transform.SetParent(rows[i].transform, false);
-                value.font = rows[i].GetComponentInChildren<TMP_Text>().font;
-                value.fontSize = 21f;
+                rows[i].image.color = new Color(.16f, .085f, .24f, .55f);
+                rows[i].transition = Selectable.Transition.ColorTint;
+                var colors = rows[i].colors;
+                colors.normalColor = Color.white; colors.highlightedColor = colors.selectedColor = new Color(1.6f, 1.4f, 1.8f, 1f);
+                colors.colorMultiplier = 1.4f;
+                rows[i].colors = colors;
+                var underline = MenuPanelStyle.NewImage("Linha", rows[i].transform, null, MenuPanelStyle.LilacSoft);
+                underline.anchorMin = Vector2.zero; underline.anchorMax = new Vector2(1f, 0f);
+                underline.offsetMin = Vector2.zero; underline.offsetMax = new Vector2(0f, 1f);
+                var value = MenuPanelStyle.NewText("Value", rows[i].transform, rows[i].GetComponentInChildren<TMP_Text>().font, string.Empty, 24f, MenuPanelStyle.TitleColor);
                 value.alignment = TextAlignmentOptions.MidlineRight;
-                value.color = new Color(.95f, .85f, 1f);
-                value.raycastTarget = false;
                 value.rectTransform.anchorMin = new Vector2(.73f, 0f);
                 value.rectTransform.anchorMax = new Vector2(.95f, 1f);
                 value.rectTransform.offsetMin = value.rectTransform.offsetMax = Vector2.zero;
                 rowValues[i] = value;
             }
-            rowFontSize = 21f;
+            rowFontSize = 24f;
             for (var i = 0; i < rows.Length; i++) audioSliders[i] = CreateSlider(rows[i], i);
-            var back = CloneButton(template, list.transform, "Button_Voltar");
+
+            var back = CloneButton(template, panel, "Button_Voltar");
+            var backRect = (RectTransform)back.transform;
+            backRect.anchorMin = backRect.anchorMax = backRect.pivot = new Vector2(.5f, 0f);
+            backRect.anchoredPosition = new Vector2(0f, 46f);
             back.GetComponentInChildren<TMP_Text>().text = "VOLTAR";
-            back.GetComponentInChildren<TMP_Text>().fontSize = 22f;
-            MenuButtonStyle.Apply(back, null, .6f);
+            MenuButtonStyle.Apply(back, new Vector2(380f, 84f), .6f);
             back.onClick.AddListener(Close);
             settingsPanel.SetActive(false);
         }
@@ -186,25 +164,29 @@ namespace MementoMori.UI
             var rect = (RectTransform)root.transform;
             rect.anchorMin = new Vector2(.50f, .16f); rect.anchorMax = new Vector2(.76f, .84f);
             rect.offsetMin = rect.offsetMax = Vector2.zero;
-            var track = new GameObject("Track", typeof(RectTransform), typeof(Image));
-            track.transform.SetParent(root.transform, false);
-            var trackRect = (RectTransform)track.transform;
-            trackRect.anchorMin = Vector2.zero; trackRect.anchorMax = Vector2.one;
-            trackRect.offsetMin = trackRect.offsetMax = Vector2.zero;
-            var trackImage = track.GetComponent<Image>();
-            trackImage.sprite = Resources.Load<Sprite>("SettingsSliderTrackV1");
-            trackImage.preserveAspect = false;
-            var handle = new GameObject("Handle", typeof(RectTransform), typeof(Image));
-            handle.transform.SetParent(root.transform, false);
-            var handleRect = (RectTransform)handle.transform;
-            handleRect.sizeDelta = new Vector2(38f, 38f);
-            var handleImage = handle.GetComponent<Image>();
-            handleImage.sprite = Resources.Load<Sprite>("SettingsSliderThumbV1");
-            handleImage.preserveAspect = true;
-            handleImage.raycastTarget = false;
+            // Drawn track and fill with the menu's star as the handle (no atlas sprite needed).
+            var track = MenuPanelStyle.NewImage("Track", root.transform, null, new Color(.3f, .2f, .4f, .9f));
+            track.anchorMin = new Vector2(0f, .5f); track.anchorMax = new Vector2(1f, .5f);
+            track.offsetMin = new Vector2(0f, -2f); track.offsetMax = new Vector2(0f, 2f);
+            var fillArea = new GameObject("FillArea", typeof(RectTransform));
+            var fillAreaRect = (RectTransform)fillArea.transform;
+            fillAreaRect.SetParent(root.transform, false);
+            fillAreaRect.anchorMin = new Vector2(0f, .5f); fillAreaRect.anchorMax = new Vector2(1f, .5f);
+            fillAreaRect.offsetMin = new Vector2(0f, -2f); fillAreaRect.offsetMax = new Vector2(0f, 2f);
+            var fill = MenuPanelStyle.NewImage("Fill", fillAreaRect, null, MenuPanelStyle.Lilac);
+            fill.offsetMin = fill.offsetMax = Vector2.zero;
+            var handleArea = new GameObject("HandleArea", typeof(RectTransform));
+            var handleAreaRect = (RectTransform)handleArea.transform;
+            handleAreaRect.SetParent(root.transform, false);
+            MenuPanelStyle.Stretch(handleAreaRect);
+            var handleRect = MenuPanelStyle.NewImage("Handle", handleAreaRect, MenuPanelStyle.Diamond(), MenuPanelStyle.TitleColor);
+            handleRect.sizeDelta = new Vector2(30f, 30f);
+            var handleImage = handleRect.GetComponent<Image>();
+            handleImage.raycastTarget = true;
             var slider = root.GetComponent<Slider>();
             slider.minValue = 0f; slider.maxValue = 1f;
             slider.handleRect = handleRect;
+            slider.fillRect = fill;
             slider.targetGraphic = handleImage;
             slider.gameObject.SetActive(false);
             return slider;
@@ -216,6 +198,7 @@ namespace MementoMori.UI
             section = 0; controlPage = 0; capturingAction = null; Render();
             if (pausePanel != null) pausePanel.SetActive(false);
             settingsPanel.SetActive(true);
+            VisibilityChanged?.Invoke(true);
         }
 
         public void Close()
@@ -227,6 +210,7 @@ namespace MementoMori.UI
             if (slotButtons != null) slotButtons.SetActive(false);
             if (mainButtons != null) mainButtons.SetActive(true);
             if (pausePanel != null) pausePanel.SetActive(true);
+            VisibilityChanged?.Invoke(false);
         }
 
         private void SetRow(int index, string caption, UnityEngine.Events.UnityAction action)
@@ -276,7 +260,9 @@ namespace MementoMori.UI
             for (var i = 0; i < tabs.Length; i++)
             {
                 tabs[i].GetComponentInChildren<TMP_Text>().text = sectionNames[i];
-                tabs[i].image.color = i == section ? Color.white : new Color(.62f, .52f, .73f, 1f);
+                tabs[i].image.color = i == section ? Color.white : new Color(.55f, .46f, .66f, 1f);
+                var tabText = tabs[i].GetComponentInChildren<TMP_Text>();
+                tabText.color = i == section ? MenuPanelStyle.TitleColor : MenuPanelStyle.CaptionColor;
             }
             for (var i = 0; i < rows.Length; i++)
             {

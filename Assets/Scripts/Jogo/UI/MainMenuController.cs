@@ -36,7 +36,64 @@ namespace MementoMori.UI
                 shortcut.anchoredPosition = new Vector2(-78f, -74f);
             }
             ApplyCamilaComposition(play.transform.parent as RectTransform, shortcut);
-            if (creditsPanel != null) MenuButtonStyle.ApplyAll(creditsPanel.transform, null, .7f);
+            RestyleCredits(creditsPanel);
+            settingsView.VisibilityChanged += open => SetMenuChromeVisible(!open);
+        }
+
+        // Title, buttons, credits and cog stay out of sight while a panel (credits, settings) is open.
+        private static void SetMenuChromeVisible(bool visible)
+        {
+            foreach (var name in new[] { "Logo_MementoMoriBeta", "MainMenuButtons", "Button_Creditos", "AnelEngrenagem", "Button_Configuracoes", "MoonEmblem" })
+            {
+                var target = GameObject.Find("MainMenuCanvas")?.transform.Find(name);
+                if (target != null) target.gameObject.SetActive(visible);
+            }
+        }
+
+        /// <summary>Credits in the shared panel look (veil over the menu art, thin double frame, spaced title).</summary>
+        private static void RestyleCredits(GameObject credits)
+        {
+            if (credits == null) return;
+            var root = credits.transform;
+            var oldPanel = root.Find("CreditsPanel");
+            var titleFont = oldPanel != null ? oldPanel.GetComponentInChildren<TMP_Text>(true)?.font : null;
+            TMP_FontAsset bodyFont = null;
+            if (oldPanel != null && oldPanel.Find("Body_TMP") is Transform body) bodyFont = body.GetComponent<TMP_Text>()?.font;
+            if (oldPanel != null) oldPanel.gameObject.SetActive(false);
+            // The old opaque backdrop hid the illustration; the veil below lets it show through, dimmed.
+            if (root.GetComponent<Image>() is Image backdrop) backdrop.color = Color.clear;
+
+            var veil = MenuPanelStyle.Veil(root, .8f);
+            veil.SetAsFirstSibling();
+            var panel = MenuPanelStyle.Panel(root, new Vector2(1000f, 820f));
+            panel.SetSiblingIndex(1);
+            MenuPanelStyle.Title(panel, "CRÉDITOS", titleFont);
+
+            var names = MenuPanelStyle.NewText("Equipe", panel, bodyFont,
+                "<size=22><color=#B9A2D5>ARTE, ORGANIZAÇÃO VISUAL E COLLIDERS</color></size>\n<size=44>Luiza Canova</size>\n\n" +
+                "<size=22><color=#B9A2D5>PROGRAMAÇÃO, SHADERS E ÁUDIO</color></size>\n<size=44>Callisto Monteiro Mascoloti</size>\n\n" +
+                "<size=22><color=#B9A2D5>ILUSTRAÇÃO DO MENU</color></size>\n<size=44>Camila David Ribeiro</size>",
+                40f, MenuPanelStyle.TitleColor);
+            names.characterSpacing = 2f;
+            names.rectTransform.anchorMin = names.rectTransform.anchorMax = new Vector2(.5f, .5f);
+            names.rectTransform.sizeDelta = new Vector2(860f, 440f);
+            names.rectTransform.anchoredPosition = new Vector2(0f, 30f);
+
+            var fonts = MenuPanelStyle.NewText("Fontes", panel, bodyFont,
+                "Fontes Cinzel, Cormorant Garamond e UnifrakturMaguntia (SIL Open Font License) · Feito com Unity",
+                20f, MenuPanelStyle.CaptionColor);
+            fonts.rectTransform.anchorMin = fonts.rectTransform.anchorMax = new Vector2(.5f, 0f);
+            fonts.rectTransform.sizeDelta = new Vector2(900f, 40f);
+            fonts.rectTransform.anchoredPosition = new Vector2(0f, 150f);
+            MenuPanelStyle.Divider(panel, -820f + 190f, 300f);
+
+            if (root.Find("Button_Voltar") is RectTransform back)
+            {
+                back.SetParent(panel, false);
+                back.anchorMin = back.anchorMax = back.pivot = new Vector2(.5f, 0f);
+                back.anchoredPosition = new Vector2(0f, 46f);
+                MenuButtonStyle.Apply(back.GetComponent<Button>(), new Vector2(380f, 84f), .6f);
+            }
         }
 
         /// <summary>
@@ -247,6 +304,7 @@ namespace MementoMori.UI
             var events = UnityEngine.EventSystems.EventSystem.current;
             creditsReturn = events != null ? events.currentSelectedGameObject : null;
             creditsPanel.SetActive(true);
+            SetMenuChromeVisible(false);
             // Keyboard focus must move into the panel; otherwise Enter re-submits the hidden menu button.
             var back = creditsPanel.GetComponentInChildren<Button>();
             if (events != null && back != null) events.SetSelectedGameObject(back.gameObject);
@@ -255,6 +313,7 @@ namespace MementoMori.UI
         {
             if (creditsPanel == null) return;
             creditsPanel.SetActive(false);
+            SetMenuChromeVisible(true);
             var events = UnityEngine.EventSystems.EventSystem.current;
             if (events != null && creditsReturn != null && creditsReturn.activeInHierarchy)
                 events.SetSelectedGameObject(creditsReturn);
