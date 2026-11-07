@@ -9,14 +9,14 @@ namespace MementoMori.UI
     {
         [SerializeField] private Transform groundAnchor;
         private SpriteRenderer visual;
-        private BoxCollider2D[] roomProps;
+        private Collider2D[] roomProps;
 
         public void Configure(Transform anchor) => groundAnchor = anchor;
         private void Awake()
         {
             visual = GetComponent<SpriteRenderer>();
             if (gameObject.scene.name == "Quarto")
-                roomProps = FindObjectsByType<BoxCollider2D>(FindObjectsSortMode.None);
+                roomProps = FindObjectsByType<Collider2D>(FindObjectsSortMode.None);
         }
         private void LateUpdate()
         {
@@ -27,6 +27,7 @@ namespace MementoMori.UI
             foreach (var prop in roomProps)
             {
                 if (prop == null || !prop.enabled || prop.isTrigger || prop.gameObject.scene != gameObject.scene) continue;
+                if (prop.attachedRigidbody != null && prop.attachedRigidbody.bodyType == RigidbodyType2D.Dynamic) continue;
                 var sprite = prop.GetComponent<SpriteRenderer>();
                 if (sprite == null || sprite == visual) continue;
                 sprite.sortingOrder = Mathf.Clamp(5000 - Mathf.RoundToInt(prop.bounds.min.y * 100f), -32000, 32000);

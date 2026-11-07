@@ -137,7 +137,9 @@ namespace MementoMori.Interaction
             }
             if (best != null) return best;
             // Interaction volumes are often separate from the approved art: use the smallest prop sprite under it.
-            var at = (Vector2)target.transform.position; float smallest = float.MaxValue;
+            // Prefer the prop the volume sits on (the chest), not a smaller neighbour that merely
+            // comes within reach (the altar table beside it); then the one centred closest.
+            var at = (Vector2)target.transform.position; float bestScore = float.MaxValue;
             foreach (var sr in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
             {
                 if (sr.sprite == null || !sr.enabled || sr.sortingOrder < 0 || sr.name == "InteractionRim") continue;
@@ -145,9 +147,11 @@ namespace MementoMori.Interaction
                 if (sr.GetComponentInParent<MementoMori.Player.PlayerController>() != null) continue;
                 var b = sr.bounds; var s = b.size;
                 if (s.x > 5f || s.y > 5f) continue;
-                var near = b.SqrDistance(new Vector3(at.x, at.y, b.center.z));
+                var point = new Vector3(at.x, at.y, b.center.z);
+                var near = b.SqrDistance(point);
                 if (near > .36f) continue;
-                if (s.x * s.y < smallest) { smallest = s.x * s.y; best = sr; }
+                var score = (near > 0f ? 100f + near : 0f) + ((Vector2)b.center - at).sqrMagnitude;
+                if (score < bestScore) { bestScore = score; best = sr; }
             }
             return best;
         }
