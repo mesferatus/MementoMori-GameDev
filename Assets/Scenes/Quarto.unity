@@ -5005,10 +5005,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 60
     m_Data: {fileID: 763255161}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: -300008588882087158, guid: 4ddc27b73278b5f47adca04f32b8532e, type: 2}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 60
@@ -17781,10 +17778,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 56
     m_Data: {fileID: 330723383}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1185809846}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 56
@@ -21332,10 +21326,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 60
     m_Data: {fileID: 223668800}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1470734314}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 60
@@ -27375,10 +27366,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 224
     m_Data: {fileID: 527238609}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1894394037}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 224
@@ -34515,10 +34503,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 288
     m_Data: {fileID: 947856264}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 71686265}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 288
@@ -46304,10 +46289,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 22
     m_Data: {fileID: 1939579088}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: -7874064841768425014, guid: dd66f9c1e5817a043820eb34829ce2d7, type: 2}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 22
@@ -49896,10 +49878,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 22
     m_Data: {fileID: 767754247}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1629267402}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 22
@@ -53122,10 +53101,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 60
     m_Data: {fileID: 763255161}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: -300008588882087158, guid: 4ddc27b73278b5f47adca04f32b8532e, type: 2}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 60
@@ -55029,10 +55005,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 50
     m_Data: {fileID: 428675613}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1303759310}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 50
@@ -71393,10 +71366,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 325
     m_Data: {fileID: 774107658}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 634859613}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 325
@@ -81179,10 +81149,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 76
     m_Data: {fileID: 1118618605}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1959460833}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 76
@@ -87589,10 +87556,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 224
     m_Data: {fileID: 385922430}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1567572339}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 224
@@ -90961,10 +90925,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 60
     m_Data: {fileID: 206388923}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1710283254}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 60
@@ -95712,9 +95673,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.PixelPerfectCamera
   m_ComponentVersion: 1
-  m_AssetsPPU: 33
-  m_RefResolutionX: 854
-  m_RefResolutionY: 480
+  m_AssetsPPU: 64
+  m_RefResolutionX: 1655
+  m_RefResolutionY: 931
   m_CropFrame: 0
   m_GridSnapping: 1
   m_FilterMode: 0
@@ -102606,22 +102567,7 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 2
     m_Data: {fileID: 974897978}
-  m_TileSpriteArray:
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 951650520}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 325411251}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 881490726}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1537301944}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 1016417953}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 74
