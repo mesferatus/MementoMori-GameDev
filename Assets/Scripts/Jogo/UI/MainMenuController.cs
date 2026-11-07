@@ -60,6 +60,7 @@ namespace MementoMori.UI
             artRect.anchorMin = artRect.anchorMax = artRect.pivot = new Vector2(.5f, .5f);
             var cover = Mathf.Max(width / art.rect.width, height / art.rect.height);
             artRect.sizeDelta = new Vector2(art.rect.width * cover, art.rect.height * cover);
+            // Fills the whole screen.
             artRect.anchoredPosition = Vector2.zero;
 
             // Reversible chromatic treatment (Codex proposal #713580 at low strength) as its own layer.
@@ -73,7 +74,11 @@ namespace MementoMori.UI
             var bottom = NewImage("SombraBotoes", canvas, insertAt + 3, MakeVerticalFade(true), dark);
             bottom.anchorMin = Vector2.zero; bottom.anchorMax = new Vector2(1f, .42f); bottom.offsetMin = bottom.offsetMax = Vector2.zero;
 
-            AddThinFrame(canvas, insertAt + 4);
+            // Strong dark corners, clear centre.
+            var vignette = NewImage("VinhetaCantos", canvas, insertAt + 4, Resources.Load<Sprite>("MainMenu/VinhetaMenu"), Color.white);
+            Stretch(vignette);
+
+            AddThinFrame(canvas, insertAt + 5);
 
             foreach (var name in new[] { "R4Corner0", "R4Corner1", "R4Corner2", "R4Corner3", "CenterSigil" })
             {
@@ -84,19 +89,28 @@ namespace MementoMori.UI
 
             // Small crescent mark at the bottom centre of the frame.
             Move(canvas.Find("MoonEmblem"), new Vector2(0f, -height * .5f + 30f), .32f);
-            // The title, large and centred at the top.
-            Move(canvas.Find("Logo_MementoMoriBeta"), new Vector2(0f, height * .5f - 165f), 1.12f);
+            // The title, large and centred at the top (its full 2:1 artwork, no letterbox).
+            if (canvas.Find("Logo_MementoMoriBeta") is RectTransform logo)
+            {
+                logo.anchorMin = logo.anchorMax = logo.pivot = new Vector2(.5f, .5f);
+                logo.sizeDelta = new Vector2(1000f, 500f);
+                logo.localScale = Vector3.one;
+                logo.anchoredPosition = new Vector2(0f, height * .5f - 270f);
+                var logoImage = logo.GetComponent<Image>();
+                if (logoImage != null) logoImage.preserveAspect = true;
+            }
 
-            // Buttons: JOGAR prominent, CONTINUAR and SAIR smaller below it, centred.
+            // Buttons: JOGAR, CONTINUAR and SAIR, all the same size, stacked and centred.
             var layout = buttons.GetComponent<VerticalLayoutGroup>();
             if (layout != null) layout.enabled = false;
             buttons.localScale = Vector3.one;
-            buttons.anchoredPosition = new Vector2(0f, -height * .5f + 250f);
+            buttons.anchoredPosition = new Vector2(0f, -height * .5f + 230f);
             var frame = Resources.Load<Sprite>("MainMenu/BotaoMenu");
-            Place(buttons.Find("Button_Jogar"), new Vector2(0f, 40f), 1f, frame, new Vector2(600f, 112f));
-            Place(buttons.Find("Button_Continuar"), new Vector2(0f, -66f), .76f, frame, new Vector2(600f, 100f));
-            Place(buttons.Find("Button_Sair"), new Vector2(0f, -142f), .76f, frame, new Vector2(600f, 100f));
-            Style(buttons.Find("Button_Creditos"), frame, new Vector2(600f, 100f));
+            var size = new Vector2(560f, 92f);
+            Place(buttons.Find("Button_Jogar"), new Vector2(0f, 104f), 1f, frame, size);
+            Place(buttons.Find("Button_Continuar"), new Vector2(0f, 0f), 1f, frame, size);
+            Place(buttons.Find("Button_Sair"), new Vector2(0f, -104f), 1f, frame, size);
+            Style(buttons.Find("Button_Creditos"), frame, size);
 
             // CRÉDITOS: small, bottom-left. The cog: bottom-right. Both stay below the credits/settings panels.
             var credits = canvas.Find("Credits");
@@ -106,18 +120,23 @@ namespace MementoMori.UI
                 creditsButton.SetSiblingIndex(credits != null ? credits.GetSiblingIndex() : canvas.childCount - 1);
                 creditsButton.anchorMin = creditsButton.anchorMax = Vector2.zero;
                 creditsButton.pivot = new Vector2(.5f, .5f);
-                creditsButton.anchoredPosition = new Vector2(240f, 110f);
-                creditsButton.localScale = Vector3.one * .5f;
+                creditsButton.anchoredPosition = new Vector2(250f, 96f);
+                creditsButton.localScale = Vector3.one * .72f;
             }
             if (settingsCog != null)
             {
                 settingsCog.gameObject.SetActive(true);
                 settingsCog.SetSiblingIndex(credits != null ? credits.GetSiblingIndex() : canvas.childCount - 1);
                 settingsCog.anchorMin = settingsCog.anchorMax = new Vector2(1f, 0f);
-                settingsCog.anchoredPosition = new Vector2(-190f, 140f);
-                settingsCog.sizeDelta = new Vector2(104f, 104f);
+                settingsCog.anchoredPosition = new Vector2(-130f, 126f);
+                settingsCog.sizeDelta = new Vector2(84f, 84f);
                 var cogImage = settingsCog.GetComponent<Image>();
-                if (cogImage != null) cogImage.color = new Color(.92f, .82f, 1f, 1f);
+                if (cogImage != null) cogImage.color = new Color(.95f, .86f, 1f, 1f);
+                // Ornate ring behind the cog so it reads as a button, matching the reference.
+                var ring = NewImage("AnelEngrenagem", canvas, settingsCog.GetSiblingIndex(), Resources.Load<Sprite>("MainMenu/AnelEngrenagem"), Color.white);
+                ring.anchorMin = ring.anchorMax = new Vector2(1f, 0f);
+                ring.anchoredPosition = settingsCog.anchoredPosition;
+                ring.sizeDelta = new Vector2(136f, 136f);
             }
         }
 
@@ -140,13 +159,16 @@ namespace MementoMori.UI
             var button = rect.GetComponent<Button>();
             if (button != null)
             {
+                // The old sprite-swap transition leaves its disabled sprite in overrideSprite: clear both.
+                button.spriteState = new SpriteState();
+                if (image != null) image.overrideSprite = null;
                 button.transition = Selectable.Transition.ColorTint;
                 var colors = button.colors;
                 colors.normalColor = new Color(.86f, .82f, .9f, 1f);
                 colors.highlightedColor = Color.white;
                 colors.selectedColor = Color.white;
                 colors.pressedColor = new Color(.7f, .62f, .78f, 1f);
-                colors.disabledColor = new Color(.5f, .46f, .55f, .55f);
+                colors.disabledColor = new Color(.55f, .5f, .6f, 1f); // same shape as the others, only dimmer
                 colors.colorMultiplier = 1.15f;
                 colors.fadeDuration = .12f;
                 button.colors = colors;
