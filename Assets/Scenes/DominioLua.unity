@@ -2403079,7 +2403079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &170259431
 Transform:
   m_ObjectHideFlags: 0
@@ -2423800,7 +2423800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &211569601
 Transform:
   m_ObjectHideFlags: 0
@@ -2672688,7 +2672688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &755272073
 Transform:
   m_ObjectHideFlags: 0
@@ -2705600,7 +2705600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &822493977
 Transform:
   m_ObjectHideFlags: 0
@@ -2726690,7 +2726690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &856004643
 Transform:
   m_ObjectHideFlags: 0
@@ -2754188,7 +2754188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &945751817
 Transform:
   m_ObjectHideFlags: 0
@@ -3350777,7 +3350777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1725948213
 Transform:
   m_ObjectHideFlags: 0
@@ -3454751,7 +3454751,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 8.4375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
