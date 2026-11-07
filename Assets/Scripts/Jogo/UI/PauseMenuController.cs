@@ -67,6 +67,9 @@ namespace MementoMori.UI
                 SetCompactHeight(slotButton);
             }
             SetCompactHeight(MakeButton(template, slotRect, "Button_Voltar", "VOLTAR", ShowMain));
+            // Same button look as the main menu.
+            MenuButtonStyle.ApplyAll(buttons, null, .6f);
+            MenuButtonStyle.ApplyAll(slotRect, null, .6f);
             slotButtons.SetActive(false);
             settingsView = gameObject.AddComponent<SettingsPanelView>();
             settingsView.Configure(panel, mainButtons, slotButtons, template, title);

@@ -36,6 +36,7 @@ namespace MementoMori.UI
                 shortcut.anchoredPosition = new Vector2(-78f, -74f);
             }
             ApplyCamilaComposition(play.transform.parent as RectTransform, shortcut);
+            if (creditsPanel != null) MenuButtonStyle.ApplyAll(creditsPanel.transform, null, .7f);
         }
 
         /// <summary>
@@ -152,41 +153,7 @@ namespace MementoMori.UI
         /// <summary>Reference button frame (9-slice) with a colour-tint hover, replacing the old bar art.</summary>
         private static void Style(Transform target, Sprite frame, Vector2 size)
         {
-            if (target is not RectTransform rect || frame == null) return;
-            rect.sizeDelta = size;
-            var image = rect.GetComponent<Image>();
-            if (image != null) { image.sprite = frame; image.type = Image.Type.Sliced; image.color = Color.white; }
-            var button = rect.GetComponent<Button>();
-            if (button != null)
-            {
-                // The old sprite-swap transition leaves its disabled sprite in overrideSprite: clear both.
-                button.spriteState = new SpriteState();
-                if (image != null) image.overrideSprite = null;
-                button.transition = Selectable.Transition.ColorTint;
-                var colors = button.colors;
-                colors.normalColor = new Color(.86f, .82f, .9f, 1f);
-                colors.highlightedColor = Color.white;
-                colors.selectedColor = Color.white;
-                colors.pressedColor = new Color(.7f, .62f, .78f, 1f);
-                colors.disabledColor = new Color(.55f, .5f, .6f, 1f); // same shape as the others, only dimmer
-                colors.colorMultiplier = 1.15f;
-                colors.fadeDuration = .12f;
-                button.colors = colors;
-            }
-            foreach (var name in new[] { "SelectorLeft", "SelectorRight", "GlowOverlay" })
-            {
-                // The new frame carries its own stars; the old side diamonds would double them.
-                var extra = rect.Find(name);
-                if (extra != null) extra.gameObject.SetActive(false);
-            }
-            var label = rect.GetComponentInChildren<TMP_Text>(true);
-            if (label != null)
-            {
-                label.rectTransform.anchorMin = new Vector2(.2f, .14f);
-                label.rectTransform.anchorMax = new Vector2(.8f, .86f);
-                label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
-                label.color = new Color(.95f, .9f, 1f, 1f);
-            }
+            if (target != null) MenuButtonStyle.Apply(target.GetComponent<Button>(), size);
         }
 
         // Thin lilac frame a little inside the screen edge, drawn as four 2px lines.

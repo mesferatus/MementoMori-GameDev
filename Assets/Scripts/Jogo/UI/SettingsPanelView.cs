@@ -164,9 +164,7 @@ namespace MementoMori.UI
             var back = CloneButton(template, list.transform, "Button_Voltar");
             back.GetComponentInChildren<TMP_Text>().text = "VOLTAR";
             back.GetComponentInChildren<TMP_Text>().fontSize = 22f;
-            back.image.sprite = null;
-            back.image.type = Image.Type.Simple;
-            back.image.color = new Color(.22f, .13f, .32f, .98f);
+            MenuButtonStyle.Apply(back, null, .6f);
             back.onClick.AddListener(Close);
             settingsPanel.SetActive(false);
         }
