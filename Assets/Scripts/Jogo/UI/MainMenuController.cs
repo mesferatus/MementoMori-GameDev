@@ -84,8 +84,8 @@ namespace MementoMori.UI
                 20f, MenuPanelStyle.CaptionColor);
             fonts.rectTransform.anchorMin = fonts.rectTransform.anchorMax = new Vector2(.5f, 0f);
             fonts.rectTransform.sizeDelta = new Vector2(900f, 40f);
-            fonts.rectTransform.anchoredPosition = new Vector2(0f, 150f);
-            MenuPanelStyle.Divider(panel, -820f + 190f, 300f);
+            fonts.rectTransform.anchoredPosition = new Vector2(0f, 200f);
+            MenuPanelStyle.Divider(panel, -820f + 172f, 300f);
 
             if (root.Find("Button_Voltar") is RectTransform back)
             {
