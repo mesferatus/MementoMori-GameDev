@@ -3,60 +3,34 @@ using System.Linq;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
-using UnityEngine;
 
 namespace MementoMori.EditorTools
 {
     public static class BuildWindows
     {
-        [MenuItem("Memento Mori/Build/Windows Beta")]
-        public static void Build()
-        {
-            // The evidence build uses Mono so Unity's IL2CPP linker does not pull in
-            // package test assemblies that reference an unavailable Unsafe facade.
-            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
-            var enabledScenes = EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray();
-            if (enabledScenes.Length == 0)
-            {
-                Debug.LogError("No enabled scenes found in Build Settings.");
-                return;
-            }
+        public const string Folder = "Builds/MementoMori_v1.0";
 
-            Directory.CreateDirectory("Builds");
+        /// <summary>
+        /// Release player for Windows. LZ4HC compresses the data files without touching texture quality
+        /// (the map layers stay full size and uncompressed in memory), which is what shrinks the download.
+        /// </summary>
+        [MenuItem("Memento Mori/Build/Windows (release)")]
+        public static string Build()
+        {
+            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
+            var scenes = EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray();
+            if (Directory.Exists(Folder)) Directory.Delete(Folder, true);
+            Directory.CreateDirectory(Folder);
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
             {
-                scenes = enabledScenes,
-                locationPathName = "Builds/MementoMori-validated.exe",
+                scenes = scenes,
+                locationPathName = Folder + "/MementoMori.exe",
                 target = BuildTarget.StandaloneWindows64,
-                // CT evidence is intentionally compiled only into the Development build.
-                // A release build never accepts the --ct-evidence switch.
-                options = BuildOptions.Development | BuildOptions.AllowDebugging
+                options = BuildOptions.CompressWithLz4HC
             });
-
+            foreach (var dir in Directory.GetDirectories(Folder, "*_DoNotShip")) Directory.Delete(dir, true);
             if (report.summary.result != BuildResult.Succeeded)
                 throw new BuildFailedException($"Windows build failed: {report.summary.result}");
-
-            Debug.Log($"Memento Mori Windows build created at {report.summary.outputPath} ({report.summary.totalSize} bytes).");
-        }
-
-        // Clean demonstration package: release player, no development overlay or CT switch.
-        [MenuItem("Memento Mori/Build/Windows Demo (release)")]
-        public static string BuildDemo()
-        {
-            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
-            var enabledScenes = EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray();
-            const string folder = "Builds/MementoMori_Demo";
-            if (Directory.Exists(folder)) Directory.Delete(folder, true);
-            Directory.CreateDirectory(folder);
-            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
-            {
-                scenes = enabledScenes,
-                locationPathName = folder + "/MementoMori.exe",
-                target = BuildTarget.StandaloneWindows64,
-                options = BuildOptions.None
-            });
-            var burst = Directory.GetDirectories(folder, "*_BurstDebugInformation_DoNotShip");
-            foreach (var dir in burst) Directory.Delete(dir, true);
             return $"{report.summary.result} {report.summary.totalSize} bytes, {report.summary.totalErrors} errors, {report.summary.totalWarnings} warnings, {report.summary.totalTime}";
         }
     }
