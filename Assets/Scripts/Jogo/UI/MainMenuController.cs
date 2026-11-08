@@ -105,7 +105,7 @@ namespace MementoMori.UI
             // Fills the whole screen.
             artRect.anchoredPosition = Vector2.zero;
 
-            // Reversible chromatic treatment (Codex proposal #713580 at low strength) as its own layer.
+            // Light violet wash over the illustration, kept as its own layer.
             var tint = NewImage("CamilaTratamentoCromatico", canvas, insertAt + 1, null, new Color(.2f, .07f, .26f, .22f));
             Stretch(tint);
 
@@ -198,7 +198,7 @@ namespace MementoMori.UI
         }
 
         // Thin lilac frame a little inside the screen edge, drawn as four 2px lines.
-        private static void AddThinFrame(RectTransform canvas, int index)
+        internal static void AddThinFrame(RectTransform canvas, int index)
         {
             const float inset = 26f, thickness = 2f;
             var color = new Color(.72f, .55f, .86f, .8f);
@@ -223,7 +223,7 @@ namespace MementoMori.UI
             var image = go.GetComponent<Image>(); image.color = color; image.raycastTarget = false;
         }
 
-        private static Sprite MakeVerticalFade(bool fromBottom)
+        internal static Sprite MakeVerticalFade(bool fromBottom)
         {
             const int size = 128;
             var texture = new Texture2D(1, size, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp };

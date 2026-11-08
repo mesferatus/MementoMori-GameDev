@@ -181,19 +181,30 @@ namespace MementoMori.UI
             scaler.referenceResolution = new Vector2(1920f, 1080f);
             scaler.matchWidthOrHeight = .5f;
 
+            var rootRect = (RectTransform)root.transform;
             var backdrop = NewLayer(root.transform, "Backdrop", null, new Color(.02f, .008f, .04f, 1f));
             backdrop.anchorMin = Vector2.zero; backdrop.anchorMax = Vector2.one;
             backdrop.offsetMin = backdrop.offsetMax = Vector2.zero;
 
-            var image = NewLayer(root.transform, "CamilaIlustracao", art, new Color(1f, 1f, 1f, .78f));
-            image.anchorMin = Vector2.zero; image.anchorMax = Vector2.one;
-            image.offsetMin = image.offsetMax = Vector2.zero;
-            image.GetComponent<Image>().preserveAspect = true;
+            // Same treatment as the main menu: art covering the whole screen, violet wash, soft shades,
+            // dark corners and the thin lilac frame.
+            var image = NewLayer(root.transform, "CamilaIlustracao", art, Color.white);
+            image.anchorMin = image.anchorMax = image.pivot = new Vector2(.5f, .5f);
+            var cover = Mathf.Max(1920f / art.rect.width, 1080f / art.rect.height);
+            image.sizeDelta = new Vector2(art.rect.width * cover, art.rect.height * cover);
+            image.gameObject.AddComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
+            image.GetComponent<AspectRatioFitter>().aspectRatio = art.rect.width / art.rect.height;
 
-            // Darker band where the closing message sits, so it stays legible over the art.
-            var band = NewLayer(root.transform, "TextShade", null, new Color(.02f, .008f, .04f, .55f));
-            band.anchorMin = new Vector2(.12f, .58f); band.anchorMax = new Vector2(.88f, .86f);
-            band.offsetMin = band.offsetMax = Vector2.zero;
+            var wash = NewLayer(root.transform, "TratamentoRoxo", null, new Color(.2f, .07f, .26f, .3f));
+            wash.anchorMin = Vector2.zero; wash.anchorMax = Vector2.one; wash.offsetMin = wash.offsetMax = Vector2.zero;
+            var dark = new Color(.02f, .006f, .035f, 1f);
+            var top = NewLayer(root.transform, "SombraTitulo", MainMenuController.MakeVerticalFade(false), dark);
+            top.anchorMin = new Vector2(0f, .62f); top.anchorMax = Vector2.one; top.offsetMin = top.offsetMax = Vector2.zero;
+            var bottom = NewLayer(root.transform, "SombraTexto", MainMenuController.MakeVerticalFade(true), dark);
+            bottom.anchorMin = Vector2.zero; bottom.anchorMax = new Vector2(1f, .5f); bottom.offsetMin = bottom.offsetMax = Vector2.zero;
+            var vignette = NewLayer(root.transform, "VinhetaCantos", Resources.Load<Sprite>("MainMenu/VinhetaMenu"), Color.white);
+            vignette.anchorMin = Vector2.zero; vignette.anchorMax = Vector2.one; vignette.offsetMin = vignette.offsetMax = Vector2.zero;
+            MainMenuController.AddThinFrame(rootRect, rootRect.childCount);
         }
 
         private static RectTransform NewLayer(Transform parent, string name, Sprite sprite, Color color)
@@ -217,7 +228,7 @@ namespace MementoMori.UI
             foreach (var t in FindObjectsByType<RectTransform>(FindObjectsInactive.Include, FindObjectsSortMode.None))
                 if (t.name == "FinalBetaUI") { ui = t; break; }
             if (ui == null) return;
-            if (ui.Find("Backdrop")?.GetComponent<Image>() is Image backdrop) backdrop.color = new Color(.02f, .008f, .04f, .62f);
+            if (ui.Find("Backdrop")?.GetComponent<Image>() is Image backdrop) backdrop.color = Color.clear;
             // The emblem sat over the illustration's face; the logo above already closes the card.
             ui.Find("CentralOrnament")?.gameObject.SetActive(false);
             foreach (var name in new[] { "CreditsButton", "ReturnButton", "QuitButton" })
