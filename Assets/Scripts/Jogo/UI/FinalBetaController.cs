@@ -32,6 +32,7 @@ namespace MementoMori.UI
         {
             var roomVisual = FindAnyObjectByType<RoomRitualVisual>();
             if (roomVisual != null) roomVisual.SetReturnedRoom(true);
+            RestyleEndCard();
             if (endCardRoot != null) endCardRoot.SetActive(false);
             EnsureCanonicalNarrativeEntry();
             if (returnButton != null)
@@ -203,6 +204,43 @@ namespace MementoMori.UI
             image.color = color;
             image.raycastTarget = false;
             return (RectTransform)go.transform;
+        }
+
+        /// <summary>
+        /// Closing card in the menu's current look: Camila's illustration shows through a light veil, the
+        /// buttons use the menu frame and the credits are the same panel as the main menu.
+        /// </summary>
+        private static void RestyleEndCard()
+        {
+            Transform ui = null;
+            foreach (var t in FindObjectsByType<RectTransform>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+                if (t.name == "FinalBetaUI") { ui = t; break; }
+            if (ui == null) return;
+            if (ui.Find("Backdrop")?.GetComponent<Image>() is Image backdrop) backdrop.color = new Color(.02f, .008f, .04f, .62f);
+            // The emblem sat over the illustration's face; the logo above already closes the card.
+            ui.Find("CentralOrnament")?.gameObject.SetActive(false);
+            foreach (var name in new[] { "CreditsButton", "ReturnButton", "QuitButton" })
+                if (ui.Find(name)?.GetComponent<Button>() is Button button) MenuButtonStyle.Apply(button, new Vector2(380f, 84f), .6f);
+            var credits = ui.Find("CreditsPanel") as RectTransform;
+            if (credits == null || credits.Find("Painel") != null) return;
+            var bodyFont = credits.Find("CreditsText")?.GetComponent<TMPro.TMP_Text>()?.font;
+            var titleFont = ui.Find("CreditsButton")?.GetComponentInChildren<TMPro.TMP_Text>(true)?.font;
+            if (credits.GetComponent<Image>() is Image panelImage) panelImage.color = Color.clear;
+            credits.Find("CreditsText")?.gameObject.SetActive(false);
+            credits.anchorMin = Vector2.zero; credits.anchorMax = Vector2.one;
+            credits.offsetMin = credits.offsetMax = Vector2.zero;
+            MenuPanelStyle.Veil(credits, .8f).SetAsFirstSibling();
+            var panel = MenuPanelStyle.Panel(credits, new Vector2(1000f, 820f));
+            panel.SetSiblingIndex(1);
+            MenuPanelStyle.Title(panel, "CRÉDITOS", titleFont);
+            MenuPanelStyle.CreditsBody(panel, bodyFont);
+            if (credits.Find("CloseCredits") is RectTransform back)
+            {
+                back.SetParent(panel, false);
+                back.anchorMin = back.anchorMax = back.pivot = new Vector2(.5f, 0f);
+                back.anchoredPosition = new Vector2(0f, 46f);
+                MenuButtonStyle.Apply(back.GetComponent<Button>(), new Vector2(380f, 84f), .6f);
+            }
         }
 
         public void ShowCredits() { if (sequenceComplete && credits != null) credits.SetActive(true); }

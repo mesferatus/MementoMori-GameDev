@@ -69,23 +69,7 @@ namespace MementoMori.UI
             panel.SetSiblingIndex(1);
             MenuPanelStyle.Title(panel, "CRÉDITOS", titleFont);
 
-            var names = MenuPanelStyle.NewText("Equipe", panel, bodyFont,
-                "<size=22><color=#B9A2D5>ARTE, ORGANIZAÇÃO VISUAL E COLLIDERS</color></size>\n<size=44>Luiza Canova</size>\n\n" +
-                "<size=22><color=#B9A2D5>PROGRAMAÇÃO, SHADERS E ÁUDIO</color></size>\n<size=44>Callisto Monteiro Mascoloti</size>\n\n" +
-                "<size=22><color=#B9A2D5>ILUSTRAÇÃO DO MENU</color></size>\n<size=44>Camila David Ribeiro</size>",
-                40f, MenuPanelStyle.TitleColor);
-            names.characterSpacing = 2f;
-            names.rectTransform.anchorMin = names.rectTransform.anchorMax = new Vector2(.5f, .5f);
-            names.rectTransform.sizeDelta = new Vector2(860f, 440f);
-            names.rectTransform.anchoredPosition = new Vector2(0f, 30f);
-
-            var fonts = MenuPanelStyle.NewText("Fontes", panel, bodyFont,
-                "Fontes Cinzel, Cormorant Garamond e UnifrakturMaguntia (SIL Open Font License) · Feito com Unity",
-                20f, MenuPanelStyle.CaptionColor);
-            fonts.rectTransform.anchorMin = fonts.rectTransform.anchorMax = new Vector2(.5f, 0f);
-            fonts.rectTransform.sizeDelta = new Vector2(900f, 40f);
-            fonts.rectTransform.anchoredPosition = new Vector2(0f, 200f);
-            MenuPanelStyle.Divider(panel, -820f + 172f, 300f);
+            MenuPanelStyle.CreditsBody(panel, bodyFont);
 
             if (root.Find("Button_Voltar") is RectTransform back)
             {
