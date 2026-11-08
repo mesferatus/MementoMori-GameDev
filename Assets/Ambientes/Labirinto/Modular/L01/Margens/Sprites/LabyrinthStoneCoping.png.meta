@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 24848291fae7e0c4193ea5efd751a58d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3734479870250809981
+    second: LabyrinthStoneCoping_0
+  - first:
+      213: 8868736249222379129
+    second: LabyrinthStoneCoping_1
+  - first:
+      213: 3569234844112728046
+    second: LabyrinthStoneCoping_2
+  - first:
+      213: -9065220096403179671
+    second: LabyrinthStoneCoping_3
+  - first:
+      213: -8343351051103095816
+    second: LabyrinthStoneCoping_4
+  - first:
+      213: -8189997027189507333
+    second: LabyrinthStoneCoping_5
+  - first:
+      213: -8816408813286185807
+    second: LabyrinthStoneCoping_6
+  - first:
+      213: 2101220062838661100
+    second: LabyrinthStoneCoping_7
+  - first:
+      213: -7451243433231511174
+    second: LabyrinthStoneCoping_8
+  - first:
+      213: -8023313400263775849
+    second: LabyrinthStoneCoping_9
+  - first:
+      213: 9136659536336912995
+    second: LabyrinthStoneCoping_10
+  - first:
+      213: 3580321212154223643
+    second: LabyrinthStoneCoping_11
+  - first:
+      213: -1637563444068909608
+    second: LabyrinthStoneCoping_12
+  - first:
+      213: 8774470106852417515
+    second: LabyrinthStoneCoping_13
+  - first:
+      213: -8895781793126619783
+    second: LabyrinthStoneCoping_14
+  - first:
+      213: 3199994607798192272
+    second: LabyrinthStoneCoping_15
+  - first:
+      213: -7526359826661174215
+    second: LabyrinthStoneCoping_16
+  - first:
+      213: 1201862811296465253
+    second: LabyrinthStoneCoping_17
+  - first:
+      213: 7322793290870190574
+    second: LabyrinthStoneCoping_18
+  - first:
+      213: -5850902834198464917
+    second: LabyrinthStoneCoping_19
+  - first:
+      213: -5402386534701445255
+    second: LabyrinthStoneCoping_20
+  - first:
+      213: 3880318623024858706
+    second: LabyrinthStoneCoping_21
+  - first:
+      213: 3720746786999215541
+    second: LabyrinthStoneCoping_22
+  - first:
+      213: -1875495469446010302
+    second: LabyrinthStoneCoping_23
+  - first:
+      213: -6420086137187934892
+    second: LabyrinthStoneCoping_24
+  - first:
+      213: -7648451553777159461
+    second: LabyrinthStoneCoping_25
+  - first:
+      213: 4561528653632977571
+    second: LabyrinthStoneCoping_26
+  - first:
+      213: 4005099656312614997
+    second: LabyrinthStoneCoping_27
+  - first:
+      213: -6440796376173785139
+    second: LabyrinthStoneCoping_28
+  - first:
+      213: 7375815874722014198
+    second: LabyrinthStoneCoping_29
+  - first:
+      213: 5386307956404926881
+    second: LabyrinthStoneCoping_30
+  - first:
+      213: 1683373280189110043
+    second: LabyrinthStoneCoping_31
+  - first:
+      213: 2685809548052133058
+    second: LabyrinthStoneCoping_32
+  - first:
+      213: 2078295630275359316
+    second: LabyrinthStoneCoping_33
+  - first:
+      213: 4283675231215499460
+    second: LabyrinthStoneCoping_34
+  - first:
+      213: -7574418453436012527
+    second: LabyrinthStoneCoping_35
+  - first:
+      213: 5835021330088312886
+    second: LabyrinthStoneCoping_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 430
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 39
+        width: 1989
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3858ad818567c2cc0800000000000000
+      internalID: -3734479870250809981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 596
+        width: 176
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976b78d41a4141b70800000000000000
+      internalID: 8868736249222379129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_2
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 612
+        width: 204
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef294b1e28788130800000000000000
+      internalID: 3569234844112728046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_3
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 612
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967f7271a5ed13280800000000000000
+      internalID: -9065220096403179671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_4
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 610
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f33e9a8c66763c80800000000000000
+      internalID: -8343351051103095816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_5
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 610
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa3dd2a819475e80800000000000000
+      internalID: -8189997027189507333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 512
+        width: 66
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4247945e2d5a580800000000000000
+      internalID: -8816408813286185807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_7
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 168
+        width: 47
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef1c60b388092d10800000000000000
+      internalID: 2101220062838661100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_8
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 208
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71164b639dd79890800000000000000
+      internalID: -7451243433231511174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_9
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 187
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79965a7c8f677a090800000000000000
+      internalID: -8023313400263775849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_10
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 174
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3620c01b07febce70800000000000000
+      internalID: 9136659536336912995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_11
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 179
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c9f305c2bdfa130800000000000000
+      internalID: 3580321212154223643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_12
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 176
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd7b1b49b43649e0800000000000000
+      internalID: -1637563444068909608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_13
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 190
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befd833b21e25c970800000000000000
+      internalID: 8774470106852417515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_14
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 194
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975ec4d4795db8480800000000000000
+      internalID: -8895781793126619783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_15
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 192
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0980af8342aa86c20800000000000000
+      internalID: 3199994607798192272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_16
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 170
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93417103d9ffc8790800000000000000
+      internalID: -7526359826661174215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_17
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 176
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5610410fbdfdda010800000000000000
+      internalID: 1201862811296465253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_18
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 178
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee17ee143b9cf9560800000000000000
+      internalID: 7322793290870190574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_19
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 180
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6636482fda6dcea0800000000000000
+      internalID: -5850902834198464917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_20
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 178
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f44cbd11ed605b0800000000000000
+      internalID: -5402386534701445255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 176
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256cab49a39a9d530800000000000000
+      internalID: 3880318623024858706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_22
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 176
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5a34a4d7fb2a330800000000000000
+      internalID: 3720746786999215541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_23
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 178
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ae0ddaec6e8f5e0800000000000000
+      internalID: -1875495469446010302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_24
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 166
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45dd08d5ca547e6a0800000000000000
+      internalID: -6420086137187934892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_25
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 174
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd2f357c5dd3bd590800000000000000
+      internalID: -7648451553777159461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_26
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 178
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa3f88742ecd4f30800000000000000
+      internalID: 4561528653632977571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_27
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 176
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5507d80eae8f49730800000000000000
+      internalID: 4005099656312614997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_28
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 182
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfc98712d1bd96a0800000000000000
+      internalID: -6440796376173785139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_29
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 180
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f32e7595792c5660800000000000000
+      internalID: 7375815874722014198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_30
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 175
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a930686c8200ca40800000000000000
+      internalID: 5386307956404926881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_31
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 172
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b175e06541b8c5710800000000000000
+      internalID: 1683373280189110043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_32
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 182
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4fffdcd89e54520800000000000000
+      internalID: 2685809548052133058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_33
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 174
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4523fcc4dd697dc10800000000000000
+      internalID: 2078295630275359316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_34
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 176
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c83db94deba27b30800000000000000
+      internalID: 4283675231215499460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_35
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 167
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11868ce2c8242e690800000000000000
+      internalID: -7574418453436012527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabyrinthStoneCoping_36
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 162
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630cdb40cf82af050800000000000000
+      internalID: 5835021330088312886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LabyrinthStoneCoping_0: -3734479870250809981
+      LabyrinthStoneCoping_1: 8868736249222379129
+      LabyrinthStoneCoping_10: 9136659536336912995
+      LabyrinthStoneCoping_11: 3580321212154223643
+      LabyrinthStoneCoping_12: -1637563444068909608
+      LabyrinthStoneCoping_13: 8774470106852417515
+      LabyrinthStoneCoping_14: -8895781793126619783
+      LabyrinthStoneCoping_15: 3199994607798192272
+      LabyrinthStoneCoping_16: -7526359826661174215
+      LabyrinthStoneCoping_17: 1201862811296465253
+      LabyrinthStoneCoping_18: 7322793290870190574
+      LabyrinthStoneCoping_19: -5850902834198464917
+      LabyrinthStoneCoping_2: 3569234844112728046
+      LabyrinthStoneCoping_20: -5402386534701445255
+      LabyrinthStoneCoping_21: 3880318623024858706
+      LabyrinthStoneCoping_22: 3720746786999215541
+      LabyrinthStoneCoping_23: -1875495469446010302
+      LabyrinthStoneCoping_24: -6420086137187934892
+      LabyrinthStoneCoping_25: -7648451553777159461
+      LabyrinthStoneCoping_26: 4561528653632977571
+      LabyrinthStoneCoping_27: 4005099656312614997
+      LabyrinthStoneCoping_28: -6440796376173785139
+      LabyrinthStoneCoping_29: 7375815874722014198
+      LabyrinthStoneCoping_3: -9065220096403179671
+      LabyrinthStoneCoping_30: 5386307956404926881
+      LabyrinthStoneCoping_31: 1683373280189110043
+      LabyrinthStoneCoping_32: 2685809548052133058
+      LabyrinthStoneCoping_33: 2078295630275359316
+      LabyrinthStoneCoping_34: 4283675231215499460
+      LabyrinthStoneCoping_35: -7574418453436012527
+      LabyrinthStoneCoping_36: 5835021330088312886
+      LabyrinthStoneCoping_4: -8343351051103095816
+      LabyrinthStoneCoping_5: -8189997027189507333
+      LabyrinthStoneCoping_6: -8816408813286185807
+      LabyrinthStoneCoping_7: 2101220062838661100
+      LabyrinthStoneCoping_8: -7451243433231511174
+      LabyrinthStoneCoping_9: -8023313400263775849
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
