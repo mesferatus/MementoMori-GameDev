@@ -154,24 +154,30 @@ namespace MementoMori.UI
             switch (sceneName)
             {
                 case "Quarto":
-                    if (state.RitualCompleted) return "Descanse.";
+                    // V6.1 Q01 -> Q02 -> Q03 -> C03, in the order the room actually unlocks.
+                    if (state.RitualCompleted) return "Deite-se para atravessar.";
                     var sawAnyClue = state.HasFlag(StoryFlag.RoomWindowSecured)
                         || state.HasFlag(StoryFlag.RoomPhotoExamined)
                         || state.HasFlag(StoryFlag.RoomBowlExamined)
                         || state.HasFlag(StoryFlag.RoomToyExamined);
                     if (!sawAnyClue) return "Examine o quarto.";
-                    if (!state.HasFlag(StoryFlag.RoomWindowSecured) || !state.HasFlag(StoryFlag.RoomPhotoExamined))
-                        return "Reúna pistas sobre o ritual.";
+                    if (!state.HasFlag(StoryFlag.RoomPhotoExamined)) return "Olhe a fotografia com atenção.";
                     if (!state.HasFlag(StoryFlag.RoomGrimoireRead)) return "Consulte o grimório.";
-                    return "Recomponha o ritual.";
+                    if (!state.HasFlag(StoryFlag.RoomWindowSecured)) return "Feche a janela.";
+                    if (!state.HasFlag(StoryFlag.RoomRitualItemStored)) return "Coloque a âncora no centro do círculo.";
+                    if (!state.HasFlag(StoryFlag.RoomCandlesDone)) return "Acenda as velas na ordem do grimório.";
+                    return "Ative o círculo.";
                 case "Labirinto":
                     return LabyrinthObjective(state);
                 case "DominioLua":
-                    if (state.HasFlag(StoryFlag.FragmentCollected)) return null;
-                    if (state.HasFlag(StoryFlag.SigilPuzzleComplete)) return "Colete o fragmento.";
-                    if (state.HasFlag(StoryFlag.MirrorPuzzleComplete)) return "Complete o sigilo.";
-                    if (state.HasFlag(StoryFlag.GardenComplete)) return "Resolva os desafios.";
-                    return "Explore o domínio.";
+                    // V6.1 M02 -> M03 -> M04 -> M05 -> M06 -> M07 -> M08.
+                    if (state.HasFlag(StoryFlag.FragmentCollected)) return "Atravesse o portal de volta.";
+                    if (!state.HasFlag(StoryFlag.GardenComplete)) return "Nade até as flores do Jardim Lunar.";
+                    if (!state.HasFlag(StoryFlag.MirrorPuzzleComplete)) return "Decifre o Salão dos Sete Espelhos.";
+                    if (!state.Puzzles.GetSolved("moon.illusory_corridor")) return "Encontre a saída do Corredor Ilusório.";
+                    if (!state.Puzzles.GetSolved("moon.cycles")) return "Leia as portas da Galeria dos Ciclos.";
+                    if (!state.HasFlag(StoryFlag.SigilPuzzleComplete)) return "Recomponha o Sigilo Fragmentado.";
+                    return "Pegue o Fragmento.";
                 default:
                     return null;
             }

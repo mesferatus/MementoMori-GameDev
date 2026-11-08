@@ -18,7 +18,7 @@ namespace MementoMori.World
                 voices = new DialogueData[4];
             }
             for (var i = 0; i < voices.Length; i++)
-                voices[i] ??= Resources.Load<DialogueData>("Dialogue/DLG_L_VOICE_WELL_0" + (i + 1));
+                if (voices[i] == null) voices[i] = Resources.Load<DialogueData>("Dialogue/DLG_L_VOICE_WELL_0" + (i + 1));
         }
         private void Start()
         {

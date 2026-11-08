@@ -37,12 +37,12 @@ namespace MementoMori.World
             DontDestroyOnLoad(host);
             runtime = host.GetComponent<GrimoireScreen>() ?? host.AddComponent<GrimoireScreen>();
             runtime.runtimeHost = true;
-            runtime.bookSprite ??= Resources.Load<Sprite>("UI/Grimoire/book_open");
-            runtime.illustrationSprite ??= Resources.Load<Sprite>("UI/Grimoire/page_illustration");
-            runtime.noteSprite ??= Resources.Load<Sprite>("UI/Grimoire/side_note");
-            runtime.symbolsSprite ??= Resources.Load<Sprite>("UI/Grimoire/sigil_symbols");
-            runtime.titleFont ??= TMP_Settings.defaultFontAsset;
-            runtime.bodyFont ??= TMP_Settings.defaultFontAsset;
+            if (runtime.bookSprite == null) runtime.bookSprite = Resources.Load<Sprite>("UI/Grimoire/book_open");
+            if (runtime.illustrationSprite == null) runtime.illustrationSprite = Resources.Load<Sprite>("UI/Grimoire/page_illustration");
+            if (runtime.noteSprite == null) runtime.noteSprite = Resources.Load<Sprite>("UI/Grimoire/side_note");
+            if (runtime.symbolsSprite == null) runtime.symbolsSprite = Resources.Load<Sprite>("UI/Grimoire/sigil_symbols");
+            if (runtime.titleFont == null) runtime.titleFont = TMP_Settings.defaultFontAsset;
+            if (runtime.bodyFont == null) runtime.bodyFont = TMP_Settings.defaultFontAsset;
             SceneManager.sceneLoaded += runtime.OnSceneLoaded;
             GrimoireCatalog.OnSceneEntered(scene.name);
             foreach (var entry in GrimoireCatalog.Entries)

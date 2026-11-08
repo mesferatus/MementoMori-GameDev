@@ -8,7 +8,9 @@ namespace MementoMori.Regions
         private void Start()
         {
             var state=GameState.Instance;
-            if(gameObject.scene.name!="DominioLua" || state==null || !state.PoeRevealed)return;
+            if(gameObject.scene.name!="DominioLua" || state==null)return;
+            // L08_D007: Poe crosses the Moon gate with Melantha, whatever path reached it.
+            if(!state.PoeRevealed)state.SetPoeRevealed();
             var player=FindAnyObjectByType<MementoMori.Player.PlayerController>();
             var poe=FindAnyObjectByType<MementoMori.Poe.PoeFollower>(FindObjectsInactive.Include);
             var floor=GameObject.Find("NavigationFloor_Grid/NavigationFloor");

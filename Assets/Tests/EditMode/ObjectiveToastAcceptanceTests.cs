@@ -50,13 +50,13 @@ namespace MementoMori.Tests.EditMode
         public void ObjectiveFollowsRealStateTransition()
         {
             objectives.ShowObjective(ObjectiveToastController.ObjectiveFor("DominioLua", state));
-            Assert.That(objectives.CurrentObjective, Is.EqualTo("Explore o domínio."));
+            Assert.That(objectives.CurrentObjective, Is.EqualTo("Nade até as flores do Jardim Lunar."));
             state.SetFlag(StoryFlag.GardenComplete);
             objectives.ShowObjective(ObjectiveToastController.ObjectiveFor("DominioLua", state));
-            Assert.That(objectives.CurrentObjective, Is.EqualTo("Resolva os desafios."));
+            Assert.That(objectives.CurrentObjective, Is.EqualTo("Decifre o Salão dos Sete Espelhos."));
             state.SetFlag(StoryFlag.MirrorPuzzleComplete);
             objectives.ShowObjective(ObjectiveToastController.ObjectiveFor("DominioLua", state));
-            Assert.That(objectives.CurrentObjective, Is.EqualTo("Complete o sigilo."));
+            Assert.That(objectives.CurrentObjective, Is.EqualTo("Encontre a saída do Corredor Ilusório."));
         }
 
         [Test]

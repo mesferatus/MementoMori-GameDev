@@ -18,10 +18,11 @@ namespace MementoMori.Puzzles
         [SerializeField] float crescentDistance = 3.25f;
         [SerializeField] float crescentOpenDelay = 1.5f;
         [SerializeField] Vector2 fullReflectionPosition;
-        [SerializeField] float fullAlignmentTolerance = .45f;
+        [SerializeField] float fullAlignmentTolerance = .6f;
         float crescentTimer;
         bool crescentOpened;
         bool crescentHintRequested;
+        bool crescentApproached;
         int nextWaningFlower = 2;
         public MoonPetal Petal => petal;
         public int NextWaningFlower => nextWaningFlower;
@@ -34,6 +35,11 @@ namespace MementoMori.Puzzles
             player = playerTransform; poe = poeFollower;
         }
         public void ConfigureFullReflection(Vector2 reflectedPosition) => fullReflectionPosition = reflectedPosition;
+        public static bool IsSwimming(GameObject interactor)
+        {
+            var swimmer = interactor == null ? null : interactor.GetComponentInParent<MementoMori.Player.PlayerController>();
+            return swimmer != null && swimmer.IsSwimming;
+        }
         public bool CanCollect(Transform interactor)
         {
             if (Solved) return false;
@@ -44,7 +50,7 @@ namespace MementoMori.Puzzles
 
         void Update()
         {
-            player ??= GameObject.FindGameObjectWithTag("Player")?.transform;
+            if (player == null) { var tagged = GameObject.FindGameObjectWithTag("Player"); if (tagged != null) player = tagged.transform; }
             if (player != null && Vector2.Distance(player.position, transform.position) < 3.5f)
             {
                 GrimoireCatalog.Discover("A09");
@@ -62,18 +68,23 @@ namespace MementoMori.Puzzles
                 poe.BeginFollowing();
             }
             if (player == null) return;
-            if (Vector2.Distance(player.position, transform.position) < crescentDistance)
+            var away = Vector2.Distance(player.position, transform.position);
+            if (away < crescentDistance)
             {
+                // "Quanto mais perto eu fico, menos ela responde": reaching for it first is part of the lesson.
+                crescentApproached = true;
                 crescentTimer = 0f;
                 return;
             }
+            if (!crescentApproached || away > 9f) return;
             if (!crescentHintRequested && poe != null)
             {
                 crescentHintRequested = true;
                 poe.HintAt(transform.position);
             }
-            if (poe != null && Vector2.Distance(poe.transform.position, transform.position) < 1.15f)
-                crescentTimer += Time.deltaTime;
+            // P01_D005 "Era só manter distância": Poe waits on the shore (M02_WATER), so the
+            // crescent opens once Melantha keeps away from it; Poe only points the way.
+            crescentTimer += Time.deltaTime;
             if (crescentTimer >= crescentOpenDelay)
             {
                 crescentOpened = true;

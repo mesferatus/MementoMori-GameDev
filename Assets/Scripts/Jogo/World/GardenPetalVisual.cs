@@ -22,6 +22,13 @@ namespace MementoMori.World
             if (!puzzle || !target) return;
             var lit = puzzle.Solved || puzzle.CanCollect(player);
             if (waningIndex >= 0) lit = !puzzle.Solved && waningIndex <= puzzle.NextWaningFlower;
+            if (!active && !dormant)
+            {
+                // Approved pool art keeps its sprite; state reads as light instead of a sprite swap.
+                var glow = lit ? .85f + .15f * Mathf.Sin(Time.time * 3f) : .55f;
+                target.color = new Color(glow, glow, Mathf.Min(1f, glow + .12f), 1f);
+                return;
+            }
             var next = lit ? active : dormant;
             if (next && target.sprite != next) target.sprite = next;
         }

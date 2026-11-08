@@ -133,7 +133,7 @@ namespace MementoMori.World
             GameState.Instance?.SetFragmentCollected();
             GameState.Instance?.SetCounter("fragment.stage", 4);
             collected = true;
-            poe ??= FindAnyObjectByType<PoeFollower>();
+            if (poe == null) poe = FindAnyObjectByType<PoeFollower>();
             if (poe != null)
             {
                 GrimoireCatalog.Discover("M07");

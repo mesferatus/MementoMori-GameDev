@@ -31,7 +31,7 @@ namespace MementoMori.World
         int errors;
         private void Awake()
         {
-            completionDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_ECHO_COMPLETE");
+            if (completionDialogue == null) completionDialogue = Resources.Load<DialogueData>("Dialogue/DLG_L_ECHO_COMPLETE");
         }
         private void Start()
         {

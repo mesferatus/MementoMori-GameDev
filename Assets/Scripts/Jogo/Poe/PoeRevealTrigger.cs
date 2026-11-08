@@ -17,7 +17,7 @@ namespace MementoMori.Poe
 
         private void Awake()
         {
-            revealDialogue ??= Resources.Load<DialogueData>("Dialogue/DLG_L_POE_REVEAL");
+            if (revealDialogue == null) revealDialogue = Resources.Load<DialogueData>("Dialogue/DLG_L_POE_REVEAL");
             // Poe starts inactive; resolve only the companion authored in this scene.
             if (poe == null)
                 foreach (var candidate in FindObjectsByType<PoeFollower>(FindObjectsInactive.Include, FindObjectsSortMode.None))

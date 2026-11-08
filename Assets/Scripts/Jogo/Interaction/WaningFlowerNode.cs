@@ -11,7 +11,7 @@ namespace MementoMori.Interaction
         public string InteractionVerb => "Apagar flor";
         public int InteractionPriority => 7;
         public void Configure(GardenPetalPuzzle owner, int index) { puzzle = owner; flowerIndex = index; }
-        public bool CanInteract(InteractionContext context) => puzzle != null && !puzzle.Solved;
+        public bool CanInteract(InteractionContext context) => puzzle != null && !puzzle.Solved && GardenPetalPuzzle.IsSwimming(context.Interactor);
         public void Interact(InteractionContext context) => puzzle?.ExtinguishWaning(flowerIndex);
     }
 }
