@@ -41,7 +41,9 @@ namespace MementoMori.Core
             if (!string.IsNullOrWhiteSpace(evidencePath))
             {
                 UnityEditor.EditorPrefs.DeleteKey("MementoMori.CtEvidencePath");
-                MementoMori.Verification.CtEvidenceRunner.StartEditorEvidence(evidencePath);
+                // Local acceptance tooling; absent from the published repository.
+                System.Type.GetType("MementoMori.Verification.CtEvidenceRunner, MementoMori.Runtime")
+                    ?.GetMethod("StartEditorEvidence")?.Invoke(null, new object[] { evidencePath });
             }
 #endif
             if (!attemptedRestore)

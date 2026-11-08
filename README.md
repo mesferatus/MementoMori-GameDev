@@ -81,6 +81,7 @@ A leitura simbólica apresentada aqui é a interpretação artística do própri
 - **Grimório** com quatro abas — *Anotações, Rituais, Pistas e Memórias* — e 40 entradas liberadas pela progressão; as pistas dos puzzles têm três níveis.
 - Diálogos, escolhas e 12 cutscenes em arte ASCII animada.
 - Salvamento em slots e retomada pelo menu (*Continuar*).
+- Nado no Jardim Lunar e névoa sobre as salas do Labirinto fora da sala atual.
 - Vegetação e chamas semitransparentes quando cobrem a personagem; iluminação 2D, água, luar, vaga-lumes e borboletas por shaders e partículas.
 
 ## Tecnologias e arquitetura
@@ -92,9 +93,9 @@ A leitura simbólica apresentada aqui é a interpretação artística do própri
 | URP 2D 17.4 | Renderização, Light2D, shaders próprios (`Assets/Shaders`) |
 | Tilemaps 2D | Mapas, colisão (`CollisionBoundary`) e piso navegável |
 | uGUI + TextMeshPro | Interface, diálogos, grimório |
-| Unity Test Framework 1.6 | Testes EditMode e PlayMode (`Assets/Tests`) |
+| Unity Test Framework 1.6 | Testes EditMode e PlayMode (mantidos fora do repositório público) |
 
-Organização do código: `Core` (estado, salvamento, entrada), `Interaction`, `Dialogue`, `Narrative`, `Puzzles`, `Poe`, `Player`, `World`, `UI`, `Audio` e `Verification` (percurso automatizado de aceitação, só em builds de desenvolvimento). Ferramentas de editor reprodutíveis ficam em `Assets/Editor`.
+Organização do código: `Core` (estado, salvamento, entrada), `Interaction`, `Dialogue`, `Narrative`, `Puzzles`, `Poe`, `Player`, `World`, `UI` e `Audio`. Ferramentas de editor reprodutíveis ficam em `Assets/Editor`.
 
 ## Como executar
 
@@ -130,10 +131,10 @@ As teclas de ação podem ser remapeadas em *Configurações*.
 
 ## Testes
 
-| Suíte | Resultado (06/11/2026) |
+| Suíte | Resultado (08/11/2026) |
 |---|---|
 | EditMode | 68/68 |
-| PlayMode | 27/28 — a falha restante é um erro de log de um plugin de automação do Editor durante o teste ASCII, não do jogo |
+| PlayMode | 28/28 |
 | Percurso automatizado | CT-001 a CT-006 aprovados; CT-007 a CT-011 ainda não automatizados |
 
 ## Equipe e créditos
@@ -142,9 +143,7 @@ As teclas de ação podem ser remapeadas em *Configurações*.
 |---|---|
 | **Callisto Monteiro Mascoloti** | Programação, integração, shaders programados, áudio e testes |
 | **Luiza Canova** | Direção de arte, cenários, sprites, organização visual, colliders e narrativa |
-| **Camila** | Ilustração original usada no menu e na tela final |
-
-Ferramentas de IA (Claude e Codex) foram usadas como apoio à programação, à geração de peças auxiliares e à documentação, sob direção e revisão da equipe; o registro detalhado consta da documentação acadêmica do projeto.
+| **Camila David Ribeiro** | Ilustração original usada no menu e na tela final |
 
 ## Estado atual e publicação
 

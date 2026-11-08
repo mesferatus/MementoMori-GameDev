@@ -30,7 +30,7 @@ namespace MementoMori.UI
         // The approved lilac gothic frame of the cinematics, reused as the gameplay HUD border.
         private static void AddGothicBorder(Transform canvasRoot)
         {
-            // V2: the lilac arabesque frame prepared in the Codex round (magenta cut-out halo removed).
+            // V2: the lilac arabesque frame (magenta cut-out halo removed).
             var sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrameV2");
             var isV2 = sprite != null;
             if (sprite == null) sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrame");
@@ -64,7 +64,7 @@ namespace MementoMori.UI
             var image = go.GetComponent<UnityEngine.UI.Image>();
             image.material = new Material(material);
             // Darker sectors keep more of their centre lit; the moon domain gets a bluer rim.
-            // Darker purple rim across the whole game (Codex proposal, slightly stronger); the centre stays lit.
+            // Darker purple rim across the whole game; the centre stays lit.
             image.material.SetFloat("_Inner", scene == "Labirinto" ? .47f : scene == "Quarto" ? .55f : .53f);
             image.material.SetFloat("_Intensity", 1f);
             image.material.SetFloat("_Outer", 1.12f);
