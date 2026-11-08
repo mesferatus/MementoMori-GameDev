@@ -1,0 +1,765 @@
+fileFormatVersion: 2
+guid: 3a7e49bce74ea2444b0a908d1f6730a4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3226835893636375625
+    second: Poe_Lunar_Locomotion_0
+  - first:
+      213: -7216215984537525566
+    second: Poe_Lunar_Locomotion_1
+  - first:
+      213: -4621363720480081610
+    second: Poe_Lunar_Locomotion_2
+  - first:
+      213: 6425332538451381115
+    second: Poe_Lunar_Locomotion_3
+  - first:
+      213: 6697138979497689291
+    second: Poe_Lunar_Locomotion_4
+  - first:
+      213: -2299185125900526216
+    second: Poe_Lunar_Locomotion_5
+  - first:
+      213: -7347848246774248156
+    second: Poe_Lunar_Locomotion_6
+  - first:
+      213: 8829964426305387063
+    second: Poe_Lunar_Locomotion_7
+  - first:
+      213: 187636709914473910
+    second: Poe_Lunar_Locomotion_8
+  - first:
+      213: -5092714944290139860
+    second: Poe_Lunar_Locomotion_9
+  - first:
+      213: 1824884874607575202
+    second: Poe_Lunar_Locomotion_10
+  - first:
+      213: -1227766216740524051
+    second: Poe_Lunar_Locomotion_11
+  - first:
+      213: 4298131016376096114
+    second: Poe_Lunar_Locomotion_12
+  - first:
+      213: 7913082553458020527
+    second: Poe_Lunar_Locomotion_13
+  - first:
+      213: -4616310863875639548
+    second: Poe_Lunar_Locomotion_14
+  - first:
+      213: -8222105912080024908
+    second: Poe_Lunar_Locomotion_15
+  - first:
+      213: 968256355915766947
+    second: Poe_Lunar_Locomotion_16
+  - first:
+      213: 7213384928248614632
+    second: Poe_Lunar_Locomotion_17
+  - first:
+      213: -7394676262259154302
+    second: Poe_Lunar_Locomotion_18
+  - first:
+      213: 4845002321984075665
+    second: Poe_Lunar_Locomotion_19
+  - first:
+      213: 5764921267557787642
+    second: Poe_Lunar_Locomotion_20
+  - first:
+      213: -2455870851505147373
+    second: Poe_Lunar_Locomotion_21
+  - first:
+      213: 3643132995931341568
+    second: Poe_Lunar_Locomotion_22
+  - first:
+      213: -3442368827980127756
+    second: Poe_Lunar_Locomotion_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r0_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd495ee29012a0145bf80b96aba89016
+      internalID: -551740139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r0_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c48fd904fb38f4d9e33c82ed21478e
+      internalID: 479332455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r0_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a6d568deeb8c64f991fe15071d3235
+      internalID: 577038748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r0_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20452a0baf8f6524f923013573e003d8
+      internalID: 1479809348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r0_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b295fc6017f6a774b9c5f31126ddb207
+      internalID: -2082160677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r0_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdec42c54e4ef14fad04265141cacbf
+      internalID: 1748315161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r1_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff0a81a476528143b1b09a2224c5e96
+      internalID: -1021505172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r1_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca337662d14902e458ddecb509cfa1e6
+      internalID: -333695592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r1_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafec97b38cd59c4799f80d486adc63c
+      internalID: 1000876220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r1_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d507fe5b90b864e92e70daae88215a
+      internalID: -471045954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r1_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8119235bb4a36429e29bbdaf568746
+      internalID: -1126216178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r1_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcc7fc921e409e4da20e8c067b2248c
+      internalID: -530297405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r2_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1917df453001c241a768ba9cac30b5a
+      internalID: -1884657105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r2_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687fb0f69bdb126458dae0a700a1d60d
+      internalID: -554942026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r2_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76ed51fd57e7474a9ea72ddd172e2a7
+      internalID: -1459797311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r2_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0685dc896ae5c3d4c967e25318140016
+      internalID: -1770374549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r2_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cef4405356f624cb401d809c4c5a17
+      internalID: -506805524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r2_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2d50fbf1787df4eacdf39b2079221b
+      internalID: -311547119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r3_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3f0fe664af331449b6978208f5cf4c
+      internalID: 1077833838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r3_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6671033ca0b73d347a64fd96b11fcfea
+      internalID: -1755186100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r3_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9c32aca1f828145857123cff561de4
+      internalID: -947490878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r3_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84454b7aa6750c74891fc94d3c8556c9
+      internalID: -91407463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r3_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2457a676b415f47b45d5f290a8906e
+      internalID: 812571360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Locomotion_r3_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d989a5462873d004ebcc1a73617145c0
+      internalID: 1304491547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 501a2dc813d904649930a55e0ac9b170
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Poe_Lunar_Locomotion_0: -3226835893636375625
+      Poe_Lunar_Locomotion_1: -7216215984537525566
+      Poe_Lunar_Locomotion_10: 1824884874607575202
+      Poe_Lunar_Locomotion_11: -1227766216740524051
+      Poe_Lunar_Locomotion_12: 4298131016376096114
+      Poe_Lunar_Locomotion_13: 7913082553458020527
+      Poe_Lunar_Locomotion_14: -4616310863875639548
+      Poe_Lunar_Locomotion_15: -8222105912080024908
+      Poe_Lunar_Locomotion_16: 968256355915766947
+      Poe_Lunar_Locomotion_17: 7213384928248614632
+      Poe_Lunar_Locomotion_18: -7394676262259154302
+      Poe_Lunar_Locomotion_19: 4845002321984075665
+      Poe_Lunar_Locomotion_2: -4621363720480081610
+      Poe_Lunar_Locomotion_20: 5764921267557787642
+      Poe_Lunar_Locomotion_21: -2455870851505147373
+      Poe_Lunar_Locomotion_22: 3643132995931341568
+      Poe_Lunar_Locomotion_23: -3442368827980127756
+      Poe_Lunar_Locomotion_3: 6425332538451381115
+      Poe_Lunar_Locomotion_4: 6697138979497689291
+      Poe_Lunar_Locomotion_5: -2299185125900526216
+      Poe_Lunar_Locomotion_6: -7347848246774248156
+      Poe_Lunar_Locomotion_7: 8829964426305387063
+      Poe_Lunar_Locomotion_8: 187636709914473910
+      Poe_Lunar_Locomotion_9: -5092714944290139860
+      Poe_Lunar_Locomotion_r0_c0: -551740139
+      Poe_Lunar_Locomotion_r0_c1: 479332455
+      Poe_Lunar_Locomotion_r0_c2: 577038748
+      Poe_Lunar_Locomotion_r0_c3: 1479809348
+      Poe_Lunar_Locomotion_r0_c4: -2082160677
+      Poe_Lunar_Locomotion_r0_c5: 1748315161
+      Poe_Lunar_Locomotion_r1_c0: -1021505172
+      Poe_Lunar_Locomotion_r1_c1: -333695592
+      Poe_Lunar_Locomotion_r1_c2: 1000876220
+      Poe_Lunar_Locomotion_r1_c3: -471045954
+      Poe_Lunar_Locomotion_r1_c4: -1126216178
+      Poe_Lunar_Locomotion_r1_c5: -530297405
+      Poe_Lunar_Locomotion_r2_c0: -1884657105
+      Poe_Lunar_Locomotion_r2_c1: -554942026
+      Poe_Lunar_Locomotion_r2_c2: -1459797311
+      Poe_Lunar_Locomotion_r2_c3: -1770374549
+      Poe_Lunar_Locomotion_r2_c4: -506805524
+      Poe_Lunar_Locomotion_r2_c5: -311547119
+      Poe_Lunar_Locomotion_r3_c0: 1077833838
+      Poe_Lunar_Locomotion_r3_c1: -1755186100
+      Poe_Lunar_Locomotion_r3_c2: -947490878
+      Poe_Lunar_Locomotion_r3_c3: -91407463
+      Poe_Lunar_Locomotion_r3_c4: 812571360
+      Poe_Lunar_Locomotion_r3_c5: 1304491547
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

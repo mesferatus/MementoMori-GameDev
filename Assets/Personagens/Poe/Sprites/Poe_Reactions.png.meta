@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 53a4032f7a56fe9448d99631e7a1f2ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8734987729873993781
+    second: Poe_Reactions_0
+  - first:
+      213: 6664177062791694559
+    second: Poe_Reactions_1
+  - first:
+      213: 8122463701135971249
+    second: Poe_Reactions_2
+  - first:
+      213: -5428140710857659651
+    second: Poe_Reactions_3
+  - first:
+      213: -6473879422938809780
+    second: Poe_Reactions_4
+  - first:
+      213: -7700236774040437839
+    second: Poe_Reactions_5
+  - first:
+      213: 8394887038867110380
+    second: Poe_Reactions_6
+  - first:
+      213: -3455729672662412970
+    second: Poe_Reactions_7
+  - first:
+      213: -3099432956781995726
+    second: Poe_Reactions_8
+  - first:
+      213: 9179036963017366939
+    second: Poe_Reactions_9
+  - first:
+      213: 2476751496331675428
+    second: Poe_Reactions_10
+  - first:
+      213: -2537185191975175550
+    second: Poe_Reactions_11
+  - first:
+      213: -6224017792300488214
+    second: Poe_Reactions_12
+  - first:
+      213: 7896609269420360443
+    second: Poe_Reactions_13
+  - first:
+      213: 4590981925296758057
+    second: Poe_Reactions_14
+  - first:
+      213: -2610698541602511942
+    second: Poe_Reactions_15
+  - first:
+      213: 4120514659915563065
+    second: Poe_Reactions_16
+  - first:
+      213: -243476444608863920
+    second: Poe_Reactions_17
+  - first:
+      213: -8147805044251120927
+    second: Poe_Reactions_18
+  - first:
+      213: -367980417537402373
+    second: Poe_Reactions_19
+  - first:
+      213: 2901398477523237410
+    second: Poe_Reactions_20
+  - first:
+      213: 3835843665271926066
+    second: Poe_Reactions_21
+  - first:
+      213: -5051122495730357382
+    second: Poe_Reactions_22
+  - first:
+      213: -2353876210781303877
+    second: Poe_Reactions_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Poe_Reactions_alert_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 172
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a06331890d31746a03483b26268252
+      internalID: -716932745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_alert_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 172
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9d68a8dee2feb4bac468f11db5b444
+      internalID: -497400890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_alert_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 172
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39377bb3e68e0fc40ab536cb6ddc0604
+      internalID: -718245129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_alert_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 172
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fbc9a034b648f41955b79feaf9829e
+      internalID: -400344895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_alert_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 172
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6628960c570812e4e867265545452e74
+      internalID: -1670151287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_alert_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 172
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b77c8153e782f0489b7201a5532d0d6
+      internalID: 1362180594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_scared_arch_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 116
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf68fc32967bb8a499fe531c727c9243
+      internalID: 408864831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_scared_arch_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 116
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe40c8c164d06744bfe61497ec0c7b7
+      internalID: 38624568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_scared_arch_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 116
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ec9d3fe38f46940a3180a630fcb5f1
+      internalID: 1431473036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_scared_arch_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 116
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ae226c4ff5fae49a77d96da781418c
+      internalID: -1133954015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_scared_arch_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 116
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771d8a8495bbe5845af7253ca38c926d
+      internalID: -600792199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_scared_arch_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 116
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab1ce5faeabad8469a7aee36eca313b
+      internalID: -884905905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_sit_side_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 60
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7e80a0829d2794cb2931a0fc5e42ec
+      internalID: 1750365492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_sit_side_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 60
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4428ea7adcf3122439947c3ba9de075d
+      internalID: -1977167772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_sit_side_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 60
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3ee98cfa20d924b9425e072436e168
+      internalID: 915903957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_sit_side_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 60
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f8533f69f174447b06290196d77c44
+      internalID: -357112975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_sit_side_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 60
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7ded12a8b08f2448146053150aebda
+      internalID: 247720747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_sit_side_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 60
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92db1de02def18b459aea4e07e3a6d7d
+      internalID: 1171798481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_curl_sleep_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cf16714959a4a42afa0c358292f6e2
+      internalID: -809518290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_curl_sleep_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 4
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b225fdfc684b68429ed5b6f65a377a5
+      internalID: 958800493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_curl_sleep_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 4
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060981292acb85541bb147c017fe9636
+      internalID: -448003554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_curl_sleep_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 4
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df19566182663a40b7e1cb5dbbe9749
+      internalID: -555567424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_curl_sleep_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 4
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90dbde4b9fb3644aa8b1769053ae03a
+      internalID: 1459929725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Reactions_curl_sleep_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 4
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382370424ef6a7a459e4e78866e7b593
+      internalID: -1015844052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f74fbecc762d90a47a25d46f5a5f26b6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Poe_Reactions_alert_0: -716932745
+      Poe_Reactions_alert_1: -497400890
+      Poe_Reactions_alert_2: -718245129
+      Poe_Reactions_alert_3: -400344895
+      Poe_Reactions_alert_4: -1670151287
+      Poe_Reactions_alert_5: 1362180594
+      Poe_Reactions_curl_sleep_0: -809518290
+      Poe_Reactions_curl_sleep_1: 958800493
+      Poe_Reactions_curl_sleep_2: -448003554
+      Poe_Reactions_curl_sleep_3: -555567424
+      Poe_Reactions_curl_sleep_4: 1459929725
+      Poe_Reactions_curl_sleep_5: -1015844052
+      Poe_Reactions_scared_arch_0: 408864831
+      Poe_Reactions_scared_arch_1: 38624568
+      Poe_Reactions_scared_arch_2: 1431473036
+      Poe_Reactions_scared_arch_3: -1133954015
+      Poe_Reactions_scared_arch_4: -600792199
+      Poe_Reactions_scared_arch_5: -884905905
+      Poe_Reactions_sit_side_0: 1750365492
+      Poe_Reactions_sit_side_1: -1977167772
+      Poe_Reactions_sit_side_2: 915903957
+      Poe_Reactions_sit_side_3: -357112975
+      Poe_Reactions_sit_side_4: 247720747
+      Poe_Reactions_sit_side_5: 1171798481
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
