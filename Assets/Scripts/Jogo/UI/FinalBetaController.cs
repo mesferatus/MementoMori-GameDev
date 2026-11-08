@@ -20,6 +20,7 @@ namespace MementoMori.UI
         [SerializeField] private GameObject[] wakeEvidence;
         [SerializeField] private GameObject endCardRoot;
 
+        private const string ClosingMessage = "O que a gente lembra volta com a gente.\n\nObrigado por jogar Memento Mori.";
         private int entryIndex;
         private bool sequenceComplete;
         private Text speakerLabel;
@@ -149,10 +150,10 @@ namespace MementoMori.UI
             }
             if (finalText != null)
             {
-                finalText.text = "Algumas coisas não terminam.\nElas apenas mudam de lugar.\n\nObrigado por carregar esta memória até aqui.";
+                finalText.text = ClosingMessage;
                 finalText.gameObject.SetActive(true);
             }
-            if (finalTextTmp != null) finalTextTmp.text = "Algumas coisas não terminam.\nElas apenas mudam de lugar.\n\nObrigado por carregar esta memória até aqui.";
+            if (finalTextTmp != null) finalTextTmp.text = ClosingMessage;
             if (returnButton != null) returnButton.interactable = true;
         }
 
