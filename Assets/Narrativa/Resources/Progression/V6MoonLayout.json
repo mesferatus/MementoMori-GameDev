@@ -1,0 +1,5 @@
+{"challenges":[
+{"id":"moon.illusory_corridor","title":"O corredor que se repete","clue":"A inscrição reaparece invertida: «Não siga a imagem perfeita. Siga a falha; depois o silêncio; depois a passagem».","choices":["Imagem perfeita","Falha","Silêncio","Passagem"],"sequence":[1,2,3],"x":28.5,"y":-24.5},
+{"id":"moon.cycles","title":"Arquivo das oito fases","clue":"Depois de ler as oito portas, ordene as marcas do arquivo: marca, reflexo e memória.","choices":["Marca","Reflexo","Memória"],"sequence":[0,1,2],"x":-4.5,"y":-75}
+]}
+
