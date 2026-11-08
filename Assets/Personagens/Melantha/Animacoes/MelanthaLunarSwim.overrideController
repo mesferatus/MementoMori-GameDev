@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MelanthaLunarSwim
+  m_Controller: {fileID: 9100000, guid: 38530334731585a45b1ed786bcd52964, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 5147ff2a8bd0e95408c918da9be41e03, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cf52a64f6a3bd9343a436d706a4f97d8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 08756df7ea727754faa5a3f2cb8846de, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5c49f6802ad974843ab78f6ba534ffa8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 403b90f03fd50bb4187f51ebe5417ee8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 07a9f95795fa6f648ba6d289b9f3574d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bee4c101a4505954eacd40a440ad9dfa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ebd08d7ddb76dd4896d5329f1956df9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 45eea163c054bfa4092e09eb6592be88, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9665e22cdb04423478497ef0cec4ba24, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1467831a315d1ce4eb0234c196313cb1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1539d3544c9bc4c4795dd008b9dc4790, type: 2}

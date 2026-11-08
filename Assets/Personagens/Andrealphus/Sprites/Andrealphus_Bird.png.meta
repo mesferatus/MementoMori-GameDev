@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 66d5238995464e54b815a69943de4555
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8029300990754162282
+    second: Andrealphus_Bird_0
+  - first:
+      213: -34539012464585794
+    second: Andrealphus_Bird_1
+  - first:
+      213: -5538817513782954525
+    second: Andrealphus_Bird_2
+  - first:
+      213: 2415313154523015189
+    second: Andrealphus_Bird_3
+  - first:
+      213: -7646838510746348890
+    second: Andrealphus_Bird_4
+  - first:
+      213: -4931455483233633065
+    second: Andrealphus_Bird_5
+  - first:
+      213: 6196702186460397641
+    second: Andrealphus_Bird_6
+  - first:
+      213: 7353729851292120493
+    second: Andrealphus_Bird_7
+  - first:
+      213: 8258256968586454648
+    second: Andrealphus_Bird_8
+  - first:
+      213: -5672962256124243305
+    second: Andrealphus_Bird_9
+  - first:
+      213: 1579603103044973425
+    second: Andrealphus_Bird_10
+  - first:
+      213: 3584886908518924193
+    second: Andrealphus_Bird_11
+  - first:
+      213: -1816514445875422135
+    second: Andrealphus_Bird_12
+  - first:
+      213: -4732917735259172522
+    second: Andrealphus_Bird_13
+  - first:
+      213: 8687384133351299235
+    second: Andrealphus_Bird_14
+  - first:
+      213: -1336082391158735286
+    second: Andrealphus_Bird_15
+  - first:
+      213: 3406085226383499809
+    second: Andrealphus_Bird_16
+  - first:
+      213: -756356886368549472
+    second: Andrealphus_Bird_17
+  - first:
+      213: -7081651212790970691
+    second: Andrealphus_Bird_18
+  - first:
+      213: -2632269283739080559
+    second: Andrealphus_Bird_19
+  - first:
+      213: -3821177714773389317
+    second: Andrealphus_Bird_20
+  - first:
+      213: 4364328236492809522
+    second: Andrealphus_Bird_21
+  - first:
+      213: 1761229927940817083
+    second: Andrealphus_Bird_22
+  - first:
+      213: -2598870061198247094
+    second: Andrealphus_Bird_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Andrealphus_Bird_idle_float_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 364
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8542ceeb0f593f24c90334126f4807f6
+      internalID: -2061698542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_idle_float_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 364
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1bb9d154602e94dbb27687cf71bb7e
+      internalID: 528765708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_idle_float_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 364
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6626690f068f044991c8e2cb2783bd
+      internalID: 285091543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_idle_float_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 364
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a48ad2ec90ac5d469cf77f012e97031
+      internalID: -542759155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_idle_float_4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 364
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efdb66256387904695f931ef683753b
+      internalID: 780566890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_idle_float_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 364
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c4a5d6fe6f22442b0a82d92d5bef64
+      internalID: 301066049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_speak_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 244
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5edbc14004b618469e55ac2683ea14e
+      internalID: -756122197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_speak_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 244
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd135660fac26a4a95becf01ff18a1f
+      internalID: -1426650768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_speak_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 244
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e306b77733dcdb341858069be542594c
+      internalID: -328347506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_speak_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 244
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0211c99b8fce1d64a82990599647734e
+      internalID: 1370174243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_speak_4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 244
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85cbb97ce7afa84dacb0b2ce8eef773
+      internalID: 1264810872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_speak_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 244
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf05130ff333be48be2e7d62623fd5d
+      internalID: -1885909597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_wing_gesture_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 124
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bc3663748ba214ab0060e830e3223f
+      internalID: -1285571296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_wing_gesture_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 124
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199c9ec76ebf1ca4a8c624c422a3bb1a
+      internalID: 1196674771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_wing_gesture_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 124
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d31bad53399b148998dc86fc8dcbb9
+      internalID: 308808989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_wing_gesture_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 124
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99721f2eab56e8e4f9dab0ebf319bcc4
+      internalID: -239492157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_wing_gesture_4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 124
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a32954086c9efd469767ec768c39059
+      internalID: 1115737214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_wing_gesture_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 124
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b38fc862ceb744b9b4df0703b067b3
+      internalID: -575472212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_blink_calm_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632f711c77cb94d49a3549578f19a3ac
+      internalID: -1843730540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_blink_calm_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 4
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b394b80ae351ffc4dbbaec4f3dc77a63
+      internalID: 1736318819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_blink_calm_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 4
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26966bed37b505a4bb334e8a8b4bd511
+      internalID: 1355665358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_blink_calm_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 4
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcda0ba3d35e6741886383cffd3ed25
+      internalID: -1863252358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_blink_calm_4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 4
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ea78cc34107954f963bea539064032
+      internalID: -565653214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrealphus_Bird_blink_calm_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 4
+        width: 144
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.026785715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e90a6e25a5d1fb4490b24e9ce364f9f
+      internalID: -987297101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 498a715a7710a8841832edfe4907db7a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Andrealphus_Bird_blink_calm_0: -1843730540
+      Andrealphus_Bird_blink_calm_1: 1736318819
+      Andrealphus_Bird_blink_calm_2: 1355665358
+      Andrealphus_Bird_blink_calm_3: -1863252358
+      Andrealphus_Bird_blink_calm_4: -565653214
+      Andrealphus_Bird_blink_calm_5: -987297101
+      Andrealphus_Bird_idle_float_0: -2061698542
+      Andrealphus_Bird_idle_float_1: 528765708
+      Andrealphus_Bird_idle_float_2: 285091543
+      Andrealphus_Bird_idle_float_3: -542759155
+      Andrealphus_Bird_idle_float_4: 780566890
+      Andrealphus_Bird_idle_float_5: 301066049
+      Andrealphus_Bird_speak_0: -756122197
+      Andrealphus_Bird_speak_1: -1426650768
+      Andrealphus_Bird_speak_2: -328347506
+      Andrealphus_Bird_speak_3: 1370174243
+      Andrealphus_Bird_speak_4: 1264810872
+      Andrealphus_Bird_speak_5: -1885909597
+      Andrealphus_Bird_wing_gesture_0: -1285571296
+      Andrealphus_Bird_wing_gesture_1: 1196674771
+      Andrealphus_Bird_wing_gesture_2: 308808989
+      Andrealphus_Bird_wing_gesture_3: -239492157
+      Andrealphus_Bird_wing_gesture_4: 1115737214
+      Andrealphus_Bird_wing_gesture_5: -575472212
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,757 @@
+fileFormatVersion: 2
+guid: 1ebbe723cf207dc4fae477d3e0da759c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6318234261038728611
+    second: Poe_Lunar_Cutscene_0
+  - first:
+      213: -7469396094459803565
+    second: Poe_Lunar_Cutscene_1
+  - first:
+      213: -8091291350649070988
+    second: Poe_Lunar_Cutscene_2
+  - first:
+      213: 7746299288597675797
+    second: Poe_Lunar_Cutscene_3
+  - first:
+      213: -2940965995789370676
+    second: Poe_Lunar_Cutscene_4
+  - first:
+      213: -31518277318394826
+    second: Poe_Lunar_Cutscene_5
+  - first:
+      213: 320882774180321448
+    second: Poe_Lunar_Cutscene_6
+  - first:
+      213: 7924440666786235906
+    second: Poe_Lunar_Cutscene_7
+  - first:
+      213: 2922789250099636649
+    second: Poe_Lunar_Cutscene_8
+  - first:
+      213: 2752088196038571786
+    second: Poe_Lunar_Cutscene_9
+  - first:
+      213: 7418673226611518505
+    second: Poe_Lunar_Cutscene_10
+  - first:
+      213: -6803767920552520867
+    second: Poe_Lunar_Cutscene_11
+  - first:
+      213: 4685958493927567268
+    second: Poe_Lunar_Cutscene_12
+  - first:
+      213: 3242105566235212303
+    second: Poe_Lunar_Cutscene_13
+  - first:
+      213: -4272607711977148099
+    second: Poe_Lunar_Cutscene_14
+  - first:
+      213: 7880604920177677661
+    second: Poe_Lunar_Cutscene_15
+  - first:
+      213: 7911543527850545333
+    second: Poe_Lunar_Cutscene_16
+  - first:
+      213: 3102679405571659008
+    second: Poe_Lunar_Cutscene_17
+  - first:
+      213: 3465237503860054035
+    second: Poe_Lunar_Cutscene_18
+  - first:
+      213: -5321042422855098822
+    second: Poe_Lunar_Cutscene_19
+  - first:
+      213: -3943624262312059562
+    second: Poe_Lunar_Cutscene_20
+  - first:
+      213: -827105297876458002
+    second: Poe_Lunar_Cutscene_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r0_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2e3398fb519514a8c3ea8e04e462f8
+      internalID: 1198327801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r0_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f62aab1cfc6514c91d6397dbcf5b4b
+      internalID: 512312297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r0_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165e8d01379879c43a10c0c2f041794e
+      internalID: 1910709870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r0_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b931e186432914683b45d3f64eca28
+      internalID: 1755942427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r0_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6e9a56d47c7b144b567e76dbc660a3
+      internalID: -373663160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r0_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 168
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaeb8230fbf7964d997755f8ff4d25a
+      internalID: 1557532908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r1_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73a7ef82ca9de847a9a2618f0af6e73
+      internalID: -1697917230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r1_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a2a5073b112af45ab8689658932ac4
+      internalID: 799551651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r1_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63837df4a740ec84da501451eb2e6c84
+      internalID: -1629890629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r1_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5755ff62b847ba40a3fda8883385bb9
+      internalID: 1424969553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r1_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1319f49e431d2941989b4947fc4cff7
+      internalID: 381079141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r1_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 112
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8519146d3c8194784615a8c83ad182
+      internalID: 1765680409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r2_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d7913480abd9b4eb592574859c89f2
+      internalID: -1901480106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r2_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949e058922f49bf4197baa0eb1fd85f2
+      internalID: -1019747351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r2_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9597b6d8a821c6141ab35583f125a90f
+      internalID: 1229017829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r2_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b013497f27a7e44825664bc911ef5b
+      internalID: 1732729150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r2_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f01b27b955cc034b964cc31b32395b6
+      internalID: 669917304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r2_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 56
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a39c31d43b8a944852fe7dd491f420
+      internalID: -1588040106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r3_c0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e98324060620da49b87493bc1fee184
+      internalID: 2118668742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r3_c1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3d2a67276cafd49b02c56a1f76d57b
+      internalID: -128052897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r3_c2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a984e94e65aa2c46a57abdda49f865c
+      internalID: -525130482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r3_c3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167277d0589487d4c8a7a19a8dfb9fbb
+      internalID: 360641964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r3_c4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2b2469d47453845bda5a0fe6b1d8e8
+      internalID: 615656403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poe_Lunar_Cutscene_r3_c5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4262f79b427e70e4fb4443ca1ca5ea49
+      internalID: 62194946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b6239ecbd4c8f304d9ae58bf64f4d6d5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Poe_Lunar_Cutscene_0: -6318234261038728611
+      Poe_Lunar_Cutscene_1: -7469396094459803565
+      Poe_Lunar_Cutscene_10: 7418673226611518505
+      Poe_Lunar_Cutscene_11: -6803767920552520867
+      Poe_Lunar_Cutscene_12: 4685958493927567268
+      Poe_Lunar_Cutscene_13: 3242105566235212303
+      Poe_Lunar_Cutscene_14: -4272607711977148099
+      Poe_Lunar_Cutscene_15: 7880604920177677661
+      Poe_Lunar_Cutscene_16: 7911543527850545333
+      Poe_Lunar_Cutscene_17: 3102679405571659008
+      Poe_Lunar_Cutscene_18: 3465237503860054035
+      Poe_Lunar_Cutscene_19: -5321042422855098822
+      Poe_Lunar_Cutscene_2: -8091291350649070988
+      Poe_Lunar_Cutscene_20: -3943624262312059562
+      Poe_Lunar_Cutscene_21: -827105297876458002
+      Poe_Lunar_Cutscene_3: 7746299288597675797
+      Poe_Lunar_Cutscene_4: -2940965995789370676
+      Poe_Lunar_Cutscene_5: -31518277318394826
+      Poe_Lunar_Cutscene_6: 320882774180321448
+      Poe_Lunar_Cutscene_7: 7924440666786235906
+      Poe_Lunar_Cutscene_8: 2922789250099636649
+      Poe_Lunar_Cutscene_9: 2752088196038571786
+      Poe_Lunar_Cutscene_r0_c0: 1198327801
+      Poe_Lunar_Cutscene_r0_c1: 512312297
+      Poe_Lunar_Cutscene_r0_c2: 1910709870
+      Poe_Lunar_Cutscene_r0_c3: 1755942427
+      Poe_Lunar_Cutscene_r0_c4: -373663160
+      Poe_Lunar_Cutscene_r0_c5: 1557532908
+      Poe_Lunar_Cutscene_r1_c0: -1697917230
+      Poe_Lunar_Cutscene_r1_c1: 799551651
+      Poe_Lunar_Cutscene_r1_c2: -1629890629
+      Poe_Lunar_Cutscene_r1_c3: 1424969553
+      Poe_Lunar_Cutscene_r1_c4: 381079141
+      Poe_Lunar_Cutscene_r1_c5: 1765680409
+      Poe_Lunar_Cutscene_r2_c0: -1901480106
+      Poe_Lunar_Cutscene_r2_c1: -1019747351
+      Poe_Lunar_Cutscene_r2_c2: 1229017829
+      Poe_Lunar_Cutscene_r2_c3: 1732729150
+      Poe_Lunar_Cutscene_r2_c4: 669917304
+      Poe_Lunar_Cutscene_r2_c5: -1588040106
+      Poe_Lunar_Cutscene_r3_c0: 2118668742
+      Poe_Lunar_Cutscene_r3_c1: -128052897
+      Poe_Lunar_Cutscene_r3_c2: -525130482
+      Poe_Lunar_Cutscene_r3_c3: 360641964
+      Poe_Lunar_Cutscene_r3_c4: 615656403
+      Poe_Lunar_Cutscene_r3_c5: 62194946
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
