@@ -595,7 +595,7 @@
         {
           "id": "E01_D011",
           "speaker": "MELANTHA",
-          "text": "Não é só um eco... tá tentando me corrigir.",
+          "text": "Esse eco tá me corrigindo?",
           "condition": "always"
         },
         {
@@ -717,7 +717,7 @@
         {
           "id": "E02_D007",
           "speaker": "MELANTHA",
-          "text": "Ah! Não é pra confiar na porta. É pra reparar no que mudou.",
+          "text": "Ah. A porta engana. Eu tenho que olhar o que mudou.",
           "condition": "always"
         },
         {
@@ -997,7 +997,7 @@
         {
           "id": "A1_D010",
           "speaker": "ANDREALPHUS",
-          "text": "Você vai encontrar coisas que esqueceu. Só não suponha que todas sejam suas.",
+          "text": "Vai encontrar coisas que esqueceu. Nem todas são suas.",
           "condition": "always"
         },
         {
@@ -1223,7 +1223,7 @@
         {
           "id": "P01_D005",
           "speaker": "MELANTHA",
-          "text": "Deu certo! Era só manter distância.",
+          "text": "Deu certo... longe dela.",
           "condition": "always"
         },
         {
@@ -1235,7 +1235,7 @@
         {
           "id": "P01_D007",
           "speaker": "MELANTHA",
-          "text": "Na Lua cheia, o reflexo tem que ficar alinhado.",
+          "text": "E se eu ficar no lugar do reflexo?",
           "condition": "always"
         },
         {
@@ -1253,7 +1253,7 @@
         {
           "id": "P01_D010",
           "speaker": "MELANTHA",
-          "text": "Minguante... tenho que tirar o excesso.",
+          "text": "Minguante. Menos, então.",
           "condition": "always"
         },
         {
@@ -1899,7 +1899,7 @@
         {
           "id": "M08_D001",
           "speaker": "MELANTHA",
-          "text": "Acho que essa é a saída. \"Acho\" é a palavra importante.",
+          "text": "Acho que é a saída. Acho.",
           "condition": "always"
         },
         {
@@ -1984,7 +1984,7 @@
         {
           "id": "FINAL_D005",
           "speaker": "MELANTHA",
-          "text": "Foi tudo um sonho?",
+          "text": "Eu dormi?",
           "condition": "always"
         },
         {
