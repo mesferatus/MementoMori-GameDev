@@ -7,6 +7,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_D_GARDEN_CRESCENT_SUCCESS
   lines:
-  - {Text: "Ela precisava que eu deixasse de querer.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
-  - {Text: "Ou pelo menos de perseguir.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Abriu quando eu me afastei.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Tá. Nem tudo vem quando eu chamo.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
   conditions: []

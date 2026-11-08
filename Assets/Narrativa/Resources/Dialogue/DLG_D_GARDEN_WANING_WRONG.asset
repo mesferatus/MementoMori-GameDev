@@ -7,6 +7,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_D_GARDEN_WANING_WRONG
   lines:
-  - {Text: "Não.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
-  - {Text: "Está pedindo menos.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Não, essa não.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Ela quer menos luz, não mais.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
   conditions: []

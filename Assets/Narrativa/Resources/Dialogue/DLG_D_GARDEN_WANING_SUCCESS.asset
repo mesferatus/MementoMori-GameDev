@@ -7,5 +7,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_D_GARDEN_WANING_SUCCESS
   lines:
-  - {Text: "Subtrair também pode completar.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Apaguei duas e ficou certo. Que estranho.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
   conditions: []

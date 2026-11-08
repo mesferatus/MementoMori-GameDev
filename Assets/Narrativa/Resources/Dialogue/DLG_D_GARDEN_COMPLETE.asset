@@ -7,6 +7,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_D_GARDEN_COMPLETE
   lines:
-  - {Text: "Crescente. Cheia. Minguante.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
-  - {Text: "Três maneiras de mudar sem deixar de ser Lua.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Pronto. As três flores responderam.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
+  - {Text: "Crescente, cheia e minguante... igual à lua lá de casa.", Speaker: "Melantha", CharactersPerSecond: 38, PauseBefore: 0, PauseAfter: 0, Thought: 0, Narration: 0, LockMovement: 1}
   conditions: []
