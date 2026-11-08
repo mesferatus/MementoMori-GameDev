@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: e2932c3fba464a34081b695abc02e792
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3320539709409204985
+    second: quarto_window_casement_half_0
+  - first:
+      213: -6292296898058931275
+    second: quarto_window_casement_half_1
+  - first:
+      213: -1981511380249620642
+    second: quarto_window_casement_half_2
+  - first:
+      213: -4234353418055261098
+    second: quarto_window_casement_half_3
+  - first:
+      213: -2011751665959762758
+    second: quarto_window_casement_half_4
+  - first:
+      213: -7333997372499438724
+    second: quarto_window_casement_half_5
+  - first:
+      213: -8023233373652878035
+    second: quarto_window_casement_half_6
+  - first:
+      213: -1913060967142550990
+    second: quarto_window_casement_half_7
+  - first:
+      213: -4925901429424078577
+    second: quarto_window_casement_half_8
+  - first:
+      213: 1994189905951725362
+    second: quarto_window_casement_half_9
+  - first:
+      213: 386262594512069916
+    second: quarto_window_casement_half_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 385.6667
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: quarto_window_casement_half_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 1981
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705e51e2ab21be1d0800000000000000
+      internalID: -3320539709409204985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_1
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 419
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3b7e92f454da8a0800000000000000
+      internalID: -6292296898058931275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 403
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fc3dde5e14084e0800000000000000
+      internalID: -1981511380249620642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_3
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 329
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654ea57300e8c35c0800000000000000
+      internalID: -4234353418055261098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_4
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 345
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab40b2eb482d414e0800000000000000
+      internalID: -2011751665959762758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 208
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73d5843f38683a90800000000000000
+      internalID: -7333997372499438724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_6
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 179
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d7c5d61cfb7a090800000000000000
+      internalID: -8023233373652878035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 144
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2329dcbaf217375e0800000000000000
+      internalID: -1913060967142550990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 104
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01c69c9fbea3abb0800000000000000
+      internalID: -4925901429424078577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2371cee5729ccab10800000000000000
+      internalID: 1994189905951725362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quarto_window_casement_half_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 39
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15a9ef78c74c5500800000000000000
+      internalID: 386262594512069916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      quarto_window_casement_half_0: -3320539709409204985
+      quarto_window_casement_half_1: -6292296898058931275
+      quarto_window_casement_half_10: 386262594512069916
+      quarto_window_casement_half_2: -1981511380249620642
+      quarto_window_casement_half_3: -4234353418055261098
+      quarto_window_casement_half_4: -2011751665959762758
+      quarto_window_casement_half_5: -7333997372499438724
+      quarto_window_casement_half_6: -8023233373652878035
+      quarto_window_casement_half_7: -1913060967142550990
+      quarto_window_casement_half_8: -4925901429424078577
+      quarto_window_casement_half_9: 1994189905951725362
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
