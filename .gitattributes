@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.unity binary linguist-language=YAML
+*.prefab binary linguist-language=YAML
+*.asset binary linguist-language=YAML
+*.meta text eol=lf
+*.cs text eol=lf
+*.md text eol=lf
+*.json text eol=lf
