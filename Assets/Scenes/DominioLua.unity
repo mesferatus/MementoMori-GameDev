@@ -2650720,7 +2650720,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 655573531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 653583117}
+  m_Script: {fileID: 11500000, guid: df6700195c0c6164babb124d255f771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.EchoPassageChoice
   puzzle: {fileID: 682723824}
@@ -3421085,7 +3421085,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620238233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 653583117}
+  m_Script: {fileID: 11500000, guid: df6700195c0c6164babb124d255f771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.EchoPassageChoice
   puzzle: {fileID: 682723824}
@@ -3602995,7 +3602995,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2061038265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 653583117}
+  m_Script: {fileID: 11500000, guid: df6700195c0c6164babb124d255f771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.EchoPassageChoice
   puzzle: {fileID: 682723824}
