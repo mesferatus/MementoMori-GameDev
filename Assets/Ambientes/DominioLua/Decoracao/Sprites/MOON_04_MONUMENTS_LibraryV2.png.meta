@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: 68de7e22a9f8a0a4492e50db040168b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4215375275220797331
+    second: MOON_04_MONUMENTS_LibraryV2_0
+  - first:
+      213: 6041060931151990722
+    second: MOON_04_MONUMENTS_LibraryV2_1
+  - first:
+      213: 8537637722777731181
+    second: MOON_04_MONUMENTS_LibraryV2_2
+  - first:
+      213: -7150733954383914729
+    second: MOON_04_MONUMENTS_LibraryV2_3
+  - first:
+      213: -2805857945789093789
+    second: MOON_04_MONUMENTS_LibraryV2_4
+  - first:
+      213: 90748640249044985
+    second: MOON_04_MONUMENTS_LibraryV2_5
+  - first:
+      213: 7502892033170312011
+    second: MOON_04_MONUMENTS_LibraryV2_6
+  - first:
+      213: -4997951170881480274
+    second: MOON_04_MONUMENTS_LibraryV2_7
+  - first:
+      213: 5942810463825653598
+    second: MOON_04_MONUMENTS_LibraryV2_8
+  - first:
+      213: 1390466472655909902
+    second: MOON_04_MONUMENTS_LibraryV2_9
+  - first:
+      213: 216641036636249023
+    second: MOON_04_MONUMENTS_LibraryV2_10
+  - first:
+      213: -7005458048367700059
+    second: MOON_04_MONUMENTS_LibraryV2_11
+  - first:
+      213: -4062791598031526806
+    second: MOON_04_MONUMENTS_LibraryV2_12
+  - first:
+      213: -2423017073807925439
+    second: MOON_04_MONUMENTS_LibraryV2_13
+  - first:
+      213: -7483581577737287566
+    second: MOON_04_MONUMENTS_LibraryV2_14
+  - first:
+      213: -3624805492659108442
+    second: MOON_04_MONUMENTS_LibraryV2_15
+  - first:
+      213: -2428426442537510468
+    second: MOON_04_MONUMENTS_LibraryV2_16
+  - first:
+      213: 3059956558364066144
+    second: MOON_04_MONUMENTS_LibraryV2_17
+  - first:
+      213: 3389845525572393276
+    second: MOON_04_MONUMENTS_LibraryV2_18
+  - first:
+      213: -140781455885615948
+    second: MOON_04_MONUMENTS_LibraryV2_19
+  - first:
+      213: -5032311835893731271
+    second: MOON_04_MONUMENTS_LibraryV2_20
+  - first:
+      213: 2676340845663008959
+    second: MOON_04_MONUMENTS_LibraryV2_21
+  - first:
+      213: -8615340613457718294
+    second: MOON_04_MONUMENTS_LibraryV2_22
+  - first:
+      213: -1999959342259827403
+    second: MOON_04_MONUMENTS_LibraryV2_23
+  - first:
+      213: 3270546409863973541
+    second: MOON_04_MONUMENTS_LibraryV2_24
+  - first:
+      213: 3779734466631554437
+    second: MOON_04_MONUMENTS_LibraryV2_25
+  - first:
+      213: 3824135852009394412
+    second: MOON_04_MONUMENTS_LibraryV2_26
+  - first:
+      213: 8765795167162590988
+    second: MOON_04_MONUMENTS_LibraryV2_27
+  - first:
+      213: 1158391423411289079
+    second: MOON_04_MONUMENTS_LibraryV2_28
+  - first:
+      213: -5691662183391602214
+    second: MOON_04_MONUMENTS_LibraryV2_29
+  - first:
+      213: -4083207452396899231
+    second: MOON_04_MONUMENTS_LibraryV2_30
+  - first:
+      213: 3579890943562560707
+    second: MOON_04_MONUMENTS_LibraryV2_31
+  - first:
+      213: -3211361883127140962
+    second: MOON_04_MONUMENTS_LibraryV2_32
+  - first:
+      213: -8199990705415807638
+    second: MOON_04_MONUMENTS_LibraryV2_33
+  - first:
+      213: -7371015988611303358
+    second: MOON_04_MONUMENTS_LibraryV2_34
+  - first:
+      213: 5810302973249471493
+    second: MOON_04_MONUMENTS_LibraryV2_35
+  - first:
+      213: -6839575259233638942
+    second: MOON_04_MONUMENTS_LibraryV2_36
+  - first:
+      213: 7651254468431615695
+    second: MOON_04_MONUMENTS_LibraryV2_37
+  - first:
+      213: 7805123658680186275
+    second: MOON_04_MONUMENTS_LibraryV2_38
+  - first:
+      213: 3758895890014237734
+    second: MOON_04_MONUMENTS_LibraryV2_39
+  - first:
+      213: -1180162504401278758
+    second: MOON_04_MONUMENTS_LibraryV2_40
+  - first:
+      213: 4536846641329880539
+    second: MOON_04_MONUMENTS_LibraryV2_41
+  - first:
+      213: 5811720131534597931
+    second: MOON_04_MONUMENTS_LibraryV2_42
+  - first:
+      213: -1978344345102984501
+    second: MOON_04_MONUMENTS_LibraryV2_43
+  - first:
+      213: -7036715310101296473
+    second: MOON_04_MONUMENTS_LibraryV2_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0606bd1ad1dd44e9dc35dbf75741cd
+      internalID: 189841687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_002
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec41a09d8604868469c0fcbe6cdd1399
+      internalID: -1829486570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_003
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c8dedd6b6ea4440a9d9549e3e21598
+      internalID: 714130726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_004
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c635ba4f2a34a40be5d8e81093c994
+      internalID: -1648257985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_005
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da217afbc8d65944f9df5967a38a06e8
+      internalID: 659529660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_006
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd49d7cac4ae2b444a07d447ea262db0
+      internalID: 470036709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_007
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68f56713cc9c8f4eac9774aa0a54450
+      internalID: -1499785092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_008
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6ab8b32ef46a246924917c8de4dec2
+      internalID: -2071856410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_009
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f8ce3e35e11ea4d821564cccf676d0
+      internalID: 953000467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_010
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee56ad0c223f9f54180232ced0fa4cca
+      internalID: 594451820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_011
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85dd51d9d23c414bb0599c5da99f26a
+      internalID: -903483499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_012
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7513f16d2304c4cbdd58458a928c2e
+      internalID: -587810470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_013
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb5ff55d9b649a46a6cd65bd39f7e02
+      internalID: 896675847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_014
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6563fd2a75ffd54b93730789d736b18
+      internalID: -56889979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_015
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d6b46d86e71a449881ef8e73cecd07
+      internalID: -1327195764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_016
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8800949da2a1f844bab712ba8e3d3cef
+      internalID: -1376632363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_017
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2409a67a9825d40b073c2999c32b05
+      internalID: 1110557167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_018
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecb48314e825e846a1d70a65dca62bc
+      internalID: -794913160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_019
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462d213cb01895748b4fb33b5a2e9d0d
+      internalID: 1773173642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOON_04_MONUMENTS_V2_020
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9014b4cdc6b00844aa62225fd02b4062
+      internalID: 112139438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0bae5e853acaed6429b9dba4bdf48fd7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MOON_04_MONUMENTS_V2_001: 189841687
+      MOON_04_MONUMENTS_V2_002: -1829486570
+      MOON_04_MONUMENTS_V2_003: 714130726
+      MOON_04_MONUMENTS_V2_004: -1648257985
+      MOON_04_MONUMENTS_V2_005: 659529660
+      MOON_04_MONUMENTS_V2_006: 470036709
+      MOON_04_MONUMENTS_V2_007: -1499785092
+      MOON_04_MONUMENTS_V2_008: -2071856410
+      MOON_04_MONUMENTS_V2_009: 953000467
+      MOON_04_MONUMENTS_V2_010: 594451820
+      MOON_04_MONUMENTS_V2_011: -903483499
+      MOON_04_MONUMENTS_V2_012: -587810470
+      MOON_04_MONUMENTS_V2_013: 896675847
+      MOON_04_MONUMENTS_V2_014: -56889979
+      MOON_04_MONUMENTS_V2_015: -1327195764
+      MOON_04_MONUMENTS_V2_016: -1376632363
+      MOON_04_MONUMENTS_V2_017: 1110557167
+      MOON_04_MONUMENTS_V2_018: -794913160
+      MOON_04_MONUMENTS_V2_019: 1773173642
+      MOON_04_MONUMENTS_V2_020: 112139438
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

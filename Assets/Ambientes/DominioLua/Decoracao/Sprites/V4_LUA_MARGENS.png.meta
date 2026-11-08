@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: 7fb5fe5db9669fc4dad9bb8432f2100d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8072070463543383914
+    second: V4_LUA_MARGENS_0
+  - first:
+      213: 1753940668217462221
+    second: V4_LUA_MARGENS_1
+  - first:
+      213: -698401437554566791
+    second: V4_LUA_MARGENS_2
+  - first:
+      213: -71237159160815243
+    second: V4_LUA_MARGENS_3
+  - first:
+      213: 8894948607219434309
+    second: V4_LUA_MARGENS_4
+  - first:
+      213: 2569575404068250687
+    second: V4_LUA_MARGENS_5
+  - first:
+      213: 2757045594870741033
+    second: V4_LUA_MARGENS_6
+  - first:
+      213: -8401300267991638240
+    second: V4_LUA_MARGENS_7
+  - first:
+      213: -8179962195288089941
+    second: V4_LUA_MARGENS_8
+  - first:
+      213: -2630980971540361767
+    second: V4_LUA_MARGENS_9
+  - first:
+      213: -5722204439928660234
+    second: V4_LUA_MARGENS_10
+  - first:
+      213: 7436436586550002883
+    second: V4_LUA_MARGENS_11
+  - first:
+      213: 8665255505375650713
+    second: rim_N
+  - first:
+      213: 5883138682107817662
+    second: rim_E
+  - first:
+      213: -8991403786988534765
+    second: rim_S
+  - first:
+      213: 2140953152294653622
+    second: rim_W
+  - first:
+      213: 8176500995629853115
+    second: rim_convex_NW
+  - first:
+      213: 3415933501377639864
+    second: rim_convex_NE
+  - first:
+      213: -7742607921407991721
+    second: rim_convex_SW
+  - first:
+      213: 3678424651775499488
+    second: rim_convex_SE
+  - first:
+      213: -1465470412133145972
+    second: rim_concave_NW
+  - first:
+      213: -2310185143803123337
+    second: rim_concave_NE
+  - first:
+      213: -1566135539286269714
+    second: rim_concave_SW
+  - first:
+      213: 8231037318620928767
+    second: rim_concave_SE
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rim_N
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 74
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993e9edb8fb214870800000000000000
+      internalID: 8665255505375650713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_E
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 74
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe656f067b15a150800000000000000
+      internalID: 5883138682107817662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_S
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 74
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 314427ce4ed183380800000000000000
+      internalID: -8991403786988534765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_W
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 74
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be864b7c8136bd10800000000000000
+      internalID: 2140953152294653622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_convex_NW
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 38
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb92526a554c87170800000000000000
+      internalID: 8176500995629853115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_convex_NE
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 38
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b578fdcb65d76f20800000000000000
+      internalID: 3415933501377639864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_convex_SW
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 38
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750e9591e1bbc8490800000000000000
+      internalID: -7742607921407991721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_convex_SE
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 38
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec5e1e4bb36c0330800000000000000
+      internalID: 3678424651775499488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_concave_NW
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8265ffac6a99abe0800000000000000
+      internalID: -1465470412133145972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_concave_NE
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779ea320ad290ffd0800000000000000
+      internalID: -2310185143803123337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_concave_SW
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee02ab65608f34ae0800000000000000
+      internalID: -1566135539286269714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rim_concave_SE
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa5265d4d48a3270800000000000000
+      internalID: 8231037318620928767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      V4_LUA_MARGENS_0: -8072070463543383914
+      V4_LUA_MARGENS_1: 1753940668217462221
+      V4_LUA_MARGENS_10: -5722204439928660234
+      V4_LUA_MARGENS_11: 7436436586550002883
+      V4_LUA_MARGENS_2: -698401437554566791
+      V4_LUA_MARGENS_3: -71237159160815243
+      V4_LUA_MARGENS_4: 8894948607219434309
+      V4_LUA_MARGENS_5: 2569575404068250687
+      V4_LUA_MARGENS_6: 2757045594870741033
+      V4_LUA_MARGENS_7: -8401300267991638240
+      V4_LUA_MARGENS_8: -8179962195288089941
+      V4_LUA_MARGENS_9: -2630980971540361767
+      rim_E: 5883138682107817662
+      rim_N: 8665255505375650713
+      rim_S: -8991403786988534765
+      rim_W: 2140953152294653622
+      rim_concave_NE: -2310185143803123337
+      rim_concave_NW: -1465470412133145972
+      rim_concave_SE: 8231037318620928767
+      rim_concave_SW: -1566135539286269714
+      rim_convex_NE: 3415933501377639864
+      rim_convex_NW: 8176500995629853115
+      rim_convex_SE: 3678424651775499488
+      rim_convex_SW: -7742607921407991721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
