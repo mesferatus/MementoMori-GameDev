@@ -85,8 +85,6 @@ namespace MementoMori.Player
             else if (!automationInputActive)
                 moveInput = InputBindings.Movement();
 
-            if (isSwimming && moveInput.sqrMagnitude > .01f && Time.time >= nextSplashAt)
-                StartSplash();
             UpdateSplash();
 
             if (!isSwimming && moveInput.sqrMagnitude > 0f && Time.time >= nextFootstepAt)
@@ -97,9 +95,9 @@ namespace MementoMori.Player
 
             if (animator != null)
             {
-                animator.speed = isSwimming ? .72f : 1f;
-                animator.transform.localPosition = baseVisualPosition + (isSwimming && moveInput.sqrMagnitude > .01f
-                    ? Vector3.up * (Mathf.Sin(Time.time * 7f) * .045f) : Vector3.zero);
+                // The swim frames already animate the strokes; extra code bobbing shimmered against the pixel grid.
+                animator.speed = isSwimming ? .8f : 1f;
+                animator.transform.localPosition = baseVisualPosition;
                 animator.SetFloat("Speed", moveInput.sqrMagnitude);
                 animator.SetFloat("MoveX", moveInput.x);
                 animator.SetFloat("MoveY", moveInput.y);
@@ -137,9 +135,10 @@ namespace MementoMori.Player
         private void StartSplash()
         {
             if (splashVisual == null) return;
+            // Only a soft sound when entering or leaving the water; the splash sprite no longer pops up.
             splashStartedAt = Time.time;
             nextSplashAt = Time.time + .58f;
-            splashVisual.enabled = true;
+            splashVisual.enabled = false;
             if (splashAudio != null)
             {
                 if (splashClip == null) splashClip = CreateSplashClip();
