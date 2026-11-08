@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: a395a32be60f2f047982dc7354dd3052
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8352836461218673893
+    second: MOON_11_FRAGMENT_PORTAL_0
+  - first:
+      213: -7068864104507521072
+    second: MOON_11_FRAGMENT_PORTAL_1
+  - first:
+      213: 6143350490106076734
+    second: MOON_11_FRAGMENT_PORTAL_2
+  - first:
+      213: 6243170609404765221
+    second: MOON_11_FRAGMENT_PORTAL_3
+  - first:
+      213: -8329197935517052057
+    second: MOON_11_FRAGMENT_PORTAL_4
+  - first:
+      213: -1430454900475562774
+    second: MOON_11_FRAGMENT_PORTAL_5
+  - first:
+      213: -6682659472492549486
+    second: MOON_11_FRAGMENT_PORTAL_6
+  - first:
+      213: -6824843074218823146
+    second: MOON_11_FRAGMENT_PORTAL_7
+  - first:
+      213: 8154410138312707658
+    second: MOON_11_FRAGMENT_PORTAL_8
+  - first:
+      213: -2499226199549382265
+    second: MOON_11_FRAGMENT_PORTAL_9
+  - first:
+      213: -7186478304363926541
+    second: MOON_11_FRAGMENT_PORTAL_10
+  - first:
+      213: -2571777339862271609
+    second: MOON_11_FRAGMENT_PORTAL_11
+  - first:
+      213: 3843495862018144694
+    second: MOON_11_FRAGMENT_PORTAL_12
+  - first:
+      213: -7999630516858146738
+    second: MOON_11_FRAGMENT_PORTAL_13
+  - first:
+      213: 1800818350891256585
+    second: MOON_11_FRAGMENT_PORTAL_14
+  - first:
+      213: -642202243713129219
+    second: MOON_11_FRAGMENT_PORTAL_15
+  - first:
+      213: -2711332479646433440
+    second: MOON_11_FRAGMENT_PORTAL_16
+  - first:
+      213: 7789005705877928969
+    second: MOON_11_FRAGMENT_PORTAL_17
+  - first:
+      213: -3450419841545505646
+    second: MOON_11_FRAGMENT_PORTAL_18
+  - first:
+      213: -7235109980888767493
+    second: MOON_11_FRAGMENT_PORTAL_19
+  - first:
+      213: 3520198038114846769
+    second: MOON_11_FRAGMENT_PORTAL_20
+  - first:
+      213: -1061242353203945674
+    second: MOON_11_FRAGMENT_PORTAL_21
+  - first:
+      213: 4539371509221574795
+    second: MOON_11_FRAGMENT_PORTAL_22
+  - first:
+      213: 6631443008452217335
+    second: MOON_11_FRAGMENT_PORTAL_23
+  - first:
+      213: -6444372778659847568
+    second: MOON_11_FRAGMENT_PORTAL_24
+  - first:
+      213: 5609152356321626015
+    second: MOON_11_FRAGMENT_PORTAL_25
+  - first:
+      213: -8157671407623923290
+    second: MOON_11_FRAGMENT_PORTAL_26
+  - first:
+      213: 86528260599301755
+    second: MOON_11_FRAGMENT_PORTAL_27
+  - first:
+      213: -3484369266910500996
+    second: MOON_11_FRAGMENT_PORTAL_28
+  - first:
+      213: 3283009737255954381
+    second: MOON_11_FRAGMENT_PORTAL_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FRAGMENT_INERT
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14414371954016b409b86f965967de33
+      internalID: -1987938415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAGMENT_REACTING
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9f6566c709d54418d336fca27e1698
+      internalID: -1506689277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAGMENT_ACTIVE
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ec49f2e55d3c54299861c41b9b2961
+      internalID: 264584348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAGMENT_DISSIPATING
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76fdb824cded7b4788f21b1dbd7fc61
+      internalID: 1800942744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PORTAL_INACTIVE
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40812fe31edadd74999da933d3769b3e
+      internalID: -1528526571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PORTAL_ACTIVATING
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3fda7edfb465c47aa425e37997a4ba
+      internalID: -1321304976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PORTAL_ACTIVE
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a03f67193abed45a0ff266a6c41da0
+      internalID: 1928322123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PEDESTAL
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afc8f6571e003646b78c72570f5b038
+      internalID: -1312232858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHARDS
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4504bcd4512e28243ad8a81fcf185cfa
+      internalID: 1419915738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAME_INACTIVE
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db02008134f20544bb63189c250cc327
+      internalID: -333603129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAME_ACTIVE
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c1f2f6838609f468ace3e0f6554ffe
+      internalID: -730220354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAME_GLOW
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca17389e1ca4684a93382956c8f736b
+      internalID: -1190892223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FOREGROUND
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2fdf9216878db4596a16cde9c4d763
+      internalID: 998670970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTICLES
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c19839f4948ba478ad55c6a3cc354b
+      internalID: -7926835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GLOW
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ce662586ddb1f48a3ca424456ace34
+      internalID: -445474325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRAGMENT_COLLECTED_EMPTY
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4280094d60dfa54abeeb8a90daa47aa
+      internalID: 1882480614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a213e09fe54c8d2468af8c08a43c6368
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FOREGROUND: 998670970
+      FRAGMENT_ACTIVE: 264584348
+      FRAGMENT_COLLECTED_EMPTY: 1882480614
+      FRAGMENT_DISSIPATING: 1800942744
+      FRAGMENT_INERT: -1987938415
+      FRAGMENT_REACTING: -1506689277
+      FRAME_ACTIVE: -730220354
+      FRAME_GLOW: -1190892223
+      FRAME_INACTIVE: -333603129
+      GLOW: -445474325
+      PARTICLES: -7926835
+      PEDESTAL: -1312232858
+      PORTAL_ACTIVATING: -1321304976
+      PORTAL_ACTIVE: 1928322123
+      PORTAL_INACTIVE: -1528526571
+      SHARDS: 1419915738
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

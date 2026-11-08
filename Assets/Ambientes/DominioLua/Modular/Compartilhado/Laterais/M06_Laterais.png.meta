@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: faae67c7a72fb1e409521a5704e2adeb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4879989119573849409
+    second: M06_Laterais_0
+  - first:
+      213: -5007941886533292777
+    second: M06_Laterais_1
+  - first:
+      213: 4753505984904788218
+    second: M06_Laterais_2
+  - first:
+      213: 5768354333991908615
+    second: M06_Laterais_3
+  - first:
+      213: 2574885486835078441
+    second: M06_Laterais_4
+  - first:
+      213: -2961743300514739668
+    second: M06_Laterais_5
+  - first:
+      213: 5811997415855836021
+    second: M06_Laterais_6
+  - first:
+      213: 1629540579053164791
+    second: M06_Laterais_7
+  - first:
+      213: -4656376696126430690
+    second: M06_Laterais_8
+  - first:
+      213: 7087001690413892743
+    second: M06_Laterais_9
+  - first:
+      213: -6396316193712135063
+    second: M06_Laterais_10
+  - first:
+      213: 4567712094930625279
+    second: M06_Laterais_11
+  - first:
+      213: 897126656033780788
+    second: M06_Laterais_12
+  - first:
+      213: 469454158023500498
+    second: M06_Laterais_13
+  - first:
+      213: -1877330286176876106
+    second: M06_Laterais_14
+  - first:
+      213: 7985699335711459784
+    second: M06_Laterais_15
+  - first:
+      213: -5862961369670182737
+    second: M06_Laterais_16
+  - first:
+      213: -2734267692156888320
+    second: M06_Laterais_17
+  - first:
+      213: 5216808079972497482
+    second: M06_Laterais_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 6
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M06_Laterais_0
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 680
+        width: 14
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14578fbbf3439b340800000000000000
+      internalID: 4879989119573849409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_1
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 590
+        width: 14
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d226d2367308ab0800000000000000
+      internalID: -5007941886533292777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_2
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 449
+        width: 14
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af871f31288d7f140800000000000000
+      internalID: 4753505984904788218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_3
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 680
+        width: 14
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7053c2864bf4d0050800000000000000
+      internalID: 5768354333991908615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_4
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 591
+        width: 16
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9251d1c35b4dbb320800000000000000
+      internalID: 2574885486835078441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_5
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 449
+        width: 14
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a0de00926c5e6d0800000000000000
+      internalID: -2961743300514739668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_6
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 359
+        width: 14
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b439f3bdc58a050800000000000000
+      internalID: 5811997415855836021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_7
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 350
+        width: 14
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f85c81e58a4d9610800000000000000
+      internalID: 1629540579053164791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 360
+        width: 16
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e122afeb01a316fb0800000000000000
+      internalID: -4656376696126430690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_9
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 261
+        width: 16
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78486b72d761a5260800000000000000
+      internalID: 7087001690413892743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_10
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 208
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964a5ba9f48bb37a0800000000000000
+      internalID: -6396316193712135063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_11
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 260
+        width: 14
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2689613f5c36f30800000000000000
+      internalID: 4567712094930625279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_12
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 221
+        width: 47
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4347d63c0fb337c00800000000000000
+      internalID: 897126656033780788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_13
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 261
+        width: 16
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d22257c116d38600800000000000000
+      internalID: 469454158023500498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_14
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 151
+        width: 16
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9485e1d0262f5e0800000000000000
+      internalID: -1877330286176876106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_15
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 151
+        width: 16
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9872c5c37e2de60800000000000000
+      internalID: 7985699335711459784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_16
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 47
+        width: 16
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa898f492b392aea0800000000000000
+      internalID: -5862961369670182737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_17
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b5920550eed0ad0800000000000000
+      internalID: -2734267692156888320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M06_Laterais_18
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 0
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48f5241f43d56840800000000000000
+      internalID: 5216808079972497482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      M06_Laterais_0: 4879989119573849409
+      M06_Laterais_1: -5007941886533292777
+      M06_Laterais_10: -6396316193712135063
+      M06_Laterais_11: 4567712094930625279
+      M06_Laterais_12: 897126656033780788
+      M06_Laterais_13: 469454158023500498
+      M06_Laterais_14: -1877330286176876106
+      M06_Laterais_15: 7985699335711459784
+      M06_Laterais_16: -5862961369670182737
+      M06_Laterais_17: -2734267692156888320
+      M06_Laterais_18: 5216808079972497482
+      M06_Laterais_2: 4753505984904788218
+      M06_Laterais_3: 5768354333991908615
+      M06_Laterais_4: 2574885486835078441
+      M06_Laterais_5: -2961743300514739668
+      M06_Laterais_6: 5811997415855836021
+      M06_Laterais_7: 1629540579053164791
+      M06_Laterais_8: -4656376696126430690
+      M06_Laterais_9: 7087001690413892743
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
