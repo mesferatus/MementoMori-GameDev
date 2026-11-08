@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2911485529917962667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8095037923070448478}
+  - component: {fileID: 1331365571185686635}
+  m_Layer: 0
+  m_Name: GrimoireRuntimeHost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8095037923070448478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911485529917962667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331365571185686635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911485529917962667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde9286605b3c67469851d89bb3da348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.World.GrimoireScreen
+  bookSprite: {fileID: 21300000, guid: 2ed15dc38f3a0fc4e927546fab301af6, type: 3}
+  illustrationSprite: {fileID: 21300000, guid: 4e4037462dd0aa34a82a659bd293cbe4, type: 3}
+  noteSprite: {fileID: 21300000, guid: feed0a257d3f35c43acc5c3a5dfc3e2a, type: 3}
+  symbolsSprite: {fileID: 21300000, guid: ab1ba13852693f043b7520e4519c17c1, type: 3}
+  closeFrameSprite: {fileID: 0}
+  titleFont: {fileID: 11400000, guid: eb9a13b0bd3f2d0428647cb5cf48ac3e, type: 2}
+  bodyFont: {fileID: 11400000, guid: 9e3e63e1708a2964b9ce8d30d631bca0, type: 2}
