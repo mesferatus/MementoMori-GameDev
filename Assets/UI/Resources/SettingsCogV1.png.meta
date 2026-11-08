@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: f47c9a494c9709842bb1dbb1384a6d17
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4823361367884744266
+    second: SettingsCogV1_0
+  - first:
+      213: 4940935249189720519
+    second: SettingsCogV1_1
+  - first:
+      213: 2765825669065359422
+    second: SettingsCogV1_2
+  - first:
+      213: -6227523318876083750
+    second: SettingsCogV1_3
+  - first:
+      213: 1177122602257391148
+    second: SettingsCogV1_4
+  - first:
+      213: -3424674552296063980
+    second: SettingsCogV1_5
+  - first:
+      213: -5928823275765875613
+    second: SettingsCogV1_6
+  - first:
+      213: -2081337188392729730
+    second: SettingsCogV1_7
+  - first:
+      213: -373295162163724229
+    second: SettingsCogV1_8
+  - first:
+      213: -2819830092095956747
+    second: SettingsCogV1_9
+  - first:
+      213: -3306195917825468432
+    second: SettingsCogV1_10
+  - first:
+      213: -5506174823461621313
+    second: SettingsCogV1_11
+  - first:
+      213: -8547436518741008167
+    second: SettingsCogV1_12
+  - first:
+      213: 5819820511549152473
+    second: SettingsCogV1_13
+  - first:
+      213: 5035920784234164076
+    second: SettingsCogV1_14
+  - first:
+      213: 8792882271135787805
+    second: SettingsCogV1_15
+  - first:
+      213: -5141139867838755059
+    second: SettingsCogV1_16
+  - first:
+      213: -5878358048573973886
+    second: SettingsCogV1_17
+  - first:
+      213: -7416013577655198730
+    second: SettingsCogV1_18
+  - first:
+      213: 7059437663820691671
+    second: SettingsCogV1_19
+  - first:
+      213: 2430093569269412639
+    second: SettingsCogV1_20
+  - first:
+      213: 351927019010054956
+    second: SettingsCogV1_21
+  - first:
+      213: 5642933345278956593
+    second: SettingsCogV1_22
+  - first:
+      213: -2850066755516740979
+    second: SettingsCogV1_23
+  - first:
+      213: 7742434129780057736
+    second: SettingsCogV1_24
+  - first:
+      213: 6065459021808503433
+    second: SettingsCogV1_25
+  - first:
+      213: -1908097758909262655
+    second: SettingsCogV1_26
+  - first:
+      213: -5128427723708009406
+    second: SettingsCogV1_27
+  - first:
+      213: -5969167762555974724
+    second: SettingsCogV1_28
+  - first:
+      213: -4916172719268852795
+    second: SettingsCogV1_29
+  - first:
+      213: 5170079087008497435
+    second: SettingsCogV1_30
+  - first:
+      213: -1120123691759310273
+    second: SettingsCogV1_31
+  - first:
+      213: -3112745390249047225
+    second: SettingsCogV1_32
+  - first:
+      213: 8204653727548751662
+    second: SettingsCogV1_33
+  - first:
+      213: 227764127803681435
+    second: SettingsCogV1_34
+  - first:
+      213: -3217586623929560691
+    second: SettingsCogV1_35
+  - first:
+      213: -7890358542458926118
+    second: SettingsCogV1_36
+  - first:
+      213: 4448632505210725502
+    second: SettingsCogV1_37
+  - first:
+      213: 1308016510868683293
+    second: SettingsCogV1_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SettingsCogV1_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 23
+        width: 1187
+        height: 1165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46cc1cdb9500f240800000000000000
+      internalID: 4823361367884744266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1146
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1d8225e6ab19440800000000000000
+      internalID: 4940935249189720519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_2
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1085
+        width: 333
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e304c43cacf226620800000000000000
+      internalID: 2765825669065359422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_3
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1118
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9edeb49846399a0800000000000000
+      internalID: -6227523318876083750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_4
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 953
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e92a425caf55010800000000000000
+      internalID: 1177122602257391148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 849
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cb21fa3ac1970d0800000000000000
+      internalID: -3424674552296063980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 890
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c38e794a698bda0800000000000000
+      internalID: -5928823275765875613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 724
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e738a04cada9d13e0800000000000000
+      internalID: -2081337188392729730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 728
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b300cde170ac1daf0800000000000000
+      internalID: -373295162163724229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 923
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f8d9a9a873fdd8d0800000000000000
+      internalID: -2819830092095956747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 923
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f79a2864580e12d0800000000000000
+      internalID: -3306195917825468432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_11
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 690
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1fe58cb232693b0800000000000000
+      internalID: -5506174823461621313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_12
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 694
+        width: 78
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0ad30c5c7616980800000000000000
+      internalID: -8547436518741008167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_13
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 659
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc5b67abe724c050800000000000000
+      internalID: 5819820511549152473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_14
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 642
+        width: 74
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6fa845954f23e540800000000000000
+      internalID: 5035920784234164076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_15
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 406
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1be0e2c6d7960a70800000000000000
+      internalID: 8792882271135787805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 403
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f4fd4778007a8b0800000000000000
+      internalID: -5141139867838755059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_17
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 385
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a903cef70eb6ea0800000000000000
+      internalID: -5878358048573973886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_18
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 362
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb536e51f6051990800000000000000
+      internalID: -7416013577655198730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_19
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 361
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8bb0a172928f160800000000000000
+      internalID: 7059437663820691671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_20
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 354
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13b34fd93d69b120800000000000000
+      internalID: 2430093569269412639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 321
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bd4fa52cb42e400800000000000000
+      internalID: 351927019010054956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_22
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 233
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1341f80eaf9bf4e40800000000000000
+      internalID: 5642933345278956593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_23
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 206
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a464bd2678278d0800000000000000
+      internalID: -2850066755516740979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_24
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 152
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886a662e1d6a27b60800000000000000
+      internalID: 7742434129780057736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_25
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 111
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a859a18d6dc2450800000000000000
+      internalID: 6065459021808503433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_26
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 120
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c49e73a2331585e0800000000000000
+      internalID: -1908097758909262655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_27
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 81
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2447e18282a24d8b0800000000000000
+      internalID: -5128427723708009406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_28
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 66
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb4324cb81492da0800000000000000
+      internalID: -5969167762555974724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_29
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 82
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb838575fe36cbb0800000000000000
+      internalID: -4916172719268852795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_30
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 97
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f31d1998fcfb740800000000000000
+      internalID: 5170079087008497435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_31
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 76
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3aef20ef658470f0800000000000000
+      internalID: -1120123691759310273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_32
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 87
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b88f14f8e4dc4d0800000000000000
+      internalID: -3112745390249047225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_33
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 45
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fb0a75819ccd170800000000000000
+      internalID: 8204653727548751662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_34
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 71
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9aa05a744e292300800000000000000
+      internalID: 227764127803681435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_35
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 67
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8151a65306d853d0800000000000000
+      internalID: -3217586623929560691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_36
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 55
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb4446e5b0df7290800000000000000
+      internalID: -7890358542458926118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_37
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 63
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74675191b7bcbd30800000000000000
+      internalID: 4448632505210725502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsCogV1_38
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 31
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a7ca22612072210800000000000000
+      internalID: 1308016510868683293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SettingsCogV1_0: 4823361367884744266
+      SettingsCogV1_1: 4940935249189720519
+      SettingsCogV1_10: -3306195917825468432
+      SettingsCogV1_11: -5506174823461621313
+      SettingsCogV1_12: -8547436518741008167
+      SettingsCogV1_13: 5819820511549152473
+      SettingsCogV1_14: 5035920784234164076
+      SettingsCogV1_15: 8792882271135787805
+      SettingsCogV1_16: -5141139867838755059
+      SettingsCogV1_17: -5878358048573973886
+      SettingsCogV1_18: -7416013577655198730
+      SettingsCogV1_19: 7059437663820691671
+      SettingsCogV1_2: 2765825669065359422
+      SettingsCogV1_20: 2430093569269412639
+      SettingsCogV1_21: 351927019010054956
+      SettingsCogV1_22: 5642933345278956593
+      SettingsCogV1_23: -2850066755516740979
+      SettingsCogV1_24: 7742434129780057736
+      SettingsCogV1_25: 6065459021808503433
+      SettingsCogV1_26: -1908097758909262655
+      SettingsCogV1_27: -5128427723708009406
+      SettingsCogV1_28: -5969167762555974724
+      SettingsCogV1_29: -4916172719268852795
+      SettingsCogV1_3: -6227523318876083750
+      SettingsCogV1_30: 5170079087008497435
+      SettingsCogV1_31: -1120123691759310273
+      SettingsCogV1_32: -3112745390249047225
+      SettingsCogV1_33: 8204653727548751662
+      SettingsCogV1_34: 227764127803681435
+      SettingsCogV1_35: -3217586623929560691
+      SettingsCogV1_36: -7890358542458926118
+      SettingsCogV1_37: 4448632505210725502
+      SettingsCogV1_38: 1308016510868683293
+      SettingsCogV1_4: 1177122602257391148
+      SettingsCogV1_5: -3424674552296063980
+      SettingsCogV1_6: -5928823275765875613
+      SettingsCogV1_7: -2081337188392729730
+      SettingsCogV1_8: -373295162163724229
+      SettingsCogV1_9: -2819830092095956747
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
