@@ -54,7 +54,7 @@ namespace MementoMori.Dialogue
             Border(panel.transform, "LowerBorder", new Vector2(.03f, .025f), new Vector2(.97f, .035f));
             Border(panel.transform, "LeftBorder", new Vector2(.02f, .04f), new Vector2(.025f, .96f));
             Border(panel.transform, "RightBorder", new Vector2(.975f, .04f), new Vector2(.98f, .96f));
-            var prompt = Text("Prompt", panel.transform, choice.prompt, 30,
+            var prompt = Text("Prompt", panel.transform, Loc.T(choice.prompt), 30,
                 new Vector2(.07f, .70f), new Vector2(.93f, .94f));
             prompt.fontStyle = FontStyles.SmallCaps;
             for (var i = 0; i < choice.options.Length; i++)
@@ -81,7 +81,7 @@ namespace MementoMori.Dialogue
                     fadeDuration = .12f
                 };
                 button.onClick.AddListener(() => Choose(index));
-                Text("Label", row.transform, (i + 1) + "  " + choice.options[i].text, 25,
+                Text("Label", row.transform, (i + 1) + "  " + Loc.T(choice.options[i].text), 25,
                     new Vector2(.04f, .05f), new Vector2(.96f, .95f));
             }
         }

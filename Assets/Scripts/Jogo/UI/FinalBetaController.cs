@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using MementoMori.Core;
 using MementoMori.Dialogue;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace MementoMori.UI
         private const string ClosingMessage = "O que a gente lembra volta com a gente.\n\nObrigado por jogar Memento Mori.";
         private int entryIndex;
         private bool sequenceComplete;
+        private Coroutine creditsSequence;
+        private bool returning;
         private Text speakerLabel;
         private Text dialogueLabel;
 
@@ -150,11 +153,29 @@ namespace MementoMori.UI
             }
             if (finalText != null)
             {
-                finalText.text = ClosingMessage;
+                finalText.text = Loc.T(ClosingMessage);
                 finalText.gameObject.SetActive(true);
             }
-            if (finalTextTmp != null) finalTextTmp.text = ClosingMessage;
+            if (finalTextTmp != null) finalTextTmp.text = Loc.T(ClosingMessage);
             if (returnButton != null) returnButton.interactable = true;
+            if (credits != null && creditsSequence == null) creditsSequence = StartCoroutine(PlayClosingCredits());
+        }
+
+        private IEnumerator PlayClosingCredits()
+        {
+            // Leave the closing words readable before the animated night and real credits.
+            yield return new WaitForSecondsRealtime(7f);
+            if (returning) yield break;
+            ShowCredits();
+            yield return new WaitForSecondsRealtime(30f);
+            ReturnToMenu();
+        }
+
+        private void Update()
+        {
+            if (sequenceComplete && credits != null && credits.activeInHierarchy
+                && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
+                ReturnToMenu();
         }
 
         /// <summary>
@@ -232,7 +253,11 @@ namespace MementoMori.UI
             // The emblem sat over the illustration's face; the logo above already closes the card.
             ui.Find("CentralOrnament")?.gameObject.SetActive(false);
             foreach (var name in new[] { "CreditsButton", "ReturnButton", "QuitButton" })
-                if (ui.Find(name)?.GetComponent<Button>() is Button button) MenuButtonStyle.Apply(button, new Vector2(380f, 84f), .6f);
+                if (ui.Find(name)?.GetComponent<Button>() is Button button)
+                {
+                    MenuButtonStyle.Apply(button, new Vector2(380f, 84f), .6f);
+                    LocalizedText.Bind(button.GetComponentInChildren<TMPro.TMP_Text>(true));
+                }
             var credits = ui.Find("CreditsPanel") as RectTransform;
             if (credits == null || credits.Find("Painel") != null) return;
             var bodyFont = credits.Find("CreditsText")?.GetComponent<TMPro.TMP_Text>()?.font;
@@ -242,8 +267,10 @@ namespace MementoMori.UI
             credits.anchorMin = Vector2.zero; credits.anchorMax = Vector2.one;
             credits.offsetMin = credits.offsetMax = Vector2.zero;
             MenuPanelStyle.Veil(credits, .8f).SetAsFirstSibling();
+            var ascii = AsciiCreditsView.Attach(credits, bodyFont);
+            ascii.transform.SetSiblingIndex(1);
             var panel = MenuPanelStyle.Panel(credits, new Vector2(1000f, 820f));
-            panel.SetSiblingIndex(1);
+            panel.SetSiblingIndex(2);
             MenuPanelStyle.Title(panel, "CRÉDITOS", titleFont);
             MenuPanelStyle.CreditsBody(panel, bodyFont);
             if (credits.Find("CloseCredits") is RectTransform back)
@@ -252,16 +279,18 @@ namespace MementoMori.UI
                 back.anchorMin = back.anchorMax = back.pivot = new Vector2(.5f, 0f);
                 back.anchoredPosition = new Vector2(0f, 46f);
                 MenuButtonStyle.Apply(back.GetComponent<Button>(), new Vector2(380f, 84f), .6f);
+                LocalizedText.Bind(back.GetComponentInChildren<TMPro.TMP_Text>(true));
             }
         }
 
         public void ShowCredits() { if (sequenceComplete && credits != null) credits.SetActive(true); }
-        public void HideCredits() { if (credits != null) credits.SetActive(false); }
+        public void HideCredits() { if (sequenceComplete) ReturnToMenu(); }
         public void Quit() { if (sequenceComplete) Application.Quit(); }
 
         public void ReturnToMenu()
         {
-            if (!sequenceComplete) return;
+            if (!sequenceComplete || returning) return;
+            returning = true;
             GameManager.Instance?.ReturnToMenu();
         }
     }

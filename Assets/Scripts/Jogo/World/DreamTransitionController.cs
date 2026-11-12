@@ -38,7 +38,7 @@ namespace MementoMori.World
                     var t=Mathf.Clamp01(elapsed/duration);
                     image.color=new Color(.015f,.008f,.035f,Mathf.SmoothStep(0,1,Mathf.Clamp01(t*4)));
                     var phase=t*phrases.Length;
-                    line.text=phrases[Mathf.Min((int)phase,phrases.Length-1)];
+                    line.text=Loc.T(phrases[Mathf.Min((int)phase,phrases.Length-1)]);
                     var alpha=Mathf.Sin(Mathf.Clamp01(phase-Mathf.Floor(phase))*Mathf.PI);
                     line.color=new Color(.78f,.72f,.9f,alpha);
                     yield return null;

@@ -29,6 +29,8 @@ namespace MementoMori.UI
                 image.pixelsPerUnitMultiplier = 1f / Mathf.Max(.1f, borderScale);
                 image.color = Color.white;
             }
+            if (button.GetComponent<MenuButtonFeedback>() == null)
+                button.gameObject.AddComponent<MenuButtonFeedback>();
             button.spriteState = new SpriteState();
             button.transition = Selectable.Transition.ColorTint;
             var colors = button.colors;

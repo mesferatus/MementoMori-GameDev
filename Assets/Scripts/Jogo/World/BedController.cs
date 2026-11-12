@@ -124,11 +124,11 @@ namespace MementoMori.World
             Border(panel.transform, "LowerBorder", new Vector2(.03f, .025f), new Vector2(.97f, .035f));
             Border(panel.transform, "LeftBorder", new Vector2(.02f, .04f), new Vector2(.025f, .96f));
             Border(panel.transform, "RightBorder", new Vector2(.975f, .04f), new Vector2(.98f, .96f));
-            var label = ChoiceText("Title", panel.transform, "Escolha antes de dormir", 30,
+            var label = ChoiceText("Title", panel.transform, Loc.T("Escolha antes de dormir"), 30,
                 new Vector2(.07f, .70f), new Vector2(.93f, .94f));
             label.fontStyle = FontStyles.SmallCaps;
-            CreateChoiceButton(panel.transform, "Deitar [Y]", new Vector2(.09f, .39f), new Vector2(.91f, .65f), StartSleep);
-            CreateChoiceButton(panel.transform, "Verificar o quarto mais uma vez [N]", new Vector2(.09f, .09f), new Vector2(.91f, .35f), CancelSleepChoice);
+            CreateChoiceButton(panel.transform, Loc.T("Deitar [Y]"), new Vector2(.09f, .39f), new Vector2(.91f, .65f), StartSleep);
+            CreateChoiceButton(panel.transform, Loc.T("Verificar o quarto mais uma vez [N]"), new Vector2(.09f, .09f), new Vector2(.91f, .35f), CancelSleepChoice);
         }
 
         private void CreateChoiceButton(Transform parent, string caption, Vector2 min, Vector2 max, UnityEngine.Events.UnityAction action)

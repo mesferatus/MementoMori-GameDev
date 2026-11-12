@@ -14,6 +14,7 @@ namespace MementoMori.UI
         [SerializeField] private GameObject panel;
         [SerializeField] private GameObject dimmer;
         private bool paused;
+        private string titleKey = "PAUSA";
         private GameObject mainButtons;
         private GameObject slotButtons;
         private TMP_Text title;
@@ -73,6 +74,12 @@ namespace MementoMori.UI
             slotButtons.SetActive(false);
             settingsView = gameObject.AddComponent<SettingsPanelView>();
             settingsView.Configure(panel, mainButtons, slotButtons, template, title);
+            // The scene-authored pause labels and the created SALVAR/VOLTAR follow language switches.
+            foreach (var label in mainButtons.GetComponentsInChildren<TMP_Text>(true)) LocalizedText.Bind(label);
+            if (slotButtons.transform.Find("Button_Voltar") is Transform backButton)
+                LocalizedText.Bind(backButton.GetComponentInChildren<TMP_Text>(true));
+            Loc.LanguageChanged += UpdateTitle;
+            UpdateTitle();
         }
         private static void SetCompactHeight(Button button)
         {
@@ -87,14 +94,16 @@ namespace MementoMori.UI
             button.name = name;
             button.onClick = new Button.ButtonClickedEvent();
             button.onClick.AddListener(action);
+            button.GetComponent<MenuButtonFeedback>()?.Rebind();
             var label = button.GetComponentInChildren<TMP_Text>();
-            if (label != null) label.text = caption;
+            if (label != null) { LocalizedText.Unbind(label); label.text = caption; }
             return button;
         }
+        private void UpdateTitle() { if (title != null) title.text = Loc.T(titleKey); }
         private void ShowSlots()
         {
             if (slotButtons == null || mainButtons == null) return;
-            if (title != null) title.text = "SALVAR";
+            titleKey = "SALVAR"; UpdateTitle();
             var store = new SaveSlotStore();
             for (var slot = 1; slot <= 3; slot++)
             {
@@ -103,7 +112,7 @@ namespace MementoMori.UI
                 var exists = store.TryLoad(slot, out var snapshot, out _);
                 button.interactable = true;
                 var label = button.GetComponentInChildren<TMP_Text>();
-                if (label != null) label.text = "SLOT " + slot + " - " + (exists ? snapshot.scene.ToUpperInvariant() : "VAZIO");
+                if (label != null) label.text = "SLOT " + slot + " - " + (exists ? Loc.T(snapshot.scene.ToUpperInvariant()) : Loc.T("VAZIO"));
             }
             mainButtons.SetActive(false);
             slotButtons.SetActive(true);
@@ -112,7 +121,7 @@ namespace MementoMori.UI
         {
             if (slotButtons != null) slotButtons.SetActive(false);
             if (mainButtons != null) mainButtons.SetActive(true);
-            if (title != null) title.text = "PAUSA";
+            titleKey = "PAUSA"; UpdateTitle();
         }
         private void SelectSlot(int slot)
         {
@@ -120,7 +129,7 @@ namespace MementoMori.UI
             if (manager == null) return;
             var success = manager.SaveGame(slot);
             if (success) { ShowMain(); return; }
-            if (title != null) title.text = "ERRO";
+            titleKey = "ERRO"; UpdateTitle();
             Debug.LogWarning(manager.LastSaveError, this);
         }
         private void Update()
@@ -169,6 +178,7 @@ namespace MementoMori.UI
         }
         private void OnDestroy()
         {
+            Loc.LanguageChanged -= UpdateTitle;
             RestoreSiblingCanvases();
             if (!paused) return;
             Time.timeScale = 1f;

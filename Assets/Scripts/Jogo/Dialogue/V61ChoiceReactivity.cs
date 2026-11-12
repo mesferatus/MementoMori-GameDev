@@ -56,7 +56,7 @@ namespace MementoMori.Dialogue
             foreach (var choice in V61EventCatalog.Choices)
                 if (choice.id == "CH_Q_PHOTO")
                     foreach (var option in choice.options)
-                        if (option.id == selected) return "Minha decisão\n" + option.text + "\n\n“" + option.reply + "”";
+                        if (option.id == selected) return Loc.T("Minha decisão") + "\n" + Loc.T(option.text) + "\n\n“" + Loc.T(option.reply) + "”";
             return string.Empty;
         }
     }
