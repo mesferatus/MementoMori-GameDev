@@ -2515,6 +2515,106 @@
     {
       "pt": "Fechar",
       "en": "Close"
+    },
+    {
+      "pt": "Escute os corredores",
+      "en": "Listen to the corridors"
+    },
+    {
+      "pt": "Entrada do Labirinto",
+      "en": "Labyrinth Entrance"
+    },
+    {
+      "pt": "Câmara Vazia",
+      "en": "Empty Chamber"
+    },
+    {
+      "pt": "Corredores dos Ecos",
+      "en": "Corridors of Echoes"
+    },
+    {
+      "pt": "Porta Falsa",
+      "en": "False Door"
+    },
+    {
+      "pt": "Poço das Vozes",
+      "en": "Well of Voices"
+    },
+    {
+      "pt": "Pátio sem Céu",
+      "en": "Skyless Courtyard"
+    },
+    {
+      "pt": "Núcleo Central",
+      "en": "Central Core"
+    },
+    {
+      "pt": "Santuário da Lua",
+      "en": "Sanctuary of the Moon"
+    },
+    {
+      "pt": "Santuário do Diabo",
+      "en": "Sanctuary of the Devil"
+    },
+    {
+      "pt": "Santuário da Torre",
+      "en": "Sanctuary of the Tower"
+    },
+    {
+      "pt": "Santuário do Enforcado",
+      "en": "Sanctuary of the Hanged Man"
+    },
+    {
+      "pt": "Santuário do Eremita",
+      "en": "Sanctuary of the Hermit"
+    },
+    {
+      "pt": "Santuário da Morte",
+      "en": "Sanctuary of Death"
+    },
+    {
+      "pt": "Santuário do Julgamento",
+      "en": "Sanctuary of Judgement"
+    },
+    {
+      "pt": "Jardim Lunar",
+      "en": "Lunar Garden"
+    },
+    {
+      "pt": "Salão dos Sete Espelhos",
+      "en": "Hall of Seven Mirrors"
+    },
+    {
+      "pt": "Corredor Ilusório",
+      "en": "Illusory Corridor"
+    },
+    {
+      "pt": "Galeria dos Ciclos",
+      "en": "Gallery of Cycles"
+    },
+    {
+      "pt": "Sigilo Fragmentado",
+      "en": "Fragmented Sigil"
+    },
+    {
+      "pt": "Reconheça a voz que contradiz sua memória.",
+      "en": "Recognize the voice that contradicts your memory."
+    },
+    {
+      "pt": "Entrada da Lua",
+      "en": "Moon Entrance"
+    },
+    {
+      "pt": "Câmara do Fragmento",
+      "en": "Chamber of the Fragment"
+    },
+    {
+      "pt": "Portal Final",
+      "en": "Final Portal"
+    },
+    {
+      "pt": "[vela se acende]",
+      "en": "[candle lights]"
     }
   ]
 }
