@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 53f53227c7088af45b081b7c304bfd80
+guid: 073ad4beb5dc31946a858f4e498be7dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4997035670440794249
-    second: MementoGothicFrame_0
+      213: 957667384767302859
+    second: MementoGothicFrameV3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MementoGothicFrame_0
+      name: MementoGothicFrameV3_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 0
         y: 0
-        width: 1633
-        height: 932
+        width: 1672
+        height: 941
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98854928779095540800000000000000
-      internalID: 4997035670440794249
+      spriteID: bcc480a99615a4d00800000000000000
+      internalID: 957667384767302859
       vertices: []
       indices: 
       edges: []
@@ -135,9 +135,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MementoGothicFrame_0: 4997035670440794249
+      MementoGothicFrameV3_0: 957667384767302859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  userData: 
+  userData: 'AI-generated with OpenAI image_gen; revised by user direction: quiet
+    lilac border with a small peacock; 2026-11-11. Original menu illustration unchanged.'
   assetBundleName: 
   assetBundleVariant: 
