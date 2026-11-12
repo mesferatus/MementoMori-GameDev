@@ -23,17 +23,15 @@ namespace MementoMori.UI
             var canvasRoot = frame.transform.parent != null ? frame.transform.parent : frame.transform;
             // The shader vignette replaces the flat ring mesh when its material is available.
             if (AddGothicVignette(canvasRoot, scene)) frame.enabled = false;
+            AddMotesLayer(canvasRoot, scene);
             AddGothicBorder(canvasRoot);
             frame.SetAllDirty();
         }
 
-        // The approved lilac gothic frame of the cinematics, reused as the gameplay HUD border.
+        // A continuous dark lilac and aged-silver border, drawn from the canvas edges inward.
         private static void AddGothicBorder(Transform canvasRoot)
         {
-            // V2: the lilac arabesque frame (magenta cut-out halo removed).
-            var sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrameV2");
-            var isV2 = sprite != null;
-            if (sprite == null) sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrame");
+            var sprite = Resources.Load<Sprite>("Presentation/MementoGothicFrameV3");
             if (sprite == null) return;
             foreach (Transform child in canvasRoot)
                 if (child.name.StartsWith("Ornament")) child.gameObject.SetActive(false);
@@ -41,13 +39,36 @@ namespace MementoMori.UI
             var rect = (RectTransform)go.transform;
             rect.SetParent(canvasRoot, false);
             rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
-            // Slightly taller than the screen: the rules sit closer to the edges (top ~7%, bottom ~4%).
-            if (isV2) rect.offsetMin = rect.offsetMax = Vector2.zero;
-            else { rect.offsetMin = new Vector2(0f, -22f); rect.offsetMax = new Vector2(0f, 30f); }
+            rect.offsetMin = rect.offsetMax = Vector2.zero;
             var image = go.GetComponent<UnityEngine.UI.Image>();
             image.sprite = sprite;
             image.type = UnityEngine.UI.Image.Type.Simple;
-            image.color = new Color(1f, 1f, 1f, isV2 ? .95f : .82f);
+            image.color = Color.white;
+            image.raycastTarget = false;
+        }
+
+        // Faint drifting motes between the vignette and the border: dust in the lantern light.
+        private static void AddMotesLayer(Transform canvasRoot, string scene)
+        {
+            var shader = Resources.Load<Shader>("Shaders/GothicMotes");
+            if (shader == null) return;
+            var go = new GameObject("GothicMotes", typeof(RectTransform), typeof(UnityEngine.UI.Image));
+            var rect = (RectTransform)go.transform;
+            rect.SetParent(canvasRoot, false);
+            rect.SetSiblingIndex(1); // right above the vignette, below the border
+            rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
+            rect.offsetMin = rect.offsetMax = Vector2.zero;
+            var image = go.GetComponent<UnityEngine.UI.Image>();
+            image.material = new Material(shader);
+            image.material.SetColor("_Tint", scene switch
+            {
+                "DominioLua" => new Color(.45f, .55f, .95f),
+                "Quarto" => new Color(.85f, .62f, .4f),
+                "FinalBeta" => new Color(.72f, .6f, .9f),
+                _ => new Color(.62f, .45f, .85f)
+            });
+            image.material.SetFloat("_Intensity", scene == "Quarto" ? .2f : .28f);
+            image.material.SetFloat("_Aspect", (float)Screen.width / Mathf.Max(1, Screen.height));
             image.raycastTarget = false;
         }
 
