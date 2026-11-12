@@ -1,5 +1,15 @@
 namespace MementoMori.Interaction
 {
+    public static class InteractionAnchor
+    {
+        public static UnityEngine.Vector3 Position(UnityEngine.Component target)
+        {
+            foreach (var collider in target.GetComponents<UnityEngine.Collider2D>())
+                if (collider.enabled && collider.isTrigger) return collider.bounds.center;
+            return target.transform.position;
+        }
+    }
+
     public interface IInteractable
     {
         string InteractionVerb { get; }
