@@ -16,9 +16,7 @@ namespace MementoMori.Audio
         float sourceWeight = 1f;
         float sourceBWeight;
         AudioSource chatterSource;
-        TMP_Text caption;
         AudioMixer mixer;
-        Coroutine captionRoutine;
         float baseChatterVolume;
         Coroutine musicTransition;
         Coroutine loopRoutine;
@@ -133,9 +131,6 @@ namespace MementoMori.Audio
             source.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
             source.outputAudioMixerGroup = runtimeAudio.FindGroup("SFX");
             source.PlayOneShot(clip);
-            // Footsteps repeat every stride; captioning them spams the bottom of the screen.
-            if (resourceName != "17_footstep_stone" || AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.FootstepCaptions)
-                runtimeAudio.ShowCaption(Loc.T(CaptionFor(resourceName)));
             Object.Destroy(go, clip.length + .1f);
         }
 
@@ -185,7 +180,6 @@ namespace MementoMori.Audio
             source.outputAudioMixerGroup = music;
             sourceB.outputAudioMixerGroup = music;
             chatterSource.outputAudioMixerGroup = FindGroup("SFX");
-            CreateCaptionOverlay();
         }
 
         AudioMixerGroup FindGroup(string name)
@@ -194,45 +188,5 @@ namespace MementoMori.Audio
             var groups = mixer.FindMatchingGroups(name);
             return groups.Length == 0 ? null : groups[0];
         }
-
-        void CreateCaptionOverlay()
-        {
-            var canvasObject = new GameObject("SoundCaptions", typeof(Canvas), typeof(CanvasGroup), typeof(CanvasScaler));
-            canvasObject.transform.SetParent(transform, false);
-            var canvas = canvasObject.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 80;
-            var group=canvasObject.GetComponent<CanvasGroup>(); group.interactable=group.blocksRaycasts=false;
-            var scaler=canvasObject.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1920,1080);scaler.matchWidthOrHeight=.5f;
-            caption = new GameObject("Caption", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
-            caption.transform.SetParent(canvasObject.transform, false); caption.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF"); caption.fontSize = 22; caption.alignment = TextAlignmentOptions.MidlineLeft; caption.raycastTarget=false; caption.color = Color.white;
-            var rect = caption.rectTransform; rect.anchorMin = new Vector2(.06f, .69f); rect.anchorMax = new Vector2(.32f, .75f); rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
-            caption.gameObject.SetActive(false);
-        }
-
-        void ShowCaption(string value)
-        {
-            if (caption == null || AccessibilitySettings.Instance != null && !AccessibilitySettings.Instance.SoundCaptions) return;
-            caption.text = value; caption.gameObject.SetActive(true); if (captionRoutine != null) StopCoroutine(captionRoutine); captionRoutine = StartCoroutine(HideCaption());
-        }
-
-        IEnumerator HideCaption() { yield return new WaitForSecondsRealtime(1.6f); if (caption != null) caption.gameObject.SetActive(false); }
-
-        static string CaptionFor(string id) => id switch
-        {
-            "07_dialogue_blip" => "[pena risca o papel]",
-            "06_interaction_click" => "[clique suave]",
-            "09_sigil_success" => "[runa ressoa]",
-            "10_sigil_error" => "[runa desafina]",
-            "05_transition_sleep" => "[respiração curta]",
-            "13_fragment_collect" => "[fragmento cintila]",
-            "19_beta_ending_stinger" => "[acorde final]",
-            "14_poe_appear" or "15_poe_soft_call" => "[Poe mia]",
-            "17_footstep_stone" => "[passos na pedra]",
-            "18_candle_extinguish" => "[vela se apaga]",
-            "22_candle_ignite" => "[vela se acende]",
-            "11_mirror_shimmer" => "[espelho vibra]",
-            "12_portal_open" => "[sino distante]",
-            "16_daimon_appear" => "[presença próxima]",
-            _ => "[som]"
-        };
     }
 }

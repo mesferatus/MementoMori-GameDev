@@ -304,15 +304,9 @@ namespace MementoMori.UI
             else if (section == 2)
             {
                 SetRow(0, Loc.T("VELOCIDADE DO TEXTO") + "  " + s.TextSpeed.ToString("0.0") + "×", () => { s.SetTextSpeed(s.TextSpeed >= 2f ? .5f : s.TextSpeed + .25f); Render(); });
-                SetRow(1, Loc.T("LEGENDAS SONORAS") + "  " + (s.SoundCaptions ? s.FootstepCaptions ? Loc.T("SIM, COM PASSOS") : yes : no), () =>
-                {
-                    if (!s.SoundCaptions) s.SetSoundCaptions(true);
-                    else if (!s.FootstepCaptions) s.SetFootstepCaptions(true);
-                    else { s.SetSoundCaptions(false); s.SetFootstepCaptions(false); }
-                    Render();
-                });
-                SetRow(2, Loc.T("ESPAÇO EXTRA") + "  " + (s.RemapInteractToSpace ? yes : no), () => { s.SetRemapInteractToSpace(!s.RemapInteractToSpace); Render(); });
-                SetRow(3, Loc.T("RESTAURAR PADRÕES"), () => { s.RestoreDefaults(); Render(); });
+                SetRow(1, Loc.T("ESPAÇO EXTRA") + "  " + (s.RemapInteractToSpace ? yes : no), () => { s.SetRemapInteractToSpace(!s.RemapInteractToSpace); Render(); });
+                SetRow(2, Loc.T("RESTAURAR PADRÕES"), () => { s.RestoreDefaults(); Render(); });
+                rows[3].gameObject.SetActive(false);
             }
             else
             {
