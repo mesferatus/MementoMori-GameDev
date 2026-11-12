@@ -61,13 +61,13 @@ Shader "Memento/FX/Light"
                     float rays = .72 + .28 * noise(float2((uv.x - centre) / max(halfW, .01) * 3.2 + t * .07, t * .05));
                     float breathe = .9 + .1 * sin(t * .4);
                     light = body * ends * rays * breathe * (.8 + .2 * uv.y + sill);
-                    // dust: sparse cells, each with a mote drifting slowly down and sideways
-                    float2 g = float2(uv.x * 18, uv.y * 30 + t * .35);
+                    // Suspended dust: bounded drift instead of a continuous downward stream.
+                    float2 g = uv * float2(18, 30) + float2(sin(t * .09) * .10, cos(t * .07) * .08);
                     float2 cell = floor(g), f = frac(g);
                     float h = hash(cell + _Seed);
-                    float2 mote = float2(.5 + .35 * sin(t * .6 + h * 30), .5 + .3 * cos(t * .45 + h * 17));
-                    float sparkle = step(.82, h) * smoothstep(.16, .0, length(f - mote)) * (.6 + .4 * sin(t * 2.3 + h * 40));
-                    light += sparkle * body * ends * _Dust * 1.6;
+                    float2 mote = float2(.5 + .18 * sin(t * .17 + h * 30), .5 + .14 * cos(t * .13 + h * 17));
+                    float sparkle = step(.92, h) * smoothstep(.12, .0, length(f - mote)) * (.8 + .2 * sin(t * .25 + h * 40));
+                    light += sparkle * body * ends * _Dust * .55;
                 }
                 else if (_Shape < 1.5)
                 {
@@ -78,7 +78,7 @@ Shader "Memento/FX/Light"
                 else
                 {
                     float d = length((uv - .5) * 2);
-                    float flick = 1 - _Flicker * (.22 * noise(float2(t * 9, _Seed)) + .12 * noise(float2(t * 23, _Seed + 3)));
+                    float flick = 1 - _Flicker * (.16 * noise(float2(t * 2.1, _Seed)) + .08 * noise(float2(t * 5.3, _Seed + 3)));
                     light = (smoothstep(1, 0, d) * .55 + smoothstep(.35, 0, d) * .9) * flick;
                 }
                 float3 col = _Color.rgb * light * _Intensity * i.color.rgb * i.color.a;
