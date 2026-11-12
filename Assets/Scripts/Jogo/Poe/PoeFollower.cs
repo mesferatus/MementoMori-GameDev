@@ -15,6 +15,7 @@ namespace MementoMori.Poe
         [SerializeField] private Transform player;
         [SerializeField, Min(0.1f)] private float speed = 3f;
         [SerializeField, Min(0f)] private float minimumDistance = 1.2f;
+        [SerializeField, Min(0f)] private float personalSpace = .55f;
         [SerializeField, Min(0.1f)] private float eventTimeout = 5f;
         public PoeState State { get; private set; } = PoeState.Hidden;
         private Coroutine eventRoutine;
@@ -29,6 +30,9 @@ namespace MementoMori.Poe
         private readonly Queue<Vector2> navigationRoute = new();
         private Vector2 routeDestination;
         private float nextRouteSearch;
+        private const float RouteCellSize = .125f;
+        private static readonly Vector2Int[] RouteDirections = { Vector2Int.up, Vector2Int.right, Vector2Int.down, Vector2Int.left };
+        private static readonly Vector2[] FloorSamples = { Vector2.zero, Vector2.left * .12f, Vector2.right * .12f, Vector2.up * .12f, Vector2.down * .12f };
 
         private void OnEnable()
         {
@@ -56,6 +60,30 @@ namespace MementoMori.Poe
             {
                 State = PoeState.Following;
                 navigationRoute.Clear();
+            }
+            ResolveSpawnOverlap();
+        }
+
+        // Scene loads and save restores can drop the companion on top of Melantha.
+        private void ResolveSpawnOverlap()
+        {
+            if (player == null || State is PoeState.Hidden or PoeState.Disabled) return;
+            Vector2 current = transform.position;
+            if (Vector2.Distance(current, player.position) >= personalSpace * .9f) return;
+            for (var ring = 0; ring < 3; ring++)
+            {
+                var radius = personalSpace + .25f * ring;
+                for (var i = 0; i < 8; i++)
+                {
+                    var angle = i * Mathf.PI / 4f;
+                    var candidate = (Vector2)player.position + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+                    if (HasFloorClearance(candidate) && ClearStep(candidate, candidate))
+                    {
+                        transform.position = candidate;
+                        lastVisualPosition = transform.position;
+                        return;
+                    }
+                }
             }
         }
 
@@ -105,15 +133,49 @@ namespace MementoMori.Poe
 
         private void Update()
         {
-            if (State != PoeState.Following) return;
             if (player == null) player = Object.FindAnyObjectByType<PlayerController>()?.transform;
             if (player == null) return;
-            var controller = player.GetComponent<PlayerController>();
-            var destination = controller != null && controller.IsSwimming
-                ? controller.SafeSavePosition : (Vector2)player.position;
-            var delta = destination - (Vector2)transform.position;
-            if (delta.sqrMagnitude > minimumDistance * minimumDistance)
-                MoveOnFloor(destination);
+            if (State == PoeState.Following)
+            {
+                var controller = player.GetComponent<PlayerController>();
+                var destination = controller != null && controller.IsSwimming
+                    ? controller.SafeSavePosition : (Vector2)player.position;
+                var delta = destination - (Vector2)transform.position;
+                if (delta.sqrMagnitude > minimumDistance * minimumDistance)
+                    MoveOnFloor(destination);
+            }
+            MaintainPersonalSpace();
+        }
+
+        // The companion has no solid collider on purpose: a physical body would wedge
+        // Melantha in the narrow corridors. Instead he keeps a personal space by locally
+        // sidestepping to a legal floor cell, and yields the overlap when boxed in.
+        private void MaintainPersonalSpace()
+        {
+            if (State is not (PoeState.Following or PoeState.Waiting or PoeState.Inspecting
+                or PoeState.Refusing or PoeState.Frightened or PoeState.Mirrored)) return;
+            Vector2 current = transform.position;
+            var away = current - (Vector2)player.position;
+            var distance = away.magnitude;
+            if (distance >= personalSpace) return;
+            var primary = distance > .01f ? away / distance : Vector2.down;
+            var step = Mathf.Min(speed * 1.25f * Time.deltaTime, personalSpace - distance + .02f);
+            foreach (var escapeAngle in new[] { 0f, 50f, -50f, 90f, -90f })
+            {
+                var direction = Rotate(primary, escapeAngle);
+                var target = current + direction * step;
+                if (!ClearStep(current, target)) continue;
+                transform.position = target;
+                return;
+            }
+        }
+
+        private static Vector2 Rotate(Vector2 vector, float degrees)
+        {
+            var radians = degrees * Mathf.Deg2Rad;
+            var sin = Mathf.Sin(radians);
+            var cos = Mathf.Cos(radians);
+            return new Vector2(vector.x * cos - vector.y * sin, vector.x * sin + vector.y * cos);
         }
         public void Reveal() { gameObject.SetActive(true); RuntimeAudio.PlayOneShot("15_poe_soft_call", .45f); State = PoeState.Reveal; }
         public void BeginFollowing() { State = PoeState.Following; }
@@ -207,6 +269,10 @@ namespace MementoMori.Poe
             var steps = Mathf.Max(1, Mathf.CeilToInt(delta.magnitude / .1f));
             for (var i = 0; i <= steps; i++)
                 if (!HasFloorClearance(Vector2.Lerp(from, to, i / (float)steps))) return false;
+            // A short cast can begin at contact. Also reject an occupied destination explicitly.
+            foreach (var obstacle in Physics2D.OverlapCircleAll(to, .18f))
+                if (obstacle != null && !obstacle.isTrigger && !obstacle.transform.IsChildOf(transform)
+                    && (player == null || !obstacle.transform.IsChildOf(player))) return false;
             foreach (var hit in Physics2D.CircleCastAll(from, .18f, delta.normalized, delta.magnitude))
                 if (hit.collider != null && !hit.collider.isTrigger && !hit.transform.IsChildOf(transform)
                     && (player == null || !hit.transform.IsChildOf(player))) return false;
@@ -218,7 +284,7 @@ namespace MementoMori.Poe
             if (GardenWaterZone.Contains(point)) return false;
             if(navigationFloor==null)return true;
             // The companion occupies an area, not a point. Avoid clipping diagonal corners.
-            foreach(var offset in new[]{Vector2.zero,Vector2.left*.12f,Vector2.right*.12f,Vector2.up*.12f,Vector2.down*.12f})
+            foreach(var offset in FloorSamples)
                 if(!navigationFloor.HasTile(navigationFloor.WorldToCell(point+offset)))return false;
             return true;
         }
@@ -242,29 +308,43 @@ namespace MementoMori.Poe
                 nextRouteSearch = Time.time + .5f;
                 routeDestination = destination;
                 navigationRoute.Clear();
-                var start = Vector2Int.FloorToInt(current);
-                var frontier = new Queue<Vector2Int>();
+                // Match the fine authored navigation floor: one-unit cells can miss
+                // a legitimate narrow route that Melantha can walk beside a facade.
+                var start = Vector2Int.FloorToInt(current / RouteCellSize);
+                var destinationCell = Vector2Int.FloorToInt(destination / RouteCellSize);
+                Vector2 CellPoint(Vector2Int cell) => ((Vector2)cell + Vector2.one * .5f) * RouteCellSize;
+                int Heuristic(Vector2Int cell) => Mathf.Abs(cell.x-destinationCell.x)+Mathf.Abs(cell.y-destinationCell.y);
+                var frontier = new SortedSet<(int score, int serial, Vector2Int cell)>(
+                    Comparer<(int score, int serial, Vector2Int cell)>.Create((a,b)=>
+                    {var order=a.score.CompareTo(b.score);return order!=0?order:a.serial.CompareTo(b.serial);}));
                 var previous = new Dictionary<Vector2Int, Vector2Int>();
-                frontier.Enqueue(start); previous[start] = start;
+                var costs = new Dictionary<Vector2Int,int>{{start,0}};
+                var visited = new HashSet<Vector2Int>();
+                int serial=0;
+                frontier.Add((Heuristic(start),serial++,start)); previous[start] = start;
                 Vector2Int? goal = null;
-                var directions = new[] { Vector2Int.up, Vector2Int.right, Vector2Int.down, Vector2Int.left };
-                while (frontier.Count > 0 && previous.Count < 16000)
+                while (frontier.Count > 0 && visited.Count < 16000)
                 {
-                    var cell = frontier.Dequeue();
-                    var point = (Vector2)cell + Vector2.one * .5f;
+                    var entry=frontier.Min;frontier.Remove(entry);
+                    var cell = entry.cell;
+                    if(!visited.Add(cell))continue;
+                    var point = CellPoint(cell);
                     if (Vector2.Distance(point, destination) < 1.5f && ClearStep(point, destination)) { goal = cell; break; }
-                    foreach (var direction in directions)
+                    foreach (var direction in RouteDirections)
                     {
                         var next = cell + direction;
-                        var nextPoint = (Vector2)next + Vector2.one * .5f;
-                        if (previous.ContainsKey(next) || !ClearStep(cell == start ? current : point, nextPoint)) continue;
-                        previous[next] = cell; frontier.Enqueue(next);
+                        var nextCost=costs[cell]+1;
+                        if (visited.Contains(next) || costs.TryGetValue(next,out var knownCost)&&knownCost<=nextCost)continue;
+                        var nextPoint = CellPoint(next);
+                        if (!ClearStep(cell == start ? current : point, nextPoint)) continue;
+                        costs[next]=nextCost;previous[next] = cell;
+                        frontier.Add((nextCost+Heuristic(next),serial++,next));
                     }
                 }
                 if (goal.HasValue)
                 {
                     var reverse = new List<Vector2> { destination };
-                    for (var cell = goal.Value; cell != start; cell = previous[cell]) reverse.Add((Vector2)cell + Vector2.one * .5f);
+                    for (var cell = goal.Value; cell != start; cell = previous[cell]) reverse.Add(CellPoint(cell));
                     reverse.Reverse();
                     foreach (var point in reverse) navigationRoute.Enqueue(point);
                 }
