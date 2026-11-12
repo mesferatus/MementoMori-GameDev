@@ -64,11 +64,11 @@ namespace MementoMori.Core
 
             var loop = SceneManager.GetActiveScene().name switch
             {
-                "Quarto" => "Music/music_quarto_new_melancholic_postpunk",
-                "Labirinto" => "Music/music_labirinto_new_angular_postpunk",
-                "DominioLua" => "03_moon_domain_loop",
-                "MainMenu" => "20_menu_theme",
-                "FinalBeta" => "19_beta_ending_stinger",
+                "Quarto" => "Music/music_quarto_gothic_piano",
+                "Labirinto" => "Music/music_labirinto_gothic",
+                "DominioLua" => "Music/music_lua_gothic_bells",
+                "MainMenu" => "Music/music_menu_gothic_organ",
+                "FinalBeta" => "Music/music_credits_memoria",
                 _ => null
             };
             if (loop != null)
