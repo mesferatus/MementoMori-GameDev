@@ -117,7 +117,8 @@ namespace MementoMori.World
                 }
             }
             if (light != null)
-                light.intensity = .85f + Mathf.PerlinNoise(Time.time * 2.3f, flame.transform.position.x) * .25f;
+                light.intensity = AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.ReduceFlashes
+                    ? .95f : .85f + Mathf.PerlinNoise(Time.time * 2.3f, flame.transform.position.x) * .25f;
         }
 
         private SpriteRenderer FindHolderRenderer(GameObject flame)
