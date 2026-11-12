@@ -78,8 +78,21 @@ namespace MementoMori.UI
             var below = player != null && player.position.y > world.y + .1f;
             local.y += below ? -(halfHeight + PromptGap) : halfHeight + PromptGap;
             var bounds = parent.rect;
+            // Keep object prompts above the room tutorial and the ornamental bottom edge.
+            var bottomMargin = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Quarto"
+                ? Mathf.Max(ScreenMargin, bounds.height * .17f) : ScreenMargin;
+            if (below && local.y - halfHeight < bounds.yMin + bottomMargin && player != null)
+            {
+                var actor = player.GetComponentInChildren<SpriteRenderer>();
+                if (actor != null)
+                {
+                    var head = new Vector3(player.position.x, actor.bounds.max.y, player.position.z);
+                    if (RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, camera.WorldToScreenPoint(head), null, out var headLocal))
+                        local.y = headLocal.y + halfHeight + PromptGap;
+                }
+            }
             local.x = Mathf.Clamp(local.x, bounds.xMin + halfWidth + ScreenMargin, bounds.xMax - halfWidth - ScreenMargin);
-            local.y = Mathf.Clamp(local.y, bounds.yMin + halfHeight + ScreenMargin, bounds.yMax - halfHeight - ScreenMargin);
+            local.y = Mathf.Clamp(local.y, bounds.yMin + halfHeight + bottomMargin, bounds.yMax - halfHeight - ScreenMargin);
             background.localPosition = new Vector3(local.x, local.y, 0f);
         }
 

@@ -242,6 +242,7 @@ namespace MementoMori.World
 
         private void RefreshLanguage()
         {
+            if (noticeText != null) noticeText.text = Loc.T("Nova entrada no grimório");
             if (!runtimeHost || canvas == null) return;
             var selectedId = selectedEntry?.Id;
             var oldPage = page;
@@ -274,12 +275,14 @@ namespace MementoMori.World
                 var scaler = root.GetComponent<CanvasScaler>();
                 scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
                 scaler.referenceResolution = new Vector2(1920, 1080);
-                noticeText = Text("Message", root.transform, MementoMori.Core.Loc.T("Nova entrada no grimório"), titleFont, 20,
-                    new Vector2(.38f, .94f), new Vector2(.62f, .99f), TextAlignmentOptions.Center);
+                scaler.matchWidthOrHeight = .5f;
+                noticeText = Text("Message", root.transform, MementoMori.Core.Loc.T("Nova entrada no grimório"), titleFont, 24,
+                    new Vector2(.30f, .84f), new Vector2(.70f, .90f), TextAlignmentOptions.Center);
                 noticeText.color = new Color(.9f, .75f, .95f);
             }
             noticeText.gameObject.SetActive(true);
-            noticeUntil = Time.unscaledTime + 3f;
+            noticeText.text = Loc.T("Nova entrada no grimório");
+            noticeUntil = Time.unscaledTime + 4f;
         }
 
         public void ShowPage(int requested)

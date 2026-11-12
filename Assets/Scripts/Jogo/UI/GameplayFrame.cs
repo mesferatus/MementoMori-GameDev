@@ -63,11 +63,13 @@ namespace MementoMori.UI
             image.material.SetColor("_Tint", scene switch
             {
                 "DominioLua" => new Color(.45f, .55f, .95f),
-                "Quarto" => new Color(.85f, .62f, .4f),
+                "Quarto" => new Color(.64f, .57f, .48f),
                 "FinalBeta" => new Color(.72f, .6f, .9f),
                 _ => new Color(.62f, .45f, .85f)
             });
-            image.material.SetFloat("_Intensity", scene == "Quarto" ? .2f : .28f);
+            image.material.SetFloat("_Intensity", scene == "Quarto" ? .045f : .28f);
+            image.material.SetFloat("_Suspended", scene == "Quarto" ? 1f : 0f);
+            image.material.SetFloat("_Density", scene == "Quarto" ? .35f : 1f);
             image.material.SetFloat("_Aspect", (float)Screen.width / Mathf.Max(1, Screen.height));
             image.raycastTarget = false;
         }

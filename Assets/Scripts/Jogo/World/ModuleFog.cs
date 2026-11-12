@@ -12,7 +12,7 @@ namespace MementoMori.World
     /// </summary>
     public sealed class ModuleFog : MonoBehaviour
     {
-        private const float RoomFog = .72f, CorridorFog = .28f, FadeSpeed = 1.6f;
+        private const float RoomFog = .42f, CorridorFog = .16f, FadeSpeed = 1.6f;
         private static readonly Color Mist = new(.07f, .035f, .12f, 1f);
         private readonly List<(Rect rect, SpriteRenderer fog, float drift)> modules = new();
         private Transform player;
@@ -54,8 +54,8 @@ namespace MementoMori.World
                 go.transform.position = new Vector3(b.center.x, b.center.y, 0f);
                 var fog = go.AddComponent<SpriteRenderer>();
                 fog.sprite = sprite;
-                fog.drawMode = SpriteDrawMode.Tiled;
-                fog.size = new Vector2(b.size.x + 1f, b.size.y + 1f);
+                fog.drawMode = SpriteDrawMode.Simple;
+                fog.transform.localScale = new Vector3((b.size.x + 3f) / sprite.bounds.size.x, (b.size.y + 3f) / sprite.bounds.size.y, 1f);
                 fog.sortingOrder = 31000;
                 fog.color = new Color(Mist.r, Mist.g, Mist.b, 0f);
                 modules.Add((new Rect(b.min.x, b.min.y, b.size.x, b.size.y), fog, i++ * 1.7f));
@@ -85,8 +85,8 @@ namespace MementoMori.World
         /// <summary>Tileable soft cloud texture (value noise, two octaves), generated once.</summary>
         private static Sprite CloudSprite()
         {
-            const int size = 64;
-            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Repeat, filterMode = FilterMode.Bilinear };
+            const int size = 128;
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
             var lattice = new float[8, 8];
             var rnd = new System.Random(17);
             for (var y = 0; y < 8; y++) for (var x = 0; x < 8; x++) lattice[x, y] = (float)rnd.NextDouble();
@@ -104,7 +104,9 @@ namespace MementoMori.World
                 {
                     float u = x / (float)size, v = y / (float)size;
                     var n = Noise(u, v, 4) * .65f + Noise(u, v, 8) * .35f;
-                    pixels[y * size + x] = new Color(1f, 1f, 1f, Mathf.Lerp(.55f, 1f, n));
+                    var edge = Mathf.Min(Mathf.Min(u, 1f-u), Mathf.Min(v, 1f-v));
+                    var feather = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(edge / .22f));
+                    pixels[y * size + x] = new Color(1f, 1f, 1f, Mathf.Lerp(.12f, .9f, n) * feather);
                 }
             tex.SetPixels(pixels);
             tex.Apply();
