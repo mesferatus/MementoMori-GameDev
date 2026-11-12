@@ -8,6 +8,7 @@ Shader "Memento/UI/GothicMotes"
         _Tint ("Mote tint", Color) = (0.62, 0.45, 0.85, 1)
         _Density ("Density", Range(0, 2)) = 1
         _Intensity ("Intensity", Range(0, 1)) = 0.35
+        _Suspended ("Suspended dust", Range(0, 1)) = 0
         _Aspect ("Screen aspect", Float) = 1.7778
     }
     SubShader
@@ -23,7 +24,7 @@ Shader "Memento/UI/GothicMotes"
             #include "UnityCG.cginc"
             struct appdata { float4 vertex : POSITION; float2 uv : TEXCOORD0; float4 color : COLOR; };
             struct v2f { float4 pos : SV_POSITION; float2 uv : TEXCOORD0; float4 color : COLOR; };
-            fixed4 _Tint; float _Density, _Intensity, _Aspect;
+            fixed4 _Tint; float _Density, _Intensity, _Aspect, _Suspended;
             v2f vert (appdata v) { v2f o; o.pos = UnityObjectToClipPos(v.vertex); o.uv = v.uv; o.color = v.color; return o; }
             float2 hash2 (float2 p)
             {
@@ -33,7 +34,7 @@ Shader "Memento/UI/GothicMotes"
             // one layer of slowly rising motes on a jittered grid
             float layer (float2 uv, float cells, float speed, float t)
             {
-                uv.y += t * speed;               // slow upward drift
+                uv.y += lerp(t * speed, sin(t * .11 + cells) * .008, _Suspended);               // slow upward drift
                 uv.x += sin(t * .07 + cells) * .02;
                 float2 g = uv * cells;
                 float2 id = floor(g);
@@ -44,7 +45,7 @@ Shader "Memento/UI/GothicMotes"
                 float2 center = .5 + (h - .5) * .6;
                 center.x += sin(t * (.35 + h.y) + h.x * 17) * .08; // lateral sway
                 float d = length((f - center) * float2(1, _Aspect / 1.7778));
-                float twinkle = .55 + .45 * sin(t * (1.1 + h.y * 2.4) + h.x * 31);
+                float twinkle = lerp(.55 + .45 * sin(t * (1.1 + h.y * 2.4) + h.x * 31), .8 + .2 * sin(t * .25 + h.x * 31), _Suspended);
                 return exp(-d * d * 220) * twinkle;
             }
             fixed4 frag (v2f i) : SV_Target
