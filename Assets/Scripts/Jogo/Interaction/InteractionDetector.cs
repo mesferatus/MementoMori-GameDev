@@ -55,6 +55,8 @@ namespace MementoMori.Interaction
 
         private void SelectCandidate()
         {
+            var previous = current;
+            var previousDistance = float.MaxValue;
             current = null;
             var bestDistance = float.MaxValue;
             var bestPriority = int.MinValue;
@@ -72,9 +74,10 @@ namespace MementoMori.Interaction
                     continue;
                 if (IsObstructed(component))
                     continue;
-                var distance = Vector2.Distance(component.transform.position, transform.position);
+                var distance = Vector2.Distance(InteractionAnchor.Position(component), transform.position);
                 if (candidate is IInteractionReach reach && reach.MaxReach > 0f && distance > reach.MaxReach)
                     continue;
+                if (ReferenceEquals(candidate, previous)) previousDistance = distance;
                 var clearlyCloser = distance < bestDistance - PriorityTieMargin;
                 var nearTie = Mathf.Abs(distance - bestDistance) <= PriorityTieMargin;
                 if (current == null || clearlyCloser
@@ -86,12 +89,19 @@ namespace MementoMori.Interaction
                     bestDistance = distance;
                 }
             }
+            // Hysteresis: the prompt stays on the object already shown until another one is clearly
+            // closer or outranks it, so walking between two near props does not flip it every frame.
+            if (previous != null && current != null && !ReferenceEquals(current, previous)
+                && previousDistance < float.MaxValue
+                && current.InteractionPriority <= previous.InteractionPriority
+                && bestDistance > previousDistance - PriorityTieMargin)
+                current = previous;
         }
 
         private bool IsObstructed(Component target)
         {
             var origin = (Vector2)transform.position;
-            var destination = (Vector2)target.transform.position;
+            var destination = (Vector2)InteractionAnchor.Position(target);
             var player = GetComponentInParent<MementoMori.Player.PlayerController>();
             foreach (var hit in Physics2D.LinecastAll(origin, destination))
             {
