@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using MementoMori.Core;
 using MementoMori.Puzzles;
@@ -34,8 +35,20 @@ namespace MementoMori.V65
    if(portal)active=portal.CanInteract(default);
    int next=done?3:Time.time<errorUntil?2:active?1:0;
    if(next!=RealState&&response)response.Play();RealState=next;
-   var sprite=next==3?complete:next==2?error:next==1?interaction:normal;if(sprite)visual.sprite=sprite;
+   var sprite=next==3?complete:next==2?error:next==1?interaction:normal;
+   if(sprite && visual.sprite!=sprite){visual.sprite=sprite;RefreshSolidContour(sprite);}
    visual.GetPropertyBlock(block);block.SetFloat("_State",next==3?1:next==1?.5f:0);visual.SetPropertyBlock(block);
+  }
+  void RefreshSolidContour(Sprite sprite){
+   var child=transform.Find("ContornoSolido");if(child==null)return;
+   var solid=child.GetComponent<PolygonCollider2D>();if(solid==null||sprite.GetPhysicsShapeCount()==0)return;
+   solid.pathCount=sprite.GetPhysicsShapeCount();var points=new List<Vector2>();
+   for(int i=0;i<solid.pathCount;i++){
+    points.Clear();sprite.GetPhysicsShape(i,points);
+    for(int p=0;p<points.Count;p++)points[p]=new Vector2(visual.flipX?-points[p].x:points[p].x,visual.flipY?-points[p].y:points[p].y);
+    solid.SetPath(i,points);
+   }
+   solid.offset=Vector2.zero;
   }
  }
 }
