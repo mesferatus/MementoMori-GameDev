@@ -86,7 +86,7 @@ namespace MementoMori.UI
         private void SetPromptText(string action)
         {
             var key = InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
-            var value = string.IsNullOrWhiteSpace(action) ? "INTERAGIR" : action;
+            var value = string.IsNullOrWhiteSpace(action) ? Loc.T("INTERAGIR") : Loc.T(action);
             if (label != null) label.text = $"{key} - {value}";
             if (labelTmp != null && labelTmp.text == value && scalableBackground != null && lastKey == key) return;
             lastKey = key;

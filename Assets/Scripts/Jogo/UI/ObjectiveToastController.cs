@@ -53,6 +53,7 @@ namespace MementoMori.UI
 
         private void Start()
         {
+            Loc.LanguageChanged += RefreshLanguage;
             if (GameState.Instance != null)
             {
                 GameState.Instance.OnFlagChanged += OnFlagChanged;
@@ -64,6 +65,7 @@ namespace MementoMori.UI
 
         private void OnDestroy()
         {
+            Loc.LanguageChanged -= RefreshLanguage;
             if (GameState.Instance != null)
             {
                 GameState.Instance.OnFlagChanged -= OnFlagChanged;
@@ -72,6 +74,8 @@ namespace MementoMori.UI
             SceneManager.sceneLoaded -= OnSceneLoaded;
             if (Instance == this) Instance = null;
         }
+
+        private void RefreshLanguage() => SetObjective(currentObjective);
 
         public void EvaluateForScene(string sceneName)
         {
@@ -119,10 +123,11 @@ namespace MementoMori.UI
         public void SetObjective(string text)
         {
             currentObjective = text ?? string.Empty;
-            if (objectiveText != null) objectiveText.text = currentObjective;
+            // The PT text stays the internal key; only the labels show the active language.
+            if (objectiveText != null) objectiveText.text = Loc.T(currentObjective);
             if (objectiveTextTmp != null)
             {
-                objectiveTextTmp.text = currentObjective;
+                objectiveTextTmp.text = Loc.T(currentObjective);
                 objectiveTextTmp.alignment = TextAlignmentOptions.Center;
                 var panel = objectiveTextTmp.transform.parent as RectTransform;
                 if (panel != null && panel.name == "ObjectivePanel")
@@ -138,7 +143,7 @@ namespace MementoMori.UI
                         title.anchoredPosition = Vector2.zero;
                         title.sizeDelta = Vector2.zero;
                         var titleText = title.GetComponent<TMP_Text>();
-                        if (titleText != null) titleText.alignment = TextAlignmentOptions.Center;
+                        if (titleText != null) { titleText.alignment = TextAlignmentOptions.Center; LocalizedText.Bind(titleText); }
                     }
                 }
                 var rect = objectiveTextTmp.rectTransform;

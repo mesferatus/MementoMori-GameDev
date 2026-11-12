@@ -29,6 +29,7 @@ namespace MementoMori.World
         [SerializeField] private Transform[] passages;
         int round;
         int errors;
+        AudioSource whisper;
         private void Awake()
         {
             if (completionDialogue == null) completionDialogue = Resources.Load<DialogueData>("Dialogue/DLG_L_ECHO_COMPLETE");
@@ -38,6 +39,38 @@ namespace MementoMori.World
             var state=GameState.Instance;
             if(state!=null) round=state.HasFlag(StoryFlag.EchoTrial03Complete)?3:state.HasFlag(StoryFlag.EchoTrial02Complete)?2:state.HasFlag(StoryFlag.EchoTrial01Complete)?1:0;
         }
+        // Diegetic wayfinding (playtest): the voices themselves come from the true passage,
+        // positioned in space so panning and distance lead the walk — no artificial markers.
+        private void Update()
+        {
+            if (Solved || passages == null || passages.Length == 0 || round >= CorrectPassages.Length)
+            {
+                if (whisper != null && whisper.isPlaying) whisper.Stop();
+                return;
+            }
+            var target = passages[Mathf.Clamp(CorrectPassages[round], 0, passages.Length - 1)];
+            if (target == null) return;
+            if (whisper == null)
+            {
+                var clip = Resources.Load<AudioClip>("Audio/21_echo_whisper_loop");
+                if (clip == null) return;
+                var carrier = new GameObject("EchoWhisper");
+                carrier.transform.SetParent(transform, false);
+                whisper = carrier.AddComponent<AudioSource>();
+                var mixer = Resources.Load<UnityEngine.Audio.AudioMixer>("MementoMoriMixer");
+                var groups = mixer == null ? null : mixer.FindMatchingGroups("SFX");
+                if (groups != null && groups.Length > 0) whisper.outputAudioMixerGroup = groups[0];
+                whisper.clip = clip; whisper.loop = true;
+                whisper.volume = .5f * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
+                whisper.spatialBlend = 1f; whisper.rolloffMode = AudioRolloffMode.Linear;
+                whisper.minDistance = 1.5f; whisper.maxDistance = 14f;
+                whisper.dopplerLevel = 0f; whisper.spread = 40f;
+                whisper.Play();
+            }
+            whisper.volume = .5f * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
+            whisper.transform.position = target.position;
+        }
+        private void OnDestroy() { if (whisper != null) Destroy(whisper.gameObject); }
         public bool Solved => GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete);
         public void Configure(DialogueData dialogue, Transform[] corridorPassages)
         {

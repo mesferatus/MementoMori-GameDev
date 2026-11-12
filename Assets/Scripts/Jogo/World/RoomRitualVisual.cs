@@ -1,10 +1,13 @@
+using System.Collections.Generic;
 using MementoMori.Core;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace MementoMori.World
 {
     public sealed class RoomRitualVisual : MonoBehaviour
     {
+        private readonly HashSet<GameObject> styledFlames = new();
         [SerializeField] private GameObject ritualGlow;
         [SerializeField] private GameObject[] flames;
         [SerializeField] private SpriteRenderer rug;
@@ -78,7 +81,59 @@ namespace MementoMori.World
             if (ritualGlow != null) ritualGlow.SetActive(active);
             if (flames == null) return;
             for (var index = 0; index < flames.Length; index++)
-                if (flames[index] != null) flames[index].SetActive(progress > index);
+            {
+                var flame = flames[index];
+                if (flame == null) continue;
+                flame.SetActive(progress > index);
+                if (flame.activeSelf) StyleFlame(flame);
+            }
+        }
+
+        /// <summary>
+        /// A lit flame reads as lit: larger than the authored sprite, always drawn over its own
+        /// candlestick, and casting a small warm 2D light with a quiet flicker.
+        /// </summary>
+        private void StyleFlame(GameObject flame)
+        {
+            var renderer = flame.GetComponent<SpriteRenderer>();
+            var holder = FindHolderRenderer(flame);
+            if (renderer != null && holder != null)
+            {
+                renderer.sortingLayerID = holder.sortingLayerID;
+                renderer.sortingOrder = holder.sortingOrder + 1;
+            }
+            var light = flame.GetComponent<Light2D>();
+            if (styledFlames.Add(flame))
+            {
+                flame.transform.localScale = flame.transform.localScale * 1.7f;
+                if (light == null)
+                {
+                    light = flame.AddComponent<Light2D>();
+                    light.lightType = Light2D.LightType.Point;
+                    light.color = new Color(1f, .78f, .45f, 1f);
+                    light.pointLightInnerRadius = .12f;
+                    light.pointLightOuterRadius = 1.5f;
+                    light.falloffIntensity = .7f;
+                }
+            }
+            if (light != null)
+                light.intensity = .85f + Mathf.PerlinNoise(Time.time * 2.3f, flame.transform.position.x) * .25f;
+        }
+
+        private SpriteRenderer FindHolderRenderer(GameObject flame)
+        {
+            SpriteRenderer best = null;
+            var bestDistance = float.MaxValue;
+            if (candles != null)
+                foreach (var candle in candles)
+                {
+                    if (candle == null) continue;
+                    var distance = (candle.transform.position - flame.transform.position).sqrMagnitude;
+                    if (distance < bestDistance) { bestDistance = distance; best = candle; }
+                }
+            if (best == null && flame.transform.parent != null)
+                best = flame.transform.parent.GetComponentInParent<SpriteRenderer>();
+            return best;
         }
     }
 }

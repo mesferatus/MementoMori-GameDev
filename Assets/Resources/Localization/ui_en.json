@@ -1,0 +1,2520 @@
+{
+  "entries": [
+    {
+      "pt": "JOGAR",
+      "en": "PLAY"
+    },
+    {
+      "pt": "CONTINUAR",
+      "en": "CONTINUE"
+    },
+    {
+      "pt": "SAIR",
+      "en": "QUIT"
+    },
+    {
+      "pt": "CRÉDITOS",
+      "en": "CREDITS"
+    },
+    {
+      "pt": "VOLTAR",
+      "en": "BACK"
+    },
+    {
+      "pt": "PAUSA",
+      "en": "PAUSED"
+    },
+    {
+      "pt": "SALVAR",
+      "en": "SAVE"
+    },
+    {
+      "pt": "ERRO",
+      "en": "ERROR"
+    },
+    {
+      "pt": "VAZIO",
+      "en": "EMPTY"
+    },
+    {
+      "pt": "REINICIAR CHECKPOINT",
+      "en": "RESTART CHECKPOINT"
+    },
+    {
+      "pt": "SAIR AO MENU",
+      "en": "QUIT TO MENU"
+    },
+    {
+      "pt": "VOLTAR AO MENU",
+      "en": "BACK TO MENU"
+    },
+    {
+      "pt": "MENU PRINCIPAL",
+      "en": "MAIN MENU"
+    },
+    {
+      "pt": "CONFIGURAÇÕES",
+      "en": "SETTINGS"
+    },
+    {
+      "pt": "ÁUDIO",
+      "en": "AUDIO"
+    },
+    {
+      "pt": "VÍDEO",
+      "en": "VIDEO"
+    },
+    {
+      "pt": "LEITURA",
+      "en": "READING"
+    },
+    {
+      "pt": "CONTROLES",
+      "en": "CONTROLS"
+    },
+    {
+      "pt": "GERAL",
+      "en": "MASTER"
+    },
+    {
+      "pt": "MÚSICA",
+      "en": "MUSIC"
+    },
+    {
+      "pt": "EFEITOS",
+      "en": "EFFECTS"
+    },
+    {
+      "pt": "VOZES",
+      "en": "VOICES"
+    },
+    {
+      "pt": "TELA CHEIA",
+      "en": "FULLSCREEN"
+    },
+    {
+      "pt": "SIM",
+      "en": "YES"
+    },
+    {
+      "pt": "NÃO",
+      "en": "NO"
+    },
+    {
+      "pt": "RESOLUÇÃO",
+      "en": "RESOLUTION"
+    },
+    {
+      "pt": "IDIOMA",
+      "en": "LANGUAGE"
+    },
+    {
+      "pt": "TAMANHO DO TEXTO",
+      "en": "TEXT SIZE"
+    },
+    {
+      "pt": "VELOCIDADE DO TEXTO",
+      "en": "TEXT SPEED"
+    },
+    {
+      "pt": "LEGENDAS SONORAS",
+      "en": "SOUND CAPTIONS"
+    },
+    {
+      "pt": "ESPAÇO EXTRA",
+      "en": "SPACE TO INTERACT"
+    },
+    {
+      "pt": "RESTAURAR PADRÕES",
+      "en": "RESTORE DEFAULTS"
+    },
+    {
+      "pt": "ESQUERDA",
+      "en": "LEFT"
+    },
+    {
+      "pt": "DIREITA",
+      "en": "RIGHT"
+    },
+    {
+      "pt": "CIMA",
+      "en": "UP"
+    },
+    {
+      "pt": "BAIXO",
+      "en": "DOWN"
+    },
+    {
+      "pt": "INTERAGIR",
+      "en": "INTERACT"
+    },
+    {
+      "pt": "GRIMÓRIO",
+      "en": "GRIMOIRE"
+    },
+    {
+      "pt": "MAIS TECLAS",
+      "en": "MORE KEYS"
+    },
+    {
+      "pt": "INÍCIO",
+      "en": "FIRST PAGE"
+    },
+    {
+      "pt": "PRESSIONE UMA TECLA",
+      "en": "PRESS A KEY"
+    },
+    {
+      "pt": "TECLA JÁ UTILIZADA",
+      "en": "KEY ALREADY IN USE"
+    },
+    {
+      "pt": "HISTÓRICO",
+      "en": "HISTORY"
+    },
+    {
+      "pt": "OBJETIVO",
+      "en": "OBJECTIVE"
+    },
+    {
+      "pt": "QUARTO",
+      "en": "BEDROOM"
+    },
+    {
+      "pt": "LABIRINTO",
+      "en": "LABYRINTH"
+    },
+    {
+      "pt": "DOMINIOLUA",
+      "en": "MOON DOMAIN"
+    },
+    {
+      "pt": "FINALBETA",
+      "en": "FINALE"
+    },
+    {
+      "pt": "ARTE, ORGANIZAÇÃO VISUAL E COLLIDERS",
+      "en": "ART, VISUAL LAYOUT AND COLLIDERS"
+    },
+    {
+      "pt": "PROGRAMAÇÃO, SHADERS E ÁUDIO",
+      "en": "PROGRAMMING, SHADERS AND AUDIO"
+    },
+    {
+      "pt": "ILUSTRAÇÃO DO MENU",
+      "en": "MENU ILLUSTRATION"
+    },
+    {
+      "pt": "Fontes Cinzel, Cormorant Garamond e UnifrakturMaguntia (SIL Open Font License) · Feito com Unity",
+      "en": "Cinzel, Cormorant Garamond and UnifrakturMaguntia fonts (SIL Open Font License) · Made with Unity"
+    },
+    {
+      "pt": "Inscrição",
+      "en": "Inscription"
+    },
+    {
+      "pt": "Grimório",
+      "en": "Grimoire"
+    },
+    {
+      "pt": "Objeto",
+      "en": "Object"
+    },
+    {
+      "pt": "Voz",
+      "en": "Voice"
+    },
+    {
+      "pt": "Porta",
+      "en": "Door"
+    },
+    {
+      "pt": "Espelho",
+      "en": "Mirror"
+    },
+    {
+      "pt": "Flor",
+      "en": "Flower"
+    },
+    {
+      "pt": "Colocar pétala",
+      "en": "Place petal"
+    },
+    {
+      "pt": "Sair da água",
+      "en": "Leave the water"
+    },
+    {
+      "pt": "Nadar",
+      "en": "Swim"
+    },
+    {
+      "pt": "Girar anel",
+      "en": "Turn the ring"
+    },
+    {
+      "pt": "Apagar flor",
+      "en": "Dim the flower"
+    },
+    {
+      "pt": "Tocar",
+      "en": "Touch"
+    },
+    {
+      "pt": "Deitar",
+      "en": "Lie down"
+    },
+    {
+      "pt": "Seguir voz",
+      "en": "Follow the voice"
+    },
+    {
+      "pt": "Abrir porta ornamentada",
+      "en": "Open the ornate door"
+    },
+    {
+      "pt": "Aproximar-se",
+      "en": "Approach"
+    },
+    {
+      "pt": "Coletar",
+      "en": "Collect"
+    },
+    {
+      "pt": "Ler o grimório",
+      "en": "Read the grimoire"
+    },
+    {
+      "pt": "Concluir o ritual",
+      "en": "Complete the ritual"
+    },
+    {
+      "pt": "Escutar o poço",
+      "en": "Listen to the well"
+    },
+    {
+      "pt": "Observar",
+      "en": "Observe"
+    },
+    {
+      "pt": "Acender vela: Lua",
+      "en": "Light candle: Moon"
+    },
+    {
+      "pt": "Acender vela: Livro",
+      "en": "Light candle: Book"
+    },
+    {
+      "pt": "Acender vela: Memória",
+      "en": "Light candle: Memory"
+    },
+    {
+      "pt": "Acender vela: Repouso",
+      "en": "Light candle: Rest"
+    },
+    {
+      "pt": "Deite-se para atravessar.",
+      "en": "Lie down to cross over."
+    },
+    {
+      "pt": "Examine o quarto.",
+      "en": "Examine the room."
+    },
+    {
+      "pt": "Olhe a fotografia com atenção.",
+      "en": "Take a close look at the photograph."
+    },
+    {
+      "pt": "Consulte o grimório.",
+      "en": "Consult the grimoire."
+    },
+    {
+      "pt": "Feche a janela.",
+      "en": "Close the window."
+    },
+    {
+      "pt": "Coloque a âncora no centro do círculo.",
+      "en": "Place the anchor at the center of the circle."
+    },
+    {
+      "pt": "Acenda as velas na ordem do grimório.",
+      "en": "Light the candles in the grimoire's order."
+    },
+    {
+      "pt": "Ative o círculo.",
+      "en": "Activate the circle."
+    },
+    {
+      "pt": "Atravesse o portal de volta.",
+      "en": "Cross back through the portal."
+    },
+    {
+      "pt": "Nade até as flores do Jardim Lunar.",
+      "en": "Swim to the flowers of the Lunar Garden."
+    },
+    {
+      "pt": "Decifre o Salão dos Sete Espelhos.",
+      "en": "Decipher the Hall of Seven Mirrors."
+    },
+    {
+      "pt": "Encontre a saída do Corredor Ilusório.",
+      "en": "Find the way out of the Illusory Corridor."
+    },
+    {
+      "pt": "Leia as portas da Galeria dos Ciclos.",
+      "en": "Read the doors of the Gallery of Cycles."
+    },
+    {
+      "pt": "Recomponha o Sigilo Fragmentado.",
+      "en": "Reassemble the Fragmented Sigil."
+    },
+    {
+      "pt": "Pegue o Fragmento.",
+      "en": "Take the Fragment."
+    },
+    {
+      "pt": "Siga as vozes nos Corredores dos Ecos.",
+      "en": "Follow the voices in the Echo Corridors."
+    },
+    {
+      "pt": "Deixe os Corredores dos Ecos.",
+      "en": "Leave the Echo Corridors."
+    },
+    {
+      "pt": "Investigue a porta que devolve.",
+      "en": "Investigate the door that sends you back."
+    },
+    {
+      "pt": "Repare no que mudou na porta.",
+      "en": "Notice what changed about the door."
+    },
+    {
+      "pt": "Escute o Poço das Vozes.",
+      "en": "Listen to the Well of Voices."
+    },
+    {
+      "pt": "Faça as sombras convergirem no Pátio sem Céu.",
+      "en": "Make the shadows converge in the Skyless Courtyard."
+    },
+    {
+      "pt": "Abra o Núcleo Central.",
+      "en": "Open the Central Core."
+    },
+    {
+      "pt": "Leve as marcas ao Santuário da Lua.",
+      "en": "Carry the marks to the Moon Sanctuary."
+    },
+    {
+      "pt": "Atravesse o portal da Lua.",
+      "en": "Cross the Moon portal."
+    },
+    {
+      "pt": "{0} / Enter / Espaço — revelar o texto e avançar",
+      "en": "{0} / Enter / Space — reveal the text and advance"
+    },
+    {
+      "pt": "Use as teclas de movimento ou as setas — explore o quarto",
+      "en": "Use the movement keys or the arrows — explore the room"
+    },
+    {
+      "pt": "Aproxime-se de um objeto e pressione {0} para examinar",
+      "en": "Get close to an object and press {0} to examine it"
+    },
+    {
+      "pt": "O grimório guarda pistas. Aproxime-se e pressione {0} para ler",
+      "en": "The grimoire holds clues. Get close and press {0} to read"
+    },
+    {
+      "pt": "{0} — pausar e consultar as opções",
+      "en": "{0} — pause and check the options"
+    },
+    {
+      "pt": " / Enter — avançar",
+      "en": " / Enter — advance"
+    },
+    {
+      "pt": "    Esc — pular sequência",
+      "en": "    Esc — skip sequence"
+    },
+    {
+      "pt": "Obelisco",
+      "en": "Obelisk"
+    },
+    {
+      "pt": "Confirmar alinhamento",
+      "en": "Confirm alignment"
+    },
+    {
+      "pt": "Escolha pelos números ou pelo mouse. Esc — voltar",
+      "en": "Choose with the number keys or the mouse. Esc — back"
+    },
+    {
+      "pt": "A inscrição se ilumina. Este caminho foi compreendido. Esc — voltar.",
+      "en": "The inscription lights up. This path has been understood. Esc — back."
+    },
+    {
+      "pt": "A inscrição responde. Continue a sequência.",
+      "en": "The inscription responds. Continue the sequence."
+    },
+    {
+      "pt": "A luz recua. Releia a inscrição e tente novamente; seus outros caminhos estão preservados.",
+      "en": "The light recedes. Reread the inscription and try again; your other paths are preserved."
+    },
+    {
+      "pt": "A sombra do obelisco muda de direção. Alinhe as três ranhuras e confirme.",
+      "en": "The obelisk's shadow changes direction. Align the three grooves and confirm."
+    },
+    {
+      "pt": "As sombras ainda não formam a estrela. Gire os obeliscos novamente.",
+      "en": "The shadows do not yet form the star. Turn the obelisks again."
+    },
+    {
+      "pt": "As três sombras formam uma estrela ausente. Esc — voltar.",
+      "en": "The three shadows form an absent star. Esc — back."
+    },
+    {
+      "pt": "Leia as oito portas da galeria antes de ordenar o arquivo.",
+      "en": "Read the gallery's eight doors before ordering the archive."
+    },
+    {
+      "pt": "Ainda faltam caminhos a compreender no Labirinto.",
+      "en": "There are still paths to understand in the Labyrinth."
+    },
+    {
+      "pt": "Ainda faltam caminhos a compreender. Explore os desafios do Labirinto antes de ativar o portal.",
+      "en": "There are still paths to understand. Explore the Labyrinth's challenges before activating the portal."
+    },
+    {
+      "pt": "Primeiro, examine este lugar e escute o que ele guarda.",
+      "en": "First, examine this place and listen to what it keeps."
+    },
+    {
+      "pt": "ANOTAÇÕES",
+      "en": "NOTES"
+    },
+    {
+      "pt": "RITUAIS",
+      "en": "RITUALS"
+    },
+    {
+      "pt": "PISTAS",
+      "en": "CLUES"
+    },
+    {
+      "pt": "MEMÓRIAS",
+      "en": "MEMORIES"
+    },
+    {
+      "pt": "Nova entrada no grimório",
+      "en": "New grimoire entry"
+    },
+    {
+      "pt": "Pista",
+      "en": "Hint"
+    },
+    {
+      "pt": "Registro após",
+      "en": "Record after"
+    },
+    {
+      "pt": "conclusão",
+      "en": "completion"
+    },
+    {
+      "pt": "a cena",
+      "en": "the scene"
+    },
+    {
+      "pt": "[pena risca o papel]",
+      "en": "[quill scratches paper]"
+    },
+    {
+      "pt": "[clique suave]",
+      "en": "[soft click]"
+    },
+    {
+      "pt": "[runa ressoa]",
+      "en": "[rune resonates]"
+    },
+    {
+      "pt": "[runa desafina]",
+      "en": "[rune falls off-key]"
+    },
+    {
+      "pt": "[respiração curta]",
+      "en": "[short breath]"
+    },
+    {
+      "pt": "[fragmento cintila]",
+      "en": "[fragment shimmers]"
+    },
+    {
+      "pt": "[acorde final]",
+      "en": "[final chord]"
+    },
+    {
+      "pt": "[Poe mia]",
+      "en": "[Poe meows]"
+    },
+    {
+      "pt": "[passos na pedra]",
+      "en": "[footsteps on stone]"
+    },
+    {
+      "pt": "[vela se apaga]",
+      "en": "[a candle goes out]"
+    },
+    {
+      "pt": "[espelho vibra]",
+      "en": "[the mirror trembles]"
+    },
+    {
+      "pt": "[sino distante]",
+      "en": "[distant bell]"
+    },
+    {
+      "pt": "[presença próxima]",
+      "en": "[a presence draws near]"
+    },
+    {
+      "pt": "[som]",
+      "en": "[sound]"
+    },
+    {
+      "pt": "O que fazer com a fotografia?",
+      "en": "What to do with the photograph?"
+    },
+    {
+      "pt": "Olhar a foto com atenção.",
+      "en": "Look closely at the photo."
+    },
+    {
+      "pt": "Espera. Antes de inventar uma história, deixa eu olhar direito.",
+      "en": "Wait. Before I invent a story, let me look properly."
+    },
+    {
+      "pt": "Guardar a foto.",
+      "en": "Keep the photo."
+    },
+    {
+      "pt": "Não sei o que tá faltando, mas vou guardar.",
+      "en": "I don't know what's missing, but I'll keep it."
+    },
+    {
+      "pt": "Como reagir à aparição de Poe?",
+      "en": "How to react to Poe's appearance?"
+    },
+    {
+      "pt": "Chamar Poe pra perto.",
+      "en": "Call Poe over."
+    },
+    {
+      "pt": "Vem cá, Poe. Eu tô tão perdida quanto você.",
+      "en": "Come here, Poe. I'm as lost as you are."
+    },
+    {
+      "pt": "Esperar Poe chegar.",
+      "en": "Wait for Poe to come."
+    },
+    {
+      "pt": "Vem você. Quero ver se ainda lembra de mim.",
+      "en": "You come. I want to see if you still remember me."
+    },
+    {
+      "pt": "O que perguntar a Andrealphus?",
+      "en": "What to ask Andrealphus?"
+    },
+    {
+      "pt": "Perguntar como atravessar.",
+      "en": "Ask how to cross."
+    },
+    {
+      "pt": "Tá. Me explica como passar. Depois eu decido se confio em você.",
+      "en": "Okay. Explain how to get through. Then I'll decide whether I trust you."
+    },
+    {
+      "pt": "Cobrar uma resposta de verdade.",
+      "en": "Demand a real answer."
+    },
+    {
+      "pt": "Você faz isso de propósito, né? Nunca responde o que eu pergunto.",
+      "en": "You do this on purpose, don't you? You never answer what I ask."
+    },
+    {
+      "pt": "O que registrar diante da pedra invertida?",
+      "en": "What to record before the inverted stone?"
+    },
+    {
+      "pt": "Copiar o símbolo.",
+      "en": "Copy the symbol."
+    },
+    {
+      "pt": "Melhor desenhar isso. Vai que eu preciso depois.",
+      "en": "Better draw this. I might need it later."
+    },
+    {
+      "pt": "Deixar a pedra como está.",
+      "en": "Leave the stone as it is."
+    },
+    {
+      "pt": "Não vou ficar anotando tudo. Preciso seguir.",
+      "en": "I'm not going to write everything down. I need to keep moving."
+    },
+    {
+      "pt": "Ao ver as flores na água...",
+      "en": "Seeing the flowers on the water..."
+    },
+    {
+      "pt": "Entrar na água.",
+      "en": "Enter the water."
+    },
+    {
+      "pt": "Tá gelada, mas eu consigo. Vamos lá.",
+      "en": "It's freezing, but I can do it. Here goes."
+    },
+    {
+      "pt": "Observar o reflexo.",
+      "en": "Watch the reflection."
+    },
+    {
+      "pt": "Espera. A água se mexeu antes da flor.",
+      "en": "Wait. The water moved before the flower did."
+    },
+    {
+      "pt": "Como interpretar as palavras dele?",
+      "en": "How to read his words?"
+    },
+    {
+      "pt": "Perguntar se a memória é sua.",
+      "en": "Ask if the memory is yours."
+    },
+    {
+      "pt": "Pera. Você tá dizendo que essa lembrança pode nem ser minha?",
+      "en": "Hold on. You're saying this memory might not even be mine?"
+    },
+    {
+      "pt": "Insistir no que sentiu.",
+      "en": "Insist on what you felt."
+    },
+    {
+      "pt": "Eu tava lá. O que eu senti não foi inventado.",
+      "en": "I was there. What I felt wasn't invented."
+    },
+    {
+      "pt": "Como ler as portas?",
+      "en": "How to read the doors?"
+    },
+    {
+      "pt": "Ler as oito portas.",
+      "en": "Read all eight doors."
+    },
+    {
+      "pt": "Já que cheguei até aqui, vou ler tudo.",
+      "en": "Since I've come this far, I'll read everything."
+    },
+    {
+      "pt": "Procurar as marcas necessárias.",
+      "en": "Look for the marks I need."
+    },
+    {
+      "pt": "Vou começar pelas marcas. Depois vejo o resto.",
+      "en": "I'll start with the marks. Then I'll see the rest."
+    },
+    {
+      "pt": "O que fazer depois de tocar o Fragmento?",
+      "en": "What to do after touching the Fragment?"
+    },
+    {
+      "pt": "Guardar o Fragmento.",
+      "en": "Keep the Fragment."
+    },
+    {
+      "pt": "Tá. Eu não vou deixar isso aqui.",
+      "en": "Okay. I'm not leaving this here."
+    },
+    {
+      "pt": "Anotar o que aconteceu.",
+      "en": "Write down what happened."
+    },
+    {
+      "pt": "Preciso escrever agora, antes que eu esqueça.",
+      "en": "I need to write now, before I forget."
+    },
+    {
+      "pt": "O que Melantha leva consigo?",
+      "en": "What does Melantha carry with her?"
+    },
+    {
+      "pt": "Levar a dúvida adiante.",
+      "en": "Carry the doubt forward."
+    },
+    {
+      "pt": "Voltei. Mas ainda não entendi o que aconteceu.",
+      "en": "I came back. But I still don't understand what happened."
+    },
+    {
+      "pt": "Prometer que vai descobrir.",
+      "en": "Promise to find out."
+    },
+    {
+      "pt": "Isso não acabou. Eu vou descobrir o resto.",
+      "en": "This isn't over. I'm going to find out the rest."
+    },
+    {
+      "pt": "A foto também. Preciso olhar direito, como antes.",
+      "en": "The photo too. I need to look properly, like before."
+    },
+    {
+      "pt": "A foto também. Ainda não sei o que falta nela.",
+      "en": "The photo too. I still don't know what's missing from it."
+    },
+    {
+      "pt": "Poe... vem cá. Você quer que eu pegue isso?",
+      "en": "Poe... come here. Do you want me to take this?"
+    },
+    {
+      "pt": "Poe... vou esperar. Você quer que eu pegue isso?",
+      "en": "Poe... I'll wait. Do you want me to take this?"
+    },
+    {
+      "pt": "Eu te pedi um caminho. Você podia falar uma coisa sem me deixar mais confusa?",
+      "en": "I asked you for a way through. Could you say one thing without leaving me more confused?"
+    },
+    {
+      "pt": "Eu te pedi uma resposta. Você podia falar uma coisa sem me deixar mais confusa?",
+      "en": "I asked you for an answer. Could you say one thing without leaving me more confused?"
+    },
+    {
+      "pt": "Minha decisão",
+      "en": "My decision"
+    },
+    {
+      "pt": "Não sei o que me incomoda mais: a janela ou o fato de eu reconhecer tudo.",
+      "en": "I don't know what bothers me more: the window, or the fact that I recognize everything."
+    },
+    {
+      "pt": "Tá quieto demais aqui. Onde foi parar o barulho da casa?",
+      "en": "It's too quiet here. Where did the sounds of the house go?"
+    },
+    {
+      "pt": "Minha letra, com certeza. Quando foi que escrevi isso?",
+      "en": "My handwriting, no doubt. When did I write this?"
+    },
+    {
+      "pt": "Cheiro de pedra molhada. Pelo menos isso parece real.",
+      "en": "The smell of wet stone. At least that feels real."
+    },
+    {
+      "pt": "Olha o tamanho dessa escada. E eu ainda nem sei aonde ela vai.",
+      "en": "Look at the size of this staircase. And I still don't know where it goes."
+    },
+    {
+      "pt": "Toda vez que eu falo, a parede devolve diferente.",
+      "en": "Every time I speak, the wall gives it back different."
+    },
+    {
+      "pt": "Poe, você tá ouvindo isso também?",
+      "en": "Poe, are you hearing this too?"
+    },
+    {
+      "pt": "A porta é igual... mas essa marca mudou.",
+      "en": "The door is the same... but this mark changed."
+    },
+    {
+      "pt": "Se eu passar de novo, ela vai me jogar no começo?",
+      "en": "If I go through again, will it throw me back to the start?"
+    },
+    {
+      "pt": "Não sei se quero ouvir o que tá lá embaixo.",
+      "en": "I'm not sure I want to hear what's down there."
+    },
+    {
+      "pt": "Tá. O poço faz eco até quando ninguém fala. Normal.",
+      "en": "Right. The well echoes even when no one speaks. Totally normal."
+    },
+    {
+      "pt": "Como é que tem sombra se não tem céu?",
+      "en": "How is there shadow if there's no sky?"
+    },
+    {
+      "pt": "Poe, você tá olhando pra sombra ou praquela pedra?",
+      "en": "Poe, are you looking at the shadow or at that stone?"
+    },
+    {
+      "pt": "A porta da Lua sempre esteve aqui. Só precisava abrir.",
+      "en": "The Moon's door was always here. It just needed to open."
+    },
+    {
+      "pt": "Sete símbolos... mas só uma porta abriu.",
+      "en": "Seven symbols... but only one door opened."
+    },
+    {
+      "pt": "Eu sabia fazer isso tudo antes? Não faz sentido.",
+      "en": "Did I know how to do all this before? It makes no sense."
+    },
+    {
+      "pt": "Essa água muda de cor toda hora. É bonita, até.",
+      "en": "This water keeps changing color. It's beautiful, actually."
+    },
+    {
+      "pt": "Poe, nem pensa em pular atrás de mim.",
+      "en": "Poe, don't even think about jumping in after me."
+    },
+    {
+      "pt": "As flores tão bem ali. Vou ter que entrar na água.",
+      "en": "The flowers are right there. I'm going to have to get in the water."
+    },
+    {
+      "pt": "É impressão minha ou a luz daqui tá um pouco adiantada?",
+      "en": "Is it just me, or is the light here running a little early?"
+    },
+    {
+      "pt": "Tô começando a achar que esse corredor faz de propósito.",
+      "en": "I'm starting to think this corridor does it on purpose."
+    },
+    {
+      "pt": "Forçar não vai adiantar. Preciso descobrir a ordem.",
+      "en": "Forcing it won't help. I need to figure out the order."
+    },
+    {
+      "pt": "Uma porta aberta não garante que eu vou chegar em casa.",
+      "en": "An open door doesn't guarantee I'll make it home."
+    },
+    {
+      "pt": "Esse espelho tá me dando arrepios.",
+      "en": "This mirror is giving me chills."
+    },
+    {
+      "pt": "Tá, um reflexo atrasado é estranho. Um adiantado é pior.",
+      "en": "Okay, a late reflection is strange. An early one is worse."
+    },
+    {
+      "pt": "Oito portas, oito histórias. Claro que não ia ser simples.",
+      "en": "Eight doors, eight stories. Of course it wouldn't be simple."
+    },
+    {
+      "pt": "Quem escreveu tudo isso?",
+      "en": "Who wrote all of this?"
+    },
+    {
+      "pt": "É só um pedacinho... por que parece tão importante?",
+      "en": "It's just a little piece... why does it feel so important?"
+    },
+    {
+      "pt": "Tô lembrando de alguma coisa. Só não sei do quê.",
+      "en": "I'm remembering something. I just don't know what."
+    },
+    {
+      "pt": "Uma imagem preserva forma.",
+      "en": "An image preserves shape."
+    },
+    {
+      "pt": "Eu continuei chamando.",
+      "en": "I kept calling."
+    },
+    {
+      "pt": "Você voltou porque abriu.",
+      "en": "You came back because you opened."
+    },
+    {
+      "pt": "Uma imagem preserva presença.",
+      "en": "An image preserves presence."
+    },
+    {
+      "pt": "Eu parei de chamar.",
+      "en": "I stopped calling."
+    },
+    {
+      "pt": "Você voltou porque morreu.",
+      "en": "You came back because you died."
+    },
+    {
+      "pt": "Eu já tracei este caminho.",
+      "en": "I have traced this path before."
+    },
+    {
+      "pt": "Há algo que o quarto não consegue guardar.",
+      "en": "There is something the room cannot keep."
+    },
+    {
+      "pt": "Um som. Um nome que não alcanço.",
+      "en": "A sound. A name I cannot reach."
+    },
+    {
+      "pt": "Se eu seguir... vou lembrar?",
+      "en": "If I follow... will I remember?"
+    },
+    {
+      "pt": "Escolha antes de dormir",
+      "en": "A choice before sleeping"
+    },
+    {
+      "pt": "Deitar [Y]",
+      "en": "Lie down [Y]"
+    },
+    {
+      "pt": "Verificar o quarto mais uma vez [N]",
+      "en": "Check the room one more time [N]"
+    },
+    {
+      "pt": "O que a gente lembra volta com a gente.\n\nObrigado por jogar Memento Mori.",
+      "en": "What we remember comes back with us.\n\nThank you for playing Memento Mori."
+    },
+    {
+      "pt": "...Não. Não era para terminar assim.",
+      "en": "...No. It wasn't supposed to end like this."
+    },
+    {
+      "pt": "A Lua devolve imagens.",
+      "en": "The Moon gives back images."
+    },
+    {
+      "pt": "A Lua gosta particularmente delas.",
+      "en": "The Moon is particularly fond of them."
+    },
+    {
+      "pt": "A Lua não abre. Ela permite ser lembrada.",
+      "en": "The Moon does not open. It allows itself to be remembered."
+    },
+    {
+      "pt": "A Lua prefere isso.",
+      "en": "The Moon prefers it that way."
+    },
+    {
+      "pt": "A água parada sempre guarda alguma imagem.",
+      "en": "Still water always keeps some image."
+    },
+    {
+      "pt": "A certeza é muito eficiente em criar círculos.",
+      "en": "Certainty is very efficient at drawing circles."
+    },
+    {
+      "pt": "A demonstração termina aqui. Obrigado por jogar.",
+      "en": "The demonstration ends here. Thank you for playing."
+    },
+    {
+      "pt": "A diferença deveria me tranquilizar.",
+      "en": "The difference should reassure me."
+    },
+    {
+      "pt": "A primeira porta sempre parece chegada.",
+      "en": "The first door always feels like arrival."
+    },
+    {
+      "pt": "A tinta ainda está aberta.",
+      "en": "The ink is still open."
+    },
+    {
+      "pt": "Abriu quando eu me afastei.",
+      "en": "It opened when I stepped away."
+    },
+    {
+      "pt": "Acho que não é pra acender nada. É pra apagar.",
+      "en": "I don't think it's about lighting anything. It's about putting out."
+    },
+    {
+      "pt": "Acho que preciso olhar do lugar certo.",
+      "en": "I think I need to look from the right place."
+    },
+    {
+      "pt": "Agora a flor e o reflexo bateram.",
+      "en": "Now the flower and the reflection match."
+    },
+    {
+      "pt": "Agora eu volto.",
+      "en": "Now I go back."
+    },
+    {
+      "pt": "Agora você está lendo.",
+      "en": "Now you are reading."
+    },
+    {
+      "pt": "Ainda não.",
+      "en": "Not yet."
+    },
+    {
+      "pt": "Algumas chegaram antes.",
+      "en": "Some arrived early."
+    },
+    {
+      "pt": "Algumas partes chegam antes.",
+      "en": "Some parts arrive early."
+    },
+    {
+      "pt": "Alguns ficam mesmo quando ninguém chama por eles.",
+      "en": "Some stay even when no one calls for them."
+    },
+    {
+      "pt": "Antes da primeira fase, a Lua já estava.",
+      "en": "Before the first phase, the Moon already was."
+    },
+    {
+      "pt": "Antes.",
+      "en": "Before."
+    },
+    {
+      "pt": "Apaguei duas e ficou certo. Que estranho.",
+      "en": "I put out two and it came out right. How strange."
+    },
+    {
+      "pt": "Aqui, as confiantes costumam levar ao mesmo lugar.",
+      "en": "Here, the confident ones tend to lead to the same place."
+    },
+    {
+      "pt": "Aquilo pode não ser Poe.",
+      "en": "That may not be Poe."
+    },
+    {
+      "pt": "As fases estão certas.",
+      "en": "The phases are right."
+    },
+    {
+      "pt": "Bem-vinda à negação.",
+      "en": "Welcome to denial."
+    },
+    {
+      "pt": "Cansada.",
+      "en": "Tired."
+    },
+    {
+      "pt": "Certo.",
+      "en": "Right."
+    },
+    {
+      "pt": "Claro.",
+      "en": "Of course."
+    },
+    {
+      "pt": "Claro. Fácil demais.",
+      "en": "Of course. Too easy."
+    },
+    {
+      "pt": "Coerente demais.",
+      "en": "Too coherent."
+    },
+    {
+      "pt": "Completar por subtração.",
+      "en": "Completing by subtraction."
+    },
+    {
+      "pt": "Confiante.",
+      "en": "Confident."
+    },
+    {
+      "pt": "Crescente, cheia e minguante... igual à lua lá de casa.",
+      "en": "Waxing, full and waning... just like the moon back home."
+    },
+    {
+      "pt": "De quê, eu ainda não sei.",
+      "en": "Of what, I still don't know."
+    },
+    {
+      "pt": "Depois.",
+      "en": "Later."
+    },
+    {
+      "pt": "E agora?",
+      "en": "Now what?"
+    },
+    {
+      "pt": "E ainda assim hesitou.",
+      "en": "And still you hesitated."
+    },
+    {
+      "pt": "E comece a olhar onde estou.",
+      "en": "And start looking at where I am."
+    },
+    {
+      "pt": "E muito mais útil.",
+      "en": "And far more useful."
+    },
+    {
+      "pt": "E não é?",
+      "en": "And isn't it?"
+    },
+    {
+      "pt": "E o Poe?",
+      "en": "And Poe?"
+    },
+    {
+      "pt": "E o que eu devia pensar?",
+      "en": "And what was I supposed to think?"
+    },
+    {
+      "pt": "E um quarto sem mim.",
+      "en": "And a room without me."
+    },
+    {
+      "pt": "E você pretende impedir?",
+      "en": "And you intend to stop it?"
+    },
+    {
+      "pt": "Ela finalmente trouxe o silêncio consigo.",
+      "en": "She finally brought the silence with her."
+    },
+    {
+      "pt": "Ela lembra depois.",
+      "en": "She remembers afterward."
+    },
+    {
+      "pt": "Ela quer menos luz, não mais.",
+      "en": "It wants less light, not more."
+    },
+    {
+      "pt": "Ele corrige.",
+      "en": "It corrects."
+    },
+    {
+      "pt": "Ele está aqui?",
+      "en": "Is he here?"
+    },
+    {
+      "pt": "Ele é real?",
+      "en": "Is he real?"
+    },
+    {
+      "pt": "Eles costumam admirar apenas o que conseguem inverter.",
+      "en": "They tend to admire only what they can invert."
+    },
+    {
+      "pt": "Em versões.",
+      "en": "In versions."
+    },
+    {
+      "pt": "Então foi o ritual.",
+      "en": "So it was the ritual."
+    },
+    {
+      "pt": "Então talvez também me leve de volta.",
+      "en": "Then maybe it can take me back too."
+    },
+    {
+      "pt": "Entendi.",
+      "en": "I see."
+    },
+    {
+      "pt": "Entre uma intenção e a coragem de admitir qual era.",
+      "en": "Between an intention and the courage to admit what it was."
+    },
+    {
+      "pt": "Entre.",
+      "en": "Come in."
+    },
+    {
+      "pt": "Então eu descubro depois.",
+      "en": "Then I'll find out later."
+    },
+    {
+      "pt": "Então eu procuro a voz que muda.",
+      "en": "Then I look for the voice that changes."
+    },
+    {
+      "pt": "Então eu voltei.",
+      "en": "So I came back."
+    },
+    {
+      "pt": "Então isto é A Lua.",
+      "en": "So this is The Moon."
+    },
+    {
+      "pt": "Então não foi isso.",
+      "en": "So that wasn't it."
+    },
+    {
+      "pt": "Então o espelho não decide nada.",
+      "en": "So the mirror decides nothing."
+    },
+    {
+      "pt": "Era isso que eu queria encontrar.",
+      "en": "This is what I wanted to find."
+    },
+    {
+      "pt": "Espera.",
+      "en": "Wait."
+    },
+    {
+      "pt": "Espera... o reflexo na água tá diferente do jardim.",
+      "en": "Wait... the reflection in the water is different from the garden."
+    },
+    {
+      "pt": "Esperava menos chão.",
+      "en": "I expected less ground."
+    },
+    {
+      "pt": "Esperava que eu saísse para brincar.",
+      "en": "Expected me to come out and play."
+    },
+    {
+      "pt": "Essa é a pergunta mais verdadeira que você trouxe.",
+      "en": "That is the truest question you have brought."
+    },
+    {
+      "pt": "Essa não era a ordem.",
+      "en": "That wasn't the order."
+    },
+    {
+      "pt": "Essa voz é minha.",
+      "en": "That voice is mine."
+    },
+    {
+      "pt": "Esse não é o meu quarto.",
+      "en": "This is not my room."
+    },
+    {
+      "pt": "Esse símbolo... estava no chão do quarto.",
+      "en": "This symbol... it was on the bedroom floor."
+    },
+    {
+      "pt": "Esta lembrança termina aqui. A história, não.",
+      "en": "This memory ends here. The story does not."
+    },
+    {
+      "pt": "Estas velas não estão abrindo o caminho pela primeira vez.",
+      "en": "These candles are not opening the way for the first time."
+    },
+    {
+      "pt": "Está olhando para mim.",
+      "en": "It's looking at me."
+    },
+    {
+      "pt": "Está úmida.",
+      "en": "It's damp."
+    },
+    {
+      "pt": "Estão dizendo quando eu chego.",
+      "en": "They're saying when I arrive."
+    },
+    {
+      "pt": "Eu atravessei o quê?",
+      "en": "I crossed what, exactly?"
+    },
+    {
+      "pt": "Eu atravessei.",
+      "en": "I crossed."
+    },
+    {
+      "pt": "Eu conheço isso.",
+      "en": "I know this."
+    },
+    {
+      "pt": "Eu consigo lembrar do espaço.",
+      "en": "I can remember the space."
+    },
+    {
+      "pt": "Eu deixei isso perto da cama.",
+      "en": "I left this by the bed."
+    },
+    {
+      "pt": "Eu disse isso.",
+      "en": "I said that."
+    },
+    {
+      "pt": "Eu escrevi a pergunta antes de esquecer a resposta.",
+      "en": "I wrote the question before I forgot the answer."
+    },
+    {
+      "pt": "Eu estou tentando fazê-lo lembrar por mim.",
+      "en": "I am trying to make it remember for me."
+    },
+    {
+      "pt": "Eu fiz isso comigo?",
+      "en": "Did I do this to myself?"
+    },
+    {
+      "pt": "Eu guardei isso.",
+      "en": "I kept this."
+    },
+    {
+      "pt": "Eu me movo.",
+      "en": "I move."
+    },
+    {
+      "pt": "Eu não escrevi essa linha.",
+      "en": "I didn't write that line."
+    },
+    {
+      "pt": "Eu nunca deixo aberta.",
+      "en": "I never leave it open."
+    },
+    {
+      "pt": "Eu não coloquei água aqui.",
+      "en": "I didn't put water here."
+    },
+    {
+      "pt": "Eu não disse isso.",
+      "en": "I didn't say that."
+    },
+    {
+      "pt": "Eu não parei de chamar.",
+      "en": "I didn't stop calling."
+    },
+    {
+      "pt": "Eu não vou correr atrás de você.",
+      "en": "I'm not going to run after you."
+    },
+    {
+      "pt": "Eu olhei para isso.",
+      "en": "I looked at it."
+    },
+    {
+      "pt": "Eu sempre quis terapia com arquitetura hostil.",
+      "en": "I always wanted therapy through hostile architecture."
+    },
+    {
+      "pt": "Eu separei isto.",
+      "en": "I set this aside."
+    },
+    {
+      "pt": "Eu vi reflexos demais para confiar nisso.",
+      "en": "I've seen too many reflections to trust that."
+    },
+    {
+      "pt": "FORMA NÃO É PRESENÇA.",
+      "en": "SHAPE IS NOT PRESENCE."
+    },
+    {
+      "pt": "Fase. Memória. Intenção.",
+      "en": "Phase. Memory. Intention."
+    },
+    {
+      "pt": "Fim da vertical slice",
+      "en": "End of the vertical slice"
+    },
+    {
+      "pt": "Finalmente uma certeza útil.",
+      "en": "Finally a useful certainty."
+    },
+    {
+      "pt": "Finalmente.",
+      "en": "Finally."
+    },
+    {
+      "pt": "Fogo sozinho não abre coisa nenhuma.",
+      "en": "Fire alone opens nothing."
+    },
+    {
+      "pt": "Foi você quem disse isso.",
+      "en": "You were the one who said it."
+    },
+    {
+      "pt": "Funcionou.",
+      "en": "It worked."
+    },
+    {
+      "pt": "Guardar é apenas esconder algo de uma versão futura de si mesma.",
+      "en": "Keeping is just hiding something from a future version of yourself."
+    },
+    {
+      "pt": "Há silêncios que fazem companhia.",
+      "en": "There are silences that keep you company."
+    },
+    {
+      "pt": "Hábito e esperança usam os mesmos gestos.",
+      "en": "Habit and hope use the same gestures."
+    },
+    {
+      "pt": "Intacto.",
+      "en": "Intact."
+    },
+    {
+      "pt": "Interessante. Eu não disse que não exigia.",
+      "en": "Interesting. I never said it made no demands."
+    },
+    {
+      "pt": "Isso foi o que eu queria ouvir.",
+      "en": "That was what I wanted to hear."
+    },
+    {
+      "pt": "Isso não responde.",
+      "en": "That doesn't answer."
+    },
+    {
+      "pt": "Isso não me tranquiliza.",
+      "en": "That does not reassure me."
+    },
+    {
+      "pt": "Isso pareceu uma distinção importante.",
+      "en": "That sounded like an important distinction."
+    },
+    {
+      "pt": "Isso é a sua versão de resposta?",
+      "en": "Is that your version of an answer?"
+    },
+    {
+      "pt": "Isso é direção.",
+      "en": "That is direction."
+    },
+    {
+      "pt": "Isso é pior.",
+      "en": "That's worse."
+    },
+    {
+      "pt": "Isto termina quando eu acordar?",
+      "en": "Does this end when I wake up?"
+    },
+    {
+      "pt": "Já estive aqui?",
+      "en": "Have I been here before?"
+    },
+    {
+      "pt": "Lugares não querem.",
+      "en": "Places don't want."
+    },
+    {
+      "pt": "MEMÓRIA NÃO É ALMA.",
+      "en": "MEMORY IS NOT SOUL."
+    },
+    {
+      "pt": "Mas estava esperando por mim.",
+      "en": "But it was waiting for me."
+    },
+    {
+      "pt": "Mas falta ordem. Falta lembrança.",
+      "en": "But order is missing. Memory is missing."
+    },
+    {
+      "pt": "Mas por que eu não lembro de querer vir?",
+      "en": "But why don't I remember wanting to come?"
+    },
+    {
+      "pt": "Mas também não vou deixar você desaparecer de novo.",
+      "en": "But I'm not letting you disappear again either."
+    },
+    {
+      "pt": "Melantha aparece; Poe não.",
+      "en": "Melantha appears; Poe does not."
+    },
+    {
+      "pt": "Melhor.",
+      "en": "Better."
+    },
+    {
+      "pt": "Mesmo quando eu preferia não olhar.",
+      "en": "Even when I'd rather not look."
+    },
+    {
+      "pt": "Meu corpo.",
+      "en": "My body."
+    },
+    {
+      "pt": "Meu grimório...",
+      "en": "My grimoire..."
+    },
+    {
+      "pt": "Meu quarto.",
+      "en": "My room."
+    },
+    {
+      "pt": "Minguante.",
+      "en": "Waning."
+    },
+    {
+      "pt": "Sustentar.",
+      "en": "Sustain."
+    },
+    {
+      "pt": "Minha cama. Meu grimório. Mas essa janela...",
+      "en": "My bed. My grimoire. But that window..."
+    },
+    {
+      "pt": "Não é a única resposta disponível.",
+      "en": "It is not the only answer available."
+    },
+    {
+      "pt": "Não agora.",
+      "en": "Not now."
+    },
+    {
+      "pt": "Não confio em elogios vindos de um espelho.",
+      "en": "I don't trust compliments that come from a mirror."
+    },
+    {
+      "pt": "Não da ausência.",
+      "en": "Not of the absence."
+    },
+    {
+      "pt": "Não esta noite.",
+      "en": "Not tonight."
+    },
+    {
+      "pt": "Não estou começando. Estou seguindo alguma coisa.",
+      "en": "I'm not beginning. I'm following something."
+    },
+    {
+      "pt": "Não foi para isso que desenhei o selo.",
+      "en": "That is not what I drew the seal for."
+    },
+    {
+      "pt": "Não gosto quando uma superfície tem expectativas.",
+      "en": "I don't like it when a surface has expectations."
+    },
+    {
+      "pt": "Não há nem uma luz.",
+      "en": "There isn't a single light."
+    },
+    {
+      "pt": "Não havia motivo.",
+      "en": "There was no reason."
+    },
+    {
+      "pt": "Não preciso ler de novo.",
+      "en": "I don't need to read it again."
+    },
+    {
+      "pt": "Não vou chamar por você.",
+      "en": "I won't call for you."
+    },
+    {
+      "pt": "Não vou decidir o que você é só porque reconheço a forma.",
+      "en": "I won't decide what you are just because I recognize the shape."
+    },
+    {
+      "pt": "Não.",
+      "en": "No."
+    },
+    {
+      "pt": "Não. Isso não está certo.",
+      "en": "No. This isn't right."
+    },
+    {
+      "pt": "Não...",
+      "en": "No..."
+    },
+    {
+      "pt": "Naturalmente.",
+      "en": "Naturally."
+    },
+    {
+      "pt": "Nem deveria.",
+      "en": "Nor should it."
+    },
+    {
+      "pt": "Nem toda perda é falha.",
+      "en": "Not every loss is failure."
+    },
+    {
+      "pt": "Não consigo lembrar do que ocupava ele.",
+      "en": "I can't remember what used to occupy it."
+    },
+    {
+      "pt": "Não foi só um sonho.",
+      "en": "It wasn't just a dream."
+    },
+    {
+      "pt": "Não intenção.",
+      "en": "Not intention."
+    },
+    {
+      "pt": "Não prender.",
+      "en": "Not to bind."
+    },
+    {
+      "pt": "Não promete originais.",
+      "en": "It does not promise originals."
+    },
+    {
+      "pt": "Não significa que foi o que aconteceu.",
+      "en": "It doesn't mean that's what happened."
+    },
+    {
+      "pt": "Não trazer.",
+      "en": "Not to bring."
+    },
+    {
+      "pt": "Não é crescer.",
+      "en": "It is not to grow."
+    },
+    {
+      "pt": "Não é ficar inteira.",
+      "en": "It is not to become whole."
+    },
+    {
+      "pt": "Não, essa não.",
+      "en": "No, not that one."
+    },
+    {
+      "pt": "Não. Eu sei para quê.",
+      "en": "No. I know what for."
+    },
+    {
+      "pt": "O Labirinto não quer que eu lembre.",
+      "en": "The Labyrinth doesn't want me to remember."
+    },
+    {
+      "pt": "O Labirinto não repete.",
+      "en": "The Labyrinth does not repeat."
+    },
+    {
+      "pt": "O fragmento não devolveu meu passado. Devolveu uma pergunta.",
+      "en": "The fragment didn't give me back my past. It gave back a question."
+    },
+    {
+      "pt": "O jardim está copiando o reflexo.",
+      "en": "The garden is copying the reflection."
+    },
+    {
+      "pt": "O jogador deve seguir a voz que altera a memória.",
+      "en": "The player must follow the voice that alters memory."
+    },
+    {
+      "pt": "O livro não lembra por mim.",
+      "en": "The book doesn't remember for me."
+    },
+    {
+      "pt": "O poço disse que este lugar corrige.",
+      "en": "The well said this place corrects."
+    },
+    {
+      "pt": "O que eu pretendo fazer?",
+      "en": "What do I intend to do?"
+    },
+    {
+      "pt": "O reflexo não está copiando o jardim.",
+      "en": "The reflection isn't copying the garden."
+    },
+    {
+      "pt": "O sigilo ainda reconhece a minha mão.",
+      "en": "The sigil still recognizes my hand."
+    },
+    {
+      "pt": "O vento.",
+      "en": "The wind."
+    },
+    {
+      "pt": "Onde estou?",
+      "en": "Where am I?"
+    },
+    {
+      "pt": "Os reflexos úteis não estão dizendo quem eu sou.",
+      "en": "The useful reflections aren't saying who I am."
+    },
+    {
+      "pt": "Ou alguma versão minha voltou.",
+      "en": "Or some version of me came back."
+    },
+    {
+      "pt": "Ou eu estou seguindo porque preciso acreditar que reconheço você.",
+      "en": "Or I'm following because I need to believe I recognize you."
+    },
+    {
+      "pt": "Ou terceira manhã sem lembrança.",
+      "en": "Or a third morning without memory."
+    },
+    {
+      "pt": "Para quê?",
+      "en": "What for?"
+    },
+    {
+      "pt": "Pare de fazer perguntas cujas respostas já desenhou no chão.",
+      "en": "Stop asking questions whose answers you have already drawn on the floor."
+    },
+    {
+      "pt": "Partes de mim.",
+      "en": "Parts of me."
+    },
+    {
+      "pt": "Pode?",
+      "en": "Can it?"
+    },
+    {
+      "pt": "Poe não responde. Apenas permanece.",
+      "en": "Poe does not answer. He only remains."
+    },
+    {
+      "pt": "Por isso eu não confio.",
+      "en": "That's why I don't trust it."
+    },
+    {
+      "pt": "Posso carregá-la sem fingir que já sei a resposta.",
+      "en": "I can carry it without pretending I already know the answer."
+    },
+    {
+      "pt": "Precisar e querer raramente são a mesma coisa.",
+      "en": "Needing and wanting are rarely the same thing."
+    },
+    {
+      "pt": "Pretendo observar qual de vocês duas chega primeiro.",
+      "en": "I intend to watch which of you two arrives first."
+    },
+    {
+      "pt": "Pretendo observar qual versão de você chega primeiro.",
+      "en": "I intend to watch which version of you arrives first."
+    },
+    {
+      "pt": "Primeiro Domínio concluído: A Lua",
+      "en": "First Domain completed: The Moon"
+    },
+    {
+      "pt": "Pronto. As três flores responderam.",
+      "en": "There. All three flowers have answered."
+    },
+    {
+      "pt": "Péssima hora para aprender com ele.",
+      "en": "Terrible time to learn from him."
+    },
+    {
+      "pt": "Quando a Lua chamar outra vez, haverá mais do que um fragmento para encontrar.",
+      "en": "When the Moon calls again, there will be more than one fragment to find."
+    },
+    {
+      "pt": "Quanto mais perto eu fico, menos ela responde.",
+      "en": "The closer I get, the less it responds."
+    },
+    {
+      "pt": "Quase.",
+      "en": "Almost."
+    },
+    {
+      "pt": "Que palavra misericordiosa.",
+      "en": "What a merciful word."
+    },
+    {
+      "pt": "Quem é você?",
+      "en": "Who are you?"
+    },
+    {
+      "pt": "Quem está aí?",
+      "en": "Who's there?"
+    },
+    {
+      "pt": "Quer que eu pare de escolher a lembrança mais confortável.",
+      "en": "It wants me to stop choosing the most comfortable memory."
+    },
+    {
+      "pt": "Queria que a pergunta continuasse.",
+      "en": "I wanted the question to go on."
+    },
+    {
+      "pt": "Quero voltar.",
+      "en": "I want to go back."
+    },
+    {
+      "pt": "Real é uma palavra pequena demais para o que você pretende fazer.",
+      "en": "Real is too small a word for what you intend to do."
+    },
+    {
+      "pt": "Repete os movimentos do jogador com atraso de três segundos.",
+      "en": "It repeats the player's movements with a three-second delay."
+    },
+    {
+      "pt": "Respostas são portas muito confiantes.",
+      "en": "Answers are very confident doors."
+    },
+    {
+      "pt": "Só por um instante.",
+      "en": "Just for an instant."
+    },
+    {
+      "pt": "Se é antes, alguém entrou.",
+      "en": "If it's before, someone came in."
+    },
+    {
+      "pt": "Se a memória falha, então eu preciso ler o que deixei para mim.",
+      "en": "If memory fails, then I need to read what I left for myself."
+    },
+    {
+      "pt": "Se eu esquecer, a marca fica.",
+      "en": "If I forget, the mark stays."
+    },
+    {
+      "pt": "Se eu me perder, o caminho fica.",
+      "en": "If I get lost, the path stays."
+    },
+    {
+      "pt": "Se isso é agora, alguém saiu.",
+      "en": "If this is now, someone left."
+    },
+    {
+      "pt": "Se isso me trouxe até aqui uma vez...",
+      "en": "If this brought me here once..."
+    },
+    {
+      "pt": "Se isso é agora, eu não voltei.",
+      "en": "If this is now, I haven't come back."
+    },
+    {
+      "pt": "Se quiser ficar, fica.",
+      "en": "If you want to stay, stay."
+    },
+    {
+      "pt": "Se souber sair... me mostra.",
+      "en": "If you know the way out... show me."
+    },
+    {
+      "pt": "Se é antes... eu já tinha saído.",
+      "en": "If it's before... I had already left."
+    },
+    {
+      "pt": "Subtrair também pode completar.",
+      "en": "Subtracting can also complete."
+    },
+    {
+      "pt": "Só impedir que o caminho desapareça antes de eu entender.",
+      "en": "Just keep the path from disappearing before I understand."
+    },
+    {
+      "pt": "Só prova que eu estive aqui.",
+      "en": "It only proves I was here."
+    },
+    {
+      "pt": "Tem certeza de que isso é sobre flores?",
+      "en": "Are you sure this is about flowers?"
+    },
+    {
+      "pt": "Tenho certeza está começando a perder utilidade.",
+      "en": "\"I'm sure\" is starting to lose its usefulness."
+    },
+    {
+      "pt": "Tenho certeza.",
+      "en": "I'm sure."
+    },
+    {
+      "pt": "Tinha alguma coisa diferente.",
+      "en": "Something was different."
+    },
+    {
+      "pt": "Todos chamam de saída a direção em que ainda não sofreram.",
+      "en": "Everyone calls 'exit' the direction where they have not yet suffered."
+    },
+    {
+      "pt": "Todos chamam de volta a direção em que ainda reconhecem o próprio corpo.",
+      "en": "Everyone calls 'back' the direction where they still recognize their own body."
+    },
+    {
+      "pt": "Tá. Nem tudo vem quando eu chamo.",
+      "en": "Okay. Not everything comes when I call."
+    },
+    {
+      "pt": "UM PREÇO FECHA.",
+      "en": "A PRICE CLOSES."
+    },
+    {
+      "pt": "UM VÍNCULO SUSTENTA.",
+      "en": "A BOND SUSTAINS."
+    },
+    {
+      "pt": "Um já era uma pergunta.",
+      "en": "One was already a question."
+    },
+    {
+      "pt": "Um lugar construído em torno da mesma falha que eu.",
+      "en": "A place built around the same flaw as me."
+    },
+    {
+      "pt": "Um nome abre.",
+      "en": "A name opens."
+    },
+    {
+      "pt": "Um nome abre. Um vínculo sustenta. Um preço fecha.",
+      "en": "A name opens. A bond sustains. A price closes."
+    },
+    {
+      "pt": "Um preço fecha.",
+      "en": "A price closes."
+    },
+    {
+      "pt": "Uma coisa de cada vez.",
+      "en": "One thing at a time."
+    },
+    {
+      "pt": "Uma parte.",
+      "en": "A part."
+    },
+    {
+      "pt": "Uma pergunta antes do vocabulário.",
+      "en": "A question from before vocabulary."
+    },
+    {
+      "pt": "Uma pergunta muito sólida para este lugar.",
+      "en": "A very solid question for this place."
+    },
+    {
+      "pt": "Uma porta.",
+      "en": "A door."
+    },
+    {
+      "pt": "Versão?",
+      "en": "Version?"
+    },
+    {
+      "pt": "Você ainda está pensando em lugares.",
+      "en": "You are still thinking in places."
+    },
+    {
+      "pt": "Você ainda pergunta como se ‘aqui’ fosse um lugar.",
+      "en": "You still ask as if 'here' were a place."
+    },
+    {
+      "pt": "Você encontrou o que trouxe.",
+      "en": "You found what you brought."
+    },
+    {
+      "pt": "Você escolheu muito bem.",
+      "en": "You chose very well."
+    },
+    {
+      "pt": "Você está me levando até lá.",
+      "en": "You're taking me there."
+    },
+    {
+      "pt": "Você não recebe mais intenção esta noite.",
+      "en": "You receive no more intention tonight."
+    },
+    {
+      "pt": "Você sabe meu nome.",
+      "en": "You know my name."
+    },
+    {
+      "pt": "Você sabia que eu viria.",
+      "en": "You knew I would come."
+    },
+    {
+      "pt": "Você também sabe o dele.",
+      "en": "You know his too."
+    },
+    {
+      "pt": "Você trouxe partes de si.",
+      "en": "You brought parts of yourself."
+    },
+    {
+      "pt": "Você continua confundindo despertar com final.",
+      "en": "You keep mistaking waking for an ending."
+    },
+    {
+      "pt": "Você continua perguntando como se atravessar exigisse morrer.",
+      "en": "You keep asking as if crossing required dying."
+    },
+    {
+      "pt": "Você continua tentando transformar reconhecimento em prova.",
+      "en": "You keep trying to turn recognition into proof."
+    },
+    {
+      "pt": "Você desenhou a pergunta no chão do próprio quarto.",
+      "en": "You drew the question on the floor of your own room."
+    },
+    {
+      "pt": "Você está do meu lado.",
+      "en": "You're on my side."
+    },
+    {
+      "pt": "Você está fazendo isso de propósito.",
+      "en": "You're doing this on purpose."
+    },
+    {
+      "pt": "Você fez alguma coisa.",
+      "en": "You did something."
+    },
+    {
+      "pt": "Você já conhece o caminho.",
+      "en": "You already know the way."
+    },
+    {
+      "pt": "Você não está olhando para ele.",
+      "en": "You're not looking at him."
+    },
+    {
+      "pt": "Você não queria uma resposta.",
+      "en": "You didn't want an answer."
+    },
+    {
+      "pt": "Você quer que eu pare de procurar uma saída.",
+      "en": "You want me to stop looking for a way out."
+    },
+    {
+      "pt": "Você tem uma opinião muito específica sobre onde eu pertenço.",
+      "en": "You have a very specific opinion about where I belong."
+    },
+    {
+      "pt": "Volta.",
+      "en": "Come back."
+    },
+    {
+      "pt": "É fácil confundir contorno com presença.",
+      "en": "It is easy to mistake outline for presence."
+    },
+    {
+      "pt": "É a versão que não estraga as próximas perguntas.",
+      "en": "It's the version that doesn't spoil the next questions."
+    },
+    {
+      "pt": "Ótimo.",
+      "en": "Great."
+    },
+    {
+      "pt": "O limiar que devolve",
+      "en": "The threshold that returns"
+    },
+    {
+      "pt": "A porta promete uma saída, mas devolve seus passos ao pátio. Na moldura: «Nem toda passagem se vence atravessando».",
+      "en": "The door promises a way out, yet returns your steps to the courtyard. On its frame: «Not every passage is won by crossing it»."
+    },
+    {
+      "pt": "Forçar a fechadura",
+      "en": "Force the lock"
+    },
+    {
+      "pt": "Reconhecer o retorno",
+      "en": "Acknowledge the return"
+    },
+    {
+      "pt": "Apagar o caminho",
+      "en": "Erase the path"
+    },
+    {
+      "pt": "Quatro vozes, uma contradição",
+      "en": "Four voices, one contradiction"
+    },
+    {
+      "pt": "Depois de ouvir as quatro vozes, reconheça a fala que parece sua, mas contradiz o que você lembra.",
+      "en": "After hearing the four voices, recognize the one that sounds like yours but contradicts what you remember."
+    },
+    {
+      "pt": "Uma voz estranha",
+      "en": "A strange voice"
+    },
+    {
+      "pt": "Uma voz minha que não lembro de ter dito",
+      "en": "A voice of mine I don't remember speaking"
+    },
+    {
+      "pt": "A voz de Poe",
+      "en": "Poe's voice"
+    },
+    {
+      "pt": "Sombras sem estrela",
+      "en": "Shadows without a star"
+    },
+    {
+      "pt": "Gire os três obeliscos. As ranhuras devem fazer as sombras convergirem para a estrela ausente.",
+      "en": "Turn the three obelisks. The grooves must make the shadows converge toward the absent star."
+    },
+    {
+      "pt": "Norte",
+      "en": "North"
+    },
+    {
+      "pt": "Leste",
+      "en": "East"
+    },
+    {
+      "pt": "Sul",
+      "en": "South"
+    },
+    {
+      "pt": "Oeste",
+      "en": "West"
+    },
+    {
+      "pt": "Um nome, um vínculo, um preço",
+      "en": "A name, a bond, a price"
+    },
+    {
+      "pt": "O que abre não sustenta. O que sustenta não encerra. Alinhe as três partes na ordem inscrita.",
+      "en": "What opens does not sustain. What sustains does not close. Align the three parts in the inscribed order."
+    },
+    {
+      "pt": "Nome abre",
+      "en": "Name opens"
+    },
+    {
+      "pt": "Vínculo sustenta",
+      "en": "Bond sustains"
+    },
+    {
+      "pt": "Preço fecha",
+      "en": "Price closes"
+    },
+    {
+      "pt": "Despertar o Portal da Lua",
+      "en": "Awaken the Moon Portal"
+    },
+    {
+      "pt": "A Lua não pede que todos os santuários sejam vencidos. Pede que os caminhos do Labirinto tenham sido compreendidos. «Não possuir. Não apagar. Atravessar».",
+      "en": "The Moon does not ask that every sanctuary be conquered. It asks that the Labyrinth's paths be understood. «Not to possess. Not to erase. To cross»."
+    },
+    {
+      "pt": "Possuir",
+      "en": "Possess"
+    },
+    {
+      "pt": "Apagar",
+      "en": "Erase"
+    },
+    {
+      "pt": "Atravessar",
+      "en": "Cross"
+    },
+    {
+      "pt": "O corredor que se repete",
+      "en": "The corridor that repeats"
+    },
+    {
+      "pt": "A inscrição reaparece invertida: «Não siga a imagem perfeita. Siga a falha; depois o silêncio; depois a passagem».",
+      "en": "The inscription reappears inverted: «Do not follow the perfect image. Follow the flaw; then the silence; then the passage»."
+    },
+    {
+      "pt": "Imagem perfeita",
+      "en": "Perfect image"
+    },
+    {
+      "pt": "Falha",
+      "en": "Flaw"
+    },
+    {
+      "pt": "Silêncio",
+      "en": "Silence"
+    },
+    {
+      "pt": "Passagem",
+      "en": "Passage"
+    },
+    {
+      "pt": "Arquivo das oito fases",
+      "en": "Archive of the eight phases"
+    },
+    {
+      "pt": "Depois de ler as oito portas, ordene as marcas do arquivo: marca, reflexo e memória.",
+      "en": "After reading the eight doors, order the archive's marks: mark, reflection and memory."
+    },
+    {
+      "pt": "Marca",
+      "en": "Mark"
+    },
+    {
+      "pt": "Reflexo",
+      "en": "Reflection"
+    },
+    {
+      "pt": "Memória",
+      "en": "Memory"
+    },
+    {
+      "pt": "Quero sair.",
+      "en": "I want to leave."
+    },
+    {
+      "pt": "Duas?",
+      "en": "Two?"
+    },
+    {
+      "pt": "Saber é uma palavra que as pessoas usam quando esquecem quantas vezes tentaram.",
+      "en": "Knowing is a word people use when they forget how many times they have tried."
+    },
+    {
+      "pt": "O que este lugar quer?",
+      "en": "What does this place want?"
+    },
+    {
+      "pt": "Mas intenções, quando abandonadas, tornam-se péssimas em aceitar o fim.",
+      "en": "But intentions, once abandoned, become very poor at accepting an ending."
+    },
+    {
+      "pt": "O ritual.",
+      "en": "The ritual."
+    },
+    {
+      "pt": "Qual deles?",
+      "en": "Which one?"
+    },
+    {
+      "pt": "Pare de responder com perguntas.",
+      "en": "Stop answering with questions."
+    },
+    {
+      "pt": "E Poe?",
+      "en": "And Poe?"
+    },
+    {
+      "pt": "Entre, Melantha.",
+      "en": "Enter, Melantha."
+    },
+    {
+      "pt": "A Lua prefere pessoas que confundem reconhecimento com certeza.",
+      "en": "The Moon prefers those who mistake recognition for certainty."
+    },
+    {
+      "pt": "…",
+      "en": "…"
+    },
+    {
+      "pt": "—",
+      "en": "—"
+    },
+    {
+      "pt": "Eu ouvi. Fique perto, mas não me guie.",
+      "en": "I heard it. Stay close, but do not lead me."
+    },
+    {
+      "pt": "A voz queria que eu repetisse. Você não.",
+      "en": "The voice wanted me to repeat it. You did not."
+    },
+    {
+      "pt": "Uma lembrança cedeu. Só uma.",
+      "en": "One memory gave way. Just one."
+    },
+    {
+      "pt": "Não era a frase. Era o que ela tentou apagar.",
+      "en": "It was not the words. It was what they tried to erase."
+    },
+    {
+      "pt": "Curioso. Ele reconhece o caminho antes de reconhecê-lo.",
+      "en": "Curious. He knows the path before he recognises it."
+    },
+    {
+      "pt": "Eu sei. Ele observa demais.",
+      "en": "I know. He watches too closely."
+    },
+    {
+      "pt": "Então é por aqui. Não porque é seguro.",
+      "en": "So this is the way. That does not make it safe."
+    },
+    {
+      "pt": "A Lua não parece acima de mim.",
+      "en": "The Moon does not feel as though it is above me."
+    },
+    {
+      "pt": "Parece uma coisa que o Labirinto deixou para trás.",
+      "en": "It feels like something the Labyrinth left behind."
+    },
+    {
+      "pt": "Não desapareça.",
+      "en": "Do not disappear."
+    },
+    {
+      "pt": "Ele não abriu a flor. Abriu espaço para ela.",
+      "en": "He did not open the flower. He gave it room."
+    },
+    {
+      "pt": "A pétala não procura o jardim. Procura o lugar que o jardim repete.",
+      "en": "The petal does not seek the garden. It seeks the place the garden repeats."
+    },
+    {
+      "pt": "O reflexo aceitou a posição antes de mim.",
+      "en": "The reflection accepted the position before I did."
+    },
+    {
+      "pt": "O que a Lua retira também obedece a uma ordem.",
+      "en": "What the Moon takes away also follows an order."
+    },
+    {
+      "pt": "Agora.",
+      "en": "Now."
+    },
+    {
+      "pt": "O jardim ficou quieto. Não vazio.",
+      "en": "The garden fell quiet. It is not empty."
+    },
+    {
+      "pt": "Cada espelho mostra uma versão da mesma pergunta.",
+      "en": "Each mirror shows a version of the same question."
+    },
+    {
+      "pt": "Esse reflexo não me reconhece.",
+      "en": "That reflection does not recognise me."
+    },
+    {
+      "pt": "Um deles parou de mentir.",
+      "en": "One of them stopped lying."
+    },
+    {
+      "pt": "O marco voltou antes de eu voltar.",
+      "en": "The marker returned before I did."
+    },
+    {
+      "pt": "Não é a distância que muda. É aquilo que a memória aceita.",
+      "en": "The distance stays the same. What memory accepts changes."
+    },
+    {
+      "pt": "Desta vez, o retorno não me trouxe de volta.",
+      "en": "This time, returning did not bring me back."
+    },
+    {
+      "pt": "Siga.",
+      "en": "Go on."
+    },
+    {
+      "pt": "O anel recusou a intenção, não o movimento.",
+      "en": "The ring rejected the intention, not the movement."
+    },
+    {
+      "pt": "Uma parte respondeu. As outras ainda estão ouvindo.",
+      "en": "One part answered. The others are still listening."
+    },
+    {
+      "pt": "Ali.",
+      "en": "There."
+    },
+    {
+      "pt": "O fragmento estava esperando a conclusão.",
+      "en": "The fragment was waiting for the conclusion."
+    },
+    {
+      "pt": "Poe?",
+      "en": "Poe?"
+    },
+    {
+      "pt": "Poe—",
+      "en": "Poe—"
+    },
+    {
+      "pt": "O que cresce sem nascer, desaparece sem morrer e retorna sem lembrar?",
+      "en": "What grows without being born, vanishes without dying, and returns without remembering?"
+    },
+    {
+      "pt": "MEMENTO MORI",
+      "en": "MEMENTO MORI"
+    },
+    {
+      "pt": "Aquilo que se persegue aprende a fugir.",
+      "en": "What is pursued learns to flee."
+    },
+    {
+      "pt": "Ela precisava que eu deixasse de querer.",
+      "en": "It needed me to stop wanting."
+    },
+    {
+      "pt": "Estou acordada. De novo.",
+      "en": "I am awake. Again."
+    },
+    {
+      "pt": "O ritual me fez parar neste Labirinto.",
+      "en": "The ritual brought me to this Labyrinth."
+    },
+    {
+      "pt": "Depois de alguns segundos, algo arranha o vidro por dentro.",
+      "en": "After a few seconds, something scratches the glass from within."
+    },
+    {
+      "pt": "Eu esperava desconfiar do reflexo.",
+      "en": "I expected to distrust the reflection."
+    },
+    {
+      "pt": "Um Poe acompanha Melantha. Outro permanece parado olhando para o jogador.",
+      "en": "One Poe follows Melantha. Another stands still, watching the player."
+    },
+    {
+      "pt": "Se eu me deitar antes da hora, o sono engole o resto de mim.",
+      "en": "If I lie down too soon, sleep will swallow the rest of me."
+    },
+    {
+      "pt": "A chama respondeu.",
+      "en": "The flame answered."
+    },
+    {
+      "pt": "Eu fiz o ritual. Tenho certeza de que fiz.",
+      "en": "I performed the ritual. I know I did."
+    },
+    {
+      "pt": "O que aconteceu depois?",
+      "en": "What happened afterwards?"
+    },
+    {
+      "pt": "O que eu esqueci?",
+      "en": "What did I forget?"
+    },
+    {
+      "pt": "Eu lembro desta fotografia.",
+      "en": "I remember this photograph."
+    },
+    {
+      "pt": "Mas a janela ficava do outro lado.",
+      "en": "But the window was on the other side."
+    },
+    {
+      "pt": "Ou fui eu que mudei alguma coisa?",
+      "en": "Or did I change something?"
+    },
+    {
+      "pt": "As marcas estavam aqui antes de eu acordar.",
+      "en": "The marks were here before I woke up."
+    },
+    {
+      "pt": "Agora posso descansar.",
+      "en": "Now I can rest."
+    },
+    {
+      "pt": "Daqui eu devia ver a rua.",
+      "en": "I should be able to see the street from here."
+    },
+    {
+      "pt": "O vento ainda sabe entrar.",
+      "en": "The wind still knows the way in."
+    },
+    {
+      "pt": "Lavei ontem.",
+      "en": "I washed it yesterday."
+    },
+    {
+      "pt": "Talvez esse tenha sido o motivo.",
+      "en": "Perhaps that was why."
+    },
+    {
+      "pt": "UM NOME ABRE.",
+      "en": "A NAME OPENS."
+    },
+    {
+      "pt": "Terceira noite sem sonho.",
+      "en": "Third night without a dream."
+    },
+    {
+      "pt": "Uma imagem preserva contorno.",
+      "en": "An image preserves an outline."
+    },
+    {
+      "pt": "Foi?",
+      "en": "Was it?"
+    },
+    {
+      "pt": "Encerrado.",
+      "en": "Finished."
+    },
+    {
+      "pt": "Eu disse: encerrado.",
+      "en": "I said: finished."
+    },
+    {
+      "pt": "Ele ignorava quando eu olhava.",
+      "en": "He ignored it when I was watching."
+    },
+    {
+      "pt": "Cheia outra vez.",
+      "en": "Full again."
+    },
+    {
+      "pt": "A cortina era o problema.",
+      "en": "The curtain was the problem."
+    },
+    {
+      "pt": "Arquitetura ou opinião?",
+      "en": "Architecture or opinion?"
+    },
+    {
+      "pt": "Entendi. Você discorda.",
+      "en": "I see. You disagree."
+    },
+    {
+      "pt": "NOVO",
+      "en": "NEW"
+    },
+    {
+      "pt": "Nenhuma entrada descoberta.",
+      "en": "No entries discovered."
+    },
+    {
+      "pt": "ESC   Fechar",
+      "en": "ESC   Close"
+    },
+    {
+      "pt": "SIM, COM PASSOS",
+      "en": "YES, WITH FOOTSTEPS"
+    },
+    {
+      "pt": "FECHAR",
+      "en": "CLOSE"
+    },
+    {
+      "pt": "Fechar",
+      "en": "Close"
+    }
+  ]
+}

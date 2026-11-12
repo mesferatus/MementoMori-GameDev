@@ -21,7 +21,12 @@ namespace MementoMori.UI
             button.onClick = new Button.ButtonClickedEvent();
             button.onClick.AddListener(Continue);
             var label = button.GetComponentInChildren<TMP_Text>();
-            if (label != null) label.text = "CONTINUAR";
+            if (label != null) { LocalizedText.Unbind(label); label.text = "CONTINUAR"; LocalizedText.Bind(label); }
+            button.GetComponent<MenuButtonFeedback>()?.Rebind();
+            // The scene-authored labels (JOGAR, SAIR, CRÉDITOS) follow the language switch live.
+            foreach (var sceneButton in new[] { "Button_Jogar", "Button_Sair", "Button_Creditos" })
+                if (play.transform.parent.Find(sceneButton) is Transform fixedButton)
+                    LocalizedText.Bind(fixedButton.GetComponentInChildren<TMP_Text>(true));
             var saves = new SaveSlotStore();
             button.interactable = saves.Exists(0) || saves.Exists(1) || saves.Exists(2) || saves.Exists(3);
             settingsView = gameObject.AddComponent<SettingsPanelView>();
@@ -67,7 +72,7 @@ namespace MementoMori.UI
             veil.SetAsFirstSibling();
             var panel = MenuPanelStyle.Panel(root, new Vector2(1000f, 820f));
             panel.SetSiblingIndex(1);
-            MenuPanelStyle.Title(panel, "CRÉDITOS", titleFont);
+            LocalizedText.Bind(MenuPanelStyle.Title(panel, "CRÉDITOS", titleFont));
 
             MenuPanelStyle.CreditsBody(panel, bodyFont);
 
@@ -77,6 +82,7 @@ namespace MementoMori.UI
                 back.anchorMin = back.anchorMax = back.pivot = new Vector2(.5f, 0f);
                 back.anchoredPosition = new Vector2(0f, 46f);
                 MenuButtonStyle.Apply(back.GetComponent<Button>(), new Vector2(380f, 84f), .6f);
+                LocalizedText.Bind(back.GetComponentInChildren<TMP_Text>(true));
             }
         }
 

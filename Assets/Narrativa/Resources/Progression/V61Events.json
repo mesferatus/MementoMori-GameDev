@@ -2256,7 +2256,7 @@
         {
           "id": "GALLERY_02_D002",
           "speaker": "MELANTHA",
-          "text": "Ele nem percebeu que a imagem tava errada.",
+          "text": "Ele nem percebeu que a imagem estava errada.",
           "condition": "always"
         }
       ],
@@ -2381,7 +2381,7 @@
         {
           "id": "GALLERY_07_D002",
           "speaker": "MELANTHA",
-          "text": "Ela tava fechada... mas talvez ninguém tenha trancado.",
+          "text": "Ela estava fechada... e talvez ninguém jamais a tenha trancado.",
           "condition": "always"
         }
       ],
@@ -2406,7 +2406,7 @@
         {
           "id": "GALLERY_08_D002",
           "speaker": "MELANTHA",
-          "text": "O nome ficou escrito. Só não dá pra saber quem falou.",
+          "text": "O nome permaneceu escrito. Só não se sabe quem o pronunciou.",
           "condition": "always"
         }
       ],
@@ -2799,7 +2799,7 @@
       "id": "02",
       "title": "O REFLEXO TORTO",
       "text": "No segundo arco, uma imagem repetiu o gesto certo com a mão errada. O observador sorriu, aliviado, e não percebeu a diferença.",
-      "melantha": "Ele nem percebeu que a imagem tava errada."
+      "melantha": "Ele nem percebeu que a imagem estava errada."
     },
     {
       "id": "03",
@@ -2829,13 +2829,13 @@
       "id": "07",
       "title": "A PORTA",
       "text": "Uma porta permaneceu fechada por anos. Quando finalmente se abriu, não havia sinal de que alguém a tivesse trancado.",
-      "melantha": "Ela tava fechada... mas talvez ninguém tenha trancado."
+      "melantha": "Ela estava fechada... e talvez ninguém jamais a tenha trancado."
     },
     {
       "id": "08",
       "title": "O NOME",
       "text": "O último nome foi escrito com cuidado. Depois os registros discordaram sobre a pessoa que o havia pronunciado.",
-      "melantha": "O nome ficou escrito. Só não dá pra saber quem falou."
+      "melantha": "O nome permaneceu escrito. Só não se sabe quem o pronunciou."
     }
   ],
   "canon_grimoire_reference": "GRIMORIO_MEMENTO_MORI_40_ENTRADAS_CANONICAS.md; 40 entries, four tabs",

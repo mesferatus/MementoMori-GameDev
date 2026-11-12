@@ -73,6 +73,10 @@ namespace MementoMori.Dialogue
             Instance = this;
         }
 
+        private void OnEnable() => Loc.LanguageChanged += RefreshLanguage;
+
+        private void RefreshLanguage() { if (IsOpen) RenderCurrentLine(); }
+
         private void Update()
         {
             if (!IsOpen) return;
@@ -172,8 +176,15 @@ namespace MementoMori.Dialogue
                 GameState.Instance?.SetCounter((skipped ? "line.skipped." : "line.seen.") + line.Id, 1);
         }
 
-        private DialogueLine CurrentResolvedLine() =>
-            V61ChoiceReactivity.Resolve(activeDialogue.Lines[lineIndex], GameState.Instance);
+        private DialogueLine CurrentResolvedLine()
+        {
+            var raw = activeDialogue.Lines[lineIndex];
+            var line = V61ChoiceReactivity.Resolve(raw, GameState.Instance);
+            // A reactivity variant has no table id of its own, so it goes through the UI table.
+            line.Text = line.Text == raw.Text ? Loc.Line(line.Id, line.Text) : Loc.T(line.Text);
+            line.Speaker = Loc.T(line.Speaker);
+            return line;
+        }
 
         private void CompleteDialogue()
         {
@@ -308,6 +319,7 @@ namespace MementoMori.Dialogue
 
         private void OnDisable()
         {
+            Loc.LanguageChanged -= RefreshLanguage;
             StopAllCoroutines();
             RuntimeAudio.StopChatter();
             activeDialogue = null;
@@ -324,7 +336,7 @@ namespace MementoMori.Dialogue
             if (show && historyLabel != null)
             {
                 var first = Mathf.Max(0, history.Count - 12);
-                var value = "HISTÓRICO\n\n";
+                var value = Loc.T("HISTÓRICO") + "\n\n";
                 for (var i = first; i < history.Count; i++) value += history[i].Speaker + ": " + history[i].Text + "\n\n";
                 historyLabel.text = value;
             }

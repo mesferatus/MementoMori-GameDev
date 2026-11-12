@@ -60,7 +60,7 @@ namespace MementoMori.Dialogue
             speaker = Label("Speaker", new Vector2(.08f, .215f), new Vector2(.92f, .255f), 18);
             body = Label("Dialogue", new Vector2(.08f, .1f), new Vector2(.92f, .215f), 20);
             controls = Label("Controls", new Vector2(.08f, .062f), new Vector2(.92f, .098f), 14);
-            controls.text = InputBindings.Get(GameAction.Interact) + " / Enter — avançar" + (CanSkip ? "    Esc — pular sequência" : "");
+            controls.text = InputBindings.Get(GameAction.Interact) + Loc.T(" / Enter — avançar") + (CanSkip ? Loc.T("    Esc — pular sequência") : "");
         }
 
         private UnityEngine.UI.Image Actor(string name, Transform parent)

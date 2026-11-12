@@ -14,6 +14,7 @@ namespace MementoMori.Dialogue
         private Color?[][] inks = System.Array.Empty<Color?[]>();
         private const int GlyphSize = 24;
         private bool requestingGlyphs;
+        private bool fontRefreshPending;
         private const string DrawingGlyphs = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
         public override Texture mainTexture => font != null ? font.material.mainTexture : base.mainTexture;
 
@@ -26,7 +27,16 @@ namespace MementoMori.Dialogue
         }
         private void OnFontRebuilt(Font rebuilt)
         {
-            if (rebuilt == font && !requestingGlyphs) SetAllDirty();
+            // Another label can rebuild the shared atlas during a Canvas rebuild.
+            // Registering this graphic from that callback would recurse into the queue.
+            if (rebuilt == font && !requestingGlyphs) fontRefreshPending = true;
+        }
+        private void LateUpdate()
+        {
+            if (!fontRefreshPending || CanvasUpdateRegistry.IsRebuildingGraphics()
+                || CanvasUpdateRegistry.IsRebuildingLayout()) return;
+            fontRefreshPending = false;
+            SetAllDirty();
         }
         protected override void OnDestroy() { Font.textureRebuilt -= OnFontRebuilt; base.OnDestroy(); }
         public void Show(string drawing)

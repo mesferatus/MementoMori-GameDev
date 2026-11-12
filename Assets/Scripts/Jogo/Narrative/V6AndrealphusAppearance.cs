@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using MementoMori.Core;
 using MementoMori.Dialogue;
 using MementoMori.Regions;
@@ -23,6 +24,21 @@ namespace MementoMori.Narrative
             foreach(var trigger in GetComponentsInChildren<DialogueTrigger>(true)) trigger.enabled=false;
             originalPosition = transform.localPosition;
             if (visuals == null || visuals.Length == 0) visuals = GetComponentsInChildren<SpriteRenderer>(true);
+            var authored = new List<SpriteRenderer>();
+            foreach (var visual in visuals)
+            {
+                if (visual == null) continue;
+                var texture = visual.sprite == null ? null : visual.sprite.texture;
+                // The old generic body is a 1x1 white square, disabled in the scene.
+                // Appearance fades must never turn that fallback back on alongside the bird.
+                if (texture != null && texture.name == "RuntimeWhiteTexture" && texture.width == 1 && texture.height == 1)
+                {
+                    visual.enabled = false;
+                    continue;
+                }
+                authored.Add(visual);
+            }
+            visuals = authored.ToArray();
             originalColors = new Color[visuals.Length];
             for (var i = 0; i < visuals.Length; i++)
                 if (visuals[i] != null) originalColors[i] = visuals[i].color;

@@ -25,6 +25,7 @@ namespace MementoMori.Puzzles
         bool crescentApproached;
         int nextWaningFlower = 2;
         public MoonPetal Petal => petal;
+        public Vector2 FullReflectionPosition => fullReflectionPosition;
         public int NextWaningFlower => nextWaningFlower;
         public int Attempts { get; private set; }
         public int Errors { get; private set; }

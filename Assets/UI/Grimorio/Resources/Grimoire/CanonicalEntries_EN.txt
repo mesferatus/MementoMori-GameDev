@@ -1,0 +1,420 @@
+@A01|On Melantha
+>TEXT
+Melantha.
+Daughter of the night, apprentice of forgetting.
+For as long as I can remember, dreams have always felt more real than the days.
+Maybe that is why I started writing.
+Not to remember everything.
+To notice when something disappears.
+This grimoire keeps what I can still name:
+what I was,
+what I am
+and, perhaps, what I may still be.
+May I not forget myself.
+>NOTE
+Dreams leave traces too.
+@A02|The Bedroom
+>TEXT
+I know every board of this floor.
+Even so, sometimes I wake up here as if I had been placed in someone else's room.
+The bed.
+The writing desk.
+The window.
+The circle.
+Everything is where it should be.
+That is the problem.
+When something is wrong, the room does not change its shape.
+It changes its meaning.
+>NOTE
+A house can also forget who lives in it.
+@A03|Poe
+>TEXT
+Poe shows up before I finish deciding whether I want company.
+He does not ask.
+He just stays.
+Sometimes he watches me as if he knew what I was looking for before I did.
+It is irritating.
+It is also comforting.
+I do not remember when I started trusting him so much.
+Maybe I should have written it down.
+>NOTE
+He hates it when I pretend I did not hear him.
+@A04|The Circle
+>TEXT
+I know these symbols.
+Not all of them by name, but by gesture.
+Hands remember things the mind loses.
+The circle does not look destroyed.
+It looks interrupted.
+The four candles were left as points of support.
+If I can rebuild the order, maybe I will find out what I was trying to keep here.
+@A05|The Labyrinth
+>TEXT
+It does not look built.
+It looks remembered.
+The corridors fit together like thoughts trying to form a story after important parts were torn out.
+There are doors that return you to the same place.
+Voices that know things I never said.
+Paths that seem to change when they notice I am paying attention.
+If this place wants something from me, it has not decided how to ask yet.
+>NOTE
+Do not follow a wall.
+Follow what changes.
+@A06|Andrealphus
+>TEXT
+The name was in the grimoire before I remembered the face.
+That does not reassure me.
+Andrealphus speaks like someone who already knows how a conversation ends.
+He answers questions with other questions.
+When he seems to be lying, I can never tell which part of the sentence is the lie.
+Maybe that is the point.
+>NOTE
+Knowledge can also be a form of threat.
+@A07|The Seven Domains
+>TEXT
+Seven paths.
+Seven Arcana.
+The Moon.
+The Tower.
+The Hanged Man.
+The Hermit.
+The Devil.
+Death.
+Judgement.
+They do not look like doors in the usual sense.
+They look like different ways of crossing the same thing.
+Six remain closed.
+The Moon answered.
+For now, that is enough.
+>NOTE
+Every door also chooses what it leaves outside.
+@A08|The Moon
+>TEXT
+The Moon never shows everything.
+Maybe that is why this place feels so familiar.
+Reflections.
+Phases.
+Cycles.
+Things that disappear without ceasing to exist.
+Here, looking straight at something seems to be the easiest way not to see it.
+I must pay attention to what changes between one image and the next.
+>NOTE
+Absence is not the same as emptiness.
+@A09|Lunar Garden
+>TEXT
+The flowers here do not grow toward the sun.
+They obey the Moon.
+Waxing.
+Full.
+Waning.
+New.
+Some respond to presence.
+Others to reflection.
+Others only to the passing of a full cycle.
+I must not treat them as ordinary flowers.
+>NOTE
+Flowers know how to wait too.
+@A10|Reflections
+>TEXT
+An ordinary mirror repeats.
+These ones interpret.
+One shows the instant.
+Another arrives late.
+Another seems to already know what I will do.
+Some remove things from the image.
+Others add to it.
+The most unsettling thing is not when the reflection is wrong.
+It is when it seems more certain of itself than I am.
+>NOTE
+Not every reflection belongs to the present.
+@A11|Fragment
+>TEXT
+It does not look broken.
+It looks incomplete.
+There is a difference.
+When I touched it, I did not feel I was finding something new.
+I felt something recognized me.
+I do not know what it is.
+I also do not know why the idea of leaving it here feels impossible.
+I will carry it with me.
+Until I understand.
+>NOTE
+Some things weigh more when we do not know who they belong to.
+@A12|Return
+>TEXT
+I am back.
+The sentence should be enough.
+It is not.
+The room is in the same place.
+So is the bed.
+The circle has gone out.
+I came back.
+But some part of the question came back with me.
+Maybe that is what the Fragment is.
+Not an answer.
+A direction.
+>NOTE
+First Domain: The Moon.
+@R01|Principles of a Circle
+>TEXT
+A circle is not only for containing.
+It determines where one thing begins and where another loses its authority.
+Before any operation:
+observe the boundary;
+recognize the points;
+determine the intention;
+do not interrupt the order.
+An incomplete operation does not disappear.
+It remains open.
+>NOTE
+Never sleep inside an active circle.
+@R02|The Four Flames
+>TEXT
+Four flames sustain this operation.
+They must not be lit according to their position.
+Each one corresponds to a meaning.
+The order belongs to the symbol, not to the place.
+It begins where the light wanes.
+It continues in that which records.
+It passes through that which preserves a face.
+It ends where the body rests.
+Only then may the center be touched.
+>NOTE
+Moon.
+Word.
+Memory.
+Rest.
+@R03|On Thresholds
+>TEXT
+Doors are obvious thresholds.
+Windows are more dangerous.
+A door asks whether you want to pass.
+A window lets two things watch each other without either crossing.
+During an operation, the boundary must remain stable.
+Wind, reflection and outside light can alter a flame.
+>NOTE
+Closing does not always mean preventing.
+Sometimes it means sustaining.
+@R04|Names
+>TEXT
+Naming something does not mean understanding it.
+But it makes it possible to call it again.
+Names create direction.
+That is why they must be used with care.
+What answers may not be what was called.
+>NOTE
+Write first.
+Speak afterwards.
+@R05|Echoes
+>TEXT
+An ordinary echo repeats the shape of a voice.
+A ritual echo repeats the intention.
+If the answer changes, it does not necessarily mean the question changed.
+Maybe the one listening has changed.
+Do not answer the word.
+Answer the meaning.
+@R06|Ritual Mirrors
+>TEXT
+Reflections may record:
+present;
+delay;
+anticipation;
+absence;
+duplication;
+space.
+None of them is true on its own.
+In an operation of memory, look for relations.
+Do not look for the most perfect image.
+Look for the images that reveal time and place.
+@R07|Fragmented Sigil
+>TEXT
+A broken sigil must not be rebuilt by its appearance.
+First:
+recognize the phase.
+Then:
+recognize the record.
+Finally:
+determine the intention.
+Phase.
+Memory.
+Intention.
+When the three agree, the shape stops resisting.
+>NOTE
+The symbol does not obey the hand.
+It obeys the meaning.
+@P01|Ritual of the Bedroom
+>HINT1
+The circle is waiting for four meanings.
+Maybe the objects in the room explain what the flames represent.
+>HINT2
+Observe:
+the Moon in the window;
+the grimoire;
+the portrait;
+the bed.
+The order is written on another page.
+>HINT3
+Moon → Book → Memory → Rest.
+Then touch the center.
+@P02|False Door
+>HINT1
+If a door insists on returning you to the same place, maybe crossing it is not the goal.
+>HINT2
+Observe what changes after each return.
+The way out does not need to look different before you fail.
+>HINT3
+Stop watching the door.
+Watch the room.
+@P03|Well of Voices
+>HINT1
+The well does not want a quick answer.
+Listen until the voice finishes changing.
+>HINT2
+Interact again.
+Each contact reveals a different layer.
+>HINT3
+There are four stages.
+Complete all four before leaving the well.
+>RECORD
+The Labyrinth does not repeat.
+It corrects.
+@P04|Echo I
+>HINT1
+Do not answer thinking of the object.
+Think of what it preserves.
+>HINT2
+An image does not preserve a person.
+It preserves their shape.
+>HINT3
+An image preserves shape.
+@P05|Echo II
+>HINT1
+The question is not about who answered.
+It is about who kept trying to reach the other side.
+>HINT2
+Even without an answer, someone kept calling.
+>HINT3
+I kept calling.
+@P06|Echo III
+>HINT1
+Do not mistake return for death.
+>HINT2
+You did not come back because you died.
+You came back because something was opened.
+>HINT3
+You came back because you opened.
+@P07|Seven Domains
+>HINT1
+Six doors remain silent.
+One answers.
+>HINT2
+Look for the Arcanum that rules reflections, cycles and that which cannot be seen whole.
+>HINT3
+The Moon.
+@P08|Lunar Garden: Waxing
+>HINT1
+The Waxing flower does not respond while Melantha is too close.
+>HINT2
+Approach it first. Then step back and watch the flower.
+>HINT3
+After approaching, keep Melantha away from the flower for a few moments. Poe points the way; he does not need to enter the water.
+@P09|Lunar Garden: Full
+>HINT1
+The Full Moon reveals when image and origin coincide.
+>HINT2
+Try to align reflection and shape.
+>HINT3
+Adjust until the reflection is aligned.
+If it is almost right:
+Almost.
+@P10|Lunar Garden: Waning
+>HINT1
+To disappear, a Moon must first have been whole.
+>HINT2
+The cycle must walk toward absence.
+>HINT3
+Full → Waning → New.
+Mistakes restart only this subpuzzle.
+@P11|Hall of Mirrors
+>HINT1
+Do not look for three identical images.
+Look for three different relations with time and place.
+>HINT2
+One arrives late.
+One arrives early.
+One remembers the bedroom.
+>HINT3
+Delay + Anticipation + Bedroom.
+@P12|Black Mirror
+>HINT1
+Some mirrors do not answer the image.
+They answer what binds a person to something else.
+>HINT2
+Listen.
+Do not try to finish the sentences before the mirror does.
+>RECORD
+A name opens.
+A bond sustains.
+A price closes.
+“If I don't come back whole—”
+@P13|Fragmented Sigil
+>HINT1
+The sigil asks three things:
+When?
+Where is it recorded?
+What must go on?
+>HINT2
+Lunar phase.
+Record.
+Intention.
+>HINT3
+Waning + Grimoire + SUSTAIN.
+@M01|Trace I
+>TEXT
+I drew the circle because I was afraid of forgetting something.
+I do not remember what.
+That should frighten me more.
+@M02|Trace II
+>TEXT
+A voice can remain in a place long after the conversation has ended.
+Or maybe it is the place that remains inside the voice.
+@M03|Trace III
+>TEXT
+I kept calling.
+Not because I was sure someone would answer.
+Because stopping felt worse.
+@M04|Trace IV
+>TEXT
+The bedroom.
+The empty bed.
+The circle still active.
+No sign of me.
+If that was a memory, I do not know whose.
+@M05|Trace V
+>TEXT
+A name opens.
+A bond sustains.
+A price closes.
+The last sentence did not arrive whole.
+“If I don't come back whole—”
+Then, nothing.
+@M06|Trace VI
+>TEXT
+“If I lose myself, the path remains.”
+“If I forget, the mark remains.”
+“Find the way back.”
+I do not recognize the voice.
+But I recognize the feeling of having heard this before.
+@M07|Trace VII
+>TEXT
+Poe vanished.
+For an instant, my first impulse was to turn back.
+This time I did not.
+Maybe finding someone is not the same as chasing them.
+Maybe some paths only appear when we stop looking back.
+@M08|Trace VIII
+>TEXT
+He was up ahead.
+As if he had always known where I needed to go.
+I did not ask where he had been.
+He did not explain either.
