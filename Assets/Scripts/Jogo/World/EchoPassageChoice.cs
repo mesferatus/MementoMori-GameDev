@@ -17,7 +17,7 @@ namespace MementoMori.World
             passage = index;
         }
 
-        public bool CanInteract(InteractionContext context) => puzzle != null && !puzzle.Solved;
+        public bool CanInteract(InteractionContext context) => puzzle != null && puzzle.IsPassageAvailable(passage);
 
         public void Interact(InteractionContext context) =>
             puzzle?.Select(passage, context.Interactor == null ? null : context.Interactor.transform);

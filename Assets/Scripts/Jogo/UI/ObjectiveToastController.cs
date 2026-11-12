@@ -199,7 +199,8 @@ namespace MementoMori.UI
             if (!state.HasFlag(StoryFlag.PoeRevealed)) return "Deixe os Corredores dos Ecos.";
             if (!Solved("lab.false_door") && !state.HasFlag(StoryFlag.FalseDoorTriggered)) return "Investigue a porta que devolve.";
             if (!Solved("lab.false_door")) return "Repare no que mudou na porta.";
-            if (!Solved("lab.voice_well") && !state.HasFlag(StoryFlag.VoiceWellComplete)) return "Escute o Poço das Vozes.";
+            if (!Solved("lab.voice_well")) return state.HasFlag(StoryFlag.VoiceWellComplete)
+                ? "Reconheça a voz que contradiz sua memória." : "Escute o Poço das Vozes.";
             if (!Solved("lab.skyless_courtyard")) return "Faça as sombras convergirem no Pátio sem Céu.";
             if (!Solved("lab.core")) return "Abra o Núcleo Central.";
             if (!Solved("lab.moon_activation") && !state.HasFlag(StoryFlag.MoonDomainUnlocked)) return "Leve as marcas ao Santuário da Lua.";
