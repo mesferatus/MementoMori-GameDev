@@ -17,6 +17,9 @@ namespace MementoMori.Poe
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
+            // The scene briefly creates Melantha at its authored spawn before placing
+            // her at the saved position. That temporary overlap is not a route visit.
+            if (MementoMori.Core.SceneLoader.Instance != null && MementoMori.Core.SceneLoader.Instance.IsLoading) return;
             if (used && oneShot || !other.CompareTag("Player") || poe == null || !poe.isActiveAndEnabled || point == null) return;
             used = true;
             poe?.MoveTo(point);
