@@ -38,6 +38,7 @@ namespace MementoMori.Player
         {
             body = GetComponent<Rigidbody2D>();
             body.freezeRotation = true;
+            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             body.interpolation = RigidbodyInterpolation2D.None;
             lastDryPosition = body.position;
             lastFixedPosition = body.position;
