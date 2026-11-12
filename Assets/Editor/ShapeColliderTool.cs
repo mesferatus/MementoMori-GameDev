@@ -95,7 +95,7 @@ namespace MementoMori.EditorTools
             var count = 0;
             foreach (var renderer in Object.FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
             {
-                if (!renderer.enabled || renderer.sprite == null || !SolidPropSprites.Contains(renderer.sprite.name)) continue;
+                if (!renderer.enabled || renderer.sprite == null || !IsSolidCandidate(renderer)) continue;
                 var existing = renderer.transform.Find(OutlineChild);
                 if (skip.Contains(renderer.name))
                 {
@@ -112,7 +112,7 @@ namespace MementoMori.EditorTools
                 var poly = child.GetComponent<PolygonCollider2D>();
                 if (poly == null) poly = child.AddComponent<PolygonCollider2D>();
                 FillFromSprite(poly, renderer.sprite, renderer.flipX, renderer.flipY);
-                ClampToGroundDepth(poly, renderer.sprite.bounds);
+                if (!IsWallArt(renderer)) ClampToGroundDepth(poly, renderer.sprite.bounds, renderer.flipY);
                 poly.isTrigger = false;
                 EditorUtility.SetDirty(child);
                 count++;
@@ -122,11 +122,52 @@ namespace MementoMori.EditorTools
             return $"{count} adereço(s) com contorno sólido\n{report}";
         }
 
+        private static bool IsSolidCandidate(SpriteRenderer renderer)
+        {
+            var assetPath = AssetDatabase.GetAssetPath(renderer.sprite);
+            var name = renderer.name.ToLowerInvariant();
+            if (name.Contains("layer_") || name.Contains("piso") || name.Contains("floor")
+                || name.Contains("carpet") || name.Contains("tapete") || renderer.sortingOrder <= -20000
+                || assetPath.Contains("/Tapete/") || assetPath.Contains("/Chao/") || assetPath.Contains("/Piso/")) return false;
+            if (renderer.GetComponentInParent<SeeThroughFoliage>() != null) return false;
+            if (SolidPropSprites.Contains(renderer.sprite.name)) return true;
+            if (name.Contains("fachada") || name.Contains("facade") || name.Contains("juncao_parapeito")) return true;
+            Component state = null;
+            foreach (var component in renderer.GetComponents<MonoBehaviour>())
+                if (component != null && component.GetType().Name == "V65StateVisual") { state = component; break; }
+            if (state != null)
+            {
+                // Floor dials, sigil rings and the illusory arches are walked on or through:
+                // only standing puzzle props (mirrors, garden basins, portals) are solid.
+                var data = new SerializedObject(state);
+                foreach (var field in new[] { "mirror", "garden", "portal" })
+                    if (data.FindProperty(field)?.objectReferenceValue != null) return true;
+                return false;
+            }
+            if (renderer.bounds.size.x > 12f || renderer.bounds.size.y > 16f) return false;
+            if (assetPath.Contains("/Pendentes/")) return false;
+            foreach (var collider in renderer.GetComponentsInChildren<Collider2D>(true))
+                if (!collider.isTrigger && !(collider is UnityEngine.Tilemaps.TilemapCollider2D)
+                    && !(collider is CompositeCollider2D)
+                    && (collider.transform == renderer.transform || collider.transform.parent == renderer.transform)
+                    && (collider.attachedRigidbody == null || collider.attachedRigidbody.bodyType != RigidbodyType2D.Dynamic))
+                    return true;
+            return false;
+        }
+
+        private static bool IsWallArt(SpriteRenderer renderer)
+        {
+            var name = renderer.name.ToLowerInvariant();
+            return name.Contains("fachada") || name.Contains("facade") || name.Contains("juncao_parapeito")
+                || name.Contains("layer_paredes") || renderer.sprite.name.StartsWith("Coroamento");
+        }
+
         /// <summary>
-        /// Three-quarter view: an object's ground depth is about 0.6 of its width. The outline above that
-        /// is the standing body, drawn over Melantha when she walks behind it, so it must not block.
+        /// Three-quarter view: a standing object's ground depth is about 0.6 of its width. The outline above
+        /// that is its body, drawn over Melantha when she walks behind it, so it must not block. Walls and
+        /// facades keep their whole outline.
         /// </summary>
-        private static void ClampToGroundDepth(PolygonCollider2D poly, Bounds spriteBounds)
+        private static void ClampToGroundDepth(PolygonCollider2D poly, Bounds spriteBounds, bool flipY)
         {
             var depth = Mathf.Clamp(spriteBounds.size.x * .6f, .5f, spriteBounds.size.y);
             var top = spriteBounds.min.y + depth;
@@ -134,9 +175,33 @@ namespace MementoMori.EditorTools
             {
                 var path = poly.GetPath(i);
                 for (var p = 0; p < path.Length; p++)
-                    if (path[p].y > top) path[p] = new Vector2(path[p].x, top);
+                {
+                    var y = flipY ? -path[p].y : path[p].y;
+                    if (y > top) path[p] = new Vector2(path[p].x, flipY ? -top : top);
+                }
                 poly.SetPath(i, path);
             }
+        }
+
+        /// <summary>Wall art keeps its tiles and transforms; physics follows each tile's sprite outline.</summary>
+        public static string ApplyWallOutlines()
+        {
+            var maps = 0;
+            foreach (var map in Object.FindObjectsByType<UnityEngine.Tilemaps.Tilemap>(FindObjectsSortMode.None))
+            {
+                if (!map.name.Contains("_layer_paredes")) continue;
+                Undo.RecordObject(map, "Match wall collision to visible tiles");
+                foreach (var cell in map.cellBounds.allPositionsWithin)
+                    if (map.HasTile(cell)) map.SetColliderType(cell, UnityEngine.Tilemaps.Tile.ColliderType.Sprite);
+                var collider = map.GetComponent<UnityEngine.Tilemaps.TilemapCollider2D>();
+                if (collider == null) collider = Undo.AddComponent<UnityEngine.Tilemaps.TilemapCollider2D>(map.gameObject);
+                collider.isTrigger = false;
+                collider.ProcessTilemapChanges();
+                EditorUtility.SetDirty(map);
+                maps++;
+            }
+            if (maps > 0) EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            return maps + " wall tilemaps with sprite collision";
         }
 
         private static void FillFromSprite(PolygonCollider2D poly, Sprite sprite, bool flipX, bool flipY)
