@@ -74,31 +74,31 @@ namespace MementoMori.Regions
                 for (var door = 1; door <= 8; door++)
                     if (GameState.Instance.GetCounter("event.GALLERY_" + door.ToString("00")) == 0)
                     {
-                        feedback.text = "Leia as oito portas da galeria antes de ordenar o arquivo.";
+                        feedback.text = Loc.T("Leia as oito portas da galeria antes de ordenar o arquivo.");
                         return;
                     }
             }
             if (definition.requiresOtherLabyrinthPuzzles)
                 foreach (var id in GameState.Instance.Puzzles.LabyrinthIds)
                     if (id != definition.id && !GameState.Instance.Puzzles.GetSolved(id)) {
-                        feedback.text="Ainda faltam caminhos a compreender no Labirinto."; return;
+                        feedback.text=Loc.T("Ainda faltam caminhos a compreender no Labirinto."); return;
                     }
             if (definition.prerequisites != null)
                 foreach(var id in definition.prerequisites)
                     if(!GameState.Instance.Puzzles.GetSolved(id)) {
-                        feedback.text="Ainda faltam caminhos a compreender. Explore os desafios do Labirinto antes de ativar o portal.";
+                        feedback.text=Loc.T("Ainda faltam caminhos a compreender. Explore os desafios do Labirinto antes de ativar o portal.");
                         return;
                     }
             if (!string.IsNullOrEmpty(definition.prerequisiteFlag)
                 && Enum.TryParse(definition.prerequisiteFlag,out StoryFlag flag)
                 && !GameState.Instance.HasFlag(flag)) {
-                feedback.text="Primeiro, examine este lugar e escute o que ele guarda.";
+                feedback.text=Loc.T("Primeiro, examine este lugar e escute o que ele guarda.");
                 return;
             }
             var accepted=model.Choose(index);
-            feedback.text=model.Solved ? (string.IsNullOrEmpty(definition.success) ? "A inscrição se ilumina. Este caminho foi compreendido. Esc — voltar." : definition.success) :
-                accepted ? "A inscrição responde. Continue a sequência." :
-                "A luz recua. Releia a inscrição e tente novamente; seus outros caminhos estão preservados.";
+            feedback.text=model.Solved ? Loc.T(string.IsNullOrEmpty(definition.success) ? "A inscrição se ilumina. Este caminho foi compreendido. Esc — voltar." : definition.success) :
+                accepted ? Loc.T("A inscrição responde. Continue a sequência.") :
+                Loc.T("A luz recua. Releia a inscrição e tente novamente; seus outros caminhos estão preservados.");
             if (!accepted && definition.id == "moon.illusory_corridor")
                 ShowConditionalFailure("P03", "on_wrong_exit");
             if(model.Solved) GameState.Instance.SaveCheckpoint(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, FindAnyObjectByType<MementoMori.Player.PlayerController>() is var player && player != null ? (Vector2)player.transform.position : (Vector2)transform.position);
@@ -107,19 +107,19 @@ namespace MementoMori.Regions
         {
             if (model == null || index < 0 || index >= definition.sequence.Length) return;
             var value = model.Rotate(index);
-            dialLabels[index].text = "Obelisco " + (index + 1) + "  ·  " + definition.choices[value];
-            feedback.text = "A sombra do obelisco muda de direção. Alinhe as três ranhuras e confirme.";
+            dialLabels[index].text = Loc.T("Obelisco") + " " + (index + 1) + "  ·  " + Loc.T(definition.choices[value]);
+            feedback.text = Loc.T("A sombra do obelisco muda de direção. Alinhe as três ranhuras e confirme.");
         }
         private void ConfirmDials()
         {
             if (model == null || model.Solved) return;
             if (!model.Confirm())
             {
-                feedback.text = "As sombras ainda não formam a estrela. Gire os obeliscos novamente.";
+                feedback.text = Loc.T("As sombras ainda não formam a estrela. Gire os obeliscos novamente.");
                 ShowConditionalFailure("E04", "on_wrong_obelisk_angle");
                 return;
             }
-            feedback.text = "As três sombras formam uma estrela ausente. Esc — voltar.";
+            feedback.text = Loc.T("As três sombras formam uma estrela ausente. Esc — voltar.");
             GameState.Instance.SaveCheckpoint();
         }
         private void ShowConditionalFailure(string eventId, string condition)
@@ -130,7 +130,7 @@ namespace MementoMori.Regions
             foreach (var line in entry.lines)
             {
                 if (line.condition != condition) continue;
-                feedback.text = "Melantha: “" + line.text + "”\n" + feedback.text;
+                feedback.text = "Melantha: “" + Loc.Line(line.id, line.text) + "”\n" + feedback.text;
                 GameState.Instance?.SetCounter("line.seen." + line.id, 1);
                 return;
             }
@@ -145,8 +145,8 @@ namespace MementoMori.Regions
             card.transform.SetParent(panel.transform,false);
             var rect=card.GetComponent<RectTransform>(); rect.anchorMin=new Vector2(.22f,.18f);rect.anchorMax=new Vector2(.78f,.82f);rect.offsetMin=rect.offsetMax=Vector2.zero;
             card.GetComponent<UnityEngine.UI.Image>().color=new Color(.035f,.025f,.065f,.98f);
-            Text(card.transform,definition.title,40,new Vector2(.05f,.84f),new Vector2(.95f,.96f),new Color(.85f,.72f,.46f));
-            Text(card.transform,definition.clue,27,new Vector2(.07f,.60f),new Vector2(.93f,.83f),new Color(.88f,.84f,.94f));
+            Text(card.transform,Loc.T(definition.title),40,new Vector2(.05f,.84f),new Vector2(.95f,.96f),new Color(.85f,.72f,.46f));
+            Text(card.transform,Loc.T(definition.clue),27,new Vector2(.07f,.60f),new Vector2(.93f,.83f),new Color(.88f,.84f,.94f));
             var dialMode = definition.id == "lab.skyless_courtyard";
             if (dialMode) dialLabels = new TMP_Text[definition.sequence.Length];
             for(var i=0;i<(dialMode ? definition.sequence.Length : definition.choices.Length);i++) {
@@ -156,8 +156,8 @@ namespace MementoMori.Regions
                 var br=button.GetComponent<RectTransform>();br.anchorMin=new Vector2(.08f,y);br.anchorMax=new Vector2(.92f,y+.07f);br.offsetMin=br.offsetMax=Vector2.zero;
                 button.GetComponent<UnityEngine.UI.Image>().color=new Color(.16f,.12f,.23f);
                 button.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(()=>Choose(index));
-                var label = dialMode ? "Obelisco " + (i + 1) + "  ·  " + definition.choices[model.Dial(i)]
-                    : (i + 1) + "  " + definition.choices[i];
+                var label = dialMode ? Loc.T("Obelisco") + " " + (i + 1) + "  ·  " + Loc.T(definition.choices[model.Dial(i)])
+                    : (i + 1) + "  " + Loc.T(definition.choices[i]);
                 var buttonText = Text(button.transform,label,25,Vector2.zero,Vector2.one,Color.white);
                 if (dialMode) dialLabels[i] = buttonText;
             }
@@ -169,9 +169,9 @@ namespace MementoMori.Regions
                 cr.offsetMin = cr.offsetMax = Vector2.zero;
                 confirm.GetComponent<UnityEngine.UI.Image>().color = new Color(.28f,.19f,.38f);
                 confirm.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(ConfirmDials);
-                Text(confirm.transform,"Confirmar alinhamento",25,Vector2.zero,Vector2.one,Color.white);
+                Text(confirm.transform,Loc.T("Confirmar alinhamento"),25,Vector2.zero,Vector2.one,Color.white);
             }
-            feedback=Text(card.transform,"Escolha pelos números ou pelo mouse. Esc — voltar",23,new Vector2(.07f,.02f),new Vector2(.93f,.16f),new Color(.75f,.72f,.84f));
+            feedback=Text(card.transform,Loc.T("Escolha pelos números ou pelo mouse. Esc — voltar"),23,new Vector2(.07f,.02f),new Vector2(.93f,.16f),new Color(.75f,.72f,.84f));
         }
         private static TMP_Text Text(Transform parent,string value,int size,Vector2 min,Vector2 max,Color color)
         {

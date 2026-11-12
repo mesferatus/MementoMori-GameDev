@@ -49,11 +49,11 @@ namespace MementoMori.UI
         /// <summary>Credits text shared by the main menu and the closing card (panel of 1000 x 820).</summary>
         public static void CreditsBody(RectTransform panel, TMP_FontAsset bodyFont)
         {
-            var names = NewText("Equipe", panel, bodyFont,
-                "<size=22><color=#B9A2D5>ARTE, ORGANIZAÇÃO VISUAL E COLLIDERS</color></size>\n<size=44>Luiza Canova</size>\n\n" +
-                "<size=22><color=#B9A2D5>PROGRAMAÇÃO, SHADERS E ÁUDIO</color></size>\n<size=44>Callisto Monteiro Mascoloti</size>\n\n" +
-                "<size=22><color=#B9A2D5>ILUSTRAÇÃO DO MENU</color></size>\n<size=44>Camila David Ribeiro</size>",
-                40f, TitleColor);
+            var names = NewText("Equipe", panel, bodyFont, string.Empty, 40f, TitleColor);
+            LocalizedText.Bind(names, () =>
+                "<size=22><color=#B9A2D5>" + MementoMori.Core.Loc.T("ARTE, ORGANIZAÇÃO VISUAL E COLLIDERS") + "</color></size>\n<size=44>Luiza Canova</size>\n\n" +
+                "<size=22><color=#B9A2D5>" + MementoMori.Core.Loc.T("PROGRAMAÇÃO, SHADERS E ÁUDIO") + "</color></size>\n<size=44>Callisto Monteiro Mascoloti</size>\n\n" +
+                "<size=22><color=#B9A2D5>" + MementoMori.Core.Loc.T("ILUSTRAÇÃO DO MENU") + "</color></size>\n<size=44>Camila David Ribeiro</size>");
             names.characterSpacing = 2f;
             names.rectTransform.anchorMin = names.rectTransform.anchorMax = new Vector2(.5f, .5f);
             names.rectTransform.sizeDelta = new Vector2(860f, 440f);
@@ -62,6 +62,7 @@ namespace MementoMori.UI
             var fonts = NewText("Fontes", panel, bodyFont,
                 "Fontes Cinzel, Cormorant Garamond e UnifrakturMaguntia (SIL Open Font License) · Feito com Unity",
                 20f, CaptionColor);
+            LocalizedText.Bind(fonts);
             fonts.rectTransform.anchorMin = fonts.rectTransform.anchorMax = new Vector2(.5f, 0f);
             fonts.rectTransform.sizeDelta = new Vector2(900f, 40f);
             fonts.rectTransform.anchoredPosition = new Vector2(0f, 200f);
@@ -72,6 +73,7 @@ namespace MementoMori.UI
         public static TMP_Text Title(RectTransform panel, string text, TMP_FontAsset font, float top = 64f, float size = 46f)
         {
             var title = NewText("Titulo", panel, font, text, size, TitleColor);
+            LocalizedText.Bind(title);
             title.characterSpacing = 12f;
             var rect = title.rectTransform;
             rect.anchorMin = rect.anchorMax = new Vector2(.5f, 1f);

@@ -1,0 +1,1212 @@
+{
+  "entries": [
+    {
+      "id": "C01_D002",
+      "en": "A name opens."
+    },
+    {
+      "id": "C01_D003",
+      "en": "A bond sustains."
+    },
+    {
+      "id": "C01_D004",
+      "en": "A price closes."
+    },
+    {
+      "id": "C01_D005",
+      "en": "No... wait. Not yet."
+    },
+    {
+      "id": "C02_D001",
+      "en": "Huh...? What was that?"
+    },
+    {
+      "id": "C02_D002",
+      "en": "I was doing something. I was, right?"
+    },
+    {
+      "id": "C02_D003",
+      "en": "My bed... my writing desk..."
+    },
+    {
+      "id": "C02_D004",
+      "en": "Wait. The window wasn't on that side."
+    },
+    {
+      "id": "C02_D005",
+      "en": "Is anyone home?"
+    },
+    {
+      "id": "C02_D006",
+      "en": "Why am I waiting for someone to answer?"
+    },
+    {
+      "id": "C02_D007",
+      "en": "No. Something is very wrong here."
+    },
+    {
+      "id": "C02_D009",
+      "en": "Okay. Figure out where you are first. Freak out later."
+    },
+    {
+      "id": "Q01_D001",
+      "en": "Bed — The pillow is cold on one side and creased on the other."
+    },
+    {
+      "id": "Q01_D002",
+      "en": "Yeah, sleeping again won't help."
+    },
+    {
+      "id": "Q01_D003",
+      "en": "Window — There is light outside, but no recognizable landscape."
+    },
+    {
+      "id": "Q01_D004",
+      "en": "I know this view... no. I do know it. How strange."
+    },
+    {
+      "id": "Q01_D005",
+      "en": "Photograph — The shape of the figures is preserved; one detail won't settle in memory."
+    },
+    {
+      "id": "Q01_D006",
+      "en": "Huh. This photo wasn't like this."
+    },
+    {
+      "id": "Q01_D007",
+      "en": "Poe's familiar object — Small, worn at the points where fingers would touch it."
+    },
+    {
+      "id": "Q01_D008",
+      "en": "Poe would knock this to the floor in two seconds."
+    },
+    {
+      "id": "Q01_D009",
+      "en": "Would...? Why did I say it like that?"
+    },
+    {
+      "id": "Q01_D010",
+      "en": "Easy. I don't even know what happened."
+    },
+    {
+      "id": "Q01_D011",
+      "en": "Writing desk — Scribbled pages, all in the same handwriting as hers."
+    },
+    {
+      "id": "Q01_D012",
+      "en": "It's my handwriting. I just don't remember writing any of it."
+    },
+    {
+      "id": "Q02_D001",
+      "en": "This book is mine. So who wrote half of these things?"
+    },
+    {
+      "id": "Q02_D002",
+      "en": "Do not mistake memory for proof."
+    },
+    {
+      "id": "Q02_D003",
+      "en": "Did I write this?"
+    },
+    {
+      "id": "Q02_D004",
+      "en": "Wait. The photo changed."
+    },
+    {
+      "id": "Q02_D005",
+      "en": "I saw it. I'm sure."
+    },
+    {
+      "id": "Q02_D006",
+      "en": "...Or I thought I was."
+    },
+    {
+      "id": "Q02_D007",
+      "en": "I'll write it down before it changes again. Including what I remember."
+    },
+    {
+      "id": "Q03_D001",
+      "en": "The circle is whole... but it isn't working."
+    },
+    {
+      "id": "Q03_D002",
+      "en": "The window's open. Great. The wind won't leave a single candle lit."
+    },
+    {
+      "id": "Q03_D003",
+      "en": "There. Window closed."
+    },
+    {
+      "id": "Q03_D004",
+      "en": "And the anchor is out of place. I need to set it at the center."
+    },
+    {
+      "id": "Q03_D005",
+      "en": "Moon: recognize the phase. Book: fix the record. Memory: do not mistake it for image. Rest: hold the threshold."
+    },
+    {
+      "id": "Q03_D006",
+      "en": "Moon, Book, Memory, Rest. Okay. Here we go."
+    },
+    {
+      "id": "Q03_D008",
+      "en": "One lit up! Right, I think that's it."
+    },
+    {
+      "id": "Q03_D009",
+      "en": "Oh no. Wrong order. At least only the candles went out."
+    },
+    {
+      "id": "Q03_D010",
+      "en": "Done. But... wait. This doesn't feel like the start of a ritual."
+    },
+    {
+      "id": "Q03_D011",
+      "en": "It feels like I'm trying to finish something I already did."
+    },
+    {
+      "id": "C03_D002",
+      "en": "If this ritual brought me here, maybe it can take me out too."
+    },
+    {
+      "id": "C03_D003",
+      "en": "Yeah. I just hope I don't wake up in an even worse room."
+    },
+    {
+      "id": "L01_D001",
+      "en": "Okay. I'm definitely not in the room anymore."
+    },
+    {
+      "id": "L01_D002",
+      "en": "This mark... it's the same as the circle's."
+    },
+    {
+      "id": "L01_D003",
+      "en": "So it was the ritual. It's why I ended up here."
+    },
+    {
+      "id": "L01_D004",
+      "en": "Okay, but... why did I do it?"
+    },
+    {
+      "id": "L01_D005",
+      "en": "The path remembers the hand that opened it."
+    },
+    {
+      "id": "L01_D006",
+      "en": "Great. Even the wall knows more than I do."
+    },
+    {
+      "id": "L01_D008",
+      "en": "Hello? Is anyone there?"
+    },
+    {
+      "id": "L02_D001",
+      "en": "A room this size and... nothing?"
+    },
+    {
+      "id": "L02_D002",
+      "en": "There is an outline shielded from the dust. Whatever occupied it was taken away."
+    },
+    {
+      "id": "L02_D003",
+      "en": "Wait. There was something here. Someone took it."
+    },
+    {
+      "id": "L02_D004",
+      "en": "Judging by the mark, it wasn't anything small."
+    },
+    {
+      "id": "L02_D005",
+      "en": "Who goes to all this trouble to leave a room empty?"
+    },
+    {
+      "id": "L02_D006",
+      "en": "Along the baseboard, a delicate mark repeats a sign seen in the Bedroom."
+    },
+    {
+      "id": "E01_D001",
+      "en": "What remains of an image when it does not show who should be in it?"
+    },
+    {
+      "id": "E01_D003",
+      "en": "The shape. The image still exists, even with someone missing."
+    },
+    {
+      "id": "E01_D004",
+      "en": "And what did you do when the call brought no answer?"
+    },
+    {
+      "id": "E01_D006",
+      "en": "I kept calling. I remember that."
+    },
+    {
+      "id": "E01_D007",
+      "en": "Why did you return to this place?"
+    },
+    {
+      "id": "E01_D009",
+      "en": "I opened the way. That part, at least, I know."
+    },
+    {
+      "id": "E01_D011",
+      "en": "Is this echo correcting me?"
+    },
+    {
+      "id": "C_POE_D003",
+      "en": "No... Wait. Poe? Is it really you?"
+    },
+    {
+      "id": "C_POE_D005",
+      "en": "You picked the worst possible time to show up, you know that?"
+    },
+    {
+      "id": "C_POE_D006",
+      "en": "...Wow. It's so good to see you."
+    },
+    {
+      "id": "C_POE_D007",
+      "en": "Okay. Questions later. Come here."
+    },
+    {
+      "id": "E02_D001",
+      "en": "It's this door. I'm sure."
+    },
+    {
+      "id": "E02_D003",
+      "en": "Huh? Did I come back to the same place?"
+    },
+    {
+      "id": "E02_D004",
+      "en": "No, hold on. The mark was on the other side."
+    },
+    {
+      "id": "E02_D005",
+      "en": "What returns does not always come back the same."
+    },
+    {
+      "id": "E02_D006",
+      "en": "There are two marks that don't match. That's the way in."
+    },
+    {
+      "id": "E02_D007",
+      "en": "Ah. The door deceives. I have to look at what changed."
+    },
+    {
+      "id": "E03_D001",
+      "en": "The name was written while the flame was low."
+    },
+    {
+      "id": "E03_D002",
+      "en": "Someone crossed before the door existed."
+    },
+    {
+      "id": "E03_D003",
+      "en": "You called and heard no answer."
+    },
+    {
+      "id": "E03_D004",
+      "en": "I said I would not call again."
+    },
+    {
+      "id": "E03_D005",
+      "en": "That last voice..."
+    },
+    {
+      "id": "E03_D006",
+      "en": "It's me. That voice is mine."
+    },
+    {
+      "id": "E03_D007",
+      "en": "But I never said I'd stop. I remember going on."
+    },
+    {
+      "id": "E03_D009",
+      "en": "That voice sounds like mine... but I do not remember saying those words."
+    },
+    {
+      "id": "E03_D011",
+      "en": "If that was me talking, why don't I remember any of it?"
+    },
+    {
+      "id": "E04_D001",
+      "en": "No sky... and still everything casts a shadow. Sure."
+    },
+    {
+      "id": "E04_D002",
+      "en": "Three bases turn. Each groove points to a fragment of the same design."
+    },
+    {
+      "id": "E04_D003",
+      "en": "No use looking for where the light comes from."
+    },
+    {
+      "id": "E04_D004",
+      "en": "If I line up the shadows, maybe something will appear."
+    },
+    {
+      "id": "E04_D006",
+      "en": "No, not that side."
+    },
+    {
+      "id": "E04_D007",
+      "en": "Oh, look! The three of them form a star!"
+    },
+    {
+      "id": "E05_D001",
+      "en": "What opens does not sustain. What sustains does not close."
+    },
+    {
+      "id": "E05_D002",
+      "en": "Three different parts. If I mix up the order, it goes bad."
+    },
+    {
+      "id": "E05_D003",
+      "en": "Name opens."
+    },
+    {
+      "id": "E05_D004",
+      "en": "Bond sustains."
+    },
+    {
+      "id": "E05_D005",
+      "en": "Price closes."
+    },
+    {
+      "id": "E05_D007",
+      "en": "Seven paths... Do I know these symbols? I think I do."
+    },
+    {
+      "id": "E05_D008",
+      "en": "Is it just me, or is this place testing me?"
+    },
+    {
+      "id": "A1_D002",
+      "en": "You opened the Core. But something is still missing."
+    },
+    {
+      "id": "A1_D003",
+      "en": "Oh, great. Someone else appearing out of nowhere."
+    },
+    {
+      "id": "A1_D004",
+      "en": "At least this time you have questions."
+    },
+    {
+      "id": "A1_D005",
+      "en": "Who are you? And what is this place?"
+    },
+    {
+      "id": "A1_D006",
+      "en": "Do you really want to start there?"
+    },
+    {
+      "id": "A1_D007",
+      "en": "I want to start with an answer. Any one will do."
+    },
+    {
+      "id": "A1_D008",
+      "en": "Then let's take the most useful one: you opened the way here."
+    },
+    {
+      "id": "A1_D009",
+      "en": "And the Moon? What happens if I go in?"
+    },
+    {
+      "id": "A1_D010",
+      "en": "You'll find things you forgot. Not all of them are yours."
+    },
+    {
+      "id": "A1_D012",
+      "en": "And be careful with what you decide to keep."
+    },
+    {
+      "id": "L08_D001",
+      "en": "I've passed this door before. It was closed."
+    },
+    {
+      "id": "L08_D002",
+      "en": "There is no shortage of doors. What remains is to finish what was opened."
+    },
+    {
+      "id": "L08_D003",
+      "en": "Marks are still missing. Better go back."
+    },
+    {
+      "id": "L08_D004",
+      "en": "Echoes, the door, the voices, the shadows... the Core. Done."
+    },
+    {
+      "id": "L08_D005",
+      "en": "The Moon opened. I think that's where I go."
+    },
+    {
+      "id": "M01_D001",
+      "en": "Wow... This is really different from the Labyrinth."
+    },
+    {
+      "id": "M01_D002",
+      "en": "What shows does not promise to keep."
+    },
+    {
+      "id": "M01_D003",
+      "en": "So not everything I see here can be trusted. No surprise there."
+    },
+    {
+      "id": "M01_D005",
+      "en": "What is it, Poe? These clothes feel strange to me too."
+    },
+    {
+      "id": "M01_D006",
+      "en": "Come on. Let's take it slow, okay?"
+    },
+    {
+      "id": "M02_WATER_D001",
+      "en": "Oh, of course. The flowers are right in the middle of the lake."
+    },
+    {
+      "id": "M02_WATER_D002",
+      "en": "And there's no dry path. Perfect."
+    },
+    {
+      "id": "M02_WATER_D004",
+      "en": "Brr... freezing. But it doesn't look deep."
+    },
+    {
+      "id": "M02_WATER_D006",
+      "en": "Poe, stay here. I'll be right back, okay?"
+    },
+    {
+      "id": "M02_WATER_D008",
+      "en": "You can stop watching me. I'm not going to disappear... I think."
+    },
+    {
+      "id": "P01_D001",
+      "en": "Distance keeps what the hasty hand loses."
+    },
+    {
+      "id": "P01_D002",
+      "en": "Waxing... Maybe I need to stop getting so close?"
+    },
+    {
+      "id": "P01_D003",
+      "en": "Poe, wait there. I'll try from here."
+    },
+    {
+      "id": "P01_D005",
+      "en": "It worked... away from it."
+    },
+    {
+      "id": "P01_D006",
+      "en": "Two images only touch when they look at the same place."
+    },
+    {
+      "id": "P01_D007",
+      "en": "What if I stand where the reflection is?"
+    },
+    {
+      "id": "P01_D009",
+      "en": "Remove what is left over. Do not add what is missing."
+    },
+    {
+      "id": "P01_D010",
+      "en": "Waning. Less, then."
+    },
+    {
+      "id": "P01_D011",
+      "en": "Yes! All three worked. Now open, please."
+    },
+    {
+      "id": "P02_D001",
+      "en": "Seven mirrors? Seriously? One was already enough."
+    },
+    {
+      "id": "P02_D002",
+      "en": "A gesture ends an instant after it begins."
+    },
+    {
+      "id": "P02_D003",
+      "en": "This one is running a little late."
+    },
+    {
+      "id": "P02_D004",
+      "en": "A gesture begins before it is thought."
+    },
+    {
+      "id": "P02_D005",
+      "en": "And this one moves before I do."
+    },
+    {
+      "id": "P02_D006",
+      "en": "There is a room; there is no one inside it."
+    },
+    {
+      "id": "P02_D007",
+      "en": "Wait... there's the room. But it's empty."
+    },
+    {
+      "id": "P02_D008",
+      "en": "So it's a sequence. Late, early... the room."
+    },
+    {
+      "id": "P02_D011",
+      "en": "Why is the reflection doing that?"
+    },
+    {
+      "id": "P02_D012",
+      "en": "Better not get too close."
+    },
+    {
+      "id": "M03_EXTRA_D001",
+      "en": "One version of Melantha does not move, even when she changes places."
+    },
+    {
+      "id": "M03_EXTRA_D002",
+      "en": "This one doesn't move. Not even when I do."
+    },
+    {
+      "id": "M03_EXTRA_D003",
+      "en": "The reflection only shows things after Melantha looks away."
+    },
+    {
+      "id": "M03_EXTRA_D004",
+      "en": "This one only shows what I did after I step away."
+    },
+    {
+      "id": "M03_EXTRA_D005",
+      "en": "The reflected hand switches sides, but keeps the same scar."
+    },
+    {
+      "id": "M03_EXTRA_D006",
+      "en": "My hand is flipped... but the scar is still there."
+    },
+    {
+      "id": "M03_EXTRA_D007",
+      "en": "The glass shows the shadow of someone who never entered the room."
+    },
+    {
+      "id": "M03_EXTRA_D008",
+      "en": "There's a shadow in there. Whose, if no one came in?"
+    },
+    {
+      "id": "C_BLACK_D001",
+      "en": "No. I can't forget this too."
+    },
+    {
+      "id": "C_BLACK_D002",
+      "en": "If I can just remember the name... a little longer..."
+    },
+    {
+      "id": "C_BLACK_D004",
+      "en": "I was holding something."
+    },
+    {
+      "id": "C_BLACK_D005",
+      "en": "Or someone... No, I can't see it."
+    },
+    {
+      "id": "C_BLACK_D006",
+      "en": "Is this memory mine? I don't even know anymore."
+    },
+    {
+      "id": "A2_D001",
+      "en": "You saw something in the mirror. What do you think it was?"
+    },
+    {
+      "id": "A2_D002",
+      "en": "I saw a piece of the ritual. At least I think so."
+    },
+    {
+      "id": "A2_D003",
+      "en": "And you've already decided the memory is yours?"
+    },
+    {
+      "id": "A2_D004",
+      "en": "I was there. I saw my own hands."
+    },
+    {
+      "id": "A2_D005",
+      "en": "I didn't ask whether you were there."
+    },
+    {
+      "id": "A2_D006",
+      "en": "Then what are you trying to say?"
+    },
+    {
+      "id": "A2_D007",
+      "en": "That maybe you're asking the wrong question."
+    },
+    {
+      "id": "A2_D008",
+      "en": "Could you, I don't know, say one thing without leaving me more confused?"
+    },
+    {
+      "id": "A2_D009",
+      "en": "I could. But would you believe it just because I said it?"
+    },
+    {
+      "id": "A2_D011",
+      "en": "He's gone again. Of course."
+    },
+    {
+      "id": "A2_D012",
+      "en": "...And now I have more questions than before."
+    },
+    {
+      "id": "P03_D001",
+      "en": "The clearest passage is always the true one."
+    },
+    {
+      "id": "P03_D002",
+      "en": "Always? Oh, sure. This place has to be joking."
+    },
+    {
+      "id": "P03_D003",
+      "en": "The sign points left... but the floor looks different."
+    },
+    {
+      "id": "P03_D004",
+      "en": "I'll follow the mark on the floor. The sign can wait."
+    },
+    {
+      "id": "P03_D006",
+      "en": "Damn. Back to the start."
+    },
+    {
+      "id": "P03_D007",
+      "en": "Okay, look at the mark first. Then choose."
+    },
+    {
+      "id": "P03_D008",
+      "en": "Yes! The corridor stopped changing."
+    },
+    {
+      "id": "M05_OPEN_D001",
+      "en": "Eight doors... and none of them looks like a way out."
+    },
+    {
+      "id": "M05_OPEN_D002",
+      "en": "A mark can outlast its explanation."
+    },
+    {
+      "id": "M05_OPEN_D003",
+      "en": "Right. Let us see what they have to tell us."
+    },
+    {
+      "id": "P04_D001",
+      "en": "What remains when the image changes places?"
+    },
+    {
+      "id": "P04_D002",
+      "en": "Mark."
+    },
+    {
+      "id": "P04_D003",
+      "en": "What shows without promising to keep?"
+    },
+    {
+      "id": "P04_D004",
+      "en": "Reflection."
+    },
+    {
+      "id": "P04_D005",
+      "en": "What decides what was left behind?"
+    },
+    {
+      "id": "P04_D006",
+      "en": "Memory."
+    },
+    {
+      "id": "P04_D009",
+      "en": "It opened! Great. But I still don't know what this has to do with me."
+    },
+    {
+      "id": "P05_D001",
+      "en": "Three rings... I have the feeling I've handled them before."
+    },
+    {
+      "id": "P05_D002",
+      "en": "The phase does not ask for everything."
+    },
+    {
+      "id": "P05_D003",
+      "en": "Waning."
+    },
+    {
+      "id": "P05_D004",
+      "en": "The record is not a person."
+    },
+    {
+      "id": "P05_D005",
+      "en": "Grimoire."
+    },
+    {
+      "id": "P05_D006",
+      "en": "The intention is not to possess."
+    },
+    {
+      "id": "P05_D007",
+      "en": "Sustain."
+    },
+    {
+      "id": "P05_D009",
+      "en": "Waning, Grimoire, Sustain. Done."
+    },
+    {
+      "id": "P05_D010",
+      "en": "I hope it's the right one. At least I know how I got here."
+    },
+    {
+      "id": "M07_D001",
+      "en": "The mark... the bell... the shadow. All of it again."
+    },
+    {
+      "id": "M07_D002",
+      "en": "Trace of the mark — the stroke remains even though the hand is gone."
+    },
+    {
+      "id": "M07_D003",
+      "en": "I've seen this stroke before. At the beginning."
+    },
+    {
+      "id": "M07_D004",
+      "en": "Trace of the bell — the last note is missing."
+    },
+    {
+      "id": "M07_D005",
+      "en": "The fourth note. Again."
+    },
+    {
+      "id": "M07_D006",
+      "en": "Trace of the shadow — the outline follows no light."
+    },
+    {
+      "id": "M07_D007",
+      "en": "Okay, this is getting weird even for me."
+    },
+    {
+      "id": "M07_D009",
+      "en": "Poe... do you want me to take this?"
+    },
+    {
+      "id": "M07_D010",
+      "en": "I don't even know whose it is."
+    },
+    {
+      "id": "M07_D012",
+      "en": "I felt something. But I couldn't see what."
+    },
+    {
+      "id": "M08_D001",
+      "en": "I think it's the way out. I think."
+    },
+    {
+      "id": "M08_D002",
+      "en": "I still don't understand half of what happened."
+    },
+    {
+      "id": "M08_D003",
+      "en": "But I brought the Fragment... and a few memories."
+    },
+    {
+      "id": "M08_D004",
+      "en": "And you, right? My companion who explains nothing."
+    },
+    {
+      "id": "M08_D007",
+      "en": "All right. Let's go home."
+    },
+    {
+      "id": "FINAL_D002",
+      "en": "The window..."
+    },
+    {
+      "id": "FINAL_D003",
+      "en": "It's in the right place."
+    },
+    {
+      "id": "FINAL_D004",
+      "en": "The photo too. Wait..."
+    },
+    {
+      "id": "FINAL_D005",
+      "en": "Did I fall asleep?"
+    },
+    {
+      "id": "FINAL_D007",
+      "en": "No. This came from there."
+    },
+    {
+      "id": "FINAL_D008",
+      "en": "Then I really was in that place."
+    },
+    {
+      "id": "L09_D001",
+      "en": "The engraved chain imprisons no door. It only shows that two links can choose to stay together."
+    },
+    {
+      "id": "L09_D002",
+      "en": "Is that a chain? It doesn't seem to hold anything."
+    },
+    {
+      "id": "L09_D003",
+      "en": "I can't get in this way. Yet."
+    },
+    {
+      "id": "L10_D001",
+      "en": "A crack climbs the wall as if it had decided to fall upward."
+    },
+    {
+      "id": "L10_D002",
+      "en": "This wall is cracked from top to bottom."
+    },
+    {
+      "id": "L10_D003",
+      "en": "This way is closed too."
+    },
+    {
+      "id": "L11_D001",
+      "en": "The stone was carved to be read from the opposite side."
+    },
+    {
+      "id": "L11_D002",
+      "en": "Wait... the symbol only makes sense seen from the other side."
+    },
+    {
+      "id": "L11_D003",
+      "en": "No getting through here right now."
+    },
+    {
+      "id": "L12_D001",
+      "en": "An unlit lantern rests where the wall most needs light."
+    },
+    {
+      "id": "L12_D002",
+      "en": "An unlit lantern. How useful."
+    },
+    {
+      "id": "L12_D003",
+      "en": "Can't go on this way either."
+    },
+    {
+      "id": "L13_D001",
+      "en": "Under the dust is the mark of something that grew where nothing seemed to fit."
+    },
+    {
+      "id": "L13_D002",
+      "en": "Even the stone cracked, and something grew here."
+    },
+    {
+      "id": "L13_D003",
+      "en": "This passage is closed."
+    },
+    {
+      "id": "L14_D001",
+      "en": "Three bell marks, but only one seems to have been rung."
+    },
+    {
+      "id": "L14_D002",
+      "en": "Three bells... but it seems only one rang."
+    },
+    {
+      "id": "L14_D003",
+      "en": "No. I'd better leave this door for later."
+    },
+    {
+      "id": "GALLERY_01_D001",
+      "en": "The first person to pass left no face: they left a stroke so small it almost became stone."
+    },
+    {
+      "id": "GALLERY_01_D002",
+      "en": "Such a small mark... and still someone wanted to keep it."
+    },
+    {
+      "id": "GALLERY_02_D001",
+      "en": "In the second arch, an image repeated the right gesture with the wrong hand. The watcher smiled, relieved, and never noticed the difference."
+    },
+    {
+      "id": "GALLERY_02_D002",
+      "en": "He didn't even notice the image was wrong."
+    },
+    {
+      "id": "GALLERY_03_D001",
+      "en": "A voice arrived before the person who was meant to speak it. When the person appeared, they did not recognize their own words."
+    },
+    {
+      "id": "GALLERY_03_D002",
+      "en": "This... why does it feel so familiar?"
+    },
+    {
+      "id": "GALLERY_04_D001",
+      "en": "The room had four walls and one window too many. No one asked where it led."
+    },
+    {
+      "id": "GALLERY_04_D002",
+      "en": "One window too many? Just like the bedroom..."
+    },
+    {
+      "id": "GALLERY_05_D001",
+      "en": "A candle stayed lit after everyone agreed it had been put out. The record changed; the flame did not."
+    },
+    {
+      "id": "GALLERY_05_D002",
+      "en": "The candle still lit... That reminds me of something."
+    },
+    {
+      "id": "GALLERY_06_D001",
+      "en": "The third toll was heard by everyone; the fourth, only by those waiting for someone."
+    },
+    {
+      "id": "GALLERY_06_D002",
+      "en": "The fourth toll again. Of course."
+    },
+    {
+      "id": "GALLERY_07_D001",
+      "en": "A door stayed closed for years. When it finally opened, there was no sign that anyone had ever locked it."
+    },
+    {
+      "id": "GALLERY_07_D002",
+      "en": "It was closed... but maybe no one ever locked it."
+    },
+    {
+      "id": "GALLERY_08_D001",
+      "en": "The last name was written with care. Afterward, the records disagreed about who had spoken it."
+    },
+    {
+      "id": "GALLERY_08_D002",
+      "en": "The name stayed written. There's just no telling who spoke it."
+    },
+    {
+      "id": "C01_D001",
+      "en": "A muffled bell. The fourth note never sounds."
+    },
+    {
+      "id": "C01_D006",
+      "en": "The circle answers with an incomplete light; an abrupt cut before the outcome."
+    },
+    {
+      "id": "C02_D008",
+      "en": "A floorboard creaks in the distance. No answer."
+    },
+    {
+      "id": "Q03_D007",
+      "en": "The correct flame catches and holds a quiet glow."
+    },
+    {
+      "id": "C03_D001",
+      "en": "Lie down and try to cross over? [Lie down] [Not yet]"
+    },
+    {
+      "id": "C03_D004",
+      "en": "At last the bell rings, though it seems to come from beneath the floor."
+    },
+    {
+      "id": "C03_D005",
+      "en": "The flame draws back into the sigil. Cut to cold stone."
+    },
+    {
+      "id": "L01_D007",
+      "en": "A faint tapping, like claws against a surface hidden from view."
+    },
+    {
+      "id": "L01_D009",
+      "en": "Nothing answers; the open path remains."
+    },
+    {
+      "id": "E01_D002",
+      "en": "[Presence] [Form] [Certainty]"
+    },
+    {
+      "id": "E01_D005",
+      "en": "[I fell silent] [I kept calling] [I forgot the name]"
+    },
+    {
+      "id": "E01_D008",
+      "en": "[Because I opened the way] [Because I no longer exist] [Because I was brought here]"
+    },
+    {
+      "id": "E01_D010",
+      "en": "The three voices fall silent in reverse order."
+    },
+    {
+      "id": "E01_D012",
+      "en": "A feline silhouette slips between two columns and stops at a distance."
+    },
+    {
+      "id": "C_POE_D001",
+      "en": "...Poe?"
+    },
+    {
+      "id": "C_POE_D002",
+      "en": "A short meow."
+    },
+    {
+      "id": "C_POE_D004",
+      "en": "Poe sniffs the outstretched hand, turns his head and sits."
+    },
+    {
+      "id": "C_POE_D008",
+      "en": "Poe stands and begins to follow her, leaving the passage clear."
+    },
+    {
+      "id": "E02_D002",
+      "en": "The door opens without revealing the other side."
+    },
+    {
+      "id": "E02_D008",
+      "en": "The stone recedes, revealing the true path."
+    },
+    {
+      "id": "E03_D008",
+      "en": "Which voice contradicts your memory? [An unfamiliar voice] [My own voice, saying something I do not remember] [Poe's voice]"
+    },
+    {
+      "id": "E03_D010",
+      "en": "Ripples in the well spread away from the centre."
+    },
+    {
+      "id": "E04_D005",
+      "en": "The first obelisk gives a harsh sound; the shadow shifts."
+    },
+    {
+      "id": "E04_D008",
+      "en": "A line of light runs along the floor towards the Core."
+    },
+    {
+      "id": "E05_D006",
+      "en": "The last mark settles into place; seven alcoves light up without unlocking every door."
+    },
+    {
+      "id": "A1_D001",
+      "en": "A compass of light turns against the motion of the rings."
+    },
+    {
+      "id": "A1_D011",
+      "en": "Poe steps forward; Andrealphus inclines his head towards him, offering no explanation."
+    },
+    {
+      "id": "A1_D013",
+      "en": "The silhouette dissolves; the protagonist can move again."
+    },
+    {
+      "id": "L08_D006",
+      "en": "Enter the Moon Domain? [Enter] [Go back]"
+    },
+    {
+      "id": "L08_D007",
+      "en": "A luminous ripple travels around the arch; Poe hesitates, then follows."
+    },
+    {
+      "id": "M01_D004",
+      "en": "Poe studies her new clothes before looking down the path."
+    },
+    {
+      "id": "M02_WATER_D003",
+      "en": "The protagonist tests the depth; the water reflects the moon before it touches her foot."
+    },
+    {
+      "id": "M02_WATER_D005",
+      "en": "A ripple; the water closes behind her."
+    },
+    {
+      "id": "M02_WATER_D007",
+      "en": "Poe sits, following her movements with his eyes, and meows when Melantha nears a petal."
+    },
+    {
+      "id": "P01_D004",
+      "en": "Melantha steps away; the petal responds to their relative positions."
+    },
+    {
+      "id": "P01_D008",
+      "en": "Reflection and petal fall into phase."
+    },
+    {
+      "id": "P01_D012",
+      "en": "The three marks glow in sequence; the next passage responds."
+    },
+    {
+      "id": "P02_D009",
+      "en": "Select: DELAYED → AHEAD → BEDROOM."
+    },
+    {
+      "id": "P02_D010",
+      "en": "The surface of the Black Mirror trembles without reflecting the protagonist."
+    },
+    {
+      "id": "C_BLACK_D003",
+      "en": "The sound of a candle going out cuts the sentence short."
+    },
+    {
+      "id": "C_BLACK_D007",
+      "en": "The mirror shows an empty frame where a reflection should be."
+    },
+    {
+      "id": "A2_D010",
+      "en": "Poe draws close to Melantha; Andrealphus dissolves into dim particles."
+    },
+    {
+      "id": "P03_D005",
+      "en": "A doorframe shifts a shadow; the wrong path returns the player to the marker."
+    },
+    {
+      "id": "P03_D009",
+      "en": "The route stabilises without another teleport."
+    },
+    {
+      "id": "M05_OPEN_D004",
+      "en": "Poe watches the facade; each door lights briefly as it is read."
+    },
+    {
+      "id": "P04_D007",
+      "en": "MARK → REFLECTION → MEMORY."
+    },
+    {
+      "id": "P04_D008",
+      "en": "The central mechanism responds and opens the way."
+    },
+    {
+      "id": "P05_D008",
+      "en": "One pulse. A second. A third. The sigil forms a complete design."
+    },
+    {
+      "id": "M07_D008",
+      "en": "The Fragment responds as Melantha approaches; Poe looks at her, not at the object."
+    },
+    {
+      "id": "M07_D011",
+      "en": "A sensory memory: warmth, fabric, a small weight in the hand; cut before any name."
+    },
+    {
+      "id": "M08_D005",
+      "en": "Poe sits near the edge of the light."
+    },
+    {
+      "id": "M08_D006",
+      "en": "Return? [Yes] [Not yet]"
+    },
+    {
+      "id": "M08_D008",
+      "en": "The portal sounds like a held breath; the screen dissolves."
+    },
+    {
+      "id": "FINAL_D001",
+      "en": "Distant bells. A bird, for the first time."
+    },
+    {
+      "id": "FINAL_D006",
+      "en": "Melantha notices a mark left by the Fragment on a physical object."
+    },
+    {
+      "id": "FINAL_D009",
+      "en": "A small, familiar sound behind the door; the camera does not reveal its source."
+    },
+    {
+      "id": "FINAL_D010",
+      "en": "...Poe?"
+    },
+    {
+      "id": "FINAL_D011",
+      "en": "Silence. A slow fade to black. Beta credits. Return to the menu."
+    }
+  ]
+}

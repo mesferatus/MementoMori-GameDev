@@ -2,7 +2,9 @@
   "name": "MementoMori.Runtime",
   "rootNamespace": "MementoMori",
   "references": [
-    "Unity.TextMeshPro"
+    "Unity.TextMeshPro",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Universal.2D.Runtime"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

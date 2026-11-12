@@ -100,16 +100,16 @@ namespace MementoMori.UI
             if (dialogue && dialogueHintsShown > DialogueHintLimit)
                 CurrentHint = string.Empty;
             else if (dialogue)
-                CurrentHint = $"{InputBindings.Get(GameAction.Interact)} / Enter / Espaço — revelar o texto e avançar";
+                CurrentHint = string.Format(Loc.T("{0} / Enter / Espaço — revelar o texto e avançar"), InputBindings.Get(GameAction.Interact));
             else if (!moved)
-                CurrentHint = "Use as teclas de movimento ou as setas — explore o quarto";
+                CurrentHint = Loc.T("Use as teclas de movimento ou as setas — explore o quarto");
             else if (!inspected)
-                CurrentHint = $"Aproxime-se de um objeto e pressione {InputBindings.Get(GameAction.Interact)} para examinar";
+                CurrentHint = string.Format(Loc.T("Aproxime-se de um objeto e pressione {0} para examinar"), InputBindings.Get(GameAction.Interact));
             else if (!readBook && (state == null || !state.HasFlag(StoryFlag.RoomGrimoireRead)))
-                CurrentHint = $"O grimório guarda pistas. Aproxime-se e pressione {InputBindings.Get(GameAction.Interact)} para ler";
+                CurrentHint = string.Format(Loc.T("O grimório guarda pistas. Aproxime-se e pressione {0} para ler"), InputBindings.Get(GameAction.Interact));
             else if (!paused && pauseHintTime < 7f)
             {
-                CurrentHint = $"{InputBindings.Get(GameAction.Pause)} — pausar e consultar as opções";
+                CurrentHint = string.Format(Loc.T("{0} — pausar e consultar as opções"), InputBindings.Get(GameAction.Pause));
                 if (!blocked) pauseHintTime += Time.unscaledDeltaTime;
             }
             else CurrentHint = string.Empty;

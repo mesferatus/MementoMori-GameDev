@@ -24,6 +24,9 @@ namespace MementoMori.Player
         private float splashStartedAt;
         private float nextSplashAt;
         private bool isSwimming;
+        private Vector2 lastFixedPosition;
+        private int blockedSteps;
+        private bool movementBlocked;
         public bool IsSwimming => isSwimming;
         public Vector2 SafeSavePosition => isSwimming ? lastDryPosition : (Vector2)transform.position;
 
@@ -37,6 +40,7 @@ namespace MementoMori.Player
             body.freezeRotation = true;
             body.interpolation = RigidbodyInterpolation2D.None;
             lastDryPosition = body.position;
+            lastFixedPosition = body.position;
             waterZone = GardenWaterZone.Ensure();
             if (animator == null) animator = GetComponentInChildren<Animator>();
             if (gameObject.scene.name != "DominioLua")
@@ -87,7 +91,7 @@ namespace MementoMori.Player
 
             UpdateSplash();
 
-            if (!isSwimming && moveInput.sqrMagnitude > 0f && Time.time >= nextFootstepAt)
+            if (!isSwimming && !movementBlocked && moveInput.sqrMagnitude > 0f && Time.time >= nextFootstepAt)
             {
                 RuntimeAudio.PlayOneShot("17_footstep_stone", .2f);
                 nextFootstepAt = Time.time + .42f;
@@ -98,7 +102,7 @@ namespace MementoMori.Player
                 // The swim frames already animate the strokes; extra code bobbing shimmered against the pixel grid.
                 animator.speed = isSwimming ? .8f : 1f;
                 animator.transform.localPosition = baseVisualPosition;
-                animator.SetFloat("Speed", moveInput.sqrMagnitude);
+                animator.SetFloat("Speed", movementBlocked ? 0f : moveInput.sqrMagnitude);
                 animator.SetFloat("MoveX", moveInput.x);
                 animator.SetFloat("MoveY", moveInput.y);
                 if (moveInput.sqrMagnitude > 0f)
@@ -116,6 +120,14 @@ namespace MementoMori.Player
         {
             if (InputGate.Instance != null && InputGate.Instance.IsBlocked) moveInput = Vector2.zero;
             moveInput = CardinalMovement.Snap(moveInput);
+            // Walking into a wall keeps the input but not the displacement; after a few static
+            // steps the walk cycle and footsteps stop instead of treading in place.
+            var displacement = (body.position - lastFixedPosition).magnitude;
+            lastFixedPosition = body.position;
+            if (moveInput.sqrMagnitude < .001f) blockedSteps = 0;
+            else if (displacement < moveSpeed * Time.fixedDeltaTime * .2f) blockedSteps = Mathf.Min(blockedSteps + 1, 8);
+            else blockedSteps = 0;
+            movementBlocked = blockedSteps >= 3;
             if (moveInput.sqrMagnitude < .001f)
             {
                 body.linearVelocity = Vector2.zero;

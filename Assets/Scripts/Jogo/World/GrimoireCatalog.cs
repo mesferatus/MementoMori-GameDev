@@ -23,14 +23,19 @@ namespace MementoMori.World
 
         private static readonly List<Entry> entries = new();
         private static bool loaded;
+        private static bool loadedEnglish;
         public static IReadOnlyList<Entry> Entries { get { Load(); return entries; } }
         public static int Count { get { Load(); return entries.Count; } }
 
         private static void Load()
         {
-            if (loaded) return;
+            var english = Loc.English;
+            if (loaded && loadedEnglish == english) return;
             loaded = true;
-            var source = Resources.Load<TextAsset>("Grimoire/CanonicalEntries");
+            loadedEnglish = english;
+            entries.Clear();
+            var source = english ? Resources.Load<TextAsset>("Grimoire/CanonicalEntries_EN") : null;
+            if (source == null) source = Resources.Load<TextAsset>("Grimoire/CanonicalEntries");
             if (source == null) { Debug.LogError("Grimoire canonical entries resource is missing."); return; }
             Entry current = null;
             string section = null;

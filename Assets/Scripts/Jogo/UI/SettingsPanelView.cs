@@ -27,6 +27,10 @@ namespace MementoMori.UI
         public event System.Action<bool> VisibilityChanged;
         public bool IsCapturing => capturingAction.HasValue;
 
+        private void OnEnable() => Loc.LanguageChanged += RefreshLanguage;
+        private void OnDisable() => Loc.LanguageChanged -= RefreshLanguage;
+        private void RefreshLanguage() { if (IsOpen) Render(); }
+
         private void Update()
         {
             if (!IsCapturing || !Input.anyKeyDown) return;
@@ -40,7 +44,7 @@ namespace MementoMori.UI
                 if (!InputBindings.TryBind(action, key))
                 {
                     Render();
-                    heading.text = "TECLA JÁ UTILIZADA";
+                    heading.text = Loc.T("TECLA JÁ UTILIZADA");
                     return;
                 }
                 Render();
@@ -142,6 +146,7 @@ namespace MementoMori.UI
             backRect.anchorMin = backRect.anchorMax = backRect.pivot = new Vector2(.5f, 0f);
             backRect.anchoredPosition = new Vector2(0f, 46f);
             back.GetComponentInChildren<TMP_Text>().text = "VOLTAR";
+            LocalizedText.Bind(back.GetComponentInChildren<TMP_Text>());
             MenuButtonStyle.Apply(back, new Vector2(380f, 84f), .6f);
             back.onClick.AddListener(Close);
             settingsPanel.SetActive(false);
@@ -152,6 +157,8 @@ namespace MementoMori.UI
             var result = Instantiate(template, parent);
             result.name = name;
             result.onClick = new Button.ButtonClickedEvent();
+            result.GetComponent<MenuButtonFeedback>()?.Rebind();
+            foreach (var label in result.GetComponentsInChildren<TMP_Text>(true)) LocalizedText.Unbind(label);
             var size = result.GetComponent<LayoutElement>();
             if (size != null) { size.minHeight = 55f; size.preferredHeight = 55f; }
             return result;
@@ -256,10 +263,10 @@ namespace MementoMori.UI
             var s = AccessibilitySettings.Instance;
             if (s == null) return;
             var sectionNames = new[] { "ÁUDIO", "VÍDEO", "LEITURA", "CONTROLES" };
-            heading.text = "CONFIGURAÇÕES";
+            heading.text = Loc.T("CONFIGURAÇÕES");
             for (var i = 0; i < tabs.Length; i++)
             {
-                tabs[i].GetComponentInChildren<TMP_Text>().text = sectionNames[i];
+                tabs[i].GetComponentInChildren<TMP_Text>().text = Loc.T(sectionNames[i]);
                 tabs[i].image.color = i == section ? Color.white : new Color(.55f, .46f, .66f, 1f);
                 var tabText = tabs[i].GetComponentInChildren<TMP_Text>();
                 tabText.color = i == section ? MenuPanelStyle.TitleColor : MenuPanelStyle.CaptionColor;
@@ -279,26 +286,33 @@ namespace MementoMori.UI
                 label.rectTransform.anchorMax = Vector2.one;
                 label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
             }
+            var yes = Loc.T("SIM"); var no = Loc.T("NÃO");
             if (section == 0)
             {
-                SetAudioRow(0, "GERAL", s.MasterVolume, s.SetMasterVolume);
-                SetAudioRow(1, "MÚSICA", s.MusicVolume, s.SetMusicVolume);
-                SetAudioRow(2, "EFEITOS", s.EffectsVolume, s.SetEffectsVolume);
-                SetAudioRow(3, "VOZES", s.VoiceVolume, s.SetVoiceVolume);
+                SetAudioRow(0, Loc.T("GERAL"), s.MasterVolume, s.SetMasterVolume);
+                SetAudioRow(1, Loc.T("MÚSICA"), s.MusicVolume, s.SetMusicVolume);
+                SetAudioRow(2, Loc.T("EFEITOS"), s.EffectsVolume, s.SetEffectsVolume);
+                SetAudioRow(3, Loc.T("VOZES"), s.VoiceVolume, s.SetVoiceVolume);
             }
             else if (section == 1)
             {
-                SetRow(0, "TELA CHEIA  " + (Screen.fullScreen ? "SIM" : "NÃO"), () => { Screen.fullScreen = !Screen.fullScreen; PlayerPrefs.SetInt("MM.Settings.Fullscreen", Screen.fullScreen ? 1 : 0); Render(); });
-                SetRow(1, "RESOLUÇÃO  " + Screen.width + " × " + Screen.height, () => { CycleResolution(); Render(); });
-                rows[2].gameObject.SetActive(false);
-                SetRow(3, "TAMANHO DO TEXTO  " + s.FontScale.ToString("0.0") + "×", () => { s.SetFontScale(s.FontScale >= 1.6f ? .8f : s.FontScale + .2f); Render(); });
+                SetRow(0, Loc.T("TELA CHEIA") + "  " + (Screen.fullScreen ? yes : no), () => { Screen.fullScreen = !Screen.fullScreen; PlayerPrefs.SetInt("MM.Settings.Fullscreen", Screen.fullScreen ? 1 : 0); Render(); });
+                SetRow(1, Loc.T("RESOLUÇÃO") + "  " + Screen.width + " × " + Screen.height, () => { CycleResolution(); Render(); });
+                SetRow(2, Loc.T("IDIOMA") + "  " + (s.Language == "en" ? "ENGLISH" : "PORTUGUÊS"), () => { s.SetLanguage(s.Language == "en" ? "pt" : "en"); Render(); });
+                SetRow(3, Loc.T("TAMANHO DO TEXTO") + "  " + s.FontScale.ToString("0.0") + "×", () => { s.SetFontScale(s.FontScale >= 1.6f ? .8f : s.FontScale + .2f); Render(); });
             }
             else if (section == 2)
             {
-                SetRow(0, "VELOCIDADE DO TEXTO  " + s.TextSpeed.ToString("0.0") + "×", () => { s.SetTextSpeed(s.TextSpeed >= 2f ? .5f : s.TextSpeed + .25f); Render(); });
-                SetRow(1, "LEGENDAS SONORAS  " + (s.SoundCaptions ? "SIM" : "NÃO"), () => { s.SetSoundCaptions(!s.SoundCaptions); Render(); });
-                SetRow(2, "ESPAÇO EXTRA  " + (s.RemapInteractToSpace ? "SIM" : "NÃO"), () => { s.SetRemapInteractToSpace(!s.RemapInteractToSpace); Render(); });
-                SetRow(3, "RESTAURAR PADRÕES", () => { s.RestoreDefaults(); Render(); });
+                SetRow(0, Loc.T("VELOCIDADE DO TEXTO") + "  " + s.TextSpeed.ToString("0.0") + "×", () => { s.SetTextSpeed(s.TextSpeed >= 2f ? .5f : s.TextSpeed + .25f); Render(); });
+                SetRow(1, Loc.T("LEGENDAS SONORAS") + "  " + (s.SoundCaptions ? s.FootstepCaptions ? Loc.T("SIM, COM PASSOS") : yes : no), () =>
+                {
+                    if (!s.SoundCaptions) s.SetSoundCaptions(true);
+                    else if (!s.FootstepCaptions) s.SetFootstepCaptions(true);
+                    else { s.SetSoundCaptions(false); s.SetFootstepCaptions(false); }
+                    Render();
+                });
+                SetRow(2, Loc.T("ESPAÇO EXTRA") + "  " + (s.RemapInteractToSpace ? yes : no), () => { s.SetRemapInteractToSpace(!s.RemapInteractToSpace); Render(); });
+                SetRow(3, Loc.T("RESTAURAR PADRÕES"), () => { s.RestoreDefaults(); Render(); });
             }
             else
             {
@@ -310,13 +324,13 @@ namespace MementoMori.UI
                     var index = controlPage * 3 + i;
                     if (index >= actions.Length) { rows[i].gameObject.SetActive(false); continue; }
                     var action = actions[index];
-                    SetRow(i, names[index] + "  " + InputBindings.Get(action), () =>
+                    SetRow(i, Loc.T(names[index]) + "  " + InputBindings.Get(action), () =>
                     {
                         capturingAction = action;
-                        rows[index % 3].GetComponentInChildren<TMP_Text>().text = "PRESSIONE UMA TECLA";
+                        rows[index % 3].GetComponentInChildren<TMP_Text>().text = Loc.T("PRESSIONE UMA TECLA");
                     });
                 }
-                SetRow(3, controlPage < 2 ? "MAIS TECLAS" : "INÍCIO", () =>
+                SetRow(3, controlPage < 2 ? Loc.T("MAIS TECLAS") : Loc.T("INÍCIO"), () =>
                 {
                     controlPage = (controlPage + 1) % 3;
                     Render();

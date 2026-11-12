@@ -313,11 +313,11 @@ Procure o Arcano que domina reflexos, ciclos e aquilo que não pode ser visto in
 A Lua.
 @P08|Jardim Lunar: Crescente
 >HINT1
-Nem toda flor responde a Melantha primeiro.
+A flor Crescente não responde quando Melantha chega perto demais.
 >HINT2
-Observe quem está acompanhando você.
+Aproxime-se primeiro. Depois recue e observe a flor.
 >HINT3
-Deixe Poe se aproximar antes da ação de Melantha.
+Depois de se aproximar, mantenha Melantha afastada da flor por alguns instantes. Poe indica o caminho; não precisa entrar na água.
 @P09|Jardim Lunar: Cheia
 >HINT1
 A Lua Cheia revela quando imagem e origem coincidem.

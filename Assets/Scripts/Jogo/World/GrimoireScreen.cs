@@ -237,6 +237,28 @@ namespace MementoMori.World
             if (runtime == this) { SceneManager.sceneLoaded -= OnSceneLoaded; runtime = null; }
         }
 
+        private void OnEnable() => Loc.LanguageChanged += RefreshLanguage;
+        private void OnDisable() => Loc.LanguageChanged -= RefreshLanguage;
+
+        private void RefreshLanguage()
+        {
+            if (!runtimeHost || canvas == null) return;
+            var selectedId = selectedEntry?.Id;
+            var oldPage = page;
+            SelectTab(activeTab);
+            if (selectedId != null)
+                selectedEntry = visibleEntries.Find(entry => entry.Id == selectedId) ?? selectedEntry;
+            foreach (var caption in canvas.GetComponentsInChildren<TMP_Text>(true))
+                if (caption.name == "Caption" && caption.transform.parent != null)
+                {
+                    for (var i = 0; i < tabFrames.Length; i++)
+                        if (caption.transform.IsChildOf(tabFrames[i].transform)) caption.text = Loc.T(TabTitles[i]);
+                }
+            emptyLabel.text = Loc.T("Nenhuma entrada descoberta.");
+            RenderList();
+            ShowPage(oldPage);
+        }
+
         public static void NotifyNewEntry(string id) => runtime?.ShowNotice();
 
         private void ShowNotice()
@@ -252,7 +274,7 @@ namespace MementoMori.World
                 var scaler = root.GetComponent<CanvasScaler>();
                 scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
                 scaler.referenceResolution = new Vector2(1920, 1080);
-                noticeText = Text("Message", root.transform, "Nova entrada no grimório", titleFont, 20,
+                noticeText = Text("Message", root.transform, MementoMori.Core.Loc.T("Nova entrada no grimório"), titleFont, 20,
                     new Vector2(.38f, .94f), new Vector2(.62f, .99f), TextAlignmentOptions.Center);
                 noticeText.color = new Color(.9f, .75f, .95f);
             }
@@ -289,8 +311,8 @@ namespace MementoMori.World
                 pageCount = selectedEntry.Hints.Length + (recordAvailable && !string.IsNullOrEmpty(selectedEntry.Record) ? 1 : 0);
                 page = Mathf.Clamp(requested, 0, pageCount - 1);
                 pageBody.text = page < selectedEntry.Hints.Length
-                    ? "Pista " + (page == 0 ? "I" : page == 1 ? "II" : "III") + "\n\n" + selectedEntry.Hints[page]
-                    : "Registro após " + (selectedEntry.Id == "P03" ? "conclusão" : "a cena") + "\n\n" + selectedEntry.Record;
+                    ? MementoMori.Core.Loc.T("Pista") + " " + (page == 0 ? "I" : page == 1 ? "II" : "III") + "\n\n" + selectedEntry.Hints[page]
+                    : MementoMori.Core.Loc.T("Registro após") + " " + MementoMori.Core.Loc.T(selectedEntry.Id == "P03" ? "conclusão" : "a cena") + "\n\n" + selectedEntry.Record;
                 pageBody.pageToDisplay = 1;
             }
             else
@@ -318,7 +340,7 @@ namespace MementoMori.World
             visibleEntries.Clear();
             foreach (var entry in GrimoireCatalog.Entries)
                 if (entry.Category == activeTab && GrimoireCatalog.IsUnlocked(entry.Id)) visibleEntries.Add(entry);
-            indexTitle.text = TabTitles[activeTab];
+            indexTitle.text = MementoMori.Core.Loc.T(TabTitles[activeTab]);
             for (int i = 0; i < tabFrames.Length; i++)
             {
                 tabFrames[i].sprite = i == activeTab ? tabFrameSelected : tabFrameNormal;
@@ -341,7 +363,7 @@ namespace MementoMori.World
                 button.gameObject.SetActive(index < visibleEntries.Count);
                 if (index >= visibleEntries.Count) continue;
                 var entry = visibleEntries[index];
-                button.GetComponentInChildren<TMP_Text>().text = entry.Title + (GrimoireCatalog.IsNew(entry.Id) ? "  <size=62%><color=#7b3e8f>NOVO</color></size>" : "");
+                button.GetComponentInChildren<TMP_Text>().text = entry.Title + (GrimoireCatalog.IsNew(entry.Id) ? "  <size=62%><color=#7b3e8f>" + Loc.T("NOVO") + "</color></size>" : "");
                 var rowImage = button.GetComponent<Image>();
                 rowImage.sprite = entry == selectedEntry ? entrySelected : entryNormal;
                 rowImage.color = rowImage.sprite != null ? Color.white : entry == selectedEntry ? new Color(.72f, .55f, .73f, .48f) : Color.clear;
@@ -415,7 +437,7 @@ namespace MementoMori.World
                 button.transition = Selectable.Transition.SpriteSwap;
                 button.spriteState = new SpriteState { highlightedSprite = tabFrameHover, pressedSprite = tabFrameSelected, selectedSprite = tabFrameSelected, disabledSprite = tabFrameLocked };
                 button.onClick.AddListener(() => SelectTab(selected));
-                var caption = Text("Caption", frame.transform, TabTitles[i], titleFont, 20,
+                var caption = Text("Caption", frame.transform, MementoMori.Core.Loc.T(TabTitles[i]), titleFont, 20,
                     new Vector2(.08f, .14f), new Vector2(.92f, .85f), TextAlignmentOptions.Center);
                 caption.color = new Color(.91f, .79f, .91f);
             }
@@ -434,7 +456,7 @@ namespace MementoMori.World
                 var label = Text("Label", row.transform, "", bodyFont, 31, new Vector2(.15f, .06f), new Vector2(.86f, .94f), TextAlignmentOptions.MidlineLeft);
                 label.enableAutoSizing = true; label.fontSizeMin = 21; label.fontSizeMax = 30;
             }
-            emptyLabel = Text("Empty", book.transform, "Nenhuma entrada descoberta.", bodyFont, 19,
+            emptyLabel = Text("Empty", book.transform, Loc.T("Nenhuma entrada descoberta."), bodyFont, 19,
                 new Vector2(.22f, .47f), new Vector2(.44f, .56f), TextAlignmentOptions.Center);
             previousList = ArrowButton("PreviousList", book.transform, new Vector2(.245f, .18f), new Vector2(.285f, .23f), leftArrow);
             previousList.onClick.AddListener(() => ChangeListPage(listPage - 1));
@@ -494,6 +516,7 @@ namespace MementoMori.World
             image.preserveAspect = closeFrameSprite != null;
             var button = image.gameObject.AddComponent<Button>();
             var caption = Text("Label", image.transform, label, bodyFont, 26, new Vector2(.08f, .08f), new Vector2(.92f, .92f), TextAlignmentOptions.Center);
+            MementoMori.UI.LocalizedText.Bind(caption);
             caption.color = new Color(.9f, .78f, .91f);
             return button;
         }
