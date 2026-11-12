@@ -15,6 +15,7 @@ namespace MementoMori.UI
         private string lastKey;
         private Component targetComponent;
         private Transform player;
+        private bool placeBelow;
 
         // The prompt follows the object it refers to instead of sitting under Melantha, so it no longer
         // covers her or the props around her (candles on the ritual rug).
@@ -44,7 +45,9 @@ namespace MementoMori.UI
                 canvasGroup.alpha = visible ? 1f : 0f;
                 canvasGroup.blocksRaycasts = false;
             }
-            targetComponent = visible ? target as Component : null;
+            var nextTarget = visible ? target as Component : null;
+            if (nextTarget != targetComponent) placeBelow = false;
+            targetComponent = nextTarget;
             if (visible)
             {
                 SetPromptText(target.InteractionVerb);
@@ -63,7 +66,7 @@ namespace MementoMori.UI
             if (parent == null || camera == null) return;
 
             background.localScale = Vector3.one * PromptScale;
-            var world = targetComponent.transform.position;
+            var world = InteractionAnchor.Position(targetComponent);
             if (player == null)
             {
                 var controller = FindAnyObjectByType<MementoMori.Player.PlayerController>();
@@ -74,26 +77,34 @@ namespace MementoMori.UI
 
             var halfHeight = background.rect.height * PromptScale * .5f;
             var halfWidth = background.rect.width * PromptScale * .5f;
-            // Above the object, unless Melantha stands above it: then below, so the box never sits on her.
-            var below = player != null && player.position.y > world.y + .1f;
-            local.y += below ? -(halfHeight + PromptGap) : halfHeight + PromptGap;
             var bounds = parent.rect;
             // Keep object prompts above the room tutorial and the ornamental bottom edge.
             var bottomMargin = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Quarto"
                 ? Mathf.Max(ScreenMargin, bounds.height * .17f) : ScreenMargin;
-            if (below && local.y - halfHeight < bounds.yMin + bottomMargin && player != null)
+            local.x = Mathf.Clamp(local.x, bounds.xMin + halfWidth + ScreenMargin, bounds.xMax - halfWidth - ScreenMargin);
+            var above = new Vector2(local.x, Mathf.Clamp(local.y + halfHeight + PromptGap,
+                bounds.yMin + halfHeight + bottomMargin, bounds.yMax - halfHeight - ScreenMargin));
+            var below = new Vector2(local.x, Mathf.Clamp(local.y - halfHeight - PromptGap,
+                bounds.yMin + halfHeight + bottomMargin, bounds.yMax - halfHeight - ScreenMargin));
+            // Keep the same side for this object. Crossing its pivot is not a reason to jump the box.
+            // Switch only when the current placement actually covers the actor and the other is clear.
+            if (player != null)
             {
                 var actor = player.GetComponentInChildren<SpriteRenderer>();
-                if (actor != null)
+                if (actor != null && RectTransformUtility.ScreenPointToLocalPointInRectangle(parent,
+                        camera.WorldToScreenPoint(actor.bounds.min), null, out var actorMin)
+                    && RectTransformUtility.ScreenPointToLocalPointInRectangle(parent,
+                        camera.WorldToScreenPoint(actor.bounds.max), null, out var actorMax))
                 {
-                    var head = new Vector3(player.position.x, actor.bounds.max.y, player.position.z);
-                    if (RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, camera.WorldToScreenPoint(head), null, out var headLocal))
-                        local.y = headLocal.y + halfHeight + PromptGap;
+                    var actorRect = Rect.MinMaxRect(actorMin.x - 12f, actorMin.y - 12f, actorMax.x + 12f, actorMax.y + 12f);
+                    bool CoversActor(Vector2 centre) => new Rect(centre.x - halfWidth, centre.y - halfHeight,
+                        halfWidth * 2f, halfHeight * 2f).Overlaps(actorRect);
+                    if (CoversActor(placeBelow ? below : above) && !CoversActor(placeBelow ? above : below))
+                        placeBelow = !placeBelow;
                 }
             }
-            local.x = Mathf.Clamp(local.x, bounds.xMin + halfWidth + ScreenMargin, bounds.xMax - halfWidth - ScreenMargin);
-            local.y = Mathf.Clamp(local.y, bounds.yMin + halfHeight + bottomMargin, bounds.yMax - halfHeight - ScreenMargin);
-            background.localPosition = new Vector3(local.x, local.y, 0f);
+            var placement = placeBelow ? below : above;
+            background.localPosition = new Vector3(placement.x, placement.y, 0f);
         }
 
         private void SetPromptText(string action)
