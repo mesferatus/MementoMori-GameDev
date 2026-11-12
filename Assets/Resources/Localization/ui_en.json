@@ -2615,6 +2615,70 @@
     {
       "pt": "[vela se acende]",
       "en": "[candle lights]"
+    },
+    {
+      "pt": "Abrir porta",
+      "en": "Open door"
+    },
+    {
+      "pt": "Atravessar o portal da Lua",
+      "en": "Cross the Moon portal"
+    },
+    {
+      "pt": "Atravessar portal final",
+      "en": "Cross the final portal"
+    },
+    {
+      "pt": "Entrar em A LUA",
+      "en": "Enter THE MOON"
+    },
+    {
+      "pt": "Entrar em A MORTE",
+      "en": "Enter DEATH"
+    },
+    {
+      "pt": "Entrar em A TORRE",
+      "en": "Enter THE TOWER"
+    },
+    {
+      "pt": "Entrar em JULGAMENTO",
+      "en": "Enter JUDGEMENT"
+    },
+    {
+      "pt": "Entrar em O DIABO",
+      "en": "Enter THE DEVIL"
+    },
+    {
+      "pt": "Entrar em O ENFORCADO",
+      "en": "Enter THE HANGED MAN"
+    },
+    {
+      "pt": "Entrar em O EREMITA",
+      "en": "Enter THE HERMIT"
+    },
+    {
+      "pt": "Entrar no labirinto",
+      "en": "Enter the labyrinth"
+    },
+    {
+      "pt": "Examinar câmara vazia",
+      "en": "Examine the empty chamber"
+    },
+    {
+      "pt": "Examinar parede sem símbolo",
+      "en": "Examine the unmarked wall"
+    },
+    {
+      "pt": "Falar com Andrealphus",
+      "en": "Speak with Andrealphus"
+    },
+    {
+      "pt": "Observar ciclo",
+      "en": "Observe the cycle"
+    },
+    {
+      "pt": "Ouvir Andrealphus",
+      "en": "Listen to Andrealphus"
     }
   ]
 }

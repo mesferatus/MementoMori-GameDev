@@ -6,8 +6,6 @@ namespace MementoMori.Core
     {
         public static AccessibilitySettings Instance { get; private set; }
         public bool ReduceFlashes { get; private set; }
-        public bool SoundCaptions { get; private set; } = true;
-        public bool FootstepCaptions { get; private set; }
         public float FontScale { get; private set; } = 1f;
         public bool RemapInteractToSpace { get; private set; }
         public float TextSpeed { get; private set; } = 1f;
@@ -22,8 +20,6 @@ namespace MementoMori.Core
             Instance = this; DontDestroyOnLoad(gameObject);
             if (!Application.isPlaying) return;
             SetReduceFlashes(PlayerPrefs.GetInt("MM.Settings.ReduceFlashes", 0) != 0);
-            SetSoundCaptions(PlayerPrefs.GetInt("MM.Settings.SoundCaptions", 1) != 0);
-            SetFootstepCaptions(PlayerPrefs.GetInt("MM.Settings.FootstepCaptions", 0) != 0);
             SetTextSpeed(PlayerPrefs.GetFloat("MM.Settings.TextSpeed", 1f));
             SetMusicVolume(PlayerPrefs.GetFloat("MM.Settings.MusicVolume", .32f));
             SetEffectsVolume(PlayerPrefs.GetFloat("MM.Settings.EffectsVolume", .65f));
@@ -43,8 +39,6 @@ namespace MementoMori.Core
         private static void Store(string key, float value) { if (Application.isPlaying) PlayerPrefs.SetFloat("MM.Settings." + key, value); }
         private static void Store(string key, bool value) { if (Application.isPlaying) PlayerPrefs.SetInt("MM.Settings." + key, value ? 1 : 0); }
         public void SetReduceFlashes(bool value) { ReduceFlashes = value; Store("ReduceFlashes", value); }
-        public void SetSoundCaptions(bool value) { SoundCaptions = value; Store("SoundCaptions", value); }
-        public void SetFootstepCaptions(bool value) { FootstepCaptions = value; Store("FootstepCaptions", value); }
         public void SetTextSpeed(float value) { TextSpeed = Mathf.Clamp(value, .25f, 4f); Store("TextSpeed", TextSpeed); }
         public void SetMusicVolume(float value) { MusicVolume = Mathf.Clamp01(value); Store("MusicVolume", MusicVolume); MementoMori.Audio.RuntimeAudio.ApplyVolumeSettings(); }
         public void SetEffectsVolume(float value) { EffectsVolume = Mathf.Clamp01(value); Store("EffectsVolume", EffectsVolume); }
@@ -60,7 +54,7 @@ namespace MementoMori.Core
         }
         public void RestoreDefaults()
         {
-            SetReduceFlashes(false); SetSoundCaptions(true); SetFootstepCaptions(false); SetTextSpeed(1f);
+            SetReduceFlashes(false); SetTextSpeed(1f);
             SetMusicVolume(.32f); SetEffectsVolume(.65f); SetMasterVolume(1f); SetVoiceVolume(1f);
             SetFontScale(1f); SetRemapInteractToSpace(false);
             InputBindings.RestoreDefaults();
@@ -69,7 +63,6 @@ namespace MementoMori.Core
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.F1)) SetReduceFlashes(!ReduceFlashes);
-            if (Input.GetKeyDown(KeyCode.F2)) SetSoundCaptions(!SoundCaptions);
             if (Input.GetKeyDown(KeyCode.F3)) SetFontScale(FontScale >= 1.6f ? .8f : FontScale + .2f);
             if (Input.GetKeyDown(KeyCode.F4)) SetRemapInteractToSpace(!RemapInteractToSpace);
         }
