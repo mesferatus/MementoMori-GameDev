@@ -197,12 +197,14 @@ namespace MementoMori.Audio
 
         void CreateCaptionOverlay()
         {
-            var canvasObject = new GameObject("SoundCaptions", typeof(Canvas), typeof(CanvasGroup));
+            var canvasObject = new GameObject("SoundCaptions", typeof(Canvas), typeof(CanvasGroup), typeof(CanvasScaler));
             canvasObject.transform.SetParent(transform, false);
             var canvas = canvasObject.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 80;
+            var group=canvasObject.GetComponent<CanvasGroup>(); group.interactable=group.blocksRaycasts=false;
+            var scaler=canvasObject.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1920,1080);scaler.matchWidthOrHeight=.5f;
             caption = new GameObject("Caption", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
-            caption.transform.SetParent(canvasObject.transform, false); caption.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF"); caption.fontSize = 18; caption.alignment = TextAlignmentOptions.Center; caption.color = Color.white;
-            var rect = caption.rectTransform; rect.anchorMin = new Vector2(.12f, .075f); rect.anchorMax = new Vector2(.88f, .165f); rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
+            caption.transform.SetParent(canvasObject.transform, false); caption.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF"); caption.fontSize = 22; caption.alignment = TextAlignmentOptions.MidlineLeft; caption.raycastTarget=false; caption.color = Color.white;
+            var rect = caption.rectTransform; rect.anchorMin = new Vector2(.06f, .69f); rect.anchorMax = new Vector2(.32f, .75f); rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
             caption.gameObject.SetActive(false);
         }
 
@@ -226,6 +228,7 @@ namespace MementoMori.Audio
             "14_poe_appear" or "15_poe_soft_call" => "[Poe mia]",
             "17_footstep_stone" => "[passos na pedra]",
             "18_candle_extinguish" => "[vela se apaga]",
+            "22_candle_ignite" => "[vela se acende]",
             "11_mirror_shimmer" => "[espelho vibra]",
             "12_portal_open" => "[sino distante]",
             "16_daimon_appear" => "[presença próxima]",

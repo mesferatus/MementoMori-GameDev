@@ -42,7 +42,7 @@ namespace MementoMori.World
                 return;
             }
             var next = state.IncrementPuzzleProgress(ProgressId);
-            RuntimeAudio.PlayOneShot("18_candle_extinguish", .45f);
+            RuntimeAudio.PlayOneShot("22_candle_ignite", .45f);
             if (next == 4) state.SetFlag(StoryFlag.RoomCandlesDone);
             if (next == 1) SayV61(4, 4);
             else if (next == 4) SayV61(9, 2, true);
