@@ -38,6 +38,7 @@ namespace MementoMori.World
 
         private void LateUpdate()
         {
+            if (flame) return; // FlameDepthLink keeps the flame above its holder, without jumping in front of actors.
             if (player == null)
             {
                 if (Time.unscaledTime < nextLookup) return;
