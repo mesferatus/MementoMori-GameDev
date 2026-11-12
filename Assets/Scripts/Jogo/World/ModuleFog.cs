@@ -72,7 +72,8 @@ namespace MementoMori.World
             for (var i = 0; i < modules.Count; i++)
             {
                 var (rect, fog, drift) = modules[i];
-                var target = inside < 0 ? CorridorFog : i == inside ? 0f : RoomFog;
+                // Authored module bounds can overlap: clear every layer covering the player.
+                var target = rect.Contains(at) ? 0f : inside < 0 ? CorridorFog : RoomFog;
                 var c = fog.color;
                 c.a = Mathf.MoveTowards(c.a, target, FadeSpeed * Time.deltaTime);
                 fog.color = c;
@@ -106,6 +107,9 @@ namespace MementoMori.World
                     var n = Noise(u, v, 4) * .65f + Noise(u, v, 8) * .35f;
                     var edge = Mathf.Min(Mathf.Min(u, 1f-u), Mathf.Min(v, 1f-v));
                     var feather = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(edge / .22f));
+                    // An elliptical falloff breaks the rectangular silhouette of the quad.
+                    var radius = new Vector2((u - .5f) * 2f, (v - .5f) * 2f).magnitude;
+                    feather *= Mathf.SmoothStep(0f, 1f, Mathf.Clamp01((1f - radius) / .5f));
                     pixels[y * size + x] = new Color(1f, 1f, 1f, Mathf.Lerp(.12f, .9f, n) * feather);
                 }
             tex.SetPixels(pixels);
