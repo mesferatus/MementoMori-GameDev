@@ -58,6 +58,7 @@ namespace MementoMori.World
                         _ => 4
                     };
                     var lit = progress > order;
+                    SetCandleGlow(candle, lit);
                     var sprite = lit ? litCandle : unlitCandle;
                     if (sprite == null) continue;
                     candle.sprite = sprite;
@@ -76,7 +77,8 @@ namespace MementoMori.World
             {
                 var renderer = interactable.GetComponentInChildren<SpriteRenderer>();
                 if (renderer == null || litCandle == null || unlitCandle == null) continue;
-                renderer.sprite = progress > interactable.OrderIndex ? litCandle : unlitCandle;
+                var lit = progress > interactable.OrderIndex;
+                renderer.sprite = lit ? litCandle : unlitCandle;
             }
             if (ritualGlow != null) ritualGlow.SetActive(active);
             if (flames == null) return;
@@ -110,15 +112,90 @@ namespace MementoMori.World
                 {
                     light = flame.AddComponent<Light2D>();
                     light.lightType = Light2D.LightType.Point;
-                    light.color = new Color(1f, .78f, .45f, 1f);
-                    light.pointLightInnerRadius = .12f;
-                    light.pointLightOuterRadius = 1.5f;
-                    light.falloffIntensity = .7f;
+                    light.color = new Color(1f, .74f, .42f, 1f);
+                    light.pointLightInnerRadius = .2f;
+                    light.pointLightOuterRadius = 2.4f;
+                    light.falloffIntensity = .6f;
                 }
+                AddHalo(flame, renderer);
             }
             if (light != null)
                 light.intensity = AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.ReduceFlashes
-                    ? .95f : .85f + Mathf.PerlinNoise(Time.time * 2.3f, flame.transform.position.x) * .25f;
+                    ? 1.25f : 1.1f + Mathf.PerlinNoise(Time.time * 2.3f, flame.transform.position.x) * .35f;
+        }
+
+        /// <summary>
+        /// The ritual candles have no separate flame objects: the glow (additive halo + warm 2D light)
+        /// lives at the wick of the lit candle sprite and switches with it.
+        /// </summary>
+        private static void SetCandleGlow(SpriteRenderer candle, bool lit)
+        {
+            var wick = candle.transform.Find("Wick");
+            if (!lit) { if (wick != null) wick.gameObject.SetActive(false); return; }
+            if (wick == null)
+            {
+                EnsureAmbientLight();
+                wick = new GameObject("Wick").transform;
+                wick.SetParent(candle.transform, false);
+                var top = candle.sprite != null ? candle.sprite.bounds.max.y : .5f;
+                wick.localPosition = new Vector3(0f, top * .08f, 0f);
+                var light = wick.gameObject.AddComponent<Light2D>();
+                light.lightType = Light2D.LightType.Point;
+                light.color = new Color(1f, .74f, .42f, 1f);
+                light.intensity = 1.2f;
+                light.pointLightInnerRadius = .15f;
+                light.pointLightOuterRadius = 2.2f;
+                light.falloffIntensity = .65f;
+                var holder = wick.gameObject.AddComponent<SpriteRenderer>();
+                holder.enabled = false;
+                holder.sortingLayerID = candle.sortingLayerID;
+                holder.sortingOrder = candle.sortingOrder;
+                AddHalo(wick.gameObject, holder);
+                var halo = wick.Find("Halo");
+                if (halo != null) halo.localScale *= .75f;
+            }
+            wick.gameObject.SetActive(true);
+        }
+
+        /// <summary>
+        /// A scene with no Light2D renders at full brightness; the first point light switches 2D lighting on
+        /// and everything outside it would go black. A neutral global light keeps the room as authored.
+        /// </summary>
+        private static void EnsureAmbientLight()
+        {
+            foreach (var existing in FindObjectsByType<Light2D>(FindObjectsSortMode.None))
+                if (existing.lightType == Light2D.LightType.Global) return;
+            var ambient = new GameObject("RoomAmbientLight").AddComponent<Light2D>();
+            ambient.lightType = Light2D.LightType.Global;
+            ambient.color = Color.white;
+            ambient.intensity = 1f;
+        }
+
+        private static Sprite haloSprite;
+        private static Material haloMaterial;
+
+        /// <summary>Warm additive glow around a lit flame; the shader adds its own soft flicker.</summary>
+        private static void AddHalo(GameObject flame, SpriteRenderer flameRenderer)
+        {
+            if (haloMaterial == null) haloMaterial = Resources.Load<Material>("Presentation/FX/CandleHalo");
+            if (haloMaterial == null || flame.transform.Find("Halo") != null) return;
+            if (haloSprite == null)
+                haloSprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0, 0, 4, 4), new Vector2(.5f, .5f), 4f);
+            var halo = new GameObject("Halo", typeof(SpriteRenderer));
+            halo.transform.SetParent(flame.transform, false);
+            var scale = flame.transform.lossyScale.x;
+            halo.transform.localScale = Vector3.one * (1.5f / Mathf.Max(.01f, scale));
+            var glow = halo.GetComponent<SpriteRenderer>();
+            glow.sprite = haloSprite;
+            glow.sharedMaterial = haloMaterial;
+            if (flameRenderer != null)
+            {
+                glow.sortingLayerID = flameRenderer.sortingLayerID;
+                glow.sortingOrder = flameRenderer.sortingOrder + 1;
+            }
+            var block = new MaterialPropertyBlock();
+            block.SetFloat("_Seed", flame.transform.position.x * 3.1f + flame.transform.position.y);
+            glow.SetPropertyBlock(block);
         }
 
         private SpriteRenderer FindHolderRenderer(GameObject flame)
