@@ -51,12 +51,24 @@ namespace MementoMori.World
         private void Update()
         {
             RefreshVisualState(false);
+            PreloadWhenApproached();
             if (sceneName != "DominioLua" || GameState.Instance == null
                 || !GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete)) return;
             var player = GameObject.FindGameObjectWithTag("Player");
             if (player == null || Vector2.Distance(player.transform.position, transform.position) > 4f) return;
             GrimoireCatalog.Discover("A07");
             GrimoireCatalog.Discover("P07");
+        }
+        private float nextPreloadCheck;
+        private void PreloadWhenApproached()
+        {
+            // Only the open gate to the Moon Domain: the player is a few steps from a guaranteed transition.
+            if (sceneName != "DominioLua" || Time.unscaledTime < nextPreloadCheck || SceneLoader.Instance == null) return;
+            nextPreloadCheck = Time.unscaledTime + .5f;
+            if (SceneLoader.Instance.IsLoading || SceneLoader.Instance.IsPreloading(sceneName) || !CanInteract(default)) return;
+            var player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null && Vector2.Distance(player.transform.position, transform.position) < 7f)
+                SceneLoader.Instance.Preload(sceneName);
         }
         private void RefreshVisualState(bool force)
         {
@@ -123,6 +135,7 @@ namespace MementoMori.World
             }
             InputGate.Instance?.Release("FinalTraversal");
             RuntimeAudio.PlayOneShot("12_portal_open", .8f);
+            GamepadInput.Rumble(.25f, .45f, .35f);
             SceneLoader.Instance?.LoadScene(sceneName);
         }
 
@@ -139,6 +152,7 @@ namespace MementoMori.World
             if (!CanInteract(default) || SceneLoader.Instance == null) return;
             used = true;
             RuntimeAudio.PlayOneShot("12_portal_open", .8f);
+            GamepadInput.Rumble(.25f, .45f, .35f);
             SceneLoader.Instance?.LoadScene(sceneName);
         }
     }

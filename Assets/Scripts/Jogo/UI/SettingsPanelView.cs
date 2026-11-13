@@ -305,18 +305,38 @@ namespace MementoMori.UI
             {
                 SetRow(0, Loc.T("VELOCIDADE DO TEXTO") + "  " + s.TextSpeed.ToString("0.0") + "×", () => { s.SetTextSpeed(s.TextSpeed >= 2f ? .5f : s.TextSpeed + .25f); Render(); });
                 SetRow(1, Loc.T("ESPAÇO EXTRA") + "  " + (s.RemapInteractToSpace ? yes : no), () => { s.SetRemapInteractToSpace(!s.RemapInteractToSpace); Render(); });
-                SetRow(2, Loc.T("RESTAURAR PADRÕES"), () => { s.RestoreDefaults(); Render(); });
-                rows[3].gameObject.SetActive(false);
+                SetRow(2, Loc.T("REDUZIR PISCANTES") + "  " + (s.ReduceFlashes ? yes : no), () => { s.SetReduceFlashes(!s.ReduceFlashes); Render(); });
+                SetRow(3, Loc.T("RESTAURAR PADRÕES"), () => { s.RestoreDefaults(); Render(); });
             }
             else
             {
+                if (controlPage == 3)
+                {
+                    // Read-only reference: controller layout and keyboard shortcuts that have no binding row.
+                    SetRow(0, Loc.T("CONTROLE: A interagir · B voltar · Y grimório"), () => { });
+                    SetRow(1, Loc.T("Start pausa · Select mapa · LB histórico · RB rápido"), () => { });
+                    SetRow(2, Loc.T("VIBRAÇÃO") + "  " + (s.Vibration ? yes : no), () =>
+                    {
+                        s.SetVibration(!s.Vibration);
+                        GamepadInput.Rumble(.35f, .2f, .18f);
+                        Render();
+                    });
+                    SetRow(3, Loc.T("INÍCIO"), () => { controlPage = 0; Render(); });
+                    return;
+                }
                 var actions = new[] { GameAction.MoveLeft, GameAction.MoveRight, GameAction.MoveUp,
                     GameAction.MoveDown, GameAction.Interact, GameAction.Grimoire, GameAction.Pause };
                 var names = new[] { "ESQUERDA", "DIREITA", "CIMA", "BAIXO", "INTERAGIR", "GRIMÓRIO", "PAUSA" };
                 for (var i = 0; i < 3; i++)
                 {
                     var index = controlPage * 3 + i;
-                    if (index >= actions.Length) { rows[i].gameObject.SetActive(false); continue; }
+                    if (index >= actions.Length)
+                    {
+                        // The last key page has room for the shortcuts that have no rebinding row.
+                        if (index == actions.Length) SetRow(i, Loc.T("TECLADO: M mapa · H histórico · Tab rápido"), () => { });
+                        else rows[i].gameObject.SetActive(false);
+                        continue;
+                    }
                     var action = actions[index];
                     SetRow(i, Loc.T(names[index]) + "  " + InputBindings.Get(action), () =>
                     {
@@ -324,9 +344,9 @@ namespace MementoMori.UI
                         rows[index % 3].GetComponentInChildren<TMP_Text>().text = Loc.T("PRESSIONE UMA TECLA");
                     });
                 }
-                SetRow(3, controlPage < 2 ? Loc.T("MAIS TECLAS") : Loc.T("INÍCIO"), () =>
+                SetRow(3, controlPage < 2 ? Loc.T("MAIS TECLAS") : Loc.T("CONTROLE"), () =>
                 {
-                    controlPage = (controlPage + 1) % 3;
+                    controlPage = (controlPage + 1) % 4;
                     Render();
                 });
             }
