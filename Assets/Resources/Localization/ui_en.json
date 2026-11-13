@@ -2679,6 +2679,338 @@
     {
       "pt": "Ouvir Andrealphus",
       "en": "Listen to Andrealphus"
+    },
+    {
+      "pt": "Carregando",
+      "en": "Loading"
+    },
+    {
+      "pt": "A memória do núcleo",
+      "en": "The memory of the core"
+    },
+    {
+      "pt": "Ajustar velas",
+      "en": "Arrange the candles"
+    },
+    {
+      "pt": "As direções sem céu",
+      "en": "The directions without a sky"
+    },
+    {
+      "pt": "Conferir janela",
+      "en": "Check the window"
+    },
+    {
+      "pt": "Escute as quatro vozes. A forma pode repetir-se; a presença não obedece a uma ordem. O que você pode guardar sem aprisionar?",
+      "en": "Listen to the four voices. A shape may repeat; a presence keeps no order. What can you keep without imprisoning it?"
+    },
+    {
+      "pt": "Examinar fotografia",
+      "en": "Examine the photograph"
+    },
+    {
+      "pt": "Examinar grimório",
+      "en": "Examine the grimoire"
+    },
+    {
+      "pt": "Examinar tigela",
+      "en": "Examine the bowl"
+    },
+    {
+      "pt": "Guardar objeto ritual",
+      "en": "Put away the ritual object"
+    },
+    {
+      "pt": "Na base das colunas: «Onde a luz nasce, eu começo. Onde ela repousa, eu recordo. Entre ambos, permaneço». Oriente os três passos.",
+      "en": "At the base of the columns: “Where the light is born, I begin. Where it rests, I remember. Between the two, I remain.” Orient the three steps."
+    },
+    {
+      "pt": "O ciclo incompleto",
+      "en": "The unfinished cycle"
+    },
+    {
+      "pt": "O que permanece no poço",
+      "en": "What remains in the well"
+    },
+    {
+      "pt": "Tocar no brinquedo",
+      "en": "Touch the toy"
+    },
+    {
+      "pt": "Três anéis: «Primeiro escuto. Depois reconheço o que mudou. Só então sustento o que resta».",
+      "en": "Three rings: “First I listen. Then I recognize what changed. Only then do I sustain what remains.”"
+    },
+    {
+      "pt": "«A luz cresce, torna-se inteira, aprende a diminuir e retorna ao escuro». Comece onde a luz nasce de novo.",
+      "en": "“The light grows, becomes whole, learns to wane and returns to the dark.” Begin where the light is born again."
+    },
+    {
+      "pt": "Progresso salvo",
+      "en": "Progress saved"
+    },
+    {
+      "pt": "Espaço — pular",
+      "en": "Space — skip"
+    },
+    {
+      "pt": "Objetivo",
+      "en": "Objective"
+    },
+    {
+      "pt": "Alguma coisa neste quarto quer ser notada. Que original.",
+      "en": "Something in this room wants attention. How original."
+    },
+    {
+      "pt": "Chegue perto da fotografia, do grimório e da janela e interaja com cada um.",
+      "en": "Walk up to the photo, the grimoire and the window, and interact with each."
+    },
+    {
+      "pt": "Aquela fotografia está me encarando há tempo demais.",
+      "en": "That photo's been staring at me way too long."
+    },
+    {
+      "pt": "Vá até a fotografia e examine-a.",
+      "en": "Go to the photo and examine it."
+    },
+    {
+      "pt": "O grimório não vai se ler sozinho. Infelizmente.",
+      "en": "The grimoire won't read itself. Sadly."
+    },
+    {
+      "pt": "Examine o livro aberto no quarto.",
+      "en": "Examine the open book in the room."
+    },
+    {
+      "pt": "Tem uma corrente de ar aqui. Clássico.",
+      "en": "There's a draft in here. Classic."
+    },
+    {
+      "pt": "Vá até a janela e feche-a.",
+      "en": "Go to the window and close it."
+    },
+    {
+      "pt": "O círculo no chão está esperando alguma coisa. Não é aplauso.",
+      "en": "The circle on the floor is waiting for something. Not applause."
+    },
+    {
+      "pt": "Pegue o objeto ritual e guarde-o no centro do círculo.",
+      "en": "Take the ritual object and set it in the center of the circle."
+    },
+    {
+      "pt": "Vela acesa na ordem errada é só decoração.",
+      "en": "Candles lit in the wrong order are just decor."
+    },
+    {
+      "pt": "Abra o grimório e acenda as velas na ordem que ele descreve.",
+      "en": "Open the grimoire and light the candles in the order it describes."
+    },
+    {
+      "pt": "Tudo pronto. Falta só a parte mágica, né.",
+      "en": "All set. Just the magic part left, huh."
+    },
+    {
+      "pt": "Volte ao centro do círculo e interaja.",
+      "en": "Go back to the center of the circle and interact."
+    },
+    {
+      "pt": "A cama. Dormir. É literalmente o próximo passo.",
+      "en": "The bed. Sleep. It's literally the next step."
+    },
+    {
+      "pt": "Vá até a cama e interaja para dormir.",
+      "en": "Go to the bed and interact to sleep."
+    },
+    {
+      "pt": "Uma das vozes soa mais clara e mais perto. As outras só fazem drama.",
+      "en": "One voice sounds clearer and closer. The others are just being dramatic."
+    },
+    {
+      "pt": "Pare em cada bifurcação e siga o corredor onde a voz soa mais nítida e menos abafada.",
+      "en": "Stop at each fork and take the corridor where the voice sounds sharpest and least muffled."
+    },
+    {
+      "pt": "Andar pra frente costuma ajudar.",
+      "en": "Walking forward usually helps."
+    },
+    {
+      "pt": "Continue pelo corredor onde as vozes terminaram.",
+      "en": "Keep going down the corridor where the voices ended."
+    },
+    {
+      "pt": "Aquela porta promete uma saída. Promete.",
+      "en": "That door promises a way out. Promises."
+    },
+    {
+      "pt": "Atravesse a porta e repare para onde ela leva você.",
+      "en": "Go through the door and notice where it takes you."
+    },
+    {
+      "pt": "A porta não quer ser vencida. Quer ser entendida.",
+      "en": "The door doesn't want to be beaten. It wants to be understood."
+    },
+    {
+      "pt": "Na moldura: «Nem toda passagem se vence atravessando». Escolha reconhecer o retorno.",
+      "en": "On the frame: «Not every passage is won by crossing». Choose to acknowledge the return."
+    },
+    {
+      "pt": "O poço tem coisas a dizer. Todo mundo tem.",
+      "en": "The well has things to say. Everyone does."
+    },
+    {
+      "pt": "Interaja com o poço e ouça as quatro vozes até o fim.",
+      "en": "Interact with the well and hear all four voices out."
+    },
+    {
+      "pt": "Uma daquelas vozes era minha. E mentiu.",
+      "en": "One of those voices was mine. And it lied."
+    },
+    {
+      "pt": "Escolha a voz que parece sua, mas que você não lembra de ter dito.",
+      "en": "Pick the voice that sounds like yours but says something you don't remember saying."
+    },
+    {
+      "pt": "Três obeliscos e uma estrela ausente. Geometria, que delícia.",
+      "en": "Three obelisks and a missing star. Geometry, yay."
+    },
+    {
+      "pt": "Gire os obeliscos até as sombras apontarem para o mesmo ponto: Sul, Norte, Leste.",
+      "en": "Turn the obelisks until the shadows meet at one point: South, North, East."
+    },
+    {
+      "pt": "«O que abre não sustenta.» Alguém achou isso poético.",
+      "en": "«What opens does not hold.» Someone thought that was poetic."
+    },
+    {
+      "pt": "Alinhe na ordem: Nome abre, Vínculo sustenta, Preço fecha.",
+      "en": "Line them up in order: Name opens, Bond holds, Price closes."
+    },
+    {
+      "pt": "As marcas querem ir para o Santuário da Lua. Eu também queria férias.",
+      "en": "The marks want to go to the Moon Sanctuary. I'd like a vacation too."
+    },
+    {
+      "pt": "No Santuário da Lua, escolha «Atravessar»: não possuir, não apagar.",
+      "en": "At the Moon Sanctuary, choose «Cross»: don't possess, don't erase."
+    },
+    {
+      "pt": "O portal está aberto. Dá pra sentir daqui.",
+      "en": "The portal is open. You can feel it from here."
+    },
+    {
+      "pt": "Volte ao portal da Lua e entre nele.",
+      "en": "Head back to the Moon portal and step in."
+    },
+    {
+      "pt": "As flores estão do outro lado da água. Claro que estão.",
+      "en": "The flowers are across the water. Of course they are."
+    },
+    {
+      "pt": "Entre na água do Jardim Lunar e nade até tocar as flores.",
+      "en": "Get into the water in the Moon Garden and swim until you reach the flowers."
+    },
+    {
+      "pt": "Sete espelhos e nenhum me favorece.",
+      "en": "Seven mirrors and not one flatters me."
+    },
+    {
+      "pt": "Toque os espelhos na ordem que os símbolos indicam; depois de alguns erros, eles mostram pistas.",
+      "en": "Touch the mirrors in the order the symbols point to; after a few mistakes they start giving clues."
+    },
+    {
+      "pt": "Não confie na imagem perfeita. Nunca é boa ideia.",
+      "en": "Don't trust the perfect image. Never a good idea."
+    },
+    {
+      "pt": "Siga a falha, depois o silêncio, depois a passagem.",
+      "en": "Follow the flaw, then the silence, then the passage."
+    },
+    {
+      "pt": "Oito portas, oito fases. Alguém aqui gosta de arquivo.",
+      "en": "Eight doors, eight phases. Someone here loves filing."
+    },
+    {
+      "pt": "Leia as oito portas e ordene as marcas: Marca, Reflexo, Memória.",
+      "en": "Read all eight doors, then order the marks: Mark, Reflection, Memory."
+    },
+    {
+      "pt": "Fase, memória e intenção. Três anéis, nenhuma paciência.",
+      "en": "Phase, memory and intent. Three rings, zero patience."
+    },
+    {
+      "pt": "Anéis do sigilo: a lua Nova, a Tigela do quarto e o verbo CHAMAR.",
+      "en": "Sigil rings: the New moon, the Bowl from the bedroom and the verb CALL."
+    },
+    {
+      "pt": "O Fragmento está logo ali. Dramaticamente esperando.",
+      "en": "The Fragment is right there. Waiting dramatically."
+    },
+    {
+      "pt": "Vá até a Câmara do Fragmento e interaja com ele.",
+      "en": "Go to the Fragment Chamber and interact with it."
+    },
+    {
+      "pt": "Tenho o que vim buscar. Hora de ir.",
+      "en": "Got what I came for. Time to go."
+    },
+    {
+      "pt": "Volte ao Portal Final e atravesse.",
+      "en": "Go back to the Final Portal and cross it."
+    },
+    {
+      "pt": "(Poe mia e olha para você. Parece dizer:)",
+      "en": "(Poe meows and looks at you. He seems to say:)"
+    },
+    {
+      "pt": "MAPA DO DOMÍNIO DA LUA",
+      "en": "MAP OF THE MOON DOMAIN"
+    },
+    {
+      "pt": "MAPA DO LABIRINTO",
+      "en": "MAP OF THE LABYRINTH"
+    },
+    {
+      "pt": "Select ou B — fechar",
+      "en": "Select or B — close"
+    },
+    {
+      "pt": "M ou Esc — fechar",
+      "en": "M or Esc — close"
+    },
+    {
+      "pt": "Nenhuma sala registrada ainda.",
+      "en": "No rooms recorded yet."
+    },
+    {
+      "pt": "Select — mapa",
+      "en": "Select — map"
+    },
+    {
+      "pt": "M — mapa",
+      "en": "M — map"
+    },
+    {
+      "pt": "CONTROLE: A interagir · B voltar · Y grimório",
+      "en": "CONTROLLER: A interact · B back · Y grimoire"
+    },
+    {
+      "pt": "Start pausa · Select mapa · LB histórico · RB rápido",
+      "en": "Start pause · Select map · LB history · RB fast"
+    },
+    {
+      "pt": "TECLADO: M mapa · H histórico · Tab rápido",
+      "en": "KEYBOARD: M map · H history · Tab fast"
+    },
+    {
+      "pt": "REDUZIR PISCANTES",
+      "en": "REDUCE FLASHING"
+    },
+    {
+      "pt": "VIBRAÇÃO",
+      "en": "VIBRATION"
+    },
+    {
+      "pt": "CONTROLE",
+      "en": "CONTROLLER"
     }
   ]
 }
