@@ -14,7 +14,8 @@ namespace MementoMori.V65
   void Awake(){visual=GetComponent<SpriteRenderer>();origin=transform.localPosition;}
   void Update(){
    if(visual && visual.isVisible && frames!=null && frames.Length>0)visual.sprite=frames[Mathf.FloorToInt((Time.time+phase)*fps)%frames.Length];
-   if(localLight) localLight.intensity=baseIntensity*(.94f+.04f*Mathf.Sin(Time.time*3.7f+phase)+.02f*Mathf.Sin(Time.time*7.3f));
+   var calm=MementoMori.Core.AccessibilitySettings.Instance!=null&&MementoMori.Core.AccessibilitySettings.Instance.ReduceFlashes;
+   if(localLight) localLight.intensity=calm?baseIntensity*.94f:baseIntensity*(.94f+.04f*Mathf.Sin(Time.time*3.7f+phase)+.02f*Mathf.Sin(Time.time*7.3f));
    if(floating)transform.localPosition=origin+Vector3.up*(Mathf.Sin(Time.time*.9f+phase)*.035f);
   }
  }
