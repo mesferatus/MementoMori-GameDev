@@ -52,6 +52,9 @@ namespace MementoMori.Interaction
         // Priority only breaks near-ties: a high-priority prop across the room must not steal the prompt
         // from the object Melantha is actually standing at.
         private const float PriorityTieMargin = .3f;
+        // Small on purpose: adjacent props (the three sigil rings sit ~0.6 apart) must hand over the prompt
+        // as soon as another one is really closer, while still absorbing frame-to-frame jitter.
+        private const float SwitchMargin = .1f;
 
         private void SelectCandidate()
         {
@@ -94,7 +97,7 @@ namespace MementoMori.Interaction
             if (previous != null && current != null && !ReferenceEquals(current, previous)
                 && previousDistance < float.MaxValue
                 && current.InteractionPriority <= previous.InteractionPriority
-                && bestDistance > previousDistance - PriorityTieMargin)
+                && bestDistance > previousDistance - SwitchMargin)
                 current = previous;
         }
 

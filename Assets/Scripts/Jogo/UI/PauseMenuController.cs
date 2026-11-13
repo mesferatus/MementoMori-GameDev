@@ -18,6 +18,7 @@ namespace MementoMori.UI
         private GameObject mainButtons;
         private GameObject slotButtons;
         private TMP_Text title;
+        private TMP_Text objectiveLabel;
         private SettingsPanelView settingsView;
         private readonly Dictionary<Canvas, bool> siblingCanvasStates = new Dictionary<Canvas, bool>();
         public void ConfigurePanel(GameObject pausePanel) => panel = pausePanel;
@@ -78,6 +79,18 @@ namespace MementoMori.UI
             foreach (var label in mainButtons.GetComponentsInChildren<TMP_Text>(true)) LocalizedText.Bind(label);
             if (slotButtons.transform.Find("Button_Voltar") is Transform backButton)
                 LocalizedText.Bind(backButton.GetComponentInChildren<TMP_Text>(true));
+            if (title != null)
+            {
+                // Returning players see where they left off: the pause screen hides the HUD objective.
+                objectiveLabel = new GameObject("PauseObjective", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
+                objectiveLabel.transform.SetParent(title.transform, false);
+                var rect = objectiveLabel.rectTransform;
+                rect.anchorMin = new Vector2(-.6f, 0f); rect.anchorMax = new Vector2(1.6f, 0f); rect.pivot = new Vector2(.5f, 1f);
+                rect.sizeDelta = new Vector2(0f, 64f); rect.anchoredPosition = new Vector2(0f, -4f);
+                objectiveLabel.font = title.font; objectiveLabel.fontSize = 22f; objectiveLabel.raycastTarget = false;
+                objectiveLabel.alignment = TextAlignmentOptions.Top; objectiveLabel.color = new Color(.79f, .72f, .84f, .85f);
+                objectiveLabel.textWrappingMode = TextWrappingModes.Normal;
+            }
             Loc.LanguageChanged += UpdateTitle;
             UpdateTitle();
         }
@@ -99,7 +112,14 @@ namespace MementoMori.UI
             if (label != null) { LocalizedText.Unbind(label); label.text = caption; }
             return button;
         }
-        private void UpdateTitle() { if (title != null) title.text = Loc.T(titleKey); }
+        private void UpdateTitle()
+        {
+            if (title != null) title.text = Loc.T(titleKey);
+            if (objectiveLabel == null) return;
+            var objective = ObjectiveToastController.Instance != null ? ObjectiveToastController.Instance.CurrentObjective : null;
+            objectiveLabel.text = titleKey != "PAUSA" || string.IsNullOrWhiteSpace(objective) ? string.Empty
+                : Loc.T("Objetivo") + ": " + Loc.T(objective);
+        }
         private void ShowSlots()
         {
             if (slotButtons == null || mainButtons == null) return;
@@ -134,12 +154,13 @@ namespace MementoMori.UI
         }
         private void Update()
         {
-            if (InputBindings.Down(GameAction.Pause) && (settingsView == null || !settingsView.IsCapturing && settingsView.CaptureConsumedFrame != Time.frameCount)
+            if ((InputBindings.Down(GameAction.Pause) || paused && GamepadInput.CancelDown()) && (settingsView == null || !settingsView.IsCapturing && settingsView.CaptureConsumedFrame != Time.frameCount)
                 && !MementoMori.Regions.V6Challenge.AnyOpen
                 && (DialogueManager.Instance == null || !DialogueManager.Instance.IsCinematic)
                 && DialogueManager.EscapeConsumedFrame != Time.frameCount
                 && MementoMori.Regions.V6Challenge.EscapeConsumedFrame != Time.frameCount
                 && !V61ChoicePresenter.IsOpen
+                && !MapScreen.IsOpen && MapScreen.CloseConsumedFrame != Time.frameCount
                 && !MementoMori.World.GrimoireScreen.AnyOpen
                 && MementoMori.World.GrimoireScreen.EscapeConsumedFrame != Time.frameCount)
             {
@@ -156,6 +177,7 @@ namespace MementoMori.UI
             if (paused) HideSiblingCanvases(); else RestoreSiblingCanvases();
             if (panel != null) panel.SetActive(paused);
             if (dimmer != null) dimmer.SetActive(paused);
+            if (paused) UpdateTitle();
         }
         private void HideSiblingCanvases()
         {

@@ -271,13 +271,13 @@ namespace MementoMori.UI
 
         private void Update()
         {
-            if (creditsPanel != null && creditsPanel.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
+            if (creditsPanel != null && creditsPanel.activeInHierarchy && InputBindings.CancelDown())
             {
                 HideCredits();
                 return;
             }
             if (settingsView != null && settingsView.IsOpen && !settingsView.IsCapturing
-                && settingsView.CaptureConsumedFrame != Time.frameCount && Input.GetKeyDown(KeyCode.Escape))
+                && settingsView.CaptureConsumedFrame != Time.frameCount && InputBindings.CancelDown())
                 settingsView.Close();
         }
         public void ConfigureCredits(GameObject panel) => creditsPanel = panel;

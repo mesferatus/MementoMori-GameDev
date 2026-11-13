@@ -71,6 +71,9 @@ namespace MementoMori.Dialogue
                 return;
             }
             Instance = this;
+            // The prefab keeps a Portuguese sample line for layout; never let it flash before the first real line.
+            if (bodyLabelTmp != null) bodyLabelTmp.text = string.Empty;
+            if (bodyLabel != null) bodyLabel.text = string.Empty;
         }
 
         private void OnEnable() => Loc.LanguageChanged += RefreshLanguage;
@@ -80,7 +83,7 @@ namespace MementoMori.Dialogue
         private void Update()
         {
             if (!IsOpen) return;
-            if (cinematic != null && cinematic.CanSkip && Input.GetKeyDown(KeyCode.Escape))
+            if (cinematic != null && cinematic.CanSkip && InputBindings.CancelDown())
             {
                 EscapeConsumedFrame = Time.frameCount;
                 SkipCinematic();
@@ -88,8 +91,8 @@ namespace MementoMori.Dialogue
             }
             if (AccessibilitySettings.Instance != null)
                 defaultCharactersPerSecond = Mathf.Clamp(38f * AccessibilitySettings.Instance.TextSpeed, 10f, 120f);
-            if (Input.GetKeyDown(KeyCode.H)) { ToggleHistory(); return; }
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKeyDown(KeyCode.H) || GamepadInput.HistoryDown()) { ToggleHistory(); return; }
+            if (Input.GetKeyDown(KeyCode.Tab) || GamepadInput.FastForwardDown())
             {
                 instantAdvance = !instantAdvance;
                 if (instantAdvance) RevealImmediately();

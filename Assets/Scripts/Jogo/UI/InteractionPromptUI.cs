@@ -55,7 +55,14 @@ namespace MementoMori.UI
             }
         }
 
-        private void LateUpdate() => PlaceNearTarget();
+        private void LateUpdate()
+        {
+            // Switching between keyboard and controller relabels the key cap at once.
+            if (targetComponent is IInteractable current && lastKey != null
+                && lastKey != (GamepadInput.UsingGamepad ? "A" : InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant()))
+                SetPromptText(current.InteractionVerb);
+            PlaceNearTarget();
+        }
 
         private void PlaceNearTarget()
         {
@@ -109,7 +116,7 @@ namespace MementoMori.UI
 
         private void SetPromptText(string action)
         {
-            var key = InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
+            var key = GamepadInput.UsingGamepad ? "A" : InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
             var value = string.IsNullOrWhiteSpace(action) ? Loc.T("INTERAGIR") : Loc.T(action);
             if (label != null) label.text = $"{key} - {value}";
             if (labelTmp != null && labelTmp.text == value && scalableBackground != null && lastKey == key) return;

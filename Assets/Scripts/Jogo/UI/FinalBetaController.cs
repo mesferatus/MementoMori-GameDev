@@ -174,7 +174,8 @@ namespace MementoMori.UI
         private void Update()
         {
             if (sequenceComplete && credits != null && credits.activeInHierarchy
-                && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
+                && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)
+                    || GamepadInput.ConfirmDown() || GamepadInput.CancelDown()))
                 ReturnToMenu();
         }
 
