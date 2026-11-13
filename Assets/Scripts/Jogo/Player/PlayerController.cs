@@ -92,10 +92,21 @@ namespace MementoMori.Player
 
             UpdateSplash();
 
-            if (!isSwimming && !movementBlocked && moveInput.sqrMagnitude > 0f && Time.time >= nextFootstepAt)
+            if (!movementBlocked && moveInput.sqrMagnitude > 0f && Time.time >= nextFootstepAt)
             {
-                RuntimeAudio.PlayOneShot("17_footstep_stone", .2f);
-                nextFootstepAt = Time.time + .42f;
+                if (isSwimming)
+                {
+                    // Soft stroke while swimming, slower than footsteps.
+                    RuntimeAudio.PlayOneShot("23_water_splash", .09f);
+                    nextFootstepAt = Time.time + .95f;
+                }
+                else
+                {
+                    // The bedroom has a wooden floor; everywhere else is stone.
+                    var wood = gameObject.scene.name == "Quarto" || gameObject.scene.name == "FinalBeta";
+                    RuntimeAudio.PlayOneShot(wood ? "28_footstep_wood" : "17_footstep_stone", wood ? .26f : .2f);
+                    nextFootstepAt = Time.time + .42f;
+                }
             }
 
             if (animator != null)
@@ -154,9 +165,9 @@ namespace MementoMori.Player
             splashVisual.enabled = false;
             if (splashAudio != null)
             {
-                if (splashClip == null) splashClip = CreateSplashClip();
+                if (splashClip == null) splashClip = Resources.Load<AudioClip>("Audio/23_water_splash") ?? CreateSplashClip();
                 var effects = AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume;
-                splashAudio.PlayOneShot(splashClip, .18f * effects);
+                splashAudio.PlayOneShot(splashClip, .3f * effects);
             }
         }
 
