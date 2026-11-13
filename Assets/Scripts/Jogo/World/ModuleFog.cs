@@ -84,7 +84,7 @@ namespace MementoMori.World
         }
 
         /// <summary>Tileable soft cloud texture (value noise, two octaves), generated once.</summary>
-        private static Sprite CloudSprite()
+        internal static Sprite CloudSprite()
         {
             const int size = 128;
             var tex = new Texture2D(size, size, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
