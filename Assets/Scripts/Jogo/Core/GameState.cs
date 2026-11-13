@@ -49,6 +49,8 @@ namespace MementoMori.Core
         public CheckpointId LastCheckpoint { get; private set; }
         public event Action<StoryFlag, bool> OnFlagChanged;
         public event Action<CheckpointId> CheckpointChanged;
+        /// <summary>Raised after the autosave slot was written to disk.</summary>
+        public static event Action Autosaved;
 
         private void Awake()
         {
@@ -153,7 +155,7 @@ namespace MementoMori.Core
             WriteCheckpointPrefs(sceneName, safePosition);
             if (Application.isPlaying && SaveSlotStore.IsPlayableScene(sceneName))
             {
-                try { new SaveSlotStore().Save(0, CapturePersistentState(sceneName, safePosition)); }
+                try { new SaveSlotStore().Save(0, CapturePersistentState(sceneName, safePosition)); Autosaved?.Invoke(); }
                 catch (Exception exception) { Debug.LogWarning("Autosave failed: " + exception.Message, this); }
             }
         }

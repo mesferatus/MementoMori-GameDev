@@ -23,24 +23,23 @@ namespace MementoMori.Core
             return Keys[(int)action];
         }
 
-        public static bool Down(GameAction action) => Input.GetKeyDown(Get(action));
-        public static bool Held(GameAction action) => Input.GetKey(Get(action));
+        public static bool Down(GameAction action) => Input.GetKeyDown(Get(action)) || GamepadInput.Down(action);
+        public static bool Held(GameAction action) => Input.GetKey(Get(action)) || GamepadInput.Held(action);
+        /// <summary>Escape or the controller's B: back, close, skip.</summary>
+        public static bool CancelDown() => Input.GetKeyDown(KeyCode.Escape) || GamepadInput.CancelDown();
 
         public static Vector2 Movement()
         {
-            var left = Held(GameAction.MoveLeft) || Input.GetKey(KeyCode.LeftArrow);
-            var right = Held(GameAction.MoveRight) || Input.GetKey(KeyCode.RightArrow);
-            var up = Held(GameAction.MoveUp) || Input.GetKey(KeyCode.UpArrow);
-            var down = Held(GameAction.MoveDown) || Input.GetKey(KeyCode.DownArrow);
+            var left = Input.GetKey(Get(GameAction.MoveLeft)) || Input.GetKey(KeyCode.LeftArrow);
+            var right = Input.GetKey(Get(GameAction.MoveRight)) || Input.GetKey(KeyCode.RightArrow);
+            var up = Input.GetKey(Get(GameAction.MoveUp)) || Input.GetKey(KeyCode.UpArrow);
+            var down = Input.GetKey(Get(GameAction.MoveDown)) || Input.GetKey(KeyCode.DownArrow);
             var keyboard = keyboardMovement.Resolve(left, right, up, down);
             if (left || right || up || down) return keyboard;
             // Keep existing controller axes without letting the old WASD mapping bypass a rebound key.
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)
                 || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) return Vector2.zero;
-            foreach (var joystick in Input.GetJoystickNames())
-                if (!string.IsNullOrEmpty(joystick))
-                    return CardinalMovement.Snap(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
-            return Vector2.zero;
+            return GamepadInput.Movement();
         }
 
         public static bool TryBind(GameAction action, KeyCode key)

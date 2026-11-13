@@ -139,7 +139,7 @@ namespace MementoMori.World
                     && GameState.Instance.HasFlag(StoryFlag.RoomGrimoireRead)) Open();
                 return;
             }
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)
+            if (InputBindings.CancelDown() || Input.GetKeyDown(KeyCode.Q)
                 || InputBindings.Down(GameAction.Grimoire) || InputBindings.Down(GameAction.Pause))
             { Close(); return; }
             if (Input.GetKeyDown(KeyCode.RightArrow) || InputBindings.Down(GameAction.MoveRight)) ShowPage(page + 1);

@@ -60,7 +60,7 @@ namespace MementoMori.Regions
         private void Update()
         {
             if (panel == null) return;
-            if (Input.GetKeyDown(KeyCode.Escape)) { EscapeConsumedFrame=Time.frameCount; Close(); return; }
+            if (MementoMori.Core.InputBindings.CancelDown()) { EscapeConsumedFrame=Time.frameCount; Close(); return; }
             var keys=new[]{KeyCode.Alpha1,KeyCode.Alpha2,KeyCode.Alpha3,KeyCode.Alpha4};
             for(var i=0;i<Mathf.Min(keys.Length,definition.choices.Length);i++)
                 if(Input.GetKeyDown(keys[i])) Choose(i);
@@ -101,6 +101,7 @@ namespace MementoMori.Regions
                 Loc.T("A luz recua. Releia a inscrição e tente novamente; seus outros caminhos estão preservados.");
             if (!accepted && definition.id == "moon.illusory_corridor")
                 ShowConditionalFailure("P03", "on_wrong_exit");
+            if(model.Solved) GamepadInput.Rumble(.25f, .35f, .3f);
             if(model.Solved) GameState.Instance.SaveCheckpoint(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, FindAnyObjectByType<MementoMori.Player.PlayerController>() is var player && player != null ? (Vector2)player.transform.position : (Vector2)transform.position);
         }
         private void RotateDial(int index)

@@ -19,7 +19,7 @@ namespace MementoMori.World
         private bool choicePending;
         private Vector2 checkpointPosition;
         private GameObject choicePanel;
-        [SerializeField, Range(30f, 50f)] private float dreamDuration = 30f;
+        [SerializeField, Range(6f, 10f)] private float dreamDuration = 10f;
         public void Configure(string targetScene) { nextScene = targetScene; }
         public string InteractionVerb => "Deitar";
         public int InteractionPriority => 20;
@@ -65,13 +65,17 @@ namespace MementoMori.World
             var dialogueOpen = DialogueManager.Instance != null && DialogueManager.Instance.IsOpen;
             if (choicePanel != null) choicePanel.SetActive(!dialogueOpen);
             if (dialogueOpen) return;
-            if (Input.GetKeyDown(KeyCode.Y)) StartSleep();
-            if (Input.GetKeyDown(KeyCode.N)) CancelSleepChoice();
+            // A/B on a controller; the press that opened the choice must not also answer it.
+            var fresh = Time.frameCount == choiceOpenedFrame;
+            if (Input.GetKeyDown(KeyCode.Y) || !fresh && GamepadInput.ConfirmDown()) StartSleep();
+            else if (Input.GetKeyDown(KeyCode.N) || GamepadInput.CancelDown()) CancelSleepChoice();
         }
 
+        private int choiceOpenedFrame = -1;
         private void ShowSleepChoice()
         {
             choicePending = true;
+            choiceOpenedFrame = Time.frameCount;
             InputGate.Instance?.Block("SleepChoice");
             DialogueManager.Instance?.StartDialogue(Resources.Load<DialogueData>("Dialogue/DLG_Q_SLEEP_CONFIRM"));
             if (choicePanel == null) CreateChoicePanel();
@@ -209,6 +213,9 @@ namespace MementoMori.World
                 while (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen) yield return null;
                 GameState.Instance?.SetCounter("event.C03", 1);
                 if (transitionDialogue != null) { Destroy(transitionDialogue); transitionDialogue = null; }
+                // The Labyrinth is a 100 MB map: read it while the dream veil plays.
+                SceneLoader.Instance?.Preload(nextScene);
+                GamepadInput.Rumble(.18f, 0f, .5f);
                 var transition = gameObject.GetComponent<DreamTransitionController>() ?? gameObject.AddComponent<DreamTransitionController>();
                 yield return transition.Play(dreamDuration);
                 GameState.Instance?.SetFlag(StoryFlag.DreamTransitionComplete);
