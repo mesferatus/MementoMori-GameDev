@@ -90,43 +90,43 @@
         {
           "id": "C02_D001",
           "speaker": "MELANTHA",
-          "text": "Hã...? O que foi isso?",
+          "text": "Hã...? Que diabos foi isso?",
           "condition": "always"
         },
         {
           "id": "C02_D002",
           "speaker": "MELANTHA",
-          "text": "Eu tava fazendo alguma coisa. Tava, né?",
+          "text": "Eu tava fazendo alguma coisa. Tava, né? Fala que tava.",
           "condition": "always"
         },
         {
           "id": "C02_D003",
           "speaker": "MELANTHA",
-          "text": "Minha cama... minha escrivaninha...",
+          "text": "Minha cama... minha escrivaninha... meu caos de sempre.",
           "condition": "always"
         },
         {
           "id": "C02_D004",
           "speaker": "MELANTHA",
-          "text": "Pera. A janela não era desse lado.",
+          "text": "Pera. A janela não era desse lado. Quem mexeu na minha casa?",
           "condition": "always"
         },
         {
           "id": "C02_D005",
           "speaker": "MELANTHA",
-          "text": "Tem alguém em casa?",
+          "text": "Oi? Tem alguém em casa?",
           "condition": "always"
         },
         {
           "id": "C02_D006",
           "speaker": "MELANTHA",
-          "text": "Por que eu tô esperando alguém responder?",
+          "text": "Por que eu tô esperando alguém responder? Eu moro sozinha, gênia.",
           "condition": "always"
         },
         {
           "id": "C02_D007",
           "speaker": "MELANTHA",
-          "text": "Não. Tem alguma coisa muito errada aqui.",
+          "text": "Não. Tem alguma coisa muito zoada aqui.",
           "condition": "always"
         },
         {
@@ -138,7 +138,7 @@
         {
           "id": "C02_D009",
           "speaker": "MELANTHA",
-          "text": "Tá. Descobre onde você tá primeiro. Surta depois.",
+          "text": "Tá. Descobre onde você tá primeiro. Surta depois. Com calma. Com agenda.",
           "condition": "always"
         }
       ],
@@ -163,7 +163,7 @@
         {
           "id": "Q01_D002",
           "speaker": "MELANTHA",
-          "text": "É, dormir de novo não vai ajudar.",
+          "text": "É, dormir de novo não vai resolver. Por mais que eu queira.",
           "condition": "always"
         },
         {
@@ -175,7 +175,7 @@
         {
           "id": "Q01_D004",
           "speaker": "MELANTHA",
-          "text": "Conheço essa vista... não. Conheço, sim. Que estranho.",
+          "text": "Conheço essa vista... não. Conheço, sim. Que bizarro.",
           "condition": "always"
         },
         {
@@ -187,7 +187,7 @@
         {
           "id": "Q01_D006",
           "speaker": "MELANTHA",
-          "text": "Ué. Essa foto não tava assim.",
+          "text": "Ué. Essa foto não tava assim. Fotos não fazem isso, né?",
           "condition": "always"
         },
         {
@@ -199,19 +199,19 @@
         {
           "id": "Q01_D008",
           "speaker": "MELANTHA",
-          "text": "O Poe ia derrubar isso no chão em dois segundos.",
+          "text": "O Poe ia derrubar isso no chão em dois segundos. Olhando na minha cara.",
           "condition": "always"
         },
         {
           "id": "Q01_D009",
           "speaker": "MELANTHA",
-          "text": "Ia...? Por que eu falei assim?",
+          "text": "Ia...? Por que eu falei no passado?",
           "condition": "always"
         },
         {
           "id": "Q01_D010",
           "speaker": "MELANTHA",
-          "text": "Calma. Eu nem sei o que aconteceu.",
+          "text": "Calma. Eu nem sei o que aconteceu. Nada de drama ainda.",
           "condition": "always"
         },
         {
@@ -223,7 +223,7 @@
         {
           "id": "Q01_D012",
           "speaker": "MELANTHA",
-          "text": "É a minha letra. Só não lembro de escrever nada disso.",
+          "text": "É a minha letra. Só não lembro de escrever nada disso. Ótimo começo.",
           "condition": "always"
         }
       ],
@@ -242,7 +242,7 @@
         {
           "id": "Q02_D001",
           "speaker": "MELANTHA",
-          "text": "Esse livro é meu. Então quem escreveu metade dessas coisas?",
+          "text": "Esse livro é meu. Então quem escreveu metade dessas coisas? Eu bêbada?",
           "condition": "always"
         },
         {
@@ -254,31 +254,31 @@
         {
           "id": "Q02_D003",
           "speaker": "MELANTHA",
-          "text": "Eu escrevi isso?",
+          "text": "Eu escrevi isso? Sério?",
           "condition": "always"
         },
         {
           "id": "Q02_D004",
           "speaker": "MELANTHA",
-          "text": "Espera. A foto mudou.",
+          "text": "Espera. A foto mudou. De novo.",
           "condition": "always"
         },
         {
           "id": "Q02_D005",
           "speaker": "MELANTHA",
-          "text": "Eu vi. Eu tenho certeza.",
+          "text": "Eu vi. Eu tenho certeza. Não tô doida.",
           "condition": "always"
         },
         {
           "id": "Q02_D006",
           "speaker": "MELANTHA",
-          "text": "...Ou achava que tinha.",
+          "text": "...Ou achava que tinha. Vai saber.",
           "condition": "always"
         },
         {
           "id": "Q02_D007",
           "speaker": "MELANTHA",
-          "text": "Vou anotar antes que mude de novo. Inclusive o que eu lembro.",
+          "text": "Vou anotar antes que mude de novo. Inclusive o que eu lembro. Que é pouco.",
           "condition": "always"
         }
       ],
@@ -297,25 +297,25 @@
         {
           "id": "Q03_D001",
           "speaker": "MELANTHA",
-          "text": "O círculo tá inteiro... mas não tá funcionando.",
+          "text": "O círculo tá inteiro... e não funciona. Clássico.",
           "condition": "always"
         },
         {
           "id": "Q03_D002",
           "speaker": "MELANTHA",
-          "text": "A janela aberta. Ótimo. O vento não vai deixar nenhuma vela acesa.",
+          "text": "A janela aberta. Que maravilha. O vento vai apagar todas as velas.",
           "condition": "always"
         },
         {
           "id": "Q03_D003",
           "speaker": "MELANTHA",
-          "text": "Pronto. Janela fechada.",
+          "text": "Pronto. Janela fechada. Uma coisa resolvida, faltam todas.",
           "condition": "always"
         },
         {
           "id": "Q03_D004",
           "speaker": "MELANTHA",
-          "text": "E a âncora tá fora do lugar. Preciso colocar no centro.",
+          "text": "E a âncora tá fora do lugar. Tem que ir pro centro.",
           "condition": "always"
         },
         {
@@ -327,7 +327,7 @@
         {
           "id": "Q03_D006",
           "speaker": "MELANTHA",
-          "text": "Lua, Livro, Memória, Repouso. Tá. Vamos lá.",
+          "text": "Lua, Livro, Memória, Repouso. Tá. Bora.",
           "condition": "always"
         },
         {
@@ -339,25 +339,25 @@
         {
           "id": "Q03_D008",
           "speaker": "MELANTHA",
-          "text": "Uma acendeu! Certo, acho que é isso.",
+          "text": "Uma acendeu! Olha só, eu sei o que tô fazendo. Acho.",
           "condition": "on_correct_candle_step"
         },
         {
           "id": "Q03_D009",
           "speaker": "MELANTHA",
-          "text": "Ah, não. Ordem errada. Pelo menos só as velas apagaram.",
+          "text": "Ah, não. Ordem errada. Pelo menos só as velas apagaram, e não eu.",
           "condition": "on_wrong_candle_order"
         },
         {
           "id": "Q03_D010",
           "speaker": "MELANTHA",
-          "text": "Pronto. Mas... espera. Isso não parece o começo de um ritual.",
+          "text": "Pronto. Mas... pera. Isso não tem cara de começo de ritual.",
           "condition": "always"
         },
         {
           "id": "Q03_D011",
           "speaker": "MELANTHA",
-          "text": "Parece que tô tentando terminar alguma coisa que eu já fiz.",
+          "text": "Parece que eu tô terminando uma coisa que eu já fiz. Que delícia de sensação.",
           "condition": "always"
         }
       ],
@@ -382,13 +382,13 @@
         {
           "id": "C03_D002",
           "speaker": "MELANTHA",
-          "text": "Se esse ritual me trouxe até aqui, talvez também me tire.",
+          "text": "Se esse ritual me trouxe até aqui, ele que me tire. É o mínimo.",
           "condition": "always"
         },
         {
           "id": "C03_D003",
           "speaker": "MELANTHA",
-          "text": "É. Só espero não acordar num quarto ainda pior.",
+          "text": "É. Só espero não acordar num quarto ainda pior. Tipo um sem janela.",
           "condition": "always"
         },
         {
@@ -419,7 +419,7 @@
         {
           "id": "L01_D001",
           "speaker": "MELANTHA",
-          "text": "Tá. Definitivamente não tô mais no quarto.",
+          "text": "Tá. Definitivamente não tô mais no quarto. Nem no bairro.",
           "condition": "always"
         },
         {
@@ -431,13 +431,13 @@
         {
           "id": "L01_D003",
           "speaker": "MELANTHA",
-          "text": "Então foi o ritual. Eu vim parar aqui por causa dele.",
+          "text": "Então foi o ritual. Parabéns pra mim.",
           "condition": "always"
         },
         {
           "id": "L01_D004",
           "speaker": "MELANTHA",
-          "text": "Tá, mas... por que eu fiz isso?",
+          "text": "Tá, mas... por que eu fiz isso? Quem me deixou?",
           "condition": "always"
         },
         {
@@ -461,7 +461,7 @@
         {
           "id": "L01_D008",
           "speaker": "MELANTHA",
-          "text": "Alô? Tem alguém aí?",
+          "text": "Alô? Tem alguém aí? Alguém com respostas, de preferência?",
           "condition": "always"
         },
         {
@@ -486,7 +486,7 @@
         {
           "id": "L02_D001",
           "speaker": "MELANTHA",
-          "text": "Uma sala desse tamanho e... nada?",
+          "text": "Uma sala desse tamanho e... nada? Que desperdício.",
           "condition": "always"
         },
         {
@@ -498,7 +498,7 @@
         {
           "id": "L02_D003",
           "speaker": "MELANTHA",
-          "text": "Espera. Tinha alguma coisa aqui. Levaram.",
+          "text": "Pera. Tinha alguma coisa aqui. Alguém levou.",
           "condition": "always"
         },
         {
@@ -510,7 +510,7 @@
         {
           "id": "L02_D005",
           "speaker": "MELANTHA",
-          "text": "Quem se dá a esse trabalho todo pra deixar uma sala vazia?",
+          "text": "Quem tem esse trabalho todo pra deixar uma sala vazia? Minimalismo demais.",
           "condition": "always"
         },
         {
@@ -595,7 +595,7 @@
         {
           "id": "E01_D011",
           "speaker": "MELANTHA",
-          "text": "Esse eco tá me corrigindo?",
+          "text": "Pera, esse eco tá me corrigindo? Que folga.",
           "condition": "always"
         },
         {
@@ -644,19 +644,19 @@
         {
           "id": "C_POE_D005",
           "speaker": "MELANTHA",
-          "text": "Você escolheu a pior hora possível pra aparecer, sabia?",
+          "text": "Você escolheu a pior hora possível pra aparecer, sabia? Típico.",
           "condition": "always"
         },
         {
           "id": "C_POE_D006",
           "speaker": "MELANTHA",
-          "text": "...Nossa. Que bom te ver.",
+          "text": "...Caramba. Que bom te ver.",
           "condition": "always"
         },
         {
           "id": "C_POE_D007",
           "speaker": "MELANTHA",
-          "text": "Tá. Perguntas depois. Vem cá.",
+          "text": "Tá. Perguntas depois. Vem cá, seu bobo.",
           "condition": "always"
         },
         {
@@ -681,7 +681,7 @@
         {
           "id": "E02_D001",
           "speaker": "MELANTHA",
-          "text": "É essa porta. Tenho certeza.",
+          "text": "É essa porta. Certeza. Tipo, quase.",
           "condition": "always"
         },
         {
@@ -693,7 +693,7 @@
         {
           "id": "E02_D003",
           "speaker": "MELANTHA",
-          "text": "Ué? Eu voltei pro mesmo lugar?",
+          "text": "Ué? Voltei pro mesmo lugar? Tá de sacanagem.",
           "condition": "always"
         },
         {
@@ -717,7 +717,7 @@
         {
           "id": "E02_D007",
           "speaker": "MELANTHA",
-          "text": "Ah. A porta engana. Eu tenho que olhar o que mudou.",
+          "text": "Ah. A porta engana. Tem que olhar o que mudou. Porta safada.",
           "condition": "always"
         },
         {
@@ -778,7 +778,7 @@
         {
           "id": "E03_D007",
           "speaker": "MELANTHA",
-          "text": "Mas eu não falei que ia parar. Eu lembro de continuar.",
+          "text": "Mas eu não falei que ia parar. Eu lembro de continuar. Teimosa como sempre.",
           "condition": "always"
         },
         {
@@ -802,7 +802,7 @@
         {
           "id": "E03_D011",
           "speaker": "MELANTHA",
-          "text": "Se era eu falando, por que eu não lembro de nada disso?",
+          "text": "Se era eu falando, por que eu não lembro de nada? Que conveniente.",
           "condition": "always"
         }
       ],
@@ -821,7 +821,7 @@
         {
           "id": "E04_D001",
           "speaker": "MELANTHA",
-          "text": "Sem céu... e mesmo assim tudo faz sombra. Tá bom.",
+          "text": "Sem céu... e mesmo assim tudo faz sombra. Faz total sentido. Só que não.",
           "condition": "always"
         },
         {
@@ -833,7 +833,7 @@
         {
           "id": "E04_D003",
           "speaker": "MELANTHA",
-          "text": "Não adianta procurar de onde vem a luz.",
+          "text": "Nem adianta procurar de onde vem a luz. Esse lugar não liga pra física.",
           "condition": "always"
         },
         {
@@ -857,7 +857,7 @@
         {
           "id": "E04_D007",
           "speaker": "MELANTHA",
-          "text": "Ah, olha! As três formam uma estrela!",
+          "text": "Olha! As três formam uma estrela! Toma essa, labirinto.",
           "condition": "always"
         },
         {
@@ -918,13 +918,13 @@
         {
           "id": "E05_D007",
           "speaker": "MELANTHA",
-          "text": "Sete caminhos... Eu conheço esses símbolos? Acho que sim.",
+          "text": "Sete caminhos... Eu conheço esses símbolos? Acho que sim. Infelizmente.",
           "condition": "always"
         },
         {
           "id": "E05_D008",
           "speaker": "MELANTHA",
-          "text": "É impressão minha ou esse lugar tá me testando?",
+          "text": "É impressão minha ou esse lugar tá me testando? Porque eu não estudei.",
           "condition": "always"
         }
       ],
@@ -955,7 +955,7 @@
         {
           "id": "A1_D003",
           "speaker": "MELANTHA",
-          "text": "Ah, ótimo. Mais alguém aparecendo do nada.",
+          "text": "Ah, ótimo. Mais alguém brotando do nada.",
           "condition": "always"
         },
         {
@@ -967,7 +967,7 @@
         {
           "id": "A1_D005",
           "speaker": "MELANTHA",
-          "text": "Quem é você? E o que é esse lugar?",
+          "text": "Quem é você? E que lugar é esse? Resumo, por favor.",
           "condition": "always"
         },
         {
@@ -979,7 +979,7 @@
         {
           "id": "A1_D007",
           "speaker": "MELANTHA",
-          "text": "Quero começar com uma resposta. Qualquer uma serve.",
+          "text": "Quero começar com uma resposta. Qualquer uma. Tô aceitando tudo.",
           "condition": "always"
         },
         {
@@ -991,7 +991,7 @@
         {
           "id": "A1_D009",
           "speaker": "MELANTHA",
-          "text": "E a Lua? O que acontece se eu entrar?",
+          "text": "E a Lua? O que acontece se eu entrar? Sem enigma, de preferência.",
           "condition": "always"
         },
         {
@@ -1034,7 +1034,7 @@
         {
           "id": "L08_D001",
           "speaker": "MELANTHA",
-          "text": "Eu passei por essa porta antes. Ela tava fechada.",
+          "text": "Eu já passei por essa porta. Ela tava fechada. Agora não tá. Normal.",
           "condition": "always"
         },
         {
@@ -1052,13 +1052,13 @@
         {
           "id": "L08_D004",
           "speaker": "MELANTHA",
-          "text": "Ecos, a porta, as vozes, as sombras... o Núcleo. Pronto.",
+          "text": "Ecos, a porta, as vozes, as sombras... o Núcleo. Fechou.",
           "condition": "on_gate_unlocked"
         },
         {
           "id": "L08_D005",
           "speaker": "MELANTHA",
-          "text": "A Lua abriu. Acho que é por ali que eu vou.",
+          "text": "A Lua abriu. Acho que o próximo rolê é por ali.",
           "condition": "always"
         },
         {
@@ -1089,7 +1089,7 @@
         {
           "id": "M01_D001",
           "speaker": "MELANTHA",
-          "text": "Uau... Isso aqui é bem diferente do Labirinto.",
+          "text": "Uau... Isso aqui é bem diferente do Labirinto. Bem mais bonito, pelo menos.",
           "condition": "always"
         },
         {
@@ -1101,7 +1101,7 @@
         {
           "id": "M01_D003",
           "speaker": "MELANTHA",
-          "text": "Então nem tudo que eu vejo aqui é confiável. Surpresa nenhuma.",
+          "text": "Então nem tudo que eu vejo aqui é confiável. Chocante. Ninguém esperava.",
           "condition": "always"
         },
         {
@@ -1113,7 +1113,7 @@
         {
           "id": "M01_D005",
           "speaker": "MELANTHA",
-          "text": "Que foi, Poe? Eu também tô estranhando essa roupa.",
+          "text": "Que foi, Poe? Eu também tô estranhando essa roupa. Não fui eu que escolhi.",
           "condition": "always"
         },
         {
@@ -1138,13 +1138,13 @@
         {
           "id": "M02_WATER_D001",
           "speaker": "MELANTHA",
-          "text": "Ah, claro. As flores ficam bem no meio do lago.",
+          "text": "Ah, claro. As flores ficam bem no meio do lago. Por que não?",
           "condition": "always"
         },
         {
           "id": "M02_WATER_D002",
           "speaker": "MELANTHA",
-          "text": "E não tem nenhum caminho seco. Perfeito.",
+          "text": "E nenhum caminho seco. Perfeito. Amei.",
           "condition": "always"
         },
         {
@@ -1156,7 +1156,7 @@
         {
           "id": "M02_WATER_D004",
           "speaker": "MELANTHA",
-          "text": "Brr... gelada. Mas não parece fundo.",
+          "text": "Brr... gelada pra caramba. Mas não parece fundo.",
           "condition": "always"
         },
         {
@@ -1168,7 +1168,7 @@
         {
           "id": "M02_WATER_D006",
           "speaker": "MELANTHA",
-          "text": "Poe, fica aqui. Já volto, tá?",
+          "text": "Poe, fica aqui. Já volto, tá? Não some.",
           "condition": "always"
         },
         {
@@ -1205,7 +1205,7 @@
         {
           "id": "P01_D002",
           "speaker": "MELANTHA",
-          "text": "Crescente... Será que eu preciso parar de chegar tão perto?",
+          "text": "Crescente... Será que eu tô chegando perto demais?",
           "condition": "always"
         },
         {
@@ -1223,7 +1223,7 @@
         {
           "id": "P01_D005",
           "speaker": "MELANTHA",
-          "text": "Deu certo... longe dela.",
+          "text": "Deu certo... de longe. Anotado.",
           "condition": "always"
         },
         {
@@ -1259,7 +1259,7 @@
         {
           "id": "P01_D011",
           "speaker": "MELANTHA",
-          "text": "Foi! As três funcionaram. Agora abre, por favor.",
+          "text": "Foi! As três! Agora abre, por favor. Eu peço com educação.",
           "condition": "always"
         },
         {
@@ -1284,7 +1284,7 @@
         {
           "id": "P02_D001",
           "speaker": "MELANTHA",
-          "text": "Sete espelhos? Sério? Um já era suficiente.",
+          "text": "Sete espelhos? Sério? Um já era demais.",
           "condition": "always"
         },
         {
@@ -1296,7 +1296,7 @@
         {
           "id": "P02_D003",
           "speaker": "MELANTHA",
-          "text": "Esse tá um pouquinho atrasado.",
+          "text": "Esse tá um pouquinho atrasado. Tipo eu de manhã.",
           "condition": "always"
         },
         {
@@ -1308,7 +1308,7 @@
         {
           "id": "P02_D005",
           "speaker": "MELANTHA",
-          "text": "E esse se mexe antes de mim.",
+          "text": "E esse se mexe antes de mim. Que abusado.",
           "condition": "always"
         },
         {
@@ -1320,7 +1320,7 @@
         {
           "id": "P02_D007",
           "speaker": "MELANTHA",
-          "text": "Espera... ali tem o quarto. Mas tá vazio.",
+          "text": "Pera... ali tem o quarto. Mas tá vazio.",
           "condition": "always"
         },
         {
@@ -1344,13 +1344,13 @@
         {
           "id": "P02_D011",
           "speaker": "MELANTHA",
-          "text": "Por que o reflexo tá fazendo isso?",
+          "text": "Por que o reflexo tá fazendo isso? Para.",
           "condition": "always"
         },
         {
           "id": "P02_D012",
           "speaker": "MELANTHA",
-          "text": "Melhor não chegar tão perto.",
+          "text": "Melhor não chegar tão perto. Vai que ele me puxa.",
           "condition": "always"
         }
       ],
@@ -1375,7 +1375,7 @@
         {
           "id": "M03_EXTRA_D002",
           "speaker": "MELANTHA",
-          "text": "Esse não se mexe. Nem quando eu mudo de lugar.",
+          "text": "Esse não se mexe. Nem quando eu mudo de lugar. Preguiçoso.",
           "condition": "always"
         },
         {
@@ -1387,7 +1387,7 @@
         {
           "id": "M03_EXTRA_D004",
           "speaker": "MELANTHA",
-          "text": "Esse só mostra o que eu fiz depois que eu saio de perto.",
+          "text": "Esse só mostra o que eu fiz depois que eu saio de perto. Fofoqueiro.",
           "condition": "always"
         },
         {
@@ -1411,7 +1411,7 @@
         {
           "id": "M03_EXTRA_D008",
           "speaker": "MELANTHA",
-          "text": "Tem uma sombra aí. De quem, se não entrou ninguém?",
+          "text": "Tem uma sombra aí. De quem, se não entrou ninguém? Não gostei.",
           "condition": "always"
         }
       ],
@@ -1515,7 +1515,7 @@
         {
           "id": "A2_D006",
           "speaker": "MELANTHA",
-          "text": "Então o que você quer dizer com isso?",
+          "text": "Tá, e o que você quer dizer com isso? Em português, de preferência.",
           "condition": "always"
         },
         {
@@ -1527,7 +1527,7 @@
         {
           "id": "A2_D008",
           "speaker": "MELANTHA",
-          "text": "Você podia, sei lá, falar uma coisa sem me deixar mais confusa?",
+          "text": "Você consegue, sei lá, falar uma coisa sem me deixar mais confusa? Uma só.",
           "condition": "always"
         },
         {
@@ -1545,13 +1545,13 @@
         {
           "id": "A2_D011",
           "speaker": "MELANTHA",
-          "text": "Ele foi embora de novo. Claro.",
+          "text": "Sumiu de novo. Claro. Saída dramática é com ele mesmo.",
           "condition": "always"
         },
         {
           "id": "A2_D012",
           "speaker": "MELANTHA",
-          "text": "...E agora eu tenho mais perguntas que antes.",
+          "text": "...E agora eu tenho mais perguntas que antes. Valeu mesmo.",
           "condition": "always"
         }
       ],
@@ -1576,7 +1576,7 @@
         {
           "id": "P03_D002",
           "speaker": "MELANTHA",
-          "text": "Sempre? Ah, tá. Esse lugar tá de brincadeira.",
+          "text": "Sempre? Ah, tá. Esse lugar só pode tá de zoeira.",
           "condition": "always"
         },
         {
@@ -1588,7 +1588,7 @@
         {
           "id": "P03_D004",
           "speaker": "MELANTHA",
-          "text": "Vou seguir a marca no chão. A placa pode esperar.",
+          "text": "Vou seguir a marca no chão. A placa que lute.",
           "condition": "always"
         },
         {
@@ -1600,19 +1600,19 @@
         {
           "id": "P03_D006",
           "speaker": "MELANTHA",
-          "text": "Droga. Voltei pro começo.",
+          "text": "Droga. Voltei pro começo. Amo.",
           "condition": "on_wrong_exit"
         },
         {
           "id": "P03_D007",
           "speaker": "MELANTHA",
-          "text": "Tá, olha a marca primeiro. Depois escolhe.",
+          "text": "Tá, olha a marca primeiro. Depois escolhe. Não é difícil, Melantha.",
           "condition": "always"
         },
         {
           "id": "P03_D008",
           "speaker": "MELANTHA",
-          "text": "Foi! Agora o corredor parou de mudar.",
+          "text": "Foi! O corredor parou de mudar. Finalmente.",
           "condition": "always"
         },
         {
@@ -1637,7 +1637,7 @@
         {
           "id": "M05_OPEN_D001",
           "speaker": "MELANTHA",
-          "text": "Oito portas... e nenhuma parece uma saída.",
+          "text": "Oito portas... e nenhuma com cara de saída. Ótimo.",
           "condition": "always"
         },
         {
@@ -1649,7 +1649,7 @@
         {
           "id": "M05_OPEN_D003",
           "speaker": "MELANTHA",
-          "text": "Certo. Vamos ver o que elas têm pra contar.",
+          "text": "Beleza. Vamos ver o que elas têm pra contar.",
           "condition": "always"
         },
         {
@@ -1741,7 +1741,7 @@
         {
           "id": "P05_D001",
           "speaker": "MELANTHA",
-          "text": "Três anéis... Tenho a sensação de já ter mexido neles.",
+          "text": "Três anéis... Tenho a sensação de já ter mexido neles. Que surpresa.",
           "condition": "always"
         },
         {
@@ -1795,7 +1795,7 @@
         {
           "id": "P05_D010",
           "speaker": "MELANTHA",
-          "text": "Tomara que seja o certo. Pelo menos eu sei como cheguei aqui.",
+          "text": "Tomara que seja o certo. Pelo menos agora eu sei como vim parar aqui.",
           "condition": "always"
         }
       ],
@@ -1814,7 +1814,7 @@
         {
           "id": "M07_D001",
           "speaker": "MELANTHA",
-          "text": "A marca... o sino... a sombra. Tudo de novo.",
+          "text": "A marca... o sino... a sombra. Tudo de novo. Reprise.",
           "condition": "always"
         },
         {
@@ -1850,7 +1850,7 @@
         {
           "id": "M07_D007",
           "speaker": "MELANTHA",
-          "text": "Tá, isso aqui tá ficando esquisito até pra mim.",
+          "text": "Tá, isso aqui tá ficando esquisito até pra mim. E olha que eu tô acostumada.",
           "condition": "always"
         },
         {
@@ -1868,7 +1868,7 @@
         {
           "id": "M07_D010",
           "speaker": "MELANTHA",
-          "text": "Eu nem sei de quem é.",
+          "text": "Eu nem sei de quem é. Mas tá, né.",
           "condition": "always"
         },
         {
@@ -1905,19 +1905,19 @@
         {
           "id": "M08_D002",
           "speaker": "MELANTHA",
-          "text": "Ainda tô sem entender metade do que aconteceu.",
+          "text": "Ainda tô sem entender metade do que aconteceu. Talvez dois terços.",
           "condition": "always"
         },
         {
           "id": "M08_D003",
           "speaker": "MELANTHA",
-          "text": "Mas trouxe o Fragmento... e algumas lembranças.",
+          "text": "Mas trouxe o Fragmento... e umas lembranças de brinde.",
           "condition": "always"
         },
         {
           "id": "M08_D004",
           "speaker": "MELANTHA",
-          "text": "E você, né? Meu companheiro que não explica nada.",
+          "text": "E você, né? Meu parceiro que não explica nada.",
           "condition": "always"
         },
         {
@@ -1935,7 +1935,7 @@
         {
           "id": "M08_D007",
           "speaker": "MELANTHA",
-          "text": "Tá bom. Vamos pra casa.",
+          "text": "Tá bom. Bora pra casa.",
           "condition": "always"
         },
         {
@@ -2045,13 +2045,13 @@
         {
           "id": "L09_D002",
           "speaker": "MELANTHA",
-          "text": "Isso é uma corrente? Nem parece prender nada.",
+          "text": "Isso é uma corrente? Nem parece prender nada. Só decoração.",
           "condition": "always"
         },
         {
           "id": "L09_D003",
           "speaker": "MELANTHA",
-          "text": "Não consigo entrar por aqui. Ainda.",
+          "text": "Não dá pra entrar por aqui. Ainda.",
           "condition": "always"
         }
       ],
@@ -2076,13 +2076,13 @@
         {
           "id": "L10_D002",
           "speaker": "MELANTHA",
-          "text": "Essa parede tá rachada de cima a baixo.",
+          "text": "Essa parede tá rachada de cima a baixo. Que obra.",
           "condition": "always"
         },
         {
           "id": "L10_D003",
           "speaker": "MELANTHA",
-          "text": "Esse caminho também tá fechado.",
+          "text": "Esse caminho também tá fechado. Óbvio.",
           "condition": "always"
         }
       ],
@@ -2138,13 +2138,13 @@
         {
           "id": "L12_D002",
           "speaker": "MELANTHA",
-          "text": "Uma lanterna apagada. Que útil.",
+          "text": "Uma lanterna apagada. Muito útil. Obrigada.",
           "condition": "always"
         },
         {
           "id": "L12_D003",
           "speaker": "MELANTHA",
-          "text": "Por aqui também não dá pra seguir.",
+          "text": "Por aqui também não dá. Lógico.",
           "condition": "always"
         }
       ],
@@ -2169,7 +2169,7 @@
         {
           "id": "L13_D002",
           "speaker": "MELANTHA",
-          "text": "Até a pedra rachou e nasceu alguma coisa aqui.",
+          "text": "Até a pedra rachou e nasceu alguma coisa aqui. Resiliente.",
           "condition": "always"
         },
         {
@@ -2200,13 +2200,13 @@
         {
           "id": "L14_D002",
           "speaker": "MELANTHA",
-          "text": "Três sinos... mas parece que só um tocou.",
+          "text": "Três sinos... e parece que só um tocou. Preguiça coletiva.",
           "condition": "always"
         },
         {
           "id": "L14_D003",
           "speaker": "MELANTHA",
-          "text": "Não. Acho melhor deixar essa porta pra depois.",
+          "text": "Não. Melhor deixar essa porta pra depois.",
           "condition": "always"
         }
       ],
@@ -2256,7 +2256,7 @@
         {
           "id": "GALLERY_02_D002",
           "speaker": "MELANTHA",
-          "text": "Ele nem percebeu que a imagem estava errada.",
+          "text": "Ele nem percebeu que a imagem estava errada. Clássico.",
           "condition": "always"
         }
       ],
@@ -2306,7 +2306,7 @@
         {
           "id": "GALLERY_04_D002",
           "speaker": "MELANTHA",
-          "text": "Uma janela a mais? Igual ao quarto...",
+          "text": "Uma janela a mais? Igual ao quarto... Que mania.",
           "condition": "always"
         }
       ],
@@ -2381,7 +2381,7 @@
         {
           "id": "GALLERY_07_D002",
           "speaker": "MELANTHA",
-          "text": "Ela estava fechada... e talvez ninguém jamais a tenha trancado.",
+          "text": "Tava fechada... e talvez ninguém nunca tenha trancado.",
           "condition": "always"
         }
       ],
@@ -2406,7 +2406,7 @@
         {
           "id": "GALLERY_08_D002",
           "speaker": "MELANTHA",
-          "text": "O nome permaneceu escrito. Só não se sabe quem o pronunciou.",
+          "text": "O nome ficou escrito. Só não dá pra saber quem disse.",
           "condition": "always"
         }
       ],
