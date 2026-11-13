@@ -64,44 +64,63 @@ namespace MementoMori.World
             if (GetComponent<MementoMori.UI.EchoCorridorPrompt>() == null) gameObject.AddComponent<MementoMori.UI.EchoCorridorPrompt>();
             if(state!=null) round=state.HasFlag(StoryFlag.EchoTrial03Complete)?3:state.HasFlag(StoryFlag.EchoTrial02Complete)?2:state.HasFlag(StoryFlag.EchoTrial01Complete)?1:0;
         }
-        // XY attenuation/pan avoids camera Z distance silencing positional audio in a 2D game.
+        // Each passage murmurs short fragments with silences in between (never a constant drone). The correct
+        // passage speaks a little more often and more clearly, which is the clue. XY attenuation/pan avoids the
+        // camera Z distance silencing positional audio in a 2D game.
+        readonly float[] phraseStart = new float[4], phraseEnd = new float[4], nextPhrase = new float[4];
         private void Update()
         {
             if (listener == null) listener = Object.FindAnyObjectByType<MementoMori.Player.PlayerController>()?.transform;
             var audible = !Solved && listener != null && ContainsPlayer(listener.position);
+            var now = Time.unscaledTime;
             for (var i = 0; i < whispers.Length; i++)
             {
                 if (!audible || !IsPassageAvailable(i) || passages == null || i >= passages.Length || passages[i] == null)
-                { if (whispers[i] != null && whispers[i].isPlaying) whispers[i].Stop(); continue; }
-                if (whispers[i] == null)
-                {
-                    var clip = Resources.Load<AudioClip>("Audio/21_echo_whisper_loop");
-                    if (clip == null) continue;
-                    var go = new GameObject("EchoWhisper_" + (i + 1));
-                    go.transform.SetParent(transform, false);
-                    var source = go.AddComponent<AudioSource>();
-                    var mixer = Resources.Load<UnityEngine.Audio.AudioMixer>("MementoMoriMixer");
-                    var groups = mixer == null ? null : mixer.FindMatchingGroups("SFX");
-                    if (groups != null && groups.Length > 0) source.outputAudioMixerGroup = groups[0];
-                    source.clip = clip; source.loop = true; source.playOnAwake = false;
-                    source.spatialBlend = 0f; source.pitch = .88f + i * .055f;
-                    source.time = clip.length * (i * .21f);
-                    go.AddComponent<AudioLowPassFilter>().cutoffFrequency = 3400f;
-                    var reverb = go.AddComponent<AudioReverbFilter>();
-                    reverb.reverbPreset = AudioReverbPreset.Room;
-                    reverb.room = -2200f; reverb.reverbLevel = -1800f; reverb.decayTime = 1.1f;
-                    whispers[i] = source;
-                }
+                { if (whispers[i] != null && whispers[i].isPlaying) whispers[i].Stop(); phraseEnd[i] = 0f; continue; }
+                if (whispers[i] == null && !CreateVoice(i)) continue;
                 var voice = whispers[i];
+                var correct = i == CorrectPassages[Round];
+                if (now >= phraseEnd[i] && now >= nextPhrase[i])
+                {
+                    // Start a fragment: random point of the recording, 1.4-3 s long.
+                    var length = Random.Range(1.4f, 3f);
+                    voice.time = Random.Range(0f, Mathf.Max(0f, voice.clip.length - length - .1f));
+                    voice.pitch = (correct ? .97f : .84f + i * .05f) * Random.Range(.97f, 1.03f);
+                    voice.GetComponent<AudioLowPassFilter>().cutoffFrequency = correct ? 5200f : 2600f;
+                    phraseStart[i] = now; phraseEnd[i] = now + length;
+                    nextPhrase[i] = phraseEnd[i] + (correct ? Random.Range(1.2f, 2.6f) : Random.Range(2.4f, 5.5f));
+                    if (!voice.isPlaying) voice.Play();
+                }
+                if (now >= phraseEnd[i]) { if (voice.isPlaying) voice.Stop(); continue; }
+                var envelope = Mathf.Clamp01((now - phraseStart[i]) / .3f) * Mathf.Clamp01((phraseEnd[i] - now) / .45f);
                 var delta = (Vector2)passages[i].position - (Vector2)listener.position;
                 var falloff = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.5f, 18f, delta.magnitude));
-                var breath = .8f + .2f * Mathf.Sin(Time.unscaledTime * .43f + i * 2.1f);
                 var effects = AccessibilitySettings.Instance == null ? .65f : AccessibilitySettings.Instance.EffectsVolume;
-                voice.volume = (i == CorrectPassages[Round] ? .42f : .34f) * effects * falloff * breath;
+                voice.volume = (correct ? .5f : .3f) * effects * falloff * envelope;
                 voice.panStereo = Mathf.Clamp(delta.x / 8f, -.85f, .85f);
                 voice.transform.position = passages[i].position;
-                if (!voice.isPlaying) voice.Play();
             }
+        }
+
+        private bool CreateVoice(int i)
+        {
+            var clip = Resources.Load<AudioClip>("Audio/21_echo_whisper_loop");
+            if (clip == null) return false;
+            var go = new GameObject("EchoWhisper_" + (i + 1));
+            go.transform.SetParent(transform, false);
+            var source = go.AddComponent<AudioSource>();
+            var mixer = Resources.Load<UnityEngine.Audio.AudioMixer>("MementoMoriMixer");
+            var groups = mixer == null ? null : mixer.FindMatchingGroups("SFX");
+            if (groups != null && groups.Length > 0) source.outputAudioMixerGroup = groups[0];
+            source.clip = clip; source.loop = false; source.playOnAwake = false; source.spatialBlend = 0f;
+            go.AddComponent<AudioLowPassFilter>().cutoffFrequency = 3400f;
+            var reverb = go.AddComponent<AudioReverbFilter>();
+            reverb.reverbPreset = AudioReverbPreset.User;
+            reverb.room = -1400f; reverb.reverbLevel = -900f; reverb.decayTime = 2.2f; reverb.reflectionsDelay = .04f;
+            whispers[i] = source;
+            // Stagger the first fragments so the four voices never start together.
+            nextPhrase[i] = Time.unscaledTime + .4f + i * 1.1f;
+            return true;
         }
         private void OnDisable() { foreach (var source in whispers) if (source != null) source.Stop(); }
         public bool Solved => GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.EchoTrial03Complete);
@@ -132,6 +151,7 @@ namespace MementoMori.World
             }
             errors = 0;
             round++;
+            GamepadInput.Rumble(.2f, .3f, round == 3 ? .4f : .15f);
             var state = GameState.Instance;
             if (round == 1) state?.SetFlag(StoryFlag.EchoTrial01Complete);
             if (round == 2) state?.SetFlag(StoryFlag.EchoTrial02Complete);
