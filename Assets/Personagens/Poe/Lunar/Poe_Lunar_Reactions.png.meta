@@ -120,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -173,9 +173,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
-        width: 56
-        height: 56
+        y: 336
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r0_c1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 168
-        width: 56
-        height: 56
+        x: 112
+        y: 336
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r0_c2
       rect:
         serializedVersion: 2
-        x: 112
-        y: 168
-        width: 56
-        height: 56
+        x: 224
+        y: 336
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r0_c3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 168
-        width: 56
-        height: 56
+        x: 336
+        y: 336
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r0_c4
       rect:
         serializedVersion: 2
-        x: 224
-        y: 168
-        width: 56
-        height: 56
+        x: 448
+        y: 336
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r0_c5
       rect:
         serializedVersion: 2
-        x: 280
-        y: 168
-        width: 56
-        height: 56
+        x: 560
+        y: 336
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,9 +305,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 56
-        height: 56
+        y: 224
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r1_c1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 112
-        width: 56
-        height: 56
+        x: 112
+        y: 224
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r1_c2
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
-        width: 56
-        height: 56
+        x: 224
+        y: 224
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r1_c3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 112
-        width: 56
-        height: 56
+        x: 336
+        y: 224
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r1_c4
       rect:
         serializedVersion: 2
-        x: 224
-        y: 112
-        width: 56
-        height: 56
+        x: 448
+        y: 224
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,10 +414,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r1_c5
       rect:
         serializedVersion: 2
-        x: 280
-        y: 112
-        width: 56
-        height: 56
+        x: 560
+        y: 224
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,9 +437,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 56
-        width: 56
-        height: 56
+        y: 112
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,10 +458,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r2_c1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 56
-        width: 56
-        height: 56
+        x: 112
+        y: 112
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r2_c2
       rect:
         serializedVersion: 2
-        x: 112
-        y: 56
-        width: 56
-        height: 56
+        x: 224
+        y: 112
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r2_c3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 56
-        width: 56
-        height: 56
+        x: 336
+        y: 112
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +524,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r2_c4
       rect:
         serializedVersion: 2
-        x: 224
-        y: 56
-        width: 56
-        height: 56
+        x: 448
+        y: 112
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r2_c5
       rect:
         serializedVersion: 2
-        x: 280
-        y: 56
-        width: 56
-        height: 56
+        x: 560
+        y: 112
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,8 +570,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 56
-        height: 56
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,10 +590,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r3_c1
       rect:
         serializedVersion: 2
-        x: 56
+        x: 112
         y: 0
-        width: 56
-        height: 56
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,10 +612,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r3_c2
       rect:
         serializedVersion: 2
-        x: 112
+        x: 224
         y: 0
-        width: 56
-        height: 56
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,10 +634,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r3_c3
       rect:
         serializedVersion: 2
-        x: 168
+        x: 336
         y: 0
-        width: 56
-        height: 56
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,10 +656,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r3_c4
       rect:
         serializedVersion: 2
-        x: 224
+        x: 448
         y: 0
-        width: 56
-        height: 56
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +678,10 @@ TextureImporter:
       name: Poe_Lunar_Reactions_r3_c5
       rect:
         serializedVersion: 2
-        x: 280
+        x: 560
         y: 0
-        width: 56
-        height: 56
+        width: 112
+        height: 112
       alignment: 9
       pivot: {x: 0.5, y: 0.017857144}
       border: {x: 0, y: 0, z: 0, w: 0}
