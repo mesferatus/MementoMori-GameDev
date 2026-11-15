@@ -76,10 +76,17 @@ namespace MementoMori.UI
         private void EnsureCanonicalNarrativeEntry()
         {
             // The scene still serializes the earlier draft. Runtime uses the V6.1 script.
-            // Played over the returned room itself, not as the full-screen ASCII cutscene: the player has to see
-            // Melantha back in her room (window, photo, the Fragment's mark) before the closing card.
+            // The awakening (window, photo, "did I sleep?") keeps the ASCII cutscene; then the real room is shown
+            // for the Fragment's mark and Poe's sound, so the player sees Melantha back home before the card.
             var lines = V61EventCatalog.TryGet("FINAL", out var entry) && entry.lines != null ? entry.lines.Length : 0;
-            narrativeEntries = new[] { lines > 0 ? V61EventCatalog.CreateDialogueSegment("FINAL", "FINAL_ROOM", 0, lines) : null };
+            const int awakening = 5;
+            narrativeEntries = lines > awakening
+                ? new[]
+                {
+                    V61EventCatalog.CreateDialogueSegment("FINAL", "FINAL", 0, awakening),
+                    V61EventCatalog.CreateDialogueSegment("FINAL", "FINAL_ROOM", awakening, lines - awakening)
+                }
+                : new[] { V61EventCatalog.CreateDialogue("FINAL") };
         }
 
         private void EnsureDialogueManager()
@@ -144,9 +151,9 @@ namespace MementoMori.UI
             completed = () =>
             {
                 DialogueManager.Instance.OnDialogueCompleted -= completed;
-                if (dialogue.SequenceId == "FINAL_ROOM")
+                if (dialogue.SequenceId.StartsWith("FINAL"))
                 {
-                    GameState.Instance?.SetCounter("event.FINAL", 1);
+                    if (entryIndex >= narrativeEntries.Length) GameState.Instance?.SetCounter("event.FINAL", 1);
                     Destroy(dialogue);
                 }
                 StartNextEntry();
