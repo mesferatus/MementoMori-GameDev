@@ -31,6 +31,7 @@ namespace MementoMori.UI
             var template = buttons?.Find("Button_Continuar")?.GetComponent<Button>();
             if (buttons == null || template == null) return;
             mainButtons = buttons.gameObject;
+            MatchPanelTitle();
             var save = MakeButton(template, buttons, "Button_Salvar", "SALVAR", ShowSlots);
             save.transform.SetSiblingIndex(1);
             var mainRect = (RectTransform)buttons;
@@ -87,12 +88,29 @@ namespace MementoMori.UI
                 var rect = objectiveLabel.rectTransform;
                 rect.anchorMin = new Vector2(-.6f, 0f); rect.anchorMax = new Vector2(1.6f, 0f); rect.pivot = new Vector2(.5f, 1f);
                 rect.sizeDelta = new Vector2(0f, 64f); rect.anchoredPosition = new Vector2(0f, -4f);
-                objectiveLabel.font = title.font; objectiveLabel.fontSize = 22f; objectiveLabel.raycastTarget = false;
-                objectiveLabel.alignment = TextAlignmentOptions.Top; objectiveLabel.color = new Color(.79f, .72f, .84f, .85f);
+                objectiveLabel.font = title.font; objectiveLabel.fontSize = 24f; objectiveLabel.raycastTarget = false;
+                objectiveLabel.characterSpacing = 1.5f;
+                objectiveLabel.alignment = TextAlignmentOptions.Top; objectiveLabel.color = MenuPanelStyle.CaptionColor;
                 objectiveLabel.textWrappingMode = TextWrappingModes.Normal;
             }
             Loc.LanguageChanged += UpdateTitle;
             UpdateTitle();
+        }
+
+        /// <summary>
+        /// The pause title was set in the blackletter face, unlike the buttons under it and every other panel
+        /// title. Use the buttons' face with the panels' spaced title treatment.
+        /// </summary>
+        private void MatchPanelTitle()
+        {
+            var buttonFont = mainButtons != null ? mainButtons.GetComponentInChildren<TMP_Text>(true)?.font : null;
+            if (title == null || buttonFont == null) return;
+            title.font = buttonFont;
+            title.fontStyle = FontStyles.Normal;
+            title.fontSize = 54f;
+            title.characterSpacing = 14f;
+            title.color = MenuPanelStyle.TitleColor;
+            if (objectiveLabel != null) objectiveLabel.font = buttonFont;
         }
         private static void SetCompactHeight(Button button)
         {

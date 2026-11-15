@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 namespace MementoMori.UI
 {
+    // Runs after the camera follow so the prompt is placed against this frame's view, not the previous one.
+    [DefaultExecutionOrder(10000)]
     public sealed class InteractionPromptUI : MonoBehaviour
     {
         [SerializeField] private CanvasGroup canvasGroup;
@@ -73,13 +75,22 @@ namespace MementoMori.UI
             if (parent == null || camera == null) return;
 
             background.localScale = Vector3.one * PromptScale;
+            // Anchor on the object's own art when it has some: a wide trigger zone's centre drifts away from the prop.
             var world = InteractionAnchor.Position(targetComponent);
+            var worldBottom = world;
+            var art = targetComponent.GetComponentInChildren<SpriteRenderer>();
+            if (art != null && art.enabled && art.sprite != null && art.bounds.size.x < 8f && art.bounds.size.y < 8f)
+            {
+                world = new Vector3(art.bounds.center.x, art.bounds.max.y, 0f);
+                worldBottom = new Vector3(art.bounds.center.x, art.bounds.min.y, 0f);
+            }
             if (player == null)
             {
                 var controller = FindAnyObjectByType<MementoMori.Player.PlayerController>();
                 if (controller != null) player = controller.transform;
             }
-            if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, camera.WorldToScreenPoint(world), null, out var local))
+            if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, camera.WorldToScreenPoint(world), null, out var local)
+                || !RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, camera.WorldToScreenPoint(worldBottom), null, out var localBottom))
                 return;
 
             var halfHeight = background.rect.height * PromptScale * .5f;
@@ -91,7 +102,7 @@ namespace MementoMori.UI
             local.x = Mathf.Clamp(local.x, bounds.xMin + halfWidth + ScreenMargin, bounds.xMax - halfWidth - ScreenMargin);
             var above = new Vector2(local.x, Mathf.Clamp(local.y + halfHeight + PromptGap,
                 bounds.yMin + halfHeight + bottomMargin, bounds.yMax - halfHeight - ScreenMargin));
-            var below = new Vector2(local.x, Mathf.Clamp(local.y - halfHeight - PromptGap,
+            var below = new Vector2(local.x, Mathf.Clamp(localBottom.y - halfHeight - PromptGap,
                 bounds.yMin + halfHeight + bottomMargin, bounds.yMax - halfHeight - ScreenMargin));
             // Keep the same side for this object. Crossing its pivot is not a reason to jump the box.
             // Switch only when the current placement actually covers the actor and the other is clear.
@@ -111,7 +122,8 @@ namespace MementoMori.UI
                 }
             }
             var placement = placeBelow ? below : above;
-            background.localPosition = new Vector3(placement.x, placement.y, 0f);
+            // Whole canvas units: sub-pixel drift made the box shimmer while the camera eased.
+            background.localPosition = new Vector3(Mathf.Round(placement.x), Mathf.Round(placement.y), 0f);
         }
 
         private void SetPromptText(string action)

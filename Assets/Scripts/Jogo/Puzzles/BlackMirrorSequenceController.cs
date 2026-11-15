@@ -55,7 +55,9 @@ namespace MementoMori.Puzzles
             yield return new WaitUntil(() => DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
             if (dialogue != null) GameState.Instance?.SetCounter("event.C_BLACK", 1);
             if (dialogue != null) Destroy(dialogue);
-            var andrealphus = V61EventCatalog.CreateDialogue("A2");
+            // In the world, beside the black mirror, so his figure appears in the Moon Domain itself.
+            var a2Lines = V61EventCatalog.TryGet("A2", out var a2) && a2.lines != null ? a2.lines.Length : 0;
+            var andrealphus = a2Lines > 0 ? V61EventCatalog.CreateDialogueSegment("A2", "A2_WORLD", 0, a2Lines) : null;
             if (andrealphus == null || DialogueManager.Instance == null
                 || !DialogueManager.Instance.TryStartDialogue(andrealphus))
             {

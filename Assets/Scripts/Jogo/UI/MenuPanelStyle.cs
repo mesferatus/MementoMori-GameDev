@@ -46,6 +46,20 @@ namespace MementoMori.UI
             return panel;
         }
 
+        /// <summary>The panel's double frame and star corners around an existing rect, without the fill.</summary>
+        public static void FrameOnly(RectTransform target)
+        {
+            Frame(target, 0f, 2f, Lilac);
+            Frame(target, 9f, 1f, LilacSoft);
+            foreach (var corner in new[] { Vector2.zero, Vector2.right, Vector2.up, Vector2.one })
+            {
+                var star = NewImage("Estrela", target, Diamond(), Lilac);
+                star.anchorMin = star.anchorMax = corner;
+                star.sizeDelta = new Vector2(22f, 22f);
+                star.anchoredPosition = Vector2.zero;
+            }
+        }
+
         /// <summary>Credits text shared by the main menu and the closing card (panel of 1000 x 820).</summary>
         public static void CreditsBody(RectTransform panel, TMP_FontAsset bodyFont)
         {

@@ -10,7 +10,7 @@ namespace MementoMori.World
     /// </summary>
     public sealed class AmbientMist : MonoBehaviour
     {
-        private const int Banks = 9;
+        private const int Banks = 11;
         private sealed class Bank { public SpriteRenderer renderer; public Vector2 velocity; public float phase, baseAlpha; }
         private readonly Bank[] banks = new Bank[Banks];
         private Camera view;
@@ -58,7 +58,7 @@ namespace MementoMori.World
                     renderer = renderer,
                     velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * speed * (i % 2 == 0 ? 1f : -1f),
                     phase = (float)random.NextDouble() * 10f,
-                    baseAlpha = .11f + (float)random.NextDouble() * .08f
+                    baseAlpha = .1f + (float)random.NextDouble() * .07f
                 };
                 renderer.color = new Color(tint.r, tint.g, tint.b, 0f);
             }

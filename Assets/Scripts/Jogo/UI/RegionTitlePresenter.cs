@@ -101,9 +101,12 @@ namespace MementoMori.UI
             text.transform.SetParent(root.transform, false);
             label = text.GetComponent<TMP_Text>(); var book = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<MementoMori.World.GrimoireScreen>();
             label.font = book != null && book.HeadingFont != null ? book.HeadingFont : TMP_Settings.defaultFontAsset;
-            label.fontSize = 30; label.alignment = TextAlignmentOptions.Center;
-            label.color = new Color(.79f, .72f, .84f); label.raycastTarget = false;
-            label.rectTransform.anchorMin = new Vector2(.22f, .73f); label.rectTransform.anchorMax = new Vector2(.78f, .80f);
+            // Larger and higher, with the panels' spaced title look, so the room name reads at a glance.
+            label.fontSize = 46; label.alignment = TextAlignmentOptions.Center; label.characterSpacing = 8f;
+            label.color = MenuPanelStyle.TitleColor; label.raycastTarget = false;
+            // Centred near the top, in a band narrow enough to end before the objective panel (top right).
+            label.rectTransform.anchorMin = new Vector2(.37f, .86f); label.rectTransform.anchorMax = new Vector2(.63f, .92f);
+            label.enableAutoSizing = true; label.fontSizeMin = 18; label.fontSizeMax = 32; label.characterSpacing = 4f; label.textWrappingMode = TextWrappingModes.NoWrap;
             label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
         }
         static bool Contains(Region region, Vector3 position)

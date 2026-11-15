@@ -44,6 +44,10 @@ namespace MementoMori.Player
             lastFixedPosition = body.position;
             waterZone = GardenWaterZone.Ensure();
             if (animator == null) animator = GetComponentInChildren<Animator>();
+            // The redrawn frames read the feet slightly lower; move the solid body under them so she stops
+            // before the coping of a low wall instead of standing on it.
+            foreach (var solid in GetComponents<CircleCollider2D>())
+                if (!solid.isTrigger) solid.offset = new Vector2(0f, -.22f);
             if (gameObject.scene.name != "DominioLua")
             {
                 preferredController = Resources.Load<RuntimeAnimatorController>("Costumes/MelanthaOriginal") ?? preferredController;

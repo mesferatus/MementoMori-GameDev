@@ -19,7 +19,7 @@ namespace MementoMori.UI
         const string Gate = "Map";
         const int TrailLength = 48;
         const float TrailStep = 1.2f;
-        static readonly Color Ink = new(.80f, .86f, 1f), Blue = new(.42f, .74f, 1f);
+        static readonly Color Ink = new(.93f, .88f, 1f), Blue = new(.42f, .74f, 1f);
         public static bool IsOpen { get; private set; }
         public static int CloseConsumedFrame { get; private set; } = -1;
 
@@ -184,19 +184,29 @@ namespace MementoMori.UI
             var canvas = root.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 30000;
             Scale(root.GetComponent<CanvasScaler>());
 
-            var veil = NewImage("Veil", root.transform, new Color(.03f, .04f, .07f, 1f));
-            Stretch(veil.rectTransform, Vector2.zero, Vector2.one);
+            // Same veil, double lilac frame, spaced title and divider as the pause, settings and credits panels.
+            MenuPanelStyle.Veil(root.transform, .96f);
 
             var book = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<MementoMori.World.GrimoireScreen>();
             var font = book != null && book.HeadingFont != null ? book.HeadingFont : TMP_Settings.defaultFontAsset;
             var nameFont = book != null && book.BodyFont != null ? book.BodyFont : font;
             title = NewText("Title", root.transform, font, 44f, new Vector2(.2f, .915f), new Vector2(.8f, .99f));
-            footer = NewText("Footer", root.transform, font, 20f, new Vector2(.2f, .01f), new Vector2(.8f, .055f));
+            title.color = MenuPanelStyle.TitleColor; title.characterSpacing = 12f; title.fontSize = 40f;
+            footer = NewText("Footer", root.transform, nameFont, 20f, new Vector2(.2f, .01f), new Vector2(.8f, .055f));
+            footer.color = MenuPanelStyle.CaptionColor; footer.characterSpacing = 2f;
+            var titleBand = new GameObject("TitleBand", typeof(RectTransform)).GetComponent<RectTransform>();
+            titleBand.SetParent(root.transform, false);
+            Stretch(titleBand, new Vector2(0f, .925f), new Vector2(1f, .93f));
+            MenuPanelStyle.Divider(titleBand, 0f, 420f);
 
             frame = new GameObject("Frame", typeof(RectTransform)).GetComponent<RectTransform>();
             frame.SetParent(root.transform, false);
             Stretch(frame, new Vector2(.03f, .07f), new Vector2(.97f, .91f));
             frame.gameObject.AddComponent<RectMask2D>();
+            var outline = new GameObject("Moldura", typeof(RectTransform)).GetComponent<RectTransform>();
+            outline.SetParent(root.transform, false);
+            Stretch(outline, new Vector2(.03f, .07f), new Vector2(.97f, .91f));
+            MenuPanelStyle.FrameOnly(outline);
             pan = new GameObject("Pan", typeof(RectTransform)).GetComponent<RectTransform>();
             pan.SetParent(frame, false);
             Stretch(pan, Vector2.zero, Vector2.one);
@@ -227,7 +237,7 @@ namespace MementoMori.UI
             {
                 // Each name sits on a small dark plaque, wrapped to roughly a room's width, so neighbours
                 // never run into each other and the ink stays readable over the lilac wash.
-                var plaque = NewImage("Name_" + r.id, sheet, new Color(.09f, .055f, .16f, .92f)).rectTransform;
+                var plaque = NewImage("Name_" + r.id, sheet, new Color(.05f, .022f, .078f, .9f)).rectTransform;
                 plaque.gameObject.AddComponent<Outline>().effectColor = new Color(Ink.r, Ink.g, Ink.b, .35f);
                 var label = NewText("Text", plaque, nameFont, 12f, Vector2.zero, Vector2.one);
                 label.characterSpacing = 1.5f;

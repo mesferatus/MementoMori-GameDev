@@ -36,6 +36,7 @@ namespace MementoMori.UI
         {
             var roomVisual = FindAnyObjectByType<RoomRitualVisual>();
             if (roomVisual != null) roomVisual.SetReturnedRoom(true);
+            WearOriginalOutfit();
             RestyleEndCard();
             if (endCardRoot != null) endCardRoot.SetActive(false);
             EnsureCanonicalNarrativeEntry();
@@ -62,10 +63,23 @@ namespace MementoMori.UI
             StartNextEntry();
         }
 
+        /// <summary>Back in her room Melantha wears the outfit of the room and the labyrinth again, not the lunar one.</summary>
+        private static void WearOriginalOutfit()
+        {
+            var original = Resources.Load<RuntimeAnimatorController>("Costumes/MelanthaOriginal");
+            var melantha = GameObject.Find("MelanthaReturned");
+            if (original == null || melantha == null) return;
+            foreach (var animator in melantha.GetComponentsInChildren<Animator>(true))
+                animator.runtimeAnimatorController = original;
+        }
+
         private void EnsureCanonicalNarrativeEntry()
         {
             // The scene still serializes the earlier draft. Runtime uses the V6.1 script.
-            narrativeEntries = new[] { V61EventCatalog.CreateDialogue("FINAL") };
+            // Played over the returned room itself, not as the full-screen ASCII cutscene: the player has to see
+            // Melantha back in her room (window, photo, the Fragment's mark) before the closing card.
+            var lines = V61EventCatalog.TryGet("FINAL", out var entry) && entry.lines != null ? entry.lines.Length : 0;
+            narrativeEntries = new[] { lines > 0 ? V61EventCatalog.CreateDialogueSegment("FINAL", "FINAL_ROOM", 0, lines) : null };
         }
 
         private void EnsureDialogueManager()
@@ -130,7 +144,7 @@ namespace MementoMori.UI
             completed = () =>
             {
                 DialogueManager.Instance.OnDialogueCompleted -= completed;
-                if (dialogue.SequenceId == "FINAL")
+                if (dialogue.SequenceId == "FINAL_ROOM")
                 {
                     GameState.Instance?.SetCounter("event.FINAL", 1);
                     Destroy(dialogue);

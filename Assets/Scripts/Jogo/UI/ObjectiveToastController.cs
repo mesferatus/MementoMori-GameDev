@@ -138,8 +138,9 @@ namespace MementoMori.UI
                     var title = panel.Find("Title_TMP") as RectTransform;
                     if (title != null)
                     {
-                        title.anchorMin = new Vector2(.16f, .47f);
-                        title.anchorMax = new Vector2(.84f, .67f);
+                        // A small gap between the heading and the objective, still inside the frame.
+                        title.anchorMin = new Vector2(.16f, .52f);
+                        title.anchorMax = new Vector2(.84f, .72f);
                         title.anchoredPosition = Vector2.zero;
                         title.sizeDelta = Vector2.zero;
                         var titleText = title.GetComponent<TMP_Text>();
@@ -147,8 +148,17 @@ namespace MementoMori.UI
                     }
                 }
                 var rect = objectiveTextTmp.rectTransform;
-                rect.anchorMin = new Vector2(.12f, .25f);
-                rect.anchorMax = new Vector2(.88f, .55f);
+                // Below the heading with a light gap; two-line objectives shrink a little to stay inside the frame.
+                rect.anchorMin = new Vector2(.12f, .26f);
+                rect.anchorMax = new Vector2(.88f, .5f);
+                objectiveTextTmp.alignment = TextAlignmentOptions.Top;
+                if (!objectiveTextTmp.enableAutoSizing)
+                {
+                    objectiveTextTmp.fontSizeMax = objectiveTextTmp.fontSize;
+                    objectiveTextTmp.fontSizeMin = Mathf.Max(18f, objectiveTextTmp.fontSize * .72f);
+                    objectiveTextTmp.enableAutoSizing = true;
+                }
+                objectiveTextTmp.lineSpacing = -12f;
                 rect.offsetMin = rect.offsetMax = Vector2.zero;
             }
         }
