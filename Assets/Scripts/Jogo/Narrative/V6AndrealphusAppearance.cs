@@ -73,7 +73,8 @@ namespace MementoMori.Narrative
             {
                 Show(!state.HasFlag(StoryFlag.AndrealphusMeeting02Complete)
                     && DialogueManager.Instance!=null && DialogueManager.Instance.IsOpen
-                    && DialogueManager.Instance.CurrentSpeaker=="Andrealphus");
+                    && DialogueManager.Instance.CurrentSpeaker=="Andrealphus"
+                    && PlayerNear(8f));
                 return;
             }
             if(running || state.HasFlag(StoryFlag.AndrealphusMeeting01Complete)
@@ -83,6 +84,11 @@ namespace MementoMori.Narrative
             if(player==null || Vector2.Distance(player.transform.position,transform.position)>6f)return;
             if(DialogueManager.Instance==null || DialogueManager.Instance.IsOpen)return;
             StartCoroutine(FirstMeeting());
+        }
+        private bool PlayerNear(float reach)
+        {
+            var player = FindAnyObjectByType<MementoMori.Player.PlayerController>();
+            return player != null && Vector2.Distance(player.transform.position, transform.position) <= reach;
         }
         private IEnumerator FirstMeeting()
         {
