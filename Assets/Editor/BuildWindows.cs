@@ -8,7 +8,7 @@ namespace MementoMori.EditorTools
 {
     public static class BuildWindows
     {
-        public const string Folder = "Builds/MementoMori_v1.0";
+        public const string Folder = "Builds/MementoMori_v1.2.0";
 
         /// <summary>
         /// Release player for Windows. LZ4HC compresses the data files without touching texture quality
