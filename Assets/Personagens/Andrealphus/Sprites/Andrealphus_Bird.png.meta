@@ -120,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -172,10 +172,10 @@ TextureImporter:
       name: Andrealphus_Bird_idle_float_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 364
-        width: 144
-        height: 112
+        x: 8
+        y: 728
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Andrealphus_Bird_idle_float_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 364
-        width: 144
-        height: 112
+        x: 312
+        y: 728
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: Andrealphus_Bird_idle_float_2
       rect:
         serializedVersion: 2
-        x: 308
-        y: 364
-        width: 144
-        height: 112
+        x: 616
+        y: 728
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Andrealphus_Bird_idle_float_3
       rect:
         serializedVersion: 2
-        x: 460
-        y: 364
-        width: 144
-        height: 112
+        x: 920
+        y: 728
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Andrealphus_Bird_idle_float_4
       rect:
         serializedVersion: 2
-        x: 612
-        y: 364
-        width: 144
-        height: 112
+        x: 1224
+        y: 728
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: Andrealphus_Bird_idle_float_5
       rect:
         serializedVersion: 2
-        x: 764
-        y: 364
-        width: 144
-        height: 112
+        x: 1528
+        y: 728
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Andrealphus_Bird_speak_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 244
-        width: 144
-        height: 112
+        x: 8
+        y: 488
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: Andrealphus_Bird_speak_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 244
-        width: 144
-        height: 112
+        x: 312
+        y: 488
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Andrealphus_Bird_speak_2
       rect:
         serializedVersion: 2
-        x: 308
-        y: 244
-        width: 144
-        height: 112
+        x: 616
+        y: 488
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Andrealphus_Bird_speak_3
       rect:
         serializedVersion: 2
-        x: 460
-        y: 244
-        width: 144
-        height: 112
+        x: 920
+        y: 488
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: Andrealphus_Bird_speak_4
       rect:
         serializedVersion: 2
-        x: 612
-        y: 244
-        width: 144
-        height: 112
+        x: 1224
+        y: 488
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,10 +414,10 @@ TextureImporter:
       name: Andrealphus_Bird_speak_5
       rect:
         serializedVersion: 2
-        x: 764
-        y: 244
-        width: 144
-        height: 112
+        x: 1528
+        y: 488
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: Andrealphus_Bird_wing_gesture_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 124
-        width: 144
-        height: 112
+        x: 8
+        y: 248
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,10 +458,10 @@ TextureImporter:
       name: Andrealphus_Bird_wing_gesture_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 124
-        width: 144
-        height: 112
+        x: 312
+        y: 248
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: Andrealphus_Bird_wing_gesture_2
       rect:
         serializedVersion: 2
-        x: 308
-        y: 124
-        width: 144
-        height: 112
+        x: 616
+        y: 248
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: Andrealphus_Bird_wing_gesture_3
       rect:
         serializedVersion: 2
-        x: 460
-        y: 124
-        width: 144
-        height: 112
+        x: 920
+        y: 248
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +524,10 @@ TextureImporter:
       name: Andrealphus_Bird_wing_gesture_4
       rect:
         serializedVersion: 2
-        x: 612
-        y: 124
-        width: 144
-        height: 112
+        x: 1224
+        y: 248
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: Andrealphus_Bird_wing_gesture_5
       rect:
         serializedVersion: 2
-        x: 764
-        y: 124
-        width: 144
-        height: 112
+        x: 1528
+        y: 248
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +568,10 @@ TextureImporter:
       name: Andrealphus_Bird_blink_calm_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 144
-        height: 112
+        x: 8
+        y: 8
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,10 +590,10 @@ TextureImporter:
       name: Andrealphus_Bird_blink_calm_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 4
-        width: 144
-        height: 112
+        x: 312
+        y: 8
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,10 +612,10 @@ TextureImporter:
       name: Andrealphus_Bird_blink_calm_2
       rect:
         serializedVersion: 2
-        x: 308
-        y: 4
-        width: 144
-        height: 112
+        x: 616
+        y: 8
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,10 +634,10 @@ TextureImporter:
       name: Andrealphus_Bird_blink_calm_3
       rect:
         serializedVersion: 2
-        x: 460
-        y: 4
-        width: 144
-        height: 112
+        x: 920
+        y: 8
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,10 +656,10 @@ TextureImporter:
       name: Andrealphus_Bird_blink_calm_4
       rect:
         serializedVersion: 2
-        x: 612
-        y: 4
-        width: 144
-        height: 112
+        x: 1224
+        y: 8
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +678,10 @@ TextureImporter:
       name: Andrealphus_Bird_blink_calm_5
       rect:
         serializedVersion: 2
-        x: 764
-        y: 4
-        width: 144
-        height: 112
+        x: 1528
+        y: 8
+        width: 288
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.026785715}
       border: {x: 0, y: 0, z: 0, w: 0}
