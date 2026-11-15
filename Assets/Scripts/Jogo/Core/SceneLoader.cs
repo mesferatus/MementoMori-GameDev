@@ -147,14 +147,15 @@ namespace MementoMori.Core
         }
 
         private TMPro.TextMeshProUGUI loadingLabel;
+        private GameObject loadingRoot;
         private bool loadingVisible;
 
         private void SetLoadingVisible(bool visible)
         {
             loadingVisible = visible;
             if (loadingLabel == null) return;
-            loadingLabel.text = Loc.T("Carregando");
-            loadingLabel.gameObject.SetActive(visible);
+            loadingLabel.text = Loc.T("Carregando").ToUpperInvariant();
+            if (loadingRoot != null) loadingRoot.SetActive(visible);
         }
 
         private void Update()
@@ -163,7 +164,7 @@ namespace MementoMori.Core
             // Slow candle-like breathing plus three dots, so a long load never reads as a freeze.
             var t = Time.unscaledTime;
             loadingLabel.alpha = .45f + .35f * Mathf.Sin(t * 2.2f) * .5f + .175f;
-            loadingLabel.text = Loc.T("Carregando") + new string('.', 1 + (int)(t * 1.6f) % 3);
+            loadingLabel.text = Loc.T("Carregando").ToUpperInvariant() + new string('.', 1 + (int)(t * 1.6f) % 3);
         }
 
         private void CreateFadeCanvas()
@@ -174,28 +175,23 @@ namespace MementoMori.Core
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             canvas.sortingOrder = short.MaxValue;
 
-            var imageObject = new GameObject("Black", typeof(Image));
-            imageObject.transform.SetParent(root.transform, false);
-            var image = imageObject.GetComponent<Image>();
-            image.color = new Color(0.090f, 0.078f, 0.141f, 1f);
-            var rect = image.rectTransform;
-            rect.anchorMin = Vector2.zero;
-            rect.anchorMax = Vector2.one;
-            rect.offsetMin = Vector2.zero;
-            rect.offsetMax = Vector2.zero;
-
-            var labelObject = new GameObject("Loading", typeof(RectTransform), typeof(TMPro.TextMeshProUGUI));
-            labelObject.transform.SetParent(root.transform, false);
-            loadingLabel = labelObject.GetComponent<TMPro.TextMeshProUGUI>();
-            loadingLabel.alignment = TMPro.TextAlignmentOptions.BottomRight;
-            loadingLabel.fontSize = 30;
-            loadingLabel.color = new Color(.79f, .72f, .84f, 1f);
-            loadingLabel.raycastTarget = false;
+            // Same look as the other panels (veil, vignette, double lilac frame, spaced title, divider).
+            MementoMori.UI.MenuPanelStyle.Veil(root.transform, 1f);
+            var panel = MementoMori.UI.MenuPanelStyle.Panel(root.transform, new Vector2(620f, 170f));
+            panel.anchorMin = panel.anchorMax = panel.pivot = new Vector2(.5f, .5f);
+            panel.anchoredPosition = Vector2.zero;
+            var book = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<MementoMori.World.GrimoireScreen>();
+            var font = book != null && book.HeadingFont != null ? book.HeadingFont : null;
+            loadingLabel = (TMPro.TextMeshProUGUI)MementoMori.UI.MenuPanelStyle.NewText("Loading", panel, font, string.Empty, 40f,
+                MementoMori.UI.MenuPanelStyle.TitleColor);
+            loadingLabel.characterSpacing = 12f;
             var labelRect = loadingLabel.rectTransform;
-            labelRect.anchorMin = new Vector2(.6f, .04f);
-            labelRect.anchorMax = new Vector2(.96f, .12f);
+            labelRect.anchorMin = new Vector2(0f, .38f);
+            labelRect.anchorMax = new Vector2(1f, .9f);
             labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
-            labelObject.SetActive(false);
+            MementoMori.UI.MenuPanelStyle.Divider(panel, -122f, 300f);
+            loadingRoot = panel.gameObject;
+            loadingRoot.SetActive(false);
             var scaler = root.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080);
