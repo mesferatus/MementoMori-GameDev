@@ -7,10 +7,10 @@
   <img alt="C#" src="https://img.shields.io/badge/C%23-.NET-6b3fa0?logo=csharp">
   <img alt="URP 2D" src="https://img.shields.io/badge/URP-2D%2017.4-3d2b56">
   <img alt="Windows" src="https://img.shields.io/badge/plataforma-Windows-5b4a7a?logo=windows">
-  <img alt="Estado" src="https://img.shields.io/badge/estado-vers%C3%A3o%20acad%C3%AAmica-8a6bb0">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-1.2.0-8a6bb0">
 </p>
 
-<p align="center"><img src="docs/img/menu.jpg" alt="Tela inicial do Memento Mori com a ilustração de Camila" width="820"></p>
+<p align="center"><img src="Assets/UI/MainMenu/Resources/MainMenu/CamilaIlustracao.png" alt="Ilustração de Camila David Ribeiro usada no menu do Memento Mori" width="820"></p>
 
 ---
 
@@ -25,10 +25,8 @@
 7. [Tecnologias e arquitetura](#tecnologias-e-arquitetura)
 8. [Como executar](#como-executar)
 9. [Controles](#controles)
-10. [Capturas](#capturas)
-11. [Testes](#testes)
-12. [Equipe e créditos](#equipe-e-créditos)
-13. [Estado atual e publicação](#estado-atual-e-publicação)
+10. [Equipe e créditos](#equipe-e-créditos)
+11. [Estado atual e publicação](#estado-atual-e-publicação)
 
 ---
 
@@ -79,10 +77,13 @@ A leitura simbólica apresentada aqui é a interpretação artística do própri
 - Exploração top-down com interação contextual (o prompt aparece junto ao objeto mais próximo).
 - Ritual do quarto, puzzles de eco e escolha, poço de vozes, porta falsa, fases lunares, espelhos e sigilo.
 - **Grimório** com quatro abas — *Anotações, Rituais, Pistas e Memórias* — e 40 entradas liberadas pela progressão; as pistas dos puzzles têm três níveis.
-- Diálogos, escolhas e 12 cutscenes em arte ASCII animada.
+- Diálogos, escolhas e cutscenes em arte ASCII animada; o retorno final acontece no próprio quarto.
+- Mapa desenhado à mão do Labirinto e do Domínio da Lua, com zoom e a posição de Melantha.
+- Objetivo atual sempre visível, dicas quando o jogador fica parado e salvamento automático com indicador.
 - Salvamento em slots e retomada pelo menu (*Continuar*).
-- Nado no Jardim Lunar e névoa sobre as salas do Labirinto fora da sala atual.
-- Vegetação e chamas semitransparentes quando cobrem a personagem; iluminação 2D, água, luar, vaga-lumes e borboletas por shaders e partículas.
+- Suporte a controle (com vibração opcional), remapeamento de teclas, português e inglês, tamanho de fonte e opção de reduzir flashes.
+- Nado no Jardim Lunar, névoa em movimento, vaga-lumes, borboletas e mariposas em todas as salas.
+- Vegetação e chamas semitransparentes quando cobrem a personagem; iluminação 2D, água e luar por shaders e partículas.
 
 ## Tecnologias e arquitetura
 
@@ -93,13 +94,12 @@ A leitura simbólica apresentada aqui é a interpretação artística do própri
 | URP 2D 17.4 | Renderização, Light2D, shaders próprios (`Assets/Shaders`) |
 | Tilemaps 2D | Mapas, colisão (`CollisionBoundary`) e piso navegável |
 | uGUI + TextMeshPro | Interface, diálogos, grimório |
-| Unity Test Framework 1.6 | Testes EditMode e PlayMode (mantidos fora do repositório público) |
 
 Organização do código: `Core` (estado, salvamento, entrada), `Interaction`, `Dialogue`, `Narrative`, `Puzzles`, `Poe`, `Player`, `World`, `UI` e `Audio`. Ferramentas de editor reprodutíveis ficam em `Assets/Editor`.
 
 ## Como executar
 
-**Jogando a build:** extraia o ZIP e execute `MementoMori.exe` (mantenha a pasta `MementoMori_Data` ao lado do executável).
+**Jogando a build:** baixe `MementoMori_v1.2.0_Windows_x64.zip`, extraia o ZIP e execute `MementoMori.exe` (mantenha a pasta `MementoMori_Data` ao lado do executável).
 
 **Pelo código-fonte:**
 
@@ -116,37 +116,22 @@ As cenas da build, em ordem: `MainMenu`, `Quarto`, `Labirinto`, `DominioLua`, `F
 | Mover | **W A S D** ou setas |
 | Interagir / avançar diálogo | **E** (Enter também avança cutscenes) |
 | Grimório | **G** |
+| Mapa | **M** (zoom com a roda do mouse ou **+ / −**) |
 | Pausa / voltar | **Esc** |
 | Pular cutscene | **Esc** |
 
-As teclas de ação podem ser remapeadas em *Configurações*.
-
-## Capturas
-
-| | |
-|---|---|
-| <img src="docs/img/quarto.jpg" alt="Quarto com o ritual das velas"> | <img src="docs/img/grimorio.jpg" alt="Grimório aberto"> |
-| <img src="docs/img/jardim_lunar.jpg" alt="Jardim Lunar com luar e vaga-lumes"> | <img src="docs/img/poe_dominio_lua.jpg" alt="Melantha e Poe no Domínio da Lua"> |
-| <img src="docs/img/cutscene_ascii.jpg" alt="Cutscene em arte ASCII"> | |
-
-## Testes
-
-| Suíte | Resultado (08/11/2026) |
-|---|---|
-| EditMode | 68/68 |
-| PlayMode | 28/28 |
-| Percurso automatizado | CT-001 a CT-006 aprovados; CT-007 a CT-011 ainda não automatizados |
+No controle: analógico esquerdo ou direcional move, **A** interage, **B** volta ou pula, **Y** abre o grimório, **Start** pausa e **Select** abre o mapa. As teclas podem ser remapeadas em *Configurações*.
 
 ## Equipe e créditos
 
 | Pessoa | Contribuição |
 |---|---|
-| **Callisto Monteiro Mascoloti** | Programação, integração, shaders programados, áudio e testes |
+| **Callisto Monteiro Mascoloti** | Programação, integração, shaders programados e áudio |
 | **Luiza Canova** | Direção de arte, cenários, sprites, organização visual, colliders e narrativa |
 | **Camila David Ribeiro** | Ilustração original usada no menu e na tela final |
 
 ## Estado atual e publicação
 
-Versão acadêmica jogável do início ao fim do recorte (Quarto → Labirinto → Domínio da Lua → retorno). A página no itch.io será publicada pela equipe; o link será adicionado aqui quando estiver no ar.
+Versão **1.2.0**, jogável do início ao fim do recorte (Quarto → Labirinto → Domínio da Lua → retorno). A página no itch.io será publicada pela equipe; o link será adicionado aqui quando estiver no ar.
 
 Licença: ainda não definida pela equipe — todos os direitos reservados aos autores até a definição.

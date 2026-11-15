@@ -82,3 +82,14 @@
 # Captures written by the editor bridge, never part of the game
 /Assets/Screenshots/
 /Assets/Screenshots.meta
+
+# Segredos e credenciais nunca entram no repositório
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+*credentials*.json
