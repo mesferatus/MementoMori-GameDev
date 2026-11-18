@@ -274,6 +274,7 @@ namespace MementoMori.UI
             if (ui.Find("Backdrop")?.GetComponent<Image>() is Image backdrop) backdrop.color = Color.clear;
             // The emblem sat over the illustration's face; the logo above already closes the card.
             ui.Find("CentralOrnament")?.gameObject.SetActive(false);
+            ui.Find("FinalBetaSubtitle_TMP")?.gameObject.SetActive(false);
             foreach (var name in new[] { "CreditsButton", "ReturnButton", "QuitButton" })
                 if (ui.Find(name)?.GetComponent<Button>() is Button button)
                 {
@@ -305,7 +306,16 @@ namespace MementoMori.UI
             }
         }
 
-        public void ShowCredits() { if (sequenceComplete && credits != null) credits.SetActive(true); }
+        public void ShowCredits()
+        {
+            if (!sequenceComplete || credits == null) return;
+            var ui = credits.transform.parent;
+            if (ui != null)
+                foreach (var name in new[] { "FinalTitle", "FinalFragmentLarge", "ClosingMessage",
+                    "CreditsButton", "ReturnButton", "QuitButton" })
+                    ui.Find(name)?.gameObject.SetActive(false);
+            credits.SetActive(true);
+        }
         public void HideCredits() { if (sequenceComplete) ReturnToMenu(); }
         public void Quit() { if (sequenceComplete) Application.Quit(); }
 

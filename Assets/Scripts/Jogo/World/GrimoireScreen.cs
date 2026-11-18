@@ -314,7 +314,7 @@ namespace MementoMori.World
                 pageCount = selectedEntry.Hints.Length + (recordAvailable && !string.IsNullOrEmpty(selectedEntry.Record) ? 1 : 0);
                 page = Mathf.Clamp(requested, 0, pageCount - 1);
                 pageBody.text = page < selectedEntry.Hints.Length
-                    ? MementoMori.Core.Loc.T("Pista") + " " + (page == 0 ? "I" : page == 1 ? "II" : "III") + "\n\n" + selectedEntry.Hints[page]
+                    ? (selectedEntry.Id == "A00" ? string.Empty : MementoMori.Core.Loc.T("Pista") + " " + (page == 0 ? "I" : page == 1 ? "II" : "III") + "\n\n") + selectedEntry.Hints[page]
                     : MementoMori.Core.Loc.T("Registro após") + " " + MementoMori.Core.Loc.T(selectedEntry.Id == "P03" ? "conclusão" : "a cena") + "\n\n" + selectedEntry.Record;
                 pageBody.pageToDisplay = 1;
             }
@@ -343,6 +343,9 @@ namespace MementoMori.World
             visibleEntries.Clear();
             foreach (var entry in GrimoireCatalog.Entries)
                 if (entry.Category == activeTab && GrimoireCatalog.IsUnlocked(entry.Id)) visibleEntries.Add(entry);
+            // Always-present help pages on top: what to do now (three escalating hints) and how to play.
+            if (activeTab == 2 && CurrentHelpEntry() is GrimoireCatalog.Entry help) visibleEntries.Insert(0, help);
+            if (activeTab == 0) visibleEntries.Insert(0, ControlsEntry());
             indexTitle.text = MementoMori.Core.Loc.T(TabTitles[activeTab]);
             for (int i = 0; i < tabFrames.Length; i++)
             {
@@ -354,6 +357,40 @@ namespace MementoMori.World
             if (selectedEntry != null) GrimoireCatalog.MarkRead(selectedEntry.Id);
             RenderList();
             ShowPage(0);
+        }
+
+        private static GrimoireCatalog.Entry CurrentHelpEntry()
+        {
+            var objective = MementoMori.UI.ObjectiveToastController.Instance != null ? MementoMori.UI.ObjectiveToastController.Instance.CurrentObjective : null;
+            if (string.IsNullOrEmpty(objective)) return null;
+            MementoMori.UI.StuckHintPresenter.TryGetHints(objective, out var soft, out var direct);
+            return new GrimoireCatalog.Entry
+            {
+                Id = "P00",
+                Title = Loc.T("O que fazer agora"),
+                Hints = new[]
+                {
+                    Loc.T("Objetivo atual:") + "\n" + Loc.T(objective) + "\n\n" + Loc.T("Vire a página para uma dica. A última página diz exatamente o que fazer."),
+                    soft == null ? Loc.T("Explore a sala, chegue perto do que brilha e aperte o botão de interagir.") : Loc.T(soft),
+                    direct == null ? Loc.T("Abra o mapa (M): a sala marcada como PRÓXIMO DESAFIO é para onde ir.") : Loc.T(direct) + "\n\n" + Loc.T("Abra o mapa (M): a sala marcada como PRÓXIMO DESAFIO é para onde ir."),
+                }
+            };
+        }
+
+        private static GrimoireCatalog.Entry ControlsEntry()
+        {
+            string Key(GameAction action) => InputBindings.Get(action).ToString().ToUpperInvariant();
+            var keys = Loc.T("Andar") + ": " + Key(GameAction.MoveUp) + " " + Key(GameAction.MoveLeft) + " " + Key(GameAction.MoveDown) + " " + Key(GameAction.MoveRight) + "\n"
+                + Loc.T("Interagir / avançar diálogo") + ": " + Key(GameAction.Interact) + "\n"
+                + Loc.T("Grimório (dicas e pistas)") + ": " + Key(GameAction.Grimoire) + "\n"
+                + Loc.T("Mapa") + ": M\n" + Loc.T("Histórico de falas") + ": H\n" + Loc.T("Pausa e configurações") + ": " + Key(GameAction.Pause);
+            var pad = Loc.T("Controle") + ":\n" + Loc.T("A interagir · B voltar · Y grimório") + "\n" + Loc.T("Start pausa · Select mapa · LB histórico · RB rápido");
+            return new GrimoireCatalog.Entry
+            {
+                Id = "A00",
+                Title = Loc.T("Como jogar"),
+                Hints = new[] { keys, pad, Loc.T("Travou num desafio? Abra a aba PISTAS: a primeira página sempre mostra o que fazer agora, com dicas cada vez mais diretas.") }
+            };
         }
 
         private void RenderList()

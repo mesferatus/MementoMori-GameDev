@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -20,6 +22,9 @@ namespace MementoMori.World
             "M07_layer_paredes_slice (38)", "M07_layer_paredes_slice (39)", "M07_layer_paredes_slice (40)"
         };
         private static readonly Color MoonWallTint = new(.64f, .68f, .86f, 1f);
+        // The joint art (Coroamento_Lua) is bluer than the brick tiles: a warmer tint lands it on the walls' grey.
+        private static readonly string[] WalkOnDais = { "L06_004" };
+        private static readonly Color MoonJointTint = new(.74f, .75f, .8f, 1f);
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Hook()
@@ -50,13 +55,50 @@ namespace MementoMori.World
                 }
                 // The wall joints stay on top as authored, just under the mist so it veils them like the rest.
                 else pinned.sortingOrder = 29000;
-                if (scene.name == "DominioLua" && pinned is SpriteRenderer sprite && pinned.name.Contains("_layer_paredes"))
-                    sprite.color = MoonWallTint * new Color(1f, 1f, 1f, sprite.color.a);
             }
+            // Low daises the player is meant to climb onto: draw them as floor so she walks over them.
+            foreach (var name in WalkOnDais)
+                foreach (var root in scene.GetRootGameObjects())
+                foreach (var dais in root.GetComponentsInChildren<SpriteRenderer>(true))
+                    if (dais.name == name && dais.gameObject.scene == scene) dais.sortingOrder = -20300;
+            // A joint uses the wall's ground edge, so an actor beside its south face stays visible.
+            foreach (var root in scene.GetRootGameObjects())
+            foreach (var joint in root.GetComponentsInChildren<SpriteRenderer>(true))
+            {
+                if (!joint.name.Contains("_layer_paredes")) continue;
+                var solids = joint.GetComponentsInChildren<Collider2D>(true)
+                    .Where(c => c.enabled && !c.isTrigger && !(c is TilemapCollider2D)
+                        && !(c is CompositeCollider2D)).ToArray();
+                var ground = solids.Length > 0 ? solids.Max(c => c.bounds.max.y) : joint.bounds.max.y;
+                joint.sortingOrder = Mathf.Clamp(5000 - Mathf.RoundToInt(ground * 100f), -32000, 29000);
+            }
+            // Every joint gets the same tint, pinned or not.
+            if (scene.name == "DominioLua")
+                foreach (var root in scene.GetRootGameObjects())
+                foreach (var sprite in root.GetComponentsInChildren<SpriteRenderer>(true))
+                    if (sprite.name.Contains("_layer_paredes"))
+                        sprite.color = MoonJointTint * new Color(1f, 1f, 1f, sprite.color.a);
+            // Labirinto wall and module rows (altars, portals, low walls) had no collision of their own, only the
+            // outer boundary: Melantha walked into the altar modules. Each row gets its art's outline as a solid
+            // shape and sorts by its foot. Verified: every room and all interactables stay reachable.
+            var shaped = new HashSet<TilemapRenderer>();
+            if (scene.name == "Labirinto")
+                foreach (var root in scene.GetRootGameObjects())
+                foreach (var renderer in root.GetComponentsInChildren<TilemapRenderer>(true))
+                {
+                    if (!renderer.name.Contains("_layer_paredes")) continue;
+                    var map = renderer.GetComponent<Tilemap>();
+                    var existing = renderer.GetComponent<TilemapCollider2D>();
+                    if (map == null || existing != null && existing.enabled || map.GetUsedTilesCount() == 0) continue;
+                    if (existing == null) existing = renderer.gameObject.AddComponent<TilemapCollider2D>();
+                    existing.enabled = true;
+                    // Collision only: the authored draw order stays, so the wall pieces keep joining as drawn.
+                    shaped.Add(renderer);
+                }
             foreach (var root in scene.GetRootGameObjects())
             foreach (var renderer in root.GetComponentsInChildren<TilemapRenderer>(true))
             {
-                if (!renderer.name.Contains("_layer_paredes")) continue;
+                if (!renderer.name.Contains("_layer_paredes") || shaped.Contains(renderer)) continue;
                 var solid = renderer.GetComponent<TilemapCollider2D>();
                 if (solid == null || !solid.enabled) continue;
                 var composite = renderer.GetComponent<CompositeCollider2D>();

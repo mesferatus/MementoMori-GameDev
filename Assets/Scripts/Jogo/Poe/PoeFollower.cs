@@ -64,6 +64,33 @@ namespace MementoMori.Poe
             ResolveSpawnOverlap();
         }
 
+        // A save stores Melantha's position, not a route from the companion's scene spawn.
+        // Restore him to a free floor spot beside her without changing any story progress.
+        public bool RestoreBesidePlayer()
+        {
+            if (player == null) player = FindAnyObjectByType<PlayerController>()?.transform;
+            if (player == null || GameState.Instance == null || !GameState.Instance.PoeRevealed
+                || State == PoeState.Disabled || State == PoeState.Dissolving) return false;
+            for (var ring = 0; ring < 5; ring++)
+            {
+                var radius = .7f + .25f * ring;
+                for (var i = 0; i < 16; i++)
+                {
+                    var angle = i * Mathf.PI / 8f;
+                    var candidate = (Vector2)player.position + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+                    if (!HasFloorClearance(candidate) || !ClearStep(candidate, candidate)) continue;
+                    transform.position = new Vector3(candidate.x, candidate.y, transform.position.z);
+                    var body = GetComponent<Rigidbody2D>();
+                    if (body != null) { body.position = candidate; body.linearVelocity = Vector2.zero; }
+                    navigationRoute.Clear(); nextRouteSearch = 0f;
+                    lastVisualPosition = transform.position;
+                    if (State == PoeState.Hidden) State = PoeState.Following;
+                    return true;
+                }
+            }
+            return false;
+        }
+
         // Scene loads and save restores can drop the companion on top of Melantha.
         private void ResolveSpawnOverlap()
         {

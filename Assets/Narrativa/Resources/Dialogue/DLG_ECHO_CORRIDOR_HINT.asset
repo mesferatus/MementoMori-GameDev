@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: MementoMori.Runtime::MementoMori.Dialogue.DialogueData
   sequenceId: DLG_ECHO_CORRIDOR_HINT
   lines:
-  - Text: O que cresce sem nascer, desaparece sem morrer e retorna sem lembrar?
+  - Id: 
+    Text: O que cresce sem nascer, desaparece sem morrer e retorna sem lembrar?
     Speaker: "Narra\xE7\xE3o"
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -22,7 +23,8 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "Uma pergunta antes do vocabul\xE1rio."
+  - Id: 
+    Text: "Uma pergunta antes do vocabul\xE1rio."
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0
@@ -30,7 +32,8 @@ MonoBehaviour:
     Thought: 0
     Narration: 0
     LockMovement: 1
-  - Text: "O jogador deve seguir a voz que altera a mem\xF3ria."
+  - Id: 
+    Text: "Preciso seguir a voz que altera a mem\xF3ria."
     Speaker: Melantha
     CharactersPerSecond: 38
     PauseBefore: 0

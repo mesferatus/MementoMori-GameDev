@@ -19,6 +19,7 @@ namespace MementoMori.Puzzles
         public int Attempts { get; private set; }
         public int HintLevel { get; private set; }
         public bool Solved { get; private set; }
+        public SigilRing LastEvaluatedRing { get; private set; }
         public event Action<SigilRing, bool> RingEvaluated;
 
         public void Configure(DoorController door) { targetDoor = door; }
@@ -31,6 +32,7 @@ namespace MementoMori.Puzzles
             GrimoireCatalog.Discover("P13");
             var progressKey = "sigil." + ring;
             if (GameState.Instance != null && GameState.Instance.GetPuzzleProgress(progressKey) > 0) return false;
+            LastEvaluatedRing = ring;
             Attempts++;
             bool ok = ring switch
             {

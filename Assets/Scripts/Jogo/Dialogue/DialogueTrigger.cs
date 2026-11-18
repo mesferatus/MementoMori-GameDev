@@ -64,7 +64,9 @@ namespace MementoMori.Dialogue
         public void ConfigureRepeatDialogue(DialogueData repeat) => repeatDialogue = repeat;
 
         public string InteractionVerb => interactionVerb;
-        public int InteractionPriority => 0;
+        public int InteractionPriority => gameObject.name.StartsWith("GalleryDoor_", System.StringComparison.Ordinal)
+            && GameState.Instance != null
+            && GameState.Instance.GetCounter("event." + GalleryEventId(gameObject.name)) == 0 ? 4 : 0;
         public bool CanInteract(InteractionContext context) =>
             !(gameObject.name == "EmptyChamber" && GameState.Instance != null
                 && GameState.Instance.HasFlag(StoryFlag.EmptyChamberComplete))

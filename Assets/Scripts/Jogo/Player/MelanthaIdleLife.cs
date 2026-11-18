@@ -23,6 +23,19 @@ namespace MementoMori.Player
         private float nextPetAt;
         private float nextLookupAt;
         public bool IsPetting => petSince >= 0f;
+        /// <summary>Seconds she has stood still (not walking, swimming or in a cutscene).</summary>
+        public float StillSeconds => Time.time - idleSince;
+        bool manualPet;
+
+        /// <summary>Starts the petting frames right away (player asked for it with the interact key).</summary>
+        public void PetNow(PoeFollower poe)
+        {
+            if (petFrames == null || petFrames.Length != 6 || poe == null) return;
+            companion = poe; manualPet = true;
+            petSince = Time.time; idleSince = Time.time - 8f;
+            animator.SetFloat("LastMoveX", poe.transform.position.x < transform.position.x ? -1f : 1f);
+            animator.SetFloat("LastMoveY", 0f);
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Install()
@@ -75,11 +88,12 @@ namespace MementoMori.Player
                 nextLookupAt = Time.time + .5f;
                 if (companion == null)
                     companion = FindFirstObjectByType<PoeFollower>();
+                if (companion != null) PoePettable.Ensure(companion);
             }
 
             if (IsPetting)
             {
-                if (!CompanionInReach() || Time.time - petSince >= 2.1f)
+                if (!(manualPet || CompanionInReach()) || Time.time - petSince >= 2.1f)
                     CancelPet();
                 else
                 {
@@ -92,10 +106,9 @@ namespace MementoMori.Player
                 }
             }
 
-            // Less than one logical pixel at the shoulders; sprite pivot keeps the feet rooted.
-            var breath = Mathf.Sin((Time.time - idleSince) * (Mathf.PI * 2f / 3.8f));
-            visual.transform.localScale = Vector3.Scale(originalScale,
-                new Vector3(1f - breath * .0015f, 1f + breath * .006f, 1f));
+            // No scale "breathing": on pixel art a sub-pixel stretch rounds into whole rows and the head
+            // visibly swelled. The idle animation frames already carry her life.
+            visual.transform.localScale = originalScale;
 
             if (petFrames.Length == 6 && Time.time >= nextPetAt
                 && Time.time - idleSince >= 8f && CompanionInReach())
@@ -136,7 +149,7 @@ namespace MementoMori.Player
         private void CancelPet()
         {
             if (!IsPetting) return;
-            petSince = -1f;
+            petSince = -1f; manualPet = false;
             nextPetAt = Time.time + 24f;
             if (animator != null && animator.isActiveAndEnabled) animator.Update(0f);
         }

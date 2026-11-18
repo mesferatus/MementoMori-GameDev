@@ -39,16 +39,32 @@ namespace MementoMori.UI
             ["Decifre o Salão dos Sete Espelhos."] = ("Sete espelhos e nenhum me favorece.", "Toque os espelhos na ordem que os símbolos indicam; depois de alguns erros, eles mostram pistas."),
             ["Encontre a saída do Corredor Ilusório."] = ("Não confie na imagem perfeita. Nunca é boa ideia.", "Siga a falha, depois o silêncio, depois a passagem."),
             ["Leia as portas da Galeria dos Ciclos."] = ("Oito portas, oito fases. Alguém aqui gosta de arquivo.", "Leia as oito portas e ordene as marcas: Marca, Reflexo, Memória."),
-            ["Recomponha o Sigilo Fragmentado."] = ("Fase, memória e intenção. Três anéis, nenhuma paciência.", "Anéis do sigilo: a lua Nova, a Tigela do quarto e o verbo CHAMAR."),
+            ["Recomponha o Sigilo Fragmentado."] = ("Fase, memória e intenção. Três anéis, nenhuma paciência.", "Anéis do sigilo: a lua Minguante, o Grimório e o verbo SUSTENTAR."),
             ["Pegue o Fragmento."] = ("O Fragmento está logo ali. Dramaticamente esperando.", "Vá até a Câmara do Fragmento e interaja com ele."),
             ["Atravesse o portal de volta."] = ("Tenho o que vim buscar. Hora de ir.", "Volte ao Portal Final e atravesse."),
         };
 
-        string objective;
+        string objective, spokenLine;
         float since, shownAt = -100f;
         int level;
         CanvasGroup group;
         TMP_Text speaker, body;
+        Image icon;
+        static StuckHintPresenter instance;
+        /// <summary>True while a hint is on screen (the echo question steps aside, they share the same place).</summary>
+        public static bool Showing => instance != null && instance.group != null && instance.group.alpha > .05f;
+
+        /// <summary>Shows one line in the hint banner now (room locked, gentle warnings).</summary>
+        public static void Say(string line)
+        {
+            if (instance == null || instance.body == null) return;
+            instance.open = true;
+            instance.spokenLine = line;
+            instance.speaker.text = PoeWalksWithMelantha() ? "Poe" : "Melantha";
+            instance.body.text = Loc.T(line);
+            if (Time.unscaledTime - instance.shownAt > 1.2f) MementoMori.Audio.RuntimeAudio.PlayOneShot("24_region_chime", .1f);
+            instance.shownAt = Time.unscaledTime - .4f;
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Register() { SceneManager.sceneLoaded -= Attach; SceneManager.sceneLoaded += Attach; }
@@ -72,26 +88,77 @@ namespace MementoMori.UI
             soft = direct = null; return false;
         }
 
+        RectTransform star; Image starGlow; bool open;
+
+        void OnEnable() => Loc.LanguageChanged += RefreshLanguage;
+        void OnDisable() => Loc.LanguageChanged -= RefreshLanguage;
+        void RefreshLanguage()
+        {
+            if (!open || body == null) return;
+            if (spokenLine != null) { body.text = Loc.T(spokenLine); return; }
+            var visibleSince = shownAt;
+            Show(Mathf.Max(1, level));
+            shownAt = visibleSince;
+        }
+
         void Start()
         {
-            var root = new GameObject("HintCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(CanvasGroup));
+            instance = this;
+            var root = new GameObject("HintCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
             root.transform.SetParent(transform, false);
             var canvas = root.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 89;
             var scaler = root.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution = new Vector2(1920, 1080); scaler.matchWidthOrHeight = .5f;
-            group = root.GetComponent<CanvasGroup>(); group.alpha = 0f; group.interactable = group.blocksRaycasts = false;
+            if (FindAnyObjectByType<UnityEngine.EventSystems.EventSystem>() == null)
+                new GameObject("HintEventSystem", typeof(UnityEngine.EventSystems.EventSystem), typeof(UnityEngine.EventSystems.StandaloneInputModule));
 
-            var plate = new GameObject("Plate", typeof(RectTransform), typeof(Image));
-            plate.transform.SetParent(root.transform, false);
-            var image = plate.GetComponent<Image>(); image.color = new Color(.07f, .05f, .11f, .82f); image.raycastTarget = false;
+            // The hint lives beside the objective: a star button the player clicks when stuck. It glows once a
+            // hint is ready; the first click gives a gentle nudge, the next one the direct answer.
+            star = MenuPanelStyle.NewImage("EstrelaDica", root.transform, MenuPanelStyle.Diamond(), MenuPanelStyle.Lilac);
+            star.anchorMin = star.anchorMax = new Vector2(1f, 1f); star.pivot = new Vector2(.5f, .5f);
+            star.sizeDelta = new Vector2(58f, 58f); star.anchoredPosition = new Vector2(-730f, -152f);
+            var starImage = star.GetComponent<Image>(); starImage.raycastTarget = true;
+            var accent = MenuPanelStyle.Lilac; accent.a = 1f; starImage.color = accent;
+            var outline = star.gameObject.AddComponent<Outline>();
+            outline.effectColor = new Color(.045f, .012f, .075f, 1f); outline.effectDistance = new Vector2(1.5f, -1.5f);
+            var button = star.gameObject.AddComponent<Button>(); button.targetGraphic = starImage;
+            button.onClick.AddListener(Toggle);
+            starGlow = MenuPanelStyle.NewImage("Brilho", star, MenuPanelStyle.Diamond(), new Color(.75f, .55f, 1f, 0f)).GetComponent<Image>();
+            starGlow.rectTransform.anchorMin = starGlow.rectTransform.anchorMax = new Vector2(.5f, .5f);
+            starGlow.rectTransform.sizeDelta = new Vector2(96f, 96f); starGlow.raycastTarget = false; starGlow.transform.SetAsFirstSibling();
+            var core = MenuPanelStyle.NewImage("Centro", star, MenuPanelStyle.Diamond(), new Color(.05f, .022f, .078f, 1f));
+            core.anchorMin = core.anchorMax = new Vector2(.5f, .5f); core.sizeDelta = new Vector2(26f, 26f); core.GetComponent<Image>().raycastTarget = false;
+            var tag = MenuPanelStyle.NewText("Rotulo", star, MenuPanelStyle.HeadingFont, Loc.T("DICA"), 15f, MenuPanelStyle.TitleColor);
+            tag.rectTransform.anchorMin = tag.rectTransform.anchorMax = new Vector2(.5f, 0f); tag.rectTransform.sizeDelta = new Vector2(120f, 24f);
+            tag.rectTransform.anchoredPosition = new Vector2(0f, -14f); tag.alignment = TextAlignmentOptions.Center; tag.characterSpacing = 4f; tag.raycastTarget = false;
+            LocalizedText.Bind(tag, () => Loc.T("DICA"));
+
+            var plateGo = new GameObject("Plate", typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
+            plateGo.transform.SetParent(root.transform, false);
+            group = plateGo.GetComponent<CanvasGroup>(); group.alpha = 0f; group.interactable = group.blocksRaycasts = false;
+            var image = plateGo.GetComponent<Image>(); image.color = new Color(.035f, .015f, .06f, .94f); image.raycastTarget = false;
             var rect = image.rectTransform;
-            rect.anchorMin = new Vector2(.26f, .05f); rect.anchorMax = new Vector2(.74f, .17f); rect.offsetMin = rect.offsetMax = Vector2.zero;
+            // Right under the objective panel, same width: it reads as the objective's footnote.
+            rect.anchorMin = rect.anchorMax = new Vector2(1f, 1f); rect.pivot = new Vector2(1f, 1f);
+            rect.sizeDelta = new Vector2(600f, 190f); rect.anchoredPosition = new Vector2(-84f, -250f);
+            MenuPanelStyle.FrameOnly(rect);
+            // Close button (x) in the corner: the card can be dismissed at once.
+            var close = MenuPanelStyle.NewText("Fechar", rect, MenuPanelStyle.HeadingFont, "×", 34f, MenuPanelStyle.Lilac);
+            close.rectTransform.anchorMin = close.rectTransform.anchorMax = new Vector2(1f, 1f); close.rectTransform.pivot = new Vector2(1f, 1f);
+            close.rectTransform.sizeDelta = new Vector2(48f, 48f); close.rectTransform.anchoredPosition = new Vector2(-14f, -8f);
+            close.alignment = TextAlignmentOptions.Center; close.raycastTarget = true;
+            close.gameObject.AddComponent<Button>().onClick.AddListener(() => { open = false; shownAt = -100f; group.alpha = 0f; });
+            speaker = Label("Speaker", rect, MenuPanelStyle.HeadingFont, 23f, new Vector2(.07f, .7f), new Vector2(.93f, .9f), MenuPanelStyle.CaptionColor);
+            speaker.characterSpacing = 5f;
+            body = Label("Body", rect, MenuPanelStyle.BodyFont, 29f, new Vector2(.07f, .1f), new Vector2(.93f, .68f), new Color(.93f, .89f, .96f));
+            body.fontStyle = FontStyles.Italic; body.enableAutoSizing = true; body.fontSizeMin = 20f; body.fontSizeMax = 29f;
+        }
 
-            var book = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<MementoMori.World.GrimoireScreen>();
-            var font = book != null && book.HeadingFont != null ? book.HeadingFont : TMP_Settings.defaultFontAsset;
-            speaker = Label("Speaker", plate.transform, font, 20f, new Vector2(.03f, .62f), new Vector2(.97f, .96f), new Color(.79f, .72f, .84f));
-            body = Label("Body", plate.transform, TMP_Settings.defaultFontAsset, 24f, new Vector2(.03f, .06f), new Vector2(.97f, .66f), new Color(.93f, .89f, .96f));
-            body.fontStyle = FontStyles.Italic;
+        void Toggle()
+        {
+            if (open && level >= 2) { open = false; shownAt = -100f; return; }
+            Show(Mathf.Clamp(open ? level + 1 : Mathf.Max(1, level), 1, 2));
+            open = true;
         }
 
         static TMP_Text Label(string name, Transform parent, TMP_FontAsset font, float size, Vector2 min, Vector2 max, Color color)
@@ -108,23 +175,31 @@ namespace MementoMori.UI
         {
             if (group == null) return;
             var current = ObjectiveToastController.Instance != null ? ObjectiveToastController.Instance.CurrentObjective : null;
-            if (current != objective) { objective = current; since = 0f; level = 0; group.alpha = 0f; shownAt = -100f; }
+            if (current != objective) { objective = current; since = 0f; level = 0; open = false; group.alpha = 0f; shownAt = -100f; }
             var blocked = InputGate.Instance != null && InputGate.Instance.IsBlocked;
             // The clock only runs while the player can actually play: not in dialogue, menus, puzzles or pause.
             if (!blocked && Time.timeScale > 0f) since += Time.unscaledDeltaTime;
-            if (level == 0 && since >= SoftAfter) Show(1);
-            else if (level == 1 && since >= DirectAfter) Show(2);
+            var hasHint = TryGetHints(objective, out _, out _);
+            star.gameObject.SetActive(!blocked && hasHint);
+            // Ready: the star breathes a glow so the player notices help is there (never pops up on its own).
+            var ready = since >= SoftAfter && !open;
+            var calm = AccessibilitySettings.Instance != null && AccessibilitySettings.Instance.ReduceFlashes;
+            var glow = ready ? (calm ? .35f : .25f + .25f * Mathf.Sin(Time.unscaledTime * 3f)) : 0f;
+            starGlow.color = new Color(.75f, .55f, 1f, glow);
             var age = Time.unscaledTime - shownAt;
-            var alpha = age < .4f ? age / .4f : age < Visible ? 1f : Mathf.Clamp01(1f - (age - Visible) / Fade);
+            var alpha = age < .3f ? age / .3f : age < 12f ? 1f : Mathf.Clamp01(1f - (age - 12f) / Fade);
+            if (alpha <= 0f) open = false;
             group.alpha = blocked ? 0f : alpha;
+            group.blocksRaycasts = group.interactable = group.alpha > .5f;
         }
 
         void Show(int hintLevel)
         {
+            spokenLine = null;
             level = hintLevel;
             if (!TryGetHints(objective, out var soft, out var direct)) return;
             var poe = PoeWalksWithMelantha();
-            speaker.text = poe ? "Poe" : "Melantha";
+            speaker.text = (poe ? "POE" : "MELANTHA") + "  ·  " + Loc.T(hintLevel == 1 ? "DICA" : "DICA DIRETA");
             var line = Loc.T(hintLevel == 1 ? soft : direct);
             body.text = poe ? Loc.T("(Poe mia e olha para você. Parece dizer:)") + " " + line : "(" + line + ")";
             shownAt = Time.unscaledTime;

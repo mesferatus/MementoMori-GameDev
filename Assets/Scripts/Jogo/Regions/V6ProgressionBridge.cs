@@ -5,6 +5,7 @@ namespace MementoMori.Regions
     /// <summary>Maps existing authored puzzle outcomes into the configurable registry.</summary>
     public sealed class V6ProgressionBridge : MonoBehaviour
     {
+        private bool mirrorEntranceOpened;
         private void Start()
         {
             var state=GameState.Instance;
@@ -25,6 +26,18 @@ namespace MementoMori.Regions
         {
             var state=GameState.Instance;
             if(state==null) return;
+            // MirrorGate is the room's only physical entrance, not its reward exit.
+            // Waiting for PuzzleMirror.Solve here traps the player outside the puzzle.
+            if (!mirrorEntranceOpened && gameObject.scene.name == "DominioLua"
+                && state.HasFlag(StoryFlag.GardenComplete))
+            {
+                var entrance = GameObject.Find("MirrorGate")?.GetComponent<MementoMori.World.DoorController>();
+                if (entrance != null)
+                {
+                    entrance.Open();
+                    mirrorEntranceOpened = true;
+                }
+            }
             Sync(state,StoryFlag.EchoTrial03Complete,"lab.echoes");
             Sync(state,StoryFlag.GardenComplete,"moon.garden");
             Sync(state,StoryFlag.MirrorPuzzleComplete,"moon.mirrors");

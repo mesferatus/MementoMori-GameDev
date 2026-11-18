@@ -134,6 +134,22 @@ namespace MementoMori.Audio
             Object.Destroy(go, clip.length + .1f);
         }
 
+        /// <summary>One-shot with its own pitch (footsteps alternate slightly so a walk never sounds looped).</summary>
+        public static void PlayOneShot(string resourceName, float volume, float pitch)
+        {
+            if (!Application.isPlaying) return;
+            var clip = Resources.Load<AudioClip>(AudioResourceFolder + resourceName);
+            if (clip == null) return;
+            var runtimeAudio = EnsureActive();
+            var go = new GameObject("RuntimeOneShot");
+            var source = go.AddComponent<AudioSource>();
+            source.volume = volume * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.EffectsVolume);
+            source.pitch = pitch;
+            source.outputAudioMixerGroup = runtimeAudio.FindGroup("SFX");
+            source.PlayOneShot(clip);
+            Object.Destroy(go, clip.length / Mathf.Max(.1f, pitch) + .1f);
+        }
+
         public static void PlayChatter(string speaker, int syllable)
         {
             if (!Application.isPlaying) return;

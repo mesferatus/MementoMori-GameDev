@@ -50,6 +50,17 @@ namespace MementoMori.World
                 if (firefly != null)
                     Spawn(firefly, "Moths_" + region.id, centre + new Vector3(2f, -2f, 0f), new Color(.86f, .82f, .95f, .75f));
             }
+            // Pure-white butterflies read as little glyphs over the dark stone: give them violet, half-lit wings.
+            foreach (var system in GetComponentsInChildren<ParticleSystem>(true))
+                if (system.name.StartsWith("Butterflies_")) Wings(system);
+            foreach (var system in FindObjectsByType<ParticleSystem>(FindObjectsSortMode.None))
+                if (system.gameObject.scene == gameObject.scene && system.name.StartsWith("Butterflies_")) Wings(system);
+        }
+
+        private static void Wings(ParticleSystem system)
+        {
+            var main = system.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(new Color(.7f, .55f, .95f, .7f), new Color(.86f, .74f, 1f, .85f));
         }
 
         private void Spawn(ParticleSystem template, string name, Vector3 position, Color? moth)

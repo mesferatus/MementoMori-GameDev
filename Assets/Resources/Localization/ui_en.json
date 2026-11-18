@@ -1053,8 +1053,8 @@
       "en": "Before."
     },
     {
-      "pt": "Apaguei duas e ficou certo. Que estranho.",
-      "en": "I put out two and it came out right. How strange."
+      "pt": "Apaguei e ficou certo. Que estranho.",
+      "en": "I put them out and it came out right. How strange."
     },
     {
       "pt": "Aqui, as confiantes costumam levar ao mesmo lugar.",
@@ -1653,8 +1653,8 @@
       "en": "The garden is copying the reflection."
     },
     {
-      "pt": "O jogador deve seguir a voz que altera a memória.",
-      "en": "The player must follow the voice that alters memory."
+      "pt": "Preciso seguir a voz que altera a memória.",
+      "en": "I need to follow the voice that alters memory."
     },
     {
       "pt": "O livro não lembra por mim.",
@@ -2937,8 +2937,8 @@
       "en": "Phase, memory and intent. Three rings, zero patience."
     },
     {
-      "pt": "Anéis do sigilo: a lua Nova, a Tigela do quarto e o verbo CHAMAR.",
-      "en": "Sigil rings: the New moon, the Bowl from the bedroom and the verb CALL."
+      "pt": "Anéis do sigilo: a lua Minguante, o Grimório e o verbo SUSTENTAR.",
+      "en": "Sigil rings: the Waning moon, the Grimoire and the verb SUSTAIN."
     },
     {
       "pt": "O Fragmento está logo ali. Dramaticamente esperando.",
@@ -3011,6 +3011,194 @@
     {
       "pt": "CONTROLE",
       "en": "CONTROLLER"
+    },
+    {
+      "pt": "Fazer carinho",
+      "en": "Pet Poe"
+    },
+    {
+      "pt": "ATALHOS",
+      "en": "SHORTCUTS"
+    },
+    {
+      "pt": "MENUS",
+      "en": "MENUS"
+    },
+    {
+      "pt": "M mapa · H histórico · Tab rápido",
+      "en": "M map · H history · Tab quick"
+    },
+    {
+      "pt": "A interagir · B voltar · Y grimório",
+      "en": "A interact · B back · Y grimoire"
+    },
+    {
+      "pt": "DICA",
+      "en": "HINT"
+    },
+    {
+      "pt": "DICA DIRETA",
+      "en": "DIRECT HINT"
+    },
+    {
+      "pt": "Ainda não. Algo nesta sala só vai me ouvir depois do que ficou para trás.",
+      "en": "Not yet. Something in this room will only listen once I finish what I left behind."
+    },
+    {
+      "pt": "CONCLUÍDO",
+      "en": "SOLVED"
+    },
+    {
+      "pt": "PRÓXIMO DESAFIO",
+      "en": "NEXT CHALLENGE"
+    },
+    {
+      "pt": "TRANCADO",
+      "en": "LOCKED"
+    },
+    {
+      "pt": "O que fazer agora",
+      "en": "What to do now"
+    },
+    {
+      "pt": "Objetivo atual:",
+      "en": "Current goal:"
+    },
+    {
+      "pt": "Vire a página para uma dica. A última página diz exatamente o que fazer.",
+      "en": "Turn the page for a hint. The last page tells you exactly what to do."
+    },
+    {
+      "pt": "Explore a sala, chegue perto do que brilha e aperte o botão de interagir.",
+      "en": "Explore the room, walk up to what glows and press the interact button."
+    },
+    {
+      "pt": "Abra o mapa (M): a sala marcada como PRÓXIMO DESAFIO é para onde ir.",
+      "en": "Open the map (M): the room marked NEXT CHALLENGE is where to go."
+    },
+    {
+      "pt": "Andar",
+      "en": "Walk"
+    },
+    {
+      "pt": "Interagir / avançar diálogo",
+      "en": "Interact / advance dialogue"
+    },
+    {
+      "pt": "Grimório (dicas e pistas)",
+      "en": "Grimoire (hints and clues)"
+    },
+    {
+      "pt": "Mapa",
+      "en": "Map"
+    },
+    {
+      "pt": "Histórico de falas",
+      "en": "Dialogue history"
+    },
+    {
+      "pt": "Pausa e configurações",
+      "en": "Pause and settings"
+    },
+    {
+      "pt": "Controle",
+      "en": "Controller"
+    },
+    {
+      "pt": "Como jogar",
+      "en": "How to play"
+    },
+    {
+      "pt": "Travou num desafio? Abra a aba PISTAS: a primeira página sempre mostra o que fazer agora, com dicas cada vez mais diretas.",
+      "en": "Stuck on a challenge? Open the CLUES tab: its first page always shows what to do now, with ever more direct hints."
+    },
+    {
+      "pt": "Y grimório (dicas) · Select mapa · LB histórico · A interagir",
+      "en": "Y grimoire (hints) · Select map · LB history · A interact"
+    },
+    {
+      "pt": "Grimório (dicas)",
+      "en": "Grimoire (hints)"
+    },
+    {
+      "pt": "Histórico",
+      "en": "History"
+    },
+    {
+      "pt": "Interagir",
+      "en": "Interact"
+    },
+    {
+      "pt": "Select — mapa · Y — grimório com dicas",
+      "en": "Select — map · Y — grimoire with hints"
+    },
+    {
+      "pt": "grimório com dicas",
+      "en": "grimoire with hints"
+    },
+    {
+      "pt": "ESCUTE OS CORREDORES",
+      "en": "LISTEN TO THE CORRIDORS"
+    },
+    {
+      "pt": "Analógico esquerdo — mover · direito — zoom · Select ou B — fechar",
+      "en": "Left stick — move · right — zoom · Select or B — close"
+    },
+    {
+      "pt": "Arraste com o mouse — mover · roda ou +/− — zoom · M ou Esc — fechar",
+      "en": "Drag with the mouse — move · wheel or +/− — zoom · M or Esc — close"
+    },
+    {
+      "pt": "MAPA",
+      "en": "MAP"
+    },
+    {
+      "pt": "Anel de fases",
+      "en": "Phase ring"
+    },
+    {
+      "pt": "Anel de memória",
+      "en": "Memory ring"
+    },
+    {
+      "pt": "Anel de intenção",
+      "en": "Intention ring"
+    },
+    {
+      "pt": "Nova",
+      "en": "New moon"
+    },
+    {
+      "pt": "Crescente",
+      "en": "Waxing"
+    },
+    {
+      "pt": "Cheia",
+      "en": "Full moon"
+    },
+    {
+      "pt": "Minguante",
+      "en": "Waning"
+    },
+    {
+      "pt": "Tigela",
+      "en": "Bowl"
+    },
+    {
+      "pt": "Brinquedo",
+      "en": "Toy"
+    },
+    {
+      "pt": "Fotografia",
+      "en": "Photograph"
+    },
+    {
+      "pt": "CHAMAR",
+      "en": "CALL"
+    },
+    {
+      "pt": "SUSTENTAR",
+      "en": "SUSTAIN"
     }
   ]
 }

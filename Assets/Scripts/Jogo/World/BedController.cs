@@ -1,6 +1,7 @@
 using MementoMori.Core;
 using MementoMori.Dialogue;
 using MementoMori.Interaction;
+using MementoMori.UI;
 using UnityEngine;
 using System.Collections;
 using MementoMori.Audio;
@@ -17,7 +18,6 @@ namespace MementoMori.World
         private DialogueData transitionDialogue;
         private bool transitioning;
         private bool choicePending;
-        private Vector2 checkpointPosition;
         private GameObject choicePanel;
         [SerializeField, Range(6f, 10f)] private float dreamDuration = 10f;
         public void Configure(string targetScene) { nextScene = targetScene; }
@@ -28,7 +28,6 @@ namespace MementoMori.World
             && state.RitualCompleted;
         public void Interact(InteractionContext context)
         {
-            if (context.Interactor != null) checkpointPosition = context.Interactor.transform.position;
             var state = GameState.Instance;
             var ready = HasRoomRequirements(state);
             if (!ready)
@@ -118,21 +117,14 @@ namespace MementoMori.World
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080);
             scaler.matchWidthOrHeight = .5f;
-            var panel = new GameObject("Panel", typeof(RectTransform), typeof(Image));
-            panel.transform.SetParent(choicePanel.transform, false);
-            var image = panel.GetComponent<Image>(); image.color = new Color(.11f, .065f, .17f, .98f);
-            var rect = panel.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(.31f, .35f); rect.anchorMax = new Vector2(.69f, .65f);
-            rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
-            Border(panel.transform, "UpperBorder", new Vector2(.03f, .965f), new Vector2(.97f, .975f));
-            Border(panel.transform, "LowerBorder", new Vector2(.03f, .025f), new Vector2(.97f, .035f));
-            Border(panel.transform, "LeftBorder", new Vector2(.02f, .04f), new Vector2(.025f, .96f));
-            Border(panel.transform, "RightBorder", new Vector2(.975f, .04f), new Vector2(.98f, .96f));
-            var label = ChoiceText("Title", panel.transform, Loc.T("Escolha antes de dormir"), 30,
+            MenuPanelStyle.Veil(choicePanel.transform, .55f);
+            var rect = MenuPanelStyle.Panel(choicePanel.transform, new Vector2(1000f, 420f));
+            var panel = rect.gameObject;
+            var label = ChoiceText("Title", panel.transform, "Escolha antes de dormir", 36,
                 new Vector2(.07f, .70f), new Vector2(.93f, .94f));
             label.fontStyle = FontStyles.SmallCaps;
-            CreateChoiceButton(panel.transform, Loc.T("Deitar [Y]"), new Vector2(.09f, .39f), new Vector2(.91f, .65f), StartSleep);
-            CreateChoiceButton(panel.transform, Loc.T("Verificar o quarto mais uma vez [N]"), new Vector2(.09f, .09f), new Vector2(.91f, .35f), CancelSleepChoice);
+            CreateChoiceButton(panel.transform, "Deitar [Y]", new Vector2(.09f, .39f), new Vector2(.91f, .65f), StartSleep);
+            CreateChoiceButton(panel.transform, "Verificar o quarto mais uma vez [N]", new Vector2(.09f, .09f), new Vector2(.91f, .35f), CancelSleepChoice);
         }
 
         private void CreateChoiceButton(Transform parent, string caption, Vector2 min, Vector2 max, UnityEngine.Events.UnityAction action)
@@ -143,9 +135,7 @@ namespace MementoMori.World
             image.color = new Color(.20f, .12f, .29f, 1f);
             var rect = buttonObject.GetComponent<RectTransform>();
             rect.anchorMin = min; rect.anchorMax = max; rect.offsetMin = Vector2.zero; rect.offsetMax = Vector2.zero;
-            Border(buttonObject.transform, "TopLine", new Vector2(0, .97f), new Vector2(1, 1));
-            Border(buttonObject.transform, "BottomLine", new Vector2(0, 0), new Vector2(1, .03f));
-            ChoiceText("Text", buttonObject.transform, caption, 25, new Vector2(.04f, .05f), new Vector2(.96f, .95f));
+            ChoiceText("Text", buttonObject.transform, caption, 31, new Vector2(.04f, .05f), new Vector2(.96f, .95f));
             var button = buttonObject.GetComponent<Button>();
             button.colors = new ColorBlock
             {
@@ -157,19 +147,8 @@ namespace MementoMori.World
                 colorMultiplier = 1f,
                 fadeDuration = .12f
             };
+            MenuButtonStyle.Apply(button, null, .6f);
             button.onClick.AddListener(action);
-        }
-
-        private static void Border(Transform parent, string name, Vector2 min, Vector2 max)
-        {
-            var line = new GameObject(name, typeof(RectTransform), typeof(Image));
-            line.transform.SetParent(parent, false);
-            var rect = line.GetComponent<RectTransform>();
-            rect.anchorMin = min; rect.anchorMax = max;
-            rect.offsetMin = rect.offsetMax = Vector2.zero;
-            var image = line.GetComponent<Image>();
-            image.color = new Color(.69f, .50f, .69f, .85f);
-            image.raycastTarget = false;
         }
 
         private static TextMeshProUGUI ChoiceText(string name, Transform parent, string caption, float size, Vector2 min, Vector2 max)
@@ -179,9 +158,9 @@ namespace MementoMori.World
             var rect = label.rectTransform;
             rect.anchorMin = min; rect.anchorMax = max;
             rect.offsetMin = rect.offsetMax = Vector2.zero;
-            var existing = FindAnyObjectByType<TextMeshProUGUI>();
-            label.font = existing != null && existing.font != null ? existing.font : TMP_Settings.defaultFontAsset;
-            label.text = caption;
+            label.font = MenuPanelStyle.HeadingFont ?? TMP_Settings.defaultFontAsset;
+            label.text = Loc.T(caption);
+            LocalizedText.Bind(label, () => Loc.T(caption));
             label.fontSize = size;
             label.color = new Color(.96f, .86f, .96f);
             label.alignment = TextAlignmentOptions.Center;
@@ -219,7 +198,6 @@ namespace MementoMori.World
                 var transition = gameObject.GetComponent<DreamTransitionController>() ?? gameObject.AddComponent<DreamTransitionController>();
                 yield return transition.Play(dreamDuration);
                 GameState.Instance?.SetFlag(StoryFlag.DreamTransitionComplete);
-                GameState.Instance?.SaveCheckpoint(nextScene, checkpointPosition);
                 StoryProgression.Instance?.SaveCheckpoint(CheckpointId.Sleep);
                 SceneLoader.Instance?.LoadScene(nextScene);
             }

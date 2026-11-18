@@ -19,6 +19,7 @@ namespace MementoMori.World
         [SerializeField] private DialogueData touchDialogue;
         [SerializeField] private DialogueData memoryDialogue;
         [SerializeField] private DialogueData collectDialogue;
+        [SerializeField] private SpriteRenderer pickupVisual;
         private bool collected;
         private int interactionStage;
         private bool busy;
@@ -26,6 +27,7 @@ namespace MementoMori.World
         {
             var state = GameState.Instance;
             collected = state != null && state.HasFlag(StoryFlag.FragmentCollected);
+            if (pickupVisual != null) pickupVisual.enabled = !collected;
             interactionStage = collected ? 4 : Mathf.Clamp(state?.GetCounter("fragment.stage") ?? 0, 0, 3);
         }
         public void Configure(string targetScene, float delay)
@@ -122,8 +124,9 @@ namespace MementoMori.World
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             var art = new System.Collections.Generic.List<SpriteRenderer>();
-            foreach (var r in GetComponentsInChildren<SpriteRenderer>())
-                if (r.enabled && r.sprite != null && r.bounds.size.x < 3f && r.bounds.size.y < 3f) art.Add(r);
+            if (pickupVisual != null && pickupVisual.enabled && pickupVisual.sprite != null) art.Add(pickupVisual);
+            if (art.Count == 0) foreach (var r in GetComponentsInChildren<SpriteRenderer>())
+                if (r.enabled && r.sprite != null && r.bounds.size.x < 3f && r.bounds.size.y < 3f && !art.Contains(r)) art.Add(r);
             if (art.Count == 0)
                 foreach (var r in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
                     if (r.enabled && r.sprite != null && r.name.Contains("Fragment") && r.bounds.size.x < 3f
@@ -139,8 +142,9 @@ namespace MementoMori.World
                 starts[i] = art[i].transform.position; scales[i] = art[i].transform.localScale; colors[i] = art[i].color;
             }
             const float rise = .7f, gather = .55f;
-            for (var t = 0f; t < rise + gather; t += Time.deltaTime)
+            for (var t = 0f; t < rise + gather;)
             {
+                t = Mathf.Min(t + Time.deltaTime, rise + gather);
                 for (var i = 0; i < art.Count; i++)
                 {
                     var r = art[i];

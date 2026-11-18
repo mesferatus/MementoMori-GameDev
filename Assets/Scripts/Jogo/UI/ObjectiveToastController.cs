@@ -151,7 +151,7 @@ namespace MementoMori.UI
                 // Below the heading with a light gap; two-line objectives shrink a little to stay inside the frame.
                 rect.anchorMin = new Vector2(.12f, .26f);
                 rect.anchorMax = new Vector2(.88f, .5f);
-                objectiveTextTmp.alignment = TextAlignmentOptions.Top;
+                objectiveTextTmp.alignment = TextAlignmentOptions.Center;
                 if (!objectiveTextTmp.enableAutoSizing)
                 {
                     objectiveTextTmp.fontSizeMax = objectiveTextTmp.fontSize;

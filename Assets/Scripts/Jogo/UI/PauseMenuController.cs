@@ -32,6 +32,7 @@ namespace MementoMori.UI
             if (buttons == null || template == null) return;
             mainButtons = buttons.gameObject;
             MatchPanelTitle();
+            AddControlsGuide();
             var save = MakeButton(template, buttons, "Button_Salvar", "SALVAR", ShowSlots);
             save.transform.SetSiblingIndex(1);
             var mainRect = (RectTransform)buttons;
@@ -112,6 +113,28 @@ namespace MementoMori.UI
             title.color = MenuPanelStyle.TitleColor;
             if (objectiveLabel != null) objectiveLabel.font = buttonFont;
         }
+        // A permanent "where is everything" line under the pause panel, for players who never open settings.
+        private TMP_Text controlsGuide;
+        private void AddControlsGuide()
+        {
+            var font = mainButtons != null ? mainButtons.GetComponentInChildren<TMP_Text>(true)?.font : null;
+            controlsGuide = MenuPanelStyle.NewText("GuiaControles", panel.transform, font, string.Empty, 22f, MenuPanelStyle.CaptionColor);
+            var rect = controlsGuide.rectTransform;
+            rect.anchorMin = new Vector2(0f, 0f); rect.anchorMax = new Vector2(1f, 0f); rect.pivot = new Vector2(.5f, 1f);
+            rect.sizeDelta = new Vector2(0f, 70f); rect.anchoredPosition = new Vector2(0f, -18f);
+            controlsGuide.alignment = TextAlignmentOptions.Top;
+            controlsGuide.enableAutoSizing = true; controlsGuide.fontSizeMin = 14f; controlsGuide.fontSizeMax = 22f;
+            RefreshControlsGuide();
+        }
+        private void RefreshControlsGuide()
+        {
+            if (controlsGuide == null) return;
+            controlsGuide.text = GamepadInput.UsingGamepad
+                ? Loc.T("Y grimório (dicas) · Select mapa · LB histórico · A interagir")
+                : Loc.T("Grimório (dicas)") + " " + InputBindings.Get(GameAction.Grimoire).ToString().ToUpperInvariant() + "  ·  "
+                  + Loc.T("Mapa") + " M  ·  " + Loc.T("Histórico") + " H  ·  " + Loc.T("Interagir") + " " + InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
+        }
+        private void OnEnable() { if (controlsGuide != null) RefreshControlsGuide(); }
         private static void SetCompactHeight(Button button)
         {
             var element = button.GetComponent<LayoutElement>();
@@ -228,11 +251,8 @@ namespace MementoMori.UI
         {
             Time.timeScale = 1f;
             InputGate.Instance?.ClearAll();
-            var state = GameState.Instance;
-            if (state != null && state.RestoreCheckpoint() && !string.IsNullOrEmpty(state.CheckpointScene))
-                SceneLoader.Instance?.LoadScene(state.CheckpointScene);
-            else
-                SceneLoader.Instance?.LoadScene(SceneManager.GetActiveScene().name);
+            if (GameManager.Instance != null && GameManager.Instance.RestartCheckpoint()) return;
+            SceneLoader.Instance?.LoadScene(SceneManager.GetActiveScene().name);
         }
         public void ReturnToMenu() { Time.timeScale = 1f; InputGate.Instance?.ClearAll(); GameManager.Instance?.ReturnToMenu(); }
     }

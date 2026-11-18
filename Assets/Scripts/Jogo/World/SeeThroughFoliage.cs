@@ -34,6 +34,41 @@ namespace MementoMori.World
             baseAlpha = sprite.color.a;
             baseOrder = sprite.sortingOrder;
             baseLayer = sprite.sortingLayerID;
+            if (!flame) GroundIt();
+        }
+
+        private static Sprite shadowSprite;
+        // Bushes looked pasted onto the floor: a soft contact shadow at the base and a slightly dimmer, cooler
+        // tint seat them in the room's light.
+        private void GroundIt()
+        {
+            var b = sprite.bounds;
+            if (b.size.x < .4f || b.size.x > 6f) return;
+            var c = sprite.color; sprite.color = new Color(c.r * .9f, c.g * .88f, c.b * .96f, c.a);
+            baseAlpha = sprite.color.a;
+            if (shadowSprite == null)
+            {
+                const int w = 32, h = 12;
+                var tex = new Texture2D(w, h, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
+                var px = new Color32[w * h];
+                for (var y = 0; y < h; y++)
+                for (var x = 0; x < w; x++)
+                {
+                    var dx = (x + .5f) / w * 2f - 1f; var dy = (y + .5f) / h * 2f - 1f;
+                    var d = dx * dx + dy * dy;
+                    px[y * w + x] = new Color32(8, 3, 16, (byte)(d >= 1f ? 0 : Mathf.RoundToInt(255f * (1f - d) * .9f)));
+                }
+                tex.SetPixels32(px); tex.Apply();
+                shadowSprite = Sprite.Create(tex, new Rect(0, 0, w, h), new Vector2(.5f, .5f), 32f);
+            }
+            var shadow = new GameObject("ContactShadow", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
+            shadow.transform.SetParent(transform, true);
+            shadow.transform.position = new Vector3(b.center.x, b.min.y + .1f, transform.position.z);
+            var size = shadowSprite.bounds.size;
+            var lossy = transform.lossyScale;
+            shadow.transform.localScale = new Vector3(b.size.x * .8f / size.x / Mathf.Max(.01f, Mathf.Abs(lossy.x)), .32f / size.y / Mathf.Max(.01f, Mathf.Abs(lossy.y)), 1f);
+            shadow.sprite = shadowSprite; shadow.color = new Color(1f, 1f, 1f, .45f);
+            shadow.sortingLayerID = sprite.sortingLayerID; shadow.sortingOrder = -20350;
         }
 
         private void LateUpdate()

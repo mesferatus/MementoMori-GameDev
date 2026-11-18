@@ -20,6 +20,7 @@ namespace MementoMori.Interaction
         private void Update()
         {
             if (prompt == null) prompt = FindAnyObjectByType<InteractionPromptUI>();
+            RefreshCandidates();
             SelectCandidate();
             var blocked = InputGate.Instance != null && InputGate.Instance.IsBlocked;
             prompt?.SetTarget(blocked ? null : current);
@@ -34,6 +35,26 @@ namespace MementoMori.Interaction
         }
 
         private void OnDisable() => CurrentTarget = null;
+
+        // Enter/exit events alone lost targets: an object with two trigger colliders dropped out when Melantha
+        // left one of them, and a zone enabled while she already stood in it never entered at all (the prompt
+        // only came back after leaving the room). The list is rebuilt from what really overlaps her reach.
+        private Collider2D reachCollider;
+        private readonly List<Collider2D> overlaps = new();
+        private ContactFilter2D filter;
+        private void RefreshCandidates()
+        {
+            if (reachCollider == null) { reachCollider = GetComponent<Collider2D>(); filter = new ContactFilter2D { useTriggers = true }; filter.NoFilter(); }
+            if (reachCollider == null || !reachCollider.enabled) return;
+            overlaps.Clear();
+            reachCollider.Overlap(filter, overlaps);
+            candidates.Clear();
+            foreach (var other in overlaps)
+            {
+                var interactable = FindInteractable(other);
+                if (interactable != null && !candidates.Contains(interactable)) candidates.Add(interactable);
+            }
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -83,9 +104,12 @@ namespace MementoMori.Interaction
                 if (ReferenceEquals(candidate, previous)) previousDistance = distance;
                 var clearlyCloser = distance < bestDistance - PriorityTieMargin;
                 var nearTie = Mathf.Abs(distance - bestDistance) <= PriorityTieMargin;
-                if (current == null || clearlyCloser
-                    || nearTie && (candidate.InteractionPriority > bestPriority
-                                   || candidate.InteractionPriority == bestPriority && distance < bestDistance))
+                var pet = candidate is MementoMori.Poe.PoePettable;
+                var bestPet = current is MementoMori.Poe.PoePettable;
+                if (current == null || bestPet && !pet
+                    || pet == bestPet && (clearlyCloser
+                        || nearTie && (candidate.InteractionPriority > bestPriority
+                            || candidate.InteractionPriority == bestPriority && distance < bestDistance)))
                 {
                     current = candidate;
                     bestPriority = candidate.InteractionPriority;
@@ -95,6 +119,7 @@ namespace MementoMori.Interaction
             // Hysteresis: the prompt stays on the object already shown until another one is clearly
             // closer or outranks it, so walking between two near props does not flip it every frame.
             if (previous != null && current != null && !ReferenceEquals(current, previous)
+                && !(previous is MementoMori.Poe.PoePettable && !(current is MementoMori.Poe.PoePettable))
                 && previousDistance < float.MaxValue
                 && current.InteractionPriority <= previous.InteractionPriority
                 && bestDistance > previousDistance - SwitchMargin)
@@ -104,6 +129,11 @@ namespace MementoMori.Interaction
         private bool IsObstructed(Component target)
         {
             var origin = (Vector2)transform.position;
+            // Standing right at the target's own zone: the wall it is set into is not "in front" of it
+            // (echo passages sit inside their niches and lost their prompt).
+            foreach (var own in target.GetComponentsInChildren<Collider2D>())
+                if (own != null && own.enabled && own.bounds.SqrDistance(new Vector3(origin.x, origin.y, own.bounds.center.z)) < .6f * .6f)
+                    return false;
             var destination = (Vector2)InteractionAnchor.Position(target);
             var player = GetComponentInParent<MementoMori.Player.PlayerController>();
             foreach (var hit in Physics2D.LinecastAll(origin, destination))
@@ -124,7 +154,7 @@ namespace MementoMori.Interaction
         private static IInteractable FindInteractable(Collider2D collider)
         {
             foreach (var behaviour in collider.GetComponentsInParent<MonoBehaviour>())
-                if (behaviour is IInteractable interactable)
+                if (behaviour.isActiveAndEnabled && behaviour is IInteractable interactable)
                     return interactable;
             return null;
         }

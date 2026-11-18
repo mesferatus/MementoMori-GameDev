@@ -47,42 +47,28 @@ namespace MementoMori.Dialogue
             var scaler = root.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080);
-            var panel = Image("Panel", root.transform, null, new Color(.11f, .065f, .17f, .98f),
-                new Vector2(.31f, .35f), new Vector2(.69f, .65f));
-            panel.rectTransform.offsetMin = panel.rectTransform.offsetMax = Vector2.zero;
-            Border(panel.transform, "UpperBorder", new Vector2(.03f, .965f), new Vector2(.97f, .975f));
-            Border(panel.transform, "LowerBorder", new Vector2(.03f, .025f), new Vector2(.97f, .035f));
-            Border(panel.transform, "LeftBorder", new Vector2(.02f, .04f), new Vector2(.025f, .96f));
-            Border(panel.transform, "RightBorder", new Vector2(.975f, .04f), new Vector2(.98f, .96f));
-            var prompt = Text("Prompt", panel.transform, Loc.T(choice.prompt), 30,
-                new Vector2(.07f, .70f), new Vector2(.93f, .94f));
-            prompt.fontStyle = FontStyles.SmallCaps;
+            // Same family as the pause, map and puzzle panels: soft veil, framed panel, spaced prompt and divider,
+            // menu-frame buttons with hover feedback. It used to be a flat box with flat bars.
+            MementoMori.UI.MenuPanelStyle.Veil(root.transform, .55f).GetComponent<Image>().raycastTarget = false;
+            var height = 270f + choice.options.Length * 100f;
+            var panel = MementoMori.UI.MenuPanelStyle.Panel(root.transform, new Vector2(1000f, height));
+            var prompt = MementoMori.UI.MenuPanelStyle.Title(panel, Loc.T(choice.prompt), MementoMori.UI.MenuPanelStyle.HeadingFont, 46f, 32f);
+            prompt.characterSpacing = 3f;
+            prompt.enableAutoSizing = true; prompt.fontSizeMin = 26f; prompt.fontSizeMax = 38f;
             for (var i = 0; i < choice.options.Length; i++)
             {
                 var index = i;
-                var height = .56f / choice.options.Length;
-                var top = .65f - i * height;
-                var min = new Vector2(.09f, top - height + .02f);
-                var max = new Vector2(.91f, top);
-                var row = Image("Option_" + (i + 1), panel.transform, null,
-                    new Color(.20f, .12f, .29f, 1f), min, max);
-                row.rectTransform.offsetMin = row.rectTransform.offsetMax = Vector2.zero;
-                Border(row.transform, "TopLine", new Vector2(0, .97f), new Vector2(1, 1));
-                Border(row.transform, "BottomLine", new Vector2(0, 0), new Vector2(1, .03f));
-                var button = row.gameObject.AddComponent<Button>();
-                button.colors = new ColorBlock
-                {
-                    normalColor = Color.white,
-                    highlightedColor = new Color(1.25f, 1.15f, 1.35f),
-                    pressedColor = new Color(.8f, .7f, .95f),
-                    selectedColor = new Color(1.25f, 1.15f, 1.35f),
-                    disabledColor = new Color(.5f, .5f, .5f),
-                    colorMultiplier = 1f,
-                    fadeDuration = .12f
-                };
+                var go = new GameObject("Option_" + (i + 1), typeof(RectTransform), typeof(Image), typeof(Button));
+                go.transform.SetParent(panel, false);
+                var rect = (RectTransform)go.transform;
+                rect.anchorMin = rect.anchorMax = new Vector2(.5f, 1f);
+                rect.sizeDelta = new Vector2(780f, 84f);
+                rect.anchoredPosition = new Vector2(0f, -180f - i * 100f);
+                var button = go.GetComponent<Button>();
+                MementoMori.UI.MenuButtonStyle.Apply(button, null, .6f);
                 button.onClick.AddListener(() => Choose(index));
-                Text("Label", row.transform, (i + 1) + "  " + Loc.T(choice.options[i].text), 25,
-                    new Vector2(.04f, .05f), new Vector2(.96f, .95f));
+                Text("Label", go.transform, (i + 1) + "  ·  " + Loc.T(choice.options[i].text), 31,
+                    new Vector2(.06f, .08f), new Vector2(.94f, .92f));
             }
         }
 
@@ -142,8 +128,7 @@ namespace MementoMori.Dialogue
             label.rectTransform.anchorMin = min; label.rectTransform.anchorMax = max;
             label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
             label.text = content;
-            var fontHost = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<GrimoireScreen>();
-            label.font = fontHost?.BodyFont ?? TMP_Settings.defaultFontAsset;
+            label.font = MementoMori.UI.MenuPanelStyle.BodyFont;
             label.fontSize = size; label.color = new Color(.96f, .86f, .96f);
             label.alignment = TextAlignmentOptions.Center;
             label.textWrappingMode = TextWrappingModes.NoWrap;

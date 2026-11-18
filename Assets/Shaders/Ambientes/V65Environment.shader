@@ -11,6 +11,9 @@ Shader "Memento/V65/Environment"
   _Gate2("Second gate",Vector)=(-1,-1,-1,-1)
   _State("Real state",Float)=0
   _BackgroundSurface("Repeat approved water",Float)=0
+  _FlameMotion("Animate mirror flames only",Float)=0
+  _FireAmplitude("Mirror flame movement in pixels",Range(0,1))=1
+  _FlameSeed("Mirror flame phase",Float)=0
  }
  SubShader {
   Tags { "Queue"="Transparent" "RenderType"="Transparent" "RenderPipeline"="UniversalPipeline" "CanUseSpriteAtlas"="False" }
@@ -24,7 +27,8 @@ Shader "Memento/V65/Environment"
    TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
    CBUFFER_START(UnityPerMaterial)
    float4 _Color, _Pixels, _Gate, _Gate2;
-   float _Mode, _Strength, _Seed, _State, _BackgroundSurface; float4 _MainTex_TexelSize;
+   float _Mode, _Strength, _Seed, _State, _BackgroundSurface;
+   float _FlameMotion, _FireAmplitude, _FlameSeed; float4 _MainTex_TexelSize;
    CBUFFER_END
    struct A { float4 positionOS:POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; };
    struct V { float4 positionCS:SV_POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; float2 world:TEXCOORD1; };
@@ -37,6 +41,15 @@ Shader "Memento/V65/Environment"
     o.world=TransformObjectToWorld(a.positionOS.xyz).xy; o.positionCS=TransformObjectToHClip(a.positionOS.xyz);o.uv=a.uv;o.color=a.color*_Color;return o; }
    bool gate(float2 p,float4 g){return g.x>=0&&p.x>=g.x&&p.y>=g.y&&p.x<g.z&&p.y<g.w;}
    float3 ToLinear(float3 c){return lerp(c/12.92,pow((max(c,0)+.055)/1.055,2.4),step(.04045,c));}
+   float2 FlameOffset(float2 uv,float4 box,float t,float seed){
+    if(uv.x<box.x||uv.y<box.y||uv.x>=box.z||uv.y>=box.w)return 0;
+    float2 q=(uv-box.xy)/(box.zw-box.xy);
+    float edge=saturate(q.x*5)*saturate((1-q.x)*5)*saturate((1-q.y)*8);
+    float tip=q.y*q.y*edge;
+    float tick=floor(t*8)/8;
+    float2 pixels=float2(sin(tick*7+q.y*3+seed)*1.4,sin(tick*9+q.y*4+seed)*.6)*tip;
+    return round(pixels*_FireAmplitude)*_MainTex_TexelSize.xy;
+   }
    half4 frag(V i):SV_Target {
     float2 top=float2(i.uv.x,1-i.uv.y); if(gate(top,_Gate)||gate(top,_Gate2))discard;
     float t=_Time.y;float2 uv=i.uv;
@@ -46,7 +59,13 @@ Shader "Memento/V65/Environment"
       drift=round(drift/max(_MainTex_TexelSize.x,.000001))*_MainTex_TexelSize.x;}
      uv.x+=drift;
     }
-    if(_Mode>4.5&&_Mode<5.5)uv.x+=sin(uv.y*24+t*.7+_Seed)*.0015;
+    if(_Mode>4.5&&_Mode<5.5&&_FlameMotion<.5)uv.x+=sin(uv.y*24+t*.7+_Seed)*.0015;
+    if(_FlameMotion>.5){
+     // Both approved mirror response images use the same 304x440 canvas.
+     // Only flame tips move; stone, brass, glass and the bases remain fixed.
+     uv+=FlameOffset(i.uv,float4(16,162,78,245)*_MainTex_TexelSize.xyxy,t,_FlameSeed);
+     uv+=FlameOffset(i.uv,float4(226,162,288,245)*_MainTex_TexelSize.xyxy,t,_FlameSeed+2.7);
+    }
     half4 c=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,uv)*i.color;
     if(_Mode>2.5&&_Mode<4.5){
      float2 p=floor(float2(i.world.x,-i.world.y)*32); float wave=sin(p.x*.07+sin(p.y*.055+t*1.1)*2.6+t*.6)+sin(p.y*.12-p.x*.035-t*.95);
