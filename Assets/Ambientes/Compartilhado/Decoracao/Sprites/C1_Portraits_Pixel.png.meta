@@ -202,10 +202,10 @@ TextureImporter:
       name: MelanthaPortrait0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 42
         y: 836
-        width: 418
-        height: 418
+        width: 368
+        height: 379
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       name: PoePortrait0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 40
         y: 418
-        width: 418
+        width: 360
         height: 418
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -334,10 +334,10 @@ TextureImporter:
       name: AndrealphusPortrait0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 418
-        height: 418
+        x: 41
+        y: 14
+        width: 367
+        height: 397
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
