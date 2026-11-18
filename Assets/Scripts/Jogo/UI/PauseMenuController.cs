@@ -155,6 +155,7 @@ namespace MementoMori.UI
         }
         private void UpdateTitle()
         {
+            RefreshControlsGuide();
             if (title != null) title.text = Loc.T(titleKey);
             if (objectiveLabel == null) return;
             var objective = ObjectiveToastController.Instance != null ? ObjectiveToastController.Instance.CurrentObjective : null;
