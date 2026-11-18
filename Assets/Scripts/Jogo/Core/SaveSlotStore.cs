@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MementoMori.Core
@@ -20,6 +21,20 @@ namespace MementoMori.Core
         }
 
         public bool Exists(int slot) => File.Exists(PathFor(slot));
+
+        public int[] ExistingSlotsNewestFirst()
+        {
+            var slots = new List<int>();
+            for (var slot = 0; slot <= 3; slot++)
+                if (Exists(slot)) slots.Add(slot);
+            slots.Sort((a, b) =>
+            {
+                var byDate = File.GetLastWriteTimeUtc(PathFor(b)).CompareTo(File.GetLastWriteTimeUtc(PathFor(a)));
+                return byDate != 0 ? byDate : a.CompareTo(b);
+            });
+            return slots.ToArray();
+        }
+
 
         public void Save(int slot, GameState.PersistentSnapshot snapshot)
         {

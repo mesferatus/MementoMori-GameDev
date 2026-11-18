@@ -85,8 +85,10 @@ namespace MementoMori.World
                     // Start a fragment: random point of the recording, 1.4-3 s long.
                     var length = Random.Range(1.4f, 3f);
                     voice.time = Random.Range(0f, Mathf.Max(0f, voice.clip.length - length - .1f));
-                    voice.pitch = (correct ? .97f : .84f + i * .05f) * Random.Range(.97f, 1.03f);
-                    voice.GetComponent<AudioLowPassFilter>().cutoffFrequency = correct ? 5200f : 2600f;
+                    voice.pitch = (correct ? 1f : .9f + i * .04f) * Random.Range(.97f, 1.03f);
+                    // The true voice is a closer, clearer whisper; the others are breathier and duller.
+                    voice.GetComponent<AudioLowPassFilter>().cutoffFrequency = correct ? 7800f : 4200f;
+                    voice.GetComponent<MementoMori.Audio.WhisperFilter>().breath = correct ? .7f : .88f;
                     phraseStart[i] = now; phraseEnd[i] = now + length;
                     nextPhrase[i] = phraseEnd[i] + (correct ? Random.Range(1.2f, 2.6f) : Random.Range(2.4f, 5.5f));
                     if (!voice.isPlaying) voice.Play();
@@ -96,7 +98,7 @@ namespace MementoMori.World
                 var delta = (Vector2)passages[i].position - (Vector2)listener.position;
                 var falloff = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.5f, 18f, delta.magnitude));
                 var effects = AccessibilitySettings.Instance == null ? .65f : AccessibilitySettings.Instance.EffectsVolume;
-                voice.volume = (correct ? .5f : .3f) * effects * falloff * envelope;
+                voice.volume = (correct ? .62f : .4f) * effects * falloff * envelope;
                 voice.panStereo = Mathf.Clamp(delta.x / 8f, -.85f, .85f);
                 voice.transform.position = passages[i].position;
             }
@@ -113,7 +115,9 @@ namespace MementoMori.World
             var groups = mixer == null ? null : mixer.FindMatchingGroups("SFX");
             if (groups != null && groups.Length > 0) source.outputAudioMixerGroup = groups[0];
             source.clip = clip; source.loop = false; source.playOnAwake = false; source.spatialBlend = 0f;
-            go.AddComponent<AudioLowPassFilter>().cutoffFrequency = 3400f;
+            // Order matters: whisper first (voice -> breath), then the corridor's distance and stone reverb.
+            go.AddComponent<MementoMori.Audio.WhisperFilter>();
+            go.AddComponent<AudioLowPassFilter>().cutoffFrequency = 4200f;
             var reverb = go.AddComponent<AudioReverbFilter>();
             reverb.reverbPreset = AudioReverbPreset.User;
             reverb.room = -1400f; reverb.reverbLevel = -900f; reverb.decayTime = 2.2f; reverb.reflectionsDelay = .04f;
@@ -132,6 +136,10 @@ namespace MementoMori.World
         public bool Select(int passage, Transform player)
         {
             if (Solved || round >= CorrectPassages.Length || !IsPassageAvailable(passage)) return false;
+            // The interactor is Melantha's reach trigger (a child): move Melantha herself, never just the trigger,
+            // or the reach zone was left behind across the map and no prompt answered E anymore.
+            var owner = player != null ? player.GetComponentInParent<MementoMori.Player.PlayerController>() : null;
+            if (owner != null) player = owner.transform;
             GrimoireCatalog.Discover("P0" + (round + 4));
             if (passage != CorrectPassages[round])
             {

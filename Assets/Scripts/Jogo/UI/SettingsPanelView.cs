@@ -229,11 +229,21 @@ namespace MementoMori.UI
             var label = button.GetComponentInChildren<TMP_Text>();
             label.text = split < 0 ? caption : caption.Substring(0, split);
             rowValues[index].text = split < 0 ? string.Empty : caption.Substring(split + 2);
+            // Reference rows (shortcut lists) carry long values: shrink them to the row instead of overflowing.
+            if (rowValues[index].fontSizeMax < 1f || !rowValues[index].enableAutoSizing)
+            {
+                rowValues[index].fontSizeMax = rowValues[index].fontSize;
+                rowValues[index].fontSizeMin = 12f;
+                rowValues[index].enableAutoSizing = true;
+            }
             if (split >= 0)
             {
+                // Long reference values (shortcut lists) get most of the row; settings keep the narrow value column.
+                var wide = rowValues[index].text.Length > 16;
                 label.alignment = TextAlignmentOptions.MidlineLeft;
                 label.rectTransform.anchorMin = new Vector2(.05f, 0f);
-                label.rectTransform.anchorMax = new Vector2(.72f, 1f);
+                label.rectTransform.anchorMax = new Vector2(wide ? .3f : .72f, 1f);
+                rowValues[index].rectTransform.anchorMin = new Vector2(wide ? .3f : .73f, 0f);
             }
         }
 
@@ -313,8 +323,8 @@ namespace MementoMori.UI
                 if (controlPage == 3)
                 {
                     // Read-only reference: controller layout and keyboard shortcuts that have no binding row.
-                    SetRow(0, Loc.T("CONTROLE: A interagir · B voltar · Y grimório"), () => { });
-                    SetRow(1, Loc.T("Start pausa · Select mapa · LB histórico · RB rápido"), () => { });
+                    SetRow(0, Loc.T("CONTROLE") + "  " + Loc.T("A interagir · B voltar · Y grimório"), () => { });
+                    SetRow(1, Loc.T("MENUS") + "  " + Loc.T("Start pausa · Select mapa · LB histórico · RB rápido"), () => { });
                     SetRow(2, Loc.T("VIBRAÇÃO") + "  " + (s.Vibration ? yes : no), () =>
                     {
                         s.SetVibration(!s.Vibration);
@@ -333,7 +343,7 @@ namespace MementoMori.UI
                     if (index >= actions.Length)
                     {
                         // The last key page has room for the shortcuts that have no rebinding row.
-                        if (index == actions.Length) SetRow(i, Loc.T("TECLADO: M mapa · H histórico · Tab rápido"), () => { });
+                        if (index == actions.Length) SetRow(i, Loc.T("ATALHOS") + "  " + Loc.T("M mapa · H histórico · Tab rápido"), () => { });
                         else rows[i].gameObject.SetActive(false);
                         continue;
                     }

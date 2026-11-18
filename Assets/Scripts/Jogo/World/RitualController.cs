@@ -19,7 +19,8 @@ namespace MementoMori.World
         public string InteractionVerb => "Concluir o ritual";
         public int InteractionPriority => 10;
         public bool CanInteract(InteractionContext context) => !completed
-            && GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.RoomCandlesDone);
+            && GameState.Instance != null && !GameState.Instance.RitualCompleted
+            && GameState.Instance.HasFlag(StoryFlag.RoomCandlesDone);
         public void Interact(InteractionContext context)
         {
             if (completed) return;

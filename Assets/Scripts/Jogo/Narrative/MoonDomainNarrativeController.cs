@@ -21,7 +21,7 @@ namespace MementoMori.Narrative
         private bool observedFull;
         private bool observedWaning;
         private int lastMirrorProgress;
-        private int lastSigilProgress;
+        private int lastSigilPhaseProgress;
         private PlayerController swimmer;
         private Transform galleryDoor;
 
@@ -36,7 +36,7 @@ namespace MementoMori.Narrative
             observedFull = state != null && state.HasFlag(StoryFlag.GardenPetalCheia);
             observedWaning = state != null && state.HasFlag(StoryFlag.GardenPetalMinguante);
             lastMirrorProgress = CountMirrorProgress(state);
-            lastSigilProgress = FindAnyObjectByType<SigilRingPuzzle>()?.GetProgress() ?? 0;
+            lastSigilPhaseProgress = state?.GetPuzzleProgress("sigil.Phase") ?? 0;
             swimmer = FindAnyObjectByType<PlayerController>();
             galleryDoor = GameObject.Find("GalleryDoor_Cheia")?.transform;
             Queue("M01");
@@ -93,10 +93,12 @@ namespace MementoMori.Narrative
 
             var sigil = FindAnyObjectByType<SigilRingPuzzle>();
             var sigilProgress = sigil?.GetProgress() ?? 0;
-            if (sigilProgress > lastSigilProgress && sigilProgress < 3) Queue("DLG_D_SIGIL_PHASE_OK");
-            lastSigilProgress = sigilProgress;
+            var phaseProgress = state.GetPuzzleProgress("sigil.Phase");
+            if (phaseProgress > lastSigilPhaseProgress && sigilProgress < 3) Queue("DLG_D_SIGIL_PHASE_OK");
+            lastSigilPhaseProgress = phaseProgress;
             var sigilErrors = state.GetCounter("sigil.errors");
-            if (sigilErrors > observedSigilErrors) Queue("DLG_D_SIGIL_PHASE_WRONG");
+            if (sigilErrors > observedSigilErrors && sigil != null
+                && sigil.LastEvaluatedRing == SigilRing.Phase) Queue("DLG_D_SIGIL_PHASE_WRONG");
             observedSigilErrors = sigilErrors;
 
             if (swimmer != null && swimmer.IsSwimming && state.GetCounter("event.M02_WATER") > 0

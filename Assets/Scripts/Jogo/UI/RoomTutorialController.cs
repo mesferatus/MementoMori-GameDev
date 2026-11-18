@@ -15,7 +15,8 @@ namespace MementoMori.UI
         private TMP_Text label;
         private Canvas overlayCanvas;
         private RectTransform hintRect;
-        private UnityEngine.UI.Image hintPanel;
+        private RectTransform dialogueBox;
+        public bool ShowsDialogueControls => insideDialogue && !string.IsNullOrEmpty(CurrentHint);
         private bool insideDialogue, wasDialogue;
         private int dialogueHintsShown;
         private const int DialogueHintLimit = 3;
@@ -50,31 +51,25 @@ namespace MementoMori.UI
             group = root.GetComponent<CanvasGroup>();
             group.blocksRaycasts = false;
             group.interactable = false;
-            var panel = new GameObject("Hint", typeof(RectTransform), typeof(UnityEngine.UI.Image));
+            var panel = new GameObject("Hint", typeof(RectTransform));
             panel.transform.SetParent(root.transform, false);
             var rect = panel.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(.25f,.075f);
-            rect.anchorMax = new Vector2(.75f,.135f);
+            rect.anchorMin = new Vector2(.22f,.12f);
+            rect.anchorMax = new Vector2(.78f,.2f);
             rect.offsetMin = rect.offsetMax = Vector2.zero;
             hintRect = rect;
-            hintPanel = panel.GetComponent<UnityEngine.UI.Image>();
-            hintPanel.color = new Color(.075f,.045f,.115f,.94f);
-            hintPanel.raycastTarget = false;
-            var outline = panel.AddComponent<UnityEngine.UI.Outline>();
-            outline.effectColor = new Color(.64f,.47f,.76f,.9f);
-            outline.effectDistance = new Vector2(2f, -2f);
             label = new GameObject("HintText", typeof(RectTransform), typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
             label.transform.SetParent(panel.transform, false);
             label.rectTransform.anchorMin = Vector2.zero;
             label.rectTransform.anchorMax = Vector2.one;
             label.rectTransform.offsetMin = new Vector2(20,5);
             label.rectTransform.offsetMax = new Vector2(-20,-5);
-            label.font = TMP_Settings.defaultFontAsset;
+            label.font = MementoMori.UI.MenuPanelStyle.BodyFont;
             label.fontSize = 27;
             label.enableAutoSizing = true;
             label.fontSizeMin = 22;
             label.fontSizeMax = 27;
-            label.color = new Color(.95f,.9f,.8f);
+            label.color = MementoMori.UI.MenuPanelStyle.TitleColor;
             label.alignment = TextAlignmentOptions.Center;
             label.raycastTarget = false;
         }
@@ -130,16 +125,35 @@ namespace MementoMori.UI
                 { label.font = t.font; label.fontSizeMax = 25; label.fontSizeMin = 18; label.characterSpacing = 0f; fontMatched = true; return; }
         }
 
-        // While a dialogue is open the hint becomes the controls line inside the dialogue box;
-        // drawn under it (order 15 < 80) it was hidden behind the box and showed through faintly.
+        // Dialogue controls occupy a separate footer below the dialogue content.
         private void PlaceHint(bool dialogue)
         {
-            if (hintRect == null || dialogue == insideDialogue) return;
+            if (hintRect == null) return;
             insideDialogue = dialogue;
             overlayCanvas.sortingOrder = dialogue ? 85 : 15;
-            hintRect.anchorMin = dialogue ? new Vector2(.3f, .112f) : new Vector2(.25f, .075f);
-            hintRect.anchorMax = dialogue ? new Vector2(.74f, .148f) : new Vector2(.75f, .135f);
-            if (hintPanel != null) hintPanel.enabled = !dialogue;
+            if (dialogue)
+            {
+                if (dialogueBox == null)
+                    foreach (var rect in Resources.FindObjectsOfTypeAll<RectTransform>())
+                        if (rect.name == "DialogueBox" && rect.gameObject.scene.IsValid()) { dialogueBox = rect; break; }
+                if (dialogueBox != null)
+                {
+                    var face = dialogueBox.Find("PortraitFrame");
+                    var left = face != null && face.gameObject.activeSelf ? .23f : .05f;
+                    hintRect.anchorMin = hintRect.anchorMax = dialogueBox.anchorMin;
+                    hintRect.pivot = new Vector2(.5f, 0f);
+                    hintRect.sizeDelta = new Vector2(dialogueBox.rect.width * (.95f - left) - 56f, 30f);
+                    hintRect.anchoredPosition = dialogueBox.anchoredPosition
+                        + new Vector2(dialogueBox.rect.width * ((left + .95f) * .5f - .5f), 10f);
+                }
+            }
+            else
+            {
+                hintRect.anchorMin = new Vector2(.25f, .075f);
+                hintRect.anchorMax = new Vector2(.75f, .135f);
+                hintRect.pivot = new Vector2(.5f, .5f);
+                hintRect.offsetMin = hintRect.offsetMax = Vector2.zero;
+            }
             if (label != null) label.alpha = dialogue ? .72f : 1f;
         }
     }

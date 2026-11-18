@@ -8,7 +8,7 @@ namespace MementoMori.Interaction
     public sealed class GardenSwimPoint : MonoBehaviour, IInteractable, IInteractionSurface
     {
         [SerializeField] private Vector2 shorePoint = new(110.4f, -78.75f);
-        [SerializeField] private Vector2 waterPoint = new(110.4f, -77.8f);
+        [SerializeField] private Vector2 waterPoint = new(110.4f, -77.2f);
 
         public string InteractionVerb => Swimmer() != null && Swimmer().IsSwimming ? "Sair da água" : "Nadar";
         public int InteractionPriority => 6;

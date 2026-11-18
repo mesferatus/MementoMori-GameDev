@@ -30,9 +30,13 @@ namespace MementoMori.UI
         // Close-up that follows Melantha; wheel, +/- or the right stick zoom between the whole sheet and a room.
         const float MinZoom = 1f, MaxZoom = 3.2f, DefaultZoom = 2.2f;
         float zoom = DefaultZoom, targetZoom = DefaultZoom;
+        // Hand-drag panning: the open hand shows the sheet can be grabbed, the closed hand while dragging.
+        Vector2 dragOffset; bool dragging; Vector3 dragFrom;
+        static Texture2D openHand, closedHand;
         readonly Dictionary<string, TMP_Text> names = new();
         readonly Dictionary<string, Vector2> labelAt = new();
         readonly Dictionary<string, RectTransform> plaques = new();
+        readonly Dictionary<string, Image> puzzleIcons = new();
         const float LabelWidth = 132f;
         // Rooms whose floor layers cannot place a label: the Empty Chamber's layers hang from other modules'
         // grids, and the Echo Corridors region has no floor of its own. Both sit on the regular module
@@ -46,7 +50,9 @@ namespace MementoMori.UI
         readonly Queue<Vector2> trail = new();
         Rect world;
         bool hasMap;
-        TMP_Text title, footer, tip;
+        TMP_Text title, footer, mapShortcutLabel, bookShortcutLabel;
+        CanvasGroup shortcutGroup;
+        RectTransform mapShortcut, bookShortcut;
         Transform player;
         Vector2 lastTrail = new(float.MaxValue, 0f);
         float tipAt = -1f;
@@ -84,8 +90,8 @@ namespace MementoMori.UI
 
         void Start()
         {
-            // One-time discovery tip, a few seconds after the first arrival in a mapped domain.
-            if (GameState.Instance != null && GameState.Instance.GetCounter("map.tip") == 0) tipAt = Time.unscaledTime + 8f;
+            // Compact shortcuts remain available beside the hint star during exploration.
+            tipAt = Time.unscaledTime + 1f;
         }
 
         void Update()
@@ -97,6 +103,7 @@ namespace MementoMori.UI
             {
                 if (toggle || InputBindings.CancelDown()) { Close(); return; }
                 ReadZoom();
+                ReadDrag();
                 Refresh();
                 return;
             }
@@ -117,6 +124,58 @@ namespace MementoMori.UI
             zoom = Mathf.Lerp(zoom, targetZoom, 1f - Mathf.Exp(-12f * Time.unscaledDeltaTime));
         }
 
+        void ReadDrag()
+        {
+            if (Input.GetMouseButtonDown(0)) { dragging = true; dragFrom = Input.mousePosition; }
+            if (Input.GetMouseButtonUp(0)) dragging = false;
+            if (dragging)
+            {
+                var scale = root != null ? root.GetComponentInParent<Canvas>()?.scaleFactor ?? 1f : 1f;
+                dragOffset += (Vector2)(Input.mousePosition - dragFrom) / Mathf.Max(.01f, scale);
+                dragFrom = Input.mousePosition;
+            }
+            // Gamepad: the left stick pans the sheet.
+            var pad = UnityEngine.InputSystem.Gamepad.current;
+            if (pad != null) dragOffset -= pad.leftStick.ReadValue() * 900f * Time.unscaledDeltaTime;
+            SetHandCursor(dragging ? ClosedHand() : OpenHand());
+        }
+
+        static void SetHandCursor(Texture2D hand) => Cursor.SetCursor(hand, hand == null ? Vector2.zero : new Vector2(12f, 10f), CursorMode.Auto);
+        static Texture2D OpenHand() => openHand != null ? openHand : openHand = DrawHand(false);
+        static Texture2D ClosedHand() => closedHand != null ? closedHand : closedHand = DrawHand(true);
+
+        // A 24x24 pixel-art glove in the UI's ink and lilac, drawn once in code (no new art asset needed).
+        static Texture2D DrawHand(bool closed)
+        {
+            string[] rows = closed ? new[]
+            {
+                "........................", "........................", "........................", "........................",
+                "........................", "........................", ".......##.##.##.........", "......#ll#ll#ll##.......",
+                "......#llllllllll#......", ".....##llllllllll#......", "....#l#llllllllll#......", "....#llllllllllll#......",
+                "....#lllllllllll#.......", ".....#llllllllll#.......", ".....#llllllllll#.......", "......#llllllll#........",
+                "......#llllllll#........", ".......########.........", "........................", "........................",
+                "........................", "........................", "........................", "........................",
+            } : new[]
+            {
+                "........................", ".........##.............", "........#ll#.##.........", "........#ll##ll#........",
+                "....##..#ll#ll#.##......", "...#ll#.#ll#ll##ll#.....", "...#ll#.#ll#ll#lll#.....", "....#ll##ll#ll#ll#......",
+                "....#lll#llllllll#......", ".....#llllllllllll#.....", ".....#llllllllllll#.....", "......#lllllllllll#.....",
+                "......#llllllllll#......", ".......#lllllllll#......", ".......#llllllll#.......", "........#lllllll#.......",
+                "........#lllllll#.......", "........#########.......", "........................", "........................",
+                "........................", "........................", "........................", "........................",
+            };
+            var tex = new Texture2D(24, 24, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point };
+            var ink = new Color32(26, 10, 40, 255); var lilac = new Color32(226, 205, 247, 255); var clear = new Color32(0, 0, 0, 0);
+            for (var y = 0; y < 24; y++)
+            for (var x = 0; x < 24; x++)
+            {
+                var c = rows[23 - y][x];
+                tex.SetPixel(x, y, c == '#' ? ink : c == 'l' ? lilac : clear);
+            }
+            tex.Apply();
+            return tex;
+        }
+
         /// <summary>Breadcrumbs of where Melantha walked in this visit, drawn as a fading blue trail.</summary>
         void RecordTrail()
         {
@@ -132,21 +191,88 @@ namespace MementoMori.UI
         void UpdateTip()
         {
             if (tipAt < 0f || Time.unscaledTime < tipAt) return;
-            if (InputGate.Instance != null && InputGate.Instance.IsBlocked) { tipAt = Time.unscaledTime + 2f; return; }
-            if (tip == null)
+            if (shortcutGroup == null) BuildShortcuts();
+            var blocked = InputGate.Instance != null && InputGate.Instance.IsBlocked;
+            shortcutGroup.alpha = blocked || IsOpen ? 0f : 1f;
+            shortcutGroup.interactable = shortcutGroup.blocksRaycasts = shortcutGroup.alpha > .5f;
+            var hasBook = GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.RoomGrimoireRead);
+            bookShortcut.gameObject.SetActive(true);
+            bookShortcut.GetComponent<Button>().interactable = hasBook;
+            mapShortcut.anchoredPosition = new Vector2(-910f, -152f);
+            mapShortcutLabel.text = Loc.T("MAPA");
+            bookShortcutLabel.text = Loc.T("Grimório").ToUpperInvariant();
+        }
+
+        void BuildShortcuts()
+        {
+            var canvasGo = new GameObject("GameplayShortcuts", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster), typeof(CanvasGroup));
+            canvasGo.transform.SetParent(transform, false);
+            var canvas = canvasGo.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 89;
+            Scale(canvasGo.GetComponent<CanvasScaler>());
+            shortcutGroup = canvasGo.GetComponent<CanvasGroup>();
+            mapShortcut = Shortcut(canvasGo.transform, "MapShortcut", -910f, false, out mapShortcutLabel);
+            bookShortcut = Shortcut(canvasGo.transform, "GrimoireShortcut", -820f, true, out bookShortcutLabel);
+            mapShortcut.GetComponent<Button>().onClick.AddListener(() =>
             {
-                var canvasGo = new GameObject("MapTipCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler));
-                canvasGo.transform.SetParent(transform, false);
-                var canvas = canvasGo.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 88;
-                Scale(canvasGo.GetComponent<CanvasScaler>());
-                tip = NewText("MapTip", canvasGo.transform, TMP_Settings.defaultFontAsset, 22f, new Vector2(.02f, .02f), new Vector2(.4f, .07f));
-                tip.alignment = TextAlignmentOptions.BottomLeft; tip.color = new Color(.79f, .72f, .84f);
-                GameState.Instance?.SetCounter("map.tip", 1);
+                if (!IsOpen && (InputGate.Instance == null || !InputGate.Instance.IsBlocked)) Open();
+            });
+            bookShortcut.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                var book = FindAnyObjectByType<MementoMori.World.GrimoireScreen>();
+                if (book != null && GameState.Instance != null && GameState.Instance.HasFlag(StoryFlag.RoomGrimoireRead)) book.Open();
+            });
+        }
+
+        static RectTransform Shortcut(Transform parent, string name, float x, bool book, out TMP_Text label)
+        {
+            var accent = MenuPanelStyle.Lilac; accent.a = 1f;
+            var root = MenuPanelStyle.NewImage(name, parent, MenuPanelStyle.Diamond(), accent);
+            root.anchorMin = root.anchorMax = Vector2.one; root.pivot = new Vector2(.5f, .5f);
+            root.sizeDelta = new Vector2(58f, 58f); root.anchoredPosition = new Vector2(x, -152f);
+            var image = root.GetComponent<Image>(); image.raycastTarget = true;
+            var outline = root.gameObject.AddComponent<Outline>();
+            outline.effectColor = new Color(.045f, .012f, .075f, 1f); outline.effectDistance = new Vector2(1.5f, -1.5f);
+            var button = root.gameObject.AddComponent<Button>(); button.targetGraphic = image;
+            var colors = button.colors; colors.highlightedColor = Color.white;
+            colors.pressedColor = new Color(.72f, .52f, .86f); colors.disabledColor = new Color(1f, 1f, 1f, .7f); button.colors = colors;
+            var core = MenuPanelStyle.NewImage("Centro", root, MenuPanelStyle.Diamond(), new Color(.065f, .025f, .11f, 1f));
+            core.anchorMin = core.anchorMax = new Vector2(.5f, .5f); core.sizeDelta = new Vector2(42f, 42f);
+            core.GetComponent<Image>().raycastTarget = false;
+            var backing = MenuPanelStyle.NewImage("FundoSimbolo", root, null, new Color(.10f, .035f, .16f, 1f));
+            backing.anchorMin = backing.anchorMax = new Vector2(.5f, .5f); backing.sizeDelta = new Vector2(29f, 27f);
+            backing.GetComponent<Image>().raycastTarget = false;
+            Vector2[] shape = book
+                ? new[] { new Vector2(-13,-10), new Vector2(-13,9), new Vector2(-5,11), new Vector2(0,7), new Vector2(5,11), new Vector2(13,9), new Vector2(13,-10), new Vector2(5,-8), new Vector2(0,-11), new Vector2(-5,-8), new Vector2(-13,-10) }
+                : new[] { new Vector2(-13,-9), new Vector2(-13,9), new Vector2(-4,13), new Vector2(4,9), new Vector2(13,13), new Vector2(13,-5), new Vector2(4,-9), new Vector2(-4,-5), new Vector2(-13,-9) };
+            for (var i = 1; i < shape.Length; i++) ShortcutStroke(root, shape[i - 1], shape[i]);
+            if (book)
+            {
+                ShortcutStroke(root, new Vector2(0,-11), new Vector2(0,7));
+                ShortcutStroke(root, new Vector2(-10,3), new Vector2(-5,5));
+                ShortcutStroke(root, new Vector2(5,5), new Vector2(10,3));
             }
-            var age = Time.unscaledTime - tipAt;
-            tip.text = Loc.T(GamepadInput.UsingGamepad ? "Select — mapa" : "M — mapa");
-            tip.alpha = age < .5f ? age / .5f : age < 6f ? .9f : Mathf.Clamp01(.9f - (age - 6f));
-            if (age > 7f || IsOpen) { Destroy(tip.transform.parent.gameObject); tip = null; tipAt = -1f; }
+            else
+            {
+                ShortcutStroke(root, new Vector2(-4,-5), new Vector2(-4,13));
+                ShortcutStroke(root, new Vector2(4,-9), new Vector2(4,9));
+                ShortcutStroke(root, new Vector2(-10,0), new Vector2(-7,3));
+                ShortcutStroke(root, new Vector2(7,-1), new Vector2(10,2));
+            }
+            label = MenuPanelStyle.NewText("Rotulo", root, MenuPanelStyle.HeadingFont, string.Empty, 15f, MenuPanelStyle.TitleColor);
+            label.rectTransform.anchorMin = label.rectTransform.anchorMax = new Vector2(.5f, 0f);
+            label.rectTransform.sizeDelta = new Vector2(120f, 24f); label.rectTransform.anchoredPosition = new Vector2(0f, -14f);
+            label.alignment = TextAlignmentOptions.Center; label.characterSpacing = book ? 2f : 4f; label.raycastTarget = false;
+            return root;
+        }
+
+        static void ShortcutStroke(RectTransform parent, Vector2 a, Vector2 b)
+        {
+            var ink = Color.Lerp(MenuPanelStyle.Lilac, MenuPanelStyle.TitleColor, .4f); ink.a = 1f;
+            var stroke = MenuPanelStyle.NewImage("Traco", parent, null, ink);
+            stroke.anchorMin = stroke.anchorMax = new Vector2(.5f, .5f); stroke.pivot = new Vector2(.5f, .5f);
+            stroke.anchoredPosition = (a + b) * .5f; stroke.sizeDelta = new Vector2(Vector2.Distance(a, b), 2f);
+            stroke.localRotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(b.y - a.y, b.x - a.x) * Mathf.Rad2Deg);
+            stroke.GetComponent<Image>().raycastTarget = false;
         }
 
         void Open()
@@ -165,6 +291,8 @@ namespace MementoMori.UI
         void Close()
         {
             IsOpen = false;
+            dragging = false; dragOffset = Vector2.zero;
+            SetHandCursor(null);
             CloseConsumedFrame = Time.frameCount;
             if (root != null) root.SetActive(false);
             InputGate.Instance?.Release(Gate);
@@ -244,6 +372,12 @@ namespace MementoMori.UI
                 label.textWrappingMode = TextWrappingModes.Normal;
                 label.margin = new Vector4(6f, 2f, 6f, 2f);
                 names[r.id] = label; plaques[r.id] = plaque;
+                // Puzzle rooms carry a seal at the plaque's left: grey (locked), pulsing blue (next), gold (solved).
+                var seal = MenuPanelStyle.NewImage("PuzzleSeal", plaque, MenuPanelStyle.Diamond(), Color.white);
+                seal.anchorMin = seal.anchorMax = new Vector2(0f, .5f); seal.sizeDelta = new Vector2(16f, 16f);
+                seal.anchoredPosition = new Vector2(-11f, 0f);
+                seal.gameObject.AddComponent<Outline>().effectColor = new Color(.02f, .01f, .04f, .9f);
+                puzzleIcons[r.id] = seal.GetComponent<Image>();
                 labelAt[r.id] = LabelOverrides.TryGetValue(scene + "/" + r.id, out var fixedAt) ? fixedAt : FloorCentre(r.floors, r.bounds);
             }
             halo = NewImage("MelanthaHalo", sheet, new Color(Blue.r, Blue.g, Blue.b, .28f)).rectTransform;
@@ -320,15 +454,32 @@ namespace MementoMori.UI
         {
             var scene = SceneManager.GetActiveScene().name;
             title.text = Loc.T(scene == "DominioLua" ? "MAPA DO DOMÍNIO DA LUA" : "MAPA DO LABIRINTO");
-            footer.text = Loc.T(GamepadInput.UsingGamepad ? "Analógico direito — zoom · Select ou B — fechar" : "Roda do mouse ou +/− — zoom · M ou Esc — fechar");
+            footer.text = Loc.T(GamepadInput.UsingGamepad ? "Analógico esquerdo — mover · direito — zoom · Select ou B — fechar" : "Arraste com o mouse — mover · roda ou +/− — zoom · M ou Esc — fechar");
             foreach (var pair in names)
             {
                 var visited = Visited(pair.Key);
-                plaques[pair.Key].gameObject.SetActive(visited && hasMap);
-                if (!visited) continue;
+                var puzzle = MementoMori.Regions.PuzzleRoomGate.Status(scene, pair.Key);
+                // Puzzle rooms are always marked, even unseen, so the player knows where the next challenge is.
+                plaques[pair.Key].gameObject.SetActive((visited || puzzle != null) && hasMap);
+                if (!visited && puzzle == null) continue;
                 var region = RegionTitlePresenter.MapRegions.Find(r => r.id == pair.Key);
                 var here = pair.Key == RegionTitlePresenter.CurrentRegion;
-                pair.Value.text = Loc.T(region.title ?? pair.Key);
+                var seal = puzzleIcons[pair.Key];
+                seal.gameObject.SetActive(puzzle != null);
+                var name = visited || puzzle == MementoMori.Regions.PuzzleRoomGate.RoomStatus.Solved || puzzle == MementoMori.Regions.PuzzleRoomGate.RoomStatus.Current ? Loc.T(region.title ?? pair.Key) : "???";
+                if (puzzle == null) pair.Value.text = name;
+                else
+                {
+                    var status = puzzle.Value;
+                    var word = status == MementoMori.Regions.PuzzleRoomGate.RoomStatus.Solved ? "<color=#E8C77A>" + Loc.T("CONCLUÍDO") + "</color>"
+                        : status == MementoMori.Regions.PuzzleRoomGate.RoomStatus.Current ? "<color=#9FD3FF>" + Loc.T("PRÓXIMO DESAFIO") + "</color>"
+                        : "<color=#C9C0DA>" + Loc.T("TRANCADO") + "</color>";
+                    pair.Value.text = name + "\n<size=78%>" + word + "</size>";
+                    var sealPulse = .75f + .25f * Mathf.Sin(Time.unscaledTime * 4f);
+                    seal.color = status == MementoMori.Regions.PuzzleRoomGate.RoomStatus.Solved ? new Color(.91f, .78f, .48f)
+                        : status == MementoMori.Regions.PuzzleRoomGate.RoomStatus.Current ? new Color(.62f, .83f, 1f, sealPulse)
+                        : new Color(.72f, .68f, .8f);
+                }
                 pair.Value.color = here ? new Color(1f, .93f, .72f) : new Color(.93f, .91f, 1f);
                 pair.Value.fontStyle = here ? FontStyles.Bold : FontStyles.Normal;
                 var size = pair.Value.GetPreferredValues(pair.Value.text, LabelWidth - 12f, 0f);
@@ -348,7 +499,7 @@ namespace MementoMori.UI
             pan.localScale = Vector3.one * zoom;
             var focus = player != null && hasMap ? ToSheet(player.position) : new Vector2(.5f, .5f);
             var sheetSize = sheet.rect.size; var view = frame.rect.size;
-            var shift = -(focus - new Vector2(.5f, .5f)) * sheetSize * zoom;
+            var shift = -(focus - new Vector2(.5f, .5f)) * sheetSize * zoom + dragOffset;
             var slack = Vector2.Max(Vector2.zero, (sheetSize * zoom - view) * .5f);
             pan.anchoredPosition = new Vector2(Mathf.Clamp(shift.x, -slack.x, slack.x), Mathf.Clamp(shift.y, -slack.y, slack.y));
             var inverse = 1f / zoom;

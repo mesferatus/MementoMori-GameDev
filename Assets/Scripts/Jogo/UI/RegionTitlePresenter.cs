@@ -65,7 +65,7 @@ namespace MementoMori.UI
             foreach (var map in FindObjectsByType<UnityEngine.Tilemaps.Tilemap>(FindObjectsSortMode.None))
             {
                 var floor = floorPattern.Match(map.name);
-                if (floor.Success && byId.TryGetValue(floor.Groups[1].Value, out var region)) { region.floors.Add(map); continue; }
+                if (floor.Success && byId.TryGetValue(OwnerId(floor.Groups[1].Value, map, byId), out var region)) { region.floors.Add(map); continue; }
                 var edge = edgePattern.Match(map.name);
                 if (edge.Success && byId.TryGetValue(edge.Groups[1].Value, out var room))
                 {
@@ -108,6 +108,21 @@ namespace MementoMori.UI
             label.rectTransform.anchorMin = new Vector2(.37f, .86f); label.rectTransform.anchorMax = new Vector2(.63f, .92f);
             label.enableAutoSizing = true; label.fontSizeMin = 18; label.fontSizeMax = 32; label.characterSpacing = 4f; label.textWrappingMode = TextWrappingModes.NoWrap;
             label.rectTransform.offsetMin = label.rectTransform.offsetMax = Vector2.zero;
+            // A soft dark halo so the name reads over bright rugs and candles, not only over shadow.
+            var material = label.fontMaterial;
+            material.EnableKeyword(ShaderUtilities.Keyword_Underlay);
+            material.SetColor(ShaderUtilities.ID_UnderlayColor, new Color(.02f, .005f, .04f, .9f));
+            material.SetFloat(ShaderUtilities.ID_UnderlaySoftness, .6f);
+            material.SetFloat(ShaderUtilities.ID_UnderlayDilate, .35f);
+        }
+        // Some Echo Corridor floors were authored as copies of the Empty Chamber's layers and kept its prefix:
+        // a floor that lies inside the echo passages belongs to the corridor, not to the chamber.
+        static string OwnerId(string id, UnityEngine.Tilemaps.Tilemap map, Dictionary<string, Region> byId)
+        {
+            if (id != "L02" || !byId.ContainsKey("L03")) return id;
+            var echo = FindFirstObjectByType<MementoMori.World.EchoCorridorPuzzle>();
+            var renderer = map.GetComponent<Renderer>();
+            return echo != null && renderer != null && echo.ContainsPlayer(renderer.bounds.center) ? "L03" : id;
         }
         static bool Contains(Region region, Vector3 position)
         {

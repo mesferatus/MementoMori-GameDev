@@ -15,6 +15,19 @@ namespace MementoMori.UI
         public static readonly Color LilacSoft = new(.72f, .55f, .86f, .45f);
         public static readonly Color TitleColor = new(.95f, .9f, 1f, 1f);
         public static readonly Color CaptionColor = new(.73f, .63f, .84f, 1f);
+
+        // The two game fonts (Cinzel-like headings, Cormorant-like body) for every panel built in code,
+        // so no runtime UI falls back to TMP's default sans.
+        static TMP_FontAsset heading, body;
+        static void LoadFonts()
+        {
+            if (heading != null && body != null) return;
+            var book = Resources.Load<GameObject>("GrimoireRuntimeHost")?.GetComponent<MementoMori.World.GrimoireScreen>();
+            heading = book != null && book.HeadingFont != null ? book.HeadingFont : TMP_Settings.defaultFontAsset;
+            body = book != null && book.BodyFont != null ? book.BodyFont : TMP_Settings.defaultFontAsset;
+        }
+        public static TMP_FontAsset HeadingFont { get { LoadFonts(); return heading; } }
+        public static TMP_FontAsset BodyFont { get { LoadFonts(); return body; } }
         private static Sprite diamond;
 
         /// <summary>Full-screen veil; the menu art or the game stays faintly visible behind it.</summary>
@@ -34,30 +47,75 @@ namespace MementoMori.UI
             var panel = NewImage("Painel", parent, null, new Color(.05f, .022f, .078f, .975f));
             panel.anchorMin = panel.anchorMax = panel.pivot = new Vector2(.5f, .5f);
             panel.sizeDelta = size;
-            Frame(panel, 0f, 2f, Lilac);
-            Frame(panel, 9f, 1f, LilacSoft);
-            foreach (var corner in new[] { Vector2.zero, Vector2.right, Vector2.up, Vector2.one })
-            {
-                var star = NewImage("Estrela", panel, Diamond(), Lilac);
-                star.anchorMin = star.anchorMax = corner;
-                star.sizeDelta = new Vector2(22f, 22f);
-                star.anchoredPosition = Vector2.zero;
-            }
+            FrameOnly(panel);
             return panel;
         }
 
         /// <summary>The panel's double frame and star corners around an existing rect, without the fill.</summary>
         public static void FrameOnly(RectTransform target)
         {
-            Frame(target, 0f, 2f, Lilac);
-            Frame(target, 9f, 1f, LilacSoft);
-            foreach (var corner in new[] { Vector2.zero, Vector2.right, Vector2.up, Vector2.one })
+            // Gothic box: the fill takes the chamfered shape (no square corners), and a sliced overlay draws the
+            // double lilac rule along the chamfers with small diamond studs and dots at each corner.
+            var fill = target.GetComponent<Image>();
+            if (fill != null && (fill.sprite == null || fill.sprite == GothicFill()))
+            { fill.sprite = GothicFill(); fill.type = Image.Type.Sliced; fill.pixelsPerUnitMultiplier = 1.4f; fill.color = new Color(1f, 1f, 1f, Mathf.Max(.9f, fill.color.a)); }
+            var old = target.Find("Moldura");
+            if (old != null && old.GetComponent<Image>() != null) return;
+            var frame = NewImage("Moldura", target, GothicLines(), Color.white);
+            Stretch(frame);
+            var image = frame.GetComponent<Image>(); image.type = Image.Type.Sliced; image.raycastTarget = false; image.pixelsPerUnitMultiplier = 1.4f;
+            frame.SetAsFirstSibling();
+            if (fill == null) return;
+            frame.SetSiblingIndex(0);
+        }
+
+        const int GothicSize = 96, GothicBorder = 34, Chamfer = 18;
+        static Sprite gothicFill, gothicLines;
+        /// <summary>Chamfered white shape (tinted by the Image colour), 9-sliced.</summary>
+        // Saved as sprites in Resources/Moldura so prefabs show the same frame in the Editor; generated as a fallback.
+        public static Sprite GothicFill() => gothicFill != null ? gothicFill : gothicFill = Resources.Load<Sprite>("Moldura/GothicFill") ?? Gothic(false);
+        public static Sprite GothicFillGenerated() => Gothic(false);
+        public static Sprite GothicLinesGenerated() => Gothic(true);
+        static Sprite GothicLines() => gothicLines != null ? gothicLines : gothicLines = Resources.Load<Sprite>("Moldura/GothicLines") ?? Gothic(true);
+
+        // Distance (in pixels, negative inside) to a box with 45-degree cut corners.
+        static float Chamfered(float x, float y, float half, float cut)
+        {
+            var ax = Mathf.Abs(x); var ay = Mathf.Abs(y);
+            return Mathf.Max(Mathf.Max(ax - half, ay - half), (ax + ay - (2f * half - cut)) * .7071f);
+        }
+
+        static Sprite Gothic(bool lines)
+        {
+            var tex = new Texture2D(GothicSize, GothicSize, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
+            var px = new Color32[GothicSize * GothicSize];
+            var half = GothicSize * .5f - 1f;
+            Color32 bright = new(232, 200, 255, 245), soft = new(196, 150, 236, 150), clear = new(0, 0, 0, 0);
+            // Same purple gradient as the menu buttons: lit plum at the top fading to near-black at the foot.
+            Color top = new(.25f, .13f, .36f, 1f), foot = new(.06f, .025f, .1f, 1f);
+            for (var y = 0; y < GothicSize; y++)
+            for (var x = 0; x < GothicSize; x++)
             {
-                var star = NewImage("Estrela", target, Diamond(), Lilac);
-                star.anchorMin = star.anchorMax = corner;
-                star.sizeDelta = new Vector2(22f, 22f);
-                star.anchoredPosition = Vector2.zero;
+                var cx = x + .5f - GothicSize * .5f; var cy = y + .5f - GothicSize * .5f;
+                var d = Chamfered(cx, cy, half, Chamfer);
+                Color32 c = clear;
+                if (!lines) { if (d <= 0f) c = Color.Lerp(foot, top, Mathf.Pow(y / (GothicSize - 1f), 1.4f)); }
+                else
+                {
+                    if (d <= 0f && d > -2.2f) c = bright;                       // outer rule
+                    else if (d <= -7f && d > -8.2f) c = soft;                    // inner rule
+                    // corner studs: a diamond on each chamfer, with a dot either side along the edges
+                    var ax = Mathf.Abs(cx); var ay = Mathf.Abs(cy);
+                    var corner = half - Chamfer * .5f;
+                    if (Mathf.Abs(ax - corner + 3f) + Mathf.Abs(ay - corner + 3f) <= 4.5f) c = bright;
+                    if ((Mathf.Abs(ax - (half - 4f)) < 1.2f && Mathf.Abs(ay - (half - Chamfer - 7f)) < 1.2f)
+                        || (Mathf.Abs(ay - (half - 4f)) < 1.2f && Mathf.Abs(ax - (half - Chamfer - 7f)) < 1.2f)) c = bright;
+                }
+                px[y * GothicSize + x] = c;
             }
+            tex.SetPixels32(px); tex.Apply();
+            return Sprite.Create(tex, new Rect(0, 0, GothicSize, GothicSize), new Vector2(.5f, .5f), 100f, 0,
+                SpriteMeshType.FullRect, new Vector4(GothicBorder, GothicBorder, GothicBorder, GothicBorder));
         }
 
         /// <summary>Credits text shared by the main menu and the closing card (panel of 1000 x 820).</summary>
@@ -169,6 +227,8 @@ namespace MementoMori.UI
         /// <summary>Four-point star, the same motif as the menu button ends.</summary>
         public static Sprite Diamond()
         {
+            if (diamond != null) return diamond;
+            diamond = Resources.Load<Sprite>("Moldura/Diamond");
             if (diamond != null) return diamond;
             const int size = 33;
             var texture = new Texture2D(size, size, TextureFormat.RGBA32, false) { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };

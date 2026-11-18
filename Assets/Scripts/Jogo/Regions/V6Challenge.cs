@@ -48,7 +48,19 @@ namespace MementoMori.Regions
         public void Configure(V6ChallengeDefinition data) { definition=data; ApplyCanonicalDefinition(); }
         public bool CanInteract(InteractionContext context) => definition != null && panel == null
             && GameState.Instance != null && !GameState.Instance.Puzzles.GetSolved(definition.id)
+            && PrerequisiteExamined()
             && (DialogueManager.Instance == null || !DialogueManager.Instance.IsOpen);
+        // The examination and its inscription share a reach zone. Offer the examination first,
+        // otherwise this higher-priority panel hides the very interaction it requires.
+        private bool PrerequisiteExamined()
+        {
+            if (definition.id == "moon.cycles")
+                for (var door = 1; door <= 8; door++)
+                    if (GameState.Instance.GetCounter("event.GALLERY_" + door.ToString("00")) == 0) return false;
+            return string.IsNullOrEmpty(definition.prerequisiteFlag)
+                || Enum.TryParse(definition.prerequisiteFlag, out StoryFlag flag)
+                    && GameState.Instance.HasFlag(flag);
+        }
         public void Interact(InteractionContext context)
         {
             if (!CanInteract(context)) return;
@@ -142,24 +154,27 @@ namespace MementoMori.Regions
             var canvas=panel.GetComponent<Canvas>(); canvas.renderMode=RenderMode.ScreenSpaceOverlay; canvas.sortingOrder=110;
             var scaler=panel.GetComponent<UnityEngine.UI.CanvasScaler>();
             scaler.uiScaleMode=UnityEngine.UI.CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution=new Vector2(1920,1080);
-            var card=new GameObject("Parchment",typeof(RectTransform),typeof(UnityEngine.UI.Image));
-            card.transform.SetParent(panel.transform,false);
-            var rect=card.GetComponent<RectTransform>(); rect.anchorMin=new Vector2(.22f,.18f);rect.anchorMax=new Vector2(.78f,.82f);rect.offsetMin=rect.offsetMax=Vector2.zero;
-            card.GetComponent<UnityEngine.UI.Image>().color=new Color(.035f,.025f,.065f,.98f);
-            Text(card.transform,Loc.T(definition.title),40,new Vector2(.05f,.84f),new Vector2(.95f,.96f),new Color(.85f,.72f,.46f));
-            Text(card.transform,Loc.T(definition.clue),27,new Vector2(.07f,.60f),new Vector2(.93f,.83f),new Color(.88f,.84f,.94f));
+            // Same look as the pause/map panels: veil over the game, framed panel, spaced heading and divider,
+            // menu-frame buttons. It used to be a flat box with plain bars in the default font.
+            MementoMori.UI.MenuPanelStyle.Veil(panel.transform, .72f);
+            var rect=MementoMori.UI.MenuPanelStyle.Panel(panel.transform,new Vector2(1000f,690f));
+            var card=rect.gameObject;
+            var heading=MementoMori.UI.MenuPanelStyle.Title(rect,Loc.T(definition.title).ToUpperInvariant(),MementoMori.UI.MenuPanelStyle.HeadingFont,54f,40f);
+            heading.characterSpacing=8f;
+            var clue=Text(card.transform,Loc.T(definition.clue),33,new Vector2(.07f,.62f),new Vector2(.93f,.82f),new Color(.88f,.84f,.94f));
+            clue.fontStyle=FontStyles.Italic;
             var dialMode = definition.id == "lab.skyless_courtyard";
             if (dialMode) dialLabels = new TMP_Text[definition.sequence.Length];
             for(var i=0;i<(dialMode ? definition.sequence.Length : definition.choices.Length);i++) {
-                var index=i; var y=.51f-i*.085f;
+                var index=i; var y=.5f-i*.105f;
                 var button=new GameObject("Choice"+i,typeof(RectTransform),typeof(UnityEngine.UI.Image),typeof(UnityEngine.UI.Button));
                 button.transform.SetParent(card.transform,false);
-                var br=button.GetComponent<RectTransform>();br.anchorMin=new Vector2(.08f,y);br.anchorMax=new Vector2(.92f,y+.07f);br.offsetMin=br.offsetMax=Vector2.zero;
-                button.GetComponent<UnityEngine.UI.Image>().color=new Color(.16f,.12f,.23f);
+                var br=button.GetComponent<RectTransform>();br.anchorMin=new Vector2(.1f,y);br.anchorMax=new Vector2(.9f,y+.09f);br.offsetMin=br.offsetMax=Vector2.zero;
+                MementoMori.UI.MenuButtonStyle.Apply(button.GetComponent<UnityEngine.UI.Button>(), null, .6f);
                 button.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(()=>Choose(index));
                 var label = dialMode ? Loc.T("Obelisco") + " " + (i + 1) + "  ·  " + Loc.T(definition.choices[model.Dial(i)])
                     : (i + 1) + "  " + Loc.T(definition.choices[i]);
-                var buttonText = Text(button.transform,label,25,Vector2.zero,Vector2.one,Color.white);
+                var buttonText = Text(button.transform,label,32,Vector2.zero,Vector2.one,Color.white);
                 if (dialMode) dialLabels[i] = buttonText;
             }
             if (dialMode)
@@ -168,18 +183,18 @@ namespace MementoMori.Regions
                 confirm.transform.SetParent(card.transform,false);
                 var cr = confirm.GetComponent<RectTransform>(); cr.anchorMin = new Vector2(.08f,.16f); cr.anchorMax = new Vector2(.92f,.23f);
                 cr.offsetMin = cr.offsetMax = Vector2.zero;
-                confirm.GetComponent<UnityEngine.UI.Image>().color = new Color(.28f,.19f,.38f);
+                MementoMori.UI.MenuButtonStyle.Apply(confirm.GetComponent<UnityEngine.UI.Button>(), null, .6f);
                 confirm.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(ConfirmDials);
-                Text(confirm.transform,Loc.T("Confirmar alinhamento"),25,Vector2.zero,Vector2.one,Color.white);
+                Text(confirm.transform,Loc.T("Confirmar alinhamento"),32,Vector2.zero,Vector2.one,Color.white);
             }
-            feedback=Text(card.transform,Loc.T("Escolha pelos números ou pelo mouse. Esc — voltar"),23,new Vector2(.07f,.02f),new Vector2(.93f,.16f),new Color(.75f,.72f,.84f));
+            feedback=Text(card.transform,Loc.T("Escolha pelos números ou pelo mouse. Esc — voltar"),27,new Vector2(.07f,.02f),new Vector2(.93f,.16f),new Color(.75f,.72f,.84f));
         }
         private static TMP_Text Text(Transform parent,string value,int size,Vector2 min,Vector2 max,Color color)
         {
             var text=new GameObject("Text",typeof(RectTransform),typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
             text.transform.SetParent(parent,false);text.rectTransform.anchorMin=min;text.rectTransform.anchorMax=max;
             text.rectTransform.offsetMin=new Vector2(8,2);text.rectTransform.offsetMax=new Vector2(-8,-2);
-            text.text=value;text.font=TMP_Settings.defaultFontAsset;text.fontSize=size;text.color=color;
+            text.text=value;text.font=MementoMori.UI.MenuPanelStyle.BodyFont;text.fontSize=size;text.color=color;
             text.alignment=TextAlignmentOptions.Center;text.raycastTarget=false;
             return text;
         }

@@ -132,11 +132,11 @@ namespace MementoMori.Dialogue
             if (portraitImage == null) return;
             var frame = portraitImage.transform.parent as RectTransform;
             if (frame != null && frame.name == "PortraitFrame")
-                frame.sizeDelta = new Vector2(350f, 350f);
+                frame.sizeDelta = new Vector2(236f, 236f);
             var portraitRect = portraitImage.rectTransform;
             portraitRect.anchorMin = portraitRect.anchorMax = new Vector2(.5f, .5f);
             portraitRect.anchoredPosition = Vector2.zero;
-            portraitRect.sizeDelta = new Vector2(250f, 250f);
+            portraitRect.sizeDelta = new Vector2(218f, 218f);
             portraitImage.preserveAspect = true;
         }
 
@@ -210,13 +210,16 @@ namespace MementoMori.Dialogue
             if (speakerLabel != null) speakerLabel.fontSize = Mathf.RoundToInt(22f * scale);
             if (bodyLabel != null) bodyLabel.fontSize = Mathf.RoundToInt(18f * scale);
             if (speakerLabelTmp != null) speakerLabelTmp.fontSize = Mathf.RoundToInt(34f * scale);
-            if (bodyLabelTmp != null) bodyLabelTmp.fontSize = Mathf.RoundToInt(32f * scale);
+            if (bodyLabelTmp != null) bodyLabelTmp.fontSize = Mathf.RoundToInt(42f * scale);
             if (portraitImage != null)
             {
                 portraitImage.sprite = line.Speaker == "Poe" ? poePortrait : line.Speaker == "Andrealphus" ? andrealphusPortrait : line.Speaker == "Melantha" ? melanthaPortrait : null;
                 portraitImage.color = Color.white;
                 portraitImage.preserveAspect = true;
                 portraitImage.enabled = portraitImage.sprite != null;
+                // Voices without a face (Eco, narrator) used to show an empty ornate frame: hide the frame too.
+                var portraitFrame = portraitImage.transform.parent;
+                if (portraitFrame != null && portraitFrame.name == "PortraitFrame") portraitFrame.gameObject.SetActive(portraitImage.sprite != null);
             }
             if (continueCursor != null)
                 continueCursor.SetActive(false);
@@ -230,10 +233,17 @@ namespace MementoMori.Dialogue
         private IEnumerator RevealLine(DialogueLine line)
         {
             lineFullyVisible = false;
-            SetBodyText(string.Empty);
+            var content = line.Text ?? string.Empty;
+            var stableTmp = cinematic == null && bodyLabelTmp != null;
+            SetBodyText(stableTmp ? content : string.Empty);
+            if (stableTmp)
+            {
+                bodyLabelTmp.useMaxVisibleDescender = false;
+                bodyLabelTmp.maxVisibleCharacters = 0;
+                bodyLabelTmp.ForceMeshUpdate();
+            }
             if (cinematic != null) yield return cinematic.PerformBeforeLine(lineIndex);
             if (line.PauseBefore > 0f) yield return new WaitForSecondsRealtime(line.PauseBefore);
-            var content = line.Text ?? string.Empty;
             var speed = (line.CharactersPerSecond > 0f ? line.CharactersPerSecond : defaultCharactersPerSecond) * (AccessibilitySettings.Instance == null ? 1f : AccessibilitySettings.Instance.TextSpeed);
             if (instantAdvance || content.Length == 0)
             {
@@ -244,10 +254,13 @@ namespace MementoMori.Dialogue
                 var spokenCharacters = 0;
                 var syllable = 0;
                 var cadence = line.Speaker == "Andrealphus" ? 4 : line.Speaker == "Poe" ? 3 : 2;
-                for (var i = 1; i <= content.Length; i++)
+                var characterCount = stableTmp ? bodyLabelTmp.textInfo.characterCount : content.Length;
+                for (var i = 1; i <= characterCount; i++)
                 {
-                    SetBodyText(content.Substring(0, i));
-                    if (char.IsLetterOrDigit(content[i - 1]) && ++spokenCharacters % cadence == 0)
+                    if (stableTmp) bodyLabelTmp.maxVisibleCharacters = i;
+                    else SetBodyText(content.Substring(0, i));
+                    var character = stableTmp ? bodyLabelTmp.textInfo.characterInfo[i - 1].character : content[i - 1];
+                    if (char.IsLetterOrDigit(character) && ++spokenCharacters % cadence == 0)
                         RuntimeAudio.PlayChatter(line.Speaker, syllable++);
                     yield return new WaitForSecondsRealtime(1f / speed);
                 }
@@ -297,7 +310,11 @@ namespace MementoMori.Dialogue
         {
             if (cinematic != null) cinematic.SetBody(value);
             if (bodyLabel != null) bodyLabel.text = value;
-            if (bodyLabelTmp != null) bodyLabelTmp.text = value;
+            if (bodyLabelTmp != null)
+            {
+                bodyLabelTmp.maxVisibleCharacters = int.MaxValue;
+                bodyLabelTmp.text = value;
+            }
         }
 
         private void CreateHistoryPanel()

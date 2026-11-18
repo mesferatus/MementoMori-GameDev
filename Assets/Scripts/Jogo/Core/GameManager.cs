@@ -71,12 +71,25 @@ namespace MementoMori.Core
             return true;
         }
 
+        public bool RestartCheckpoint()
+        {
+            var state = GameState.Instance;
+            if (state == null || SceneLoader.Instance == null || SceneLoader.Instance.IsLoading
+                || !state.RestoreCheckpoint() || !SaveSlotStore.IsPlayableScene(state.CheckpointScene)
+                || !Application.CanStreamedLevelBeLoaded(state.CheckpointScene)) return false;
+            // Reuse the load placement path after the new scene has initialized.
+            pendingLoad = state.CapturePersistentState(state.CheckpointScene, state.CheckpointPosition);
+            Time.timeScale = 1f;
+            InputGate.Instance?.ClearAll();
+            SceneLoader.Instance.LoadScene(state.CheckpointScene);
+            return true;
+        }
+
         public bool ContinueGame()
         {
             var foundAny = false;
-            for (var slot = 0; slot <= 3; slot++)
+            foreach (var slot in saves.ExistingSlotsNewestFirst())
             {
-                if (!saves.Exists(slot)) continue;
                 foundAny = true;
                 if (LoadGame(slot)) return true;
             }
@@ -87,9 +100,24 @@ namespace MementoMori.Core
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            if (pendingLoad == null || scene.name != pendingLoad.scene) return;
-            StartCoroutine(PlaceLoadedPlayer(pendingLoad));
-            pendingLoad = null;
+            if (pendingLoad != null && scene.name == pendingLoad.scene)
+            {
+                StartCoroutine(PlaceLoadedPlayer(pendingLoad));
+                pendingLoad = null;
+            }
+            else if (scene.name == "Labirinto" || scene.name == "DominioLua")
+                StartCoroutine(SaveRegionEntryCheckpoint(scene));
+        }
+
+        private static IEnumerator SaveRegionEntryCheckpoint(Scene scene)
+        {
+            // Region geometry places the actor during Start; save the destination, not the old room's coordinates.
+            for (var frame = 0; frame < 3; frame++) yield return null;
+            if (SceneManager.GetActiveScene() != scene || GameState.Instance == null) yield break;
+            var player = FindAnyObjectByType<MementoMori.Player.PlayerController>();
+            if (player == null) yield break;
+            GameState.Instance.SaveStoryCheckpoint(scene.name == "Labirinto"
+                ? CheckpointId.LabyrinthStart : CheckpointId.MoonDomainEntry);
         }
 
         private static IEnumerator PlaceLoadedPlayer(GameState.PersistentSnapshot snapshot)
@@ -100,6 +128,7 @@ namespace MementoMori.Core
             player.transform.position = snapshot.safePosition;
             var body = player.GetComponent<Rigidbody2D>();
             if (body != null) { body.position = snapshot.safePosition; body.linearVelocity = Vector2.zero; }
+            FindAnyObjectByType<MementoMori.Poe.PoeFollower>()?.RestoreBesidePlayer();
         }
 
         public void ReturnToMenu()

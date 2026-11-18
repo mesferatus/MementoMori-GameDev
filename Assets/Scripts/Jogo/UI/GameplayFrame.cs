@@ -43,8 +43,11 @@ namespace MementoMori.UI
             var image = go.GetComponent<UnityEngine.UI.Image>();
             image.sprite = sprite;
             image.type = UnityEngine.UI.Image.Type.Simple;
-            image.color = Color.white;
+            // Lilac-tinted silver, the same family as the HUD frames (the raw art read grey-pink beside them).
+            image.color = new Color(.58f, .47f, .72f, 1f);
             image.raycastTarget = false;
+            // The vine border sits over the whole HUD (dialogue, objective, hints, prompts), framing them.
+            var own = go.AddComponent<Canvas>(); own.overrideSorting = true; own.sortingOrder = 100;
         }
 
         // Faint drifting motes between the vignette and the border: dust in the lantern light.

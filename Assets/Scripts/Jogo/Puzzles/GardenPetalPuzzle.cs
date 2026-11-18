@@ -124,7 +124,7 @@ namespace MementoMori.Puzzles
                 return false;
             }
             nextWaningFlower--;
-            if (nextWaningFlower >= 1) return true;
+            if (nextWaningFlower >= 0) return true;
             return Place(requiredTarget);
         }
         static StoryFlag FlagFor(MoonPetal p) => p switch { MoonPetal.Crescente => StoryFlag.GardenPetalCrescente, MoonPetal.Cheia => StoryFlag.GardenPetalCheia, _ => StoryFlag.GardenPetalMinguante };

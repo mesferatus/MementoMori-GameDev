@@ -28,9 +28,11 @@ namespace MementoMori.Player
         private int blockedSteps;
         private bool movementBlocked;
         public bool IsSwimming => isSwimming;
+        private bool leftStep;
         public Vector2 SafeSavePosition => isSwimming ? lastDryPosition : (Vector2)transform.position;
 
         private bool automationInputActive;
+        public bool HasAutomationInput => automationInputActive && moveInput.sqrMagnitude > .01f;
         public void SetAutomationMoveInput(Vector2 direction) { automationInputActive = true; moveInput = CardinalMovement.Snap(direction); }
         public void ClearAutomationMoveInput() { automationInputActive = false; moveInput = Vector2.zero; }
 
@@ -39,7 +41,7 @@ namespace MementoMori.Player
             body = GetComponent<Rigidbody2D>();
             body.freezeRotation = true;
             body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            body.interpolation = RigidbodyInterpolation2D.None;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
             lastDryPosition = body.position;
             lastFixedPosition = body.position;
             waterZone = GardenWaterZone.Ensure();
@@ -106,9 +108,12 @@ namespace MementoMori.Player
                 }
                 else
                 {
-                    // The bedroom has a wooden floor; everywhere else is stone.
+                    // Melantha walks in heeled shoes: a clicking heel, on the bedroom's wood or on stone elsewhere.
+                    // Left and right steps differ a little in pitch so the walk never sounds like one loop.
                     var wood = gameObject.scene.name == "Quarto" || gameObject.scene.name == "FinalBeta";
-                    RuntimeAudio.PlayOneShot(wood ? "28_footstep_wood" : "17_footstep_stone", wood ? .26f : .2f);
+                    leftStep = !leftStep;
+                    RuntimeAudio.PlayOneShot(wood ? "30_footstep_heel_wood" : "29_footstep_heel_stone", wood ? .22f : .17f,
+                        (leftStep ? .97f : 1.03f) * Random.Range(.97f, 1.03f));
                     nextFootstepAt = Time.time + .42f;
                 }
             }
@@ -141,7 +146,7 @@ namespace MementoMori.Player
             var displacement = (body.position - lastFixedPosition).magnitude;
             lastFixedPosition = body.position;
             if (moveInput.sqrMagnitude < .001f) blockedSteps = 0;
-            else if (displacement < moveSpeed * Time.fixedDeltaTime * .2f) blockedSteps = Mathf.Min(blockedSteps + 1, 8);
+            else if (displacement < moveSpeed * (isSwimming ? .65f : 1f) * Time.fixedDeltaTime * .2f) blockedSteps = Mathf.Min(blockedSteps + 1, 8);
             else blockedSteps = 0;
             movementBlocked = blockedSteps >= 3;
             if (moveInput.sqrMagnitude < .001f)
