@@ -317,23 +317,21 @@ A flor Crescente não responde quando Melantha chega perto demais.
 >HINT2
 Aproxime-se primeiro. Depois recue e observe a flor.
 >HINT3
-Depois de se aproximar, mantenha Melantha afastada da flor por alguns instantes. Poe indica o caminho; não precisa entrar na água.
+Nade até a flor grande da esquerda. Depois nade para longe dela (uns cinco passos) e espere: quando Poe apontar, ela se abre. Volte e colha a pétala. A flor pequena logo abaixo é falsa.
 @P09|Jardim Lunar: Cheia
 >HINT1
 A Lua Cheia revela quando imagem e origem coincidem.
 >HINT2
 Procure alinhar reflexo e forma.
 >HINT3
-Ajuste até que o reflexo fique alinhado.
-Se estiver quase correto:
-Quase.
+Na água, pare logo à esquerda da flor grande da direita, onde o reflexo dela cai, e colha a pétala dali. A flor pequena logo abaixo é falsa.
 @P10|Jardim Lunar: Minguante
 >HINT1
 Para desaparecer, uma Lua precisa primeiro ter sido inteira.
 >HINT2
 O ciclo deve caminhar para a ausência.
 >HINT3
-Cheia → Minguante → Nova.
+Nas três flores do centro: apague primeiro a pequena da direita, depois a pequena da esquerda e por último a grande do meio.
 Erros reiniciam apenas este subpuzzle.
 @P11|Sala dos Espelhos
 >HINT1

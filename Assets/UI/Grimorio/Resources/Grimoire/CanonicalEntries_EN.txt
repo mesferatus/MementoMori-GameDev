@@ -317,23 +317,21 @@ The Waxing flower does not respond while Melantha is too close.
 >HINT2
 Approach it first. Then step back and watch the flower.
 >HINT3
-After approaching, keep Melantha away from the flower for a few moments. Poe points the way; he does not need to enter the water.
+Swim to the big flower on the left. Then swim away from it (about five steps) and wait: when Poe points, it opens. Go back and take the petal. The small flower just below it is false.
 @P09|Lunar Garden: Full
 >HINT1
 The Full Moon reveals when image and origin coincide.
 >HINT2
 Try to align reflection and shape.
 >HINT3
-Adjust until the reflection is aligned.
-If it is almost right:
-Almost.
+In the water, stop just left of the big flower on the right, where its reflection falls, and take the petal from there. The small flower just below it is false.
 @P10|Lunar Garden: Waning
 >HINT1
 To disappear, a Moon must first have been whole.
 >HINT2
 The cycle must walk toward absence.
 >HINT3
-Full → Waning → New.
+Among the three flowers in the middle: put out the small one on the right first, then the small one on the left, and the big one in the middle last.
 Mistakes restart only this subpuzzle.
 @P11|Hall of Mirrors
 >HINT1
