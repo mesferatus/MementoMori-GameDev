@@ -39,7 +39,9 @@ namespace MementoMori.Narrative
             lastSigilPhaseProgress = state?.GetPuzzleProgress("sigil.Phase") ?? 0;
             swimmer = FindAnyObjectByType<PlayerController>();
             galleryDoor = GameObject.Find("GalleryDoor_Cheia")?.transform;
-            Queue("M01");
+            // M01 opens with the short costume cutscene the script asks for; its lines follow it.
+            if (MoonCostumeCutscene.ShouldPlay(state)) StartCoroutine(MoonCostumeCutscene.Run(() => Queue("M01")));
+            else Queue("M01");
         }
 
         private void Update()
