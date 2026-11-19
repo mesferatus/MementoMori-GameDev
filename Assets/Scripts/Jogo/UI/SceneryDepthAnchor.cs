@@ -18,9 +18,25 @@ namespace MementoMori.UI
         public void Configure(Collider2D[] colliders)
         {
             visual = GetComponent<SpriteRenderer>(); solids = colliders;
-            var ground = solids.Length > 0 ? solids.Min(c => c.bounds.min.y) : visual.bounds.min.y;
+            var ground = solids.Length > 0 ? solids.Min(c => c.bounds.min.y) : WallLine(visual.bounds);
             localGroundY = transform.InverseTransformPoint(new Vector3(transform.position.x, ground, 0)).y;
             Apply();
+        }
+        // A facade has no collider of its own: the room's boundary stops Melantha a little inside its painted base,
+        // so sorting by the sprite's bottom hid her completely while she stood against the Porta Falsa facade.
+        // Its ground is the line where that boundary begins, the northmost along the facade (doorways have none).
+        static float WallLine(Bounds art)
+        {
+            var line = float.NegativeInfinity;
+            for (var x = art.min.x + .25f; x < art.max.x; x += .5f)
+            for (var y = art.min.y; y <= art.min.y + 1.5f; y += .0625f)
+            {
+                var solid = false;
+                foreach (var hit in Physics2D.OverlapPointAll(new Vector2(x, y)))
+                    if (!hit.isTrigger && hit.GetComponentInParent<PlayerController>() == null && hit.GetComponentInParent<PoeFollower>() == null) { solid = true; break; }
+                if (solid) { line = Mathf.Max(line, y); break; }
+            }
+            return float.IsNegativeInfinity(line) ? art.min.y : line;
         }
         void LateUpdate() => Apply();
         void Apply()
