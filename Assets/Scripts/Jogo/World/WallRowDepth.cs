@@ -111,6 +111,42 @@ namespace MementoMori.World
                     if (map != null) map.color = MoonWallTint;
                 }
             }
+            RaiseJointsOverTheirRows(scene);
+        }
+
+        // Sorted by their own top, the joints fell behind the very wall rows they were drawn to cap (60 of 62 hidden
+        // in the Labirinto, 45 of 47 in the Moon). Each joint now sits one step above the rows that have tiles under
+        // it: it shows as authored, and Melantha, sorted by her feet, still passes in front of it.
+        private static void RaiseJointsOverTheirRows(Scene scene)
+        {
+            var rows = new List<TilemapRenderer>();
+            foreach (var root in scene.GetRootGameObjects())
+                rows.AddRange(root.GetComponentsInChildren<TilemapRenderer>(true).Where(r => r.name.Contains("_layer_paredes")));
+            foreach (var root in scene.GetRootGameObjects())
+            foreach (var joint in root.GetComponentsInChildren<SpriteRenderer>(true))
+            {
+                if (!joint.name.Contains("_layer_paredes")) continue;
+                if (scene.name == "DominioLua" && SigilDaisPieces.Contains(joint.name)) continue;
+                var b = joint.bounds; var order = joint.sortingOrder;
+                foreach (var row in rows)
+                {
+                    if (row.sortingLayerID != joint.sortingLayerID || row.sortingOrder < order || !row.bounds.Intersects(b)) continue;
+                    var map = row.GetComponent<Tilemap>();
+                    if (map != null && HasTileUnder(map, b)) order = row.sortingOrder + 1;
+                }
+                joint.sortingOrder = Mathf.Min(order, 29000);
+            }
+        }
+
+        private static bool HasTileUnder(Tilemap map, Bounds b)
+        {
+            // The joint sprites sit at a different z than the tiles: only x and y pick the cells.
+            var lo = map.WorldToCell(b.min); var hi = map.WorldToCell(b.max); var used = map.cellBounds;
+            for (var x = lo.x; x <= hi.x; x++)
+            for (var y = lo.y; y <= hi.y; y++)
+            for (var z = used.zMin; z < used.zMax; z++)
+                if (map.HasTile(new Vector3Int(x, y, z))) return true;
+            return false;
         }
     }
 }
