@@ -88,8 +88,10 @@ namespace MementoMori.UI
                 objectiveLabel.transform.SetParent(title.transform, false);
                 var rect = objectiveLabel.rectTransform;
                 rect.anchorMin = new Vector2(-.6f, 0f); rect.anchorMax = new Vector2(1.6f, 0f); rect.pivot = new Vector2(.5f, 1f);
-                rect.sizeDelta = new Vector2(0f, 64f); rect.anchoredPosition = new Vector2(0f, -4f);
-                objectiveLabel.font = title.font; objectiveLabel.fontSize = 24f; objectiveLabel.raycastTarget = false;
+                rect.sizeDelta = new Vector2(0f, 46f); rect.anchoredPosition = new Vector2(0f, -2f);
+                objectiveLabel.font = title.font; objectiveLabel.fontSize = 22f; objectiveLabel.raycastTarget = false;
+                // Two-line objectives ran into the CONTINUAR button: the line now shrinks to fit its box.
+                objectiveLabel.enableAutoSizing = true; objectiveLabel.fontSizeMin = 16f; objectiveLabel.fontSizeMax = 22f;
                 objectiveLabel.characterSpacing = 1.5f;
                 objectiveLabel.alignment = TextAlignmentOptions.Top; objectiveLabel.color = MenuPanelStyle.CaptionColor;
                 objectiveLabel.textWrappingMode = TextWrappingModes.Normal;
