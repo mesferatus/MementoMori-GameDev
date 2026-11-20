@@ -15,6 +15,8 @@ namespace MementoMori.Interaction
         private Material rimMaterial, beaconMaterial, sparkMaterial;
         private SpriteRenderer rim;
         private Object currentTarget;
+        private Component cachedTarget;
+        private SpriteRenderer cachedVisual;
         private readonly List<(Transform root, SpriteRenderer glow, ParticleSystem sparks)> beacons = new();
 
         public static void EnsureForScene()
@@ -92,8 +94,10 @@ namespace MementoMori.Interaction
         private void UpdateRim(float t)
         {
             var target = InteractionDetector.CurrentTarget as Component;
+            // FindVisual may scan every sprite in the map: resolve once per target, not every frame.
+            if (target != cachedTarget) { cachedTarget = target; cachedVisual = target != null ? FindVisual(target) : null; }
             currentTarget = target;
-            var source = target != null ? FindVisual(target) : null;
+            var source = cachedVisual;
             if (source == null || rimMaterial == null)
             {
                 if (rim != null) rim.enabled = false;
@@ -145,6 +149,7 @@ namespace MementoMori.Interaction
                 if (sr.sprite == null || !sr.enabled || sr.sortingOrder < 0 || sr.name == "InteractionRim") continue;
                 if (sr.sharedMaterial != null && sr.sharedMaterial.shader.name.StartsWith("Memento/FX")) continue;
                 if (sr.GetComponentInParent<MementoMori.Player.PlayerController>() != null) continue;
+                if (IsFoliage(sr)) continue; // bushes beside a mirror are not the thing being used
                 var b = sr.bounds; var s = b.size;
                 if (s.x > 5f || s.y > 5f) continue;
                 var point = new Vector3(at.x, at.y, b.center.z);
@@ -154,6 +159,15 @@ namespace MementoMori.Interaction
                 if (score < bestScore) { bestScore = score; best = sr; }
             }
             return best;
+        }
+
+        private static bool IsFoliage(SpriteRenderer sr)
+        {
+            if (sr.GetComponentInParent<SeeThroughFoliage>() != null) return true;
+            var n = sr.name.ToLowerInvariant();
+            var parent = sr.transform.parent != null ? sr.transform.parent.name.ToLowerInvariant() : string.Empty;
+            return n.Contains("plant") || n.Contains("vegeta") || n.Contains("bush") || n.Contains("arbust")
+                || parent.Contains("vegetation") || parent.Contains("vegeta");
         }
 
         private static Sprite white;

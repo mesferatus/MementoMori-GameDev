@@ -164,6 +164,18 @@ namespace MementoMori.UI
 
         private void CompleteSequence()
         {
+            if (rollingStarted) return;
+            rollingStarted = true;
+            // Film ending: fade to black, roll the credits, then the closing card with the return button.
+            var title = returnButton != null ? returnButton.GetComponentInChildren<TMPro.TMP_Text>(true)?.font : null;
+            var body = finalTextTmp != null ? (finalTextTmp as TMPro.TMP_Text)?.font : null;
+            RollingCredits.Play(title, body, ShowEndCard);
+        }
+
+        private bool rollingStarted;
+
+        private void ShowEndCard()
+        {
             sequenceComplete = true;
             if (endCardRoot != null) endCardRoot.SetActive(true);
             ShowFinalIllustration();
@@ -179,7 +191,7 @@ namespace MementoMori.UI
             }
             if (finalTextTmp != null) finalTextTmp.text = Loc.T(ClosingMessage);
             if (returnButton != null) returnButton.interactable = true;
-            if (credits != null && creditsSequence == null) creditsSequence = StartCoroutine(PlayClosingCredits());
+            // The credits already rolled: the card now waits for the player to choose the menu.
         }
 
         private IEnumerator PlayClosingCredits()

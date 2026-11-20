@@ -24,6 +24,7 @@ namespace MementoMori.Narrative
         private int lastSigilPhaseProgress;
         private PlayerController swimmer;
         private Transform galleryDoor;
+        private SigilRingPuzzle sigil;
 
         private void Start()
         {
@@ -93,7 +94,7 @@ namespace MementoMori.Narrative
             }
             observedEchoErrors = echoErrors;
 
-            var sigil = FindAnyObjectByType<SigilRingPuzzle>();
+            if (sigil == null && Time.frameCount % 30 == 0) sigil = FindAnyObjectByType<SigilRingPuzzle>();
             var sigilProgress = sigil?.GetProgress() ?? 0;
             var phaseProgress = state.GetPuzzleProgress("sigil.Phase");
             if (phaseProgress > lastSigilPhaseProgress && sigilProgress < 3) Queue("DLG_D_SIGIL_PHASE_OK");
