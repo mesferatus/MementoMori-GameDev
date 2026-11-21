@@ -3239,6 +3239,42 @@
     {
       "pt": "O que a gente lembra volta com a gente.",
       "en": "What we remember comes back with us."
+    },
+    {
+      "pt": "Start pausa · Select mapa · RB rápido",
+      "en": "Start pause · Select map · RB fast"
+    },
+    {
+      "pt": "M mapa · Tab rápido",
+      "en": "M map · Tab fast"
+    },
+    {
+      "pt": "Y grimório (dicas) · Select mapa · A interagir",
+      "en": "Y grimoire (hints) · Select map · A interact"
+    },
+    {
+      "pt": "A porta já te devolveu ao pátio três vezes. Quem insiste perde a mão; quem esquece perde o caminho.",
+      "en": "The door has already returned you to the courtyard three times. Whoever insists loses the hand; whoever forgets loses the way."
+    },
+    {
+      "pt": "Quatro vozes sobem do poço. Só uma mente usando a sua boca.",
+      "en": "Four voices rise from the well. Only one lies using your mouth."
+    },
+    {
+      "pt": "Toda porta começa quando alguém a chama, dura enquanto alguém a segura e acaba quando alguém paga por ela.",
+      "en": "Every door begins when someone calls it, lasts while someone holds it, and ends when someone pays for it."
+    },
+    {
+      "pt": "Três espelhos mentem aqui. O primeiro se gaba de não ter rachaduras; o segundo nunca para de falar; o terceiro fecha os braços. Responda a cada um com o que ele nega.",
+      "en": "Three mirrors lie here. The first boasts of having no cracks; the second never stops talking; the third folds its arms. Answer each with what it denies."
+    },
+    {
+      "pt": "O ciclo vai de fora para dentro: do que o corpo carrega, ao que só existe enquanto se olha, ao que sobrevive de olhos fechados.",
+      "en": "The cycle runs from outside in: from what the body carries, to what exists only while you look, to what survives with eyes closed."
+    },
+    {
+      "pt": "A sequência se apaga. Releia a inscrição e recomece do início.",
+      "en": "The sequence fades. Read the inscription again and start over."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {"challenges":[
-{"id":"moon.illusory_corridor","title":"O corredor que se repete","clue":"A inscrição reaparece invertida: «Não confie no que está inteiro. Primeiro, o que se quebra; depois, o que não fala; por fim, o que deixa ir».","choices":["Passagem","Imagem perfeita","Silêncio","Falha"],"sequence":[3,2,0],"x":28.5,"y":-24.5},
-{"id":"moon.cycles","title":"Arquivo das oito fases","clue":"As oito portas contam um ciclo: primeiro o que fica na pele, depois o que a água devolve, por último o que só a lembrança guarda.","choices":["Memória","Marca","Reflexo"],"sequence":[1,2,0],"x":-4.5,"y":-75}
+{"id":"moon.illusory_corridor","title":"O corredor que se repete","clue":"Três espelhos mentem aqui. O primeiro se gaba de não ter rachaduras; o segundo nunca para de falar; o terceiro fecha os braços. Responda a cada um com o que ele nega.","choices":["Passagem","Imagem perfeita","Silêncio","Falha"],"sequence":[3,2,0],"x":28.5,"y":-24.5},
+{"id":"moon.cycles","title":"Arquivo das oito fases","clue":"O ciclo vai de fora para dentro: do que o corpo carrega, ao que só existe enquanto se olha, ao que sobrevive de olhos fechados.","choices":["Memória","Marca","Reflexo"],"sequence":[1,2,0],"x":-4.5,"y":-75}
 ]}
 

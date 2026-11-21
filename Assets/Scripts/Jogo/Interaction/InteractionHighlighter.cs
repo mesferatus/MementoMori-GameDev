@@ -131,6 +131,8 @@ namespace MementoMori.Interaction
         private static SpriteRenderer FindVisual(Component target)
         {
             if (target is Portal) return null; // portals use their beacon instead
+            var named = target.GetComponent<InteractionVisualTarget>();
+            if (named != null && named.Visual != null) return named.Visual;
             var own = target.GetComponent<SpriteRenderer>();
             if (own != null && own.sprite != null && own.enabled) return own;
             SpriteRenderer best = null; float area = 0f;

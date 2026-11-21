@@ -23,13 +23,15 @@ namespace MementoMori.Core
             return Keys[(int)action];
         }
 
-        public static bool Down(GameAction action) => Input.GetKeyDown(Get(action)) || GamepadInput.Down(action);
-        public static bool Held(GameAction action) => Input.GetKey(Get(action)) || GamepadInput.Held(action);
+        public static bool Down(GameAction action) => Input.GetKeyDown(Get(action)) || GamepadInput.Down(action) || MementoMori.UI.TouchControls.Down(action);
+        public static bool Held(GameAction action) => Input.GetKey(Get(action)) || GamepadInput.Held(action) || MementoMori.UI.TouchControls.Held(action);
         /// <summary>Escape or the controller's B: back, close, skip.</summary>
-        public static bool CancelDown() => Input.GetKeyDown(KeyCode.Escape) || GamepadInput.CancelDown();
+        public static bool CancelDown() => Input.GetKeyDown(KeyCode.Escape) || GamepadInput.CancelDown() || MementoMori.UI.TouchControls.Down(GameAction.Pause);
 
         public static Vector2 Movement()
         {
+            var touch = MementoMori.UI.TouchControls.Movement;
+            if (touch != Vector2.zero) return touch;
             var left = Input.GetKey(Get(GameAction.MoveLeft)) || Input.GetKey(KeyCode.LeftArrow);
             var right = Input.GetKey(Get(GameAction.MoveRight)) || Input.GetKey(KeyCode.RightArrow);
             var up = Input.GetKey(Get(GameAction.MoveUp)) || Input.GetKey(KeyCode.UpArrow);

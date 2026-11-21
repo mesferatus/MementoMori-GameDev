@@ -102,7 +102,7 @@ namespace MementoMori.Puzzles
                 Errors++;
                 GameState.Instance?.IncrementCounter("garden." + petal + ".errors");
                 RuntimeAudio.PlayOneShot("10_sigil_error", .35f);
-                if (Errors >= 4) Object.FindAnyObjectByType<PoeFollower>()?.Inspect();
+                if (Errors >= 3) Object.FindAnyObjectByType<PoeFollower>()?.Inspect();
                 return false;
             }
             GameState.Instance?.SetFlag(FlagFor(petal));
@@ -120,10 +120,11 @@ namespace MementoMori.Puzzles
                 Errors++;
                 GameState.Instance?.IncrementCounter("garden." + petal + ".errors");
                 RuntimeAudio.PlayOneShot("10_sigil_error", .35f);
-                if (Errors >= 4) Object.FindAnyObjectByType<PoeFollower>()?.Inspect();
+                if (Errors >= 3) Object.FindAnyObjectByType<PoeFollower>()?.Inspect();
                 return false;
             }
             nextWaningFlower--;
+            RuntimeAudio.PlayOneShot("Grimoire/grimoire_new_entry", .18f); // soft cue: this light went out
             if (nextWaningFlower >= 0) return true;
             return Place(requiredTarget);
         }

@@ -110,7 +110,7 @@ namespace MementoMori.Regions
             var accepted=model.Choose(index);
             feedback.text=model.Solved ? Loc.T(string.IsNullOrEmpty(definition.success) ? "A inscrição se ilumina. Este caminho foi compreendido. Esc — voltar." : definition.success) :
                 accepted ? Loc.T("A inscrição responde. Continue a sequência.") :
-                Loc.T("A luz recua. Releia a inscrição e tente novamente; seus outros caminhos estão preservados.");
+                Loc.T("A sequência se apaga. Releia a inscrição e recomece do início.");
             if (!accepted && definition.id == "moon.illusory_corridor")
                 ShowConditionalFailure("P03", "on_wrong_exit");
             if(model.Solved) GamepadInput.Rumble(.25f, .35f, .3f);

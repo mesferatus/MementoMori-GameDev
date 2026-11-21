@@ -132,9 +132,9 @@ namespace MementoMori.UI
         {
             if (controlsGuide == null) return;
             controlsGuide.text = GamepadInput.UsingGamepad
-                ? Loc.T("Y grimório (dicas) · Select mapa · LB histórico · A interagir")
+                ? Loc.T("Y grimório (dicas) · Select mapa · A interagir")
                 : Loc.T("Grimório (dicas)") + " " + InputBindings.Get(GameAction.Grimoire).ToString().ToUpperInvariant() + "  ·  "
-                  + Loc.T("Mapa") + " M  ·  " + Loc.T("Histórico") + " H  ·  " + Loc.T("Interagir") + " " + InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
+                  + Loc.T("Mapa") + " M  ·  " +Loc.T("Interagir") + " " + InputBindings.Get(GameAction.Interact).ToString().ToUpperInvariant();
         }
         private void OnEnable() { if (controlsGuide != null) RefreshControlsGuide(); }
         private static void SetCompactHeight(Button button)

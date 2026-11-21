@@ -324,7 +324,7 @@ namespace MementoMori.UI
                 {
                     // Read-only reference: controller layout and keyboard shortcuts that have no binding row.
                     SetRow(0, Loc.T("CONTROLE") + "  " + Loc.T("A interagir · B voltar · Y grimório"), () => { });
-                    SetRow(1, Loc.T("MENUS") + "  " + Loc.T("Start pausa · Select mapa · LB histórico · RB rápido"), () => { });
+                    SetRow(1, Loc.T("MENUS") + "  " + Loc.T("Start pausa · Select mapa · RB rápido"), () => { });
                     SetRow(2, Loc.T("VIBRAÇÃO") + "  " + (s.Vibration ? yes : no), () =>
                     {
                         s.SetVibration(!s.Vibration);
@@ -343,7 +343,7 @@ namespace MementoMori.UI
                     if (index >= actions.Length)
                     {
                         // The last key page has room for the shortcuts that have no rebinding row.
-                        if (index == actions.Length) SetRow(i, Loc.T("ATALHOS") + "  " + Loc.T("M mapa · H histórico · Tab rápido"), () => { });
+                        if (index == actions.Length) SetRow(i, Loc.T("ATALHOS") + "  " + Loc.T("M mapa · Tab rápido"), () => { });
                         else rows[i].gameObject.SetActive(false);
                         continue;
                     }

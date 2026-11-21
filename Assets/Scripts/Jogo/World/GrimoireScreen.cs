@@ -271,13 +271,13 @@ namespace MementoMori.World
                 root.transform.SetParent(transform, false);
                 var noticeCanvas = root.GetComponent<Canvas>();
                 noticeCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-                noticeCanvas.sortingOrder = 950;
+                noticeCanvas.sortingOrder = 31500; // above every HUD icon
                 var scaler = root.GetComponent<CanvasScaler>();
                 scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
                 scaler.referenceResolution = new Vector2(1920, 1080);
                 scaler.matchWidthOrHeight = .5f;
                 noticeText = Text("Message", root.transform, MementoMori.Core.Loc.T("Nova entrada no grimório"), titleFont, 24,
-                    new Vector2(.30f, .84f), new Vector2(.70f, .90f), TextAlignmentOptions.Center);
+                    new Vector2(.30f, .935f), new Vector2(.70f, .985f), TextAlignmentOptions.Center);
                 noticeText.color = new Color(.9f, .75f, .95f);
             }
             noticeText.gameObject.SetActive(true);
@@ -383,8 +383,8 @@ namespace MementoMori.World
             var keys = Loc.T("Andar") + ": " + Key(GameAction.MoveUp) + " " + Key(GameAction.MoveLeft) + " " + Key(GameAction.MoveDown) + " " + Key(GameAction.MoveRight) + "\n"
                 + Loc.T("Interagir / avançar diálogo") + ": " + Key(GameAction.Interact) + "\n"
                 + Loc.T("Grimório (dicas e pistas)") + ": " + Key(GameAction.Grimoire) + "\n"
-                + Loc.T("Mapa") + ": M\n" + Loc.T("Histórico de falas") + ": H\n" + Loc.T("Pausa e configurações") + ": " + Key(GameAction.Pause);
-            var pad = Loc.T("Controle") + ":\n" + Loc.T("A interagir · B voltar · Y grimório") + "\n" + Loc.T("Start pausa · Select mapa · LB histórico · RB rápido");
+                + Loc.T("Mapa") + ": M\n" + Loc.T("Pausa e configurações") + ": " + Key(GameAction.Pause);
+            var pad = Loc.T("Controle") + ":\n" + Loc.T("A interagir · B voltar · Y grimório") + "\n" + Loc.T("Start pausa · Select mapa · RB rápido");
             return new GrimoireCatalog.Entry
             {
                 Id = "A00",
